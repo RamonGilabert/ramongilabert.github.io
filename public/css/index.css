@@ -10,21 +10,25 @@
   height: 100vh;
   background-color: #252928;
 }
-#hey {
-  background-color: #00f;
-  display: inline-block;
+#hero-image-wrapper {
+  display: table;
+  position: relative;
+  margin: 30px auto 0 auto;
 }
 #hero-image {
   background: url("../images/hero/header.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  max-width: 490px;
-  height: 90%;
-  max-height: 640px;
-  margin: 30px auto 0 auto;
+  width: 490px;
+  height: 694px;
+  display: table-cell;
 }
 #hero-description {
-  margin-left: 10px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  min-width: 200px;
+  display: table-cell;
 }
 #hero-description,
 p {
