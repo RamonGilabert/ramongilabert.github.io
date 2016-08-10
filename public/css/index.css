@@ -38,6 +38,18 @@ p {
   color: #fff;
   margin-bottom: 12px;
 }
+#hero-header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+}
+#email-link {
+  font: 15px Inconsolata;
+  margin-top: 50px;
+}
 *,
 html {
   margin: 0;
@@ -47,4 +59,8 @@ body {
   background-color: #252928;
   overflow-x: hidden;
   margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: #fff;
 }
