@@ -5,6 +5,17 @@
   src: url("../fonts/Brandon.eot?#iefix") format("embedded-opentype"), url("../fonts/Brandon.woff") format("woff"), url("../fonts/Brandon.ttf") format("truetype");
   font-style: bold;
 }
+#hero-header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #252928;
+}
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #252928;
+  overflow-x: hidden;
 }
