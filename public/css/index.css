@@ -13,21 +13,23 @@
 #hero-image-wrapper {
   display: table;
   position: relative;
-  margin: 30px auto 0 auto;
+  padding-top: 30px;
+  margin: 0 auto;
 }
 #hero-image {
   background: url("../images/hero/header.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 490px;
-  height: 694px;
+  width: 372px;
+  height: 560px;
   display: table-cell;
 }
 #hero-description {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   min-width: 200px;
+  margin-left: 30px;
   display: table-cell;
 }
 #hero-description,
@@ -63,7 +65,7 @@ p {
   top: 55%;
   left: 0%;
   right: 100%;
-  transition: right 0.3s ease-out;
+  transition: right 0.25s ease-out;
 }
 #email-link:hover:after {
   right: 0;
