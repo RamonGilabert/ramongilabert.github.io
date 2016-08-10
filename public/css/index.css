@@ -5,10 +5,34 @@
   src: url("../fonts/Brandon.eot?#iefix") format("embedded-opentype"), url("../fonts/Brandon.woff") format("woff"), url("../fonts/Brandon.ttf") format("truetype");
   font-style: bold;
 }
-#hero-header {
+#hero {
   width: 100vw;
   height: 100vh;
   background-color: #252928;
+}
+#hey {
+  background-color: #00f;
+  display: inline-block;
+}
+#hero-image {
+  background: url("../images/hero/header.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 490px;
+  height: 90%;
+  max-height: 640px;
+  margin: 30px auto 0 auto;
+}
+#hero-description {
+  margin-left: 10px;
+}
+#hero-description,
+p {
+  font: 16px Inconsolata;
+  letter-spacing: 0px;
+  line-height: 28px;
+  color: #fff;
+  margin-bottom: 12px;
 }
 *,
 html {
@@ -18,4 +42,5 @@ html {
 body {
   background-color: #252928;
   overflow-x: hidden;
+  margin: 0 auto;
 }

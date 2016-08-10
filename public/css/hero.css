@@ -1,5 +1,29 @@
-#hero-header {
+#hero {
   width: 100vw;
   height: 100vh;
   background-color: background-color;
+}
+#hey {
+  background-color: #00f;
+  display: inline-block;
+}
+#hero-image {
+  background: url("hero-image");
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: hero-image-width;
+  height: hero-image-height;
+  max-height: hero-image-max-height;
+  margin: 30px auto 0 auto;
+}
+#hero-description {
+  margin-left: 10px;
+}
+#hero-description,
+p {
+  font: 16px Inconsolata;
+  letter-spacing: 0px;
+  line-height: 28px;
+  color: text-color;
+  margin-bottom: 12px;
 }
