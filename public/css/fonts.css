@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+@font-face {
+  font-family: "Brandon";
+  src: url("../fonts/Brandon.eot");
+  src: url("../fonts/Brandon.eot?#iefix") format("embedded-opentype"), url("../fonts/Brandon.woff") format("woff"), url("../fonts/Brandon.ttf") format("truetype");
+  font-style: bold;
+}
