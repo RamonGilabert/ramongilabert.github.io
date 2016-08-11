@@ -146,6 +146,16 @@
   left: 100px;
   transform: translateY(-50%);
 }
+#story-image {
+  position: absolute;
+  background-image: url("../images/sections/s-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 150px;
+  left: 250px;
+  opacity: 0.025;
+}
 *,
 html {
   margin: 0;

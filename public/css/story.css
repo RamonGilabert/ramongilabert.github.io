@@ -9,3 +9,13 @@
   left: 100px;
   transform: translateY(-50%);
 }
+#story-image {
+  position: absolute;
+  background-image: url("s-logo");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 150px;
+  left: 250px;
+  opacity: 0.025;
+}
