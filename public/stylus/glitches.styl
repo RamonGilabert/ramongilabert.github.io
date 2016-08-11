@@ -1,0 +1,70 @@
+// Glitches declarations
+
+.corner-glitch {
+  position: absolute
+  width: 50px
+  height: 30px
+}
+
+.corner-glitch:before {
+  content: ''
+  position: absolute
+  background-color: text-color
+  width: 80%
+  height: 1px
+  top: 0%
+  left: 0%
+}
+
+.corner-glitch:after {
+  content: ''
+  position: absolute
+  background-color: text-color
+  width: 1px
+  height: 90%
+  right: 0%
+  bottom: 0%
+}
+
+#top-corner-glitch {
+  top: 45px
+  right: 27px
+}
+
+#bottom-corner-glitch {
+  left: 27px
+  bottom: 30px
+  transform: rotate(180deg)
+}
+
+.disclosure {
+  position: absolute
+  opacity: disabled-text-opacity
+  width: 90px
+}
+
+.disclosure p {
+  font: 14px Inconsolata
+  color: text-color
+}
+
+.disclosure:after {
+  content: ''
+  position: absolute
+  background-color: text-color
+  width: 85%
+  height: 1px
+  bottom: 0%
+  right: 0%
+}
+
+#disclosure-top {
+  top: 25px
+  right: 295px
+}
+
+#disclosure-disclaimer {
+  left: 27px
+  bottom: 80px
+  width: 105px
+}
