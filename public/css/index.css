@@ -135,6 +135,17 @@
   bottom: 80px;
   width: 105px;
 }
+#story {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#story-description {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
 *,
 html {
   margin: 0;
@@ -154,4 +165,15 @@ p {
   line-height: 28px;
   margin-bottom: 7px;
   color: #fff;
+}
+.section-description h2 {
+  font: 34px Brandon;
+  color: #fff;
+  text-transform: uppercase;
+}
+.section-description p {
+  font: 16px Inconsolata;
+  line-height: 26px;
+  width: 650px;
+  margin-top: 10px;
 }
