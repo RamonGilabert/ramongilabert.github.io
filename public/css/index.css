@@ -216,6 +216,14 @@ p {
   margin-bottom: 7px;
   color: #fff;
 }
+#page-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0%;
+  left: 0%;
+  clip: rect(0px, 1px, 1px, 0px);
+}
 .section-description h2 {
   font: 34px Brandon;
   color: #fff;

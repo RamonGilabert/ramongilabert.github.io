@@ -3,7 +3,8 @@
 @import hero
 @import header
 @import glitches
-@import story
+
+@import 'descriptions/*'
 
 *, html {
   margin: 0
@@ -26,6 +27,15 @@ p {
   line-height: 28px
   margin-bottom: 7px
   color: text-color
+}
+
+#page-title {
+  position: absolute
+  width: 1px
+  height: 1px
+  top: 0%
+  left: 0%
+  clip: rect(0px, 1px, 1px, 0px)
 }
 
 .section-description h2 {
