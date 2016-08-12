@@ -2,117 +2,102 @@
 
 // Story description
 
-#manifesto {
+.manifesto {
 
-  #story-section {
+  .story {
     position: relative
     width: 100vw
     height: 100vh
+
+    .description {
+      position: absolute
+      top: 50%
+      left: 100px
+      transform: translateY(-50%)
+    }
+
+    .image {
+      position: absolute
+      background-image: url(s-logo)
+      background-size: contain
+      background-repeat: no-repeat
+      width: 100px
+      height: 150px
+      left: 250px
+      opacity: 0.025
+    }
   }
 
-  #story-description {
-    position: absolute
-    top: 50%
-    left: 100px
-    transform: translateY(-50%)
-  }
-
-  #story-image {
-    position: absolute
-    background-image: url(s-logo)
-    background-size: contain
-    background-repeat: no-repeat
-    width: 100px
-    height: 150px
-    left: 250px
-    opacity: 0.025
-  }
-}
-
-// Manifesto description
-
-#manifesto {
-
-  #manifesto-section {
+  .manifesto {
     width: 100vw
     height: 100vh
     position: relative
+
+    .description {
+      position: absolute
+      top: 50%
+      right: 100px
+      transform: translateY(-50%);
+    }
+
+    .description h2 {
+      text-align: right
+    }
+
+    .description p {
+      text-align: right
+    }
+
+    .image {
+      position: absolute
+      background-image: url(m-logo)
+      background-size: contain
+      background-repeat: no-repeat
+      width: 165px
+      height: 150px
+      right: 270px
+      opacity: 0.025
+    }
+
+    .manifesto-horizontal-glitch {
+      position: absolute
+      transform: rotateY(180deg)
+      top: 150px
+      left: 100px
+    }
   }
 
-  #manifesto-image {
-    position: absolute
-    background-image: url(m-logo)
-    background-size: contain
-    background-repeat: no-repeat
-    width: 165px
-    height: 150px
-    right: 270px
-    opacity: 0.025
-  }
-
-  #manifesto-description {
-    position: absolute
-    top: 50%
-    right: 100px
-    transform: translateY(-50%);
-  }
-
-  #manifesto-description h2 {
-    text-align: right
-  }
-
-  #manifesto-description p {
-    text-align: right
-  }
-
-  #manifesto-horizontal-glitch {
-    position: absolute
-    transform: rotateY(180deg)
-    top: 150px
-    left: 100px
-  }
-}
-
-// Awards description
-
-#manifesto {
-
-  #awards-section {
+  .awards {
     width: 100vw
     height: 100vh
     position: relative
+
+    .image {
+      position: absolute
+      background-image: url(a-logo)
+      background-size: contain
+      background-repeat: no-repeat
+      width: 125px
+      height: 135px
+      left: 270px
+      opacity: 0.025
+    }
+
+    .description {
+      position: absolute
+      top: 50%
+      left: 100px
+      transform: translateY(-50%)
+    }
+
+    .awards-horizontal-glitch {
+      position: absolute
+      top: 375px
+      right: 100px
+      width: 20px
+      height: 70px
+    }
   }
-
-  #awards-image {
-    position: absolute
-    background-image: url(a-logo)
-    background-size: contain
-    background-repeat: no-repeat
-    width: 125px
-    height: 135px
-    left: 270px
-    opacity: 0.025
-  }
-
-  #awards-description {
-    position: absolute
-    top: 50%
-    left: 100px
-    transform: translateY(-50%)
-  }
-
-  #awards-horizontal-glitch {
-    position: absolute
-    top: 375px
-    right: 100px
-    width: 20px
-    height: 70px
-  }
-}
-
-// Section specific
-
-#manifesto {
 
   .section-description h2 {
     font: 34px Brandon

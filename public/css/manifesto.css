@@ -1,15 +1,15 @@
-#manifesto #story-section {
+.manifesto .story {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
-#manifesto #story-description {
+.manifesto .story .description {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
 }
-#manifesto #story-image {
+.manifesto .story .image {
   position: absolute;
   background-image: url("s-logo");
   background-size: contain;
@@ -19,12 +19,24 @@
   left: 250px;
   opacity: 0.025;
 }
-#manifesto #manifesto-section {
+.manifesto .manifesto {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-#manifesto #manifesto-image {
+.manifesto .manifesto .description {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+}
+.manifesto .manifesto .description h2 {
+  text-align: right;
+}
+.manifesto .manifesto .description p {
+  text-align: right;
+}
+.manifesto .manifesto .image {
   position: absolute;
   background-image: url("m-logo");
   background-size: contain;
@@ -34,30 +46,18 @@
   right: 270px;
   opacity: 0.025;
 }
-#manifesto #manifesto-description {
-  position: absolute;
-  top: 50%;
-  right: 100px;
-  transform: translateY(-50%);
-}
-#manifesto #manifesto-description h2 {
-  text-align: right;
-}
-#manifesto #manifesto-description p {
-  text-align: right;
-}
-#manifesto #manifesto-horizontal-glitch {
+.manifesto .manifesto .manifesto-horizontal-glitch {
   position: absolute;
   transform: rotateY(180deg);
   top: 150px;
   left: 100px;
 }
-#manifesto #awards-section {
+.manifesto .awards {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-#manifesto #awards-image {
+.manifesto .awards .image {
   position: absolute;
   background-image: url("a-logo");
   background-size: contain;
@@ -67,25 +67,25 @@
   left: 270px;
   opacity: 0.025;
 }
-#manifesto #awards-description {
+.manifesto .awards .description {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
 }
-#manifesto #awards-horizontal-glitch {
+.manifesto .awards .awards-horizontal-glitch {
   position: absolute;
   top: 375px;
   right: 100px;
   width: 20px;
   height: 70px;
 }
-#manifesto .section-description h2 {
+.manifesto .section-description h2 {
   font: 34px Brandon;
   color: text-color;
   text-transform: uppercase;
 }
-#manifesto .section-description p {
+.manifesto .section-description p {
   font: 16px Inconsolata;
   line-height: 26px;
   width: 650px;

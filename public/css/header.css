@@ -1,4 +1,4 @@
-#manifesto #hero-header {
+.manifesto .hero-header {
   position: fixed;
   width: 100%;
   height: 80px;
@@ -9,16 +9,16 @@
   margin: 0 auto;
   z-index: 1;
 }
-#manifesto #email-link-wrapper {
+.manifesto .email-link-wrapper {
   position: absolute;
   margin-top: 40px;
   transform: translateY(-50%);
   right: 105px;
 }
-#manifesto #email-link {
+.manifesto .email-link {
   font: 15px Inconsolata;
 }
-#manifesto #email-link:after {
+.manifesto .email-link:after {
   content: '';
   position: absolute;
   height: 1px;
@@ -28,6 +28,6 @@
   right: 100%;
   transition: right 0.25s ease-out;
 }
-#manifesto #email-link:hover:after {
+.manifesto .email-link:hover:after {
   right: 0;
 }

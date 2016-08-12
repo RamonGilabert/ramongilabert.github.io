@@ -21,11 +21,11 @@
   right: 0%;
   bottom: 0%;
 }
-#top-corner-glitch {
+.top-corner-glitch {
   top: 45px;
   right: 27px;
 }
-#bottom-corner-glitch {
+.bottom-corner-glitch {
   left: 27px;
   bottom: 30px;
   transform: rotate(180deg);
@@ -48,11 +48,11 @@
   bottom: 0%;
   right: 0%;
 }
-#disclosure-top {
+.disclosure-top {
   top: 25px;
   right: 295px;
 }
-#disclosure-disclaimer {
+.disclosure-disclaimer {
   left: 27px;
   bottom: 80px;
   width: 105px;
@@ -92,7 +92,7 @@
   background-color: text-color;
   opacity: disabled-text-opacity;
 }
-#story-horizontal-glitch {
+.story-horizontal-glitch {
   top: 220px;
   right: 100px;
 }
