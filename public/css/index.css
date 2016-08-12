@@ -230,7 +230,7 @@
   left: 100px;
   transform: translateY(-50%);
 }
-#manifesto .story .image {
+#manifesto .story figure {
   position: absolute;
   background-image: url("../images/sections/s-logo.svg");
   background-size: contain;
@@ -257,7 +257,7 @@
 #manifesto .manifesto .description p {
   text-align: right;
 }
-#manifesto .manifesto .image {
+#manifesto .manifesto figure {
   position: absolute;
   background-image: url("../images/sections/m-logo.svg");
   background-size: contain;
@@ -278,7 +278,7 @@
   height: 100vh;
   position: relative;
 }
-#manifesto .awards .image {
+#manifesto .awards figure {
   position: absolute;
   background-image: url("../images/sections/a-logo.svg");
   background-size: contain;

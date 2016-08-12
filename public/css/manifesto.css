@@ -9,7 +9,7 @@
   left: 100px;
   transform: translateY(-50%);
 }
-#manifesto .story .image {
+#manifesto .story figure {
   position: absolute;
   background-image: url("s-logo");
   background-size: contain;
@@ -36,7 +36,7 @@
 #manifesto .manifesto .description p {
   text-align: right;
 }
-#manifesto .manifesto .image {
+#manifesto .manifesto figure {
   position: absolute;
   background-image: url("m-logo");
   background-size: contain;
@@ -57,7 +57,7 @@
   height: 100vh;
   position: relative;
 }
-#manifesto .awards .image {
+#manifesto .awards figure {
   position: absolute;
   background-image: url("a-logo");
   background-size: contain;
