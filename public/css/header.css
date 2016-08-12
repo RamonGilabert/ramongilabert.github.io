@@ -18,16 +18,3 @@
 #manifesto .email-link {
   font: 15px Inconsolata;
 }
-#manifesto .email-link:after {
-  content: '';
-  position: absolute;
-  height: 1px;
-  background-color: text-color;
-  top: 55%;
-  left: 0%;
-  right: 100%;
-  transition: right 0.25s ease-out;
-}
-#manifesto .email-link:hover:after {
-  right: 0;
-}

@@ -41,4 +41,31 @@
 }
 #footer #social {
   display: table;
+  margin-top: 26px;
+}
+#footer #social div {
+  display: table-cell;
+}
+#footer #social div a {
+  font: 15px Inconsolata;
+  margin-right: 25px;
+  margin-left: 25px;
+  position: relative;
+}
+#footer #social div figure {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+#footer #social #dribbble figure {
+  background-image: url("dribbble-icon");
+}
+#footer #social #github figure {
+  background-image: url("github-icon");
+}
+#footer #social #twitter figure {
+  background-image: url("twitter-icon");
 }
