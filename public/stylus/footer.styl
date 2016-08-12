@@ -1,12 +1,68 @@
 // Footer styles
 
-.footer {
+#footer {
+  cross-thickness = 1px
+
   width: 100vw
   height: 100vh
   position: relative
-  background-color: orange
-}
 
-.footer {
-  
+  .wrapper {
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  }
+
+  .wrapper h2 {
+    font: 30px Brandon
+    text-transform: uppercase
+    text-align: center
+    color: text-color
+  }
+
+  .cross {
+    size = 40px
+
+    width: size
+    height: size
+    transform: rotateZ(45deg)
+    margin: 10px auto 0 auto
+  }
+
+  .cross:before {
+    content: ''
+    position: absolute
+    height: cross-thickness
+    top: 50%
+    right: 0%
+    left: 0%
+    background-color: text-color
+  }
+
+  .cross:after {
+    content: ''
+    position: absolute
+    width: cross-thickness
+    top: 0%
+    bottom: 0%
+    left: 50%
+    background-color: text-color
+  }
+
+  #social {
+    display: table
+
+    #dribbble {
+
+    }
+
+    #github {
+
+    }
+
+    #twitter {
+
+    }
+  }
 }

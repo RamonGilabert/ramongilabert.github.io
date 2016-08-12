@@ -1,16 +1,16 @@
-.manifesto .hero {
+#manifesto #hero {
   width: 100vw;
   height: 100vh;
   min-width: 1024px;
   background-color: background-color;
 }
-.manifesto .hero-image-wrapper {
+#manifesto #hero-image-wrapper {
   display: table;
   position: relative;
   padding-top: 60px;
   margin: 0 auto;
 }
-.manifesto .hero-image {
+#manifesto #hero-image {
   background: url("hero-image");
   background-size: contain;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@
   height: 560px;
   display: table-cell;
 }
-.manifesto .hero-description {
+#manifesto #hero-description {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
@@ -26,12 +26,12 @@
   margin-left: 30px;
   display: table-cell;
 }
-.manifesto .hero-description p {
+#manifesto #hero-description p {
   font: 16px Inconsolata;
   color: text-color;
   margin-bottom: 22px;
 }
-.manifesto .disclosure-text {
+#manifesto .disclosure-text {
   position: absolute;
   font: 14px Inconsolata;
   bottom: 42.5px;

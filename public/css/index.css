@@ -103,25 +103,63 @@
   top: 220px;
   right: 100px;
 }
-.footer {
+#footer {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-color: #ffa500;
 }
-.manifesto .hero {
+#footer .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#footer .wrapper h2 {
+  font: 30px Brandon;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+#footer .cross {
+  width: 40px;
+  height: 40px;
+  transform: rotateZ(45deg);
+  margin: 10px auto 0 auto;
+}
+#footer .cross:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  top: 50%;
+  right: 0%;
+  left: 0%;
+  background-color: #fff;
+}
+#footer .cross:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  top: 0%;
+  bottom: 0%;
+  left: 50%;
+  background-color: #fff;
+}
+#footer #social {
+  display: table;
+}
+#manifesto #hero {
   width: 100vw;
   height: 100vh;
   min-width: 1024px;
   background-color: #252928;
 }
-.manifesto .hero-image-wrapper {
+#manifesto #hero-image-wrapper {
   display: table;
   position: relative;
   padding-top: 60px;
   margin: 0 auto;
 }
-.manifesto .hero-image {
+#manifesto #hero-image {
   background: url("../images/hero/header.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -129,7 +167,7 @@
   height: 560px;
   display: table-cell;
 }
-.manifesto .hero-description {
+#manifesto #hero-description {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
@@ -137,18 +175,18 @@
   margin-left: 30px;
   display: table-cell;
 }
-.manifesto .hero-description p {
+#manifesto #hero-description p {
   font: 16px Inconsolata;
   color: #fff;
   margin-bottom: 22px;
 }
-.manifesto .disclosure-text {
+#manifesto .disclosure-text {
   position: absolute;
   font: 14px Inconsolata;
   bottom: 42.5px;
   left: 80px;
 }
-.manifesto .hero-header {
+#manifesto #hero-header {
   position: fixed;
   width: 100%;
   height: 80px;
@@ -159,16 +197,16 @@
   margin: 0 auto;
   z-index: 1;
 }
-.manifesto .email-link-wrapper {
+#manifesto .email-link-wrapper {
   position: absolute;
   margin-top: 40px;
   transform: translateY(-50%);
   right: 105px;
 }
-.manifesto .email-link {
+#manifesto .email-link {
   font: 15px Inconsolata;
 }
-.manifesto .email-link:after {
+#manifesto .email-link:after {
   content: '';
   position: absolute;
   height: 1px;
@@ -178,21 +216,21 @@
   right: 100%;
   transition: right 0.25s ease-out;
 }
-.manifesto .email-link:hover:after {
+#manifesto .email-link:hover:after {
   right: 0;
 }
-.manifesto .story {
+#manifesto .story {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
-.manifesto .story .description {
+#manifesto .story .description {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
 }
-.manifesto .story .image {
+#manifesto .story .image {
   position: absolute;
   background-image: url("../images/sections/s-logo.svg");
   background-size: contain;
@@ -202,24 +240,24 @@
   left: 250px;
   opacity: 0.025;
 }
-.manifesto .manifesto {
+#manifesto .manifesto {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-.manifesto .manifesto .description {
+#manifesto .manifesto .description {
   position: absolute;
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
 }
-.manifesto .manifesto .description h2 {
+#manifesto .manifesto .description h2 {
   text-align: right;
 }
-.manifesto .manifesto .description p {
+#manifesto .manifesto .description p {
   text-align: right;
 }
-.manifesto .manifesto .image {
+#manifesto .manifesto .image {
   position: absolute;
   background-image: url("../images/sections/m-logo.svg");
   background-size: contain;
@@ -229,18 +267,18 @@
   right: 270px;
   opacity: 0.025;
 }
-.manifesto .manifesto .manifesto-horizontal-glitch {
+#manifesto .manifesto .manifesto-horizontal-glitch {
   position: absolute;
   transform: rotateY(180deg);
   top: 150px;
   left: 100px;
 }
-.manifesto .awards {
+#manifesto .awards {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-.manifesto .awards .image {
+#manifesto .awards .image {
   position: absolute;
   background-image: url("../images/sections/a-logo.svg");
   background-size: contain;
@@ -250,25 +288,25 @@
   left: 270px;
   opacity: 0.025;
 }
-.manifesto .awards .description {
+#manifesto .awards .description {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
 }
-.manifesto .awards .awards-horizontal-glitch {
+#manifesto .awards .awards-horizontal-glitch {
   position: absolute;
   top: 375px;
   right: 100px;
   width: 20px;
   height: 70px;
 }
-.manifesto .section-description h2 {
+#manifesto .section-description h2 {
   font: 34px Brandon;
   color: #fff;
   text-transform: uppercase;
 }
-.manifesto .section-description p {
+#manifesto .section-description p {
   font: 16px Inconsolata;
   line-height: 26px;
   width: 650px;
@@ -294,7 +332,7 @@ p {
   margin-bottom: 7px;
   color: #fff;
 }
-.page-title {
+#page-title {
   position: absolute;
   width: 1px;
   height: 1px;
