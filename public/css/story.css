@@ -1,15 +1,15 @@
-#story {
+#manifesto #story-section {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
-#story-description {
+#manifesto #story-description {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
 }
-#story-image {
+#manifesto #story-image {
   position: absolute;
   background-image: url("s-logo");
   background-size: contain;

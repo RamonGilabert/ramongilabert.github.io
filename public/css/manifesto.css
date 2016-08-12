@@ -1,9 +1,30 @@
-#manifesto {
+#manifesto #story-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#manifesto #story-description {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
+#manifesto #story-image {
+  position: absolute;
+  background-image: url("s-logo");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 150px;
+  left: 250px;
+  opacity: 0.025;
+}
+#manifesto #manifesto-section {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-#manifesto-image {
+#manifesto #manifesto-image {
   position: absolute;
   background-image: url("m-logo");
   background-size: contain;
@@ -13,21 +34,60 @@
   right: 270px;
   opacity: 0.025;
 }
-#manifesto-description {
+#manifesto #manifesto-description {
   position: absolute;
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
 }
-#manifesto-description h2 {
+#manifesto #manifesto-description h2 {
   text-align: right;
 }
-#manifesto-description p {
+#manifesto #manifesto-description p {
   text-align: right;
 }
-#manifesto-horizontal-glitch {
+#manifesto #manifesto-horizontal-glitch {
   position: absolute;
   transform: rotateY(180deg);
   top: 150px;
   left: 100px;
+}
+#manifesto #awards-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+#manifesto #awards-image {
+  position: absolute;
+  background-image: url("a-logo");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 125px;
+  height: 135px;
+  left: 270px;
+  opacity: 0.025;
+}
+#manifesto #awards-description {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
+#manifesto #awards-horizontal-glitch {
+  position: absolute;
+  top: 375px;
+  right: 100px;
+  width: 20px;
+  height: 70px;
+}
+#manifesto .section-description h2 {
+  font: 34px Brandon;
+  color: text-color;
+  text-transform: uppercase;
+}
+#manifesto .section-description p {
+  font: 16px Inconsolata;
+  line-height: 26px;
+  width: 650px;
+  margin-top: 10px;
 }
