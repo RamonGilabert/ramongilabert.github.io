@@ -1,6 +1,7 @@
 #footer {
   width: 100vw;
   height: 100vh;
+  min-width: minimum-width;
   position: relative;
 }
 #footer .wrapper {
@@ -42,6 +43,7 @@
 #footer #social {
   display: table;
   margin-top: 26px;
+  min-width: 600px;
 }
 #footer #social div {
   display: table-cell;
@@ -68,4 +70,7 @@
 }
 #footer #social #twitter figure {
   background-image: url("twitter-icon");
+}
+#footer #social #resume figure {
+  background-image: url("monogram-icon");
 }

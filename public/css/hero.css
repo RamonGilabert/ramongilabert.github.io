@@ -1,7 +1,7 @@
 #manifesto #hero {
   width: 100vw;
   height: 100vh;
-  min-width: 1024px;
+  min-width: minimum-width;
   background-color: background-color;
 }
 #manifesto #hero-image-wrapper {

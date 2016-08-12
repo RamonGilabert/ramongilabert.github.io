@@ -2,6 +2,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  min-width: minimum-width;
 }
 #manifesto .story .description {
   position: absolute;
@@ -23,6 +24,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  min-width: minimum-width;
 }
 #manifesto .manifesto .description {
   position: absolute;
@@ -56,6 +58,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  min-width: minimum-width;
 }
 #manifesto .awards figure {
   position: absolute;
