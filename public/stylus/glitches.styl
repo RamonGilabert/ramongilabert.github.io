@@ -70,9 +70,47 @@
 }
 
 .horizontal-glitch {
+  position: absolute
+  width: 35px
+  height: 100px
+}
 
+.horizontal-glitch:before {
+  content: ''
+  position: absolute
+  width: 1px
+  height: 25%
+  right: 0%
+  top: 0%
+  background-color: text-color
+  opacity: disabled-text-opacity
+}
+
+.horizontal-glitch:after {
+  positioning = 50%
+
+  content: ''
+  position: absolute
+  width: 1px
+  height: 100% - positioning
+  right: 0%
+  top: positioning
+  background-color: text-color
+  opacity: disabled-text-opacity
 }
 
 .horizontal-glitch div {
-  
+  content: ''
+  position: absolute
+  height: 1px
+  top: 40%
+  right: 0%
+  left: 0%
+  background-color: text-color
+  opacity: disabled-text-opacity
+}
+
+#story-horizontal-glitch {
+  top: 220px
+  right: 100px
 }

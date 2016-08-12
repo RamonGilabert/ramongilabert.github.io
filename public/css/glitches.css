@@ -57,3 +57,42 @@
   bottom: 80px;
   width: 105px;
 }
+.horizontal-glitch {
+  position: absolute;
+  width: 35px;
+  height: 100px;
+}
+.horizontal-glitch:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 25%;
+  right: 0%;
+  top: 0%;
+  background-color: text-color;
+  opacity: disabled-text-opacity;
+}
+.horizontal-glitch:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 50%;
+  right: 0%;
+  top: 50%;
+  background-color: text-color;
+  opacity: disabled-text-opacity;
+}
+.horizontal-glitch div {
+  content: '';
+  position: absolute;
+  height: 1px;
+  top: 40%;
+  right: 0%;
+  left: 0%;
+  background-color: text-color;
+  opacity: disabled-text-opacity;
+}
+#story-horizontal-glitch {
+  top: 220px;
+  right: 100px;
+}
