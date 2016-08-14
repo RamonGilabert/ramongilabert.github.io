@@ -1,4 +1,19 @@
 {
+  "description" : [
+    {
+      "title" : "Name",
+      "name" : "Ramon Gilabert_"
+    },
+    {
+      "title" : "From",
+      "name" : "Barcelona_"
+    },
+    {
+      "title" : "Born",
+      "name" : "071994_"
+    }
+  ],
+
   "manifesto" : [
     {
       "title" : "The story",
