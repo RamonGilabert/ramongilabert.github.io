@@ -254,7 +254,7 @@
 }
 #manifesto .story figure {
   position: absolute;
-  background-image: url("s-logo");
+  background-image: url("../images/manifesto/a-logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100px;
@@ -282,7 +282,7 @@
 }
 #manifesto .manifesto figure {
   position: absolute;
-  background-image: url("m-logo");
+  background-image: url("../images/manifesto/a-logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 165px;
@@ -304,7 +304,7 @@
 }
 #manifesto .awards figure {
   position: absolute;
-  background-image: url("a-logo");
+  background-image: url("../images/manifesto/a-logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 125px;
