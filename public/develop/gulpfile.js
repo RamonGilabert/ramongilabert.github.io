@@ -13,9 +13,9 @@ gulp.task('stylus', function () {
 
 gulp.task('mustache', function() {
   gulp.src("./mustache/*.mustache")
-    .pipe(mustache({},{}, {
+    .pipe(mustache('./data/manifesto/manifesto.json', {}, {
       head: "./mustache/partials/head.mustache",
-      footer: "./mustache/partials/footer.mustache",
+      footer: "./mustache/partials/footer.mustache"
     })).pipe(gulp.dest("../static"));
 });
 
@@ -25,3 +25,38 @@ gulp.task('watch', ['stylus', 'mustache'], function() {
 });
 
 gulp.task('default', ['stylus', 'mustache', 'watch']);
+
+function loadJSON(response) {
+
+  var object = new XMLHttpRequest
+  object.overrideMimeType("application/json");
+  object.open('GET', './data/manifesto/manifesto.json', true);
+  object.onreadystatechange = function () {
+    if (object.readyState == 4) {
+      response(object.responseText);
+    }
+  };
+
+  object.send(null);
+}
+
+function mustache() {
+  loadJSON(function(response) {
+    var body = document.getElementById('manifesto');
+    var template = document.getElementById('manifesto-template').innerHTML;
+    var hero = document.getElementById('hero');
+    var data = [];
+
+    try {
+      data = JSON.parse(response);
+    } catch(error) {
+      console.log(error)
+    }
+
+    var html = Mustache.render(template, data);
+    var node = document.createElement('section');
+
+    node.innerHTML = Mustache.render(template, data);
+    body.insertBefore(node, hero.nextSibling);
+  });
+}

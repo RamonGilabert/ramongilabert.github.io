@@ -32,23 +32,17 @@
       </div>
       <div class='corner-glitch bottom-corner-glitch'></div>
     </section>
+    {{# manifesto }}
+    <section class="{{ kind }}">
+      <div class='section-description description'>
+        <figure></figure>
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+      </div>
 
-    <section id='manifesto-explanation'></section>
-
-    <template id='first-template'>
-      {{# manifesto }}
-        <section class="{{ kind }}">
-          <div class='section-description description'>
-            <figure></figure>
-            <h2>{{ title }}</h2>
-            <p>{{ description }}</p>
-          </div>
-
-          <div class='horizontal-glitch {{ kind }}-horizontal-glitch'><div></div></div>
-        </section>
-      {{/ manifesto }}
-    </template>
-
+      <div class='horizontal-glitch {{ kind }}-horizontal-glitch'><div></div></div>
+    </section>
+    {{/ manifesto }}
     {{> footer }}
   </body>
 </html>
