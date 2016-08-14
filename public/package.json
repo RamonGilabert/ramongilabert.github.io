@@ -7,7 +7,10 @@
   "license": "BSD-3-Clause",
   "main": "gulpfile.js",
   "devDependencies": {
-    "gulp": "3.9.1",
-    "gulp-mustache-plus": "1.0.1"
+    "gulp": "latest",
+    "gulp-watch": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-mustache-plus": "latest"
   }
 }
