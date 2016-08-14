@@ -8,7 +8,7 @@ gulp.task('stylus', function () {
   gulp.src('./stylus/*.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus())
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('../static/css'));
 });
 
 gulp.task('mustache', function() {
@@ -16,7 +16,7 @@ gulp.task('mustache', function() {
     .pipe(mustache({},{}, {
       head: "./mustache/partials/head.mustache",
       footer: "./mustache/partials/footer.mustache",
-    })).pipe(gulp.dest("./"));
+    })).pipe(gulp.dest("../static"));
 });
 
 gulp.task('watch', ['stylus', 'mustache'], function() {
