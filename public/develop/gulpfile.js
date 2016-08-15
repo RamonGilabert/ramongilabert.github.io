@@ -12,11 +12,11 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('mustache', function() {
-  gulp.src("./mustache/*.mustache")
+  gulp.src('./mustache/*.mustache')
     .pipe(mustache('./data/gilabert.json', {}, {
-      head: "./mustache/partials/head.mustache",
-      footer: "./mustache/partials/footer.mustache"
-    })).pipe(gulp.dest("../static"));
+      head: './mustache/partials/head.mustache',
+      footer: './mustache/partials/footer.mustache'
+    })).pipe(gulp.dest('../static'));
 });
 
 gulp.task('watch', ['stylus', 'mustache'], function() {
