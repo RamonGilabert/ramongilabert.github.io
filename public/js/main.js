@@ -1,5 +1,7 @@
 // JavaScript gilabert.design
 
+// MARK: - Window events
+
 window.addEventListener('load', function() {
 
   var appearance = new Appearance();
@@ -9,19 +11,15 @@ window.addEventListener('load', function() {
   separator.generate();
 
   var email = document.getElementById('email-link');
-  email.addEventListener('click', function() {
-    var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
-    var subject = decode("Uryyb gurer! :)");
-    var reference = letter + '?subject=' + subject;
+  
+  if (email !== undefined) {
+    email.addEventListener('click', function() {
+      var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
+      var subject = decode("Uryyb gurer! :)");
+      var reference = letter + '?subject=' + subject;
 
-    email.href = reference;
-  });
-
-  function decode(letters) {
-    return letters.replace(/[a-zA-Z]/g, function(c) {
-      return String.fromCharCode((c <= "Z" ? 90 : 122)
-      >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-    })
+      email.href = reference;
+    });
   }
 
   window.addEventListener('resize', function() {
@@ -32,7 +30,9 @@ window.addEventListener('load', function() {
 function Appearance() {
 
   this.run = function() {
-    this.manifesto()
+    if (document.getElementById('manifesto') !== undefined) {
+      this.manifesto()
+    }
   }
 
   this.manifesto = function() {
@@ -74,7 +74,7 @@ function Separator(name) {
   this.generate = function() {
     if ((window.innerWidth >= 1400
       || Math.abs(this.lastWidth - window.innerWidth) <= 10)
-      && this.wrapper.innerHTML != '') {
+      && this.wrapper.innerHTML != '' || this.wrapper === undefined) {
       return;
     }
 
@@ -105,4 +105,13 @@ function Separator(name) {
 
 window.onbeforeunload = function() {
 	window.scrollTo(0, 0);
+}
+
+// MARK: - Helper functions
+
+function decode(letters) {
+  return letters.replace(/[a-zA-Z]/g, function(c) {
+    return String.fromCharCode((c <= "Z" ? 90 : 122)
+    >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+  })
 }
