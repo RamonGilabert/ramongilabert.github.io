@@ -111,6 +111,7 @@
   left: 27px;
   min-width: 900px;
   max-width: 1400px;
+  opacity: 0.2;
 }
 #dot-separator div {
   float: left;
@@ -197,6 +198,18 @@
 #footer #social #resume figure {
   background-image: url("../images/icons/monogram-icon.svg");
 }
+#manifesto .loading-hero-image {
+  transform: translateX(150px);
+  opacity: 0;
+}
+#manifesto .loading-hero-line {
+  transform: translateX(50px);
+  opacity: 0;
+}
+#manifesto .loading-header {
+  transform: translateX(50px);
+  opacity: 0;
+}
 #manifesto #hero {
   width: 100vw;
   height: 100vh;
@@ -216,6 +229,7 @@
   width: 372px;
   height: 560px;
   display: table-cell;
+  transition: transform 0.85s ease-in-out, opacity 0.85s ease;
 }
 #manifesto #hero-description {
   position: absolute;
@@ -229,6 +243,7 @@
   font: 16px Inconsolata;
   color: #fff;
   margin-bottom: 22px;
+  transition: transform 0.55s ease, opacity 0.85s ease;
 }
 #manifesto .disclosure-text {
   position: absolute;
@@ -248,6 +263,7 @@
   z-index: 1;
   background-color: rgba(37,41,40,0);
   -webkit-backdrop-filter: blur(0px);
+  transition: opacity 0.85s ease;
 }
 #manifesto .email-link-wrapper {
   position: absolute;
@@ -257,6 +273,9 @@
 }
 #manifesto #email-link {
   font: 15px Inconsolata;
+}
+#manifesto #header-glitches {
+  transition: opacity 0.85s ease;
 }
 #manifesto .story {
   position: relative;

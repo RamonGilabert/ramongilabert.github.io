@@ -2,13 +2,13 @@
 
 window.addEventListener('load', function() {
 
-  var email = document.getElementById('email-link');
-  var manifesto = document.getElementById('hero');
-  var separator = new Separator('dot-separator');
+  var appearance = new Appearance();
+  appearance.run()
 
-  manifesto.classList.remove('loading');
+  var separator = new Separator('dot-separator');
   separator.generate();
 
+  var email = document.getElementById('email-link');
   email.addEventListener('click', function() {
     var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
     var subject = decode("Uryyb gurer! :)");
@@ -31,8 +31,37 @@ window.addEventListener('load', function() {
 
 function Appearance() {
 
-  this.manifesto = function() {
+  this.run = function() {
+    this.manifesto()
+  }
 
+  this.manifesto = function() {
+    var image = document.getElementById('hero-image');
+    var header = document.getElementById('header');
+    var glitches = document.getElementById('header-glitches');
+    var descriptionNodes = document.getElementsByClassName('description-line');
+
+    image.classList.remove('loading-hero-image');
+
+    setTimeout(function() {
+      header.classList.remove('loading-header');
+      glitches.classList.remove('loading-header');
+    }, 1000);
+
+    var i = 0;
+
+    setTimeout(function() { loop() }, 200);
+
+    function loop() {
+      setTimeout(function() {
+        var line = descriptionNodes[i];
+        line.classList.remove('loading-hero-line');
+
+        i = i + 1;
+
+        if (i < 3) { loop() }
+      }, 200 + (i * 5));
+    }
   }
 }
 
