@@ -40,8 +40,11 @@ function Separator(name) {
       return
     }
 
-    var windowWidth = window.innerWidth >= 1400 ? 1400 : window.innerWidth;
-    var width = windowWidth - 57;
+    var maximumWidth = 1400;
+    var sideOffset = 57;
+    var windowWidth = window.innerWidth >= maximumWidth
+    ? maximumWidth : window.innerWidth;
+    var width = windowWidth - sideOffset;
     var times = Math.floor(width / 11) * 2;
     var values = [true, true, true, true, true, true, false];
 
