@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
   separator.generate();
 
   var email = document.getElementById('email-link');
-  
+
   if (email !== undefined) {
     email.addEventListener('click', function() {
       var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
 function Appearance() {
 
   this.run = function() {
-    if (document.getElementById('manifesto') !== undefined) {
+    if (exists('manifesto')) {
       this.manifesto()
     }
   }
@@ -114,4 +114,8 @@ function decode(letters) {
     return String.fromCharCode((c <= "Z" ? 90 : 122)
     >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
   })
+}
+
+function exists(name) {
+  return document.getElementById(name) !== undefined
 }
