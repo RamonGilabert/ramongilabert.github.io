@@ -103,6 +103,24 @@
   top: 220px;
   right: 100px;
 }
+#dot-separator {
+  position: absolute;
+  width: 96.48vw;
+  height: 11px;
+  bottom: 20px;
+  left: 27px;
+  min-width: 900px;
+  max-width: 1400px;
+}
+#dot-separator div {
+  float: left;
+  width: 1px;
+  height: 1px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: #fff;
+}
 #footer {
   width: 100vw;
   height: 100vh;
