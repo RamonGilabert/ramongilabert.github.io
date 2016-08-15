@@ -1,10 +1,12 @@
 // JavaScript gilabert.design
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
 
   var email = document.getElementById('email-link');
+  var manifesto = document.getElementById('hero');
   var separator = new Separator('dot-separator');
 
+  manifesto.classList.remove('loading');
   separator.generate();
 
   email.addEventListener('click', function() {
@@ -27,6 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+function Appearance() {
+
+  this.manifesto = function() {
+
+  }
+}
+
 function Separator(name) {
 
   this.elementName = name;
@@ -37,7 +46,7 @@ function Separator(name) {
     if ((window.innerWidth >= 1400
       || Math.abs(this.lastWidth - window.innerWidth) <= 10)
       && this.wrapper.innerHTML != '') {
-      return
+      return;
     }
 
     var maximumWidth = 1400;
@@ -63,4 +72,8 @@ function Separator(name) {
 
     this.lastWidth = window.innerWidth;
   }
+}
+
+window.onbeforeunload = function() {
+	window.scrollTo(0, 0);
 }
