@@ -237,7 +237,7 @@
   transform: translateY(-50%);
   right: 105px;
 }
-#manifesto .email-link {
+#manifesto #email-link {
   font: 15px Inconsolata;
 }
 #manifesto .story {
