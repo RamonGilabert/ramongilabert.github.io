@@ -207,7 +207,6 @@
   opacity: 0;
 }
 #manifesto .loading-header {
-  transform: translateX(50px);
   opacity: 0;
 }
 #manifesto #hero {
@@ -386,6 +385,13 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+}
+h1,
+h2,
+p,
+a {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
 }
 a:after {
   content: '';

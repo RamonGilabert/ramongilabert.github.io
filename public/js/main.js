@@ -46,7 +46,7 @@ function Appearance() {
     setTimeout(function() {
       header.classList.remove('loading-header');
       glitches.classList.remove('loading-header');
-    }, 1000);
+    }, 700);
 
     var i = 0;
 
