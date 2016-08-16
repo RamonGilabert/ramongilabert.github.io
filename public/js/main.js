@@ -61,9 +61,13 @@ function Scroller() {
   this.manifesto = function() {
     var height = window.innerHeight;
     var sectionsLength = this.sections.length;
+    var distance = window.innerHeight * 0.6;
 
-    if (window.pageYOffset - window.innerHeight * (0.6
-      + this.length - sectionsLength) > 0 && sectionsLength > 0) {
+    if (this.length !== sectionsLength) {
+      distance = window.innerHeight * (1 + 0.7 * (this.length - sectionsLength - 1) + 0.7 * 0.5)
+    }
+
+    if (window.pageYOffset - distance > 0 && sectionsLength > 0) {
         var section = this.sections[0];
         if (section.classList.contains('scroll-appearance')) {
           section.classList.remove('scroll-appearance');

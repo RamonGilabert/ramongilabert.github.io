@@ -283,7 +283,7 @@
 #manifesto .story {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   min-width: 900px;
 }
 #manifesto .story .description {
@@ -291,7 +291,7 @@
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
-  transition: padding 0.7s ease, opacity 0.7s ease;
+  transition: padding 0.8s ease, opacity 0.8s ease;
 }
 #manifesto .story .description figure {
   position: absolute;
@@ -304,9 +304,9 @@
   opacity: 0.025;
 }
 #manifesto .manifesto {
-  width: 100vw;
-  height: 100vh;
   position: relative;
+  width: 100vw;
+  height: 70vh;
   min-width: 900px;
 }
 #manifesto .manifesto .description {
@@ -314,7 +314,7 @@
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
-  transition: padding 0.7s ease, opacity 0.7s ease;
+  transition: padding 0.8s ease, opacity 0.8s ease;
 }
 #manifesto .manifesto .description h2 {
   text-align: right;
@@ -339,16 +339,17 @@
   left: 100px;
 }
 #manifesto .awards {
-  width: 100vw;
-  height: 100vh;
   position: relative;
+  width: 100vw;
+  height: 70vh;
+  min-width: 900px;
 }
 #manifesto .awards .description {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
-  transition: padding 0.7s ease, opacity 0.7s ease;
+  transition: padding 0.8s ease, opacity 0.8s ease;
 }
 #manifesto .awards .description figure {
   position: absolute;
