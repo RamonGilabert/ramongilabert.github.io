@@ -4,12 +4,7 @@
 
 window.addEventListener('load', function() {
 
-  window.requestAnimationFrame = window.requestAnimationFrame
-  || window.webkitRequestAnimationFrame
-  || window.mozRequestAnimationFrame
-  || window.oRequestAnimationFrame
-  || window.msRequestAnimationFrame
-  || function(callback) { window.setTimeout(callback, 1000 / 60) };
+  prepareWindowFrames();
 
   var appearance = new Appearance();
   appearance.run();
@@ -190,4 +185,13 @@ function decode(letters) {
 
 function exists(name) {
   return document.getElementById(name) !== undefined
+}
+
+function prepareWindowFrames() {
+  window.requestAnimationFrame = window.requestAnimationFrame
+  || window.webkitRequestAnimationFrame
+  || window.mozRequestAnimationFrame
+  || window.oRequestAnimationFrame
+  || window.msRequestAnimationFrame
+  || function(callback) { window.setTimeout(callback, 1000 / 60) };
 }
