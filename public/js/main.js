@@ -29,7 +29,18 @@ window.addEventListener('load', function() {
   });
 
   window.addEventListener('scroll', function() {
-    scroller.method();
+    if (window.pageYOffset <= window.innerHeight * 0.25) {
+      scroller.run();
+
+      for (var i = 0; i < scroller.sections.length; i++) {
+        var section = scroller.sections[i];
+        if (!section.classList.contains('scroll-appearance')) {
+          section.classList.add('scroll-appearance');
+        }
+      }
+    } else {
+      scroller.method();
+    }
   });
 });
 
@@ -42,6 +53,7 @@ function Scroller() {
   this.sections = [];
   this.method = '';
   this.length = 0;
+  this.remaining = 0;
 
   this.run = function() {
     if (exists('manifesto')) {
@@ -51,10 +63,13 @@ function Scroller() {
       .getElementsByTagName('div')[0];
       var awards = document.getElementsByClassName('awards')[0]
       .getElementsByTagName('div')[0];
+      var footer = document.getElementById('footer')
+      .getElementsByTagName('div')[0];
 
-      this.sections = [story, manifesto, awards];
+      this.sections = [story, manifesto, awards, footer];
       this.method = this.manifesto
       this.length = this.sections.length;
+      this.remaining = this.length;
     }
   }
 
@@ -74,6 +89,8 @@ function Scroller() {
           this.sections.shift();
         }
     }
+
+    this.remaining = this.sections.length;
   }
 }
 
