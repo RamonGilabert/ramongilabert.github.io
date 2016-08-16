@@ -80,15 +80,16 @@ function Scroller() {
   }
 
   this.manifesto = function() {
-    var height = window.innerHeight;
+    var height = window.innerHeight
     var sectionsLength = this.sections.length;
     var initialPercentageTrigger = 0.6;
     var distance = window.innerHeight * initialPercentageTrigger;
     var sectionHeight = 0.7;
-    var percentageTrigger = 0.5
+    var percentageTrigger = 0.5;
+    var minimumHeight = window.innerHeight > 600 * 0.7 ? window.innerHeight : 600 * 0.7;
 
     if (this.length !== sectionsLength) {
-      distance = window.innerHeight * (1 + sectionHeight
+      distance = window.innerHeight + minimumHeight * (sectionHeight
         * (this.length - sectionsLength - 1) + sectionHeight * percentageTrigger)
     }
 

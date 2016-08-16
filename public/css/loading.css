@@ -1,5 +1,5 @@
 #manifesto .loading-hero-image {
-  transform: translateX(150px);
+  transform: translateX(100%);
   opacity: 0;
 }
 #manifesto .loading-hero-line {
