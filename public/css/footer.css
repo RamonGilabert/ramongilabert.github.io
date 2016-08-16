@@ -6,7 +6,7 @@
 }
 #footer .wrapper {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translate3d(0, -50%, 0);
   display: block;
   margin: auto;
