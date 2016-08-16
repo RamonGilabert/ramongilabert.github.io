@@ -112,7 +112,7 @@ function Appearance() {
   }
 
   this.manifesto = function() {
-    var image = document.getElementById('hero-image');
+    var image = document.getElementById('hero-image').getElementsByTagName('img')[0];
     var header = document.getElementById('header');
     var glitches = document.getElementById('header-glitches');
     var descriptionNodes = document.getElementsByClassName('description-line');

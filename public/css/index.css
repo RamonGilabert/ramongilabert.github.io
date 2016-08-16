@@ -204,7 +204,7 @@
   background-image: url("../images/icons/monogram-icon.svg");
 }
 #manifesto .loading-hero-image {
-  transform: translateX(100%);
+  transform: translateX(150px);
   opacity: 0;
 }
 #manifesto .loading-hero-line {
@@ -239,11 +239,11 @@
   left: 50%;
   transform: translateX(-50%);
   background-position: center;
-  transition: transform 0.85s ease-in-out, opacity 0.85s ease;
 }
 #manifesto #hero-image img {
   height: 85vh;
   min-height: 510px;
+  transition: transform 0.85s ease-in-out, opacity 0.85s ease;
 }
 #manifesto #hero-description {
   position: absolute;
