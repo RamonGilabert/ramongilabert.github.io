@@ -2,37 +2,48 @@
 
 #manifesto {
 
+  minimum-height = 600px
+  minimum-image-height = minimum-height * 0.85
+  image-height = 85vh
+
   #hero {
     width: 100vw
     height: 100vh
+    min-height: minimum-height
     min-width: minimum-width
     background-color: background-color
+    position: relative
   }
 
   #hero-image-wrapper {
-    display: table
     position: relative
     padding-top: 60px
     margin: 0 auto
+    width: 100vw
+    height: image-height
+    min-height: minimum-image-height
   }
 
   #hero-image {
-    background: url(hero-image)
-    background-size: contain
-    background-repeat: no-repeat
-    width: 372px
-    height: 560px
-    display: table-cell
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    background-position: center
     transition: initial-transform-transition, initial-opacity-transition
+    float: left
+
+    img {
+      height: image-height
+      min-height: minimum-image-height
+    }
   }
 
   #hero-description {
     position: absolute
     top: 55%
-    transform: translateY(-50%);
+    transform: translateY(-50%)
     min-width: 200px
     margin-left: 30px
-    display: table-cell
   }
 
   #hero-description p {
