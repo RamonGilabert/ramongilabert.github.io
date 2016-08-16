@@ -39,8 +39,8 @@ window.onbeforeunload = function() {
 
 function Scroller() {
 
-  this.method = '';
   this.sections = [];
+  this.method = '';
   this.length = 0;
 
   this.run = function() {
@@ -52,8 +52,8 @@ function Scroller() {
       var awards = document.getElementsByClassName('awards')[0]
       .getElementsByTagName('div')[0];
 
-      this.method = this.manifesto
       this.sections = [story, manifesto, awards];
+      this.method = this.manifesto
       this.length = this.sections.length;
     }
   }
@@ -62,11 +62,10 @@ function Scroller() {
     var height = window.innerHeight;
     var sectionsLength = this.sections.length;
 
-    if (window.pageYOffset - window.innerHeight * (0.75
+    if (window.pageYOffset - window.innerHeight * (0.6
       + this.length - sectionsLength) > 0 && sectionsLength > 0) {
         var section = this.sections[0];
         if (section.classList.contains('scroll-appearance')) {
-          console.log(this.sections);
           section.classList.remove('scroll-appearance');
           this.sections.shift();
         }

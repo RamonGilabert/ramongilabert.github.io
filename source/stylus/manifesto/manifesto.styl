@@ -4,6 +4,8 @@
 
 #manifesto {
 
+  transition = padding-transition, opacity-transition
+
   .story {
     position: relative
     width: 100vw
@@ -15,7 +17,7 @@
       top: 50%
       left: 100px
       transform: translateY(-50%)
-      transition: transform-transition
+      transition: transition
 
       figure {
         position: absolute
@@ -41,7 +43,7 @@
       top: 50%
       right: 100px
       transform: translateY(-50%);
-      transition: transform-transition
+      transition: transition
 
       h2 {
         text-align: right
@@ -75,14 +77,13 @@
     width: 100vw
     height: 100vh
     position: relative
-    min-width: minimum-width
 
     .description {
       position: absolute
       top: 50%
       left: 100px
       transform: translateY(-50%)
-      transition: transform-transition
+      transition: transition
 
       figure {
         position: absolute
