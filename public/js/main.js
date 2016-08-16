@@ -5,13 +5,15 @@
 window.addEventListener('load', function() {
 
   var appearance = new Appearance();
-  appearance.run()
+  appearance.run();
 
   var separator = new Separator('dot-separator');
   separator.generate();
 
-  var email = document.getElementById('email-link');
+  var scroller = new Scroller();
+  scroller.run();
 
+  var email = document.getElementById('email-link');
   if (email !== undefined) {
     email.addEventListener('click', function() {
       var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
@@ -25,7 +27,52 @@ window.addEventListener('load', function() {
   window.addEventListener('resize', function() {
     separator.generate();
   });
+
+  window.addEventListener('scroll', function() {
+    scroller.method();
+  });
 });
+
+window.onbeforeunload = function() {
+	window.scrollTo(0, 0);
+}
+
+function Scroller() {
+
+  this.method = '';
+  this.sections = [];
+  this.length = 0;
+
+  this.run = function() {
+    if (exists('manifesto')) {
+      var story = document.getElementsByClassName('story')[0]
+      .getElementsByTagName('div')[0];
+      var manifesto = document.getElementsByClassName('manifesto')[0]
+      .getElementsByTagName('div')[0];
+      var awards = document.getElementsByClassName('awards')[0]
+      .getElementsByTagName('div')[0];
+
+      this.method = this.manifesto
+      this.sections = [story, manifesto, awards];
+      this.length = this.sections.length;
+    }
+  }
+
+  this.manifesto = function() {
+    var height = window.innerHeight;
+    var sectionsLength = this.sections.length;
+
+    if (window.pageYOffset - window.innerHeight * (0.75
+      + this.length - sectionsLength) > 0 && sectionsLength > 0) {
+        var section = this.sections[0];
+        if (section.classList.contains('scroll-appearance')) {
+          console.log(this.sections);
+          section.classList.remove('scroll-appearance');
+          this.sections.shift();
+        }
+    }
+  }
+}
 
 function Appearance() {
 
@@ -101,10 +148,6 @@ function Separator(name) {
 
     this.lastWidth = window.innerWidth;
   }
-}
-
-window.onbeforeunload = function() {
-	window.scrollTo(0, 0);
 }
 
 // MARK: - Helper functions

@@ -209,6 +209,9 @@
 #manifesto .loading-header {
   opacity: 0;
 }
+#manifesto .scroll-appearance {
+  transform: translateY(500px);
+}
 #manifesto #hero {
   width: 100vw;
   height: 100vh;
@@ -287,6 +290,7 @@
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out;
 }
 #manifesto .story .description figure {
   position: absolute;
@@ -309,6 +313,7 @@
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out;
 }
 #manifesto .manifesto .description h2 {
   text-align: right;
@@ -343,6 +348,7 @@
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out;
 }
 #manifesto .awards .description figure {
   position: absolute;
