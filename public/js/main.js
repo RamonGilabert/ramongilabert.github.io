@@ -15,6 +15,9 @@ window.addEventListener('load', function() {
   var scroller = new Scroller();
   scroller.run();
 
+  var resizer = new Resizer();
+  resizer.prepare();
+
   var email = document.getElementById('email-link');
   if (email !== undefined) {
     email.addEventListener('click', function() {
@@ -28,6 +31,7 @@ window.addEventListener('load', function() {
 
   window.addEventListener('resize', function() {
     separator.generate();
+    resizer.method();
   });
 
   window.addEventListener('scroll', function() {
@@ -133,6 +137,29 @@ function Appearance() {
         if (i < 3) { loop() }
       }, 200 + (i * 5));
     }
+  }
+}
+
+function Resizer() {
+
+  this.method = '';
+  this.reference = '';
+  this.movable = '';
+
+  this.prepare = function() {
+    if (exists('manifesto')) {
+      this.method = this.manifesto;
+      this.reference = document.getElementById('hero-image');
+      this.movable = document.getElementById('hero-description');
+      this.method();
+    }
+  }
+
+  this.manifesto = function() {
+    var halfWindow = window.innerWidth / 2;
+    var referenceWidth = this.reference.offsetWidth / 2;
+
+    this.movable.style.left = halfWindow + referenceWidth + 'px';
   }
 }
 
