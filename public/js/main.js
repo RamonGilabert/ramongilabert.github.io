@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
   resizer.prepare();
 
   var email = document.getElementById('email-link');
-  if (email !== undefined) {
+  if (email !== null) {
     email.addEventListener('click', function() {
       var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
       var subject = decode("Uryyb gurer! :)");
@@ -105,9 +105,12 @@ function Scroller() {
 
 function Appearance() {
 
+  this.method = '';
+
   this.run = function() {
     if (exists('manifesto')) {
-      this.manifesto()
+      this.method = this.manifesto;
+      this.method()
     }
   }
 
@@ -171,9 +174,11 @@ function Separator(name) {
   this.lastWidth = window.innerWidth;
 
   this.generate = function() {
+    if (!exists(this.elementName)) { return; }
+
     if ((window.innerWidth >= 1400
       || Math.abs(this.lastWidth - window.innerWidth) <= 10)
-      && this.wrapper.innerHTML != '' || this.wrapper === undefined) {
+      && this.wrapper.innerHTML != '') {
       return;
     }
 
@@ -212,7 +217,7 @@ function decode(letters) {
 }
 
 function exists(name) {
-  return document.getElementById(name) !== undefined
+  return document.getElementById(name) !== null;
 }
 
 function prepareWindowFrames() {
