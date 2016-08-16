@@ -1,14 +1,16 @@
 #footer {
+  position: relative;
   width: 100vw;
   height: 100vh;
   min-width: minimum-width;
-  position: relative;
 }
 #footer .wrapper {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(0, -50%, 0);
+  display: block;
+  margin: auto;
+  width: 100%;
   transition: padding-transition, opacity-transition;
 }
 #footer .wrapper h2 {
@@ -42,9 +44,12 @@
   background-color: text-color;
 }
 #footer #social {
+  position: absolute;
   display: table;
   margin-top: 26px;
   min-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #footer #social div {
   display: table-cell;

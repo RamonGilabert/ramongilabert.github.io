@@ -1,4 +1,4 @@
 #manifesto .scroll-appearance {
-  padding-top: 500px;
+  transform: translateY(100%);
   opacity: 0;
 }

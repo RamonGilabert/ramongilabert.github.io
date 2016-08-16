@@ -3,16 +3,18 @@
 #footer {
   cross-thickness = 1px
 
+  position: relative
   width: 100vw
   height: 100vh
   min-width: minimum-width
-  position: relative
 
   .wrapper {
     position: absolute
     top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    transform: translate3d(0, -50%, 0)
+    display: block
+    margin: auto
+    width: 100%
     transition: padding-transition, opacity-transition
   }
 
@@ -53,9 +55,12 @@
   }
 
   #social {
+    position: absolute
     display: table
     margin-top: 26px
     min-width: 600px
+    left: 50%
+    transform: translateX(-50%)
 
     div {
       display: table-cell
