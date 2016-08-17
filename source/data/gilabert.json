@@ -1,4 +1,30 @@
 {
+  "myself" : [
+    {
+      "kind" : "manifesto",
+      "title" : "Designer & Developer",
+      "subtitle" : "I’m the developer that makes you hesitate. The designer that makes you wonder. Welcome to my site. I’m Ramon. It’s nice to have you here."
+    },
+    {
+      "kind" : "lights",
+      "title" : "Lights",
+      "span" : "Role",
+      "subtitle" : ". Electronics, iOS, Industrial & Product Design, Backend, Web_"
+    },
+    {
+      "kind" : "varner",
+      "title" : "Cubus Friends",
+      "span" : "Role",
+      "subtitle" : "iOS, Concept Designer, Prototype Designer, Product Owner_"
+    },
+    {
+      "kind" : "branding",
+      "title" : "Personal Branding",
+      "span" : "Role",
+      "subtitle" : "Development & everything related to the design of it_"
+    }
+  ],
+
   "description" : [
     {
       "title" : "Name",
