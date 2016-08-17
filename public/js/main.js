@@ -155,8 +155,12 @@ function Resizer() {
       this.method = this.manifesto;
       this.reference = document.getElementById('hero-image');
       this.movable = document.getElementById('hero-description');
-      this.method();
+    } else if (exists('myself')) {
+      this.method = this.myself;
+      this.movable = document.getElementsByTagName('nav')[0];
     }
+
+    this.method();
   }
 
   this.manifesto = function() {
@@ -165,6 +169,13 @@ function Resizer() {
     var margin = 30;
 
     this.movable.style.left = halfWindow + referenceWidth + margin + 'px';
+  }
+
+  this.myself = function() {
+    var ownWidth = this.movable.offsetWidth / 2;
+    var margin = 15;
+
+    this.movable.style.right = margin - ownWidth + 'px';
   }
 }
 
@@ -218,7 +229,11 @@ function decode(letters) {
 }
 
 function exists(name) {
-  return document.getElementById(name) !== null;
+  if (document.getElementsByTagName('body').length <= 0) {
+    return false
+  }
+
+  return document.getElementsByTagName('body')[0].id === name;
 }
 
 function prepareWindowFrames() {

@@ -2,4 +2,65 @@
 
 #myself {
 
+  section {
+    width: 100vw
+    height: 100vh
+    position: relative
+
+    div {
+      position: absolute
+      top: 50%
+      left: 75px
+      transform: translateY(-50%)
+    }
+
+    h2 {
+      font: 55px Brandon
+      text-transform: uppercase
+      color: text-color
+    }
+
+    p {
+      font: 16px Inconsolata
+    }
+
+    button {
+      position: relative
+      font: 15px Inconsolata
+      color: text-color
+      padding-bottom: 10px
+      padding-right: 50px
+    }
+
+    button:after {
+      content: ''
+      position: absolute
+      width: 65%
+      height: 1px
+      right: 0%
+      bottom: 0%
+      background-color: text-color
+      transition: width 0.6s ease
+    }
+
+    button:hover:after {
+      width: 100%
+    }
+  }
+
+  nav {
+    position: fixed
+    top: 50%
+    right: 0%
+    transform: rotate(-90deg) translateY(-50%)
+
+    a {
+      margin = 10px
+
+      position: relative
+      font: 15px Inconsolata
+      margin-right: margin
+      margin-left: margin
+    }
+  }
 }

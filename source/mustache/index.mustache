@@ -6,9 +6,19 @@
   </head>
   <body id='myself'>
     <h1 id='page-title'>Ramon Gilabert</h1>
+    <nav>
+      {{# myself }}
+      <a class='link' id='navigation-{{ kind }}' href=''>{{ kind }}</a>
+      {{/ myself }}
+    </nav>
     {{# myself }}
-    <section class="{{ kind }}">
-      
+    <section id="{{ kind }}">
+      <div class='wrapper'>
+        <figure></figure>
+        <h2>{{ title }}</h2>
+        <p><strong>{{ span }}</strong>{{ subtitle }}</p>
+        <button id="{{ kind }}-button">read more</button>
+      </div>
     </section>
     {{/ myself }}
   </body>
