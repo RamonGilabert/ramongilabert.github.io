@@ -173,7 +173,7 @@ function Resizer() {
 
   this.myself = function() {
     var ownWidth = this.movable.offsetWidth / 2;
-    var margin = 26;
+    var margin = 38;
 
     this.movable.style.right = margin - ownWidth + 'px';
   }
