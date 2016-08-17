@@ -6,13 +6,6 @@
   </head>
   <body id='myself'>
     <h1 id='page-title'>Ramon Gilabert</h1>
-    <nav>
-      <figure></figure>
-      <div id='indicator'></div>
-      {{# myself }}
-      <div><a id='navigation-{{ kind }}' href=''>{{ kind }}</a></div>
-      {{/ myself }}
-    </nav>
     {{# myself }}
     <section id="{{ kind }}">
       <figure></figure>
@@ -23,5 +16,12 @@
       </div>
     </section>
     {{/ myself }}
+    <nav>
+      <figure></figure>
+      {{# myself }}
+      <div><a id='navigation-{{ kind }}' href=''>{{ kind }}</a></div>
+      {{/ myself }}
+    </nav>
+    <div id='indicator'></div>
   </body>
 </html>
