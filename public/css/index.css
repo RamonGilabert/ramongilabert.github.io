@@ -223,7 +223,7 @@
   height: 100vh;
   min-height: 600px;
   min-width: 900px;
-  background-color: #252928;
+  background-color: #191b1a;
   position: relative;
 }
 #manifesto #hero-image-wrapper {
@@ -231,8 +231,8 @@
   padding-top: 60px;
   margin: 0 auto;
   width: 100vw;
-  height: 85vh;
-  min-height: 510px;
+  height: 80vh;
+  min-height: 480px;
 }
 #manifesto #hero-image {
   position: absolute;
@@ -241,8 +241,8 @@
   background-position: center;
 }
 #manifesto #hero-image img {
-  height: 85vh;
-  min-height: 510px;
+  height: 80vh;
+  min-height: 480px;
   transition: transform 0.85s ease-in-out, opacity 0.85s ease;
 }
 #manifesto #hero-description {
@@ -397,7 +397,7 @@ html {
   padding: 0;
 }
 body {
-  background-color: #252928;
+  background-color: #191b1a;
   overflow-x: hidden;
   margin: 0 auto;
 }

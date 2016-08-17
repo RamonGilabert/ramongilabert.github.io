@@ -162,8 +162,9 @@ function Resizer() {
   this.manifesto = function() {
     var halfWindow = window.innerWidth / 2;
     var referenceWidth = this.reference.offsetWidth / 2;
+    var margin = 30;
 
-    this.movable.style.left = halfWindow + referenceWidth + 'px';
+    this.movable.style.left = halfWindow + referenceWidth + margin + 'px';
   }
 }
 
