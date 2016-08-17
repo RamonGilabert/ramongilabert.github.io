@@ -22,21 +22,24 @@
 
     p {
       font: 16px Inconsolata
+      max-width: 650px
+      line-height: 26px
     }
 
     button {
       position: relative
       font: 15px Inconsolata
       color: text-color
-      padding-bottom: 10px
+      margin-top: 10px
+      padding-bottom: 5px
       padding-right: 50px
     }
 
     button:after {
       content: ''
       position: absolute
-      width: 65%
-      height: 1px
+      width: 70%
+      height: 0.5px
       right: 0%
       bottom: 0%
       background-color: text-color
@@ -53,6 +56,7 @@
     top: 50%
     right: 0%
     transform: rotate(-90deg) translateY(-50%)
+    z-index: 2
 
     a {
       margin = 10px
@@ -61,6 +65,18 @@
       font: 15px Inconsolata
       margin-right: margin
       margin-left: margin
+    }
+
+    figure {
+      position: absolute
+      background-image: url(triangle)
+      background-size: contain
+      background-repeat: no-repeat
+      top: 0%
+      right: 0%
+      width: 7px
+      height: 11px
+      transform: rotate(90deg)
     }
   }
 }
