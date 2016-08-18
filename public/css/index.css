@@ -535,6 +535,15 @@ a {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
 }
+h1,
+h2,
+p {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+}
 a:after {
   content: '';
   position: absolute;
