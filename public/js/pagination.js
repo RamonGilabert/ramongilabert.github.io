@@ -66,7 +66,6 @@ window.addEventListener('load', function() {
   }
 
   function scrollUp() {
-    console.log(position);
     if (position <= 0) {
       animating = false;
       return;
@@ -87,6 +86,8 @@ window.addEventListener('load', function() {
   }
 
   function scroll(point) {
+    animating = true;
+    
     if (point > window.innerHeight * sections.length - window.innerHeight || point < 0) {
       animating = false;
       return;

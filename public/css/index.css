@@ -329,12 +329,33 @@
   right: 0%;
   bottom: 0%;
   background-color: #fff;
-  -webkit-backface-visibility: hidden;
-  transform: matrix3d();
   transition: width 0.6s ease;
 }
 #myself section button:hover:after {
   width: 100%;
+}
+#myself #lights div,
+#myself #branding div {
+  left: auto;
+  right: 125px;
+}
+#myself #lights h2,
+#myself #branding h2,
+#myself #lights p,
+#myself #branding p {
+  text-align: right;
+}
+#myself #lights button,
+#myself #branding button {
+  position: absolute;
+  right: 0px;
+  padding-right: 0px;
+  padding-left: 50px;
+}
+#myself #lights button:after,
+#myself #branding button:after {
+  left: 0%;
+  bottom: 0%;
 }
 #myself nav {
   position: fixed;

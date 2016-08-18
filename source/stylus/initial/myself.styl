@@ -94,13 +94,34 @@
       right: 0%
       bottom: 0%
       background-color: text-color
-      -webkit-backface-visibility: hidden
-      transform: matrix3d()
       transition: width 0.6s ease
     }
 
     button:hover:after {
       width: 100%
+    }
+  }
+
+  #lights, #branding {
+    div {
+      left: auto
+      right: 125px
+    }
+
+    h2, p {
+      text-align: right
+    }
+
+    button {
+      position: absolute
+      right: 0px
+      padding-right: 0px
+      padding-left: 50px
+    }
+
+    button:after {
+      left: 0%
+      bottom: 0%
     }
   }
 
