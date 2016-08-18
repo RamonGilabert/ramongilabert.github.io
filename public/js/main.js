@@ -59,7 +59,7 @@ window.onbeforeunload = function() {
 function Scroller() {
 
   this.sections = [];
-  this.method = '';
+  this.method = function() { };
   this.length = 0;
 
   this.run = function() {
@@ -105,7 +105,7 @@ function Scroller() {
 
 function Appearance() {
 
-  this.method = '';
+  this.method = function() { };
 
   this.run = function() {
     if (exists('manifesto')) {
@@ -146,7 +146,7 @@ function Appearance() {
 
 function Resizer() {
 
-  this.method = '';
+  this.method = function() { };
   this.reference = '';
   this.movable = '';
 

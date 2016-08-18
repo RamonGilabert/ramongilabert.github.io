@@ -218,6 +218,9 @@
   transform: translateY(100%);
   opacity: 0;
 }
+#myself ::-webkit-scrollbar {
+  display: none;
+}
 #myself #manifesto figure {
   background-image: url("../images/sections/myself.jpg");
 }
