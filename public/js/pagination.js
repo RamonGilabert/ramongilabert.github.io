@@ -32,10 +32,14 @@ window.addEventListener('load', function() {
       positionIndicator(this);
     });
 
+    navigator.addEventListener('mouseout', function() {
+      positionIndicator();
+    });
+
     navigator.addEventListener('click', function() {
       if (animating === false) {
         position = convertToArray(navigators).indexOf(this);
-        scroll(position * window.innerHeight);
+        requestAnimationFrame(scroll(position * window.innerHeight));
       }
     });
   }
@@ -60,7 +64,7 @@ window.addEventListener('load', function() {
     }
 
     position = position - 1;
-    scroll(position * window.innerHeight);
+    requestAnimationFrame(scroll(position * window.innerHeight));
   }
 
   function scrollDown() {
@@ -70,7 +74,7 @@ window.addEventListener('load', function() {
     }
 
     position = position + 1;
-    scroll(position * window.innerHeight);
+    requestAnimationFrame(scroll(position * window.innerHeight));
   }
 
   function scroll(point) {
@@ -179,7 +183,5 @@ disableScroll();
 // MARK: - Private functions
 
 function convertToArray(object) {
-  return [].map.call(object, function(element) {
-    return element;
-  });
-};
+  return [].map.call(object, function(element) { return element; });
+}

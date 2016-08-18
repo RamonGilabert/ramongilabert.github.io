@@ -254,6 +254,7 @@
   width: 100vw;
   height: 100vh;
   -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0%, 0);
   transition: transform 0.7s ease;
 }
 #myself #manifesto figure {
@@ -274,6 +275,7 @@
   height: 50px;
   top: 100px;
   right: 32px;
+  transform: translate3d(0, 0%, 0);
   transition: top 0.6s ease, height 0.6s ease;
 }
 #myself #indicator:after {
@@ -328,6 +330,7 @@
   right: 0%;
   bottom: 0%;
   background-color: #fff;
+  transform: translate3d(0, 0%, 0);
   transition: width 0.6s ease;
 }
 #myself section button:hover:after {
@@ -364,6 +367,7 @@
   right: 11px;
   width: 7px;
   height: 11px;
+  transform: translate3d(0, 0%, 0);
   transition: top 0.6s ease;
 }
 #myself::-webkit-scrollbar {
