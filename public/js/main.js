@@ -157,6 +157,7 @@ function Resizer() {
       this.movable = document.getElementById('hero-description');
     } else if (exists('myself')) {
       this.method = this.myself;
+      this.sections = document.getElementsByTagName('sections');
       this.movable = document.getElementsByTagName('nav')[0];
     }
 

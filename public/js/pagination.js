@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
 
   var animating = false;
   var safety = 700;
-  var shouldAnimate = true
+  var shouldAnimate = true;
   var sections = document.getElementsByTagName('section');
   var navigators = document.getElementsByClassName('navigator');
   var triangle = document.getElementById('triangle');
@@ -18,6 +18,13 @@ window.addEventListener('load', function() {
   window.addEventListener('resize', function() {
     shouldAnimate = false;
     positionIndicator();
+
+    for (var i = 0; i < this.sections.length; i++) {
+      var section = this.sections[i];
+      section.style.height = window.innerHeight;
+    }
+
+    // scroll(position * window.innerHeight, false);
   });
 
   document.addEventListener('swipeUp', function(event) {
@@ -85,15 +92,17 @@ window.addEventListener('load', function() {
     scroll(position * window.innerHeight);
   }
 
-  function scroll(point) {
+  function scroll(point, animate) {
     animating = true;
-    
+
     if (point > window.innerHeight * sections.length - window.innerHeight || point < 0) {
       animating = false;
       return;
     }
 
+    // myself.style.transition = animate === undefined ? 'transform 0.7s ease' : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
+
     positionIndicator();
 
     myself.addEventListener('transitionend', function() {
