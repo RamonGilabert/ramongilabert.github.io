@@ -274,7 +274,7 @@
   height: 50px;
   top: 100px;
   right: 32px;
-  transition: top 0.85s ease, height 0.85s ease;
+  transition: top 0.6s ease, height 0.6s ease;
 }
 #myself #indicator:after {
   content: '';
@@ -345,11 +345,15 @@
   display: inline-block;
   margin: 0 auto;
 }
-#myself nav a {
+#myself nav button {
   position: relative;
   font: 15px Inconsolata;
   margin-right: 10px;
   margin-left: 10px;
+  color: #fff;
+}
+#myself nav a:hover:after {
+  right: 100%;
 }
 #myself #triangle {
   position: absolute;
@@ -357,10 +361,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   top: 0%;
-  right: 15px;
+  right: 11px;
   width: 7px;
   height: 11px;
-  transition: top 0.85s ease;
+  transition: top 0.6s ease;
 }
 #myself::-webkit-scrollbar {
   width: 0;
@@ -567,7 +571,7 @@ a:after {
   transition: right 0.25s ease-out;
 }
 a:hover:after {
-  right: 0;
+  right: 0%;
 }
 p {
   letter-spacing: 0px;

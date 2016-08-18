@@ -25,6 +25,21 @@ window.addEventListener('load', function() {
   window.addEventListener('DOMMouseScroll', scrollHandler);
   window.addEventListener('mousewheel', scrollHandler);
 
+  for (var i = 0; i < navigators.length; i++) {
+    var navigator = navigators[i];
+
+    navigator.addEventListener('mouseover', function() {
+      positionIndicator(this);
+    });
+
+    navigator.addEventListener('click', function() {
+      if (animating === false) {
+        position = convertToArray(navigators).indexOf(this);
+        scroll(position * window.innerHeight);
+      }
+    });
+  }
+
   function scrollHandler(event) {
   	event.preventDefault();
   	var delta = event.wheelDelta || -event.detail;
@@ -74,15 +89,18 @@ window.addEventListener('load', function() {
     });
   }
 
-  function positionIndicator() {
-    var navigator = navigators[position];
+  function positionIndicator(button) {
+    var navigator = button || navigators[position];
     var y = navigator.getBoundingClientRect().top;
     var width = navigator.offsetWidth;
     var triangleWidth = triangle.offsetWidth;
 
     indicator.style.top = y + 'px';
     indicator.style.height = width + 'px';
-    triangle.style.top = y + width / 2 - triangleWidth / 2 + 'px';
+
+    if (button === undefined) {
+      triangle.style.top = y + width / 2 - triangleWidth / 2 + 'px';
+    }
   }
 });
 
@@ -157,3 +175,11 @@ function disableScroll() {
 }
 
 disableScroll();
+
+// MARK: - Private functions
+
+function convertToArray(object) {
+  return [].map.call(object, function(element) {
+    return element;
+  });
+};
