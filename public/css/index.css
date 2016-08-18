@@ -224,7 +224,8 @@
 #myself #sections {
   width: 100vw;
   height: 100vh;
-  transition: transform 0.85s ease;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.7s ease;
 }
 #myself #manifesto figure {
   background-image: url("../images/sections/myself.jpg");
@@ -267,7 +268,7 @@
 }
 #myself section div {
   position: absolute;
-  top: 47.5%;
+  top: 50%;
   left: 75px;
   transform: translateY(-50%);
 }
@@ -404,6 +405,12 @@
 }
 #manifesto #header-glitches {
   transition: opacity 0.85s ease;
+}
+#manifesto p {
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
 #manifesto .story {
   position: relative;

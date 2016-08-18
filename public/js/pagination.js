@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
   prepareWindowFrames();
 
   var animating = false;
-  var safety = 500;
+  var safety = 600;
   var sections = document.getElementsByTagName('section');
   var myself = document.getElementById('sections');
   var position = Math.abs(myself.scrollTop / window.innerHeight);
@@ -61,7 +61,7 @@ window.addEventListener('load', function() {
       return;
     }
 
-    myself.style.transform = 'translateY(' + -point + 'px)';
+    myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
 
     myself.addEventListener('transitionend', function() {
       setTimeout(function() {
