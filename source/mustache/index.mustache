@@ -7,16 +7,18 @@
   </head>
   <body id='myself'>
     <h1 id='page-title'>Ramon Gilabert</h1>
-    {{# myself }}
-    <section id="{{ kind }}">
-      <figure></figure>
-      <div class='wrapper'>
-        <h2>{{ title }}</h2>
-        <p><strong>{{ span }}</strong>{{ subtitle }}</p>
-        <button id="{{ kind }}-button">read more</button>
-      </div>
-    </section>
-    {{/ myself }}
+    <div id='sections'>
+      {{# myself }}
+      <section id="{{ kind }}">
+        <figure></figure>
+        <div class='wrapper'>
+          <h2>{{ title }}</h2>
+          <p><strong>{{ span }}</strong>{{ subtitle }}</p>
+          <button id="{{ kind }}-button">read more</button>
+        </div>
+      </section>
+      {{/ myself }}
+    </div>
     <nav>
       <figure></figure>
       {{# myself }}

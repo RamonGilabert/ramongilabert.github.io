@@ -219,8 +219,12 @@
   opacity: 0;
 }
 #myself {
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
+  overflow: hidden;
+}
+#myself #sections {
+  width: 100vw;
+  height: 100vh;
+  transition: transform 0.85s ease;
 }
 #myself #manifesto figure {
   background-image: url("../images/sections/myself.jpg");
@@ -328,7 +332,7 @@
   transform: rotate(-90deg);
 }
 #myself::-webkit-scrollbar {
-  width: 0 !important;
+  width: 0;
 }
 #manifesto #hero {
   width: 100vw;

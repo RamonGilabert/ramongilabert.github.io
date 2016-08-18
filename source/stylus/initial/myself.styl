@@ -1,8 +1,13 @@
 // The initial sites styles
 
 #myself {
-  -ms-overflow-style: none
-  overflow: -moz-scrollbars-none
+  overflow: hidden
+
+  #sections {
+    width: 100vw
+    height: 100vh
+    transition: transform 0.85s ease
+  }
 
   #manifesto figure {
     background-image: url(myself-image)
@@ -131,5 +136,5 @@
 }
 
 #myself::-webkit-scrollbar {
-  width: 0 !important
+  width: 0
 }
