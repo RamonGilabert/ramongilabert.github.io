@@ -2,16 +2,17 @@
 
 window.addEventListener('load', function() {
 
-  prepareWindowFrames();
-
   var animating = false;
   var safety = 700;
   var sections = document.getElementsByTagName('section');
   var navigators = document.getElementsByClassName('navigator');
+  var triangle = document.getElementById('triangle');
   var indicator = document.getElementById('indicator');
   var myself = document.getElementById('sections');
   var position = Math.abs(myself.scrollTop / window.innerHeight);
+
   swipe(myself);
+  positionIndicator();
 
   document.addEventListener('swipeUp', function(event) {
     scrollUp()
@@ -64,13 +65,24 @@ window.addEventListener('load', function() {
     }
 
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
-    indicator.style.top = navigators[position].getBoundingClientRect().top;
+    positionIndicator();
 
     myself.addEventListener('transitionend', function() {
       setTimeout(function() {
         animating = false;
       }, safety);
     });
+  }
+
+  function positionIndicator() {
+    var navigator = navigators[position];
+    var y = navigator.getBoundingClientRect().top;
+    var width = navigator.offsetWidth;
+    var triangleWidth = triangle.offsetWidth;
+
+    indicator.style.top = y + 'px';
+    indicator.style.height = width + 'px';
+    triangle.style.top = y + width / 2 - triangleWidth / 2 + 'px';
   }
 });
 
@@ -145,14 +157,3 @@ function disableScroll() {
 }
 
 disableScroll();
-
-// MARK: - Helper methods
-
-function prepareWindowFrames() {
-  window.requestAnimationFrame = window.requestAnimationFrame
-  || window.webkitRequestAnimationFrame
-  || window.mozRequestAnimationFrame
-  || window.oRequestAnimationFrame
-  || window.msRequestAnimationFrame
-  || function(callback) { window.setTimeout(callback, 1000 / 60) };
-}

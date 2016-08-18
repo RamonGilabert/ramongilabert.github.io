@@ -30,8 +30,9 @@
     position: absolute
     width: 1px
     height: 50px
-    top: 40px
-    right: 40px
+    top: 100px
+    right: 32px
+    transition: scrolling-positioning, scrolling-height
   }
 
   #indicator:after {
@@ -121,18 +122,18 @@
       margin-right: margin
       margin-left: margin
     }
+  }
 
-    figure {
-      position: absolute
-      background-image: url(triangle)
-      background-size: contain
-      background-repeat: no-repeat
-      top: 0%
-      right: 0%
-      width: 7px
-      height: 11px
-      transform: rotate(-90deg)
-    }
+  #triangle {
+    position: absolute
+    background-image: url(triangle)
+    background-size: contain
+    background-repeat: no-repeat
+    top: 0%
+    right: 15px
+    width: 7px
+    height: 11px
+    transition: scrolling-positioning
   }
 }
 
