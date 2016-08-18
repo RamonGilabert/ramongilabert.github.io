@@ -3,6 +3,7 @@
 window.addEventListener('load', function() {
 
   var keys = {
+    32 : 1,
     37 : 1,
     38 : 1,
     39 : 1,
@@ -22,14 +23,13 @@ window.addEventListener('load', function() {
   function preventDefaultForScrollKeys(event) {
     if (keys[event.keyCode]) {
       preventDefault(event);
-
       return false;
     }
   }
 
   function disableScroll() {
     window.addEventListener('DOMMouseScroll', preventDefault, false);
-
+    window.onscroll = preventDefault;
     window.onwheel = preventDefault;
     window.onmousewheel = document.onmousewheel = preventDefault;
     window.ontouchmove  = preventDefault;
