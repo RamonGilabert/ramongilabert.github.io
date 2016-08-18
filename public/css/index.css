@@ -254,7 +254,7 @@
   width: 100vw;
   height: 100vh;
   -webkit-backface-visibility: hidden;
-  transform: translate3d(0, 0%, 0);
+  transform: matrix3d();
   transition: transform 0.7s ease;
 }
 #myself #manifesto figure {
@@ -275,8 +275,7 @@
   height: 50px;
   top: 100px;
   right: 32px;
-  transform: translate3d(0, 0%, 0);
-  transition: top 0.6s ease, height 0.6s ease;
+  transform: matrix3d();
 }
 #myself #indicator:after {
   content: '';
@@ -330,7 +329,8 @@
   right: 0%;
   bottom: 0%;
   background-color: #fff;
-  transform: translate3d(0, 0%, 0);
+  -webkit-backface-visibility: hidden;
+  transform: matrix3d();
   transition: width 0.6s ease;
 }
 #myself section button:hover:after {
@@ -338,7 +338,7 @@
 }
 #myself nav {
   position: fixed;
-  top: 50%;
+  top: 44%;
   right: 0%;
   transform: rotate(90deg) translateY(-50%);
   z-index: 1;
@@ -358,6 +358,10 @@
 #myself nav a:hover:after {
   right: 100%;
 }
+#myself nav .disclosure-projects {
+  top: 1px;
+  left: 330px;
+}
 #myself #triangle {
   position: absolute;
   background-image: url("../images/icons/triangle.svg");
@@ -367,8 +371,7 @@
   right: 11px;
   width: 7px;
   height: 11px;
-  transform: translate3d(0, 0%, 0);
-  transition: top 0.6s ease;
+  transform: matrix3d();
 }
 #myself::-webkit-scrollbar {
   width: 0;
@@ -546,6 +549,9 @@ button {
   border: 0px;
   background-color: transparent;
   cursor: pointer;
+}
+button:focus {
+  outline: 0;
 }
 button,
 h1,

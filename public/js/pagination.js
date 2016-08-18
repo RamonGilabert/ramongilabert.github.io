@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
 
   var animating = false;
   var safety = 700;
+  var shouldAnimate = true
   var sections = document.getElementsByTagName('section');
   var navigators = document.getElementsByClassName('navigator');
   var triangle = document.getElementById('triangle');
@@ -13,6 +14,11 @@ window.addEventListener('load', function() {
 
   swipe(myself);
   positionIndicator();
+
+  window.addEventListener('resize', function() {
+    shouldAnimate = false;
+    positionIndicator();
+  });
 
   document.addEventListener('swipeUp', function(event) {
     scrollUp()
@@ -33,13 +39,15 @@ window.addEventListener('load', function() {
     });
 
     navigator.addEventListener('mouseout', function() {
-      positionIndicator();
+      setTimeout(function() {
+        positionIndicator();
+      }, 25);
     });
 
     navigator.addEventListener('click', function() {
       if (animating === false) {
         position = convertToArray(navigators).indexOf(this);
-        requestAnimationFrame(scroll(position * window.innerHeight));
+        scroll(position * window.innerHeight);
       }
     });
   }
@@ -58,23 +66,24 @@ window.addEventListener('load', function() {
   }
 
   function scrollUp() {
-    if (position == 0) {
+    console.log(position);
+    if (position <= 0) {
       animating = false;
       return;
     }
 
     position = position - 1;
-    requestAnimationFrame(scroll(position * window.innerHeight));
+    scroll(position * window.innerHeight);
   }
 
   function scrollDown() {
-    if (position == sections.length) {
+    if (position >= sections.length - 1) {
       animating = false;
       return;
     }
 
     position = position + 1;
-    requestAnimationFrame(scroll(position * window.innerHeight));
+    scroll(position * window.innerHeight);
   }
 
   function scroll(point) {
@@ -98,6 +107,16 @@ window.addEventListener('load', function() {
     var y = navigator.getBoundingClientRect().top;
     var width = navigator.offsetWidth;
     var triangleWidth = triangle.offsetWidth;
+
+    if (shouldAnimate) {
+      indicator.style.transition = 'top 0.6s ease, height 0.6s ease';
+      triangle.style.transition = 'top 0.6s ease';
+    } else {
+      indicator.style.transition = '';
+      triangle.style.transition = '';
+    }
+
+    shouldAnimate = true;
 
     indicator.style.top = y + 'px';
     indicator.style.height = width + 'px';
