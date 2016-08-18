@@ -5,8 +5,10 @@ window.addEventListener('load', function() {
   prepareWindowFrames();
 
   var animating = false;
-  var safety = 600;
+  var safety = 700;
   var sections = document.getElementsByTagName('section');
+  var navigators = document.getElementsByClassName('navigator');
+  var indicator = document.getElementById('indicator');
   var myself = document.getElementById('sections');
   var position = Math.abs(myself.scrollTop / window.innerHeight);
   swipe(myself);
@@ -62,6 +64,7 @@ window.addEventListener('load', function() {
     }
 
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
+    indicator.style.top = navigators[position].getBoundingClientRect().top;
 
     myself.addEventListener('transitionend', function() {
       setTimeout(function() {
