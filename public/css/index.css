@@ -285,6 +285,31 @@
   background-color: #fff;
   z-index: 0;
 }
+#myself #selected-work {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#myself #selected-work div {
+  opacity: 0.2;
+  position: relative;
+  transform: rotate(90deg);
+}
+#myself #selected-work div p {
+  font: 14px Inconsolata;
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+#myself #selected-work div:after {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  height: 1px;
+  left: 40%;
+  right: 0%;
+  bottom: 0%;
+}
 #myself section {
   width: 100vw;
   height: 100vh;
