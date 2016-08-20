@@ -74,6 +74,30 @@
     }
   }
 
+  #back-top-button {
+    position: absolute
+    left: 77px
+    bottom: 30px
+    font: glitch-font
+    color: text-color
+    padding-bottom: 10px
+  }
+
+  #back-top-button:after {
+    content: ''
+    position: absolute
+    height: 1px
+    right: 100%
+    bottom: 0%
+    left: 0%
+    background-color: text-color
+    transition: right 0.6s ease
+  }
+
+  #back-top-button:hover:after {
+    right: 0%
+  }
+
   section {
     width: 100vw
     height: 100vh
