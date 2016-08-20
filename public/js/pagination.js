@@ -23,18 +23,11 @@ window.addEventListener('load', function() {
   });
 
   window.addEventListener('resize', function() {
-    for (var i = 0; i < this.sections.length; i++) {
-      var section = this.sections[i];
-      section.style.height = window.innerHeight;
-    }
-
-    shouldAnimate = false;
-    scroll(position * window.innerHeight, false);
-    animating = false;
+    resize();
   });
 
   window.addEventListener('focus', function() {
-    document.body.scrollTop = 0;
+    resize();
   });
 
   document.addEventListener('swipeUp', function(event) {
@@ -67,6 +60,20 @@ window.addEventListener('load', function() {
         scroll(position * window.innerHeight);
       }
     });
+  }
+
+  function resize() {
+    var windowHeight = '100%';
+    for (var i = 0; i < this.sections.length; i++) {
+      var section = this.sections[i];
+      section.style.height = windowHeight;
+    }
+
+    myself.style.height = windowHeight;
+
+    shouldAnimate = false;
+    scroll(position * window.innerHeight, false);
+    animating = false;
   }
 
   function scrollHandler(event) {
@@ -221,7 +228,6 @@ function preventDefaultForScrollKeys(event) {
 }
 
 function disableScroll() {
-  window.onscroll = preventDefault;
   window.onmousewheel = preventDefault;
   document.onkeydown = preventDefaultForScrollKeys;
 }

@@ -251,8 +251,9 @@
   overflow: hidden;
 }
 #myself #sections {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
@@ -335,16 +336,18 @@
   right: 0%;
 }
 #myself section {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
   position: relative;
 }
 #myself section figure {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
@@ -367,9 +370,9 @@
 }
 #myself section a {
   position: relative;
+  top: 7.5px;
   font: 15px Inconsolata;
   color: #fff;
-  margin-top: 15px;
   padding-bottom: 5px;
   padding-right: 50px;
   cursor: pointer;
@@ -453,8 +456,8 @@
   width: 0;
 }
 #manifesto #hero {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   min-height: 600px;
   min-width: 900px;
   background-color: #191b1a;
@@ -464,7 +467,7 @@
   position: relative;
   padding-top: 60px;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   height: 80vh;
   min-height: 480px;
 }
@@ -612,9 +615,17 @@ html {
   padding: 0;
 }
 body {
-  background-color: #191b1a;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0 auto;
+  background-color: #191b1a;
+}
+html,
+body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 a {
   text-decoration: none;
