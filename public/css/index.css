@@ -365,15 +365,16 @@
   max-width: 650px;
   line-height: 26px;
 }
-#myself section button {
+#myself section a {
   position: relative;
   font: 15px Inconsolata;
   color: #fff;
   margin-top: 15px;
   padding-bottom: 5px;
   padding-right: 50px;
+  cursor: pointer;
 }
-#myself section button:after {
+#myself section a:before {
   content: '';
   position: absolute;
   width: 70%;
@@ -383,7 +384,10 @@
   background-color: #fff;
   transition: width 0.6s ease;
 }
-#myself section button:hover:after {
+#myself section a:after {
+  visibility: hidden;
+}
+#myself section a:hover:before {
   width: 100%;
 }
 #myself #lights div,

@@ -3,25 +3,29 @@
     {
       "kind" : "manifesto",
       "title" : "Designer & Developer",
-      "subtitle" : "I’m the developer that makes you hesitate. The designer that makes you wonder. Welcome to my site. I’m Ramon. It’s nice to have you here."
+      "subtitle" : "I’m the developer that makes you hesitate. The designer that makes you wonder. Welcome to my site. I’m Ramon. It’s nice to have you here.",
+      "link" : "manifesto.html"
     },
     {
       "kind" : "lights",
       "title" : "Lights",
       "span" : "Role",
-      "subtitle" : ". Electronics, iOS, Industrial & Product Design, Backend, Web_"
+      "subtitle" : ". Electronics, iOS, Industrial & Product Design, Backend, Web_",
+      "link" : "manifesto.html"
     },
     {
       "kind" : "varner",
       "title" : "Cubus Friends",
       "span" : "Role",
-      "subtitle" : ". iOS, Concept Designer, Prototype Designer, Product Owner_"
+      "subtitle" : ". iOS, Concept Designer, Prototype Designer, Product Owner_",
+      "link" : "manifesto.html"
     },
     {
       "kind" : "branding",
       "title" : "Personal Branding",
       "span" : "Role",
-      "subtitle" : ". Development & everything related to the design of it_"
+      "subtitle" : ". Development & everything related to the design of it_",
+      "link" : "manifesto.html"
     }
   ],
 

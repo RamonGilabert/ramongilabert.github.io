@@ -136,16 +136,17 @@
       line-height: 26px
     }
 
-    button {
+    a {
       position: relative
       font: 15px Inconsolata
       color: text-color
       margin-top: 15px
       padding-bottom: 5px
       padding-right: 50px
+      cursor: pointer
     }
 
-    button:after {
+    a:before {
       content: ''
       position: absolute
       width: 70%
@@ -156,7 +157,11 @@
       transition: width 0.6s ease
     }
 
-    button:hover:after {
+    a:after {
+      visibility: hidden
+    }
+
+    a:hover:before {
       width: 100%
     }
   }
