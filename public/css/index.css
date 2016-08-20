@@ -254,7 +254,8 @@
   width: 100vw;
   height: 100vh;
   -webkit-backface-visibility: hidden;
-  transform: matrix3d();
+  -webkit-transform: translate3d(0, 0, 0);
+  webkit-transform-style: preserve-3d;
   transition: transform 0.7s ease;
 }
 #myself #manifesto figure {
@@ -275,7 +276,6 @@
   height: 50px;
   top: 100px;
   right: 32px;
-  transform: matrix3d();
 }
 #myself #indicator:after {
   content: '';
@@ -296,6 +296,9 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  webkit-transform-style: preserve-3d;
 }
 #myself section div {
   position: absolute;
@@ -392,9 +395,8 @@
   right: 11px;
   width: 7px;
   height: 11px;
-  transform: matrix3d();
 }
-#myself::-webkit-scrollbar {
+#myself:-webkit-scrollbar {
   width: 0;
 }
 #manifesto #hero {
