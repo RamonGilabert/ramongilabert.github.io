@@ -10,10 +10,17 @@ window.addEventListener('load', function() {
   var triangle = document.getElementById('triangle');
   var indicator = document.getElementById('indicator');
   var myself = document.getElementById('sections');
+  var selectedWork = document.getElementById('selected-work');
+  var backTop = document.getElementById('back-top-button');
   var position = Math.abs(myself.scrollTop / window.innerHeight);
 
   swipe(myself);
   positionIndicator();
+
+  backTop.addEventListener('click', function() {
+    position = 0;
+    scroll(0);
+  });
 
   window.addEventListener('resize', function() {
     shouldAnimate = false;
@@ -98,6 +105,16 @@ window.addEventListener('load', function() {
     if (point > window.innerHeight * sections.length - window.innerHeight || point < 0) {
       animating = false;
       return;
+    }
+
+    if (position == 0) {
+      selectedWork.style.opacity = 1;
+      backTop.style.opacity = 0;
+      backTop.style.cursor = 'default';
+    } else {
+      selectedWork.style.opacity = 0;
+      backTop.style.opacity = 1;
+      backTop.style.cursor = 'pointer';
     }
 
     // myself.style.transition = animate === undefined ? 'transform 0.7s ease' : '';

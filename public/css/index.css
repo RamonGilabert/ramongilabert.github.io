@@ -290,6 +290,7 @@
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
+  transition: opacity 0.6s ease;
 }
 #myself #selected-work div {
   opacity: 0.2;
@@ -317,6 +318,9 @@
   font: 14px Inconsolata;
   color: #fff;
   padding-bottom: 10px;
+  cursor: default;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 #myself #back-top-button:after {
   content: '';

@@ -50,6 +50,7 @@
     bottom: 80px
     left: 50%
     transform: translateX(-50%)
+    transition: disappear-transition
 
     div {
       opacity: disabled-text-opacity
@@ -81,6 +82,9 @@
     font: glitch-font
     color: text-color
     padding-bottom: 10px
+    cursor: default
+    opacity: 0
+    transition: disappear-transition
   }
 
   #back-top-button:after {
