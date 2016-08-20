@@ -23,15 +23,18 @@ window.addEventListener('load', function() {
   });
 
   window.addEventListener('resize', function() {
-    shouldAnimate = false;
-    positionIndicator();
-
     for (var i = 0; i < this.sections.length; i++) {
       var section = this.sections[i];
       section.style.height = window.innerHeight;
     }
 
-    // scroll(position * window.innerHeight, false);
+    shouldAnimate = false;
+    scroll(position * window.innerHeight, false);
+    animating = false;
+  });
+
+  window.addEventListener('focus', function() {
+    document.body.scrollTop = 0;
   });
 
   document.addEventListener('swipeUp', function(event) {
@@ -117,7 +120,7 @@ window.addEventListener('load', function() {
       backTop.style.cursor = 'pointer';
     }
 
-    // myself.style.transition = animate === undefined ? 'transform 0.7s ease' : '';
+    myself.style.transition = animate === undefined ? 'transform 0.7s ease' : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
 
     positionIndicator();
@@ -161,7 +164,6 @@ function swipe(element) {
   var initial = 0;
 
   document.addEventListener('touchstart', function(event) {
-    console.log('Sup');
     var touches = event.touches;
     if (touches && touches.length) {
       initial = touches[0].pageY;
