@@ -132,10 +132,10 @@
       position: absolute
       top: 50%
       left: 75px
+      padding-bottom: 35px
       transform: translateY(-50%)
 
       div {
-        overflow: hidden
         margin: 0 auto
       }
     }
@@ -147,24 +147,25 @@
       font: 55px Brandon
       text-transform: uppercase
       color: text-color
-      transform: translate3d(0, 0, 0)
-      transition: top text-transition
     }
 
     p {
+      position: relative
       font: 16px Inconsolata
       max-width: 650px
       line-height: 26px
     }
 
     a {
-      position: relative
-      top: 10px
+      position: absolute
       font: 15px Inconsolata
       color: text-color
+      cursor: pointer
+      top: auto
+      right: auto
+      bottom: 0px
       padding-bottom: 7.5px
       padding-right: 50px
-      cursor: pointer
     }
 
     a:before {
@@ -185,6 +186,13 @@
     a:hover:before {
       width: 100%
     }
+
+    h2, p, a {
+      left: -75px
+      opacity: 0
+      transform: translate3d(0, 0, 0);
+      transition: left myself-transition, opacity myself-transition
+    }
   }
 
   #lights, #branding {
@@ -192,7 +200,6 @@
     .wrapper {
       left: auto
       right: 125px
-      padding-bottom: 30px
     }
 
     h2, p {
@@ -203,9 +210,8 @@
       position: absolute
       padding-right: 0px
       padding-left: 50px
-      top: auto
       right: 0px
-      bottom: 0px
+      left: auto
     }
 
     a:before {

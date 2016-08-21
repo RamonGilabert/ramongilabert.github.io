@@ -88,7 +88,7 @@ window.addEventListener('load', function() {
 
   function scrollHandler(event) {
     currentTime = new Date().getTime();
-    console.log(currentTime - pastTime);
+
     if (currentTime - pastTime < safety + 800) {
 			event.preventDefault();
 			return;

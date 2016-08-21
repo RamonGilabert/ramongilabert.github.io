@@ -94,11 +94,11 @@ function Scroller() {
     }
 
     if (window.pageYOffset - distance > 0 && sectionsLength > 0) {
-        var section = this.sections[0];
-        if (section.classList.contains('scroll-appearance')) {
-          section.classList.remove('scroll-appearance');
-          this.sections.shift();
-        }
+      var section = this.sections[0];
+      if (section.classList.contains('scroll-appearance')) {
+        section.classList.remove('scroll-appearance');
+        this.sections.shift();
+      }
     }
   }
 }
@@ -110,6 +110,9 @@ function Appearance() {
   this.run = function() {
     if (exists('manifesto')) {
       this.method = this.manifesto;
+      this.method()
+    } else if (exists('myself')) {
+      this.method = this.myself
       this.method()
     }
   }
@@ -138,8 +141,57 @@ function Appearance() {
 
         i = i + 1;
 
-        if (i < 3) { loop() }
+        if (i < 3) { loop(); }
       }, 200 + (i * 5));
+    }
+  }
+
+  this.myself = function() {
+    var myself = document.getElementById('sections');
+    var index = Math.abs(myself.scrollTop / window.innerHeight);
+    var figures = myself.getElementsByTagName('figure');
+    var titles = convertToArray(document.getElementsByClassName('title'));
+    var texts = convertToArray(myself.getElementsByTagName('p'));
+    var buttons = convertToArray(myself.getElementsByTagName('a'));
+    var navigation = document.getElementsByTagName('nav')[0];
+    var details = document.getElementById('details');
+
+    var title = titles[index];
+    var figure = figures[index];
+    var paragraph = texts[index];
+    var button = buttons[index];
+
+    titles.slice(titles.indexOf(title));
+    texts.slice(texts.indexOf(paragraph));
+    buttons.slice(buttons.indexOf(button));
+
+    var sides = [title, paragraph, button];
+
+    var index = 0;
+    loop();
+
+    function loop() {
+      setTimeout(function() {
+        var component = sides[index];
+        component.style.left = '0px';
+        component.style.opacity = 1;
+
+        index = index + 1;
+
+        if (index < 3) { loop(); }
+      }, 150 + (index * 5));
+    }
+
+    for (var i = 0; i < titles.length; i++) {
+      var components = [titles[i], texts[i], buttons[i]];
+
+      for (var j = 0; j < components.length; j++) {
+        var component = components[j];
+
+        component.style.transition = '';
+        component.style.left = 'auto';
+        component.style.opacity = 1;
+      }
     }
   }
 }
@@ -245,4 +297,8 @@ function prepareWindowFrames() {
   || window.oRequestAnimationFrame
   || window.msRequestAnimationFrame
   || function(callback) { window.setTimeout(callback, 1000 / 60) };
+}
+
+function convertToArray(object) {
+  return [].map.call(object, function(element) { return element; });
 }
