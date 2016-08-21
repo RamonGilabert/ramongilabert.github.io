@@ -284,6 +284,7 @@
 #myself #sections {
   width: 100%;
   height: 100%;
+  min-width: 900px;
   min-height: 100%;
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
@@ -369,6 +370,7 @@
 #myself section {
   width: 100%;
   height: 100%;
+  min-width: 900px;
   min-height: 100%;
   position: relative;
 }
@@ -428,6 +430,7 @@
 #myself #branding div {
   left: auto;
   right: 125px;
+  padding-bottom: 30px;
 }
 #myself #lights h2,
 #myself #branding h2,
@@ -435,15 +438,17 @@
 #myself #branding p {
   text-align: right;
 }
-#myself #lights button,
-#myself #branding button {
+#myself #lights a,
+#myself #branding a {
   position: absolute;
-  right: 0px;
   padding-right: 0px;
   padding-left: 50px;
+  top: auto;
+  right: 0px;
+  bottom: 0px;
 }
-#myself #lights button:after,
-#myself #branding button:after {
+#myself #lights a:before,
+#myself #branding a:before {
   left: 0%;
   bottom: 0%;
 }
