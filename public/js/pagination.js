@@ -5,6 +5,7 @@ window.addEventListener('load', function() {
   var animating = false;
   var safety = 700;
   var shouldAnimate = true;
+  var cubicBezier = 'cubic-bezier(0.88, 0.12, 0.36, 0.79)'
   var sections = document.getElementsByTagName('section');
   var navigators = document.getElementsByClassName('navigator');
   var triangle = document.getElementById('triangle');
@@ -127,8 +128,7 @@ window.addEventListener('load', function() {
       backTop.style.cursor = 'pointer';
     }
 
-    myself.style.transition = animate === undefined
-    ? 'transform 0.8s cubic-bezier(0.88, 0.12, 0.36, 0.79)' : '';
+    myself.style.transition = animate === undefined ? 'transform 0.8s ' + cubicBezier : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
 
     positionIndicator();
@@ -147,8 +147,8 @@ window.addEventListener('load', function() {
     var triangleWidth = triangle.offsetWidth;
 
     if (shouldAnimate) {
-      indicator.style.transition = 'top 0.6s ease, height 0.6s ease';
-      triangle.style.transition = 'top 0.6s ease';
+      indicator.style.transition = 'top 0.6s ' + cubicBezier + ', height 0.6s ' + cubicBezier;
+      triangle.style.transition = 'top 0.6s ' + cubicBezier;
     } else {
       indicator.style.transition = '';
       triangle.style.transition = '';
