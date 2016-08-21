@@ -15,7 +15,7 @@
   position: absolute;
   background-color: #fff;
   width: 80%;
-  height: 1px;
+  height: 0.5px;
   top: 0%;
   left: 0%;
 }
@@ -23,7 +23,7 @@
   content: '';
   position: absolute;
   background-color: #fff;
-  width: 1px;
+  width: 0.5px;
   height: 90%;
   right: 0%;
   bottom: 0%;
@@ -51,7 +51,7 @@
   position: absolute;
   background-color: #fff;
   width: 85%;
-  height: 1px;
+  height: 0.5px;
   bottom: 0%;
   right: 0%;
 }
@@ -72,7 +72,7 @@
 .horizontal-glitch:before {
   content: '';
   position: absolute;
-  width: 1px;
+  width: 0.5px;
   height: 25%;
   right: 0%;
   top: 0%;
@@ -82,7 +82,7 @@
 .horizontal-glitch:after {
   content: '';
   position: absolute;
-  width: 1px;
+  width: 0.5px;
   height: 50%;
   right: 0%;
   top: 50%;
@@ -92,7 +92,7 @@
 .horizontal-glitch div {
   content: '';
   position: absolute;
-  height: 1px;
+  height: 0.5px;
   top: 40%;
   right: 0%;
   left: 0%;
@@ -114,8 +114,8 @@
 }
 #dot-separator div {
   float: left;
-  width: 1px;
-  height: 1px;
+  width: 0.5px;
+  height: 0.5px;
   margin-right: 10px;
   margin-bottom: 10px;
   display: inline-block;
@@ -265,7 +265,7 @@
   content: '';
   position: absolute;
   background-color: #fff;
-  height: 1px;
+  height: 0.5px;
   bottom: 0%;
   left: 0%;
   right: 35%;
@@ -279,6 +279,7 @@
   display: none;
 }
 #myself {
+  position: fixed;
   overflow: hidden;
 }
 #myself #sections {
@@ -304,7 +305,7 @@
 }
 #myself #indicator {
   position: absolute;
-  width: 1px;
+  width: 0.5px;
   height: 50px;
   top: 100px;
   right: 32px;
@@ -338,7 +339,7 @@
   content: '';
   position: absolute;
   background-color: #fff;
-  height: 1px;
+  height: 0.5px;
   left: 40%;
   right: 0%;
   bottom: 0%;
@@ -357,7 +358,7 @@
 #myself #back-top-button:after {
   content: '';
   position: absolute;
-  height: 1px;
+  height: 0.5px;
   right: 100%;
   bottom: 0%;
   left: 0%;
@@ -651,13 +652,12 @@ html {
   padding: 0;
 }
 body {
-  overflow: hidden;
   margin: 0 auto;
   background-color: #191b1a;
 }
 html,
 body {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;

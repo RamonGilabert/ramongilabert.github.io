@@ -232,8 +232,6 @@ function disableScroll() {
   document.onkeydown = preventDefaultForScrollKeys;
 }
 
-disableScroll();
-
 // MARK: - Private functions
 
 function convertToArray(object) {

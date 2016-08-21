@@ -8,7 +8,7 @@
   position: absolute;
   background-color: text-color;
   width: 80%;
-  height: 1px;
+  height: glitch-size;
   top: 0%;
   left: 0%;
 }
@@ -16,7 +16,7 @@
   content: '';
   position: absolute;
   background-color: text-color;
-  width: 1px;
+  width: glitch-size;
   height: 90%;
   right: 0%;
   bottom: 0%;
@@ -44,7 +44,7 @@
   position: absolute;
   background-color: text-color;
   width: 85%;
-  height: 1px;
+  height: glitch-size;
   bottom: 0%;
   right: 0%;
 }
@@ -65,7 +65,7 @@
 .horizontal-glitch:before {
   content: '';
   position: absolute;
-  width: 1px;
+  width: glitch-size;
   height: 25%;
   right: 0%;
   top: 0%;
@@ -75,7 +75,7 @@
 .horizontal-glitch:after {
   content: '';
   position: absolute;
-  width: 1px;
+  width: glitch-size;
   height: 50%;
   right: 0%;
   top: 50%;
@@ -85,7 +85,7 @@
 .horizontal-glitch div {
   content: '';
   position: absolute;
-  height: 1px;
+  height: glitch-size;
   top: 40%;
   right: 0%;
   left: 0%;
@@ -107,8 +107,8 @@
 }
 #dot-separator div {
   float: left;
-  width: 1px;
-  height: 1px;
+  width: glitch-size;
+  height: glitch-size;
   margin-right: 10px;
   margin-bottom: 10px;
   display: inline-block;

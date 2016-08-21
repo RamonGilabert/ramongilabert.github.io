@@ -45,7 +45,7 @@
   content: '';
   position: absolute;
   background-color: text-color;
-  height: 1px;
+  height: glitch-size;
   bottom: 0%;
   left: 0%;
   right: 35%;
