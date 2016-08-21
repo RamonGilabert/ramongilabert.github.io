@@ -2,8 +2,7 @@
 
 window.addEventListener('load', function() {
 
-  var animating = false;
-  var safety = 700;
+  var safety = 400;
   var shouldAnimate = true;
   var cubicBezier = 'cubic-bezier(0.88, 0.12, 0.36, 0.79)'
   var sections = document.getElementsByTagName('section');
@@ -11,15 +10,20 @@ window.addEventListener('load', function() {
   var triangle = document.getElementById('triangle');
   var indicator = document.getElementById('indicator');
   var myself = document.getElementById('sections');
+  var titles = document.getElementsByClassName('title');
   var selectedWork = document.getElementById('selected-work');
   var selectedWrapper = document.getElementById('selected-wrapper');
   var backTop = document.getElementById('back-top-button');
   var position = Math.abs(myself.scrollTop / window.innerHeight);
+  var currentPosition = Math.abs(myself.scrollTop / window.innerHeight);
+  var currentTime = new Date().getTime();
+  var pastTime = 0;
 
   swipe(myself);
   positionIndicator();
 
   backTop.addEventListener('click', function() {
+    currentPosition = Math.abs(myself.scrollTop / window.innerHeight);
     position = 0;
     scroll(0);
   });
@@ -57,10 +61,15 @@ window.addEventListener('load', function() {
     });
 
     navigator.addEventListener('click', function() {
-      if (animating === false) {
+      currentTime = new Date().getTime();
+
+      if (currentTime - pastTime > safety + 800) {
+        currentPosition = Math.abs(myself.scrollTop / window.innerHeight);
         position = convertToArray(navigators).indexOf(this);
         scroll(position * window.innerHeight);
-      }
+
+        pastTime = currentTime;
+  		}
     });
   }
 
@@ -75,49 +84,52 @@ window.addEventListener('load', function() {
 
     shouldAnimate = false;
     scroll(position * window.innerHeight, false);
-    animating = false;
   }
 
   function scrollHandler(event) {
+    currentTime = new Date().getTime();
+    console.log(currentTime - pastTime);
+    if (currentTime - pastTime < safety + 800) {
+			event.preventDefault();
+			return;
+		}
+
   	event.preventDefault();
   	var delta = event.wheelDelta || -event.detail;
 
-    if (animating) {
-      event.preventDefault();
-      return;
-    }
-
-    animating = true;
 		delta > 0 ? scrollUp() : scrollDown();
+    pastTime = currentTime;
   }
 
   function scrollUp() {
-    if (position <= 0) {
-      animating = false;
-      return;
-    }
+    if (position <= 0) { return; }
 
+    currentPosition = position;
     position = position - 1;
     scroll(position * window.innerHeight);
   }
 
   function scrollDown() {
-    if (position >= sections.length - 1) {
-      animating = false;
-      return;
-    }
+    if (position >= sections.length - 1) { return; }
 
+    currentPosition = position;
     position = position + 1;
     scroll(position * window.innerHeight);
   }
 
   function scroll(point, animate) {
-    animating = true;
-
     if (point > window.innerHeight * sections.length - window.innerHeight || point < 0) {
-      animating = false;
       return;
     }
+
+    var initialTitle = titles[currentPosition];
+    var finalTitle = titles[position];
+
+    initialTitle.style.top = '100px';
+
+    setTimeout(function() {
+      finalTitle.style.top = '0px';
+    }, 400);
 
     if (position == 0) {
       selectedWork.style.bottom = '85px';
@@ -137,12 +149,6 @@ window.addEventListener('load', function() {
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
 
     positionIndicator();
-
-    myself.addEventListener('transitionend', function() {
-      setTimeout(function() {
-        animating = false;
-      }, safety);
-    });
   }
 
   function positionIndicator(button) {
@@ -237,6 +243,8 @@ function disableScroll() {
   window.onmousewheel = preventDefault;
   document.onkeydown = preventDefaultForScrollKeys;
 }
+
+disableScroll();
 
 // MARK: - Private functions
 

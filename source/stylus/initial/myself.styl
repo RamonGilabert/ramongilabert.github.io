@@ -128,17 +128,26 @@
       transform-style: preserve-3d
     }
 
-    div {
+    .wrapper {
       position: absolute
       top: 50%
       left: 75px
       transform: translateY(-50%)
+
+      div {
+        overflow: hidden
+        margin: 0 auto
+      }
     }
 
     h2 {
+      position: relative
+      overflow: hidden
+      top: 100px
       font: 55px Brandon
       text-transform: uppercase
       color: text-color
+      transition: top text-transition
     }
 
     p {
@@ -179,7 +188,7 @@
 
   #lights, #branding {
 
-    div {
+    .wrapper {
       left: auto
       right: 125px
       padding-bottom: 30px

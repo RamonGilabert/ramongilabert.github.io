@@ -391,16 +391,24 @@
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
 }
-#myself section div {
+#myself section .wrapper {
   position: absolute;
   top: 50%;
   left: 75px;
   transform: translateY(-50%);
 }
+#myself section .wrapper div {
+  overflow: hidden;
+  margin: 0 auto;
+}
 #myself section h2 {
+  position: relative;
+  overflow: hidden;
+  top: 100px;
   font: 55px Brandon;
   text-transform: uppercase;
   color: #fff;
+  transition: top 0.5s ease-in;
 }
 #myself section p {
   font: 16px Inconsolata;
@@ -432,8 +440,8 @@
 #myself section a:hover:before {
   width: 100%;
 }
-#myself #lights div,
-#myself #branding div {
+#myself #lights .wrapper,
+#myself #branding .wrapper {
   left: auto;
   right: 125px;
   padding-bottom: 30px;
