@@ -282,6 +282,7 @@
   position: fixed;
   overflow: hidden;
   min-width: 900px;
+  min-height: 600px;
 }
 #myself #sections {
   width: 100%;
