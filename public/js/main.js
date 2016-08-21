@@ -136,15 +136,16 @@ function Appearance() {
   this.myself = function() {
     var myself = document.getElementById('sections');
     var index = Math.abs(myself.scrollTop / window.innerHeight);
-    var figures = myself.getElementsByTagName('figure');
+    var figures = convertToArray(myself.getElementsByTagName('figure'));
     var titles = convertToArray(document.getElementsByClassName('title'));
     var texts = convertToArray(myself.getElementsByTagName('p'));
     var buttons = convertToArray(myself.getElementsByTagName('a'));
     var navigation = document.getElementsByTagName('nav')[0];
     var details = document.getElementById('details');
+    var header = document.getElementsByTagName('header')[0];
 
-    var title = titles[index];
     var figure = figures[index];
+    var title = titles[index];
     var paragraph = texts[index];
     var button = buttons[index];
 
@@ -157,7 +158,6 @@ function Appearance() {
 
       for (var j = 0; j < components.length; j++) {
         var component = components[j];
-        console.log(component);
         component.style.transition = '';
         component.style.left = 'auto';
         component.style.opacity = 1;
@@ -169,6 +169,17 @@ function Appearance() {
       node.style.left = 'auto';
       node.style.opacity = 1;
     });
+
+    setTimeout(function() {
+      var curve = 'opacity 0.8s ease';
+      var array = [header, navigation, details];
+
+      for (var position = 0; position < array.length; position++) {
+        var element = array[position];
+        element.style.transition = curve;
+        element.style.opacity = 1;
+      }
+    }, 700);
   }
 }
 
