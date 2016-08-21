@@ -2,7 +2,7 @@
 
 window.addEventListener('load', function() {
 
-  var safety = 400;
+  var safety = 700;
   var shouldAnimate = true;
   var cubicBezier = 'cubic-bezier(0.88, 0.12, 0.36, 0.79)'
   var sections = document.getElementsByTagName('section');
@@ -125,11 +125,12 @@ window.addEventListener('load', function() {
     var initialTitle = titles[currentPosition];
     var finalTitle = titles[position];
 
-    initialTitle.style.top = '100px';
-
-    setTimeout(function() {
-      finalTitle.style.top = '0px';
-    }, 400);
+    // TODO: Do the titles animation.
+    // initialTitle.style.top = '100px';
+    //
+    // setTimeout(function() {
+    //   finalTitle.style.top = '0px';
+    // }, 400);
 
     if (position == 0) {
       selectedWork.style.bottom = '85px';

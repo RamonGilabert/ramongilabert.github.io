@@ -404,10 +404,11 @@
 #myself section h2 {
   position: relative;
   overflow: hidden;
-  top: 100px;
+  top: 0px;
   font: 55px Brandon;
   text-transform: uppercase;
   color: #fff;
+  transform: translate3d(0, 0, 0);
   transition: top 0.5s ease-in;
 }
 #myself section p {
