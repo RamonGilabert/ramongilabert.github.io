@@ -149,18 +149,22 @@ function Appearance() {
     var paragraph = texts[index];
     var button = buttons[index];
 
+    figures.splice(figures.indexOf(figure), 1);
     titles.splice(titles.indexOf(title), 1);
     texts.splice(texts.indexOf(paragraph), 1);
     buttons.splice(buttons.indexOf(button), 1);
 
     for (var i = 0; i < titles.length; i++) {
-      var components = [titles[i], texts[i], buttons[i]];
+      var components = [titles[i], texts[i], buttons[i], figures[i]];
 
       for (var j = 0; j < components.length; j++) {
         var component = components[j];
         component.style.transition = '';
-        component.style.left = 'auto';
         component.style.opacity = 1;
+
+        if (!figures.includes(component)) {
+          component.style.left = 'auto';
+        }
       }
     }
 
@@ -172,7 +176,7 @@ function Appearance() {
 
     setTimeout(function() {
       var curve = 'opacity 0.8s ease';
-      var array = [header, navigation, details];
+      var array = [header, navigation, details, figure];
 
       for (var position = 0; position < array.length; position++) {
         var element = array[position];
