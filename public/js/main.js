@@ -4,8 +4,6 @@
 
 window.addEventListener('load', function() {
 
-  prepareWindowFrames();
-
   var appearance = new Appearance();
   appearance.run();
 
@@ -130,20 +128,9 @@ function Appearance() {
       glitches.classList.remove('loading-header');
     }, 700);
 
-    var i = 0;
-
-    setTimeout(function() { loop() }, 200);
-
-    function loop() {
-      setTimeout(function() {
-        var line = descriptionNodes[i];
-        line.classList.remove('loading-hero-line');
-
-        i = i + 1;
-
-        if (i < 3) { loop(); }
-      }, 200 + (i * 5));
-    }
+    iterate(descriptionNodes, 200, function(component) {
+      component.classList.remove('loading-hero-line');
+    });
   }
 
   this.myself = function() {
@@ -161,38 +148,27 @@ function Appearance() {
     var paragraph = texts[index];
     var button = buttons[index];
 
-    titles.slice(titles.indexOf(title));
-    texts.slice(texts.indexOf(paragraph));
-    buttons.slice(buttons.indexOf(button));
-
-    var sides = [title, paragraph, button];
-
-    var index = 0;
-    loop();
-
-    function loop() {
-      setTimeout(function() {
-        var component = sides[index];
-        component.style.left = '0px';
-        component.style.opacity = 1;
-
-        index = index + 1;
-
-        if (index < 3) { loop(); }
-      }, 150 + (index * 5));
-    }
+    titles.splice(titles.indexOf(title), 1);
+    texts.splice(texts.indexOf(paragraph), 1);
+    buttons.splice(buttons.indexOf(button), 1);
 
     for (var i = 0; i < titles.length; i++) {
       var components = [titles[i], texts[i], buttons[i]];
 
       for (var j = 0; j < components.length; j++) {
         var component = components[j];
-
+        console.log(component);
         component.style.transition = '';
         component.style.left = 'auto';
         component.style.opacity = 1;
       }
     }
+
+    iterate([title, paragraph, button], 0, function(node) {
+      node.style.transition = 'left 0.6s ease, opacity 0.6s ease';
+      node.style.left = 'auto';
+      node.style.opacity = 1;
+    });
   }
 }
 
@@ -286,19 +262,24 @@ function exists(name) {
   if (document.getElementsByTagName('body').length <= 0) {
     return false
   }
-
   return document.getElementsByTagName('body')[0].id === name;
-}
-
-function prepareWindowFrames() {
-  window.requestAnimationFrame = window.requestAnimationFrame
-  || window.webkitRequestAnimationFrame
-  || window.mozRequestAnimationFrame
-  || window.oRequestAnimationFrame
-  || window.msRequestAnimationFrame
-  || function(callback) { window.setTimeout(callback, 1000 / 60) };
 }
 
 function convertToArray(object) {
   return [].map.call(object, function(element) { return element; });
+}
+
+function iterate(array, delay, callback) {
+  var index = 0;
+  setTimeout(function() { loop(); }, delay);
+
+  function loop() {
+    setTimeout(function() {
+      callback(array[index]);
+
+      index = index + 1;
+
+      if (index < array.length) { loop(); }
+    }, 150 + (index * 5));
+  }
 }
