@@ -9,7 +9,6 @@
   margin: 0 auto;
   z-index: 1;
   background-color: header-background-color;
-  -webkit-backdrop-filter: blur(0px);
   transition: initial-opacity-transition;
 }
 #manifesto .email-link-wrapper,
@@ -21,9 +20,41 @@
 }
 #manifesto #email-link,
 #myself #email-link {
-  font: 15px Inconsolata;
+  font: header-font;
 }
 #manifesto #header-glitches,
 #myself #header-glitches {
   transition: initial-opacity-transition;
+}
+#manifesto #back-button,
+#myself #back-button {
+  position: absolute;
+  top: 17.5px;
+  font: header-font;
+  color: #fff;
+  padding-left: 50px;
+  padding-bottom: 7.5px;
+  left: corner-glitch-side;
+}
+#manifesto #back-button:after,
+#myself #back-button:after {
+  display: none;
+}
+#manifesto #back-button:before,
+#myself #back-button:before {
+  content: '';
+  position: absolute;
+  background-color: text-color;
+  height: 1px;
+  bottom: 0%;
+  left: 0%;
+  right: 35%;
+  transition: right glitch-transition;
+}
+#manifesto #back-button:hover:before,
+#myself #back-button:hover:before {
+  right: 0%;
+}
+#myself #back-button {
+  display: none;
 }
