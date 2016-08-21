@@ -12,6 +12,7 @@ window.addEventListener('load', function() {
   var indicator = document.getElementById('indicator');
   var myself = document.getElementById('sections');
   var selectedWork = document.getElementById('selected-work');
+  var selectedWrapper = document.getElementById('selected-wrapper');
   var backTop = document.getElementById('back-top-button');
   var position = Math.abs(myself.scrollTop / window.innerHeight);
 
@@ -119,12 +120,16 @@ window.addEventListener('load', function() {
     }
 
     if (position == 0) {
-      selectedWork.style.opacity = 1;
+      selectedWork.style.bottom = '85px';
+      selectedWrapper.style.clip = 'rect(auto, auto, auto, auto)';
       backTop.style.opacity = 0;
+      backTop.style.left = '50px';
       backTop.style.cursor = 'default';
     } else {
-      selectedWork.style.opacity = 0;
+      selectedWork.style.bottom = '105px';
+      selectedWrapper.style.clip = 'rect(auto, auto, auto, 100px)';
       backTop.style.opacity = 1;
+      backTop.style.left = '77px';
       backTop.style.cursor = 'pointer';
     }
 

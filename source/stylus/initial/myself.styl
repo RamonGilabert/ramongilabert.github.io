@@ -34,7 +34,7 @@
 
   #indicator {
     position: absolute
-    width: glitch-size
+    width: 1px
     height: 50px
     top: 100px
     right: 32px
@@ -51,44 +51,47 @@
 
   #selected-work {
     position: absolute
-    bottom: 80px
+    bottom: 85px
     left: 50%
     transform: translateX(-50%)
-    transition: disappear-transition
+    transition: bottom glitch-transition
 
-    div {
+    #selected-wrapper {
+      position: absolute
+      overflow: hidden
+      clip: rect(auto, auto, auto, auto)
       opacity: disabled-text-opacity
-      position: relative
       transform: rotate(90deg)
+      transition: clip glitch-transition
 
       p {
         font: glitch-font
-        padding-right: 50px
-        padding-bottom: 10px
+        padding-right: 40px
       }
     }
 
-    div:after {
+    #selected-wrapper:after {
       content: ''
       position: absolute
       background-color: text-color
       height: glitch-size
-      left: 40%
+      width: auto
       right: 0%
       bottom: 0%
+      left: 30%
     }
   }
 
   #back-top-button {
     position: absolute
-    left: 77px
+    left: 50px
     bottom: 30px
     font: glitch-font
     color: text-color
     padding-bottom: 10px
     cursor: default
     opacity: 0
-    transition: disappear-transition
+    transition: disappear-transition, left glitch-transition
   }
 
   #back-top-button:after {
@@ -149,7 +152,7 @@
       top: 10px
       font: 15px Inconsolata
       color: text-color
-      padding-bottom: 5px
+      padding-bottom: 7.5px
       padding-right: 50px
       cursor: pointer
     }

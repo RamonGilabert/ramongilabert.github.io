@@ -3,7 +3,7 @@
   <head>
     {{> head }}
     <script type="text/javascript" src="js/pagination.js"></script>
-    <title>Gilabert</title>
+    <title>Ramon Gilabert</title>
   </head>
   <body id='myself'>
     <h1 id='page-title'>Ramon Gilabert</h1>
@@ -15,7 +15,7 @@
         <div class='wrapper'>
           <h2>{{ title }}</h2>
           <p><strong>{{ span }}</strong>{{{ subtitle }}}</p>
-          <a id="{{ kind }}-button" href='./{{ link }}'>read more</a>
+          <a href='./{{ link }}'>read more</a>
         </div>
       </section>
       {{/ myself }}
@@ -30,6 +30,6 @@
     <div id='indicator'></div>
     <div class='corner-glitch bottom-corner-glitch'></div>
     <button id='back-top-button'>back top</button>
-    <div id='selected-work'><div><p>selected work</p></div></div>
+    <div id='selected-work'><div id='selected-wrapper'><p>selected</p></div></div>
   </body>
 </html>
