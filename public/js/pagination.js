@@ -127,7 +127,8 @@ window.addEventListener('load', function() {
       backTop.style.cursor = 'pointer';
     }
 
-    myself.style.transition = animate === undefined ? 'transform 0.7s ease' : '';
+    myself.style.transition = animate === undefined
+    ? 'transform 0.8s cubic-bezier(0.88, 0.12, 0.36, 0.79)' : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
 
     positionIndicator();
