@@ -149,6 +149,7 @@ function Resizer() {
   this.method = function() { };
   this.reference = '';
   this.movable = '';
+  this.minimumWidth = 900;
 
   this.prepare = function() {
     if (exists('manifesto')) {

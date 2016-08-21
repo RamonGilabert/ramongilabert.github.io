@@ -281,6 +281,7 @@
 #myself {
   position: fixed;
   overflow: hidden;
+  min-width: 900px;
 }
 #myself #sections {
   width: 100%;
@@ -454,7 +455,7 @@
   bottom: 0%;
 }
 #myself nav {
-  position: fixed;
+  position: absolute;
   top: 44%;
   right: 0%;
   transform: rotate(90deg) translateY(-50%);
