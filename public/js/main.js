@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
   var resizer = new Resizer();
   resizer.prepare();
 
-  var disappear = new Disappear(convert(document.getElementsByClassName('intercept')));
+  var disappear = new Disappear();
   disappear.prepare();
 
   var email = document.getElementById('email-link');
@@ -119,86 +119,25 @@ function Appearance() {
   }
 
   this.manifesto = function() {
-    var image = document.getElementById('hero-image').getElementsByTagName('img')[0];
-    var header = document.getElementById('header');
-    var glitches = document.getElementById('header-glitches');
-    var descriptionNodes = document.getElementsByClassName('description-line');
-
-    image.classList.remove('loading-hero-image');
-
-    setTimeout(function() {
-      header.classList.remove('loading-header');
-      glitches.classList.remove('loading-header');
-    }, 700);
-
-    iterate(descriptionNodes, 200, function(component) {
-      component.classList.remove('loading-hero-line');
-    });
+    manifestoAnimation(true, function() {});
   }
 
   this.myself = function() {
-    var myself = document.getElementById('sections');
-    var index = Math.abs(myself.scrollTop / window.innerHeight);
-    var figures = convert(myself.getElementsByTagName('figure'));
-    var titles = convert(document.getElementsByClassName('title'));
-    var texts = convert(myself.getElementsByTagName('p'));
-    var buttons = convert(myself.getElementsByTagName('a'));
-    var navigation = document.getElementsByTagName('nav')[0];
-    var details = document.getElementById('details');
-    var header = document.getElementsByTagName('header')[0];
-
-    var figure = figures[index];
-    var title = titles[index];
-    var paragraph = texts[index];
-    var button = buttons[index];
-
-    figures.splice(figures.indexOf(figure), 1);
-    titles.splice(titles.indexOf(title), 1);
-    texts.splice(texts.indexOf(paragraph), 1);
-    buttons.splice(buttons.indexOf(button), 1);
-
-    for (var i = 0; i < titles.length; i++) {
-      var components = [titles[i], texts[i], buttons[i], figures[i]];
-
-      for (var j = 0; j < components.length; j++) {
-        var component = components[j];
-        component.style.transition = '';
-        component.style.opacity = 1;
-
-        if (!figures.includes(component)) {
-          component.style.left = 'auto';
-        }
-      }
-    }
-
-    iterate([title, paragraph, button], 0, function(node) {
-      node.style.transition = 'left 0.6s ease, opacity 0.6s ease';
-      node.style.left = 'auto';
-      node.style.opacity = 1;
-    });
-
-    setTimeout(function() {
-      var curve = 'opacity 0.8s ease';
-      var array = [header, navigation, details, figure];
-
-      for (var position = 0; position < array.length; position++) {
-        var element = array[position];
-        element.style.transition = curve;
-        element.style.opacity = 1;
-      }
-    }, 700);
+    myselfAnimation(true, function() {});
   }
 }
 
-function Disappear(elements) {
+function Disappear() {
 
-  this.elements = elements;
+  this.elements = [];
   this.method = function() { };
 
   this.prepare = function() {
     if (exists('manifesto')) {
+      this.elements = [document.getElementById('back-button')];
       this.method = this.manifesto;
     } else if (exists('myself')) {
+      this.elements = convert(document.getElementsByClassName('intercept'));
       this.method = this.myself;
     }
 
@@ -219,13 +158,15 @@ function Disappear(elements) {
   }
 
   this.manifesto = function(callback) {
-    console.log('Hey from Manifesto');
-    // callback();
+    manifestoAnimation(false, function() {
+      callback();
+    });
   }
 
   this.myself = function(callback) {
-    console.log('Hey from Myself');
-    // callback();
+    myselfAnimation(false, function() {
+      callback();
+    });
   }
 }
 
@@ -304,6 +245,93 @@ function Separator(name) {
 
     this.lastWidth = window.innerWidth;
   }
+}
+
+// MARK: - Transformation animations
+
+function manifestoAnimation(enter, callback) {
+  var image = document.getElementById('hero-image').getElementsByTagName('img')[0];
+  var header = document.getElementById('header');
+  var glitches = document.getElementById('header-glitches');
+  var descriptionNodes = document.getElementsByClassName('description-line');
+
+  setTimeout(function() {
+    enter ? image.classList.remove('loading-hero-image')
+    : image.classList.add('loading-hero-image');
+  }, enter ? 0 : 700);
+
+  setTimeout(function() {
+    enter ? header.classList.remove('loading-header')
+    : header.classList.add('loading-header');
+    enter ? glitches.classList.remove('loading-header')
+    : glitches.classList.add('loading-header');
+  }, enter ? 700 : 0);
+
+  iterate(descriptionNodes, 200, function(component) {
+    enter ? component.classList.remove('loading-hero-line')
+    : component.classList.add('loading-hero-line');
+  });
+
+  setTimeout(function() {
+    callback();
+  }, 1000);
+}
+
+function myselfAnimation(enter, callback) {
+  var myself = document.getElementById('sections');
+  var index = Math.abs(myself.scrollTop / window.innerHeight);
+  var figures = convert(myself.getElementsByTagName('figure'));
+  var titles = convert(document.getElementsByClassName('title'));
+  var texts = convert(myself.getElementsByTagName('p'));
+  var buttons = convert(myself.getElementsByTagName('a'));
+  var navigation = document.getElementsByTagName('nav')[0];
+  var details = document.getElementById('details');
+  var header = document.getElementsByTagName('header')[0];
+
+  var figure = figures[index];
+  var title = titles[index];
+  var paragraph = texts[index];
+  var button = buttons[index];
+
+  figures.splice(figures.indexOf(figure), 1);
+  titles.splice(titles.indexOf(title), 1);
+  texts.splice(texts.indexOf(paragraph), 1);
+  buttons.splice(buttons.indexOf(button), 1);
+
+  for (var i = 0; i < titles.length; i++) {
+    var components = [titles[i], texts[i], buttons[i], figures[i]];
+
+    for (var j = 0; j < components.length; j++) {
+      var component = components[j];
+      component.style.transition = '';
+      component.style.opacity = enter ? 1 : 0;
+
+      if (!figures.includes(component)) {
+        component.style.left = enter ? 'auto' : '-75px';
+      }
+    }
+  }
+
+  iterate([title, paragraph, button], 0, function(node) {
+    node.style.transition = 'left 0.6s ease, opacity 0.6s ease';
+    node.style.left = enter ? 'auto' : '-75px';
+    node.style.opacity = enter ? 1 : 0;
+  });
+
+  setTimeout(function() {
+    var curve = 'opacity 0.8s ease';
+    var array = [header, navigation, details, figure];
+
+    for (var position = 0; position < array.length; position++) {
+      var element = array[position];
+      element.style.transition = curve;
+      element.style.opacity = enter ? 1 : 0;
+    }
+  }, 700);
+
+  setTimeout(function() {
+    callback();
+  }, 1500);
 }
 
 // MARK: - Helper functions
