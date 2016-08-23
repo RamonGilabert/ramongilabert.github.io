@@ -1,4 +1,5 @@
-// JavaScript gilabert.design
+// JavaScript of the main content of gilabert.design.
+// Developers: Me, Myself and I.
 
 // MARK: - Window events
 
@@ -117,7 +118,7 @@ function Appearance() {
     var header = document.getElementById('header');
     var glitches = document.getElementById('header-glitches');
     var descriptionNodes = convert(document.getElementsByClassName('description-line'));
-    var imageTiming = enter ? 0 : 500;
+    var imageTiming = enter ? 0 : 450;
     var beautyTiming = enter ? 700 : 0;
     var descriptionTiming = enter ? 200 : 0;
 
@@ -136,7 +137,7 @@ function Appearance() {
 
     setTimeout(function() {
       callback();
-    }, 1000);
+    }, 800);
   }
 
   this.myself = function(enter, callback) {
@@ -198,7 +199,7 @@ function Appearance() {
 
     setTimeout(function() {
       callback();
-    }, 1500);
+    }, 1300);
   }
 }
 

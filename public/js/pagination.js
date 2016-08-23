@@ -1,4 +1,7 @@
 // JavaScript for the pagination in the myself page.
+// Developers: Me, Myself and I.
+
+// MARK: - Window events
 
 window.addEventListener('load', function() {
 
