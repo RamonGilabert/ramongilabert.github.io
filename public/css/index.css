@@ -448,6 +448,7 @@
   left: -75px;
   opacity: 0;
   transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
 }
 #myself #lights .wrapper,
 #myself #branding .wrapper {

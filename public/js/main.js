@@ -2,9 +2,10 @@
 
 // MARK: - Window events
 
+var appearance = new Appearance();
+
 window.addEventListener('load', function() {
 
-  var appearance = new Appearance();
   appearance.run();
 
   var separator = new Separator('dot-separator');
@@ -19,16 +20,7 @@ window.addEventListener('load', function() {
   var disappear = new Disappear();
   disappear.prepare();
 
-  var email = document.getElementById('email-link');
-  if (email !== null) {
-    email.addEventListener('click', function() {
-      var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
-      var subject = decode("Uryyb gurer! :)");
-      var reference = letter + '?subject=' + subject;
-
-      email.href = reference;
-    });
-  }
+  encryptEmail();
 
   window.addEventListener('resize', function() {
     separator.generate();
@@ -111,19 +103,102 @@ function Appearance() {
   this.run = function() {
     if (exists('manifesto')) {
       this.method = this.manifesto;
-      this.method()
+      this.method(true);
     } else if (exists('myself')) {
-      this.method = this.myself
-      this.method()
+      this.method = this.myself;
+      this.method(true);
     }
   }
 
-  this.manifesto = function() {
-    manifestoAnimation(true, function() {});
+  this.manifesto = function(enter, callback) {
+    callback = callback || empty
+
+    var image = document.getElementById('hero-image').getElementsByTagName('img')[0];
+    var header = document.getElementById('header');
+    var glitches = document.getElementById('header-glitches');
+    var descriptionNodes = document.getElementsByClassName('description-line');
+    var imageTiming = enter ? 0 : 500;
+    var beautyTiming = enter ? 700 : 0;
+    var descriptionTiming = enter ? 200 : 0;
+
+    setTimeout(function() {
+      toggle(image, 'loading-hero-image', enter);
+    }, imageTiming);
+
+    setTimeout(function() {
+      toggle(header, 'loading-header', enter);
+      toggle(glitches, 'loading-header', enter);
+    }, beautyTiming);
+
+    iterate(descriptionNodes, descriptionTiming, function(component) {
+      toggle(component, 'loading-hero-line', enter);
+    });
+
+    setTimeout(function() {
+      callback();
+    }, 1000);
   }
 
-  this.myself = function() {
-    myselfAnimation(true, function() {});
+  this.myself = function(enter, callback) {
+    callback = callback || empty
+
+    var myself = document.getElementById('sections');
+    var index = Math.abs(myself.scrollTop / window.innerHeight);
+    var figures = convert(myself.getElementsByTagName('figure'));
+    var titles = convert(document.getElementsByClassName('title'));
+    var texts = convert(myself.getElementsByTagName('p'));
+    var buttons = convert(myself.getElementsByTagName('a'));
+    var navigation = document.getElementsByTagName('nav')[0];
+    var details = document.getElementById('details');
+    var header = document.getElementsByTagName('header')[0];
+    var opacity = enter ? 1 : 0;
+    var left = enter ? 'auto' : '-75px';
+    var detailsTiming = enter ? 700 : 0;
+
+    var figure = figures[index];
+    var title = titles[index];
+    var paragraph = texts[index];
+    var button = buttons[index];
+
+    figures.splice(figures.indexOf(figure), 1);
+    titles.splice(titles.indexOf(title), 1);
+    texts.splice(texts.indexOf(paragraph), 1);
+    buttons.splice(buttons.indexOf(button), 1);
+
+    for (var i = 0; i < titles.length; i++) {
+      var components = [titles[i], texts[i], buttons[i], figures[i]];
+
+      for (var j = 0; j < components.length; j++) {
+        var component = components[j];
+        component.style.transition = '';
+        component.style.opacity = opacity;
+
+        if (!figures.includes(component)) {
+          component.style.left = left;
+        }
+      }
+    }
+
+    iterate([title, paragraph, button], 0, function(node) {
+      node.style.transition = 'left 0.6s ease, opacity 0.6s ease';
+      node.style.left = left;
+      node.style.opacity = opacity;
+    });
+
+    setTimeout(function() {
+      var curve = 'opacity 0.8s ease';
+      var array = [header, navigation, details, figure];
+
+      for (var position = 0; position < array.length; position++) {
+        var element = array[position];
+        element.style.transition = curve;
+        element.style.opacity = opacity;
+      }
+    }, detailsTiming);
+
+    setTimeout(function() {
+      callback();
+    }, 1500);
   }
 }
 
@@ -150,23 +225,11 @@ function Disappear() {
         var href = element.href;
         element.href = '#';
 
-        self.method(function() {
+        appearance.method(false, function() {
           window.location = href;
         });
       });
     }
-  }
-
-  this.manifesto = function(callback) {
-    manifestoAnimation(false, function() {
-      callback();
-    });
-  }
-
-  this.myself = function(callback) {
-    myselfAnimation(false, function() {
-      callback();
-    });
   }
 }
 
@@ -247,94 +310,20 @@ function Separator(name) {
   }
 }
 
-// MARK: - Transformation animations
-
-function manifestoAnimation(enter, callback) {
-  var image = document.getElementById('hero-image').getElementsByTagName('img')[0];
-  var header = document.getElementById('header');
-  var glitches = document.getElementById('header-glitches');
-  var descriptionNodes = document.getElementsByClassName('description-line');
-
-  setTimeout(function() {
-    enter ? image.classList.remove('loading-hero-image')
-    : image.classList.add('loading-hero-image');
-  }, enter ? 0 : 700);
-
-  setTimeout(function() {
-    enter ? header.classList.remove('loading-header')
-    : header.classList.add('loading-header');
-    enter ? glitches.classList.remove('loading-header')
-    : glitches.classList.add('loading-header');
-  }, enter ? 700 : 0);
-
-  iterate(descriptionNodes, 200, function(component) {
-    enter ? component.classList.remove('loading-hero-line')
-    : component.classList.add('loading-hero-line');
-  });
-
-  setTimeout(function() {
-    callback();
-  }, 1000);
-}
-
-function myselfAnimation(enter, callback) {
-  var myself = document.getElementById('sections');
-  var index = Math.abs(myself.scrollTop / window.innerHeight);
-  var figures = convert(myself.getElementsByTagName('figure'));
-  var titles = convert(document.getElementsByClassName('title'));
-  var texts = convert(myself.getElementsByTagName('p'));
-  var buttons = convert(myself.getElementsByTagName('a'));
-  var navigation = document.getElementsByTagName('nav')[0];
-  var details = document.getElementById('details');
-  var header = document.getElementsByTagName('header')[0];
-
-  var figure = figures[index];
-  var title = titles[index];
-  var paragraph = texts[index];
-  var button = buttons[index];
-
-  figures.splice(figures.indexOf(figure), 1);
-  titles.splice(titles.indexOf(title), 1);
-  texts.splice(texts.indexOf(paragraph), 1);
-  buttons.splice(buttons.indexOf(button), 1);
-
-  for (var i = 0; i < titles.length; i++) {
-    var components = [titles[i], texts[i], buttons[i], figures[i]];
-
-    for (var j = 0; j < components.length; j++) {
-      var component = components[j];
-      component.style.transition = '';
-      component.style.opacity = enter ? 1 : 0;
-
-      if (!figures.includes(component)) {
-        component.style.left = enter ? 'auto' : '-75px';
-      }
-    }
-  }
-
-  iterate([title, paragraph, button], 0, function(node) {
-    node.style.transition = 'left 0.6s ease, opacity 0.6s ease';
-    node.style.left = enter ? 'auto' : '-75px';
-    node.style.opacity = enter ? 1 : 0;
-  });
-
-  setTimeout(function() {
-    var curve = 'opacity 0.8s ease';
-    var array = [header, navigation, details, figure];
-
-    for (var position = 0; position < array.length; position++) {
-      var element = array[position];
-      element.style.transition = curve;
-      element.style.opacity = enter ? 1 : 0;
-    }
-  }, 700);
-
-  setTimeout(function() {
-    callback();
-  }, 1500);
-}
-
 // MARK: - Helper functions
+
+function encryptEmail() {
+  var email = document.getElementById('email-link');
+  if (email !== null) {
+    email.addEventListener('click', function() {
+      var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
+      var subject = decode("Uryyb gurer! :)");
+      var reference = letter + '?subject=' + subject;
+
+      email.href = reference;
+    });
+  }
+}
 
 function decode(letters) {
   return letters.replace(/[a-zA-Z]/g, function(c) {
@@ -354,6 +343,10 @@ function convert(object) {
   return [].map.call(object, function(element) { return element; });
 }
 
+function toggle(element, name, remove) {
+  remove ? element.classList.remove(name) : element.classList.add(name);
+}
+
 function iterate(array, delay, callback) {
   var index = 0;
   setTimeout(function() { loop(); }, delay);
@@ -368,3 +361,5 @@ function iterate(array, delay, callback) {
     }, 150 + (index * 5));
   }
 }
+
+function empty() { }
