@@ -116,7 +116,7 @@ function Appearance() {
     var image = document.getElementById('hero-image').getElementsByTagName('img')[0];
     var header = document.getElementById('header');
     var glitches = document.getElementById('header-glitches');
-    var descriptionNodes = document.getElementsByClassName('description-line');
+    var descriptionNodes = convert(document.getElementsByClassName('description-line'));
     var imageTiming = enter ? 0 : 500;
     var beautyTiming = enter ? 700 : 0;
     var descriptionTiming = enter ? 200 : 0;
@@ -132,7 +132,7 @@ function Appearance() {
 
     iterate(descriptionNodes, descriptionTiming, function(component) {
       toggle(component, 'loading-hero-line', enter);
-    });
+    }, !enter);
 
     setTimeout(function() {
       callback();
@@ -183,7 +183,7 @@ function Appearance() {
       node.style.transition = 'left 0.6s ease, opacity 0.6s ease';
       node.style.left = left;
       node.style.opacity = opacity;
-    });
+    }, !enter);
 
     setTimeout(function() {
       var curve = 'opacity 0.8s ease';
@@ -347,7 +347,11 @@ function toggle(element, name, remove) {
   remove ? element.classList.remove(name) : element.classList.add(name);
 }
 
-function iterate(array, delay, callback) {
+function iterate(array, delay, callback, reverse) {
+  if (reverse) {
+    array.reverse();
+  }
+
   var index = 0;
   setTimeout(function() { loop(); }, delay);
 
