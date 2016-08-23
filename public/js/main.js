@@ -16,6 +16,9 @@ window.addEventListener('load', function() {
   var resizer = new Resizer();
   resizer.prepare();
 
+  var disappear = new Disappear(convert(document.getElementsByClassName('intercept')));
+  disappear.prepare();
+
   var email = document.getElementById('email-link');
   if (email !== null) {
     email.addEventListener('click', function() {
@@ -136,10 +139,10 @@ function Appearance() {
   this.myself = function() {
     var myself = document.getElementById('sections');
     var index = Math.abs(myself.scrollTop / window.innerHeight);
-    var figures = convertToArray(myself.getElementsByTagName('figure'));
-    var titles = convertToArray(document.getElementsByClassName('title'));
-    var texts = convertToArray(myself.getElementsByTagName('p'));
-    var buttons = convertToArray(myself.getElementsByTagName('a'));
+    var figures = convert(myself.getElementsByTagName('figure'));
+    var titles = convert(document.getElementsByClassName('title'));
+    var texts = convert(myself.getElementsByTagName('p'));
+    var buttons = convert(myself.getElementsByTagName('a'));
     var navigation = document.getElementsByTagName('nav')[0];
     var details = document.getElementById('details');
     var header = document.getElementsByTagName('header')[0];
@@ -184,6 +187,45 @@ function Appearance() {
         element.style.opacity = 1;
       }
     }, 700);
+  }
+}
+
+function Disappear(elements) {
+
+  this.elements = elements;
+  this.method = function() { };
+
+  this.prepare = function() {
+    if (exists('manifesto')) {
+      this.method = this.manifesto;
+    } else if (exists('myself')) {
+      this.method = this.myself;
+    }
+
+    for (var i = 0; i < this.elements.length; i++) {
+      var self = this;
+      var element = this.elements[i];
+
+      element.addEventListener('click', function(event) {
+        event.preventDefault();
+        var href = element.href;
+        element.href = '#';
+
+        self.method(function() {
+          window.location = href;
+        });
+      });
+    }
+  }
+
+  this.manifesto = function(callback) {
+    console.log('Hey from Manifesto');
+    // callback();
+  }
+
+  this.myself = function(callback) {
+    console.log('Hey from Myself');
+    // callback();
   }
 }
 
@@ -280,7 +322,7 @@ function exists(name) {
   return document.getElementsByTagName('body')[0].id === name;
 }
 
-function convertToArray(object) {
+function convert(object) {
   return [].map.call(object, function(element) { return element; });
 }
 
