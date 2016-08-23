@@ -127,27 +127,11 @@ window.addEventListener('load', function() {
 
     var initialTitle = titles[currentPosition];
     var finalTitle = titles[position];
+    var remove = position == 0;
 
-    // TODO: Do the titles animation.
-    // initialTitle.style.top = '100px';
-    //
-    // setTimeout(function() {
-    //   finalTitle.style.top = '0px';
-    // }, 400);
-
-    if (position == 0) {
-      selectedWork.style.bottom = '85px';
-      selectedWrapper.style.clip = 'rect(auto, auto, auto, auto)';
-      backTop.style.opacity = 0;
-      backTop.style.left = '50px';
-      backTop.style.cursor = 'default';
-    } else {
-      selectedWork.style.bottom = '105px';
-      selectedWrapper.style.clip = 'rect(auto, auto, auto, 100px)';
-      backTop.style.opacity = 1;
-      backTop.style.left = '77px';
-      backTop.style.cursor = 'pointer';
-    }
+    toggle(selectedWork, 'selected-work-scroll', remove);
+    toggle(selectedWrapper, 'selected-wrapper-scroll', remove);
+    toggle(backTop, 'back-top-scroll', remove);
 
     myself.style.transition = animate === undefined ? 'transform 0.8s ' + cubicBezier : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
@@ -254,4 +238,8 @@ disableScroll();
 
 function convertToArray(object) {
   return [].map.call(object, function(element) { return element; });
+}
+
+function toggle(element, name, remove) {
+  remove ? element.classList.remove(name) : element.classList.add(name);
 }
