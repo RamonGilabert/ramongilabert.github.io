@@ -36,8 +36,8 @@ function abs(number) {
   return Math.abs(number);
 }
 
-function encryptCorreu() {
-  var email = document.id('email-link');
+function encryptCorreu(id) {
+  var email = document.id(id);
   if (email !== null) {
     email.addEventListener('click', function() {
       var letter = decode("znvygb:enzba@tvynoreg.qrfvta");

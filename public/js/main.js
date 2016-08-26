@@ -1,14 +1,18 @@
 // JavaScript of the main content of gilabert.design.
+
 // Developers: Me, Myself and I.
+
+// Some code is imported in the HTML partial (head.mustache) from other files.
+// Those files are as important as this one. With the same developer on it.
+
+// MARK: - General values
+
+var appearance = new Appearance();
+prepareDocument();
 
 // MARK: - Window events
 
-var appearance = new Appearance();
-
 window.addEventListener('load', function() {
-
-  prepareDocument();
-  encryptCorreu();
 
   appearance.run();
 
@@ -23,6 +27,8 @@ window.addEventListener('load', function() {
 
   var disappear = new Disappear();
   disappear.prepare();
+
+  encryptCorreu('email-link');
 
   window.addEventListener('resize', function() {
     separator.generate();
