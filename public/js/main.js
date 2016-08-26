@@ -68,7 +68,7 @@ function Scroller() {
       var story = document.class('story').tag('div');
       var manifesto = document.class('awards').tag('div');
       var awards = document.class('manifesto').tag('div');
-      var footer = document.class('footer').tag('div');
+      var footer = document.id('footer').tag('div');
 
       this.sections = [story, manifesto, awards, footer];
       this.method = this.manifesto
