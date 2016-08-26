@@ -63,7 +63,7 @@ window.addEventListener('load', function() {
     navigator.addEventListener('mouseout', function() {
       setTimeout(function() {
         positionIndicator();
-      }, 25);
+      }, 50);
     });
 
     navigator.addEventListener('click', function() {
@@ -79,31 +79,20 @@ window.addEventListener('load', function() {
     });
   }
 
-  function resize() {
-    var windowHeight = '100%';
-    for (var i = 0; i < this.sections.length; i++) {
-      var section = this.sections[i];
-      section.style.height = windowHeight;
-    }
-
-    myself.style.height = windowHeight;
-
-    shouldAnimate = false;
-    scroll(position * window.innerHeight, false);
-  }
+  // MARK: - Methods for the document scrolling.
 
   function scrollHandler(event) {
     currentTime = new Date().getTime();
 
     if (currentTime - pastTime < safety + 800) {
-			event.preventDefault();
-			return;
-		}
+      event.preventDefault();
+      return;
+    }
 
-  	event.preventDefault();
-  	var delta = event.wheelDelta || -event.detail;
+    event.preventDefault();
+    var delta = event.wheelDelta || -event.detail;
 
-		delta > 0 ? scrollUp() : scrollDown();
+    delta > 0 ? scrollUp() : scrollDown();
     pastTime = currentTime;
   }
 
@@ -136,10 +125,25 @@ window.addEventListener('load', function() {
     toggle(selectedWrapper, 'selected-wrapper-scroll', remove);
     toggle(backTop, 'back-top-scroll', remove);
 
+    // TODO: Perform the animation of the titles.
+
     myself.style.transition = animate === undefined ? 'transform 0.8s ' + cubicBezier : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
 
     positionIndicator();
+  }
+
+  function resize() {
+    var windowHeight = '100%';
+    for (var i = 0; i < this.sections.length; i++) {
+      var section = this.sections[i];
+      section.style.height = windowHeight;
+    }
+
+    myself.style.height = windowHeight;
+
+    shouldAnimate = false;
+    scroll(position * window.innerHeight, false);
   }
 
   function positionIndicator(button) {
@@ -148,13 +152,9 @@ window.addEventListener('load', function() {
     var width = navigator.offsetWidth;
     var triangleWidth = triangle.offsetWidth;
 
-    if (shouldAnimate) {
-      indicator.style.transition = 'top 0.6s ' + cubicBezier + ', height 0.6s ' + cubicBezier;
-      triangle.style.transition = 'top 0.6s ' + cubicBezier;
-    } else {
-      indicator.style.transition = '';
-      triangle.style.transition = '';
-    }
+    indicator.style.transition = shouldAnimate
+    ? 'top 0.6s ' + cubicBezier + ', height 0.6s ' + cubicBezier : '';
+    triangle.style.transition = shouldAnimate ? 'top 0.6s ' + cubicBezier : '';
 
     shouldAnimate = true;
 
@@ -165,43 +165,43 @@ window.addEventListener('load', function() {
       triangle.style.top = y + width / 2 - triangleWidth / 2 + 'px';
     }
   }
-});
 
-// Inspiration from:
-// github.com/peachananr/purejs-onepage-scroll/blob/master/onepagescroll.js#L173
+  // Inspiration from:
+  // github.com/peachananr/purejs-onepage-scroll/blob/master/onepagescroll.js#L173
 
-function swipe(element) {
-  var initial = 0;
+  function swipe(element) {
+    var initial = 0;
 
-  document.addEventListener('touchstart', function(event) {
-    var touches = event.touches;
-    if (touches && touches.length) {
-      initial = touches[0].pageY;
-      document.addEventListener('touchmove', touchMove);
-    }
-  }, false);
-
-  function touchMove(event) {
-    var touches = event.touches;
-
-    if (touches && touches.length) {
-      event.preventDefault();
-      var delta = initial - touches[0].pageY;
-
-      if (delta >= 50) {
-        var event = new Event('swipeUp');
-        document.dispatchEvent(event);
-      } else if (delta <= -50) {
-        var event = new Event('swipeDown');
-        document.dispatchEvent(event);
+    document.addEventListener('touchstart', function(event) {
+      var touches = event.touches;
+      if (touches && touches.length) {
+        initial = touches[0].pageY;
+        document.addEventListener('touchmove', touchMove);
       }
+    }, false);
 
-      if (abs(delta) >= 50) {
-        document.removeEventListener('touchmove', touchMove);
+    function touchMove(event) {
+      var touches = event.touches;
+
+      if (touches && touches.length) {
+        event.preventDefault();
+        var delta = initial - touches[0].pageY;
+
+        if (delta >= 50) {
+          var event = new Event('swipeUp');
+          document.dispatchEvent(event);
+        } else if (delta <= -50) {
+          var event = new Event('swipeDown');
+          document.dispatchEvent(event);
+        }
+
+        if (abs(delta) >= 50) {
+          document.removeEventListener('touchmove', touchMove);
+        }
       }
     }
   }
-}
+});
 
 // MARK: - Prevent scrolling
 
