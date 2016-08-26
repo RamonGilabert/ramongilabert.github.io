@@ -17,8 +17,8 @@ window.addEventListener('load', function() {
 
   var sections = document.tags('section');
 
-  var position = abs(myself.scrollTop / window.innerHeight);
-  var currentPosition = abs(myself.scrollTop / window.innerHeight);
+  var position = 0;
+  var currentPosition = position;
   var currentTime = new Date().getTime();
   var pastTime = 0;
   var safety = 700;
@@ -29,7 +29,7 @@ window.addEventListener('load', function() {
   positionIndicator();
 
   backTop.addEventListener('click', function() {
-    currentPosition = abs(myself.scrollTop / window.innerHeight);
+    currentPosition = position;
     position = 0;
     scroll(0);
   });
@@ -63,14 +63,14 @@ window.addEventListener('load', function() {
     navigator.addEventListener('mouseout', function() {
       setTimeout(function() {
         positionIndicator();
-      }, 50);
+      }, 25);
     });
 
     navigator.addEventListener('click', function() {
       currentTime = new Date().getTime();
 
       if (currentTime - pastTime > safety + 800) {
-        currentPosition = abs(myself.scrollTop / window.innerHeight);
+        currentPosition = position;
         position = navigators.indexOf(this);
 
         scroll(position * window.innerHeight);
