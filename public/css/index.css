@@ -403,6 +403,7 @@
 }
 #myself section h2 {
   position: relative;
+  top: 0px;
   overflow: hidden;
   font: 55px Brandon;
   text-transform: uppercase;
@@ -420,7 +421,6 @@
   color: #fff;
   cursor: pointer;
   right: auto;
-  bottom: 0px;
   padding-bottom: 7.5px;
   padding-right: 50px;
 }
@@ -449,6 +449,13 @@
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
 }
+#myself section #more {
+  position: relative;
+  top: 15px;
+  bottom: 0px;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+}
 #myself #lights .wrapper,
 #myself #branding .wrapper {
   left: auto;
@@ -462,10 +469,9 @@
 }
 #myself #lights a,
 #myself #branding a {
-  position: absolute;
   padding-right: 0px;
   padding-left: 50px;
-  right: 0px;
+  right: 0%;
   left: auto;
 }
 #myself #lights a:before,
@@ -526,11 +532,11 @@
   left: 77px !important;
   cursor: pointer !important;
 }
-#myself .text-up {
-  top: -100px;
+#myself .up {
+  top: -150px !important;
 }
-#myself .text-down {
-  top: 100px;
+#myself .down {
+  top: 150px !important;
 }
 #manifesto #hero {
   width: 100%;

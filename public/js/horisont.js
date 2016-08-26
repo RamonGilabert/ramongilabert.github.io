@@ -67,6 +67,17 @@ function convert(object) {
   return [].map.call(object, function(element) { return element; });
 }
 
+function slice(element, sizes) {
+  var array = [];
+  var i, j;
+
+  for (i = 0, j = element.length; i < j; i = i + sizes) {
+    array.push(element.slice(i, i + sizes));
+  }
+
+  return array
+}
+
 function toggle(element, name, remove) {
   remove ? element.classList.remove(name) : element.classList.add(name);
 }

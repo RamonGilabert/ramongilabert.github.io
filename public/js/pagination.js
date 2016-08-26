@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
   var selectedWrapper = document.id('selected-wrapper');
   var backTop = document.id('back-top-button');
 
-  var titles = document.classes('title');
+  var titles = slice(document.classes('text'), 3);
   var navigators = document.classes('navigator');
 
   var sections = document.tags('section');
@@ -72,9 +72,8 @@ window.addEventListener('load', function() {
       if (currentTime - pastTime > safety + 800) {
         currentPosition = abs(myself.scrollTop / window.innerHeight);
         position = navigators.indexOf(this);
-        scroll(position * window.innerHeight);
 
-        pastTime = currentTime;
+        scroll(position * window.innerHeight);
   		}
     });
   }
@@ -93,7 +92,6 @@ window.addEventListener('load', function() {
     var delta = event.wheelDelta || -event.detail;
 
     delta > 0 ? scrollUp() : scrollDown();
-    pastTime = currentTime;
   }
 
   function scrollUp() {
@@ -113,24 +111,27 @@ window.addEventListener('load', function() {
   }
 
   function scroll(point, animate) {
-    if (point > window.innerHeight * sections.length - window.innerHeight || point < 0) {
-      return;
+    if (point > window.innerHeight * sections.length - window.innerHeight
+      || point < 0 || currentPosition == position) {
+        return;
     }
 
-    var initialTitle = titles[currentPosition];
-    var finalTitle = titles[position];
+    if (animate == undefined) {
+      scrollingTitles();
+    }
+
     var remove = position == 0;
 
     toggle(selectedWork, 'selected-work-scroll', remove);
     toggle(selectedWrapper, 'selected-wrapper-scroll', remove);
     toggle(backTop, 'back-top-scroll', remove);
 
-    // TODO: Perform the animation of the titles.
-
     myself.style.transition = animate === undefined ? 'transform 0.8s ' + cubicBezier : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
 
     positionIndicator();
+
+    pastTime = currentTime;
   }
 
   function resize() {
@@ -144,6 +145,48 @@ window.addEventListener('load', function() {
 
     shouldAnimate = false;
     scroll(position * window.innerHeight, false);
+  }
+
+  function scrollingTitles() {
+    var initialTitles = titles[currentPosition];
+    var finalTitles = titles[position];
+    var titleTransition = 'top 1s ease';
+    var timeout = 800;
+    var starter = 200;
+    var transitionPadding = 80;
+    var up = currentPosition - position > 0;
+
+    var index = 0;
+    loop();
+
+    function loop() {
+      var initialTitle = up
+      ? initialTitles[initialTitles.length - index - 1] : initialTitles[index];
+      var finalTitle = up
+      ? finalTitles[finalTitles.length - index - 1] : finalTitles[index];
+      var initialClass = up ? 'down' : 'up';
+      var finalClass = up ? 'up' : 'down';
+
+      initialTitle.style.transition = titleTransition;
+      initialTitle.classList.add(initialClass);
+
+      finalTitle.style.transition = '';
+      finalTitle.classList.add(finalClass);
+
+      setTimeout(function() {
+        initialTitle.classList.remove(initialClass);
+      }, timeout);
+
+      setTimeout(function() {
+        finalTitle.style.transition = titleTransition;
+        finalTitle.classList.remove(finalClass);
+      }, starter);
+
+      index = index + 1;
+      setTimeout(function() {
+        if (index < initialTitles.length) { loop(); }
+      }, transitionPadding * index);
+    }
   }
 
   function positionIndicator(button) {
