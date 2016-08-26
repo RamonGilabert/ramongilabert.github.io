@@ -20,7 +20,7 @@ function Appearance() {
     callback = callback || empty
 
     var myself = document.id('sections');
-    var index = Math.abs(myself.scrollTop / window.innerHeight);
+    var index = abs(myself.scrollTop / window.innerHeight);
     var figures = myself.tags('figure');
     var titles = document.classes('title');
     var texts = myself.tags('p');

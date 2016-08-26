@@ -135,7 +135,7 @@ function Separator(name) {
     if (!exists(this.elementName)) { return; }
 
     if ((window.innerWidth >= 1400
-      || Math.abs(this.lastWidth - window.innerWidth) <= 10)
+      || abs(this.lastWidth - window.innerWidth) <= 10)
       && this.wrapper.innerHTML != '') {
       return;
     }

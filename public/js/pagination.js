@@ -8,17 +8,17 @@ window.addEventListener('load', function() {
   var safety = 700;
   var shouldAnimate = true;
   var cubicBezier = 'cubic-bezier(0.88, 0.12, 0.36, 0.79)'
-  var sections = document.getElementsByTagName('section');
-  var navigators = document.getElementsByClassName('navigator');
-  var triangle = document.getElementById('triangle');
-  var indicator = document.getElementById('indicator');
-  var myself = document.getElementById('sections');
-  var titles = document.getElementsByClassName('title');
-  var selectedWork = document.getElementById('selected-work');
-  var selectedWrapper = document.getElementById('selected-wrapper');
-  var backTop = document.getElementById('back-top-button');
-  var position = Math.abs(myself.scrollTop / window.innerHeight);
-  var currentPosition = Math.abs(myself.scrollTop / window.innerHeight);
+  var sections = document.tags('section');
+  var navigators = document.classes('navigator');
+  var triangle = document.id('triangle');
+  var indicator = document.id('indicator');
+  var myself = document.id('sections');
+  var titles = document.classes('title');
+  var selectedWork = document.id('selected-work');
+  var selectedWrapper = document.id('selected-wrapper');
+  var backTop = document.id('back-top-button');
+  var position = abs(myself.scrollTop / window.innerHeight);
+  var currentPosition = abs(myself.scrollTop / window.innerHeight);
   var currentTime = new Date().getTime();
   var pastTime = 0;
 
@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
   positionIndicator();
 
   backTop.addEventListener('click', function() {
-    currentPosition = Math.abs(myself.scrollTop / window.innerHeight);
+    currentPosition = abs(myself.scrollTop / window.innerHeight);
     position = 0;
     scroll(0);
   });
@@ -67,8 +67,8 @@ window.addEventListener('load', function() {
       currentTime = new Date().getTime();
 
       if (currentTime - pastTime > safety + 800) {
-        currentPosition = Math.abs(myself.scrollTop / window.innerHeight);
-        position = convertToArray(navigators).indexOf(this);
+        currentPosition = abs(myself.scrollTop / window.innerHeight);
+        position = navigators.indexOf(this);
         scroll(position * window.innerHeight);
 
         pastTime = currentTime;
@@ -193,7 +193,7 @@ function swipe(element) {
         document.dispatchEvent(event);
       }
 
-      if (Math.abs(delta) >= 50) {
+      if (abs(delta) >= 50) {
         document.removeEventListener('touchmove', touchMove);
       }
     }
@@ -233,13 +233,3 @@ function disableScroll() {
 }
 
 disableScroll();
-
-// MARK: - Private functions
-
-function convertToArray(object) {
-  return [].map.call(object, function(element) { return element; });
-}
-
-function toggle(element, name, remove) {
-  remove ? element.classList.remove(name) : element.classList.add(name);
-}

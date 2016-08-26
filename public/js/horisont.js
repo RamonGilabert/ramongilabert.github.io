@@ -1,4 +1,4 @@
-// Horisont helper methods.
+// Helper methods to make you type less.
 
 // By Ramon Gilabert.
 
@@ -30,6 +30,10 @@ function prepareDocument() {
   HTMLElement.prototype.tag = function(name) {
     return this.tags(name)[0];
   }
+}
+
+function abs(number) {
+  return Math.abs(number);
 }
 
 function encryptCorreu() {
