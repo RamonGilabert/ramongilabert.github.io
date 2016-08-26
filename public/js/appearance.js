@@ -20,14 +20,16 @@ function Appearance() {
     callback = callback || empty
 
     var myself = document.id('sections');
-    var index = abs(myself.scrollTop / window.innerHeight);
-    var figures = myself.tags('figure');
+    var details = document.id('details');
+    var navigation = document.tag('nav');
+    var header = document.tag('header');
     var titles = document.classes('title');
+
     var texts = myself.tags('p');
     var buttons = myself.tags('a');
-    var navigation = document.tag('nav');
-    var details = document.id('details');
-    var header = document.tag('header');
+    var figures = myself.tags('figure');
+    var index = abs(myself.scrollTop / window.innerHeight);
+
     var opacity = enter ? 1 : 0;
     var left = enter ? 'auto' : '-75px';
     var detailsTiming = enter ? 700 : 0;
@@ -84,7 +86,9 @@ function Appearance() {
     var image = document.id('hero-image').tag('img');
     var header = document.id('header');
     var glitches = document.id('header-glitches');
+    
     var descriptionNodes = document.classes('description-line');
+
     var imageTiming = enter ? 0 : 400;
     var beautyTiming = enter ? 700 : 0;
     var descriptionTiming = enter ? 200 : 0;

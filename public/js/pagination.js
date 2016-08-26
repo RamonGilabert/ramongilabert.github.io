@@ -5,22 +5,25 @@
 
 window.addEventListener('load', function() {
 
-  var safety = 700;
-  var shouldAnimate = true;
-  var cubicBezier = 'cubic-bezier(0.88, 0.12, 0.36, 0.79)'
-  var sections = document.tags('section');
-  var navigators = document.classes('navigator');
   var triangle = document.id('triangle');
   var indicator = document.id('indicator');
   var myself = document.id('sections');
-  var titles = document.classes('title');
   var selectedWork = document.id('selected-work');
   var selectedWrapper = document.id('selected-wrapper');
   var backTop = document.id('back-top-button');
+
+  var titles = document.classes('title');
+  var navigators = document.classes('navigator');
+
+  var sections = document.tags('section');
+
   var position = abs(myself.scrollTop / window.innerHeight);
   var currentPosition = abs(myself.scrollTop / window.innerHeight);
   var currentTime = new Date().getTime();
   var pastTime = 0;
+  var safety = 700;
+  var shouldAnimate = true;
+  var cubicBezier = 'cubic-bezier(0.88, 0.12, 0.36, 0.79)'
 
   swipe(myself);
   positionIndicator();

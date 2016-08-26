@@ -73,15 +73,15 @@ function Scroller() {
   this.manifesto = function() {
     var height = window.innerHeight
     var sectionsLength = this.sections.length;
-    var initialPercentageTrigger = 0.6;
-    var distance = window.innerHeight * initialPercentageTrigger;
+    var initialPercentage = 0.6;
+    var distance = window.innerHeight * initialPercentage;
     var sectionHeight = 0.7;
-    var percentageTrigger = 0.5;
-    var minimumHeight = window.innerHeight > 600 * 0.7 ? window.innerHeight : 600 * 0.7;
+    var percentage = 0.5;
+    var minimumHeight = height > 600 * sectionHeight ? height : 600 * sectionHeight;
 
     if (this.length !== sectionsLength) {
-      distance = window.innerHeight + minimumHeight * (sectionHeight
-        * (this.length - sectionsLength - 1) + sectionHeight * percentageTrigger)
+      distance = height + minimumHeight * (sectionHeight
+        * (this.length - sectionsLength - 1) + sectionHeight * percentage)
     }
 
     if (window.pageYOffset - distance > 0 && sectionsLength > 0) {
@@ -142,8 +142,7 @@ function Separator(name) {
 
     var maximumWidth = 1400;
     var sideOffset = 57;
-    var windowWidth = window.innerWidth >= maximumWidth
-    ? maximumWidth : window.innerWidth;
+    var windowWidth = window.innerWidth >= maximumWidth ? maximumWidth : window.innerWidth;
     var width = windowWidth - sideOffset;
     var times = Math.floor(width / 11) * 2;
     var values = [true, true, true, true, true, true, false];

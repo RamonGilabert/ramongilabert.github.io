@@ -4,7 +4,7 @@
 
 function Resizer() {
 
-  this.method = function() { };
+  this.method = empty();
   this.reference = '';
   this.movable = '';
   this.minimumWidth = 900;
