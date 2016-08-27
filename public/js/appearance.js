@@ -32,7 +32,7 @@ function Appearance() {
 
     var opacity = enter ? 1 : 0;
     var even = parseInt(index) % 2 === 0;
-    var left = enter ? 'auto' : even ? '75px' : '-75px';
+    var left = enter ? 'auto' : even ? '-75px' : '75px';
     var detailsTiming = enter ? 700 : 0;
 
     var figure = figures[index];

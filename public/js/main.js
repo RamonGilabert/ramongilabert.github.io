@@ -74,8 +74,8 @@ function Scroller() {
   this.run = function() {
     if (exists('manifesto')) {
       var story = document.class('story').tag('div');
-      var manifesto = document.class('awards').tag('div');
-      var awards = document.class('manifesto').tag('div');
+      var manifesto = document.class('manifesto').tag('div');
+      var awards = document.class('awards').tag('div');
       var footer = document.id('footer').tag('div');
 
       this.sections = [story, manifesto, awards, footer];
