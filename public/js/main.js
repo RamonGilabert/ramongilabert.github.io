@@ -53,9 +53,15 @@ window.addEventListener('load', function() {
   });
 });
 
-window.onbeforeunload = function() {
-	window.scrollTo(0, 0);
-}
+window.addEventListener('beforeunload', function(event) {
+  window.scrollTo(0, 0);
+});
+
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    appearance.run();
+  }
+});
 
 function Scroller() {
 
@@ -119,9 +125,9 @@ function Disappear() {
       var element = this.elements[i];
 
       element.addEventListener('click', function(event) {
-        event.preventDefault();
         var href = element.href;
-        element.href = '#';
+
+        event.preventDefault();
 
         appearance.method(false, function() {
           window.location = href;
