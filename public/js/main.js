@@ -54,7 +54,9 @@ window.addEventListener('load', function() {
 });
 
 window.addEventListener('beforeunload', function(event) {
-  window.scrollTo(0, 0);
+  if (!exists('myself')) {
+    window.scrollTo(0, 0);
+  }
 });
 
 window.addEventListener('pageshow', function(event) {

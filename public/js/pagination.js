@@ -128,6 +128,7 @@ window.addEventListener('load', function() {
 
     myself.style.transition = animate === undefined ? 'transform 0.8s ' + cubicBezier : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
+    getTransform(myself);
 
     positionIndicator();
 

@@ -82,6 +82,20 @@ function toggle(element, name, remove) {
   remove ? element.classList.remove(name) : element.classList.add(name);
 }
 
+function getTransform(element) {
+  var style = getComputedStyle(element)
+  var transform = style.transform || style.webkitTransform;
+  var expression = transform.match(/^matrix3d\((.+)\)$/);
+
+  if (expression) {
+    return parseFloat(expression[1].split(', ')[13]);
+  }
+
+  expression = transform.match(/^matrix\((.+)\)$/);
+
+  return expression ? parseFloat(expression[1].split(', ')[5]) : 0;
+}
+
 function iterate(array, delay, callback, reverse) {
   if (reverse) {
     array.reverse();
