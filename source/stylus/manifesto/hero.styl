@@ -2,9 +2,10 @@
 
 #manifesto {
 
-  minimum-height = 600px
-  minimum-image-height = minimum-height * 0.8
   image-height = 80vh
+  maximum-image-height = 800px
+  minimum-image-height = 475px
+  minimum-height = 600px
 
   #hero {
     width: 100%
@@ -26,12 +27,14 @@
 
   #hero-image {
     position: absolute
+    top: 55%
     left: 50%
-    transform: translateX(-50%)
+    transform: translate(-50%, -50%)
     background-position: center
 
     img {
       height: image-height
+      max-height: maximum-image-height
       min-height: minimum-image-height
       transition: initial-transform-transition, initial-opacity-transition
     }
