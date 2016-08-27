@@ -10,14 +10,14 @@ function Resizer() {
   this.minimumWidth = 900;
 
   this.prepare = function() {
-    if (exists('manifesto')) {
-      this.method = this.manifesto;
-      this.reference = document.id('hero-image');
-      this.movable = document.id('hero-description');
-    } else if (exists('myself')) {
+    if (exists('myself')) {
       this.method = this.myself;
       this.sections = document.tags('sections');
       this.movable = document.tag('nav');
+    } else if (exists('manifesto')) {
+      this.method = this.manifesto;
+      this.reference = document.id('hero-image');
+      this.movable = document.id('hero-description');
     }
 
     this.method();
