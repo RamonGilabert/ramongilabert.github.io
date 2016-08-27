@@ -6,10 +6,6 @@
   transform: translateX(50px);
   opacity: 0;
 }
-#manifesto .loading-hero-line-pair {
-  transform: translateX(-50px);
-  opacity: 0;
-}
 #manifesto .loading-header {
   opacity: 0;
 }

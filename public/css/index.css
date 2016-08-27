@@ -110,7 +110,7 @@
   bottom: 20px;
   left: 27px;
   min-width: 900px;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 #dot-separator div {
   float: left;
@@ -209,10 +209,6 @@
 }
 #manifesto .loading-hero-line {
   transform: translateX(50px);
-  opacity: 0;
-}
-#manifesto .loading-hero-line-pair {
-  transform: translateX(-50px);
   opacity: 0;
 }
 #manifesto .loading-header {

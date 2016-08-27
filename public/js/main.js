@@ -146,7 +146,7 @@ function Separator(name) {
   this.lastWidth = window.innerWidth;
 
   this.generate = function() {
-    if (!exists(this.elementName)) { return; }
+    if (this.wrapper === undefined) { return; }
 
     if ((window.innerWidth >= 1400
       || abs(this.lastWidth - window.innerWidth) <= 10)

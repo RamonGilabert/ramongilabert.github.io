@@ -103,7 +103,7 @@
   bottom: corner-glitch-up -10px;
   left: corner-glitch-side;
   min-width: minimum-width;
-  opacity: disabled-text-opacity;
+  opacity: 0.5;
 }
 #dot-separator div {
   float: left;
