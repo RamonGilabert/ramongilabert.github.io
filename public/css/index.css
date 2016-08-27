@@ -211,6 +211,10 @@
   transform: translateX(50px);
   opacity: 0;
 }
+#manifesto .loading-hero-line-pair {
+  transform: translateX(-50px);
+  opacity: 0;
+}
 #manifesto .loading-header {
   opacity: 0;
 }
@@ -440,9 +444,9 @@
 #myself section a:hover:before {
   width: 100%;
 }
+#myself section #more,
 #myself section h2,
-#myself section p,
-#myself section a {
+#myself section p {
   top: auto;
   left: -75px;
   opacity: 0;
@@ -461,11 +465,14 @@
   left: auto;
   right: 125px;
 }
+#myself #lights #more,
+#myself #branding #more,
 #myself #lights h2,
 #myself #branding h2,
 #myself #lights p,
 #myself #branding p {
   text-align: right;
+  left: 75px;
 }
 #myself #lights a,
 #myself #branding a {

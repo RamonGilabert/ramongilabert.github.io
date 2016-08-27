@@ -24,14 +24,15 @@ function Appearance() {
     var navigation = document.tag('nav');
     var header = document.tag('header');
     var titles = document.classes('title');
+    var buttons = document.classes('more');
 
     var texts = myself.tags('p');
-    var buttons = myself.tags('a');
     var figures = myself.tags('figure');
     var index = abs(getTransform(myself)) / window.innerHeight;
 
     var opacity = enter ? 1 : 0;
-    var left = enter ? 'auto' : '-75px';
+    var even = parseInt(index) % 2 === 0;
+    var left = enter ? 'auto' : even ? '75px' : '-75px';
     var detailsTiming = enter ? 700 : 0;
 
     var figure = figures[index];
@@ -102,12 +103,6 @@ function Appearance() {
       toggle(header, 'loading-header', enter);
       toggle(glitches, 'loading-header', enter);
     }, beautyTiming);
-
-    if (!enter) {
-      iterate(explanations, 0, function(component) {
-        // Perform the animation out of all the sections.
-      }, !enter);
-    }
 
     iterate(descriptionNodes, descriptionTiming, function(component) {
       toggle(component, 'loading-hero-line', enter);
