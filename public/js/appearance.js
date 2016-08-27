@@ -91,6 +91,8 @@ function Appearance() {
     var explanations = document.classes('explanation');
     var descriptionNodes = document.classes('description-line');
 
+    var footer = document.tag('footer');
+
     var imageTiming = enter ? 0 : 400;
     var beautyTiming = enter ? 700 : 0;
     var descriptionTiming = enter ? 200 : 0;
@@ -103,6 +105,12 @@ function Appearance() {
       toggle(header, 'loading-header', enter);
       toggle(glitches, 'loading-header', enter);
     }, beautyTiming);
+
+    iterate(explanations.concat(footer), 0, function(component) {
+      component.style.transition = enter ? '' : 'opacity 0.8s ease, transform 0.8s ease';
+      component.style.opacity = enter ? 1 : 0;
+      component.style.transform = enter ? 'translateY(0%)' : 'translateY(-20%)';
+    });
 
     iterate(descriptionNodes, descriptionTiming, function(component) {
       toggle(component, 'loading-hero-line', enter);
