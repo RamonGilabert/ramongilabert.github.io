@@ -115,4 +115,4 @@ function iterate(array, delay, callback, reverse) {
   }
 }
 
-function empty() { }
+var empty = function() { }

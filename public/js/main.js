@@ -68,7 +68,7 @@ window.addEventListener('pageshow', function(event) {
 function Scroller() {
 
   this.sections = [];
-  this.method = empty();
+  this.method = empty;
   this.length = 0;
 
   this.run = function() {
@@ -111,7 +111,7 @@ function Scroller() {
 function Disappear() {
 
   this.elements = [];
-  this.method = empty();
+  this.method = empty;
 
   this.prepare = function() {
     if (exists('manifesto')) {

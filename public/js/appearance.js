@@ -4,7 +4,7 @@
 
 function Appearance() {
 
-  this.method = function() { };
+  this.method = empty;
 
   this.run = function() {
     if (exists('myself')) {
