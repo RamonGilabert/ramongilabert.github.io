@@ -814,6 +814,29 @@
   width: 100%;
   margin-bottom: 100px;
 }
+.detail .body-wrapper .quote {
+  position: relative;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.detail .body-wrapper .quote .wrapper {
+  position: relative;
+  width: 450px;
+  right: auto;
+  left: auto;
+  margin: 0 auto;
+}
+.detail .body-wrapper .quote .wrapper img {
+  position: absolute;
+  width: 90px;
+  top: 0px;
+  left: 0px;
+}
+.detail .body-wrapper .quote .wrapper p {
+  font: 16px Inconsolata;
+  line-height: 30px;
+}
 #lights figure {
   background-image: url("../images/sections/lights.jpg");
 }

@@ -150,6 +150,8 @@
         "path" : "./images/details/branding/fourth.jpg"
       }
     ],
-    "quote" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m happy with the result of it."
+    "quote?" : {
+      "text" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m happy with the result of it."
+    }
   }
 }

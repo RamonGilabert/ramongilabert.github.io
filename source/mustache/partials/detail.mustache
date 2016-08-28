@@ -1,31 +1,39 @@
-  <h1 id='page-title'>Ramon Gilabert</h1>
-  {{> header }}
-  <section class='hero'>
-    <figure></figure>
-    <div class='hero-overlay'></div>
-    <div class='hero-text-wrapper'>
-      <h2 class='hero-title'>{{ title }}</h2>
-      <div class='headers-wrapper'>
-        {{# headers }}
-        <p>{{{ title }}}</p>
-        {{/ headers }}
+    <h1 id='page-title'>Ramon Gilabert</h1>
+    {{> header }}
+    <section class='hero'>
+      <figure></figure>
+      <div class='hero-overlay'></div>
+      <div class='hero-text-wrapper'>
+        <h2 class='hero-title'>{{ title }}</h2>
+        <div class='headers-wrapper'>
+          {{# headers }}
+          <p>{{{ title }}}</p>
+          {{/ headers }}
+        </div>
       </div>
+      <div class='corner-glitch bottom-corner-glitch'></div>
+    </section>
+    <div class='body-wrapper'>
+      <section class='project'>
+        <div class='project-wrapper'>
+          <h3>The project</h3>
+          <div class='disclosure'></div>
+          <p>{{ project }}</p>
+          <div class='text-glitch'></div>
+        </div>
+      </section>
+      <section class='images'>
+        {{# images }}
+        <img src='{{ path }}' />
+        {{/ images }}
+      </section>
+      {{# quote? }}
+      <section class='quote'>
+        <div class='wrapper'>
+          <img src='./images/icons/quotes.svg' />
+          <p>{{{ text }}}</p>
+        </div>
+      </section>
+      {{/ quote? }}
     </div>
-    <div class='corner-glitch bottom-corner-glitch'></div>
-  </section>
-  <div class='body-wrapper'>
-    <section class='project'>
-      <div class='project-wrapper'>
-        <h3>The project</h3>
-        <div class='disclosure'></div>
-        <p>{{ project }}</p>
-        <div class='text-glitch'></div>
-      </div>
-    </section>
-    <section class='images'>
-      {{# images }}
-      <img src='{{ path }}' />
-      {{/ images }}
-    </section>
-  </div>
-  {{> footer }}
+    {{> footer }}
