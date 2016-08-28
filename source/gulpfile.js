@@ -16,6 +16,7 @@ gulp.task('mustache', function() {
     .pipe(mustache('./data/gilabert.json', {}, {
       head: './mustache/partials/head.mustache',
       header: './mustache/partials/header.mustache',
+      detail: './mustache/partials/detail.mustache',
       footer: './mustache/partials/footer.mustache'
     })).pipe(gulp.dest('../public'));
 });
