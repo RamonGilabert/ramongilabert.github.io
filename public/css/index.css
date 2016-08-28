@@ -701,12 +701,18 @@
   width: 100%;
 }
 .detail .body-wrapper {
+  overflow-x: hidden;
   position: relative;
   width: 100%;
-  max-width: 1300px;
+  height: auto;
+  background-color: #00f;
+  max-width: 1200px;
   min-width: 900px;
   left: 50%;
   transform: translateX(-50%);
+}
+.detail .body-wrapper img {
+  width: 100%;
 }
 *,
 html {
