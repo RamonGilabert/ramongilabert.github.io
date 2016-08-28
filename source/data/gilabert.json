@@ -78,19 +78,19 @@
     "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application or one microcontroller for the light are some of the components that were born and were developed by me.",
     "images" : [
       {
-        "path" : ""
+        "path" : "./images/details/lights/first.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/lights/second.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/lights/third.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/lights/fourth.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/lights/fifth.jpg"
       }
     ]
   },
@@ -111,13 +111,13 @@
     "project" : "Work done at and with Hyper (Oslo) for one of the biggest retail stores in Norway. Concept and iOS app done for the costumers of the brand, in order for them to get more involved in the day to day of the big company.",
     "images" : [
       {
-        "path" : ""
+        "path" : "./images/details/friends/first.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/friends/second.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/friends/third.jpg"
       }
     ]
   },
@@ -138,16 +138,16 @@
     "project" : "My most personal project up to date. Working against the clock to perform the design, photography, concept, development and testing to release one of the projects that has guided me to my style like no other.",
     "images" : [
       {
-        "path" : ""
+        "path" : "./images/details/branding/first.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/branding/second.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/branding/third.jpg"
       },
       {
-        "path" : ""
+        "path" : "./images/details/branding/fourth.jpg"
       }
     ],
     "quote" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m happy with the result of it."
