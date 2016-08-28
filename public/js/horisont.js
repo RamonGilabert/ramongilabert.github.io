@@ -115,4 +115,8 @@ function iterate(array, delay, callback, reverse) {
   }
 }
 
+var isDetail = function() {
+  return document.body.classList.contains('detail');
+}
+
 var empty = function() { }

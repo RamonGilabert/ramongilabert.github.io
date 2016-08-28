@@ -13,6 +13,9 @@ function Appearance() {
     } else if (exists('manifesto')) {
       this.method = this.manifesto;
       this.method(true);
+    } else if (isDetail) {
+      this.method = this.detail;
+      this.method(true);
     }
   }
 
@@ -119,5 +122,59 @@ function Appearance() {
     setTimeout(function() {
       callback();
     }, 750);
+  }
+
+  this.detail = function(enter, callback) {
+    var header = document.id('header');
+
+    var corner = document.class('bottom-corner-glitch');
+    var title = document.class('hero-title');
+    var image = document.class('hero').tag('figure');
+    var explanations = document.class('headers-wrapper').tags('p');
+
+    var opacities = [header, corner, image];
+    var transformation = 'transform 0.8s ease';
+    var opacity = 'opacity 0.8s ease';
+    var titleClass = 'title';
+    var headerClass = 'headers';
+    var opacityClass = 'alpha';
+
+    if (enter) {
+      title.style.transition = '';
+      toggle(title, titleClass, false);
+    }
+
+    iterate(explanations, 0, function(component) {
+      if (enter) {
+        component.style.transition = '';
+        toggle(component, headerClass, false);
+      }
+    });
+
+    iterate(opacities, 0, function(component) {
+      if (enter) {
+        component.style.transition = '';
+        toggle(component, opacityClass, false);
+      }
+    });
+
+    setTimeout(function() {
+      title.style.transition = transformation;
+      toggle(title, titleClass, enter);
+
+      setTimeout(function() {
+        toggle(image, opacityClass, enter);
+      }, 400);
+
+      iterate(explanations, 0, function(component) {
+        component.style.transition = transformation;
+        toggle(component, headerClass, enter);
+      });
+
+      iterate(opacities, 600, function(component) {
+        component.style.transition = opacity;
+        toggle(component, opacityClass, enter);
+      });
+    }, 5000);
   }
 }

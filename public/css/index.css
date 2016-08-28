@@ -218,6 +218,15 @@
   transform: translateY(100%);
   opacity: 0;
 }
+.detail .title {
+  transform: translateY(-100%) !important;
+}
+.detail .headers {
+  transform: translateY(100%) !important;
+}
+.detail .alpha {
+  opacity: 0 !important;
+}
 .detail header,
 #manifesto header,
 #myself header {
@@ -743,12 +752,17 @@
   font: 80px Brandon;
   text-transform: uppercase;
   color: #fff;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
 }
 .detail .hero .hero-text-wrapper .headers-wrapper p {
+  position: relative;
   display: inline-block;
   margin-right: 25px;
   margin-left: 25px;
   font: 17px Inconsolata;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
 }
 .detail .body-wrapper {
   overflow-x: hidden;

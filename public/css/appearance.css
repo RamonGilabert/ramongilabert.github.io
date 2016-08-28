@@ -2,3 +2,12 @@
   transform: translateY(100%);
   opacity: 0;
 }
+.detail .title {
+  transform: translateY(-100%) !important;
+}
+.detail .headers {
+  transform: translateY(100%) !important;
+}
+.detail .alpha {
+  opacity: 0 !important;
+}

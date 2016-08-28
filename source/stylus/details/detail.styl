@@ -39,6 +39,8 @@
         font: detail-title-font
         text-transform: uppercase
         color: text-color
+        transform: translate3d(0, 0, 0)
+        transform-style: preserve-3d
       }
 
       .headers-wrapper {
@@ -46,10 +48,13 @@
         p {
           margin = 25px
 
+          position: relative
           display: inline-block
           margin-right: margin
           margin-left: margin
           font: detail-header-font
+          transform: translate3d(0, 0, 0)
+          transform-style: preserve-3d
         }
       }
     }
