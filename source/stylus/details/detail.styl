@@ -2,20 +2,117 @@
 
 .detail {
   width: 100%
+  min-width: minimum-width
+
+  .hero {
+    position: relative
+    width: 100%
+    height: 100%
+
+    figure {
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      width: 100%
+      height: 100%
+      min-height: 100%
+      -webkit-backface-visibility: hidden
+      transform: translate3d(0, 0, 0)
+      transform-style: preserve-3d
+    }
+
+    .hero-overlay {
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0px
+      background: linear-gradient(to bottom, overlay-top 0%, \
+      overlay-top 30%, background-color 97.5%)
+    }
+
+    .hero-text-wrapper {
+      position: absolute
+      width: 100%
+      top: 47.5%
+      transform: translateY(-50%)
+      text-align: center
+
+      h2 {
+        font: detail-title-font
+        text-transform: uppercase
+        color: text-color
+      }
+
+      .headers-wrapper {
+
+        p {
+          margin = 25px
+
+          display: inline-block
+          margin-right: margin
+          margin-left: margin
+          font: detail-header-font
+        }
+      }
+    }
+  }
 
   .body-wrapper {
     overflow-x: hidden
     position: relative
     width: 100%
     height: auto
-    background-color: blue
     max-width: maximum-width
     min-width: minimum-width
     left: 50%
     transform: translateX(-50%)
 
+    .project-wrapper {
+      width: 325px
+      left: auto
+      right: auto
+      margin: 0 auto
+      margin-top: 130px
+      margin-bottom: 140px
+
+      h3 {
+        font: detail-project-font
+        text-transform: uppercase
+        color: text-color
+      }
+
+      .disclosure {
+        width: 35px
+        height: 1px
+        background-color: text-color
+        opacity: 1
+        margin-top: 10px
+      }
+
+      p {
+        margin-top: 25px
+        font: detail-text-font
+        line-height: 30px
+      }
+    }
+
     img {
       width: 100%
+      margin-bottom: 100px
     }
   }
+}
+
+// Specific details
+
+#lights figure {
+  background-image: url(lights-image)
+}
+
+#friends figure  {
+  background-image: url(varner-image)
+}
+
+#branding figure {
+  background-image: url(branding-image)
 }

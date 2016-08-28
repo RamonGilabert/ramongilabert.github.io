@@ -1,3 +1,4 @@
+.detail header,
 #manifesto header,
 #myself header {
   position: fixed;
@@ -11,6 +12,7 @@
   background-color: header-background-color;
   transition: initial-opacity-transition;
 }
+.detail .email-link-wrapper,
 #manifesto .email-link-wrapper,
 #myself .email-link-wrapper {
   position: absolute;
@@ -18,14 +20,17 @@
   transform: translateY(-50%);
   right: 105px;
 }
+.detail #email-link,
 #manifesto #email-link,
 #myself #email-link {
   font: header-font;
 }
+.detail #header-glitches,
 #manifesto #header-glitches,
 #myself #header-glitches {
   transition: initial-opacity-transition;
 }
+.detail #back-button,
 #manifesto #back-button,
 #myself #back-button {
   position: absolute;
@@ -36,10 +41,12 @@
   padding-bottom: 7.5px;
   left: corner-glitch-side;
 }
+.detail #back-button:after,
 #manifesto #back-button:after,
 #myself #back-button:after {
   display: none;
 }
+.detail #back-button:before,
 #manifesto #back-button:before,
 #myself #back-button:before {
   content: '';
@@ -51,6 +58,7 @@
   right: 35%;
   transition: right glitch-transition;
 }
+.detail #back-button:hover:before,
 #manifesto #back-button:hover:before,
 #myself #back-button:hover:before {
   right: 0%;
