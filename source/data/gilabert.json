@@ -92,7 +92,10 @@
       {
         "path" : "./images/details/lights/fifth.jpg"
       }
-    ]
+    ],
+    "quote?" : {
+      "text" : "My biggest side project up to date. I was asked to think creatively. So I went nuts. After 7 months working every afternoon after work. I delivered this award winner thesis."
+    }
   },
 
   "friends" : {
