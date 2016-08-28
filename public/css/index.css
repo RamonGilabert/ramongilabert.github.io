@@ -820,6 +820,36 @@
   margin-top: 100px;
   margin-bottom: 100px;
 }
+.detail .body-wrapper .quote .glitch {
+  position: absolute;
+  height: 50px;
+  top: -150px;
+  left: 75px;
+}
+.detail .body-wrapper .quote .glitch div {
+  position: absolute;
+  top: 50%;
+  transform: translate(-25%, -50%);
+  background-color: #fff;
+  width: 15px;
+  height: 1px;
+}
+.detail .body-wrapper .quote .glitch:after,
+.detail .body-wrapper .quote .glitch:before {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  width: 1px;
+  left: 0;
+}
+.detail .body-wrapper .quote .glitch:after {
+  height: 30%;
+  top: 0;
+}
+.detail .body-wrapper .quote .glitch:before {
+  height: 35%;
+  bottom: 0;
+}
 .detail .body-wrapper .quote .wrapper {
   position: relative;
   width: 450px;
