@@ -5,9 +5,32 @@
     <title>Ramon Gilabert – Manifesto</title>
   </head>
   <body id='lights' class='detail'>
-    <div class='wrapper'>
+    <div class='body-wrapper'>
       <h1 id='page-title'>Ramon Gilabert</h1>
-
+      {{> header }}
+      {{# lights }}
+      <section class='hero'>
+        <figure></figure>
+        <div class='hero-overlay'></div>
+        <h2 class='hero-title'>{{ title }}</h2>
+        <div class='headers-wrapper'>
+          {{# headers }}
+          <p>{{ title }}</p>
+          {{/ headers }}
+        </div>
+      </section>
+      <section class='project'>
+        <h3>The project</h3>
+        <div class='disclosure'></div>
+        <p>{{ project }}</p>
+        <div class='text-glitch'></div>
+      </section>
+      <section class='images'>
+        {{# images }}
+        <img src='{{ path }}' />
+        {{/ images }}
+      </section>
+      {{/ lights }}
     </div>
     {{> footer }}
   </body>

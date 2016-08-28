@@ -60,5 +60,96 @@
       "description" : "Working together requires trust. Being selected among 300 developers to attend the 2015 Apple's WWDC, A top 3 student award in Electronic Engineering and the recognition as the best thesis in University guarantees that trust.",
       "kind" : "awards"
     }
-  ]
+  ],
+
+  "lights" : {
+    "title" : "Lights",
+    "headers" : [
+      {
+        "title" : "<strong>Name</strong>. Lights_"
+      },
+      {
+        "title" : "<strong>Client</strong>. Thesis_"
+      },
+      {
+        "title" : "<strong>Span</strong>. 7 months_"
+      }
+    ],
+    "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application or one microcontroller for the light are some of the components that were born and were developed by me.",
+    "images" : [
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      }
+    ]
+  },
+
+  "friends" : {
+    "title" : "Cubus Friends",
+    "headers" : [
+      {
+        "title" : "<strong>Name</strong>. Cubus Friends_"
+      },
+      {
+        "title" : "<strong>Client</strong>. Varner_"
+      },
+      {
+        "title" : "<strong>Span</strong>. 9 months_"
+      }
+    ],
+    "project" : "Work done at and with Hyper (Oslo) for one of the biggest retail stores in Norway. Concept and iOS app done for the costumers of the brand, in order for them to get more involved in the day to day of the big company.",
+    "images" : [
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      }
+    ]
+  },
+
+  "branding" : {
+    "title" : "Branding",
+    "headers" : [
+      {
+        "title" : "<strong>Name</strong>. Branding_"
+      },
+      {
+        "title" : "<strong>Client</strong>. Ramon Gilabert_"
+      },
+      {
+        "title" : "<strong>Span</strong>. 3 months_"
+      }
+    ],
+    "project" : "My most personal project up to date. Working against the clock to perform the design, photography, concept, development and testing to release one of the projects that has guided me to my style like no other.",
+    "images" : [
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      },
+      {
+        "path" : ""
+      }
+    ],
+    "quote" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m happy with the result of it."
+  }
 }

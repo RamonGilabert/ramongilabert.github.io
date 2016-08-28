@@ -697,6 +697,17 @@
   width: 650px;
   margin-top: 10px;
 }
+.detail {
+  width: 100%;
+}
+.detail .body-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  min-width: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 *,
 html {
   margin: 0;
