@@ -11,21 +11,21 @@
       "title" : "Lights",
       "span" : "Role",
       "subtitle" : ". Electronics, iOS, Industrial & Product Design, Backend, Web_",
-      "link" : "manifesto.html"
+      "link" : "lights.html"
     },
     {
       "kind" : "varner",
       "title" : "Cubus Friends",
       "span" : "Role",
       "subtitle" : ". iOS, Concept Designer, Prototype Designer, Product Owner_",
-      "link" : "manifesto.html"
+      "link" : "friends.html"
     },
     {
       "kind" : "branding",
       "title" : "Personal Branding",
       "span" : "Role",
       "subtitle" : ". Development & everything related to the design of it_",
-      "link" : "manifesto.html"
+      "link" : "branding.html"
     }
   ],
 
@@ -151,7 +151,7 @@
       }
     ],
     "quote?" : {
-      "text" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m happy with the result of it."
+      "text" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m super satisfied with the result of it."
     }
   }
 }
