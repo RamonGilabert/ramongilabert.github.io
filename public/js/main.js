@@ -28,6 +28,16 @@ window.addEventListener('load', function() {
   var disappear = new Disappear();
   disappear.prepare();
 
+  var parallax = new Parallax();
+  parallax.prepare();
+
+  var images = document.tags('img');
+  for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener('dragstart', function() {
+      event.preventDefault();
+    });
+  }
+
   encryptCorreu('email-link');
 
   window.addEventListener('resize', function() {
@@ -50,6 +60,10 @@ window.addEventListener('load', function() {
         scroller.method();
       });
     }
+
+    window.requestAnimationFrame(function() {
+      parallax.method();
+    });
   });
 });
 

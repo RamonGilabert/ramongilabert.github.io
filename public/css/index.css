@@ -763,6 +763,9 @@
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
 }
+.detail .hero figure {
+  background-attachment: fixed;
+}
 .detail .hero .hero-overlay {
   position: absolute;
   top: 0;
@@ -772,6 +775,8 @@
   position: absolute;
   width: 100%;
   top: 52.5%;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
   transform: translateY(-50%);
   text-align: center;
 }
@@ -853,6 +858,7 @@
   bottom: 0;
 }
 .detail .body-wrapper img {
+  position: relative;
   width: 100%;
   margin-bottom: 100px;
 }

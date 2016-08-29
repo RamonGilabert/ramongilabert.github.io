@@ -124,7 +124,7 @@ function Appearance() {
 
     setTimeout(function() {
       callback();
-    }, 1100);
+    }, 1200);
   }
 
   this.detail = function(enter, callback) {
@@ -180,6 +180,6 @@ function Appearance() {
 
     setTimeout(function() {
       callback();
-    }, 1100);
+    }, 1200);
   }
 }

@@ -115,6 +115,18 @@ function iterate(array, delay, callback, reverse) {
   }
 }
 
+function positionOffset(element) {
+  var height = element.clientHeight;
+  var offsetLeft = 0;
+  do {
+    if (!isNaN(element.offsetTop)) {
+      offsetLeft += element.offsetTop;
+    }
+  } while(element = element.offsetParent);
+
+  return offsetLeft - window.innerHeight * 0.2 - height;
+}
+
 function isDetail() {
   return document.body.classList.contains('detail');
 }
