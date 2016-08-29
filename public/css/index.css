@@ -203,6 +203,31 @@
 #footer #social #resume figure {
   background-image: url("../images/icons/monogram-icon.svg");
 }
+#footer #next-project {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+  font: 15px Inconsolata;
+  color: #fff;
+  padding-right: 50px;
+  padding-bottom: 7.5px;
+}
+#footer #next-project:after {
+  display: none;
+}
+#footer #next-project:before {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  height: 0.5px;
+  bottom: 0%;
+  right: 0%;
+  left: 35%;
+  transition: left 0.6s ease;
+}
+#footer #next-project:hover:before {
+  left: 0%;
+}
 #manifesto .loading-hero-image {
   transform: translateX(150px);
   opacity: 0;

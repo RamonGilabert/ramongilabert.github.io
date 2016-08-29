@@ -110,4 +110,33 @@
       }
     }
   }
+
+  #next-project {
+    position: absolute
+    right: 30px
+    bottom: 25px
+    font: header-font
+    color: white
+    padding-right: 50px
+    padding-bottom: 7.5px
+  }
+
+  #next-project:after {
+    display: none
+  }
+
+  #next-project:before {
+    content: ''
+    position: absolute
+    background-color: text-color
+    height: glitch-size
+    bottom: 0%
+    right: 0%
+    left: 35%
+    transition: left glitch-transition
+  }
+
+  #next-project:hover:before {
+    left: 0%
+  }
 }
