@@ -868,7 +868,7 @@
 .detail .body-wrapper .quote {
   position: relative;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 0px;
   margin-bottom: 100px;
 }
 .detail .body-wrapper .quote .wrapper {

@@ -45,6 +45,7 @@ function Parallax() {
   this.detail = function() {
     var headerText = document.class('hero-text-wrapper');
     var images = document.classes('parallax');
+    var quote = document.class('wrapper');
 
     var height = window.innerHeight;
     var offset = window.pageYOffset;
@@ -62,6 +63,12 @@ function Parallax() {
         var value = (offset - positioning) * 20 / (height + image.clientHeight);
         image.style.transform = 'translate3d(0, ' + value + '%, 0)';
       }
+    }
+
+    var positioning = positionOffset(quote) - 100;
+    if (positioning <= offset && positioning + quote.clientHeight + height >= offset) {
+      var value = (offset - positioning) * 100 / (height + quote.clientHeight);
+      quote.style.transform = 'translate3d(0, ' + value + '%, 0)';
     }
   }
 }
