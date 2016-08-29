@@ -21,28 +21,28 @@ function Parallax() {
 
         if (exists('lights')) {
           source = './images/details/lights/parallax/first.png';
-          width = '540px';
-          left = '135px';
+          width = '55%';
+          left = '14%';
           right = 'auto';
           top = '0px';
           position = 0;
 
           if (i == 1) {
             source = './images/details/lights/parallax/second.png';
-            left = '120px';
+            left = '12%';
             position = 2;
           }
         } else if (exists('friends')) {
           source = './images/details/friends/parallax/first.png';
-          width = '645px';
-          left = '190px';
+          width = '70%';
+          left = '15%';
           right = 'auto';
           top = '0px';
           position = 1;
         } else if (exists('branding')) {
           source = './images/details/branding/parallax/first.png';
-          width = '750px';
-          left = '130px';
+          width = '75%';
+          left = '12.5%';
           right = 'auto';
           top = '100px';
           position = 1;

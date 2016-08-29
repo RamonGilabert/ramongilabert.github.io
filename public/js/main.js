@@ -56,12 +56,12 @@ window.addEventListener('load', function() {
         }
       }
     } else {
-      window.requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
         scroller.method();
       });
     }
 
-    window.requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
       parallax.method();
     });
   });
