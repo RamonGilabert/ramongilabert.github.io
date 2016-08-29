@@ -12,25 +12,44 @@ function Parallax() {
       this.method = this.detail;
 
       var containers = document.classes('image-wrapper');
+      var times = exists('lights') ? 2 : 1;
 
-      for (var i = 0; i < 2; i++) {
+      for (var i = 0; i < times; i++) {
         var image = document.createElement('img');
 
-        var source = './images/details/lights/parallax/first.png';
-        var width = '540px';
-        var left = '135px';
-        var right = 'auto';
-        var top = '0px';
-        var position = 0;
+        var source, width, left, right, top, position;
 
-        if (i == 1) {
-          source = './images/details/lights/parallax/second.png';
-          left = '120px';
-          position = 2;
+        if (exists('lights')) {
+          source = './images/details/lights/parallax/first.png';
+          width = '540px';
+          left = '135px';
+          right = 'auto';
+          top = '0px';
+          position = 0;
+
+          if (i == 1) {
+            source = './images/details/lights/parallax/second.png';
+            left = '120px';
+            position = 2;
+          }
+        } else if (exists('friends')) {
+          source = './images/details/friends/parallax/first.png';
+          width = '645px';
+          left = '190px';
+          right = 'auto';
+          top = '0px';
+          position = 1;
+        } else if (exists('branding')) {
+          source = './images/details/branding/parallax/first.png';
+          width = '750px';
+          left = '130px';
+          right = 'auto';
+          top = '100px';
+          position = 1;
         }
 
-        image.classList.add('parallax');
         image.src = source;
+        image.classList.add('parallax');
         image.style.position = 'absolute';
         image.style.width = width;
         image.style.top = top;
@@ -45,7 +64,7 @@ function Parallax() {
   this.detail = function() {
     var headerText = document.class('hero-text-wrapper');
     var images = document.classes('parallax');
-    var quote = document.class('wrapper');
+    var quote = document.class('quote');
 
     var height = window.innerHeight;
     var offset = window.pageYOffset;
@@ -65,7 +84,7 @@ function Parallax() {
       }
     }
 
-    if (quote === null) { return; }
+    if (quote === undefined) { return; }
 
     var positioning = positionOffset(quote) - 100;
     if (positioning <= offset && positioning + quote.clientHeight + height >= offset) {
