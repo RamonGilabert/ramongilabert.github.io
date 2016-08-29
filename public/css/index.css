@@ -857,6 +857,9 @@
   right: 0;
   bottom: 0;
 }
+.detail .body-wrapper .image-wrapper {
+  position: relative;
+}
 .detail .body-wrapper img {
   position: relative;
   width: 100%;
