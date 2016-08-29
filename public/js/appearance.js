@@ -108,7 +108,7 @@ function Appearance() {
       toggle(header, 'loading-header', enter);
       toggle(glitches, 'loading-header', enter);
 
-      footer.style.transition = 'opaity 0.8s ease';
+      footer.style.transition = enter ? '' : 'opacity 0.8s ease';
       toggle(footer, 'loading-header', enter);
     }, beautyTiming);
 
@@ -135,8 +135,10 @@ function Appearance() {
     var corner = document.class('bottom-corner-glitch');
     var title = document.class('hero-title');
     var image = document.class('hero').tag('figure');
-    var explanations = document.class('headers-wrapper').tags('p');
     var title = document.class('hero-title');
+
+    var explanations = document.class('headers-wrapper').tags('p');
+    var images = document.class('images').tags('img');
 
     var footer = document.tag('footer');
 
@@ -159,6 +161,12 @@ function Appearance() {
       image.style.transition = opacity;
       toggle(image, opacityClass, enter);
     }, 400);
+
+    iterate(images, 0, function(component) {
+      component.style.transition = enter ? '' : transformation;
+      component.style.opacity = enter ? 1 : 0;
+      component.style.transform = enter ? 'translateY(0%)' : 'translateY(-20%)';
+    });
 
     iterate(explanations, 0, function(component) {
       component.style.transition = transformation;
