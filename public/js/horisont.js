@@ -115,7 +115,7 @@ function iterate(array, delay, callback, reverse) {
   }
 }
 
-var isDetail = function() {
+function isDetail() {
   return document.body.classList.contains('detail');
 }
 

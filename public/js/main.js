@@ -28,11 +28,6 @@ window.addEventListener('load', function() {
   var disappear = new Disappear();
   disappear.prepare();
 
-  var back = document.id('back-button');
-  back.addEventListener('click', function() {
-    console.log(document.referrer);
-  });
-
   encryptCorreu('email-link');
 
   window.addEventListener('resize', function() {
@@ -116,15 +111,12 @@ function Scroller() {
 function Disappear() {
 
   this.elements = [];
-  this.method = empty;
 
   this.prepare = function() {
-    if (exists('manifesto')) {
+    if (exists('manifesto') || isDetail()) {
       this.elements = [document.id('back-button')];
-      this.method = this.manifesto;
     } else if (exists('myself')) {
       this.elements = document.classes('intercept');
-      this.method = this.myself;
     }
 
     for (var i = 0; i < this.elements.length; i++) {
@@ -132,12 +124,28 @@ function Disappear() {
       var element = this.elements[i];
 
       element.addEventListener('click', function(event) {
-        var href = element.href;
-
         event.preventDefault();
 
+        var href = this.href;
+        var self = this;
+
         appearance.method(false, function() {
-          window.location = href;
+          setTimeout(function() {
+
+            if (self.innerHTML == 'go home') {
+              if (sessionStorage['coming'] != undefined && sessionStorage['coming'].indexOf('index') != -1) {
+                sessionStorage['coming'] = window.location;
+                history.back();
+                return;
+              } else {
+                href = 'index.html';
+              }
+            }
+
+            sessionStorage['coming'] = window.location;
+
+            window.location = href;
+          }, 0);
         });
       });
     }

@@ -13,7 +13,7 @@ function Appearance() {
     } else if (exists('manifesto')) {
       this.method = this.manifesto;
       this.method(true);
-    } else if (isDetail) {
+    } else if (isDetail()) {
       this.method = this.detail;
       this.method(true);
     }
@@ -161,5 +161,9 @@ function Appearance() {
       component.style.transition = opacity;
       toggle(component, opacityClass, enter);
     });
+
+    setTimeout(function() {
+      callback();
+    }, 800);
   }
 }
