@@ -114,7 +114,7 @@ function Disappear() {
 
   this.prepare = function() {
     if (exists('manifesto') || isDetail()) {
-      this.elements = [document.id('back-button')];
+      this.elements = [document.id('back-button'), document.id('next-project')];
     } else if (exists('myself')) {
       this.elements = document.classes('intercept');
     }

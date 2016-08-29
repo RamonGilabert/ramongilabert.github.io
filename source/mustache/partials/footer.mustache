@@ -1,4 +1,4 @@
-    <footer id='footer' class='explanation'>
+    <footer id='footer' class='explanation loading-header'>
       <div class='wrapper scroll-appearance'>
         <h2>Let's work together</h2>
         <div class='cross'></div>
@@ -22,5 +22,7 @@
           </div>
         </div>
       </div>
-      <a id='next-project' href='#'>next project</a>
+      {{# next }}
+      <a id='next-project' href='{{ link }}'>next project</a>
+      {{/ next }}
     </footer>

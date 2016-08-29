@@ -44,23 +44,28 @@
     }
   ],
 
-  "manifesto" : [
-    {
-      "title" : "The story",
-      "description" : "Originally from a small town in rural Catalonia and after +1.5 years in Norway working as an iOS developer & Concept Designer, while graduating from Electronic Engineering, I’m up to new challenges and new stories.",
-      "kind" : "story"
-    },
-    {
-      "title" : "The manifesto",
-      "description" : "When I get asked to describe the work I do, I keep on thinking. I do what what makes you think. The prototype that makes you win. The design that makes you wow. Welcome to my site. I’m Ramon. It’s nice to have you here.",
-      "kind" : "manifesto"
-    },
-    {
-      "title" : "The awards",
-      "description" : "Working together requires trust. Being selected among 300 developers to attend the 2015 Apple's WWDC, A top 3 student award in Electronic Engineering and the recognition as the best thesis in University guarantees that trust.",
-      "kind" : "awards"
+  "manifesto" : {
+    "text" : [
+      {
+        "title" : "The story",
+        "description" : "Originally from a small town in rural Catalonia and after +1.5 years in Norway working as an iOS developer & Concept Designer, while graduating from Electronic Engineering, I’m up to new challenges and new stories.",
+        "kind" : "story"
+      },
+      {
+        "title" : "The manifesto",
+        "description" : "When I get asked to describe the work I do, I keep on thinking. I do what what makes you think. The prototype that makes you win. The design that makes you wow. Welcome to my site. I’m Ramon. It’s nice to have you here.",
+        "kind" : "manifesto"
+      },
+      {
+        "title" : "The awards",
+        "description" : "Working together requires trust. Being selected among 300 developers to attend the 2015 Apple's WWDC, A top 3 student award in Electronic Engineering and the recognition as the best thesis in University guarantees that trust.",
+        "kind" : "awards"
+      }
+    ],
+    "next" : {
+      "link" : "lights.html"
     }
-  ],
+  },
 
   "lights" : {
     "title" : "Lights",
@@ -95,6 +100,9 @@
     ],
     "quote?" : {
       "text" : "My biggest side project up to date. I was asked to think creatively. So I went nuts. After 7 months working every afternoon after work. I delivered this award winner thesis."
+    },
+    "next" : {
+      "link" : "friends.html"
     }
   },
 
@@ -122,7 +130,10 @@
       {
         "path" : "./images/details/friends/third.jpg"
       }
-    ]
+    ],
+    "next" : {
+      "link" : "branding.html"
+    }
   },
 
   "branding" : {
@@ -155,6 +166,9 @@
     ],
     "quote?" : {
       "text" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m super satisfied with the result of it."
+    },
+    "next" : {
+      "link" : "manifesto.html"
     }
   }
 }

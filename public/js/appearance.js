@@ -107,9 +107,12 @@ function Appearance() {
     setTimeout(function() {
       toggle(header, 'loading-header', enter);
       toggle(glitches, 'loading-header', enter);
+
+      footer.style.transition = 'opaity 0.8s ease';
+      toggle(footer, 'loading-header', enter);
     }, beautyTiming);
 
-    iterate(explanations.concat(footer), 0, function(component) {
+    iterate(explanations, 0, function(component) {
       component.style.transition = enter ? '' : 'opacity 0.8s ease, transform 0.8s ease';
       component.style.opacity = enter ? 1 : 0;
       component.style.transform = enter ? 'translateY(0%)' : 'translateY(-20%)';
@@ -121,7 +124,7 @@ function Appearance() {
 
     setTimeout(function() {
       callback();
-    }, 750);
+    }, 1100);
   }
 
   this.detail = function(enter, callback) {
@@ -135,6 +138,8 @@ function Appearance() {
     var explanations = document.class('headers-wrapper').tags('p');
     var title = document.class('hero-title');
 
+    var footer = document.tag('footer');
+
     var opacities = [header, corner, image];
     var transformation = 'transform 0.8s ease, opacity 0.8s ease';
     var opacity = 'opacity 0.8s ease';
@@ -145,6 +150,9 @@ function Appearance() {
     setTimeout(function() {
       title.style.transition = transformation;
       toggle(title, titleClass, enter);
+
+      footer.style.transition = opacity;
+      toggle(footer, opacityClass, enter);
     }, 0);
 
     setTimeout(function() {
@@ -164,6 +172,6 @@ function Appearance() {
 
     setTimeout(function() {
       callback();
-    }, 800);
+    }, 1100);
   }
 }
