@@ -28,6 +28,11 @@ window.addEventListener('load', function() {
   var disappear = new Disappear();
   disappear.prepare();
 
+  var back = document.id('back-button');
+  back.addEventListener('click', function() {
+    console.log(document.referrer);
+  });
+
   encryptCorreu('email-link');
 
   window.addEventListener('resize', function() {
