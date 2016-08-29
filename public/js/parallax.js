@@ -65,6 +65,8 @@ function Parallax() {
       }
     }
 
+    if (quote === null) { return; }
+
     var positioning = positionOffset(quote) - 100;
     if (positioning <= offset && positioning + quote.clientHeight + height >= offset) {
       var value = (offset - positioning) * 100 / (height + quote.clientHeight);
