@@ -322,6 +322,46 @@
 #myself #back-button {
   display: none;
 }
+#loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: #191b1a;
+  z-index: 2;
+}
+#loader .percentage {
+  position: absolute;
+  top: 47%;
+  right: 15px;
+  transform: translateY(-50%);
+  font: 15px Inconsolata;
+  color: #fff;
+}
+#loader .bar {
+  position: absolute;
+  height: 2px;
+  top: 50%;
+  right: 100%;
+  left: 0%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+#loader .link-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0.2;
+}
+#loader .link-wrapper #email-link {
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+}
 #myself {
   position: fixed;
   overflow: hidden;

@@ -1,0 +1,40 @@
+#loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: background-color;
+  z-index: 2;
+}
+#loader .percentage {
+  position: absolute;
+  top: 47%;
+  right: 15px;
+  transform: translateY(-50%);
+  font: header-font;
+  color: text-color;
+}
+#loader .bar {
+  position: absolute;
+  height: 2px;
+  top: 50%;
+  right: 100%;
+  left: 0%;
+  transform: translateY(-50%);
+  background-color: text-color;
+}
+#loader .link-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0.2;
+}
+#loader .link-wrapper #email-link {
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+}

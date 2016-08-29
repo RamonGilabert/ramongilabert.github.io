@@ -37,15 +37,19 @@ function abs(number) {
 }
 
 function encryptCorreu(id) {
-  var email = document.id(id);
-  if (email !== null) {
-    email.addEventListener('click', function() {
-      var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
-      var subject = decode("Uryyb gurer! :)");
-      var reference = letter + '?subject=' + subject;
+  var emails = document.classes(id);
+  if (emails !== null) {
+    for (var i = 0; emails.length; i++) {
+      var email = emails[i];
+      
+      email.addEventListener('click', function() {
+        var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
+        var subject = decode("Uryyb gurer! :)");
+        var reference = letter + '?subject=' + subject;
 
-      email.href = reference;
-    });
+        email.href = reference;
+      });
+    }
   }
 }
 
