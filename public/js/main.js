@@ -31,6 +31,9 @@ window.addEventListener('load', function() {
   var parallax = new Parallax();
   parallax.prepare();
 
+  var loader = new Loader();
+  loader.prepare();
+
   var images = document.tags('img');
   for (var i = 0; i < images.length; i++) {
     images[i].addEventListener('dragstart', function() {
