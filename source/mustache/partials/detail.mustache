@@ -1,17 +1,17 @@
     <h1 id='page-title'>Ramon Gilabert</h1>
     {{> header }}
     <section class='hero'>
-      <figure></figure>
+      <figure class='loading-header'></figure>
       <div class='hero-overlay'></div>
       <div class='hero-text-wrapper'>
-        <h2 class='hero-title'>{{ title }}</h2>
+        <h2 class='hero-title loading-title'>{{ title }}</h2>
         <div class='headers-wrapper'>
           {{# headers }}
-          <p>{{{ title }}}</p>
+          <p class='loading-headers'>{{{ title }}}</p>
           {{/ headers }}
         </div>
       </div>
-      <div class='corner-glitch bottom-corner-glitch'></div>
+      <div class='corner-glitch bottom-corner-glitch loading-header'></div>
     </section>
     <div class='body-wrapper'>
       <section class='project'>

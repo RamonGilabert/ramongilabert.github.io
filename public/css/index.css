@@ -214,18 +214,20 @@
 #manifesto .loading-header {
   opacity: 0;
 }
+.detail .loading-title {
+  transform: translateY(-100%) !important;
+  opacity: 0;
+}
+.detail .loading-headers {
+  transform: translateY(300%) !important;
+  opacity: 0;
+}
+.detail .loading-header {
+  opacity: 0;
+}
 #manifesto .scroll-appearance {
   transform: translateY(100%);
   opacity: 0;
-}
-.detail .title {
-  transform: translateY(-100%) !important;
-}
-.detail .headers {
-  transform: translateY(100%) !important;
-}
-.detail .alpha {
-  opacity: 0 !important;
 }
 .detail header,
 #manifesto header,
