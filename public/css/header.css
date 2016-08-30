@@ -66,3 +66,25 @@
 #myself #back-button {
   display: none;
 }
+@media (max-width: minimum-width) {
+  .detail header,
+  #manifesto header,
+  #myself header {
+    width: 100vw;
+    min-width: 100px;
+    max-width: 100vw;
+  }
+  .detail .email-link-wrapper,
+  #manifesto .email-link-wrapper,
+  #myself .email-link-wrapper {
+    position: absolute;
+    margin-top: 32.5px;
+    transform: translate(50%, -50%);
+    right: 50%;
+    white-space: nowrap;
+  }
+  .detail .email-link-wrapper,
+  #manifesto .email-link-wrapper {
+    display: none;
+  }
+}

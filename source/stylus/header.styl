@@ -66,3 +66,30 @@
     display: none
   }
 }
+
+@media (max-width: minimum-width) {
+
+  .detail, #manifesto, #myself {
+
+    header {
+      width: 100vw
+      min-width: 100px
+      max-width: 100vw
+    }
+
+    .email-link-wrapper {
+      position: absolute
+      margin-top: 32.5px
+      transform: translate(50%, -50%)
+      right: 50%
+      white-space: nowrap
+    }
+  }
+
+  .detail, #manifesto {
+    
+    .email-link-wrapper {
+      display: none
+    }
+  }
+}

@@ -114,3 +114,11 @@
   display: inline-block;
   background-color: text-color;
 }
+@media (max-width: minimum-width) {
+  .disclosure {
+    display: none;
+  }
+  #dot-separator {
+    display: none;
+  }
+}
