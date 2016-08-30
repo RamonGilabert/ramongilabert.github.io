@@ -1029,7 +1029,7 @@
   transform-style: preserve-3d;
   transform: translateY(-50%);
   text-align: center;
-  transition: transform 0.1s ease;
+  transition: transform 0.2s ease;
 }
 .detail .hero .hero-text-wrapper h2 {
   font: 80px Brandon;
@@ -1116,7 +1116,7 @@
   position: relative;
   width: 100%;
   margin-bottom: 100px;
-  transition: transform 0.1s ease;
+  transition: transform 0.2s ease;
 }
 .detail .body-wrapper .quote {
   position: relative;
@@ -1130,7 +1130,7 @@
   right: auto;
   left: auto;
   margin: 0 auto;
-  transition: transform 0.1s ease;
+  transition: transform 0.2s ease;
 }
 .detail .body-wrapper .quote .wrapper img {
   position: absolute;
@@ -1185,6 +1185,13 @@
   .detail {
     width: 100%;
     min-width: 100%;
+  }
+  .detail .hero .hero-text-wrapper h2 {
+    font: 60px Brandon;
+    line-height: 70px;
+    margin-bottom: 25px;
+    width: 90%;
+    margin-left: 5%;
   }
   .detail .hero .hero-text-wrapper .headers-wrapper p {
     position: relative;

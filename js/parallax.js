@@ -64,14 +64,14 @@ function Parallax() {
   this.detail = function() {
     var headerText = document.class('hero-text-wrapper');
     var quote = document.class('quoter');
-    
+
     var images = document.classes('parallax');
 
     var height = window.innerHeight;
     var offset = window.pageYOffset;
 
     if (offset < height) {
-      var value = -50 + (offset * 150 / height);
+      var value = -50 + (offset * 100 / height);
       headerText.style.transform = 'translate3d(0, ' + value + '%, 0)';
     }
 
