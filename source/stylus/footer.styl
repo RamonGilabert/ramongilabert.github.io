@@ -86,28 +86,20 @@
       }
     }
 
-    #dribbble {
-      figure {
-        background-image: url(dribbble-icon)
-      }
+    #dribbble figure {
+      background-image: url(dribbble-icon)
     }
 
-    #github {
-      figure {
-        background-image: url(github-icon)
-      }
+    #github figure {
+      background-image: url(github-icon)
     }
 
-    #twitter {
-      figure {
-        background-image: url(twitter-icon)
-      }
+    #twitter figure {
+      background-image: url(twitter-icon)
     }
 
-    #resume {
-      figure {
-        background-image: url(monogram-icon)
-      }
+    #resume figure {
+      background-image: url(monogram-icon)
     }
   }
 
@@ -138,5 +130,78 @@
 
   #next-project:hover:before {
     left: 0%
+  }
+}
+
+@media (max-width: minimum-width) {
+
+  #footer {
+    width: 100vw
+    height: 100vh
+    min-width: 100vw
+
+    #social {
+      position: absolute
+      display: inline
+      margin-top: 26px
+      width: 100%
+      min-width: 100%
+      text-align: center
+
+      div {
+        display: block
+        margin-bottom: 20px
+
+        a {
+          margin = 25px
+
+          font: 15px Inconsolata
+          margin-right: margin
+          margin-left: margin
+          position: relative
+        }
+
+        figure {
+          size = 17px
+
+          display: inline
+          position: absolute
+          width: size
+          height: size
+          background-size: contain
+          background-repeat: no-repeat
+          margin-top: 1px
+        }
+      }
+    }
+
+    #next-project {
+      position: absolute
+      right: 30px
+      bottom: 25px
+      font: header-font
+      color: white
+      padding-right: 50px
+      padding-bottom: 7.5px
+    }
+
+    #next-project:after {
+      display: none
+    }
+
+    #next-project:before {
+      content: ''
+      position: absolute
+      background-color: text-color
+      height: glitch-size
+      bottom: 0%
+      right: 0%
+      left: 35%
+      transition: left glitch-transition
+    }
+
+    #next-project:hover:before {
+      left: 0%
+    }
   }
 }
