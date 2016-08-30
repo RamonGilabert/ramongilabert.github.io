@@ -276,9 +276,9 @@
   transform: translateY(-50%);
   right: 105px;
 }
-.detail #email-link,
-#manifesto #email-link,
-#myself #email-link {
+.detail .email,
+#manifesto .email,
+#myself .email {
   font: 15px Inconsolata;
 }
 .detail #header-glitches,
@@ -357,7 +357,7 @@
   text-align: center;
   opacity: 0.2;
 }
-#loader .link-wrapper #email-link {
+#loader .link-wrapper .email {
   left: 50%;
   transform: translateX(-50%);
   padding: 0;
@@ -900,6 +900,7 @@
 }
 .detail .body-wrapper .image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 .detail .body-wrapper img {
   position: relative;

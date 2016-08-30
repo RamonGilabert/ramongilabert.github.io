@@ -64,7 +64,7 @@ function Parallax() {
   this.detail = function() {
     var headerText = document.class('hero-text-wrapper');
     var images = document.classes('parallax');
-    var quote = document.class('quote');
+    var quote = document.class('quoter');
 
     var height = window.innerHeight;
     var offset = window.pageYOffset;

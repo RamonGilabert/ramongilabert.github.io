@@ -20,9 +20,9 @@
   transform: translateY(-50%);
   right: 105px;
 }
-.detail #email-link,
-#manifesto #email-link,
-#myself #email-link {
+.detail .email,
+#manifesto .email,
+#myself .email {
   font: header-font;
 }
 .detail #header-glitches,

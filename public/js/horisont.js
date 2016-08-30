@@ -38,18 +38,16 @@ function abs(number) {
 
 function encryptCorreu(id) {
   var emails = document.classes(id);
-  if (emails !== null) {
-    for (var i = 0; emails.length; i++) {
-      var email = emails[i];
-      
-      email.addEventListener('click', function() {
-        var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
-        var subject = decode("Uryyb gurer! :)");
-        var reference = letter + '?subject=' + subject;
+  for (var i = 0; i < emails.length; i++) {
+    var email = emails[i];
 
-        email.href = reference;
-      });
-    }
+    email.addEventListener('click', function() {
+      var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
+      var subject = decode("Uryyb gurer! :)");
+      var reference = letter + '?subject=' + subject;
+
+      window.location.href = reference;
+    });
   }
 }
 

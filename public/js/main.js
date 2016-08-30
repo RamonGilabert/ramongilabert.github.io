@@ -41,7 +41,7 @@ window.addEventListener('load', function() {
     });
   }
 
-  encryptCorreu('email-link');
+  encryptCorreu('email');
 
   window.addEventListener('resize', function() {
     separator.generate();
