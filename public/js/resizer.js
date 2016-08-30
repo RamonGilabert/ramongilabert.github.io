@@ -31,6 +31,7 @@ function Resizer() {
   }
 
   this.manifesto = function() {
+    if (window.innerWidth < 850) { return; }
     var halfWindow = window.innerWidth / 2;
     var referenceWidth = this.reference.offsetWidth / 2;
     var margin = 30;

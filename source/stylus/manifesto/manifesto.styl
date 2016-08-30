@@ -131,3 +131,128 @@
     margin-top: 10px
   }
 }
+
+@media (max-width: minimum-width) {
+
+  #manifesto {
+    width: 100vw
+    height: 100vh
+
+    .story {
+      position: relative
+      width: 100vw
+      height: height
+      min-width: minimum-width
+      min-height: minimum-height
+
+      .description {
+        position: absolute
+        top: 50%
+        left: 100px
+        transform: translate(0, -50%, 0)
+        transition: transition
+
+        figure {
+          position: absolute
+          background-image: url(s-logo)
+          background-size: contain
+          background-repeat: no-repeat
+          width: 100px
+          height: 150px
+          left: 250px
+          opacity: 0.025
+        }
+      }
+    }
+
+    .manifesto {
+      position: relative
+      width: 100vw
+      height: height
+      min-width: minimum-width
+      min-height: minimum-height
+
+      .description {
+        position: absolute
+        top: 50%
+        right: 100px
+        transform: translate(0, -50%, 0)
+        transition: transition
+
+        h2 {
+          text-align: right
+        }
+
+        p {
+          text-align: right
+        }
+
+        figure {
+          position: absolute
+          background-image: url(m-logo)
+          background-size: contain
+          background-repeat: no-repeat
+          width: 165px
+          height: 150px
+          right: 270px
+          opacity: 0.025
+        }
+      }
+
+      .manifesto-horizontal-glitch {
+        position: absolute
+        transform: rotateY(180deg)
+        top: 150px
+        left: 100px
+      }
+    }
+
+    .awards {
+      position: relative
+      width: 100vw
+      height: height
+      min-width: minimum-width
+      min-height: minimum-height
+
+      .description {
+        position: absolute
+        top: 50%
+        left: 100px
+        transform: translate(0, -50%, 0)
+        transition: transition
+
+        figure {
+          position: absolute
+          background-image: url(a-logo)
+          background-size: contain
+          background-repeat: no-repeat
+          width: 125px
+          height: 135px
+          left: 270px
+          opacity: 0.025
+        }
+      }
+
+      .awards-horizontal-glitch {
+        position: absolute
+        top: 375px
+        right: 100px
+        width: 20px
+        height: 70px
+      }
+    }
+
+    .section-description h2 {
+      font: 34px Brandon
+      color: text-color
+      text-transform: uppercase
+    }
+
+    .section-description p {
+      font: 16px Inconsolata
+      line-height: 26px
+      width: 650px
+      margin-top: 10px
+    }
+  }
+}

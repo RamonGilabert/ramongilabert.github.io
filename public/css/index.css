@@ -707,12 +707,12 @@
   top: 150px !important;
 }
 #manifesto #hero {
+  position: relative;
   width: 100%;
   height: 100%;
   min-height: 600px;
   min-width: 850px;
   background-color: #191b1a;
-  position: relative;
 }
 #manifesto #hero-image-wrapper {
   position: relative;
@@ -753,6 +753,44 @@
   font: 14px Inconsolata;
   bottom: 42.5px;
   left: 80px;
+}
+@media (max-width: 850px) {
+  #manifesto #hero {
+    width: 100vw;
+    height: 100vh;
+    min-height: 510px;
+    min-width: 100vw;
+  }
+  #manifesto #hero-image-wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+  #manifesto #hero-image {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 50%;
+    width: 100%;
+    transform: translateX(0%);
+  }
+  #manifesto #hero-image img {
+    position: absolute;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #manifesto #hero-description {
+    width: 100%;
+    top: auto;
+    left: 0%;
+    right: 0%;
+    bottom: 15%;
+    margin: 0 auto;
+    transform: translate(0%);
+    text-align: center;
+  }
 }
 #manifesto p {
   -webkit-touch-callout: text;
@@ -861,6 +899,114 @@
   line-height: 26px;
   width: 650px;
   margin-top: 10px;
+}
+@media (max-width: 850px) {
+  #manifesto {
+    width: 100vw;
+    height: 100vh;
+  }
+  #manifesto .story {
+    position: relative;
+    width: 100vw;
+    height: height;
+    min-width: 850px;
+    min-height: 600px;
+  }
+  #manifesto .story .description {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translate(0, -50%, 0);
+    transition: transition;
+  }
+  #manifesto .story .description figure {
+    position: absolute;
+    background-image: url("../images/manifesto/s-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 150px;
+    left: 250px;
+    opacity: 0.025;
+  }
+  #manifesto .manifesto {
+    position: relative;
+    width: 100vw;
+    height: height;
+    min-width: 850px;
+    min-height: 600px;
+  }
+  #manifesto .manifesto .description {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translate(0, -50%, 0);
+    transition: transition;
+  }
+  #manifesto .manifesto .description h2 {
+    text-align: right;
+  }
+  #manifesto .manifesto .description p {
+    text-align: right;
+  }
+  #manifesto .manifesto .description figure {
+    position: absolute;
+    background-image: url("../images/manifesto/m-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 165px;
+    height: 150px;
+    right: 270px;
+    opacity: 0.025;
+  }
+  #manifesto .manifesto .manifesto-horizontal-glitch {
+    position: absolute;
+    transform: rotateY(180deg);
+    top: 150px;
+    left: 100px;
+  }
+  #manifesto .awards {
+    position: relative;
+    width: 100vw;
+    height: height;
+    min-width: 850px;
+    min-height: 600px;
+  }
+  #manifesto .awards .description {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translate(0, -50%, 0);
+    transition: transition;
+  }
+  #manifesto .awards .description figure {
+    position: absolute;
+    background-image: url("../images/manifesto/a-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 135px;
+    left: 270px;
+    opacity: 0.025;
+  }
+  #manifesto .awards .awards-horizontal-glitch {
+    position: absolute;
+    top: 375px;
+    right: 100px;
+    width: 20px;
+    height: 70px;
+  }
+  #manifesto .section-description h2 {
+    font: 34px Brandon;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  #manifesto .section-description p {
+    font: 16px Inconsolata;
+    line-height: 26px;
+    width: 650px;
+    margin-top: 10px;
+  }
 }
 .detail {
   width: 100%;
