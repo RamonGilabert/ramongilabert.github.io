@@ -59,10 +59,10 @@
     #selected-wrapper {
       position: absolute
       overflow: hidden
-      clip: rect(auto, auto, auto, auto)
+      clip: rect(0, auto, auto, 0)
       opacity: disabled-text-opacity
       transform: rotate(90deg)
-      transition: clip glitch-transition
+      transition: clip glitch-transition, opacity glitch-transition
 
       p {
         font: glitch-font
@@ -186,7 +186,7 @@
     }
 
     #more, h2, p {
-      top: auto
+      top: 0px
       left: -75px
       opacity: 0
       transform: translate3d(0, 0, 0)
