@@ -46,6 +46,7 @@ window.addEventListener('load', function() {
   window.addEventListener('resize', function() {
     separator.generate();
     resizer.method();
+    positionIndicator();
   });
 
   window.addEventListener('scroll', function() {
