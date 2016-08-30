@@ -109,7 +109,7 @@
   height: 11px;
   bottom: 20px;
   left: 27px;
-  min-width: 900px;
+  min-width: 850px;
   opacity: 0.5;
 }
 #dot-separator div {
@@ -125,7 +125,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  min-width: 900px;
+  min-width: 850px;
 }
 #footer .wrapper {
   position: absolute;
@@ -260,7 +260,7 @@
   position: fixed;
   width: 100%;
   height: 60px;
-  min-width: 900px;
+  min-width: 850px;
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -365,13 +365,13 @@
 #myself {
   position: fixed;
   overflow: hidden;
-  min-width: 900px;
+  min-width: 850px;
   min-height: 600px;
 }
 #myself #sections {
   width: 100%;
   height: 100%;
-  min-width: 900px;
+  min-width: 850px;
   min-height: 100%;
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
@@ -460,7 +460,7 @@
 #myself section {
   width: 100%;
   height: 100%;
-  min-width: 900px;
+  min-width: 850px;
   min-height: 100%;
   position: relative;
 }
@@ -608,6 +608,56 @@
 #myself:-webkit-scrollbar {
   width: 0;
 }
+@media (max-width: 850px) {
+  #myself {
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  #myself #sections {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #myself section {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #myself section .wrapper {
+    position: absolute;
+    width: 85%;
+    top: 47.5%;
+    left: 10%;
+  }
+  #myself #lights .wrapper,
+  #myself #branding .wrapper {
+    left: auto;
+    right: 10%;
+  }
+  #myself nav {
+    display: none;
+  }
+  #myself #triangle {
+    display: none;
+  }
+  #myself #indicator {
+    display: none;
+  }
+  #myself #selected-work {
+    display: none;
+  }
+  #myself #details,
+  #myself nav,
+  #myself header,
+  #myself figure {
+    opacity: 0;
+  }
+}
 #myself .selected-work-scroll {
   bottom: 105px !important;
 }
@@ -630,7 +680,7 @@
   width: 100%;
   height: 100%;
   min-height: 600px;
-  min-width: 900px;
+  min-width: 850px;
   background-color: #191b1a;
   position: relative;
 }
@@ -684,7 +734,7 @@
   position: relative;
   width: 100vw;
   height: 70vh;
-  min-width: 900px;
+  min-width: 850px;
   min-height: 420px;
 }
 #manifesto .story .description {
@@ -708,7 +758,7 @@
   position: relative;
   width: 100vw;
   height: 70vh;
-  min-width: 900px;
+  min-width: 850px;
   min-height: 420px;
 }
 #manifesto .manifesto .description {
@@ -744,7 +794,7 @@
   position: relative;
   width: 100vw;
   height: 70vh;
-  min-width: 900px;
+  min-width: 850px;
   min-height: 420px;
 }
 #manifesto .awards .description {
@@ -784,7 +834,7 @@
 }
 .detail {
   width: 100%;
-  min-width: 900px;
+  min-width: 850px;
 }
 .detail .hero {
   position: relative;
@@ -843,7 +893,7 @@
   width: 100%;
   height: auto;
   max-width: 1000px;
-  min-width: 900px;
+  min-width: 850px;
   left: 50%;
   transform: translateX(-50%);
 }

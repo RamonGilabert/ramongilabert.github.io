@@ -232,10 +232,10 @@ window.addEventListener('load', function() {
         var delta = initial - touches[0].pageY;
 
         if (delta >= 50) {
-          var event = new Event('swipeUp');
+          var event = new Event('swipeDown');
           document.dispatchEvent(event);
         } else if (delta <= -50) {
-          var event = new Event('swipeDown');
+          var event = new Event('swipeUp');
           document.dispatchEvent(event);
         }
 
