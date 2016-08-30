@@ -1210,6 +1210,7 @@
     text-align: center;
     margin-top: 0px;
     margin-bottom: 100px;
+    z-index: 2;
   }
   .detail .body-wrapper .quote .wrapper {
     margin-top: 50px;
