@@ -46,8 +46,9 @@ window.addEventListener('load', function() {
   window.addEventListener('resize', function() {
     separator.generate();
     resizer.method();
-    positionIndicator();
   });
+
+  var timer = new Date().getTime();
 
   window.addEventListener('scroll', function() {
     if (window.pageYOffset <= window.innerHeight * 0.25) {
@@ -60,14 +61,18 @@ window.addEventListener('load', function() {
         }
       }
     } else {
-      requestAnimationFrame(function() {
+      window.requestAnimationFrame(function() {
         scroller.method();
       });
     }
 
-    requestAnimationFrame(function() {
-      parallax.method();
-    });
+    setTimeout(function() {
+      var now = new Date().getTime();
+      if (now - timer > 10) {
+        timer = now;
+        window.requestAnimationFrame(parallax.method);
+      }
+    }, 0);
   });
 });
 

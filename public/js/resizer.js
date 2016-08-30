@@ -31,7 +31,7 @@ function Resizer() {
   }
 
   this.manifesto = function() {
-    if (window.innerWidth < 850) {
+    if (window.innerWidth < 800) {
       this.movable.style.left = '0';
       return;
     }

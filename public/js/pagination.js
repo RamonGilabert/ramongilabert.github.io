@@ -36,6 +36,7 @@ window.addEventListener('load', function() {
 
   window.addEventListener('resize', function() {
     resize();
+    positionIndicator();
   });
 
   window.addEventListener('focus', function() {

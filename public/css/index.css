@@ -109,7 +109,7 @@
   height: 11px;
   bottom: 20px;
   left: 27px;
-  min-width: 850px;
+  min-width: 800px;
   opacity: 0.5;
 }
 #dot-separator div {
@@ -121,7 +121,7 @@
   display: inline-block;
   background-color: #fff;
 }
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .disclosure {
     display: none;
   }
@@ -133,7 +133,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  min-width: 850px;
+  min-width: 800px;
 }
 #footer .wrapper {
   position: absolute;
@@ -236,7 +236,7 @@
 #footer #next-project:hover:before {
   left: 0%;
 }
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   #footer {
     width: 100vw;
     height: 100vh;
@@ -308,7 +308,7 @@
   position: fixed;
   width: 100%;
   height: 60px;
-  min-width: 850px;
+  min-width: 800px;
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -370,7 +370,7 @@
 #myself #back-button {
   display: none;
 }
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .detail header,
   #manifesto header,
   #myself header {
@@ -435,13 +435,13 @@
 #myself {
   position: fixed;
   overflow: hidden;
-  min-width: 850px;
+  min-width: 800px;
   min-height: 600px;
 }
 #myself #sections {
   width: 100%;
   height: 100%;
-  min-width: 850px;
+  min-width: 800px;
   min-height: 100%;
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
@@ -530,7 +530,7 @@
 #myself section {
   width: 100%;
   height: 100%;
-  min-width: 850px;
+  min-width: 800px;
   min-height: 100%;
   position: relative;
 }
@@ -680,7 +680,7 @@
 #myself:-webkit-scrollbar {
   width: 0;
 }
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   #myself {
     position: fixed;
     overflow: hidden;
@@ -761,7 +761,7 @@
   width: 100%;
   height: 100%;
   min-height: 600px;
-  min-width: 850px;
+  min-width: 800px;
   background-color: #191b1a;
 }
 #manifesto #hero-image-wrapper {
@@ -804,7 +804,7 @@
   bottom: 42.5px;
   left: 80px;
 }
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   #manifesto #hero {
     width: 100vw;
     height: 100vh;
@@ -854,7 +854,7 @@
   position: relative;
   width: 100vw;
   height: 70vh;
-  min-width: 850px;
+  min-width: 800px;
   min-height: 420px;
 }
 #manifesto .story .description {
@@ -933,7 +933,7 @@
   width: 650px;
   margin-top: 10px;
 }
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   #manifesto .story,
   #manifesto .manifesto,
   #manifesto .awards {
@@ -993,7 +993,7 @@
 }
 .detail {
   width: 100%;
-  min-width: 850px;
+  min-width: 800px;
 }
 .detail .hero {
   position: relative;
@@ -1029,6 +1029,7 @@
   transform-style: preserve-3d;
   transform: translateY(-50%);
   text-align: center;
+  transition: transform 0.2s ease;
 }
 .detail .hero .hero-text-wrapper h2 {
   font: 80px Brandon;
@@ -1052,7 +1053,7 @@
   width: 100%;
   height: auto;
   max-width: 1000px;
-  min-width: 850px;
+  min-width: 800px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1115,6 +1116,7 @@
   position: relative;
   width: 100%;
   margin-bottom: 100px;
+  transition: transform 0.2s ease;
 }
 .detail .body-wrapper .quote {
   position: relative;
@@ -1128,6 +1130,7 @@
   right: auto;
   left: auto;
   margin: 0 auto;
+  transition: transform 0.2s ease;
 }
 .detail .body-wrapper .quote .wrapper img {
   position: absolute;
@@ -1178,7 +1181,7 @@
 #branding figure {
   background-image: url("../images/sections/branding.jpg");
 }
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .detail {
     width: 100%;
     min-width: 100%;
