@@ -798,7 +798,9 @@
   -moz-user-select: text;
   -ms-user-select: text;
 }
-#manifesto .story {
+#manifesto .story,
+#manifesto .manifesto,
+#manifesto .awards {
   position: relative;
   width: 100vw;
   height: 70vh;
@@ -822,24 +824,12 @@
   left: 250px;
   opacity: 0.025;
 }
-#manifesto .manifesto {
-  position: relative;
-  width: 100vw;
-  height: 70vh;
-  min-width: 850px;
-  min-height: 420px;
-}
 #manifesto .manifesto .description {
   position: absolute;
   top: 50%;
   right: 100px;
-  transform: translate(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
   transition: transform 1s ease, opacity 1s ease;
-}
-#manifesto .manifesto .description h2 {
-  text-align: right;
-}
-#manifesto .manifesto .description p {
   text-align: right;
 }
 #manifesto .manifesto .description figure {
@@ -858,18 +848,11 @@
   top: 150px;
   left: 100px;
 }
-#manifesto .awards {
-  position: relative;
-  width: 100vw;
-  height: 70vh;
-  min-width: 850px;
-  min-height: 420px;
-}
 #manifesto .awards .description {
   position: absolute;
   top: 50%;
   left: 100px;
-  transform: translate(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
   transition: transform 1s ease, opacity 1s ease;
 }
 #manifesto .awards .description figure {

@@ -14,12 +14,15 @@
     -ms-user-select: text
   }
 
-  .story {
+  .story, .manifesto, .awards {
     position: relative
     width: 100vw
     height: height
     min-width: minimum-width
     min-height: minimum-height
+  }
+
+  .story {
 
     .description {
       position: absolute
@@ -42,26 +45,14 @@
   }
 
   .manifesto {
-    position: relative
-    width: 100vw
-    height: height
-    min-width: minimum-width
-    min-height: minimum-height
 
     .description {
       position: absolute
       top: 50%
       right: 100px
-      transform: translate(0, -50%, 0)
+      transform: translate3d(0, -50%, 0)
       transition: transition
-
-      h2 {
-        text-align: right
-      }
-
-      p {
-        text-align: right
-      }
+      text-align: right
 
       figure {
         position: absolute
@@ -84,17 +75,12 @@
   }
 
   .awards {
-    position: relative
-    width: 100vw
-    height: height
-    min-width: minimum-width
-    min-height: minimum-height
 
     .description {
       position: absolute
       top: 50%
       left: 100px
-      transform: translate(0, -50%, 0)
+      transform: translate3d(0, -50%, 0)
       transition: transition
 
       figure {
