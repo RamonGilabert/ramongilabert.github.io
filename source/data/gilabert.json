@@ -4,28 +4,28 @@
       "kind" : "manifesto",
       "title" : "Designer & Developer",
       "subtitle" : "I’m the developer that makes you <strike>hesitate</strike>. The designer that makes you <strike>wonder</strike>. Welcome to my site. I’m Ramon. It’s nice to have you here.",
-      "link" : "manifesto.html"
+      "link" : "manifesto"
     },
     {
       "kind" : "lights",
       "title" : "Lights",
       "span" : "Role",
       "subtitle" : ". Electronics, iOS, Industrial &amp; Product Design, Backend, Web_",
-      "link" : "lights.html"
+      "link" : "lights"
     },
     {
       "kind" : "varner",
       "title" : "Cubus Friends",
       "span" : "Role",
       "subtitle" : ". iOS, Concept Designer, Prototype Designer, Product Owner_",
-      "link" : "friends.html"
+      "link" : "friends"
     },
     {
       "kind" : "branding",
       "title" : "Personal Branding",
       "span" : "Role",
       "subtitle" : ". Development &amp; everything related to the design of it_",
-      "link" : "branding.html"
+      "link" : "branding"
     }
   ],
 
@@ -63,7 +63,7 @@
       }
     ],
     "next" : {
-      "link" : "lights.html"
+      "link" : "lights"
     }
   },
 
@@ -102,7 +102,7 @@
       "text" : "My biggest side project up to date. I was asked to think creatively. So I went nuts. After 7 months working every afternoon after work. I delivered this award winner thesis."
     },
     "next" : {
-      "link" : "friends.html"
+      "link" : "friends"
     }
   },
 
@@ -132,7 +132,7 @@
       }
     ],
     "next" : {
-      "link" : "branding.html"
+      "link" : "branding"
     }
   },
 
@@ -168,7 +168,7 @@
       "text" : "After nights working, sketches, prints papers scratched and lots of hours of watching old TVs and failing printers I found the style that now defines me. It’s been a long process, but I’m super satisfied with the result of it."
     },
     "next" : {
-      "link" : "manifesto.html"
+      "link" : "manifesto"
     }
   }
 }

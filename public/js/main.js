@@ -161,7 +161,7 @@ function Disappear() {
                 history.back();
                 return;
               } else {
-                href = 'index.html';
+                href = 'index';
               }
             }
 
