@@ -14,8 +14,6 @@ prepareDocument();
 
 window.addEventListener('load', function() {
 
-  appearance.run();
-
   var separator = new Separator('dot-separator');
   separator.generate();
 
@@ -32,7 +30,9 @@ window.addEventListener('load', function() {
   parallax.prepare();
 
   var loader = new Loader();
-  loader.prepare();
+  loader.preload(function() {
+    appearance.run();
+  });
 
   var images = document.tags('img');
   for (var i = 0; i < images.length; i++) {
