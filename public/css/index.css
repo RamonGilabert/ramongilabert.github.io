@@ -562,6 +562,8 @@
   font: 55px Brandon;
   text-transform: uppercase;
   color: #fff;
+  line-height: 55px;
+  margin-bottom: 10px;
 }
 #myself section p {
   position: relative;
@@ -704,6 +706,13 @@
     width: 85%;
     top: 47.5%;
     left: 10%;
+  }
+  #myself section .wrapper h2 {
+    font: 50px Brandon;
+    line-height: 50px;
+  }
+  #myself section .wrapper p {
+    line-height: 24px;
   }
   #myself #lights .wrapper,
   #myself #branding .wrapper {
