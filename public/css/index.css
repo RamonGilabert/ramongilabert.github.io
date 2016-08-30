@@ -242,6 +242,11 @@
     height: 100vh;
     min-width: 100vw;
   }
+  #footer .wrapper {
+    width: 85%;
+    top: 35%;
+    left: 7.5%;
+  }
   #footer #social {
     position: absolute;
     display: inline;
@@ -253,6 +258,7 @@
   #footer #social div {
     display: block;
     margin-bottom: 20px;
+    margin-left: 10px;
   }
   #footer #social div a {
     font: 15px Inconsolata;
@@ -268,31 +274,6 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 1px;
-  }
-  #footer #next-project {
-    position: absolute;
-    right: 30px;
-    bottom: 25px;
-    font: 15px Inconsolata;
-    color: #fff;
-    padding-right: 50px;
-    padding-bottom: 7.5px;
-  }
-  #footer #next-project:after {
-    display: none;
-  }
-  #footer #next-project:before {
-    content: '';
-    position: absolute;
-    background-color: #fff;
-    height: 1px;
-    bottom: 0%;
-    right: 0%;
-    left: 35%;
-    transition: left 0.6s ease;
-  }
-  #footer #next-project:hover:before {
-    left: 0%;
   }
 }
 #manifesto .loading-hero-image {
@@ -870,7 +851,7 @@
   position: absolute;
   top: 50%;
   left: 100px;
-  transform: translate3d(0, -50%, 0);
+  transform: translate(0, -50%, 0);
   transition: transform 1s ease, opacity 1s ease;
 }
 #manifesto .story .description figure {
@@ -887,7 +868,7 @@
   position: absolute;
   top: 50%;
   right: 100px;
-  transform: translate3d(0, -50%, 0);
+  transform: translate(0, -50%, 0);
   transition: transform 1s ease, opacity 1s ease;
   text-align: right;
 }
@@ -911,7 +892,7 @@
   position: absolute;
   top: 50%;
   left: 100px;
-  transform: translate3d(0, -50%, 0);
+  transform: translate(0, -50%, 0);
   transition: transform 1s ease, opacity 1s ease;
 }
 #manifesto .awards .description figure {
@@ -1186,6 +1167,35 @@
 }
 #branding figure {
   background-image: url("../images/sections/branding.jpg");
+}
+@media (max-width: 850px) {
+  .detail {
+    width: 100%;
+    min-width: 100%;
+  }
+  .detail .hero .hero-text-wrapper .headers-wrapper p {
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  .detail .body-wrapper {
+    min-width: 100%;
+  }
+  .detail .body-wrapper .project-wrapper {
+    margin-top: 100px;
+  }
+  .detail .body-wrapper .quote {
+    position: relative;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  .detail .body-wrapper .quote .wrapper {
+    margin-top: 50px;
+    width: 450px;
+    max-width: 80%;
+  }
 }
 *,
 html {

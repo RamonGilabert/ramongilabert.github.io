@@ -221,3 +221,48 @@
 #branding figure {
   background-image: url(branding-image)
 }
+
+@media (max-width: minimum-width) {
+
+  .detail {
+    width: 100%
+    min-width: 100%
+
+    .hero {
+
+      .hero-text-wrapper {
+
+        .headers-wrapper {
+
+          p {
+            position: relative
+            display: block
+            margin-top: 5px
+            margin-bottom: 20px
+          }
+        }
+      }
+    }
+
+    .body-wrapper {
+      min-width: 100%
+
+      .project-wrapper {
+        margin-top: 100px
+      }
+
+      .quote {
+        position: relative
+        text-align: center
+        margin-top: 0px
+        margin-bottom: 100px
+
+        .wrapper {
+          margin-top: 50px
+          width: 450px
+          max-width: 80%
+        }
+      }
+    }
+  }
+}
