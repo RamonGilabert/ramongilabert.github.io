@@ -107,7 +107,7 @@ function Loader() {
       setTimeout(function() {
         page.style.display = 'none';
 
-        setTimeout(function() { callback(); }, 200);
+        setTimeout(function() { callback(); }, animate ? 200 : 0);
       }, animate ? 400 : 0);
     }
 
