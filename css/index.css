@@ -858,9 +858,13 @@
 #manifesto .awards {
   position: relative;
   width: 100vw;
+  max-width: 1000px;
   height: 70vh;
   min-width: 800px;
   min-height: 420px;
+  left: auto;
+  right: auto;
+  margin: 0 auto;
 }
 #manifesto .story .description {
   position: absolute;
