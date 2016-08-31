@@ -38,3 +38,8 @@
   transform: translateX(-50%);
   padding: 0;
 }
+@media (max-width: minimum-width) {
+  #loader .link-wrapper {
+    display: none;
+  }
+}
