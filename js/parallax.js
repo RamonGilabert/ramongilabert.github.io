@@ -89,7 +89,7 @@ function Parallax() {
 
     var positioning = positionOffset(quote) - 100;
     if (positioning <= offset && positioning + quote.clientHeight + height >= offset) {
-      var value = (offset - positioning) * 100 / (height + quote.clientHeight);
+      var value = (offset - positioning) * 50 / (height + quote.clientHeight);
       quote.style.transform = 'translate3d(0, ' + value + '%, 0)';
     }
   }
