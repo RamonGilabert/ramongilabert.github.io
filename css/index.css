@@ -1076,7 +1076,7 @@
   left: auto;
   margin: 0 auto;
   margin-top: 160px;
-  margin-bottom: 190px;
+  margin-bottom: 300px;
 }
 .detail .body-wrapper .project-wrapper h3 {
   font: 34px Brandon;
@@ -1133,7 +1133,7 @@
 .detail .body-wrapper .quote {
   position: relative;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 .detail .body-wrapper .quote .wrapper {
