@@ -13,12 +13,6 @@ function Parallax() {
 
   this.prepare = function() {
     if (isDetail()) {
-      this.headerText = document.class('hero-text-wrapper');
-      this.quote = document.class('quoter');
-
-      this.figure = document.class('hero').tag('figure');
-
-      this.images = document.classes('parallax');
       this.method = this.detail.bind(this);
 
       var containers = document.classes('image-wrapper');
@@ -32,9 +26,9 @@ function Parallax() {
         if (exists('lights')) {
           source = './images/details/lights/parallax/first.png';
           width = '55%';
-          left = '14%';
+          top = '-15px';
           right = 'auto';
-          top = '0px';
+          left = '14%';
           position = 0;
           alt = 'Lights Starting screen detail';
           title = 'Lights Start';
@@ -78,6 +72,11 @@ function Parallax() {
 
         containers[position].appendChild(image);
       }
+
+      this.images = document.classes('parallax');
+      this.figure = document.class('hero').tag('figure');
+      this.headerText = document.class('hero-text-wrapper');
+      this.quote = document.class('quoter');
     }
   }
 
@@ -94,7 +93,7 @@ function Parallax() {
       // this.figure.style.backgroundPosition = '50% ' + background + '%';
     }
 
-    if (self.quote !== undefined) {
+    if (this.quote !== undefined) {
       var positioning = positionOffset(this.quote) - 100;
       if (positioning <= offset && positioning + this.quote.clientHeight + height >= offset) {
         var value = (offset - positioning) * 50 / (height + this.quote.clientHeight);
@@ -103,7 +102,7 @@ function Parallax() {
     }
 
     for (var i = 0; i < this.images.length; i++) {
-      var image = images[i];
+      var image = this.images[i];
       var positioning = positionOffset(image);
 
       if (positioning <= offset && positioning + image.clientHeight + height >= offset) {
