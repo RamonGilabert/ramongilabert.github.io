@@ -1012,21 +1012,22 @@
   width: 100%;
   height: 115%;
   top: -15vh;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
 }
 .detail .hero .hero-overlay,
 .detail .hero figure {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 50%;
   width: 100%;
   height: 100%;
   min-height: 100%;
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
-  transform-style: preserve-3d;
 }
 .detail .hero figure {
-  background-attachment: fixed;
+  transition: background-position 0.1s ease;
 }
 .detail .hero .hero-overlay {
   position: absolute;
@@ -1041,7 +1042,7 @@
   transform-style: preserve-3d;
   transform: translateY(-50%);
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 .detail .hero .hero-text-wrapper h2 {
   font: 80px Brandon;
@@ -1128,7 +1129,7 @@
   position: relative;
   width: 100%;
   margin-bottom: 100px;
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 .detail .body-wrapper .quote {
   position: relative;
@@ -1142,7 +1143,7 @@
   right: auto;
   left: auto;
   margin: 0 auto;
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 .detail .body-wrapper .quote .wrapper img {
   position: absolute;

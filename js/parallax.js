@@ -5,11 +5,21 @@
 function Parallax() {
 
   this.elements = [];
+  this.images = [];
   this.method = empty;
+  this.headerText = '';
+  this.quote = '';
+  this.figure = '';
 
   this.prepare = function() {
     if (isDetail()) {
-      this.method = this.detail;
+      this.headerText = document.class('hero-text-wrapper');
+      this.quote = document.class('quoter');
+
+      this.figure = document.class('hero').tag('figure');
+
+      this.images = document.classes('parallax');
+      this.method = this.detail.bind(this);
 
       var containers = document.classes('image-wrapper');
       var times = exists('lights') ? 2 : 1;
@@ -72,20 +82,27 @@ function Parallax() {
   }
 
   this.detail = function() {
-    var headerText = document.class('hero-text-wrapper');
-    var quote = document.class('quoter');
-
-    var images = document.classes('parallax');
-
     var height = window.innerHeight;
     var offset = window.pageYOffset;
 
     if (offset < height) {
       var value = -50 + (offset * 100 / height);
-      headerText.style.transform = 'translate3d(0, ' + value + '%, 0)';
+      this.headerText.style.transform = 'translate3d(0, ' + value + '%, 0)';
+
+      // TODO: Uncomment if it applies.
+      // var background = 50 - 100 * offset / height;
+      // this.figure.style.backgroundPosition = '50% ' + background + '%';
     }
 
-    for (var i = 0; i < images.length; i++) {
+    if (self.quote !== undefined) {
+      var positioning = positionOffset(this.quote) - 100;
+      if (positioning <= offset && positioning + this.quote.clientHeight + height >= offset) {
+        var value = (offset - positioning) * 50 / (height + this.quote.clientHeight);
+        this.quote.style.transform = 'translate3d(0, ' + value + '%, 0)';
+      }
+    }
+
+    for (var i = 0; i < this.images.length; i++) {
       var image = images[i];
       var positioning = positionOffset(image);
 
@@ -93,14 +110,6 @@ function Parallax() {
         var value = (offset - positioning) * 20 / (height + image.clientHeight);
         image.style.transform = 'translate3d(0, ' + value + '%, 0)';
       }
-    }
-
-    if (quote === undefined) { return; }
-
-    var positioning = positionOffset(quote) - 100;
-    if (positioning <= offset && positioning + quote.clientHeight + height >= offset) {
-      var value = (offset - positioning) * 50 / (height + quote.clientHeight);
-      quote.style.transform = 'translate3d(0, ' + value + '%, 0)';
     }
   }
 }

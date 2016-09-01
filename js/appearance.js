@@ -158,9 +158,9 @@ function Appearance() {
     }, 0);
 
     setTimeout(function() {
-      image.style.transition = opacity;
+      image.style.transition = opacity + ', background-position 0.1s ease';
       toggle(image, opacityClass, enter);
-    }, 400);
+    }, 600);
 
     iterate(images, 0, function(component) {
       component.style.transition = enter ? '' : transformation;
@@ -173,7 +173,7 @@ function Appearance() {
       toggle(component, headerClass, enter);
     });
 
-    iterate(opacities, 600, function(component) {
+    iterate(opacities, 850, function(component) {
       component.style.transition = opacity;
       toggle(component, opacityClass, enter);
     });
