@@ -25,7 +25,8 @@
       </section>
       <section class='images'>
         {{# images }}
-        <div class='image-wrapper'><img src='{{ path }}' /></div>
+        <div class='image-wrapper'><img src='{{ path }}'
+          alt='{{ description }}' title='{{ title }}' /></div>
         {{/ images }}
       </section>
       {{# quote? }}

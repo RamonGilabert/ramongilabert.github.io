@@ -83,19 +83,29 @@
     "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application or one microcontroller for the light are some of the components that were born and developed by me.",
     "images" : [
       {
-        "path" : "./images/details/lights/first.jpg"
+        "path" : "./images/details/lights/first.jpg",
+        "description" : "Lights Starting screen detail",
+        "title" : "Lights Start"
       },
       {
-        "path" : "./images/details/lights/second.jpg"
+        "path" : "./images/details/lights/second.jpg",
+        "description" : "Lights Editing screen detail",
+        "title" : "Lights Editing"
       },
       {
-        "path" : "./images/details/lights/third.jpg"
+        "path" : "./images/details/lights/third.jpg",
+        "description" : "Lights Paired screen detail",
+        "title" : "Lights Paired"
       },
       {
-        "path" : "./images/details/lights/fourth.jpg"
+        "path" : "./images/details/lights/fourth.jpg",
+        "description" : "Lights 3D design of the lamp",
+        "title" : "Lights 3D Lamp"
       },
       {
-        "path" : "./images/details/lights/fifth.jpg"
+        "path" : "./images/details/lights/fifth.jpg",
+        "description" : "Lights app screens",
+        "title" : "Lights App"
       }
     ],
     "quote?" : {
@@ -122,13 +132,19 @@
     "project" : "Work done at and with Hyper (Oslo) for one of the biggest retail stores in Norway. Concept and iOS app done for the costumers of the brand, in order for them to get more involved in the day to day of the big company.",
     "images" : [
       {
-        "path" : "./images/details/friends/first.jpg"
+        "path" : "./images/details/friends/first.jpg",
+        "description" : "Member Card detail of Cubus Friends",
+        "title" : "Member Card"
       },
       {
-        "path" : "./images/details/friends/second.jpg"
+        "path" : "./images/details/friends/second.jpg",
+        "description" : "Bonus Checks and coupons of the app",
+        "title" : "Bonus Checks"
       },
       {
-        "path" : "./images/details/friends/third.jpg"
+        "path" : "./images/details/friends/third.jpg",
+        "description" : "Different screens of the app",
+        "title" : "App details"
       }
     ],
     "next" : {
@@ -152,16 +168,24 @@
     "project" : "My most personal project up to date. Working against the clock to perform the design, photography, concept, development and testing to release one of the projects that has guided me to my style like no other.",
     "images" : [
       {
-        "path" : "./images/details/branding/first.jpg"
+        "path" : "./images/details/branding/first.jpg",
+        "description" : "Logotype of Ramon Gilabert",
+        "title" : "Logotype"
       },
       {
-        "path" : "./images/details/branding/second.jpg"
+        "path" : "./images/details/branding/second.jpg",
+        "description" : "Business cards of Ramon Gilabert",
+        "title" : "Business Card"
       },
       {
-        "path" : "./images/details/branding/third.jpg"
+        "path" : "./images/details/branding/third.jpg",
+        "description" : "Resumé of Ramon Gilabert",
+        "title" : "Resumé"
       },
       {
-        "path" : "./images/details/branding/fourth.jpg"
+        "path" : "./images/details/branding/fourth.jpg",
+        "description" : "Invoice of Gilabert, Inc.",
+        "title" : "Invoice"
       }
     ],
     "quote?" : {
