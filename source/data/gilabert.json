@@ -48,7 +48,7 @@
     "text" : [
       {
         "title" : "The story",
-        "description" : "Originally from a small town in rural Catalonia and after +1.5 years in Norway working as an iOS developer & Concept Designer, while graduating from Electronic Engineering, I’m up to new challenges and new stories.",
+        "description" : "Originally from a small town in rural Catalonia and after +1.5 years in Norway working as an iOS developer & Concept Designer, while graduating from Electronic Engineering, I’m up for new challenges and new stories.",
         "kind" : "story"
       },
       {
@@ -109,7 +109,7 @@
       }
     ],
     "quote?" : {
-      "text" : "My biggest side project up to date. I was asked to think creatively. So I went nuts. After 7 months working every afternoon after work. I delivered this award winner thesis."
+      "text" : "My biggest side project to this date. I was asked to think creatively. So I went nuts. After 7 months working every afternoon after work. I delivered this award winner thesis."
     },
     "next" : {
       "link" : "friends"
@@ -165,7 +165,7 @@
         "title" : "<strong>Span</strong>. 3 months_"
       }
     ],
-    "project" : "My most personal project up to date. Working against the clock to perform the design, photography, concept, development and testing to release one of the projects that has guided me to my style like no other.",
+    "project" : "My most personal project up to this date. Working against the clock to perform the design, photography, concept, development and testing to release one of the projects that has guided me to my style like no other.",
     "images" : [
       {
         "path" : "./images/details/branding/first.jpg",
