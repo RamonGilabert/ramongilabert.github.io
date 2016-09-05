@@ -13,7 +13,7 @@ function Loader() {
     './images/sections/varner.jpg',
     './images/sections/branding.jpg',
 
-    './images/hero/header.png',
+    './images/hero/header.jpg',
 
     './images/resources/gradient.png',
 
