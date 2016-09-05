@@ -19,11 +19,13 @@
   margin-top: 32.5px;
   transform: translateY(-50%);
   right: 105px;
+  cursor: pointer;
 }
 .detail .email,
 #manifesto .email,
 #myself .email {
   font: header-font;
+  cursor: pointer;
 }
 .detail #header-glitches,
 #manifesto #header-glitches,
@@ -40,6 +42,7 @@
   padding-left: 50px;
   padding-bottom: 7.5px;
   left: corner-glitch-side;
+  cursor: pointer;
 }
 .detail #back-button:after,
 #manifesto #back-button:after,

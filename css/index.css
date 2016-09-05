@@ -326,11 +326,13 @@
   margin-top: 32.5px;
   transform: translateY(-50%);
   right: 105px;
+  cursor: pointer;
 }
 .detail .email,
 #manifesto .email,
 #myself .email {
   font: 15px Inconsolata;
+  cursor: pointer;
 }
 .detail #header-glitches,
 #manifesto #header-glitches,
@@ -347,6 +349,7 @@
   padding-left: 50px;
   padding-bottom: 7.5px;
   left: 27px;
+  cursor: pointer;
 }
 .detail #back-button:after,
 #manifesto #back-button:after,
@@ -798,7 +801,7 @@
   top: 55%;
   transform: translateY(-50%);
   min-width: 200px;
-  margin-left: 30px;
+  margin-left: 0px;
 }
 #manifesto #hero-description p {
   font: 16px Inconsolata;
@@ -817,7 +820,7 @@
     width: 100vw;
     height: 100vh;
     min-width: 100vw;
-    min-height: 600px;
+    min-height: 585px;
   }
   #manifesto #hero-image-wrapper {
     width: 100vw;
@@ -827,7 +830,7 @@
     position: relative;
     top: 0%;
     left: 0%;
-    height: 55%;
+    height: 60%;
     width: 100%;
     transform: translateX(0%);
   }
@@ -841,7 +844,7 @@
   }
   #manifesto #hero-description {
     width: 100%;
-    padding-top: 15%;
+    padding-top: 10%;
     top: auto;
     left: 0;
     right: 0;
@@ -885,6 +888,9 @@
   height: 150px;
   left: 250px;
   opacity: 0.025;
+}
+#manifesto .manifesto {
+  margin-bottom: auto;
 }
 #manifesto .manifesto .description {
   position: absolute;
@@ -966,6 +972,9 @@
   #manifesto .story .horizontal-glitch {
     display: none;
   }
+  #manifesto .manifesto {
+    margin-bottom: auto;
+  }
   #manifesto .manifesto .description {
     right: 50px;
     left: 50px;
@@ -1001,6 +1010,11 @@
     line-height: 26px;
     width: auto;
     margin-top: 10px;
+  }
+}
+@media (max-height: 568px) {
+  #manifesto .manifesto {
+    margin-bottom: 75px;
   }
 }
 .detail {
