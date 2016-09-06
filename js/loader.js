@@ -10,7 +10,7 @@ function Loader() {
   this.images = [
     './images/sections/myself.jpg',
     './images/sections/lights.jpg',
-    './images/sections/varner.jpg',
+    './images/sections/friends.jpg',
     './images/sections/branding.jpg',
 
     './images/hero/header.jpg',
