@@ -25,11 +25,6 @@ function Loader() {
     './images/details/lights/parallax/first.png',
     './images/details/lights/parallax/second.png',
 
-    './images/details/friends/first.jpg',
-    './images/details/friends/second.jpg',
-    './images/details/friends/third.jpg',
-    './images/details/friends/parallax/first.png',
-
     './images/details/branding/first.jpg',
     './images/details/branding/second.jpg',
     './images/details/branding/third.jpg',

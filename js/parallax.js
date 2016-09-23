@@ -40,15 +40,6 @@ function Parallax() {
             alt = 'Lights Paired screen detail';
             title = 'Lights Paired';
           }
-        } else if (exists('friends')) {
-          source = './images/details/friends/parallax/first.png';
-          width = '70%';
-          left = '15%';
-          right = 'auto';
-          top = '0px';
-          position = 1;
-          alt = 'Bonus Checks and coupons of the app';
-          title = 'Bonus Checks';
         } else if (exists('branding')) {
           source = './images/details/branding/parallax/first.png';
           width = '75%';

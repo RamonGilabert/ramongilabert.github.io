@@ -14,13 +14,6 @@
       "link" : "lights"
     },
     {
-      "kind" : "friends",
-      "title" : "Cubus Friends",
-      "span" : "Role",
-      "subtitle" : ". iOS, Concept Designer, Prototype Designer, Product Owner_",
-      "link" : "friends"
-    },
-    {
       "kind" : "branding",
       "title" : "Personal Branding",
       "span" : "Role",
@@ -111,42 +104,6 @@
     "quote?" : {
       "text" : "My biggest side project to this date. I was asked to think creatively. So I went nuts. After 7 months working every afternoon after work. I delivered this award winner thesis."
     },
-    "next" : {
-      "link" : "friends"
-    }
-  },
-
-  "friends" : {
-    "title" : "Cubus Friends",
-    "headers" : [
-      {
-        "title" : "<strong>Name</strong>. Cubus Friends_"
-      },
-      {
-        "title" : "<strong>Client</strong>. Varner_"
-      },
-      {
-        "title" : "<strong>Span</strong>. 9 months_"
-      }
-    ],
-    "project" : "Work done at and within Hyper (Oslo) in a team of 7 different people. Thuy as the lead designer, Silje as the co-product owner and Lars-Petter as the co-concept designer. App produced for one of the biggest retail stores in Norway to involve more costumers in the day to day of the brand.",
-    "images" : [
-      {
-        "path" : "./images/details/friends/first.jpg",
-        "description" : "Member Card detail of Cubus Friends",
-        "title" : "Member Card"
-      },
-      {
-        "path" : "./images/details/friends/second.jpg",
-        "description" : "Bonus Checks and coupons of the app",
-        "title" : "Bonus Checks"
-      },
-      {
-        "path" : "./images/details/friends/third.jpg",
-        "description" : "Different screens of the app",
-        "title" : "App details"
-      }
-    ],
     "next" : {
       "link" : "branding"
     }
