@@ -73,7 +73,46 @@
         "title" : "<strong>Span</strong>. 7 months_"
       }
     ],
-    "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application or one microcontroller for the light are some of the components that were born and developed by me.",
+    "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application and one microcontroller for the light are some of the components that were born out of this project.",
+    "initial-process": {
+        "path" : "./images/details/lights/process/first.jpg",
+        "description" : "Lights Starting screen detail",
+        "title" : "Lights Start"
+    },
+    "initial" : {
+      "title" : "Wireframing",
+      "text" : "The initial idea was cler. Present simplicity over a light color to show contrast with the actions the user needs to take. Go back to a tiny skeumorphic solution and try ripples and action showers."
+    },
+    "other-process": {
+        "path" : "./images/details/lights/process/second.jpg",
+        "description" : "Lights Starting screen detail",
+        "title" : "Lights Start"
+    },
+    "attempting" : {
+      "title" : "Attempting",
+      "text" : "Tried to keep the fun level of the app as high as possible, having in mind that everything needed an animation or a transition. Started playing with some icon families that showed consistency."
+    },
+    "attempts" : [
+      {
+        "path" : "./images/details/lights/attempt/first.jpg",
+        "description" : "Lights Starting screen detail",
+        "title" : "Lights Start"
+      },
+      {
+        "path" : "./images/details/lights/attempt/second.jpg",
+        "description" : "Lights Starting screen detail",
+        "title" : "Lights Start"
+      },
+      {
+        "path" : "./images/details/lights/attempt/third.jpg",
+        "description" : "Lights Starting screen detail",
+        "title" : "Lights Start"
+      }
+    ],
+    "solution" : {
+      "title" : "Going Black",
+      "text" : "After some attempts with white, beige, clear creme and even gray I thought, – Let's try a dark interface instead. The colors of the picker would have to be sharper and with a more neon style, so it wouldn't be as flat as we are used to. But that was all right. The details of the app would have more consistency and strength over a dark color."
+    },
     "images" : [
       {
         "path" : "./images/details/lights/first.jpg",

@@ -24,7 +24,9 @@ gulp.task('mustache', function() {
 
 gulp.task('watch', ['stylus', 'mustache'], function() {
   gulp.watch('./stylus/**/*.styl', ['stylus']);
+  gulp.watch('./gulpfile.js', ['mustache', 'stylus']);
   gulp.watch('./mustache/**/*.mustache', ['mustache']);
+  gulp.watch('./data/gilabert.json', ['mustache', 'stylus']);
 });
 
 gulp.task('default', ['stylus', 'mustache', 'watch']);
