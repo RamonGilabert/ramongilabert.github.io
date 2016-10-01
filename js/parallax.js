@@ -21,7 +21,7 @@ function Parallax() {
       for (var i = 0; i < times; i++) {
         var image = document.createElement('img');
 
-        var source, width, left, right, top, position, alt, title;
+        var source, width, left, right, top, position;
 
         if (exists('lights')) {
           source = './images/details/lights/parallax/first.png';
@@ -30,15 +30,11 @@ function Parallax() {
           right = 'auto';
           left = '14%';
           position = 0;
-          alt = 'Lights Starting screen detail';
-          title = 'Lights Start';
 
           if (i == 1) {
             source = './images/details/lights/parallax/second.png';
             left = '12%';
             position = 2;
-            alt = 'Lights Paired screen detail';
-            title = 'Lights Paired';
           }
         } else if (exists('branding')) {
           source = './images/details/branding/parallax/first.png';
@@ -47,13 +43,9 @@ function Parallax() {
           right = 'auto';
           top = '100px';
           position = 1;
-          alt = 'Business cards of Ramon Gilabert';
-          title = 'Business Card';
         }
 
         image.src = source;
-        image.alt = alt;
-        image.title = title;
         image.classList.add('parallax');
         image.style.position = 'absolute';
         image.style.width = width;
