@@ -75,18 +75,14 @@
     ],
     "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application and one microcontroller for the light are some of the components that were born out of this project.",
     "initialProcess": {
-        "path" : "./images/details/lights/process/first.jpg",
-        "description" : "Lights Design Process",
-        "title" : "Lights Design Process"
+      "path" : "./images/details/lights/process/first.jpg"
     },
     "initial" : {
       "title" : "Wireframing",
       "text" : "The initial idea was cler. Present simplicity over a light color to show contrast with the actions the user needs to take. Go back to a tiny skeumorphic solution and try ripples and action showers."
     },
     "otherProcess": {
-        "path" : "./images/details/lights/process/second.jpg",
-        "description" : "Lights Design Process",
-        "title" : "Lights Design Process"
+      "path" : "./images/details/lights/process/second.jpg"
     },
     "attempting" : {
       "title" : "Attempting",
@@ -94,19 +90,13 @@
     },
     "attempts" : [
       {
-        "path" : "./images/details/lights/attempt/first.jpg",
-        "description" : "Lights On / Off button",
-        "title" : "Lights On / Off button"
+        "path" : "./images/details/lights/attempt/first.jpg"
       },
       {
-        "path" : "./images/details/lights/attempt/second.jpg",
-        "description" : "Lights Starting screen first attempt",
-        "title" : "Lights Start Attempt"
+        "path" : "./images/details/lights/attempt/second.jpg"
       },
       {
-        "path" : "./images/details/lights/attempt/third.jpg",
-        "description" : "Lights editing screen attempt",
-        "title" : "Lights Editing Attempt"
+        "path" : "./images/details/lights/attempt/third.jpg"
       }
     ],
     "solution" : {
@@ -115,29 +105,19 @@
     },
     "images" : [
       {
-        "path" : "./images/details/lights/first.jpg",
-        "description" : "Lights Starting screen detail",
-        "title" : "Lights Start"
+        "path" : "./images/details/lights/first.jpg"
       },
       {
-        "path" : "./images/details/lights/second.jpg",
-        "description" : "Lights Editing screen detail",
-        "title" : "Lights Editing"
+        "path" : "./images/details/lights/second.jpg"
       },
       {
-        "path" : "./images/details/lights/third.jpg",
-        "description" : "Lights Paired screen detail",
-        "title" : "Lights Paired"
+        "path" : "./images/details/lights/third.jpg"
       },
       {
-        "path" : "./images/details/lights/fourth.jpg",
-        "description" : "Lights 3D design of the lamp",
-        "title" : "Lights 3D Lamp"
+        "path" : "./images/details/lights/fourth.jpg"
       },
       {
-        "path" : "./images/details/lights/fifth.jpg",
-        "description" : "Lights app screens",
-        "title" : "Lights App"
+        "path" : "./images/details/lights/fifth.jpg"
       }
     ],
     "quote?" : {
@@ -164,24 +144,16 @@
     "project" : "My most personal project up to this date. Working against the clock to perform the design, photography, concept, development and testing to release one of the projects that has guided me to my style like no other.",
     "images" : [
       {
-        "path" : "./images/details/branding/first.jpg",
-        "description" : "Logotype of Ramon Gilabert",
-        "title" : "Logotype"
+        "path" : "./images/details/branding/first.jpg"
       },
       {
-        "path" : "./images/details/branding/second.jpg",
-        "description" : "Business cards of Ramon Gilabert",
-        "title" : "Business Card"
+        "path" : "./images/details/branding/second.jpg"
       },
       {
-        "path" : "./images/details/branding/third.jpg",
-        "description" : "Resumé of Ramon Gilabert",
-        "title" : "Resumé"
+        "path" : "./images/details/branding/third.jpg"
       },
       {
-        "path" : "./images/details/branding/fourth.jpg",
-        "description" : "Invoice of Gilabert, Inc.",
-        "title" : "Invoice"
+        "path" : "./images/details/branding/fourth.jpg"
       }
     ],
     "quote?" : {
