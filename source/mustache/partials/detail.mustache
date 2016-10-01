@@ -23,64 +23,35 @@
           <div class='text-glitch'></div>
         </div>
       </section>
-
-      <!-- INITIAL PROCESS -->
-
-      <section class='project'>
-        <div class='project-wrapper'>
-          <h3>The project</h3>
-          <div class='disclosure'></div>
-          <p>{{ project }}</p>
-          <div class='text-glitch'></div>
+      {{# initialProcess }}
+      <section class='process'>
+        <div class='process-wrapper'>
+          <img src='{{ path }}' alt='{{ description }}' title='{{ title }}' />
         </div>
       </section>
-
-      <!-- PROCESS EXPLANATION -->
-
-      <section class='project'>
-        <div class='project-wrapper'>
-          <h3>The project</h3>
-          <div class='disclosure'></div>
-          <p>{{ project }}</p>
-          <div class='text-glitch'></div>
+      {{/ initialProcess }}
+      {{# initial }}
+      {{> explanation }}
+      {{/ initial }}
+      {{# otherProcess }}
+      <section class='process'>
+        <div class='process-wrapper'>
+          <img src='{{ path }}' alt='{{ description }}' title='{{ title }}' />
         </div>
       </section>
-
-      <!-- PROCESS AGAIN -->
-
-      <section class='project'>
-        <div class='project-wrapper'>
-          <h3>The project</h3>
-          <div class='disclosure'></div>
-          <p>{{ project }}</p>
-          <div class='text-glitch'></div>
-        </div>
+      {{/ otherProcess }}
+      {{# attempting }}
+      {{> explanation }}
+      {{/ attempting }}
+      <section class='attempts'>
+        {{# attempts }}
+        <div class='image-wrapper'><img src='{{ path }}'
+          alt='{{ description }}' title='{{ title }}' /></div>
+        {{/ attempts }}
       </section>
-
-      <!-- ATTEMPT -->
-
-      <section class='project'>
-        <div class='project-wrapper'>
-          <h3>The project</h3>
-          <div class='disclosure'></div>
-          <p>{{ project }}</p>
-          <div class='text-glitch'></div>
-        </div>
-      </section>
-
-      <!-- MORE IMAGES OF THE ATTEMPT -->
-
-      <!-- DESIGN DETAILS -->
-
-      <section class='project'>
-        <div class='project-wrapper'>
-          <h3>The project</h3>
-          <div class='disclosure'></div>
-          <p>{{ project }}</p>
-          <div class='text-glitch'></div>
-        </div>
-      </section>
-
+      {{# solution }}
+      {{> explanation }}
+      {{/ solution }}
       <section class='images'>
         {{# images }}
         <div class='image-wrapper'><img src='{{ path }}'

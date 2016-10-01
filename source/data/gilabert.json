@@ -74,7 +74,7 @@
       }
     ],
     "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application and one microcontroller for the light are some of the components that were born out of this project.",
-    "initial-process": {
+    "initialProcess": {
         "path" : "./images/details/lights/process/first.jpg",
         "description" : "Lights Starting screen detail",
         "title" : "Lights Start"
@@ -83,7 +83,7 @@
       "title" : "Wireframing",
       "text" : "The initial idea was cler. Present simplicity over a light color to show contrast with the actions the user needs to take. Go back to a tiny skeumorphic solution and try ripples and action showers."
     },
-    "other-process": {
+    "otherProcess": {
         "path" : "./images/details/lights/process/second.jpg",
         "description" : "Lights Starting screen detail",
         "title" : "Lights Start"

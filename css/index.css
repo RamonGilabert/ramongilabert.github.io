@@ -1079,7 +1079,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  max-width: 1000px;
   min-width: 800px;
   left: 50%;
   transform: translateX(-50%);
@@ -1092,6 +1091,7 @@
   margin: 0 auto;
   margin-top: 160px;
   margin-bottom: 300px;
+  max-width: 1000px;
 }
 .detail .body-wrapper .project-wrapper h3 {
   font: 34px Brandon;
@@ -1135,9 +1135,27 @@
   right: 0;
   bottom: 0;
 }
+.detail .body-wrapper .process {
+  padding-bottom: 150px;
+}
+.detail .body-wrapper .process-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f00;
+}
+.detail .body-wrapper .process-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .detail .body-wrapper .image-wrapper {
   position: relative;
   overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  right: auto;
+  left: auto;
 }
 .detail .body-wrapper img {
   position: relative;

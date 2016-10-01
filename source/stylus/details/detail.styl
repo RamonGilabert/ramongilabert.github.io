@@ -75,7 +75,6 @@
     position: relative
     width: 100%
     height: auto
-    max-width: maximum-width
     min-width: minimum-width
     left: 50%
     transform: translateX(-50%)
@@ -88,6 +87,7 @@
       margin: 0 auto
       margin-top: 160px
       margin-bottom: 300px
+      max-width: maximum-width
 
       h3 {
         font: detail-project-font
@@ -138,9 +138,30 @@
       }
     }
 
+    .process {
+      padding-bottom: 150px
+    }
+
+    .process-wrapper {
+      overflow: hidden
+      width: 100vw
+      height: 100vh
+      background-color: red
+
+      img {
+        height: 100%
+        width: 100%
+        object-fit: cover
+      }
+    }
+
     .image-wrapper {
       position: relative
       overflow: hidden
+      max-width: maximum-width
+      margin: 0 auto
+      right: auto
+      left: auto
     }
 
     img {

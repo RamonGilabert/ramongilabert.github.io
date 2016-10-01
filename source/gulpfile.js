@@ -18,6 +18,7 @@ gulp.task('mustache', function() {
       header: './mustache/partials/header.mustache',
       loader: './mustache/partials/loader.mustache',
       detail: './mustache/partials/detail.mustache',
+      explanation: './mustache/partials/explanation.mustache',
       footer: './mustache/partials/footer.mustache'
     })).pipe(gulp.dest('../'));
 });
