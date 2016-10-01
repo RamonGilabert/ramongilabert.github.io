@@ -1149,7 +1149,8 @@
   width: 100%;
   object-fit: cover;
 }
-.detail .body-wrapper .image-wrapper {
+.detail .body-wrapper .image-wrapper,
+.detail .body-wrapper .attempts-wrapper {
   position: relative;
   overflow: hidden;
   max-width: 1000px;

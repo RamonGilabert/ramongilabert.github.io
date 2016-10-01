@@ -76,8 +76,8 @@
     "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application and one microcontroller for the light are some of the components that were born out of this project.",
     "initialProcess": {
         "path" : "./images/details/lights/process/first.jpg",
-        "description" : "Lights Starting screen detail",
-        "title" : "Lights Start"
+        "description" : "Lights Design Process",
+        "title" : "Lights Design Process"
     },
     "initial" : {
       "title" : "Wireframing",
@@ -85,8 +85,8 @@
     },
     "otherProcess": {
         "path" : "./images/details/lights/process/second.jpg",
-        "description" : "Lights Starting screen detail",
-        "title" : "Lights Start"
+        "description" : "Lights Design Process",
+        "title" : "Lights Design Process"
     },
     "attempting" : {
       "title" : "Attempting",
@@ -95,18 +95,18 @@
     "attempts" : [
       {
         "path" : "./images/details/lights/attempt/first.jpg",
-        "description" : "Lights Starting screen detail",
-        "title" : "Lights Start"
+        "description" : "Lights On / Off button",
+        "title" : "Lights On / Off button"
       },
       {
         "path" : "./images/details/lights/attempt/second.jpg",
-        "description" : "Lights Starting screen detail",
-        "title" : "Lights Start"
+        "description" : "Lights Starting screen first attempt",
+        "title" : "Lights Start Attempt"
       },
       {
         "path" : "./images/details/lights/attempt/third.jpg",
-        "description" : "Lights Starting screen detail",
-        "title" : "Lights Start"
+        "description" : "Lights editing screen attempt",
+        "title" : "Lights Editing Attempt"
       }
     ],
     "solution" : {
