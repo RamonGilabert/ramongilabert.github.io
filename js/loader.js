@@ -24,6 +24,11 @@ function Loader() {
     './images/details/lights/fifth.jpg',
     './images/details/lights/parallax/first.png',
     './images/details/lights/parallax/second.png',
+    './images/details/lights/process/first.jpg',
+    './images/details/lights/process/second.jpg',
+    './images/details/lights/attempt/first.jpg',
+    './images/details/lights/attempt/second.jpg',
+    './images/details/lights/attempt/third.jpg',
 
     './images/details/branding/first.jpg',
     './images/details/branding/second.jpg',
