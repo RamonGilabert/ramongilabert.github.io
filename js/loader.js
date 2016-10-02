@@ -34,7 +34,11 @@ function Loader() {
     './images/details/branding/second.jpg',
     './images/details/branding/third.jpg',
     './images/details/branding/fourth.jpg',
-    './images/details/branding/parallax/first.png'
+    './images/details/branding/parallax/first.png',
+    './images/details/branding/process/first.jpg',
+    './images/details/branding/process/second.jpg',
+    './images/details/branding/attempt/first.jpg',
+    './images/details/branding/attempt/second.jpg'
   ];
 
   this.loaded = [];
