@@ -90,13 +90,15 @@
     },
     "attempts" : [
       {
-        "path" : "./images/details/lights/attempt/first.jpg"
+        "path" : "./images/details/lights/attempt/first.jpg",
+        "class" : "parallax"
       },
       {
         "path" : "./images/details/lights/attempt/second.jpg"
       },
       {
-        "path" : "./images/details/lights/attempt/third.jpg"
+        "path" : "./images/details/lights/attempt/third.jpg",
+        "class" : "parallax"
       }
     ],
     "solution" : {
@@ -161,7 +163,8 @@
         "path" : "./images/details/branding/attempt/first.jpg"
       },
       {
-        "path" : "./images/details/branding/attempt/second.jpg"
+        "path" : "./images/details/branding/attempt/second.jpg",
+        "class" : "parallax"
       }
     ],
     "solution" : {
