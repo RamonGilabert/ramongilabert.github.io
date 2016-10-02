@@ -73,13 +73,13 @@
         "title" : "<strong>Span</strong>. 7 months_"
       }
     ],
-    "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application and one microcontroller for the light are some of the components that were born out of this project.",
+    "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application and one micro-controller for the light are some of the components that were born out of this project.",
     "initialProcess": {
       "path" : "./images/details/lights/process/first.jpg"
     },
     "initial" : {
       "title" : "Wireframing",
-      "text" : "The initial idea was cler. Present simplicity over a light color to show contrast with the actions the user needs to take. Go back to a tiny skeumorphic solution and try ripples and action showers."
+      "text" : "The initial idea was clear. Present simplicity over a light color to show contrast with the actions the user needs to take. Go back to a tiny skeuomorphic solution and try ripples and action showers."
     },
     "otherProcess": {
       "path" : "./images/details/lights/process/second.jpg"
@@ -169,7 +169,7 @@
     ],
     "solution" : {
       "title" : "Glitching",
-      "text" : "I remember when I told my friend: – I got it. I know the direction of this. I started watching then videos with crazy sound and glitches in the internet to get inspiration, there it was. Simple, clean and beautiful. I know I would have to create tons of different glitches to make it personal in every ocasion. I was ready. And this is the result of it."
+      "text" : "I remember when I told my friend: – I got it. I know the direction of this. I started watching then videos with crazy sound and glitches in the internet to get inspiration, there it was. Simple, clean and beautiful. I know I would have to create tons of different glitches to make it personal in every occasion. I was ready. And this is the result of it."
     },
     "images" : [
       {
