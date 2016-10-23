@@ -1,0 +1,25 @@
+{
+  "name": "ramongilabert.github.io",
+  "version": "1.0.0",
+  "description": "Ramon Gilabert – The Portfolio",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "4.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RamonGilabert/ramongilabert.github.io"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
