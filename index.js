@@ -9,6 +9,10 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/index.html');
 });
 
+app.get('/index', function(request, response) {
+  response.sendFile(__dirname + '/index.html');
+});
+
 app.get('/manifesto', function(request, response) {
   response.sendFile(__dirname + '/manifesto.html');
 });
