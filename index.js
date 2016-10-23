@@ -3,10 +3,22 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/'));
 
 app.get('/', function(request, response) {
-  response.sendFile('index.html');
+  response.sendFile(__dirname + '/index.html');
+});
+
+app.get('/manifesto', function(request, response) {
+  response.sendFile(__dirname + '/manifesto.html');
+});
+
+app.get('/lights', function(request, response) {
+  response.sendFile(__dirname + '/lights.html');
+});
+
+app.get('/branding', function(request, response) {
+  response.sendFile(__dirname + '/branding.html');
 });
 
 app.listen(app.get('port'), function() {
