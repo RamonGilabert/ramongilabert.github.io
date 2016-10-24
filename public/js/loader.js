@@ -91,7 +91,10 @@ function Loader() {
       }
 
       if (self.amount === self.images.length) {
-        sessionStorage['loaded'] = true;
+        if (storageSupported()) {
+          window.sessionStorage['loaded'] = true;
+        }
+
         setTimeout(function() { out(); }, 200);
       }
     }
