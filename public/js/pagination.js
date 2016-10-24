@@ -129,8 +129,8 @@ window.addEventListener('load', function() {
 
     myself.style.transition = animate === undefined ? 'transform 0.8s ' + cubicBezier : '';
     myself.style.transform = 'translate3d(0, ' + -point + 'px, 0)';
-    getTransform(myself);
 
+    getTransform(myself);
     positionIndicator();
 
     pastTime = currentTime;
@@ -203,12 +203,14 @@ window.addEventListener('load', function() {
 
     shouldAnimate = true;
 
-    indicator.style.top = y + 'px';
-    indicator.style.height = width + 'px';
+    setTimeout(function() {
+      indicator.style.top = y + 'px';
+      indicator.style.height = width + 'px';
 
-    if (button === undefined) {
-      triangle.style.top = y + width / 2 - triangleWidth / 2 + 'px';
-    }
+      if (button === undefined) {
+        triangle.style.top = y + width / 2 - triangleWidth / 2 + 'px';
+      }
+    }, 0);
   }
 
   // Inspiration from:
