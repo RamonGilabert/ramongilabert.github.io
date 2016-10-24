@@ -3,26 +3,27 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(__dirname + '/public'));
+__directory = __dirname + '/public';
+app.use(express.static(__directory));
 
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/index.html');
+  response.sendFile(__directory + '/index.html');
 });
 
 app.get('/index', function(request, response) {
-  response.sendFile(__dirname + '/index.html');
+  response.sendFile(__directory + '/index.html');
 });
 
 app.get('/manifesto', function(request, response) {
-  response.sendFile(__dirname + '/manifesto.html');
+  response.sendFile(__directory + '/manifesto.html');
 });
 
 app.get('/lights', function(request, response) {
-  response.sendFile(__dirname + '/lights.html');
+  response.sendFile(__directory + '/lights.html');
 });
 
 app.get('/branding', function(request, response) {
-  response.sendFile(__dirname + '/branding.html');
+  response.sendFile(__directory + '/branding.html');
 });
 
 app.listen(app.get('port'), function() {
