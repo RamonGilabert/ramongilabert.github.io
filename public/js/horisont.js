@@ -143,6 +143,20 @@ function isDetail() {
   return document.body.classList.contains('detail');
 }
 
+function storageSupported() {
+  var key = 'storage';
+  var storage = window.sessionStorage;
+
+  try {
+    storage.setItem(key, 'true');
+    storage.removeItem(key);
+
+    return true;
+  } catch(error) {
+    return false;
+  }
+}
+
 var empty = function() { }
 
 // Convenience

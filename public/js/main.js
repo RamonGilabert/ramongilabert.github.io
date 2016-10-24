@@ -157,16 +157,20 @@ function Disappear() {
           setTimeout(function() {
 
             if (self.innerHTML == 'go home') {
-              if (sessionStorage['coming'] != undefined && sessionStorage['coming'].indexOf('index') != -1) {
-                sessionStorage['coming'] = window.location;
-                history.back();
-                return;
+              if (storageSupported()) {
+                if (window.sessionStorage['coming'] != undefined && window.sessionStorage['coming'].indexOf('index') != -1) {
+                  window.sessionStorage['coming'] = window.location;
+                  history.back();
+                  return;
+                } else {
+                  href = 'index';
+                }
+
+                window.sessionStorage['coming'] = window.location;
               } else {
                 href = 'index';
               }
             }
-
-            sessionStorage['coming'] = window.location;
 
             window.location = href;
           }, 0);
