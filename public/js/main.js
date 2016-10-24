@@ -165,12 +165,12 @@ function Disappear() {
                 } else {
                   href = 'index';
                 }
+
+                window.sessionStorage['coming'] = window.location;
               } else {
                 href = 'index';
               }
             }
-
-            sessionStorage['coming'] = window.location;
 
             window.location = href;
           }, 0);
