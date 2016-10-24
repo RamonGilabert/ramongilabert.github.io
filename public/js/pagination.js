@@ -211,6 +211,9 @@ window.addEventListener('load', function() {
         triangle.style.top = y + width / 2 - triangleWidth / 2 + 'px';
       }
     }, 0);
+
+    indicator.style.transition = 'top 0.6s ' + cubicBezier + ', height 0.6s ' + cubicBezier;
+    triangle.style.transition = 'top 0.6s ' + cubicBezier;
   }
 
   // Inspiration from:
