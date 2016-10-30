@@ -10,7 +10,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "compression": "latest",
     "express": "4.13.3"
   },
   "repository": {
