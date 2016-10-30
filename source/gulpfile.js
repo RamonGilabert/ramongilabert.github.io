@@ -28,7 +28,8 @@ gulp.task('mustache', function() {
       loader: './mustache/partials/loader.mustache',
       detail: './mustache/partials/detail.mustache',
       explanation: './mustache/partials/explanation.mustache',
-      footer: './mustache/partials/footer.mustache'
+      footer: './mustache/partials/footer.mustache',
+      imports: './mustache/partials/imports.mustache'
     }))
     .pipe(uglifyHTML({
       collapseWhitespace: true
