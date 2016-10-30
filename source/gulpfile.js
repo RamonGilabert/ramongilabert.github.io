@@ -6,6 +6,7 @@ var mustache = require('gulp-mustache-plus');
 var uglify = require('gulp-uglify');
 var uglifyHTML = require('gulp-htmlmin');
 var uglifyCSS = require('gulp-uglifycss');
+var spawn = require('child_process').spawn;
 
 gulp.task('stylus', function () {
   gulp.src('./stylus/*.styl')
@@ -39,12 +40,27 @@ gulp.task('javascript', function() {
     .pipe(gulp.dest('../public/js/'));
 });
 
-gulp.task('watch', ['stylus', 'mustache', 'javascript'], function() {
+gulp.task('load', ['stylus', 'mustache', 'javascript'], function() {
   gulp.watch('./stylus/**/*.styl', ['stylus']);
   gulp.watch('./mustache/**/*.mustache', ['mustache']);
   gulp.watch('./js/*.js', ['javascript']);
-  gulp.watch('./gulpfile.js', ['stylus', 'mustache', 'javascript']);
   gulp.watch('./data/gilabert.json', ['mustache']);
 });
 
-gulp.task('default', ['stylus', 'mustache', 'javascript', 'watch']);
+gulp.task('watch', function() {
+  var process;
+
+  gulp.watch('gulpfile.js', spawnChildren);
+
+  spawnChildren();
+
+  function spawnChildren(error) {
+    if (process) {
+      process.kill();
+    }
+
+    process = spawn('gulp', ['load'], {
+      stdio: 'inherit'
+    });
+  }
+});
