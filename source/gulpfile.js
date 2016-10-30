@@ -3,6 +3,7 @@ var watch = require('gulp-watch');
 var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
 var mustache = require('gulp-mustache-plus');
+var uglify = require('gulp-uglify');
 
 gulp.task('stylus', function () {
   gulp.src('./stylus/*.styl')
@@ -23,11 +24,17 @@ gulp.task('mustache', function() {
     })).pipe(gulp.dest('../public'));
 });
 
-gulp.task('watch', ['stylus', 'mustache'], function() {
-  gulp.watch('./stylus/**/*.styl', ['stylus']);
-  gulp.watch('./gulpfile.js', ['mustache', 'stylus']);
-  gulp.watch('./mustache/**/*.mustache', ['mustache']);
+gulp.task('minify', function() {
+  gulp.src('../public/js/*.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('../public/js/'));
+});
+
+gulp.task('watch', ['stylus', 'mustache', 'minify'], function() {
+  gulp.watch('./stylus/**/*.styl', ['stylus', 'minify']);
+  gulp.watch('./mustache/**/*.mustache', ['mustache', 'minify']);
+  gulp.watch('./gulpfile.js', ['mustache', 'stylus', 'minify']);
   gulp.watch('./data/gilabert.json', ['mustache', 'stylus']);
 });
 
-gulp.task('default', ['stylus', 'mustache', 'watch']);
+gulp.task('default', ['stylus', 'mustache', 'minify', 'watch']);
