@@ -10,11 +10,12 @@
 var appearance = new Appearance();
 prepareDocument();
 setupAnalytics();
-loadIndexCSS();
 
 // MARK: - Window events
 
 window.addEventListener('load', function() {
+
+  loadIndexCSS();
 
   var separator = new Separator('dot-separator');
   separator.generate();
