@@ -4,3 +4,21 @@
   <script async type='text/javascript' src='js/parallax.js'></script>
   <script async type='text/javascript' src='js/loader.js'></script>
   <script async type='text/javascript' src='js/main.js'></script>
+  <script async>
+    function loadIndexCSS() {
+      var source = "../css/index.css";
+
+      if (document.createStyleSheet) {
+        document.createStyleSheet(source);
+      }
+      else {
+        var stylesheet = document.createElement('link');
+        stylesheet.href = source;
+        stylesheet.rel = 'stylesheet';
+        stylesheet.type = 'text/css';
+        document.body.appendChild(stylesheet);
+      }
+    }
+
+    loadIndexCSS()
+  </script>
