@@ -1,6 +1,8 @@
+var compress = require('compression');
 var express = require('express');
 var app = express();
 
+app.use(compress());
 app.set('port', (process.env.PORT || 5000));
 
 __directory = __dirname + '/public';
