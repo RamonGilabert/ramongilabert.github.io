@@ -10,6 +10,7 @@
 var appearance = new Appearance();
 prepareDocument();
 setupAnalytics();
+loadIndexCSS();
 
 // MARK: - Window events
 

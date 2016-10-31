@@ -127,6 +127,21 @@ function iterate(array, delay, callback, reverse) {
   }
 }
 
+function loadIndexCSS() {
+  var source = "../css/index.css";
+
+  if (document.createStyleSheet) {
+    document.createStyleSheet(source);
+  }
+  else {
+    var stylesheet = document.createElement('link');
+    stylesheet.href = source;
+    stylesheet.rel = 'stylesheet';
+    stylesheet.type = 'text/css';
+    document.body.appendChild(stylesheet);
+  }
+}
+
 function positionOffset(element) {
   var height = element.clientHeight;
   var offsetLeft = 0;
