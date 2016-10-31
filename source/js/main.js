@@ -11,14 +11,6 @@ var appearance = new Appearance();
 prepareDocument();
 setupAnalytics();
 
-if (window.requestAnimationFrame) {
-  window.requestAnimationFrame(function() {
-    window.setTimeout(loadDeferredStyles, 0);
-  });
-} else {
-  window.addEventListener('load', loadDeferredStyles);
-}
-
 // MARK: - Window events
 
 window.addEventListener('load', function() {
