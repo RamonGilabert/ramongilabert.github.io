@@ -73,6 +73,8 @@ function Loader() {
     } else if (window.location.pathname == '/branding') {
       this.images = this.branding;
       this.alternates = this.general.concat(this.manifesto, this.lights);
+    } else {
+      return;
     }
 
     var startingTime = new Date().getTime();
