@@ -14,7 +14,6 @@ setupAnalytics();
 // MARK: - Window events
 
 window.addEventListener('load', function() {
-
   var separator = new Separator('dot-separator');
   separator.generate();
 
