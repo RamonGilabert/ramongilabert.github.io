@@ -28,6 +28,10 @@ app.get('/branding', function(request, response) {
   response.sendFile(__directory + '/branding.html');
 });
 
+app.use(function(request, response) {
+  response.sendFile(__directory + '/error.html');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
