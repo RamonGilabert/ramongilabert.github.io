@@ -2,11 +2,66 @@
 
 #error {
 
-  .class {
-    
+  .back-button {
+    position: absolute
+    top: 17.5px
+    font: header-font
+    color: white
+    padding-left: 50px
+    padding-bottom: 7.5px
+    left: corner-glitch-side
+    cursor: pointer
+  }
+
+  .back-button:after {
+    display: none
+  }
+
+  .back-button:before {
+    content: ''
+    position: absolute
+    background-color: text-color
+    height: glitch-size
+    bottom: 0%
+    left: 0%
+    right: 35%
+    transition: right glitch-transition
+  }
+
+  .back-button:hover:before {
+    right: 0%
+  }
+
+  img {
+    position: absolute
+    width: 475px
+    top: 49%
+    left: 50%
+    transform: translate(-50%, -50%)
   }
 
   .link-wrapper {
+    position: absolute
+    bottom: 20px
+    left: 50%
+    transform: translate(-50%, 500%)
+    text-align: center
+    opacity: 0.2
 
+    .email {
+      left: 50%
+      transform: translateX(-50%)
+      padding: 0
+    }
+  }
+}
+
+@media (max-width: minimum-width) {
+
+  #loader {
+
+    .link-wrapper {
+      display: none
+    }
   }
 }
