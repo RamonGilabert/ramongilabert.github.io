@@ -1,6 +1,8 @@
 // Error styles
 
 #error {
+  width: 100%
+  height: 100%
 
   .back-button {
     position: absolute
@@ -40,18 +42,16 @@
     transform: translate(-50%, -50%)
   }
 
-  .link-wrapper {
+  .email-wrapper {
     position: absolute
-    bottom: 20px
+    bottom: 30px
     left: 50%
-    transform: translate(-50%, 500%)
+    transform: translate(-50%, 0%)
     text-align: center
     opacity: 0.2
 
-    .email {
-      left: 50%
-      transform: translateX(-50%)
-      padding: 0
+    a {
+      font: detail-header-font
     }
   }
 }
@@ -60,7 +60,7 @@
 
   #loader {
 
-    .link-wrapper {
+    .email-wrapper {
       display: none
     }
   }
