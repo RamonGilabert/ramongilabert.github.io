@@ -24,7 +24,7 @@ function Parallax() {
         var source, width, left, right, top, position;
 
         if (exists('lights')) {
-          source = './images/details/lights/parallax/first.png';
+          source = '/images/details/lights/parallax/first.png';
           width = '55%';
           top = '-15px';
           right = 'auto';
@@ -32,12 +32,12 @@ function Parallax() {
           position = 0;
 
           if (i == 1) {
-            source = './images/details/lights/parallax/second.png';
+            source = '/images/details/lights/parallax/second.png';
             left = '12%';
             position = 2;
           }
         } else if (exists('branding')) {
-          source = './images/details/branding/parallax/first.png';
+          source = '/images/details/branding/parallax/first.png';
           width = '75%';
           left = '12.5%';
           right = 'auto';
