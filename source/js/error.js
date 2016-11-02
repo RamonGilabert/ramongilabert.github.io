@@ -6,8 +6,8 @@ window.addEventListener('load', function() {
   setupAnalytics();
   encryptCorreu('email');
 
-  var gifPath = './images/errors/404.gif';
-  var imagePath = './images/errors/404-frame.jpg';
+  var gifPath = '/images/errors/404.gif';
+  var imagePath = '/images/errors/404-frame.jpg';
   var glitch = document.body.tag('img');
   var pastTime = new Date().getTime();
   var image = new Image();
