@@ -75,14 +75,14 @@
     ],
     "project" : "Merging Electronics with a beautifully designed product to create an easy to use solution to control an elegant 3D designed lamp_ Two servers, one iOS application and one micro-controller for the light are some of the components that were born out of this project.",
     "initialProcess": {
-      "path" : "./images/details/lights/process/first.jpg"
+      "path" : "/images/details/lights/process/first.jpg"
     },
     "initial" : {
       "title" : "Wireframing",
       "text" : "The initial idea was clear. Present simplicity over a light color to show contrast with the actions the user needs to take. Go back to a tiny skeuomorphic solution and try ripples and action showers."
     },
     "otherProcess": {
-      "path" : "./images/details/lights/process/second.jpg"
+      "path" : "/images/details/lights/process/second.jpg"
     },
     "attempting" : {
       "title" : "Attempting",
@@ -90,14 +90,14 @@
     },
     "attempts" : [
       {
-        "path" : "./images/details/lights/attempt/first.jpg",
+        "path" : "/images/details/lights/attempt/first.jpg",
         "class" : "parallax"
       },
       {
-        "path" : "./images/details/lights/attempt/second.jpg"
+        "path" : "/images/details/lights/attempt/second.jpg"
       },
       {
-        "path" : "./images/details/lights/attempt/third.jpg",
+        "path" : "/images/details/lights/attempt/third.jpg",
         "class" : "parallax"
       }
     ],
@@ -107,19 +107,19 @@
     },
     "images" : [
       {
-        "path" : "./images/details/lights/first.jpg"
+        "path" : "/images/details/lights/first.jpg"
       },
       {
-        "path" : "./images/details/lights/second.jpg"
+        "path" : "/images/details/lights/second.jpg"
       },
       {
-        "path" : "./images/details/lights/third.jpg"
+        "path" : "/images/details/lights/third.jpg"
       },
       {
-        "path" : "./images/details/lights/fourth.jpg"
+        "path" : "/images/details/lights/fourth.jpg"
       },
       {
-        "path" : "./images/details/lights/fifth.jpg"
+        "path" : "/images/details/lights/fifth.jpg"
       }
     ],
     "quote?" : {
@@ -145,14 +145,14 @@
     ],
     "project" : "My most personal project up to this date. Working against the clock to do the design, photography, concept, development and testing. After pages of drawings and sketches, though, here it is. The project that has defined my style.",
     "initialProcess": {
-      "path" : "./images/details/branding/process/first.jpg"
+      "path" : "/images/details/branding/process/first.jpg"
     },
     "initial" : {
       "title" : "R&G",
       "text" : "I started the project with the wrong mindset. Finish the logo first, then do the rest. I had some guidelines, so I started drawing. I draw over 300 different logos with shapes and combinations of my initials. None of them convinced me at all."
     },
     "otherProcess": {
-      "path" : "./images/details/branding/process/second.jpg"
+      "path" : "/images/details/branding/process/second.jpg"
     },
     "attempting" : {
       "title" : "Restarting",
@@ -160,10 +160,10 @@
     },
     "attempts" : [
       {
-        "path" : "./images/details/branding/attempt/first.jpg"
+        "path" : "/images/details/branding/attempt/first.jpg"
       },
       {
-        "path" : "./images/details/branding/attempt/second.jpg",
+        "path" : "/images/details/branding/attempt/second.jpg",
         "class" : "parallax"
       }
     ],
@@ -173,16 +173,16 @@
     },
     "images" : [
       {
-        "path" : "./images/details/branding/first.jpg"
+        "path" : "/images/details/branding/first.jpg"
       },
       {
-        "path" : "./images/details/branding/second.jpg"
+        "path" : "/images/details/branding/second.jpg"
       },
       {
-        "path" : "./images/details/branding/third.jpg"
+        "path" : "/images/details/branding/third.jpg"
       },
       {
-        "path" : "./images/details/branding/fourth.jpg"
+        "path" : "/images/details/branding/fourth.jpg"
       }
     ],
     "quote?" : {

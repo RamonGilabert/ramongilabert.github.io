@@ -11,44 +11,44 @@ function Loader() {
   this.alternates = [];
 
   this.general = [
-    './images/sections/myself.jpg',
-    './images/sections/lights.jpg',
-    './images/sections/branding.jpg',
+    '/images/sections/myself.jpg',
+    '/images/sections/lights.jpg',
+    '/images/sections/branding.jpg',
   ]
 
   this.manifesto = [
-    './images/hero/header.jpg',
+    '/images/hero/header.jpg',
   ]
 
   this.lights = [
-    './images/sections/lights.jpg',
-    './images/resources/gradient.png',
-    './images/details/branding/first.jpg',
-    './images/details/branding/second.jpg',
-    './images/details/branding/third.jpg',
-    './images/details/branding/fourth.jpg',
-    './images/details/branding/parallax/first.png',
-    './images/details/branding/process/first.jpg',
-    './images/details/branding/process/second.jpg',
-    './images/details/branding/attempt/first.jpg',
-    './images/details/branding/attempt/second.jpg'
+    '/images/sections/lights.jpg',
+    '/images/resources/gradient.png',
+    '/images/details/branding/first.jpg',
+    '/images/details/branding/second.jpg',
+    '/images/details/branding/third.jpg',
+    '/images/details/branding/fourth.jpg',
+    '/images/details/branding/parallax/first.png',
+    '/images/details/branding/process/first.jpg',
+    '/images/details/branding/process/second.jpg',
+    '/images/details/branding/attempt/first.jpg',
+    '/images/details/branding/attempt/second.jpg'
   ]
 
   this.branding = [
-    './images/sections/branding.jpg',
-    './images/resources/gradient.png',
-    './images/details/lights/first.jpg',
-    './images/details/lights/second.jpg',
-    './images/details/lights/third.jpg',
-    './images/details/lights/fourth.jpg',
-    './images/details/lights/fifth.jpg',
-    './images/details/lights/parallax/first.png',
-    './images/details/lights/parallax/second.png',
-    './images/details/lights/process/first.jpg',
-    './images/details/lights/process/second.jpg',
-    './images/details/lights/attempt/first.jpg',
-    './images/details/lights/attempt/second.jpg',
-    './images/details/lights/attempt/third.jpg',
+    '/images/sections/branding.jpg',
+    '/images/resources/gradient.png',
+    '/images/details/lights/first.jpg',
+    '/images/details/lights/second.jpg',
+    '/images/details/lights/third.jpg',
+    '/images/details/lights/fourth.jpg',
+    '/images/details/lights/fifth.jpg',
+    '/images/details/lights/parallax/first.png',
+    '/images/details/lights/parallax/second.png',
+    '/images/details/lights/process/first.jpg',
+    '/images/details/lights/process/second.jpg',
+    '/images/details/lights/attempt/first.jpg',
+    '/images/details/lights/attempt/second.jpg',
+    '/images/details/lights/attempt/third.jpg',
   ]
 
   this.loaded = [];
