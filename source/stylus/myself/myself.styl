@@ -3,12 +3,13 @@
 #myself {
 
   header {
-    position: relative
+    // position: fixed
     width: 100%
     height: 100%
     min-height: 800px
     background-color: dark-background-color
     overflow: hidden
+    z-index: -1
 
     .indicator {
       transform: rotateZ(90deg)
@@ -48,9 +49,49 @@
     }
   }
 
-  .story {
-    .inner {
-      margin: 150px inner-spacing bottom-spacing inner-spacing
+  .content {
+    // margin-top: 100%
+    // margin-bottom: 500px
+    // background-color: white
+    // z-index: 2
+
+    .story {
+      .inner {
+        margin: 150px inner-spacing bottom-spacing inner-spacing
+
+        h2 {
+          font: 100px Gilroy
+          font-weight: 700
+          letter-spacing: -2.5px
+        }
+
+        .path {
+          margin-bottom: 14px
+        }
+
+        p {
+          font: 17px Gilroy
+          font-weight: 400
+          letter-spacing: -0.4px
+          line-height: 24px
+          width: 525px
+        }
+      }
+    }
+
+    .projects {
+      width: 100%
+
+      .inner {
+        height: 600px
+        background-color: projects-color
+      }
+    }
+
+    .recognition {
+      .inner {
+        margin: 150px inner-spacing bottom-spacing inner-spacing
+      }
 
       h2 {
         font: 100px Gilroy
@@ -58,57 +99,24 @@
         letter-spacing: -2.5px
       }
 
+      h3 {
+        margin: 15px 0px 15px 0px
+        font: 24px Gilroy
+        font-weight: 700
+        letter-spacing: -0.5px
+      }
+
       .path {
-        margin-bottom: 14px
+        margin-bottom: 12px
       }
 
       p {
         font: 17px Gilroy
         font-weight: 400
         letter-spacing: -0.4px
-        line-height: 24px
+        line-height: 28px
         width: 525px
       }
-    }
-  }
-
-  .projects {
-    width: 100%
-
-    .inner {
-      height: 600px
-      background-color: projects-color
-    }
-  }
-
-  .recognition {
-    .inner {
-      margin: 150px inner-spacing bottom-spacing inner-spacing
-    }
-
-    h2 {
-      font: 100px Gilroy
-      font-weight: 700
-      letter-spacing: -2.5px
-    }
-
-    h3 {
-      margin: 15px 0px 15px 0px
-      font: 24px Gilroy
-      font-weight: 700
-      letter-spacing: -0.5px
-    }
-
-    .path {
-      margin-bottom: 12px
-    }
-
-    p {
-      font: 17px Gilroy
-      font-weight: 400
-      letter-spacing: -0.4px
-      line-height: 28px
-      width: 525px
     }
   }
 }
