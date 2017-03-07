@@ -21,8 +21,9 @@ gulp.task('mustache', function() {
   gulp.src('mustache/*.mustache')
     .pipe(mustache('data/gilabert.json', {}, {
       head: 'mustache/partials/head.mustache',
+      imports: 'mustache/partials/imports.mustache',
       header: 'mustache/partials/header.mustache',
-      imports: 'mustache/partials/imports.mustache'
+      footer: 'mustache/partials/footer.mustache'
     }))
     // .pipe(uglifyHTML({
     //   collapseWhitespace: true

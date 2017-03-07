@@ -64,6 +64,25 @@
           ]
         }
       ]
-    }
+    },
+
+    "social" : [
+      {
+        "image" : "images/general/social/twitter.svg",
+        "link" : "https://www.twitter.com/RamonGilabert"
+      },
+      {
+        "image" : "images/general/social/dribbble.svg",
+        "link" : "https://www.dribbble.com/RamonGilabert"
+      },
+      {
+        "image" : "images/general/social/linkedin.svg",
+        "link" : "https://www.linkedin.com/in/RamonGilabert"
+      },
+      {
+        "image" : "images/general/social/github.svg",
+        "link" : "https://www.github.com/RamonGilabert"
+      }
+    ]
   }
 }
