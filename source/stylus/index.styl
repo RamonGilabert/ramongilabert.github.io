@@ -1,0 +1,57 @@
+@import fonts
+@import constants
+
+@import 'myself/myself'
+
+*, html {
+  margin: 0
+  padding: 0
+}
+
+body {
+  margin: 0 auto
+}
+
+html, body {
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+}
+
+a {
+  text-decoration: none
+  color: text-color
+}
+
+button {
+  text-decoration: none
+  border: 0px
+  background-color: transparent
+  cursor: pointer
+}
+
+button:focus {
+  outline: 0
+}
+
+button, h1, h2, h3, p, a {
+  font-smooth: always
+  -webkit-font-smoothing: antialiased
+}
+
+h1, h2, p {
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  cursor: default
+}
+
+p {
+  letter-spacing: 0px
+  line-height: 28px
+  margin-bottom: 7px
+  color: text-color
+}

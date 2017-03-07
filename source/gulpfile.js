@@ -13,9 +13,9 @@ gulp.task('stylus', function () {
   gulp.src('./stylus/*.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus())
-    .pipe(uglifyCSS({
-      "uglyComments": true
-    }))
+    // .pipe(uglifyCSS({
+    //   "uglyComments": true
+    // }))
     .pipe(gulp.dest('../public/css'));
 });
 
@@ -30,9 +30,9 @@ gulp.task('mustache', function() {
       footer: './mustache/partials/footer.mustache',
       imports: './mustache/partials/imports.mustache'
     }))
-    .pipe(uglifyHTML({
-      collapseWhitespace: true
-    }))
+    // .pipe(uglifyHTML({
+    //   collapseWhitespace: true
+    // }))
     .pipe(gulp.dest('../public'));
 });
 
