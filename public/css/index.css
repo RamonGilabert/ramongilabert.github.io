@@ -76,9 +76,9 @@ footer {
 }
 footer .inner {
   position: absolute;
-  bottom: 200px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 footer .inner .email {
@@ -104,19 +104,20 @@ footer .inner .social {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  align-content: center;
 }
 footer .inner .social .social-icon {
-  height: 22px;
+  max-height: 36px;
+  object-fit: cover;
   margin-left: 25px;
   margin-right: 25px;
 }
 #myself header {
+  position: relative;
   width: 100%;
   height: 100%;
   min-height: 800px;
   background-color: #161216;
-  overflow: hidden;
-  z-index: -1;
 }
 #myself header .indicator {
   transform: rotateZ(90deg);
@@ -130,7 +131,7 @@ footer .inner .social .social-icon {
   transform: translateX(-50%);
   color: #292329;
   opacity: 0.7;
-  font: 28px Gilroy;
+  font: 26px Gilroy;
   font-weight: 700;
   letter-spacing: -0.75px;
 }
@@ -150,6 +151,9 @@ footer .inner .social .social-icon {
   bottom: 0;
   left: 48.5%;
   transform: translateX(-50%);
+}
+#myself .content {
+  background-color: #fff;
 }
 #myself .content .story .inner {
   margin: 150px 275px 200px 275px;

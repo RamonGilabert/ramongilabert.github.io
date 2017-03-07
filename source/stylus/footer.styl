@@ -10,9 +10,10 @@ footer {
 
   .inner {
     position: absolute
-    bottom: 200px
+    // bottom: 200px
+    top: 50%
     left: 50%
-    transform: translateX(-50%)
+    transform: translate(-50%, -50%)
     text-align: center
 
     .email {
@@ -41,11 +42,13 @@ footer {
       flex-direction: row
       flex-wrap: nowrap
       justify-content: center
+      align-content: center
 
       .social-icon {
         margin = 25px
 
-        height: 22px
+        max-height: 36px
+        object-fit: cover
         margin-left: margin
         margin-right: margin
       }

@@ -8,16 +8,35 @@
       "text" : "<span class='dot'>Ramon Gilabert</span> is an award winning designer and developer from a rural town in Catalonia. Right now, he is enjoying every day in Barcelona, doing amazing products as a freelancer."
     },
 
-    "projects" : [],
+    "projects" : [
+      {
+        "name" : "gluten",
+        "image" : "images/projects/gluten/myself.png",
+        "link" : "#",
+        "role" : "Concept, UI & UX design"
+      },
+      {
+        "name" : "lights",
+        "image" : "images/projects/lights/myself.png",
+        "link" : "#",
+        "role" : "Concept, UI & UX design"
+      },
+      {
+        "name" : "revolution",
+        "image" : "images/projects/revolution/myself.png",
+        "link" : "#",
+        "role" : "Concept, Design, Development, Electronics"
+      }
+    ],
 
     "recognition" : {
       "title" : "others",
       "others" : [
         {
-          "text" : "A video about design every week at <span class='dot'>SketchCasts</span>."
+          "text" : "A video about design every week at <a href='https://www.sketchcasts.net' target='_blank'><span class='dot'>SketchCasts</span>.</a>"
         },
         {
-          "text" : "<span class='dot'>Puzzles</span> iOS 10 UI kit."
+          "text" : "<a href='http://puzzles.design' target='_blank'><span class='dot'>Puzzles</span></a> iOS 10 UI kit."
         },
         {
           "text" : "I <span class='dot'>retouch</span> images for fun."
@@ -76,12 +95,12 @@
         "link" : "https://www.dribbble.com/RamonGilabert"
       },
       {
-        "image" : "images/general/social/linkedin.svg",
-        "link" : "https://www.linkedin.com/in/RamonGilabert"
-      },
-      {
         "image" : "images/general/social/github.svg",
         "link" : "https://www.github.com/RamonGilabert"
+      },
+      {
+        "image" : "images/general/social/linkedin.svg",
+        "link" : "https://www.linkedin.com/in/RamonGilabert"
       }
     ]
   }
