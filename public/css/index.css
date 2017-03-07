@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'Gilroy';
-  src: url("gilroy-regular-webfont.woff2") format('woff2'), url("gilroy-regular-webfont.woff") format('woff');
+  src: url("../fonts/gilroy-regular-webfont.woff2") format('woff2'), url("../fonts/gilroy-regular-webfont.woff") format('woff');
   font-weight: 100;
   font-style: regular;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url("gilroy-semibold-webfont.woff2") format('woff2'), url("gilroy-semibold-webfont.woff") format('woff');
+  src: url("../fonts/gilroy-semibold-webfont.woff2") format('woff2'), url("../fonts/gilroy-semibold-webfont.woff") format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url("gilroy-bold-webfont.woff2") format('woff2'), url("gilroy-bold-webfont.woff") format('woff');
+  src: url("../fonts/gilroy-bold-webfont.woff2") format('woff2'), url("../fonts/gilroy-bold-webfont.woff") format('woff');
   font-weight: 700;
   font-style: bold;
 }
@@ -21,7 +21,7 @@
 }
 .indicator a {
   font: 15px Gilroy;
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
 }
 .indicator:after {
@@ -30,10 +30,18 @@
   position: absolute;
   height: 2px;
   width: 30px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  top: 58%;
+  transform: translateY(-50%);
   margin-left: 8px;
+}
+.dot {
+  position: relative;
+  color: #712367;
+  margin: 0;
+  padding: 0;
+}
+.spaced {
+  left: -8px;
 }
 #myself header {
   position: relative;
@@ -49,7 +57,7 @@
 }
 #myself header h2 {
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   color: #292329;
@@ -82,6 +90,25 @@
   background-image: url("../images/general/noise.png");
   background-repeat: repeat;
   mix-blend-mode: overlay;
+}
+#myself .story .inner {
+  margin: 150px;
+  margin-left: 200px;
+}
+#myself .story .inner h2 {
+  font: 100px Gilroy;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+}
+#myself .story .inner .path {
+  margin-bottom: 15px;
+}
+#myself .story .inner p {
+  font: 18px Gilroy;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 24px;
+  width: 525px;
 }
 *,
 html {
@@ -129,6 +156,7 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: default;
+  color: #342a34;
 }
 .page-title {
   position: absolute;

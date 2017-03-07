@@ -5,14 +5,25 @@
     <title>Ramon Gilabert</title>
     {{> imports }}
   </head>
+  {{# myself }}
   <body id='myself'>
     <header>
-      <h1 class='page-title'>Ramon Gilabert — Award Winning Designer &amp; Developer</h1>
-      <h2>gilabert</h2>
+      <h1 class='page-title'>{{ pageTitle }}</h1>
+      <h2>{{ headerTitle }}</h2>
       <img class='designer' src='./images/myself/designer.svg'>
       <div class='indicator'><a href='#'>work</a></div>
       <div class='noise'></div>
       <img class='myself' src='./images/myself/myself.png'>
     </header>
+    <div class='story'>
+      {{# story }}
+      <div class='inner'>
+        <h2>{{ title }}<span class='spaced dot'>.</span></h2>
+        <img class='path' src='./images/general/path.svg'>
+        <p>{{{ text }}}</p>
+      </div>
+      {{/ story }}
+    </div>
   </body>
+  {{/ myself }}
 </html>
