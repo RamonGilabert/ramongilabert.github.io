@@ -6,6 +6,64 @@
     "story" : {
       "title" : "story",
       "text" : "<span class='dot'>Ramon Gilabert</span> is an award winning designer and developer from a rural town in Catalonia. Right now, he is enjoying every day in Barcelona, doing amazing products as a freelancer."
+    },
+
+    "projects" : [],
+
+    "recognition" : {
+      "title" : "others",
+      "others" : [
+        {
+          "text" : "A video about design every week at <span class='dot'>SketchCasts</span>."
+        },
+        {
+          "text" : "<span class='dot'>Puzzles</span> iOS 10 UI kit."
+        },
+        {
+          "text" : "I <span class='dot'>retouch</span> images for fun."
+        }
+      ],
+
+      "awards" : [
+        {
+          "title" : "awards 2016",
+          "list" : [
+            {
+              "highlight" : "Honorable Mention",
+              "rest" : "from the Awwwards jury."
+            },
+            {
+              "highlight" : "Special Kudos",
+              "rest" : "from CSS Design Awards."
+            },
+            {
+              "highlight" : "Site of the Day",
+              "rest" : "from CSS Awards."
+            },
+            {
+              "highlight" : "Star of the Day",
+              "rest" : "from CSS Winner."
+            },
+            {
+              "highlight" : "Thesis with honors",
+              "rest" : "from University of Lleida."
+            },
+            {
+              "highlight" : "Top 3 alumni",
+              "rest" : "2012-2016 University of Lleida."
+            }
+          ]
+        },
+        {
+          "title" : "awards 2015",
+          "list" : [
+            {
+              "highlight" : "Apple WWDC scholarship",
+              "rest" : "recognition."
+            }
+          ]
+        }
+      ]
     }
   }
 }
