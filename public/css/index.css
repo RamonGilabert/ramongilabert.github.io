@@ -16,6 +16,25 @@
   font-weight: 700;
   font-style: bold;
 }
+.indicator {
+  position: absolute;
+}
+.indicator a {
+  font: 15px Gilroy;
+  font-weight: 700;
+  color: #fff;
+}
+.indicator:after {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 8px;
+}
 #myself header {
   position: relative;
   width: 100%;
@@ -23,9 +42,25 @@
   min-height: 800px;
   background-color: #161216;
 }
+#myself header .indicator {
+  transform: rotateZ(90deg);
+  right: 15px;
+  bottom: 67.5px;
+}
+#myself header h2 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #292329;
+  opacity: 0.7;
+  font: 28px Gilroy;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+}
 #myself header .designer {
   position: absolute;
-  top: 51%;
+  top: 52%;
   right: 0;
   left: 0;
   margin: 0 auto;
@@ -37,7 +72,7 @@
   height: 95%;
   min-height: 750px;
   bottom: 0;
-  left: 48%;
+  left: 48.5%;
   transform: translateX(-50%);
 }
 #myself header .noise {
@@ -94,4 +129,12 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: default;
+}
+.page-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  clip: rect(0, 1px, 1px, 0);
 }

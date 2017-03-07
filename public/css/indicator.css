@@ -1,0 +1,19 @@
+.indicator {
+  position: absolute;
+}
+.indicator a {
+  font: 15px Gilroy;
+  font-weight: 700;
+  color: white-color;
+}
+.indicator:after {
+  content: '';
+  background-color: white-color;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 8px;
+}
