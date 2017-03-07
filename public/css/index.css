@@ -66,6 +66,22 @@
   font-weight: 700;
   letter-spacing: -0.75px;
 }
+#myself header .circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+  border-radius: 50%;
+  width: 750px;
+  height: 750px;
+  mix-blend-mode: soft-light;
+  background-color: #fff;
+  filter: blur(200px);
+  opacity: 0.6;
+  transform: translate3d(0, 0, 0);
+}
 #myself header .designer {
   position: absolute;
   top: 53%;
@@ -92,7 +108,7 @@
   mix-blend-mode: overlay;
 }
 #myself .story .inner {
-  margin: 150px 200px 195px 200px;
+  margin: 150px 275px 200px 275px;
 }
 #myself .story .inner h2 {
   font: 100px Gilroy;
@@ -118,7 +134,7 @@
   background-color: #faf9fc;
 }
 #myself .recognition .inner {
-  margin: 0px 200px 195px 200px;
+  margin: 0px 275px 200px 275px;
 }
 #myself .recognition h2 {
   font: 100px Gilroy;
@@ -132,13 +148,13 @@
   letter-spacing: -0.5px;
 }
 #myself .recognition .path {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 #myself .recognition p {
   font: 17px Gilroy;
   font-weight: 400;
   letter-spacing: -0.4px;
-  line-height: 24px;
+  line-height: 28px;
   width: 525px;
 }
 *,

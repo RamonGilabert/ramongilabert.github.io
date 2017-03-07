@@ -27,6 +27,25 @@
       letter-spacing: -0.75px
     }
 
+    .circle {
+      circle = 750px
+
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      margin: auto auto
+      border-radius: 50%
+	    width: circle
+	    height: circle
+      mix-blend-mode: soft-light
+      background-color: white-color
+      filter: blur(200px)
+      opacity: 0.6
+      transform: translate3d(0, 0, 0);
+    }
+
     .designer {
       position: absolute
       top: 53%
@@ -58,7 +77,7 @@
 
   .story {
     .inner {
-      margin: 150px 200px 195px 200px
+      margin: 150px inner-spacing bottom-spacing inner-spacing
 
       h2 {
         font: 100px Gilroy
@@ -92,7 +111,7 @@
 
   .recognition {
     .inner {
-      margin: 0px 200px 195px 200px
+      margin: 0px inner-spacing bottom-spacing inner-spacing
     }
 
     h2 {
@@ -109,14 +128,14 @@
     }
 
     .path {
-      margin-bottom: 14px
+      margin-bottom: 12px
     }
 
     p {
       font: 17px Gilroy
       font-weight: 400
       letter-spacing: -0.4px
-      line-height: 24px
+      line-height: 28px
       width: 525px
     }
   }
