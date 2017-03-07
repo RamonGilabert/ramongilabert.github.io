@@ -15,7 +15,6 @@
     "gulp-uglifycss" : "latest",
     "gulp-htmlmin" : "latest",
     "gulp-uglify" : "latest",
-    "gulp-gzip" : "latest",
-    "child_process" : "latest"
+    "gulp-gzip" : "latest"
   }
 }
