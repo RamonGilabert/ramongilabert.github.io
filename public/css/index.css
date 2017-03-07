@@ -17,9 +17,36 @@
   font-style: bold;
 }
 #myself header {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  min-height: 800px;
+  background-color: #161216;
+}
+#myself header .designer {
+  position: absolute;
+  top: 51%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  mix-blend-mode: soft-light;
+}
+#myself header .myself {
+  position: absolute;
+  height: 95%;
+  min-height: 750px;
+  bottom: 0;
+  left: 48%;
+  transform: translateX(-50%);
+}
+#myself header .noise {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/general/noise.png");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
 }
 *,
 html {
@@ -67,10 +94,4 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: default;
-}
-p {
-  letter-spacing: 0px;
-  line-height: 28px;
-  margin-bottom: 7px;
-  color: #342a34;
 }
