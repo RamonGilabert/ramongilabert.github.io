@@ -63,7 +63,7 @@
         }
 
         .path {
-          margin-bottom: 14px
+          margin-bottom: 15px
         }
 
         p {
@@ -77,11 +77,51 @@
     }
 
     .projects {
+      margin = 15px
+      margin-top = 275px
+      height = 750px
+      width = 550px
+      alternative-height = 550px
+
       width: 100%
 
       .inner {
-        height: 600px
-        background-color: projects-color
+        display: flex
+	      flex-direction: column
+	      flex-wrap: wrap
+        align-content: center
+	      height: height + alternative-height + margin * 4
+
+        .project {
+          position: relative
+          height: height
+          width: width
+          background-color: projects-color
+          margin: margin margin margin margin
+
+          img {
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: auto auto
+          }
+        }
+
+        .gluten {
+          order: 2
+        }
+
+        .lights {
+          margin-top: margin-top
+          order: 1
+        }
+
+        .revolution {
+          height: alternative-height
+          order: 3
+        }
       }
     }
 

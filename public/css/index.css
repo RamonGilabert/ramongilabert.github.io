@@ -156,7 +156,7 @@ footer .inner .social .social-icon {
   background-color: #fff;
 }
 #myself .content .story .inner {
-  margin: 150px 275px 200px 275px;
+  margin: 150px 22% 200px 22%;
 }
 #myself .content .story .inner h2 {
   font: 100px Gilroy;
@@ -164,7 +164,7 @@ footer .inner .social .social-icon {
   letter-spacing: -2.5px;
 }
 #myself .content .story .inner .path {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 #myself .content .story .inner p {
   font: 17px Gilroy;
@@ -177,11 +177,40 @@ footer .inner .social .social-icon {
   width: 100%;
 }
 #myself .content .projects .inner {
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 1360px;
+}
+#myself .content .projects .inner .project {
+  position: relative;
+  height: 750px;
+  width: 550px;
   background-color: #faf9fc;
+  margin: 15px 15px 15px 15px;
+}
+#myself .content .projects .inner .project img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+}
+#myself .content .projects .inner .gluten {
+  order: 2;
+}
+#myself .content .projects .inner .lights {
+  margin-top: 275px;
+  order: 1;
+}
+#myself .content .projects .inner .revolution {
+  height: 550px;
+  order: 3;
 }
 #myself .content .recognition .inner {
-  margin: 150px 275px 200px 275px;
+  margin: 150px 22% 200px 22%;
 }
 #myself .content .recognition h2 {
   font: 100px Gilroy;

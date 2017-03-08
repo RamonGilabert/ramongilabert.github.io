@@ -28,7 +28,11 @@
       </div>
       <div class='projects'>
         <div class='inner'>
-          
+          {{# projects }}
+          <div class='project {{ name }}'>
+            <img src='{{ image }}'>
+          </div>
+          {{/ projects }}
         </div>
       </div>
       <div class='recognition'>
