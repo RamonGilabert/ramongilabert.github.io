@@ -30,7 +30,12 @@
         <div class='inner'>
           {{# projects }}
           <div class='project {{ name }}'>
-            <img src='{{ image }}'>
+            <img class='image' src='{{ image }}'>
+            <div class='name'>
+              <img class='path' src='./images/general/path.svg'>
+              <h3>{{ name }}<span class='spaced dot'>.</span></h3>
+            </div>
+            <a href='{{ link }}'></a>
           </div>
           {{/ projects }}
         </div>

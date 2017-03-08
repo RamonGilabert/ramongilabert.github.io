@@ -66,6 +66,7 @@
   background-image: url("../images/general/noise.png");
   background-repeat: repeat;
   mix-blend-mode: overlay;
+  transform: translate3d(0, 0, 0);
 }
 footer {
   position: relative;
@@ -185,12 +186,17 @@ footer .inner .social .social-icon {
 }
 #myself .content .projects .inner .project {
   position: relative;
-  height: 750px;
   width: 550px;
+  height: 750px;
   background-color: #faf9fc;
   margin: 15px 15px 15px 15px;
 }
-#myself .content .projects .inner .project img {
+#myself .content .projects .inner .project a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#myself .content .projects .inner .project .image {
   position: absolute;
   top: 0;
   right: 0;
@@ -198,16 +204,57 @@ footer .inner .social .social-icon {
   left: 0;
   margin: auto auto;
 }
+#myself .content .projects .inner .project .name {
+  position: absolute;
+}
+#myself .content .projects .inner .project .name .path {
+  display: inline-block;
+  margin-top: 2.5px;
+  margin-right: 5px;
+  height: 15px;
+}
+#myself .content .projects .inner .project .name h3 {
+  margin: 15px 0px 15px 0px;
+  font: 22px Gilroy;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  display: inline-block;
+  opacity: 0.12;
+}
 #myself .content .projects .inner .gluten {
   order: 2;
+}
+#myself .content .projects .inner .gluten .name {
+  top: 150px;
+  right: 0px;
+  bottom: auto;
+  left: auto;
+  transform-origin: right bottom;
+  transform: rotateZ(90deg);
 }
 #myself .content .projects .inner .lights {
   margin-top: 275px;
   order: 1;
 }
+#myself .content .projects .inner .lights .name {
+  top: auto;
+  right: auto;
+  bottom: 100px;
+  left: 0;
+  transform-origin: left bottom;
+  transform: rotateZ(-90deg);
+}
 #myself .content .projects .inner .revolution {
   height: 550px;
   order: 3;
+}
+#myself .content .projects .inner .revolution .name {
+  top: auto;
+  right: auto;
+  bottom: 50px;
+  left: 0;
+  transform-origin: left bottom;
+  transform: rotateZ(-90deg);
 }
 #myself .content .recognition .inner {
   margin: 150px 22% 200px 22%;
@@ -275,10 +322,6 @@ h1,
 h2,
 h3,
 p {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   cursor: default;
   color: #342a34;
 }

@@ -48,4 +48,5 @@
   background-image: url("../images/general/noise.png");
   background-repeat: repeat;
   mix-blend-mode: overlay;
+  transform: translate3d(0, 0, 0);
 }
