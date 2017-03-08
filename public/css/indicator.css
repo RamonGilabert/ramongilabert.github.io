@@ -48,8 +48,10 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: auto;
   background-image: url("../images/general/noise.png");
   background-repeat: repeat;
+  background-blend-mode: normal;
   mix-blend-mode: overlay;
   transform: translate3d(0, 0, 0);
 }

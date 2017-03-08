@@ -66,8 +66,10 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: auto;
   background-image: url("../images/general/noise.png");
   background-repeat: repeat;
+  background-blend-mode: normal;
   mix-blend-mode: overlay;
   transform: translate3d(0, 0, 0);
 }
@@ -75,8 +77,12 @@ footer {
   position: relative;
   width: 100%;
   height: 500px;
+  max-height: 500px;
   background-color: #161216;
-  overflow: hidden;
+}
+footer .circle {
+  width: 400px;
+  height: 400px;
 }
 footer .inner {
   position: absolute;
@@ -116,10 +122,29 @@ footer .inner .social .social-icon {
   margin-left: 25px;
   margin-right: 25px;
 }
+#myself .general-noise,
+#myself .bottom-noise {
+  position: fixed;
+  width: 100%;
+  height: 20vh;
+  top: 0;
+  bottom: auto;
+  background-color: #161216;
+  mix-blend-mode: normal;
+  background-blend-mode: overlay;
+  background-image: url("../images/general/noise.png");
+  background-repeat: repeat;
+  transform: translate3d(0, 0, 0);
+  z-index: -10;
+}
+#myself .bottom-noise {
+  top: auto;
+  bottom: 0;
+}
 #myself header {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   min-height: 800px;
   background-color: #161216;
 }
@@ -160,7 +185,8 @@ footer .inner .social .social-icon {
   background-color: #fff;
 }
 #myself .content .story .inner {
-  margin: 150px 22% 200px 22%;
+  padding-top: 150px;
+  margin: 0 22% 200px 22%;
 }
 #myself .content .story .inner h2 {
   font: 100px Gilroy;
@@ -294,7 +320,8 @@ footer .inner .social .social-icon {
   transform: rotateZ(-90deg);
 }
 #myself .content .recognition .inner {
-  margin: 150px 22% 200px 22%;
+  margin: 150px 22% 0 22%;
+  padding-bottom: 200px;
 }
 #myself .content .recognition h2 {
   font: 100px Gilroy;
@@ -322,16 +349,9 @@ html {
   margin: 0;
   padding: 0;
 }
-body {
-  margin: 0 auto;
-}
 html,
 body {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
