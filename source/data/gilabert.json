@@ -1,7 +1,7 @@
 {
   "myself" : {
-    "pageTitle" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
-    "headerTitle" : "gilabert",
+    "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
+    "header" : "gilabert",
 
     "story" : {
       "title" : "story",
@@ -83,25 +83,32 @@
           ]
         }
       ]
-    },
+    }
+  },
 
-    "social" : [
-      {
-        "image" : "images/general/social/twitter.svg",
-        "link" : "https://www.twitter.com/RamonGilabert"
-      },
-      {
-        "image" : "images/general/social/dribbble.svg",
-        "link" : "https://www.dribbble.com/RamonGilabert"
-      },
-      {
-        "image" : "images/general/social/github.svg",
-        "link" : "https://www.github.com/RamonGilabert"
-      },
-      {
-        "image" : "images/general/social/linkedin.svg",
-        "link" : "https://www.linkedin.com/in/RamonGilabert"
-      }
-    ]
-  }
+  "gluten" : {
+    "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
+    "name" : "gluten",
+    "role" : "Concept, UI & UX design",
+    "summarize" : "A project created out of a pure necessity to help celiacs around the world, like myself, with their disease. Gluten is based in the experience of celiacs like my sister and I, who have been suffering problems related to that disorder in their day to day life."
+  },
+
+  "social" : [
+    {
+      "image" : "images/general/social/twitter.svg",
+      "link" : "https://www.twitter.com/RamonGilabert"
+    },
+    {
+      "image" : "images/general/social/dribbble.svg",
+      "link" : "https://www.dribbble.com/RamonGilabert"
+    },
+    {
+      "image" : "images/general/social/github.svg",
+      "link" : "https://www.github.com/RamonGilabert"
+    },
+    {
+      "image" : "images/general/social/linkedin.svg",
+      "link" : "https://www.linkedin.com/in/RamonGilabert"
+    }
+  ]
 }

@@ -1,0 +1,70 @@
+// General styles for a case study.
+
+.case {
+
+  .indicator {
+    position: absolute
+    top: 20px
+    left: 0
+    transform: rotateZ(90deg)
+
+    a {
+      color: text-color
+      margin-left: 35px
+    }
+  }
+
+  .indicator:after {
+    opacity: 0
+  }
+
+  .indicator:before {
+    content: ''
+    position: absolute
+    left: 0
+    height: 2px
+    width: 30px
+    top: 58%
+    transform: translateY(-50%)
+    margin-right: 8px
+    background-color: text-color
+  }
+
+  header {
+    .inner {
+      position: relative
+      margin: case-spacing case-spacing-title case-spacing + 50px case-spacing-title
+
+      h2 {
+        font: title-font
+        font-weight: 700
+        letter-spacing: -4px
+      }
+
+      .path {
+        display: inline-block
+        margin-top: 10px
+        margin-bottom: 14px
+        margin-right: 10px
+      }
+
+      .role {
+        position: absolute
+        display: inline-block
+        margin-top: 6.5px
+        text-transform: uppercase
+        font: 18px Gilroy
+        font-weight: 700
+        color: gray-color
+        letter-spacing: -0.4px
+      }
+
+      p {
+        font: text-font
+        letter-spacing: -0.5px
+        line-height: 25px
+        width: 625px
+      }
+    }
+  }
+}

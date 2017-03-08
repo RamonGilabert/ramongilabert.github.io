@@ -23,7 +23,9 @@ gulp.task('mustache', function() {
       head: 'mustache/partials/head.mustache',
       imports: 'mustache/partials/imports.mustache',
       header: 'mustache/partials/header.mustache',
-      footer: 'mustache/partials/footer.mustache'
+      footer: 'mustache/partials/footer.mustache',
+      begin: 'mustache/partials/cases/begin.mustache',
+      end: 'mustache/partials/cases/end.mustache'
     }))
     // .pipe(uglifyHTML({
     //   collapseWhitespace: true

@@ -344,6 +344,61 @@ footer .inner .social .social-icon {
   line-height: 28px;
   width: 525px;
 }
+.case .indicator {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transform: rotateZ(90deg);
+}
+.case .indicator a {
+  color: #342a34;
+  margin-left: 35px;
+}
+.case .indicator:after {
+  opacity: 0;
+}
+.case .indicator:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 30px;
+  top: 58%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+  background-color: #342a34;
+}
+.case header .inner {
+  position: relative;
+  margin: 150px 15% 200px 15%;
+}
+.case header .inner h2 {
+  font: 100px Gilroy;
+  font-weight: 700;
+  letter-spacing: -4px;
+}
+.case header .inner .path {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  margin-right: 10px;
+}
+.case header .inner .role {
+  position: absolute;
+  display: inline-block;
+  margin-top: 6.5px;
+  text-transform: uppercase;
+  font: 18px Gilroy;
+  font-weight: 700;
+  color: #e6e5e6;
+  letter-spacing: -0.4px;
+}
+.case header .inner p {
+  font: 17px Gilroy;
+  letter-spacing: -0.5px;
+  line-height: 25px;
+  width: 625px;
+}
 *,
 html {
   margin: 0;
