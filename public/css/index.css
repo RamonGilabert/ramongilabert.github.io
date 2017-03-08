@@ -19,10 +19,13 @@
 .indicator {
   position: absolute;
 }
-.indicator a {
+.indicator a,
+.indicator p {
+  display: inline-block;
   font: 15px Gilroy;
   font-weight: 400;
   color: #fff;
+  letter-spacing: -0.3px;
 }
 .indicator:after {
   content: '';
@@ -191,6 +194,33 @@ footer .inner .social .social-icon {
   background-color: #faf9fc;
   margin: 15px 15px 15px 15px;
 }
+#myself .content .projects .inner .project .role {
+  text-align: center;
+  text-transform: uppercase;
+  font: 16px Gilroy;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #e6e5e6;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 10px;
+  margin: 0 auto;
+  opacity: 0;
+}
+#myself .content .projects .inner .project .indicator {
+  transform-origin: top right;
+  transform: rotateZ(90deg);
+  top: 90px;
+  right: 10px;
+  opacity: 0;
+}
+#myself .content .projects .inner .project .indicator p {
+  color: #e6e5e6;
+}
+#myself .content .projects .inner .project .indicator:after {
+  background-color: #e6e5e6;
+}
 #myself .content .projects .inner .project a {
   position: absolute;
   width: 100%;
@@ -219,10 +249,17 @@ footer .inner .social .social-icon {
   font-weight: 700;
   letter-spacing: -0.5px;
   display: inline-block;
-  opacity: 0.12;
+  opacity: 0.1;
 }
 #myself .content .projects .inner .gluten {
   order: 2;
+}
+#myself .content .projects .inner .gluten .indicator {
+  transform-origin: left bottom;
+  transform: rotateZ(90deg);
+  top: auto;
+  left: 12.5px;
+  right: auto;
 }
 #myself .content .projects .inner .gluten .name {
   top: 150px;

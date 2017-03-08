@@ -100,6 +100,37 @@
           background-color: projects-color
           margin: margin margin margin margin
 
+          .role {
+            text-align: center
+            text-transform: uppercase
+            font: 16px Gilroy
+            font-weight: 700
+            letter-spacing: -0.4px
+            color: gray-color
+            position: absolute
+            right: 0
+            left: 0
+            bottom: 10px
+            margin: 0 auto
+            opacity: 0 // Remove this.
+          }
+
+          .indicator {
+            transform-origin: top right
+            transform: rotateZ(90deg)
+            top: 90px
+            right: 10px
+            opacity: 0 // Remove this.
+
+            p {
+              color: gray-color
+            }
+          }
+
+          .indicator:after {
+            background-color: gray-color
+          }
+
           a {
             position: absolute
             width: 100%
@@ -131,13 +162,21 @@
               font-weight: 700
               letter-spacing: -0.5px
               display: inline-block
-              opacity: 0.12
+              opacity: 0.1
             }
           }
         }
 
         .gluten {
           order: 2
+
+          .indicator {
+            transform-origin: left bottom
+            transform: rotateZ(90deg)
+            top: auto
+            left: 12.5px
+            right: auto
+          }
 
           .name {
             top: 150px

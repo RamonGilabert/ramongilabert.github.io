@@ -1,10 +1,13 @@
 .indicator {
   position: absolute;
 }
-.indicator a {
+.indicator a,
+.indicator p {
+  display: inline-block;
   font: 15px Gilroy;
   font-weight: 400;
   color: white-color;
+  letter-spacing: -0.3px;
 }
 .indicator:after {
   content: '';
