@@ -509,7 +509,7 @@ footer .inner .social .social-icon {
 }
 .visually .colors .color {
   position: relative;
-  width: 33.3%;
+  width: 33.33333%;
   height: 300px;
 }
 .visually .colors .color p {
@@ -542,14 +542,14 @@ footer .inner .social .social-icon {
 .text a {
   color: #712367;
 }
-.spacing {
-  margin-bottom: -2px;
-}
 .paragraph-space {
   margin-bottom: 11px;
 }
+.spacing {
+  margin-bottom: -2px;
+}
 .indent {
-  text-indent: 50px;
+  text-indent: 40px;
 }
 *,
 html {
