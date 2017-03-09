@@ -1,6 +1,12 @@
     <footer>
       <div class='circle'></div>
       <div class='noise'></div>
+      {{# back }}
+      <div class='back'><a href='{{ link }}'>{{ title }}</a></div>
+      {{/ back }}
+      {{# forward }}
+      <div class='forward'><a href='{{ link }}'>{{ title }}</a></div>
+      {{/ forward }}
       <div class='inner'>
         <a class='email' href='#'>ramon<span>@</span>gilabert.design</a>
         <img class='path' src='./images/general/path.svg'>
@@ -11,4 +17,4 @@
         </div>
       </div>
     </footer>
-    <div class='bottom-noise '></div>
+    <div class='bottom-noise'></div>

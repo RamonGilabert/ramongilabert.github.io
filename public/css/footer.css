@@ -2,8 +2,49 @@ footer {
   position: relative;
   width: 100%;
   height: 500px;
-  max-height: 500px;
   background-color: dark-background-color;
+}
+footer .back,
+footer .forward {
+  mix-blend-mode: soft-light;
+  position: absolute;
+  display: inline-block;
+}
+footer .back a,
+footer .forward a {
+  display: inline-block;
+  font: 17px Gilroy;
+  font-weight: 400;
+  color: white-color;
+  letter-spacing: -0.3px;
+}
+footer .back {
+  left: 20px;
+  bottom: 15px;
+}
+footer .back a {
+  margin-left: 37px;
+}
+footer .forward {
+  top: 15px;
+  right: 58px;
+}
+footer .back:before,
+footer .forward:after {
+  content: '';
+  display: inline-block;
+  background-color: white-color;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  top: 57%;
+  transform: translateY(-50%);
+}
+footer .back:before {
+  margin-right: 8px;
+}
+footer .forward:after {
+  margin-left: 8px;
 }
 footer .circle {
   width: 400px;

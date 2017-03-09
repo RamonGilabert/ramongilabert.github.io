@@ -288,7 +288,8 @@
           "text" : "<span class='dot'>Gluten</span> is a project that’s been in the making for 8 years. As mentioned above, this set of features marks the MVP for a product that needs much iteration on. From adding many products and services into a growing database, to give users voice to rate their own experiences."
         },
         {
-          "text" : "<span class='dot'>Gluten</span> is a project that will start development as soon as I hit the United States. With that, many details will start to appear, and the challenge will be to iterate over that."
+          "text" : "<span class='dot'>Gluten</span> is a project that will start development as soon as I hit the United States. With that, many details will start to appear, and the challenge will be to iterate over that.",
+          "class" : "paragraph-space"
         }
       ]
     },
@@ -315,6 +316,16 @@
           "text" : "<a href='http://principleformac.com' target='_blank'>Principle</a> for early prototypes."
         }
       ]
+    },
+
+    "back" : {
+      "title" : "revolution",
+      "link" : "#"
+    },
+
+    "forward" : {
+      "title" : "lights",
+      "link" : "#"
     }
   },
 

@@ -47,8 +47,8 @@
   transform: translateY(-50%);
 }
 .space {
-  margin-top: 7.5px;
-  margin-bottom: 5px;
+  margin-top: 2.5px;
+  margin-bottom: 3px;
 }
 .circle {
   position: absolute;
@@ -81,8 +81,49 @@ footer {
   position: relative;
   width: 100%;
   height: 500px;
-  max-height: 500px;
   background-color: #161216;
+}
+footer .back,
+footer .forward {
+  mix-blend-mode: soft-light;
+  position: absolute;
+  display: inline-block;
+}
+footer .back a,
+footer .forward a {
+  display: inline-block;
+  font: 17px Gilroy;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+footer .back {
+  left: 20px;
+  bottom: 15px;
+}
+footer .back a {
+  margin-left: 37px;
+}
+footer .forward {
+  top: 15px;
+  right: 58px;
+}
+footer .back:before,
+footer .forward:after {
+  content: '';
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  top: 57%;
+  transform: translateY(-50%);
+}
+footer .back:before {
+  margin-right: 8px;
+}
+footer .forward:after {
+  margin-left: 8px;
 }
 footer .circle {
   width: 400px;
@@ -139,7 +180,7 @@ footer .inner .social .social-icon {
   background-image: url("../images/general/noise.png");
   background-repeat: repeat;
   transform: translate3d(0, 0, 0);
-  z-index: -10;
+  z-index: -1;
 }
 .bottom-noise {
   top: auto;
@@ -256,7 +297,7 @@ footer .inner .social .social-icon {
   width: 100%;
   height: 100%;
 }
-#myself .content .projects .inner .project .image {
+#myself .content .projects .inner .project .peek {
   position: absolute;
   top: 0;
   right: 0;
@@ -348,9 +389,6 @@ footer .inner .social .social-icon {
   line-height: 28px;
   width: 525px;
 }
-.case .bottom-noise {
-  opacity: 0;
-}
 .case .indicator {
   position: absolute;
   top: 15px;
@@ -401,8 +439,9 @@ footer .inner .social .social-icon {
   letter-spacing: -0.4px;
 }
 .image {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #fff;
 }
 .image img {
   object-fit: cover;
@@ -422,6 +461,7 @@ footer .inner .social .social-icon {
 .title .inner {
   position: relative;
   margin: 0px 15% 0px 15%;
+  background-color: #fff;
 }
 .title .inner h3 {
   font: 50px Gilroy;
@@ -439,6 +479,7 @@ footer .inner .social .social-icon {
 .subtitle .inner {
   position: relative;
   margin: 0px 18% 0px 18%;
+  background-color: #fff;
 }
 .subtitle .inner h4 {
   font: 30px Gilroy;
@@ -448,7 +489,8 @@ footer .inner .social .social-icon {
 }
 .visually .inner {
   position: relative;
-  margin: 0px 18% 0px 18%;
+  padding: 0px 18% 0px 18%;
+  background-color: #fff;
 }
 .visually .inner h4 {
   font: 30px Gilroy;
@@ -461,8 +503,9 @@ footer .inner .social .social-icon {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #fff;
 }
 .visually .colors .color {
   position: relative;
@@ -486,6 +529,7 @@ footer .inner .social .social-icon {
 }
 .quote {
   margin-bottom: 200px;
+  background-color: #fff;
 }
 .text {
   width: 750px;
@@ -493,12 +537,16 @@ footer .inner .social .social-icon {
   letter-spacing: -0.4px;
   line-height: 170%;
   margin-bottom: 20px;
+  background-color: #fff;
 }
 .text a {
   color: #712367;
 }
 .spacing {
   margin-bottom: -2px;
+}
+.paragraph-space {
+  margin-bottom: 11px;
 }
 .indent {
   text-indent: 50px;
@@ -512,6 +560,7 @@ html,
 body {
   margin: 0 auto;
 }
+html,
 body {
   background-color: #fff;
   z-index: 1;
