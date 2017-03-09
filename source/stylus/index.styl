@@ -7,6 +7,10 @@
 @import 'myself/myself'
 
 @import 'cases/general'
+@import 'cases/image'
+@import 'cases/title'
+@import 'cases/subtitle'
+@import 'cases/text'
 
 *, html {
   margin: 0
@@ -15,6 +19,11 @@
 
 html, body {
   margin: 0 auto
+}
+
+body {
+  background-color: white-color
+  z-index: 1
 }
 
 a {
@@ -33,12 +42,12 @@ button:focus {
   outline: 0
 }
 
-button, h1, h2, h3, p, a {
+button, h1, h2, h3, h4, p, a {
   font-smooth: always
   -webkit-font-smoothing: antialiased
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   cursor: default
   color: text-color
 }
@@ -50,4 +59,12 @@ h1, h2, h3, p {
   top: 0;
   left: 0;
   clip: rect(0, 1px, 1px, 0)
+}
+
+.spacing {
+  margin-bottom: 2px
+}
+
+.indent, .spacing {
+  text-indent: 50px
 }

@@ -25,7 +25,11 @@ gulp.task('mustache', function() {
       header: 'mustache/partials/header.mustache',
       footer: 'mustache/partials/footer.mustache',
       begin: 'mustache/partials/cases/begin.mustache',
-      end: 'mustache/partials/cases/end.mustache'
+      end: 'mustache/partials/cases/end.mustache',
+      image: 'mustache/partials/cases/image.mustache',
+      title: 'mustache/partials/cases/title.mustache',
+      subtitle: 'mustache/partials/cases/subtitle.mustache',
+      text: 'mustache/partials/cases/text.mustache'
     }))
     // .pipe(uglifyHTML({
     //   collapseWhitespace: true

@@ -90,7 +90,148 @@
     "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
     "name" : "gluten",
     "role" : "Concept, UI & UX design",
-    "summarize" : "A project created out of a pure necessity to help celiacs around the world, like myself, with their disease. Gluten is based in the experience of celiacs like my sister and I, who have been suffering problems related to that disorder in their day to day life."
+    "summarize" : {
+      "text" : "A project created out of a pure necessity to help celiacs around the world, like myself, with their disease. <span class='dot'>Gluten</span> is based in the experience of celiacs like my sister and I, who have been suffering problems related to that disorder in their day to day life.",
+      "image" : {
+        "link" : "images/projects/gluten/summarize.png",
+        "quote" : "Featuring the final result of the product with the scanner, the statistics and the mood screens."
+      }
+    },
+
+    "story" : {
+      "title" : "story",
+      "paragraph" : [
+        {
+          "text" : "<span class='dot'>Gluten</span> is my most personal project yet, the representation of a disease I've had for the last 10 years of my life. The personal knowledge acquired after having to read ingredients from all the products in a supermarket without any help in the labeling, or the difficulty to find food in a restaurant's menu. After asking different people that were facing the same problem, the idea of this product was born."
+        },
+        {
+          "text" : "Although the knowledge of what gluten is, or what gluten causes has increased in the last few years in the general population, there's still a lot of unknown. <span class='dot'>Gluten</span> needed to solve three main issues every celiac faces — scan products and get the gluten concentration, track what has been eaten during the day, presenting the statistics in an understandable way, and a finder of services that offered gluten free options."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/gluten/story.png",
+        "quote" : "Featuring the finding of services around and a happy reaction during dinner."
+      }
+    },
+
+    "solution" : {
+      "title" : "solution",
+      "paragraph" : [
+        {
+          "text" : "There was a lot of concept work for <span class='dot'>Gluten</span>. The decision to design an app instead of a website was accessibility. The app needed to do three things the best and easiest way possible. As mentioned above, those three solutions were a services map, a scanner and a mood tracker with statistics. In the concept phase it was discarted to do more than one app because the features were small and compact enough."
+        },
+        {
+          "text" : "Inside the app, it was decided to use a hamburger menu instead of a tab bar — the main reasoning for that being the fact that each feature was separate enough for it to contain its own private space, as well as no need to combine more than one when using them. It was shown after some surveys that the users would use the app in periods and for a concrete action, either find a service, or scan a product, or register your mood."
+        },
+        {
+          "text" : "The guidelines in style of the app were yet to be defined. It was clear that it would feature an accessible design, but basic things like which was the first screen or which color the user would understand better still remained unknown."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/gluten/image.png",
+        "quote" : "One of the first sketches I did to kick off the project."
+      }
+    },
+
+    "flow" : {
+      "title" : "user flow",
+      "paragraph" : [
+        {
+          "text" : "This step began to form the flow of the app, and with the clear intention of using a hamburguer menu, the separation of screens was clear from the beginning."
+        },
+        {
+          "text" : "With this in mind, it was decided that the first screen the user would see when entering the app after the first onboarding and registration was the mood selection and statistics. From there, said user would have access to the main menu and to register and see mood. The reasoning behing this was the usage factor. The probability of:"
+        },
+        {
+          "text" : "• The user finding a service around was at most 3 a day.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "• The user registering her mood was at most 5 a day.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "• The user scanning a product could be at any time.",
+          "class" : "indent"
+        },
+        {
+          "text" : "The fluctuation of the “any time” case marked certain uncertanty, but after computing the values over the course of a month, a steady 5 times a day beated the scanning value which would vary between 3 - 9 a day. It’s obvious that the app would register the last screen seen and save the position of the user, as well as some patrons on hours of the day to check which screen the user should be in. Tuesday after dinner would make sense to be in the mood screen more than in the finding a service one."
+        },
+        {
+          "text" : "Needs to be said that a login will be required for the user after the onboarding, just with a name, an optional gender and a password to prevent any sensible data to be stolen or seen by someone else. That, will also allow upcoming features like reviews or login from the Gluten website to add a mood or display statistics to be easier to implement."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/gluten/flow.png",
+        "quote" : "A small extraction of the user flow when entering the app, with different possibilities."
+      }
+    },
+
+    "mood" : {
+      "title" : "mood selection",
+      "paragraph" : [
+        {
+          "text" : "The mood and statistics section needed to be clear and easy to use. Just 3 steps — selecting how the user was feeling, what she ate, and some additional information like notes, fatigue, allergic reaction or possible medication taken during the entered period. This was a crucial step in terms of easiness — having to input every meal was a thing that would be difficult if the screen was messy in terms of design and usability, for that, a big font was selected, as well as some graphics to choose an easy representation of the mood."
+        },
+        {
+          "text" : "Related to that, the statistics section also needed to be as clean as possible for the user to see a clear overview and information of every selected day. That would help export the information for the user's dietitian as well as give a clear vision on how the diet was being made. For that, it contained a graph that would allow users to select the day in which the interest resided, and inside every day, there would be an overview of every input meal — morning, lunch, dinner as the main key points."
+        },
+        {
+          "text" : "As a side point, the reason to use faces within the statistics section of the mood selection was to give a more personal feel to the app, since this would be something you would have to see every single day. Such part, would be asked in the onboarding and could be changed in the settings page, being able to leave it blank for other illustrations to appear."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/gluten/mood.png"
+      }
+    },
+
+    "scanner" : {
+      "title" : "scanner",
+      "paragraph" : [
+        {
+          "text" : "Starting with the scanner, it was clear that it had to contain the concentration of gluten of the product, with some additional information to it — the risk of gluten in the factory the product was made and the calories were some examples of it. The features in this section could of course grow, but there was no need for now to include them, as this is the basic question a celiac faces when wondering about a specific product."
+        },
+        {
+          "text" : "The scanner had to contain the already scanned products, showing an icon for each one of them. This icon would exist in a database with all the information given with it. Finally, the scanner's camera would work automatically, without the need of the user to press any button at all."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/gluten/scanner.png"
+      }
+    },
+
+    "services" : {
+      "title" : "services",
+      "paragraph" : [
+        {
+          "text" : "Jumping to the services, it was easy to conceptualize a map with all the information of the service you were looking for. It was important to present, in an intuitive manner,  and directly in the map, which service was around — a bakery, pizzeria, cake shop or a burger place are some of the examples."
+        },
+        {
+          "text" : "When selecting one of the restaurants, the app would present more actions like the possibility to call, save the service or get directions there, as well as some additional information like product specialities."
+        },
+        {
+          "text" : "Because there isn't a database with all the necessary information yet, the icons can be created when adding a restaurant or a product into it. Part of the challenge of creating this product resides basically in the lack of information in the field — and so does the disease."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/gluten/services.png"
+      }
+    },
+
+    "landing" : {
+      "title" : "landing page",
+      "paragraph" : [
+        {
+          "text" : "In terms of visual design, the last piece was the landing page which would tell the user to download the app by showing the main benefits of it."
+        },
+        {
+          "text" : "The main goal was that it had to be fun enough for the user to remember — however, because the value of the app was big enough for the user to download it right away, the importance was to show some of its screenshots to present the potential of the product."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/gluten/landing.png"
+      }
+    }
   },
 
   "social" : [

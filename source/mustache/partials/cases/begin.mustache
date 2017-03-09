@@ -13,6 +13,19 @@
         <h2>{{ name }}<span class='spaced dot'>.</span></h2>
         <img class='path' src='./images/general/path.svg'>
         <h3 class='role'>{{ role }}</h3>
-        <p>{{{ summarize }}}</p>
+        {{# summarize }}
+        <p>{{{ text }}}</p>
+        {{/ summarize }}
       </div>
     </header>
+    {{# summarize }}
+    {{> image }}
+    {{/ summarize }}
+    {{# story }}
+    {{> title }}
+    {{> image }}
+    {{/ story }}
+    {{# solution }}
+    {{> title }}
+    {{> image }}
+    {{/ solution }}

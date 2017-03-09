@@ -344,9 +344,12 @@ footer .inner .social .social-icon {
   line-height: 28px;
   width: 525px;
 }
+.case .bottom-noise {
+  opacity: 0;
+}
 .case .indicator {
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: 0;
   transform: rotateZ(90deg);
 }
@@ -370,7 +373,7 @@ footer .inner .social .social-icon {
 }
 .case header .inner {
   position: relative;
-  margin: 150px 15% 200px 15%;
+  margin: 150px 15% 0px 15%;
 }
 .case header .inner h2 {
   font: 100px Gilroy;
@@ -397,7 +400,60 @@ footer .inner .social .social-icon {
   font: 17px Gilroy;
   letter-spacing: -0.5px;
   line-height: 25px;
-  width: 625px;
+  width: 725px;
+}
+.image {
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+.image img {
+  object-fit: cover;
+  width: 100%;
+}
+.image p {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 14px Gilroy;
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  color: #e6e5e6;
+  text-align: center;
+}
+.title .inner {
+  position: relative;
+  margin: 0px 15% 0px 15%;
+}
+.title .inner h3 {
+  font: 50px Gilroy;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  margin-bottom: 10px;
+}
+.title .inner p {
+  font: 17px Gilroy;
+  letter-spacing: -0.5px;
+  line-height: 25px;
+  width: 725px;
+  margin-bottom: 15px;
+}
+.subtitle .inner {
+  position: relative;
+  margin: 0px 18% 0px 18%;
+}
+.subtitle .inner h4 {
+  font: 30px Gilroy;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 12.5px;
+}
+.text {
+  font: 17px Gilroy;
+  letter-spacing: -0.5px;
+  line-height: 25px;
+  width: 725px;
+  margin-bottom: 15px;
 }
 *,
 html {
@@ -407,6 +463,10 @@ html {
 html,
 body {
   margin: 0 auto;
+}
+body {
+  background-color: #fff;
+  z-index: 1;
 }
 a {
   text-decoration: none;
@@ -425,6 +485,7 @@ button,
 h1,
 h2,
 h3,
+h4,
 p,
 a {
   font-smooth: always;
@@ -433,6 +494,7 @@ a {
 h1,
 h2,
 h3,
+h4,
 p {
   cursor: default;
   color: #342a34;
@@ -444,4 +506,11 @@ p {
   top: 0;
   left: 0;
   clip: rect(0, 1px, 1px, 0);
+}
+.spacing {
+  margin-bottom: 2px;
+}
+.indent,
+.spacing {
+  text-indent: 50px;
 }
