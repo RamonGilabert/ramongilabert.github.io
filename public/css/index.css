@@ -373,7 +373,7 @@ footer .inner .social .social-icon {
 }
 .case header .inner {
   position: relative;
-  margin: 150px 15% 0px 15%;
+  margin: 200px 15% 0px 15%;
 }
 .case header .inner h2 {
   font: 100px Gilroy;
@@ -403,8 +403,8 @@ footer .inner .social .social-icon {
   width: 725px;
 }
 .image {
-  padding-top: 150px;
-  padding-bottom: 200px;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 .image img {
   object-fit: cover;
@@ -454,6 +454,44 @@ footer .inner .social .social-icon {
   line-height: 25px;
   width: 725px;
   margin-bottom: 15px;
+}
+.visually .inner {
+  position: relative;
+  margin: 0px 18% 0px 18%;
+}
+.visually .inner h4 {
+  font: 30px Gilroy;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 12.5px;
+}
+.visually .colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.visually .colors .color {
+  position: relative;
+  width: 33.3%;
+  height: 300px;
+}
+.visually .colors .color p {
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  font: 17px Gilroy;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+.visually .colors .four {
+  width: 25%;
+}
+.visually .colors .last p {
+  color: #d2d2d2;
 }
 *,
 html {

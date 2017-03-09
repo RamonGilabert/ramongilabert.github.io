@@ -29,6 +29,7 @@ gulp.task('mustache', function() {
       image: 'mustache/partials/cases/image.mustache',
       title: 'mustache/partials/cases/title.mustache',
       subtitle: 'mustache/partials/cases/subtitle.mustache',
+      visually: 'mustache/partials/cases/visually.mustache',
       text: 'mustache/partials/cases/text.mustache'
     }))
     // .pipe(uglifyHTML({

@@ -231,6 +231,37 @@
       "image" : {
         "link" : "images/projects/gluten/landing.png"
       }
+    },
+
+    "visually" : {
+      "title" : "visually",
+      "paragraph" : [
+        {
+          "text" : "The first flow to be prototyped was the scanner, it featured a white text over dark palette. After some user research, people started to ask why the dark color, questioning if it would make easier and clearer to understand the overall app and information. After some consideration and tests with middle dark palettes and clear ones, the users preferred a white theme with sharp text over it."
+        },
+        {
+          "text" : "Another thing that visually changed was the font, being at first smaller and presenting more information in the screens. User research made the app more simplistic and straight to the point."
+        }
+      ],
+      "colors" : [
+        {
+          "code" : "#6BCDFF",
+          "class" : "four"
+        },
+        {
+          "code" : "#A9F2FF",
+          "class" : "four"
+        },
+        {
+          "code" : "#FF9538",
+          "class" : "four"
+        },
+        {
+          "code" : "#FCFEFF",
+          "class" : "four",
+          "position" : "last"
+        }
+      ]
     }
   },
 
