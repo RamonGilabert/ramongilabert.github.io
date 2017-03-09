@@ -147,7 +147,7 @@
           "text" : "This step began to form the flow of the app, and with the clear intention of using a hamburguer menu, the separation of screens was clear from the beginning."
         },
         {
-          "text" : "With this in mind, it was decided that the first screen the user would see when entering the app after the first onboarding and registration was the mood selection and statistics. From there, said user would have access to the main menu and to register and see mood. The reasoning behing this was the usage factor. The probability of:"
+          "text" : "With this in mind, it was decided that the first screen the user would see when entering the app after the first onboarding and registration was the <span class='dot'>mood selection</span> and <span class='dot'>statistics</span>. From there, said user would have access to the main menu and to register and see mood. The reasoning behing this was the usage factor. The probability of:"
         },
         {
           "text" : "• The user finding a service around was at most 3 a day.",
@@ -544,7 +544,7 @@
       },
       "paragraph" : [
         {
-          "text" : "After presenting it to an award and having one one for the best thesis of the year, the next step for <span class='dot'>Lights</span> as a project is to start it over. Not as in, remove and restart — the base is really good. What I want to say is that the current state of Lights represents what can be done in the internet of things, and the infraestructure created for this project could be ported to any kind of device. A thermostat, a window, a table, a chair. That’s the next step for this project, evaluate what can be done, see what’s next with it."
+          "text" : "After presenting it to an award and having one one for the best thesis of the year, the next step for <span class='dot'>Lights</span> as a project is to start it over. Not as in, remove and restart — the base is really good. What I want to say is that the current state of <span class='dot'>Lights</span> represents what can be done in the internet of things, and the infraestructure created for this project could be ported to any kind of device. A thermostat, a window, a table, a chair. That’s the next step for this project, evaluate what can be done, see what’s next with it."
         },
         {
           "text" : "A couple of people from <span class='dot'>Catalonia</span> and <span class='dot'>Norway</span> proposed to do a Kickstarter campaign, which might be also an option.",
@@ -610,7 +610,7 @@
 
       "image" : {
         "link" : "images/projects/revolution/summarize.jpg",
-        "quote" : "Bright over dark, the theme that followed after successfull user research. With different color combinations for the user to choose.           "
+        "quote" : "Bright over dark, the theme that followed after successfull user research. With different color combinations for the user to choose."
       }
     },
 
@@ -618,10 +618,10 @@
       "title" : "story",
       "paragraph" : [
         {
-          "text" : "Revolution is a project born out of necessity. Being new to a city it’s never an easy task. Knowing nobody to play sports, not knowing where events are happening. Every field has its own system to gather people together. Meetup for meetings, Eventbrite for conferences, Facebook for everything else. However, when you are not connected to that people that organize events in Facebook, or you are not quite a fan of this solution for it’s inmensity in that field, you are lost in the sea of doubt."
+          "text" : "<span class='dot'>Revolution</span> is a project born out of necessity. Being new to a city it’s never an easy task. Knowing nobody to play sports, not knowing where events are happening. Every field has its own system to gather people together. Meetup for meetings, Eventbrite for conferences, Facebook for everything else. However, when you are not connected to that people that organize events in Facebook, or you are not quite a fan of this solution for it’s inmensity in that field, you are lost in the sea of doubt."
         },
         {
-          "text" : "The main goal for Revolution is to allow its users to find people that want to play the same sport as you do. Those people create an event, and you can just sign up for it. Before the game, you can start connecting within an open chat. A gathering social revolution."
+          "text" : "The main goal for <span class='dot'>Revolution</span> is to allow its users to find people that want to play the same sport as you do. Those people create an event, and you can just sign up for it. Before the game, you can start connecting within an open chat. A gathering social revolution."
         }
       ],
       "image" : {
@@ -705,7 +705,7 @@
           "class" : "indent"
         },
         {
-          "text" : "Those were the questions that the app needed to solve in the find your sports section. For that, the solution included a step by step selection — to make it less crowded in the screen. With that in mind, three steps were create. One to select your sport, a map or list to select the location, and a joint screen to see all your events. In terms of selecting a sport, it needed to be intuitive for the user, and also, needed to include as much sports as possible for any need that a user would have. A simple map with an option of having a list ordered by distance, would be easy enough for the user to start an event."
+          "text" : "Those were the questions that the app needed to solve in the <span class='dot'>find your sports</span> section. For that, the solution included a step by step selection — to make it less crowded in the screen. With that in mind, three steps were create. One to select your sport, a map or list to select the location, and a joint screen to see all your events. In terms of selecting a sport, it needed to be intuitive for the user, and also, needed to include as much sports as possible for any need that a user would have. A simple map with an option of having a list ordered by distance, would be easy enough for the user to start an event."
         }
       ],
       "image" : {
@@ -717,7 +717,7 @@
       "title" : "tracking",
       "paragraph" : [
         {
-          "text" : "As stated above, the app would know when to show the tracker to the user. Either when a sport was about to start, or when there was tracking information already in place. The tracking of a user would consist of a two screen process. In the called feed, the user would see all the past tracked results, with information like calories burned, BPM mean or time. It would also see a graphic of the intensity based over time for that specific workout."
+          "text" : "As stated above, the app would know when to show the tracker to the user. Either when a sport was about to start, or when there was tracking information already in place. The tracking of a user would consist of a two screen process. In the called <span class='dot'>feed</span>, the user would see all the past tracked results, with information like calories burned, BPM mean or time. It would also see a graphic of the intensity based over time for that specific workout."
         },
         {
           "text" : "By selecting an active tracking, the user would see the amount of miles she had done during that workout, and some additional information like the one stated above. The user would be able to track different events, or just start a new tracking from the feed. Even though there’s a lot of different sports, the tracking would be as simple as pressing a button for now, adding specific features for each one of them later on. "
@@ -786,7 +786,7 @@
       "title" : "revolution",
       "paragraph" : [
         {
-          "text" : "The name Revolution is born out of the idea of creating a new step forward in the sports world, making it as easy as it can be to join any event, in any city in the world, with a self driven community."
+          "text" : "The name <span class='dot'>Revolution</span> is born out of the idea of creating a new step forward in the sports world, making it as easy as it can be to join any event, in any city in the world, with a self driven community."
         }
       ]
     },
@@ -798,10 +798,10 @@
       },
       "paragraph" : [
         {
-          "text" : "Revolution comes from a personal need when being new to a city — and after scratching the surface of what it can be done with this concept, it’s easy to see more things getting attached to this main idea. A sports creation section is basic, and a continuous improvement over the main columns of the app is something that must be done."
+          "text" : "<span class='dot'>Revolution</span> comes from a personal need when being new to a city — and after scratching the surface of what it can be done with this concept, it’s easy to see more things getting attached to this main idea. A sports creation section is basic, and a continuous improvement over the main columns of the app is something that must be done."
         },
         {
-          "text" : "The development of this app will happen at some point, after Gluten is released.",
+          "text" : "The development of this app will happen at some point, after <span class='dot'>Gluten</span> is released.",
           "class" : "paragraph-space"
         }
       ]

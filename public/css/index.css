@@ -442,7 +442,6 @@ footer .inner .social .social-icon {
 .image {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #fff;
 }
 .image img {
   object-fit: cover;
@@ -462,13 +461,12 @@ footer .inner .social .social-icon {
 .title .inner {
   position: relative;
   margin: 0px 15% 0px 15%;
-  background-color: #fff;
 }
 .title .inner h3 {
   font: 50px Gilroy;
   font-weight: 700;
   letter-spacing: -2.5px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .title .inner p {
   font: 17px Gilroy;
@@ -480,7 +478,6 @@ footer .inner .social .social-icon {
 .subtitle .inner {
   position: relative;
   margin: 0px 18% 0px 18%;
-  background-color: #fff;
 }
 .subtitle .inner h4 {
   font: 30px Gilroy;
@@ -505,7 +502,6 @@ footer .inner .social .social-icon {
   justify-content: space-around;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #fff;
 }
 .visually .colors .color {
   position: relative;
@@ -529,7 +525,6 @@ footer .inner .social .social-icon {
 }
 .quote {
   margin-bottom: 200px;
-  background-color: #fff;
 }
 .text {
   width: 750px;
@@ -537,7 +532,6 @@ footer .inner .social .social-icon {
   letter-spacing: -0.4px;
   line-height: 170%;
   margin-bottom: 20px;
-  background-color: #fff;
 }
 .text a {
   color: #712367;
