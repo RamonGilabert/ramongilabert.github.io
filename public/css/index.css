@@ -46,6 +46,10 @@
 .spaced {
   transform: translateY(-50%);
 }
+.space {
+  margin-top: 7.5px;
+  margin-bottom: 5px;
+}
 .circle {
   position: absolute;
   top: 0;
@@ -440,21 +444,7 @@ footer .inner .social .social-icon {
   font: 30px Gilroy;
   font-weight: 700;
   letter-spacing: -1.5px;
-  margin-bottom: 12.5px;
-}
-.text {
-  font: 17px Gilroy;
-  letter-spacing: -0.4px;
-  line-height: 200%;
-  width: 725px;
-  margin-bottom: 30px;
-}
-.spacing {
-  margin-bottom: 2px;
-}
-.indent,
-.spacing {
-  text-indent: 50px;
+  margin-bottom: 10px;
 }
 .visually .inner {
   position: relative;
@@ -493,6 +483,25 @@ footer .inner .social .social-icon {
 }
 .visually .colors .last p {
   color: #d2d2d2;
+}
+.quote {
+  margin-bottom: 200px;
+}
+.text {
+  width: 750px;
+  font: 17px Gilroy;
+  letter-spacing: -0.4px;
+  line-height: 170%;
+  margin-bottom: 20px;
+}
+.text a {
+  color: #712367;
+}
+.spacing {
+  margin-bottom: -2px;
+}
+.indent {
+  text-indent: 50px;
 }
 *,
 html {

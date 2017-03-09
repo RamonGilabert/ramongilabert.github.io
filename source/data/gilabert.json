@@ -96,7 +96,7 @@
           "text" : "A project created out of a pure necessity to help celiacs around the world, like myself, with their disease. <span class='dot'>Gluten</span> is based in the experience of celiacs like my sister and I, who have been suffering problems related to that disorder in their day to day life."
         }
       ],
-      
+
       "image" : {
         "link" : "images/projects/gluten/summarize.png",
         "quote" : "Featuring the final result of the product with the scanner, the statistics and the mood screens."
@@ -149,11 +149,11 @@
         },
         {
           "text" : "• The user finding a service around was at most 3 a day.",
-          "class" : "spacing"
+          "class" : "spacing indent"
         },
         {
           "text" : "• The user registering her mood was at most 5 a day.",
-          "class" : "spacing"
+          "class" : "spacing indent"
         },
         {
           "text" : "• The user scanning a product could be at any time.",
@@ -274,6 +274,45 @@
       "paragraph" : [
         {
           "text" : "<span class='dot'>Gluten</span> is my most personal project. A project that represents who I am and what I have been for the past 10 years. It's the ultimate solution to years of challenges I've faced with this disease. Hopefully now, with this solution, thousands of people will be able to tell right away how they are or what they eat, and feel better with themselves. Calling a product what cannot be eaten might seemcontroversial, but this is the only gluten a celiac can take."
+        }
+      ]
+    },
+
+    "next" : {
+      "title" : "what's next",
+      "path" : {
+        "class" : "space"
+      },
+      "paragraph" : [
+        {
+          "text" : "<span class='dot'>Gluten</span> is a project that’s been in the making for 8 years. As mentioned above, this set of features marks the MVP for a product that needs much iteration on. From adding many products and services into a growing database, to give users voice to rate their own experiences."
+        },
+        {
+          "text" : "<span class='dot'>Gluten</span> is a project that will start development as soon as I hit the United States. With that, many details will start to appear, and the challenge will be to iterate over that."
+        }
+      ]
+    },
+
+    "toolkit" : {
+      "title" : "toolkit",
+      "path" : {
+        "class" : "space"
+      },
+      "paragraph" : [
+        {
+          "text" : "<a href='https://shop.dribbble.com/products/gameplan-journal?variant=1006322845' target='_blank'>Pen and paper</a> for the concept.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "<a href='https://sketchapp.com' target='_blank'>Sketch</a> for the app.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "<a href='http://www.adobe.com/products/photoshop.html' target='_blank'>Photoshop</a> for the site.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "<a href='http://principleformac.com' target='_blank'>Principle</a> for early prototypes."
         }
       ]
     }

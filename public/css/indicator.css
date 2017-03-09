@@ -28,6 +28,10 @@
 .spaced {
   transform: translateY(-50%);
 }
+.space {
+  margin-top: 7.5px;
+  margin-bottom: 5px;
+}
 .circle {
   position: absolute;
   top: 0;
