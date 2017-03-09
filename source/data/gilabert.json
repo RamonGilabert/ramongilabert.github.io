@@ -13,19 +13,19 @@
       {
         "name" : "gluten",
         "image" : "images/projects/gluten/myself.png",
-        "link" : "#",
+        "link" : "./gluten",
         "role" : "Concept, UI & UX design"
       },
       {
         "name" : "lights",
         "image" : "images/projects/lights/myself.png",
-        "link" : "#",
+        "link" : "./lights",
         "role" : "Concept, UI & UX design"
       },
       {
         "name" : "revolution",
         "image" : "images/projects/revolution/myself.png",
-        "link" : "#",
+        "link" : "./revolution",
         "role" : "Concept, Design, Development, Electronics"
       }
     ],
@@ -322,12 +322,12 @@
 
     "back" : {
       "title" : "revolution",
-      "link" : "#"
+      "link" : "./revolution"
     },
 
     "forward" : {
       "title" : "lights",
-      "link" : "#"
+      "link" : "./lights"
     }
   },
 
@@ -587,12 +587,12 @@
 
     "back" : {
       "title" : "gluten",
-      "link" : "#"
+      "link" : "./gluten"
     },
 
     "forward" : {
       "title" : "revolution",
-      "link" : "#"
+      "link" : "./revolution"
     }
   },
 
@@ -834,12 +834,12 @@
 
     "back" : {
       "title" : "lights",
-      "link" : "#"
+      "link" : "./lights"
     },
 
     "forward" : {
       "title" : "gluten",
-      "link" : "#"
+      "link" : "./gluten"
     }
   },
 
