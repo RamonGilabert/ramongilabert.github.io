@@ -390,10 +390,11 @@ footer .inner .social .social-icon {
   width: 525px;
 }
 .case .indicator {
-  position: absolute;
+  position: fixed;
   top: 15px;
   left: 0;
   transform: rotateZ(90deg);
+  z-index: 2;
 }
 .case .indicator a {
   color: #342a34;
@@ -490,7 +491,6 @@ footer .inner .social .social-icon {
 .visually .inner {
   position: relative;
   padding: 0px 18% 0px 18%;
-  background-color: #fff;
 }
 .visually .inner h4 {
   font: 30px Gilroy;
@@ -545,11 +545,11 @@ footer .inner .social .social-icon {
 .paragraph-space {
   margin-bottom: 11px;
 }
-.spacing {
-  margin-bottom: -2px;
-}
 .indent {
   text-indent: 40px;
+}
+.spacing {
+  margin-bottom: 3px !important;
 }
 *,
 html {

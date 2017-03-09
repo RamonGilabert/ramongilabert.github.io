@@ -100,7 +100,7 @@
       ],
 
       "image" : {
-        "link" : "images/projects/gluten/summarize.png",
+        "link" : "images/projects/gluten/summarize.",
         "quote" : "Featuring the final result of the product with the scanner, the statistics and the mood screens."
       }
     },
@@ -116,7 +116,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/story.png",
+        "link" : "images/projects/gluten/story.",
         "quote" : "Featuring the finding of services around and a happy reaction during dinner."
       }
     },
@@ -135,7 +135,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/image.png",
+        "link" : "images/projects/gluten/image.jpg",
         "quote" : "One of the first sketches I did to kick off the project."
       }
     },
@@ -169,7 +169,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/flow.png",
+        "link" : "images/projects/gluten/flow.jpg",
         "quote" : "A small extraction of the user flow when entering the app, with different possibilities."
       }
     },
@@ -188,7 +188,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/mood.png"
+        "link" : "images/projects/gluten/mood.jpg"
       }
     },
 
@@ -203,7 +203,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/scanner.png"
+        "link" : "images/projects/gluten/scanner.jpg"
       }
     },
 
@@ -221,7 +221,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/services.png"
+        "link" : "images/projects/gluten/services.jpg"
       }
     },
 
@@ -236,7 +236,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/landing.png"
+        "link" : "images/projects/gluten/landing.jpg"
       }
     },
 
@@ -344,7 +344,7 @@
       ],
 
       "image" : {
-        "link" : "images/projects/lights/summarize.png",
+        "link" : "images/projects/lights/summarize.jpg",
         "quote" : "The two most important screens in Lights, the starting one and the editing one."
       }
     },
@@ -360,7 +360,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/story.png",
+        "link" : "images/projects/lights/story.jpg",
         "quote" : "The paired screen, the one displayed after the searching for a light was done and it was ready to use."
       }
     },
@@ -392,7 +392,7 @@
           "class" : "spacing indent"
         },
         {
-          "text" : "• The setup of the whole product would be as simple as connecting a light and a hub together.",
+          "text" : "• The setup of the whole product would be as simple as connecting a light and a hub.",
           "class" : "indent"
         },
         {
@@ -403,7 +403,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/image.png",
+        "link" : "images/projects/lights/image.jpg",
         "quote" : "An early image from the process of conceptualizing how the whole product should be."
       }
     },
@@ -422,7 +422,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/server.png",
+        "link" : "images/projects/lights/server.jpg",
         "quote" : "Communications and infroestructure of the platform."
       }
     },
@@ -444,7 +444,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/plugged.png",
+        "link" : "images/projects/lights/plugged.jpg",
         "quote" : "Abstraction of the process of connecting the hub. Each step is thoughtfully placed after the other to have everything ready for the user."
       }
     },
@@ -463,7 +463,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/industrial.png",
+        "link" : "images/projects/lights/industrial.jpg",
         "quote" : "Detail of the lamp from the back, featuring an analog button for all use cases and four screws to fix the position."
       }
     },
@@ -482,7 +482,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/pairing.png"
+        "link" : "images/projects/lights/pairing.jpg"
       }
     },
 
@@ -500,7 +500,7 @@
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/editing.png"
+        "link" : "images/projects/lights/editing.jpg"
       }
     },
 
@@ -586,12 +586,259 @@
     },
 
     "back" : {
-      "title" : "revolution",
+      "title" : "gluten",
       "link" : "#"
     },
 
     "forward" : {
+      "title" : "revolution",
+      "link" : "#"
+    }
+  },
+
+  "revolution" : {
+    "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
+    "title" : "Ramon Gilabert — Revolution",
+    "name" : "revolution",
+    "role" : "Concept, UI & UX Design",
+    "summarize" : {
+      "paragraph" : [
+        {
+          "text" : "Thousands of people move to new cities every day, millions love sports. With so much events going under the radar every day, <span class='dot'>Revolution</span> plans to solve that issue, presenting sports and gatherings around activties to users around the planet. You join an event, the rest is having fun playing it."
+        }
+      ],
+
+      "image" : {
+        "link" : "images/projects/revolution/summarize.jpg",
+        "quote" : "Bright over dark, the theme that followed after successfull user research. With different color combinations for the user to choose.           "
+      }
+    },
+
+    "story" : {
+      "title" : "story",
+      "paragraph" : [
+        {
+          "text" : "Revolution is a project born out of necessity. Being new to a city it’s never an easy task. Knowing nobody to play sports, not knowing where events are happening. Every field has its own system to gather people together. Meetup for meetings, Eventbrite for conferences, Facebook for everything else. However, when you are not connected to that people that organize events in Facebook, or you are not quite a fan of this solution for it’s inmensity in that field, you are lost in the sea of doubt."
+        },
+        {
+          "text" : "The main goal for Revolution is to allow its users to find people that want to play the same sport as you do. Those people create an event, and you can just sign up for it. Before the game, you can start connecting within an open chat. A gathering social revolution."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/revolution/story.jpg",
+        "quote" : "Here goes an image of the project as is now, with a quote in it."
+      }
+    },
+
+    "solution" : {
+      "title" : "solution",
+      "paragraph" : [
+        {
+          "text" : "At first, the goal seems pretty big — an app to solve social sports gathering. But if you think about it, this is a necessity thousands of people face. Within a world where people have more and more difficulties interacting to each other, it’s hard to design something that solves that problem while still giving enough confidence to its users to use it. There’s so many unknowns:"
+        },
+        {
+          "text" : "• Will the group connect in the game? Will they be able to get along?",
+          "class" : "spacing indent"
+        },
+        {
+          "text" : "• Who is able to create sports? How to do it? How to make it appealing?",
+          "class" : "indent"
+        },
+        {
+          "text" : "In order to answer that, the design was focused in confidence, while giving a sportsy look into the app. The concept was to allow big curators of events, such as Nike, Adidas or Puma to be able to create its own competitions within the app, as well as soccer games created by professionals, or even basketball tournements in a random pitch in town."
+        },
+        {
+          "text" : "With all that in mind, the MVP of this product needed to be simple and clear enough for users to trust it, and big corporations to engage with it. The product would feature two main branches at first. One to find a sport and sign up for it, and the other to track your performance. The event creation branch, is being built at the moment. And would be done after the release of the first MVP featuring big names in the sport community."
+        },
+        {
+          "text" : "The design would also include a very image heavy solution for the landing page, in order to make the potential user feel the power that athletes transmit through the pictures."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/revolution/image.jpg",
+        "quote" : "The starting point of revolution, what started it all."
+      }
+    },
+
+    "flow" : {
+      "title" : "user flow",
+      "paragraph" : [
+        {
+          "text" : "As stated above, the app would have two main parts. One to join events, an another to track the user’s performance in such events. The union between them would be obvious. At first, and after the onboarding, the user would be directed to find a sport — that’s because it’s the first time in the app and there’s nothing to track yet. From there, if there’s sports tracked already, the user would be redirected to the statistics and tracking section."
+        },
+        {
+          "text" : "The decision to use a hamburguer menu was basically for the lack of connection between the features in an easy step. If the user is searching sports, she is not tracking her activity, and viceversa. That being said, it’s obvious that, if such user joins an event and wants to track it right away, the app would know that, and would redirect her to the other screen in order for the tracking to begin."
+        },
+        {
+          "text" : "Other than that, the flow would be really simple. There would be three steps to select a sport and just one to start tracking. Finally, in order to save future events, there would be a small section in the app that would allow you to find each event, the chat, and a button to start tracking."
+        },
+        {
+          "text" : "Needs to be added that, in the sport selection, an additional flow passed my mind during the concept phase. What to do first was the question, a map, or a list with a sports? Because the app needed to provide lots of results, and the job of the product would be to have available as many events as possible, it wouldn’t be a good solution to constrain the user to a certain location at first. The app would obviously look at events at the user’s city and provide a list, after the user would select the sport she wanted to play, she would get presented with the map. During concept, the feeling was that if you present a user with a map at the beginning, you are constraining what they opened the app for. That’s why the constrains appear at the end rather than at the beginning."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/revolution/flow.jpg",
+        "quote" : "Abstraction of one of the flows of the app, showing how a user would join a sport."
+      }
+    },
+
+    "find" : {
+      "title" : "find sports",
+      "paragraph" : [
+        {
+          "text" : "There’s some things that we need to keep in mind in order to find the sport and the event you are looking for."
+        },
+        {
+          "text" : "• Which sport does the user want to play?",
+          "class" : "spacing indent"
+        },
+        {
+          "text" : "• Where does the user want to play?",
+          "class" : "spacing indent"
+        },
+        {
+          "text" : "• How does the user join a sport?",
+          "class" : "spacing indent"
+        },
+        {
+          "text" : "• Where do all those sports get saved?",
+          "class" : "indent"
+        },
+        {
+          "text" : "Those were the questions that the app needed to solve in the find your sports section. For that, the solution included a step by step selection — to make it less crowded in the screen. With that in mind, three steps were create. One to select your sport, a map or list to select the location, and a joint screen to see all your events. In terms of selecting a sport, it needed to be intuitive for the user, and also, needed to include as much sports as possible for any need that a user would have. A simple map with an option of having a list ordered by distance, would be easy enough for the user to start an event."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/revolution/find.jpg"
+      }
+    },
+
+    "tracking" : {
+      "title" : "tracking",
+      "paragraph" : [
+        {
+          "text" : "As stated above, the app would know when to show the tracker to the user. Either when a sport was about to start, or when there was tracking information already in place. The tracking of a user would consist of a two screen process. In the called feed, the user would see all the past tracked results, with information like calories burned, BPM mean or time. It would also see a graphic of the intensity based over time for that specific workout."
+        },
+        {
+          "text" : "By selecting an active tracking, the user would see the amount of miles she had done during that workout, and some additional information like the one stated above. The user would be able to track different events, or just start a new tracking from the feed. Even though there’s a lot of different sports, the tracking would be as simple as pressing a button for now, adding specific features for each one of them later on. "
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/revolution/tracking.jpg"
+      }
+    },
+
+    "others" : {
+      "title" : "others",
+      "paragraph" : [
+        {
+          "text" : "I wanted to highlight some other screens that were designed for the app. The menu would follow the overall style making an animation coming from the top. The chat would be as simple as showing bubbles of the users, and the sports collective with future events would follow the tracking feed."
+        },
+        {
+          "text" : "As stated above, the event creation would be done right now by admins, but would be outsourced to people as soon as users got engadged with the product. It would have to also be really simple. Select a sport, a venue and a number of people to join."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/revolution/others.jpg"
+      }
+    },
+
+    "landing" : {
+      "title" : "landing page",
+      "paragraph" : [
+        {
+          "text" : "In terms of visual design, the last piece was the landing page which would tell the user to download the app by showing the main benefits of it. The website needed to be clear and straight to the point, marketing the app as the main concept, and showing the three basic steps to join an event. With that, different images were retouched to give the viewer a feel of power. The darkness of the site, was justified with the idea of giving the athletes and text the most importance."
+        },
+        {
+          "text" : "The images were personally retouched with some blemish removal and some lighting fixing, as well as different background creation and so on. Each image counted with more than 25 layers on top of the original one to give it the same feel."
+        }
+      ],
+      "image" : {
+        "link" : "images/projects/revolution/landing.jpg"
+      }
+    },
+
+    "visually" : {
+      "title" : "visually",
+      "paragraph" : [
+        {
+          "text" : "Visually the first colors that came to mind were dark ones combined with an electric contrast color. Lots of them were tried — green, blue, pink, orange or red, and the one that the users liked the most, in terms of usage was the orange one. Because orange is associated to shine, and the contrast with a dark gray makes it pop a lot, the users preferred to a more conventional solution like green or blue. However, though, because there was some uncertainty at the beginning within the same user research, this could present a opportunity to make themes around the app."
+        },
+        {
+          "text" : "Other than that, it might seem weird the decision to make the app less image heavy as the website is, but I personally wanted to keep it as simple as possible, featuring just the information that needed to be given with the maximum negative space possible — giving clarity to the end user and at the same time trust."
+        }
+      ],
+      "colors" : [
+        {
+          "code" : "#1D181D"
+        },
+        {
+          "code" : "#FF5C42"
+        },
+        {
+          "code" : "#FFFFFF",
+          "position" : "last"
+        }
+      ]
+    },
+
+    "finally" : {
+      "title" : "revolution",
+      "paragraph" : [
+        {
+          "text" : "The name Revolution is born out of the idea of creating a new step forward in the sports world, making it as easy as it can be to join any event, in any city in the world, with a self driven community."
+        }
+      ]
+    },
+
+    "next" : {
+      "title" : "what's next",
+      "path" : {
+        "class" : "space"
+      },
+      "paragraph" : [
+        {
+          "text" : "Revolution comes from a personal need when being new to a city — and after scratching the surface of what it can be done with this concept, it’s easy to see more things getting attached to this main idea. A sports creation section is basic, and a continuous improvement over the main columns of the app is something that must be done."
+        },
+        {
+          "text" : "The development of this app will happen at some point, after Gluten is released.",
+          "class" : "paragraph-space"
+        }
+      ]
+    },
+
+    "toolkit" : {
+      "title" : "toolkit",
+      "path" : {
+        "class" : "space"
+      },
+      "paragraph" : [
+        {
+          "text" : "<a href='https://shop.dribbble.com/products/gameplan-journal?variant=1006322845' target='_blank'>Pen and paper</a> for the concept.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "<a href='http://www.adobe.com/products/experience-design.html' target='_blank'>Adobe XD</a> for the app.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "<a href='http://www.adobe.com/products/photoshop.html' target='_blank'>Photoshop</a> for the landing and the retouch.",
+          "class" : "spacing"
+        },
+        {
+          "text" : "<a href='http://principleformac.com' target='_blank'>Principle</a> for the early prototypes.",
+          "class" : "spacing"
+        }
+      ]
+    },
+
+    "back" : {
       "title" : "lights",
+      "link" : "#"
+    },
+
+    "forward" : {
+      "title" : "gluten",
       "link" : "#"
     }
   },
