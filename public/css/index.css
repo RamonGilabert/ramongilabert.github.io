@@ -396,12 +396,6 @@ footer .inner .social .social-icon {
   color: #e6e5e6;
   letter-spacing: -0.4px;
 }
-.case header .inner p {
-  font: 17px Gilroy;
-  letter-spacing: -0.5px;
-  line-height: 25px;
-  width: 725px;
-}
 .image {
   margin-top: 200px;
   margin-bottom: 200px;
@@ -450,10 +444,17 @@ footer .inner .social .social-icon {
 }
 .text {
   font: 17px Gilroy;
-  letter-spacing: -0.5px;
-  line-height: 25px;
+  letter-spacing: -0.4px;
+  line-height: 200%;
   width: 725px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+.spacing {
+  margin-bottom: 2px;
+}
+.indent,
+.spacing {
+  text-indent: 50px;
 }
 .visually .inner {
   position: relative;
@@ -544,11 +545,4 @@ p {
   top: 0;
   left: 0;
   clip: rect(0, 1px, 1px, 0);
-}
-.spacing {
-  margin-bottom: 2px;
-}
-.indent,
-.spacing {
-  text-indent: 50px;
 }

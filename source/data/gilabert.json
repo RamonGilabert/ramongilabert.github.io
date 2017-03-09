@@ -91,7 +91,12 @@
     "name" : "gluten",
     "role" : "Concept, UI & UX design",
     "summarize" : {
-      "text" : "A project created out of a pure necessity to help celiacs around the world, like myself, with their disease. <span class='dot'>Gluten</span> is based in the experience of celiacs like my sister and I, who have been suffering problems related to that disorder in their day to day life.",
+      "paragraph" : [
+        {
+          "text" : "A project created out of a pure necessity to help celiacs around the world, like myself, with their disease. <span class='dot'>Gluten</span> is based in the experience of celiacs like my sister and I, who have been suffering problems related to that disorder in their day to day life."
+        }
+      ],
+      
       "image" : {
         "link" : "images/projects/gluten/summarize.png",
         "quote" : "Featuring the final result of the product with the scanner, the statistics and the mood screens."
