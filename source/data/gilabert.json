@@ -12,19 +12,19 @@
     "projects" : [
       {
         "name" : "gluten",
-        "image" : "./images/projects/gluten/myself.png",
+        "image" : "images/projects/gluten/myself.png",
         "link" : "./gluten",
         "role" : "Concept, UI & UX design"
       },
       {
         "name" : "lights",
-        "image" : "./images/projects/lights/myself.png",
+        "image" : "images/projects/lights/myself.png",
         "link" : "./lights",
         "role" : "Concept, UI & UX design"
       },
       {
         "name" : "revolution",
-        "image" : "./images/projects/revolution/myself.png",
+        "image" : "images/projects/revolution/myself.png",
         "link" : "./revolution",
         "role" : "Concept, Design, Development, Electronics"
       }
@@ -40,7 +40,7 @@
           "text" : "<a href='http://puzzles.design' target='_blank'><span class='dot'>Puzzles</span></a> iOS 10 UI kit."
         },
         {
-          "text" : "I <span class='dot'>retouch</span> ./images for fun."
+          "text" : "I <span class='dot'>retouch</span> images for fun."
         }
       ],
 
@@ -100,7 +100,7 @@
       ],
 
       "image" : {
-        "link" : "./images/projects/gluten/summarize.",
+        "link" : "images/projects/gluten/summarize.jpg",
         "quote" : "Featuring the final result of the product with the scanner, the statistics and the mood screens."
       }
     },
@@ -116,7 +116,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/gluten/story.",
+        "link" : "images/projects/gluten/story.jpg",
         "quote" : "Featuring the finding of services around and a happy reaction during dinner."
       }
     },
@@ -135,7 +135,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/gluten/image.jpg",
+        "link" : "images/projects/gluten/image.jpg",
         "quote" : "One of the first sketches I did to kick off the project."
       }
     },
@@ -169,7 +169,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/gluten/flow.jpg",
+        "link" : "images/projects/gluten/flow.jpg",
         "quote" : "A small extraction of the user flow when entering the app, with different possibilities."
       }
     },
@@ -188,7 +188,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/gluten/mood.jpg"
+        "link" : "images/projects/gluten/mood.jpg"
       }
     },
 
@@ -203,7 +203,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/gluten/scanner.jpg"
+        "link" : "images/projects/gluten/scanner.jpg"
       }
     },
 
@@ -221,7 +221,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/gluten/services.jpg"
+        "link" : "images/projects/gluten/services.jpg"
       }
     },
 
@@ -236,7 +236,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/gluten/landing.jpg"
+        "link" : "images/projects/gluten/landing.jpg"
       }
     },
 
@@ -344,7 +344,7 @@
       ],
 
       "image" : {
-        "link" : "./images/projects/lights/summarize.jpg",
+        "link" : "images/projects/lights/summarize.jpg",
         "quote" : "The two most important screens in Lights, the starting one and the editing one."
       }
     },
@@ -360,7 +360,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/lights/story.jpg",
+        "link" : "images/projects/lights/story.jpg",
         "quote" : "The paired screen, the one displayed after the searching for a light was done and it was ready to use."
       }
     },
@@ -403,7 +403,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/lights/image.jpg",
+        "link" : "images/projects/lights/image.jpg",
         "quote" : "An early image from the process of conceptualizing how the whole product should be."
       }
     },
@@ -422,7 +422,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/lights/server.jpg",
+        "link" : "images/projects/lights/server.jpg",
         "quote" : "Communications and infroestructure of the platform."
       }
     },
@@ -444,7 +444,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/lights/plugged.jpg",
+        "link" : "images/projects/lights/plugged.jpg",
         "quote" : "Abstraction of the process of connecting the hub. Each step is thoughtfully placed after the other to have everything ready for the user."
       }
     },
@@ -463,7 +463,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/lights/industrial.jpg",
+        "link" : "images/projects/lights/industrial.jpg",
         "quote" : "Detail of the lamp from the back, featuring an analog button for all use cases and four screws to fix the position."
       }
     },
@@ -482,7 +482,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/lights/pairing.jpg"
+        "link" : "images/projects/lights/pairing.jpg"
       }
     },
 
@@ -500,7 +500,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/lights/editing.jpg"
+        "link" : "images/projects/lights/editing.jpg"
       }
     },
 
@@ -609,7 +609,7 @@
       ],
 
       "image" : {
-        "link" : "./images/projects/revolution/summarize.jpg",
+        "link" : "images/projects/revolution/summarize.jpg",
         "quote" : "Bright over dark, the theme that followed after successfull user research. With different color combinations for the user to choose.           "
       }
     },
@@ -625,7 +625,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/revolution/story.jpg",
+        "link" : "images/projects/revolution/story.jpg",
         "quote" : "Here goes an image of the project as is now, with a quote in it."
       }
     },
@@ -655,7 +655,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/revolution/image.jpg",
+        "link" : "images/projects/revolution/image.jpg",
         "quote" : "The starting point of revolution, what started it all."
       }
     },
@@ -677,7 +677,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/revolution/flow.jpg",
+        "link" : "images/projects/revolution/flow.jpg",
         "quote" : "Abstraction of one of the flows of the app, showing how a user would join a sport."
       }
     },
@@ -709,7 +709,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/revolution/find.jpg"
+        "link" : "images/projects/revolution/find.jpg"
       }
     },
 
@@ -724,7 +724,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/revolution/tracking.jpg"
+        "link" : "images/projects/revolution/tracking.jpg"
       }
     },
 
@@ -739,7 +739,7 @@
         }
       ],
       "image" : {
-        "link" : "./images/projects/revolution/others.jpg"
+        "link" : "images/projects/revolution/others.jpg"
       }
     },
 
@@ -747,14 +747,14 @@
       "title" : "landing page",
       "paragraph" : [
         {
-          "text" : "In terms of visual design, the last piece was the landing page which would tell the user to download the app by showing the main benefits of it. The website needed to be clear and straight to the point, marketing the app as the main concept, and showing the three basic steps to join an event. With that, different ./images were retouched to give the viewer a feel of power. The darkness of the site, was justified with the idea of giving the athletes and text the most importance."
+          "text" : "In terms of visual design, the last piece was the landing page which would tell the user to download the app by showing the main benefits of it. The website needed to be clear and straight to the point, marketing the app as the main concept, and showing the three basic steps to join an event. With that, different images were retouched to give the viewer a feel of power. The darkness of the site, was justified with the idea of giving the athletes and text the most importance."
         },
         {
-          "text" : "The ./images were personally retouched with some blemish removal and some lighting fixing, as well as different background creation and so on. Each image counted with more than 25 layers on top of the original one to give it the same feel."
+          "text" : "The images were personally retouched with some blemish removal and some lighting fixing, as well as different background creation and so on. Each image counted with more than 25 layers on top of the original one to give it the same feel."
         }
       ],
       "image" : {
-        "link" : "./images/projects/revolution/landing.jpg"
+        "link" : "images/projects/revolution/landing.jpg"
       }
     },
 
@@ -845,19 +845,19 @@
 
   "social" : [
     {
-      "image" : "./images/general/social/twitter.svg",
+      "image" : "images/general/social/twitter.svg",
       "link" : "https://www.twitter.com/RamonGilabert"
     },
     {
-      "image" : "./images/general/social/dribbble.svg",
+      "image" : "images/general/social/dribbble.svg",
       "link" : "https://www.dribbble.com/RamonGilabert"
     },
     {
-      "image" : "./images/general/social/github.svg",
+      "image" : "images/general/social/github.svg",
       "link" : "https://www.github.com/RamonGilabert"
     },
     {
-      "image" : "./images/general/social/linkedin.svg",
+      "image" : "images/general/social/linkedin.svg",
       "link" : "https://www.linkedin.com/in/RamonGilabert"
     }
   ]
