@@ -51,20 +51,7 @@
   margin-bottom: 3px;
 }
 .circle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto auto;
-  border-radius: 50%;
-  width: 750px;
-  height: 750px;
-  mix-blend-mode: soft-light;
-  background-color: #fff;
-  filter: blur(250px);
-  opacity: 0.6;
-  transform: translate3d(0, 0, 0);
+  display: none;
 }
 .noise {
   position: absolute;
@@ -433,8 +420,18 @@ footer .inner .social .social-icon {
   #myself .story .inner {
     margin: 100px 40px 120px 40px;
   }
+  #myself .story .inner h2 {
+    font: 18vw Gilroy;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
   #myself .recognition .inner {
     margin: 100px 40px 120px 40px;
+  }
+  #myself .recognition .inner h2 {
+    font: 18vw Gilroy;
+    font-weight: 700;
+    margin-bottom: 5px;
   }
   #myself header {
     overflow: hidden;
