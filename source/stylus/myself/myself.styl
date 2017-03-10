@@ -6,7 +6,7 @@
     position: relative
     width: 100%
     height: 100vh
-    min-height: 800px
+    min-height: 600px
     background-color: dark-background-color
 
     .indicator {
@@ -33,6 +33,7 @@
       right: 0
       left: 0
       margin: 0 auto
+      max-width: 90%
       transform: translateY(-50%)
       mix-blend-mode: soft-light
     }
@@ -47,108 +48,267 @@
     }
   }
 
-  .content {
-    // margin-top: 100%
-    // margin-bottom: 500px
-    background-color: white
-    // z-index: 2
+  .story {
+    .inner {
+      margin: 150px inner-spacing bottom-spacing inner-spacing
 
-    .story {
-      .inner {
-        padding-top: 150px
-        margin: 0 inner-spacing bottom-spacing inner-spacing
+      h2 {
+        font: title-font
+        font-weight: 700
+        letter-spacing: -2.5px
+      }
 
-        h2 {
-          font: title-font
+      .path {
+        margin-bottom: 15px
+      }
+
+      p {
+        font: text-font
+        font-weight: 400
+        letter-spacing: -0.4px
+        line-height: 24px
+        width: 525px
+        max-width: 100%
+      }
+    }
+  }
+
+  .projects {
+    margin = 15px
+    margin-top = 275px
+    height = 750px
+    width = 550px
+    alternative-height = 550px
+
+    width: 100%
+
+    .inner {
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      align-content: center
+      height: height + alternative-height + margin * 4
+
+      .project {
+        position: relative
+        width: width
+        height: height
+        max-width: 94%
+        background-color: projects-color
+        margin: margin margin margin margin
+
+        .role {
+          text-align: center
+          text-transform: uppercase
+          font: 16px Gilroy
           font-weight: 700
-          letter-spacing: -2.5px
-        }
-
-        .path {
-          margin-bottom: 15px
-        }
-
-        p {
-          font: text-font
-          font-weight: 400
           letter-spacing: -0.4px
-          line-height: 24px
-          width: 525px
+          color: gray-color
+          position: absolute
+          right: 0
+          left: 0
+          bottom: 10px
+          margin: 0 auto
+          opacity: 0 // Remove this.
         }
+
+        .indicator {
+          transform-origin: top right
+          transform: rotateZ(90deg)
+          top: 90px
+          right: 10px
+          opacity: 0 // Remove this.
+
+          p {
+            color: gray-color
+          }
+        }
+
+        .indicator:after {
+          background-color: gray-color
+        }
+
+        a {
+          position: absolute
+          width: 100%
+          height: 100%
+        }
+
+        .peek {
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          max-height: 90%
+          max-width: 90%
+          margin: auto auto
+        }
+
+        .name {
+          position: absolute
+
+          .path {
+            display: inline-block
+            margin-top: 2.5px
+            margin-right: 5px
+            height: 15px
+          }
+
+          h3 {
+            margin: 15px 0px 15px 0px
+            font: 22px Gilroy
+            font-weight: 700
+            letter-spacing: -0.5px
+            display: inline-block
+            opacity: 0.1
+          }
+        }
+      }
+
+      .gluten {
+        order: 2
+
+        .indicator {
+          transform-origin: left bottom
+          transform: rotateZ(90deg)
+          top: auto
+          left: 12.5px
+          right: auto
+        }
+
+        .name {
+          top: 150px
+          right: 0px
+          bottom: auto
+          left: auto
+          transform-origin: right bottom
+          transform: rotateZ(90deg)
+        }
+      }
+
+      .lights {
+        margin-top: margin-top
+        order: 1
+
+        .name {
+          top: auto
+          right: auto
+          bottom: 100px
+          left: 0
+          transform-origin: left bottom
+          transform: rotateZ(-90deg)
+        }
+      }
+
+      .revolution {
+        height: alternative-height
+        order: 3
+
+        .name {
+          top: auto
+          right: auto
+          bottom: 50px
+          left: 0
+          transform-origin: left bottom
+          transform: rotateZ(-90deg)
+        }
+      }
+    }
+  }
+
+  .recognition {
+    .inner {
+      margin: 150px inner-spacing bottom-spacing inner-spacing
+    }
+
+    h2 {
+      font: title-font
+      font-weight: 700
+      letter-spacing: -2.5px
+    }
+
+    h3 {
+      margin: 15px 0px 15px 0px
+      font: 24px Gilroy
+      font-weight: 700
+      letter-spacing: -0.5px
+    }
+
+    .path {
+      margin-bottom: 12px
+    }
+
+    p {
+      font: text-font
+      font-weight: 400
+      letter-spacing: -0.4px
+      line-height: 28px
+      width: 525px
+      max-width: 100%
+    }
+  }
+}
+
+@media (max-width: minimum-width) {
+
+  #myself {
+    margin-side = 40px
+    margin-top = 100px
+    margin-bottom = 120px
+
+    .story .inner {
+      margin: margin-top margin-side margin-bottom margin-side
+    }
+
+    .recognition .inner {
+      margin: margin-top margin-side margin-bottom margin-side
+    }
+
+    header {
+      overflow: hidden
+
+      h2 {
+        top: 20px
+      }
+
+      .designer {
+        top: 54%
+        left: 50%
+        max-width: 400%
+        transform: translate(-50%, -50%)
+      }
+
+      .myself {
+        position: absolute
+        height: 97%
+        min-height: 450px
+        bottom: 0
+        left: 48.5%
+        transform: translateX(-50%)
       }
     }
 
     .projects {
-      margin = 15px
-      margin-top = 275px
-      height = 750px
-      width = 550px
-      alternative-height = 550px
-
-      width: 100%
-
       .inner {
-        display: flex
-	      flex-direction: column
-	      flex-wrap: wrap
-        align-content: center
-	      height: height + alternative-height + margin * 4
+        flex-wrap: nowrap
+        width: 100%
+        height: auto
 
         .project {
-          position: relative
-          width: width
-          height: height
-          background-color: projects-color
-          margin: margin margin margin margin
-
-          .role {
-            text-align: center
-            text-transform: uppercase
-            font: 16px Gilroy
-            font-weight: 700
-            letter-spacing: -0.4px
-            color: gray-color
-            position: absolute
-            right: 0
-            left: 0
-            bottom: 10px
-            margin: 0 auto
-            opacity: 0 // Remove this.
-          }
-
-          .indicator {
-            transform-origin: top right
-            transform: rotateZ(90deg)
-            top: 90px
-            right: 10px
-            opacity: 0 // Remove this.
-
-            p {
-              color: gray-color
-            }
-          }
-
-          .indicator:after {
-            background-color: gray-color
-          }
-
-          a {
-            position: absolute
-            width: 100%
-            height: 100%
-          }
+          max-width: calc(100% - 30px)
+          left: 0
+          right: 0
+          margin: 7.5px auto 7.5px auto
 
           .peek {
-            position: absolute
-            top: 0
-            right: 0
-            bottom: 0
-            left: 0
-            margin: auto auto
+            width: auto
           }
 
           .name {
-            position: absolute
+            transform: rotateZ(0deg)
+            top: 0px
+            left: 15px
 
             .path {
               display: inline-block
@@ -169,85 +329,18 @@
         }
 
         .gluten {
-          order: 2
-
-          .indicator {
-            transform-origin: left bottom
-            transform: rotateZ(90deg)
-            top: auto
-            left: 12.5px
-            right: auto
-          }
-
-          .name {
-            top: 150px
-            right: 0px
-            bottom: auto
-            left: auto
-            transform-origin: right bottom
-            transform: rotateZ(90deg)
-          }
+          order: 1
         }
 
         .lights {
-          margin-top: margin-top
-          order: 1
-
-          .name {
-            top: auto
-            right: auto
-            bottom: 100px
-            left: 0
-            transform-origin: left bottom
-            transform: rotateZ(-90deg)
-          }
+          margin-top: 15px
+          order: 3
         }
 
         .revolution {
-          height: alternative-height
-          order: 3
-
-          .name {
-            top: auto
-            right: auto
-            bottom: 50px
-            left: 0
-            transform-origin: left bottom
-            transform: rotateZ(-90deg)
-          }
+          order: 2
+          height: 400px
         }
-      }
-    }
-
-    .recognition {
-      .inner {
-        margin: 150px inner-spacing 0 inner-spacing
-        padding-bottom: bottom-spacing
-      }
-
-      h2 {
-        font: title-font
-        font-weight: 700
-        letter-spacing: -2.5px
-      }
-
-      h3 {
-        margin: 15px 0px 15px 0px
-        font: 24px Gilroy
-        font-weight: 700
-        letter-spacing: -0.5px
-      }
-
-      .path {
-        margin-bottom: 12px
-      }
-
-      p {
-        font: text-font
-        font-weight: 400
-        letter-spacing: -0.4px
-        line-height: 28px
-        width: 525px
       }
     }
   }

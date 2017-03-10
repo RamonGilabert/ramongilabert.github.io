@@ -59,3 +59,9 @@
   mix-blend-mode: overlay;
   transform: translate3d(0, 0, 0);
 }
+@media (max-width: minimum-width) {
+  .circle {
+    width: 80%;
+    height: 80%;
+  }
+}

@@ -77,6 +77,12 @@
   mix-blend-mode: overlay;
   transform: translate3d(0, 0, 0);
 }
+@media (max-width: 500px) {
+  .circle {
+    width: 80%;
+    height: 80%;
+  }
+}
 footer {
   position: relative;
   width: 100%;
@@ -167,6 +173,16 @@ footer .inner .social .social-icon {
   margin-left: 25px;
   margin-right: 25px;
 }
+@media (max-width: 500px) {
+  footer {
+    overflow: hidden;
+    height: 300px;
+  }
+  footer .inner .social .social-icon {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 .general-noise,
 .bottom-noise {
   position: fixed;
@@ -190,7 +206,7 @@ footer .inner .social .social-icon {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 600px;
   background-color: #161216;
 }
 #myself header .indicator {
@@ -215,6 +231,7 @@ footer .inner .social .social-icon {
   right: 0;
   left: 0;
   margin: 0 auto;
+  max-width: 90%;
   transform: translateY(-50%);
   mix-blend-mode: soft-light;
 }
@@ -226,46 +243,44 @@ footer .inner .social .social-icon {
   left: 48.5%;
   transform: translateX(-50%);
 }
-#myself .content {
-  background-color: #fff;
+#myself .story .inner {
+  margin: 150px 22% 200px 22%;
 }
-#myself .content .story .inner {
-  padding-top: 150px;
-  margin: 0 22% 200px 22%;
-}
-#myself .content .story .inner h2 {
+#myself .story .inner h2 {
   font: 100px Gilroy;
   font-weight: 700;
   letter-spacing: -2.5px;
 }
-#myself .content .story .inner .path {
+#myself .story .inner .path {
   margin-bottom: 15px;
 }
-#myself .content .story .inner p {
+#myself .story .inner p {
   font: 17px Gilroy;
   font-weight: 400;
   letter-spacing: -0.4px;
   line-height: 24px;
   width: 525px;
+  max-width: 100%;
 }
-#myself .content .projects {
+#myself .projects {
   width: 100%;
 }
-#myself .content .projects .inner {
+#myself .projects .inner {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   height: 1360px;
 }
-#myself .content .projects .inner .project {
+#myself .projects .inner .project {
   position: relative;
   width: 550px;
   height: 750px;
+  max-width: 94%;
   background-color: #faf9fc;
   margin: 15px 15px 15px 15px;
 }
-#myself .content .projects .inner .project .role {
+#myself .projects .inner .project .role {
   text-align: center;
   text-transform: uppercase;
   font: 16px Gilroy;
@@ -279,42 +294,44 @@ footer .inner .social .social-icon {
   margin: 0 auto;
   opacity: 0;
 }
-#myself .content .projects .inner .project .indicator {
+#myself .projects .inner .project .indicator {
   transform-origin: top right;
   transform: rotateZ(90deg);
   top: 90px;
   right: 10px;
   opacity: 0;
 }
-#myself .content .projects .inner .project .indicator p {
+#myself .projects .inner .project .indicator p {
   color: #e6e5e6;
 }
-#myself .content .projects .inner .project .indicator:after {
+#myself .projects .inner .project .indicator:after {
   background-color: #e6e5e6;
 }
-#myself .content .projects .inner .project a {
+#myself .projects .inner .project a {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-#myself .content .projects .inner .project .peek {
+#myself .projects .inner .project .peek {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  max-height: 90%;
+  max-width: 90%;
   margin: auto auto;
 }
-#myself .content .projects .inner .project .name {
+#myself .projects .inner .project .name {
   position: absolute;
 }
-#myself .content .projects .inner .project .name .path {
+#myself .projects .inner .project .name .path {
   display: inline-block;
   margin-top: 2.5px;
   margin-right: 5px;
   height: 15px;
 }
-#myself .content .projects .inner .project .name h3 {
+#myself .projects .inner .project .name h3 {
   margin: 15px 0px 15px 0px;
   font: 22px Gilroy;
   font-weight: 700;
@@ -322,17 +339,17 @@ footer .inner .social .social-icon {
   display: inline-block;
   opacity: 0.1;
 }
-#myself .content .projects .inner .gluten {
+#myself .projects .inner .gluten {
   order: 2;
 }
-#myself .content .projects .inner .gluten .indicator {
+#myself .projects .inner .gluten .indicator {
   transform-origin: left bottom;
   transform: rotateZ(90deg);
   top: auto;
   left: 12.5px;
   right: auto;
 }
-#myself .content .projects .inner .gluten .name {
+#myself .projects .inner .gluten .name {
   top: 150px;
   right: 0px;
   bottom: auto;
@@ -340,11 +357,11 @@ footer .inner .social .social-icon {
   transform-origin: right bottom;
   transform: rotateZ(90deg);
 }
-#myself .content .projects .inner .lights {
+#myself .projects .inner .lights {
   margin-top: 275px;
   order: 1;
 }
-#myself .content .projects .inner .lights .name {
+#myself .projects .inner .lights .name {
   top: auto;
   right: auto;
   bottom: 100px;
@@ -352,11 +369,11 @@ footer .inner .social .social-icon {
   transform-origin: left bottom;
   transform: rotateZ(-90deg);
 }
-#myself .content .projects .inner .revolution {
+#myself .projects .inner .revolution {
   height: 550px;
   order: 3;
 }
-#myself .content .projects .inner .revolution .name {
+#myself .projects .inner .revolution .name {
   top: auto;
   right: auto;
   bottom: 50px;
@@ -364,30 +381,102 @@ footer .inner .social .social-icon {
   transform-origin: left bottom;
   transform: rotateZ(-90deg);
 }
-#myself .content .recognition .inner {
-  margin: 150px 22% 0 22%;
-  padding-bottom: 200px;
+#myself .recognition .inner {
+  margin: 150px 22% 200px 22%;
 }
-#myself .content .recognition h2 {
+#myself .recognition h2 {
   font: 100px Gilroy;
   font-weight: 700;
   letter-spacing: -2.5px;
 }
-#myself .content .recognition h3 {
+#myself .recognition h3 {
   margin: 15px 0px 15px 0px;
   font: 24px Gilroy;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
-#myself .content .recognition .path {
+#myself .recognition .path {
   margin-bottom: 12px;
 }
-#myself .content .recognition p {
+#myself .recognition p {
   font: 17px Gilroy;
   font-weight: 400;
   letter-spacing: -0.4px;
   line-height: 28px;
   width: 525px;
+  max-width: 100%;
+}
+@media (max-width: 500px) {
+  #myself .story .inner {
+    margin: 100px 40px 120px 40px;
+  }
+  #myself .recognition .inner {
+    margin: 100px 40px 120px 40px;
+  }
+  #myself header {
+    overflow: hidden;
+  }
+  #myself header h2 {
+    top: 20px;
+  }
+  #myself header .designer {
+    top: 54%;
+    left: 50%;
+    max-width: 400%;
+    transform: translate(-50%, -50%);
+  }
+  #myself header .myself {
+    position: absolute;
+    height: 97%;
+    min-height: 450px;
+    bottom: 0;
+    left: 48.5%;
+    transform: translateX(-50%);
+  }
+  #myself .projects .inner {
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+  }
+  #myself .projects .inner .project {
+    max-width: calc(100% - 30px);
+    left: 0;
+    right: 0;
+    margin: 7.5px auto 7.5px auto;
+  }
+  #myself .projects .inner .project .peek {
+    width: auto;
+  }
+  #myself .projects .inner .project .name {
+    transform: rotateZ(0deg);
+    top: 0px;
+    left: 15px;
+  }
+  #myself .projects .inner .project .name .path {
+    display: inline-block;
+    margin-top: 2.5px;
+    margin-right: 5px;
+    height: 15px;
+  }
+  #myself .projects .inner .project .name h3 {
+    margin: 15px 0px 15px 0px;
+    font: 22px Gilroy;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    display: inline-block;
+    opacity: 0.1;
+  }
+  #myself .projects .inner .gluten {
+    order: 1;
+  }
+  #myself .projects .inner .lights {
+    margin-top: 15px;
+    order: 3;
+  }
+  #myself .projects .inner .revolution {
+    order: 2;
+    height: 400px;
+  }
 }
 .case .indicator {
   position: fixed;
