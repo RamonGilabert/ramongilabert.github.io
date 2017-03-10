@@ -29,7 +29,7 @@ function Scroller() {
         var position = window.pageYOffset;
         var up = position < lastScroll;
 
-        if (position > offset - 100) {
+        if (position > offset * margin) {
           header.style.zIndex = inferior;
           footer.style.zIndex = superior;
         } else if (position < offset) {
