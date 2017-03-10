@@ -9,6 +9,9 @@ window.addEventListener('load', function() {
   var scroller = new Scroller();
   scroller.run();
 
+  var prevent = new Prevent();
+  prevent.images();
+
   encryptCorreu('email');
 });
 
@@ -38,6 +41,20 @@ function Scroller() {
         }
 
         lastScroll = position;
+      });
+    }
+  }
+}
+
+function Prevent() {
+
+  this.images = function() {
+    var images = document.tags('img');
+
+    for (var i = 0; i < images.length; i++) {
+      var image = images[i];
+      image.addEventListener('dragstart', function(event) {
+        event.preventDefault();
       });
     }
   }

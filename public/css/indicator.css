@@ -1,5 +1,6 @@
 .indicator {
   position: absolute;
+  cursor: pointer;
 }
 .indicator a,
 .indicator p {

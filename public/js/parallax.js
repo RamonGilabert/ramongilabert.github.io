@@ -1,1 +1,97 @@
-function Parallax(){this.elements=[],this.images=[],this.method=empty,this.headerText="",this.quote="",this.figure="",this.prepare=function(){if(isDetail()){this.method=this.detail.bind(this);for(var t=document.classes("image-wrapper"),e=exists("lights")?2:1,i=0;i<e;i++){var s,a,l,r,h,n,o=document.createElement("img");exists("lights")?(s="/images/details/lights/parallax/first.png",a="55%",h="-15px",r="auto",l="14%",n=0,1==i&&(s="/images/details/lights/parallax/second.png",l="12%",n=2)):exists("branding")&&(s="/images/details/branding/parallax/first.png",a="75%",l="12.5%",r="auto",h="100px",n=1),o.src=s,o.classList.add("parallax"),o.style.position="absolute",o.style.width=a,o.style.top=h,o.style.right=r,o.style.left=l,t[n].appendChild(o)}this.images=document.classes("parallax"),this.figure=document.class("hero").tag("figure"),this.headerText=document.class("hero-text-wrapper"),this.quote=document.class("quoter")}},this.detail=function(){var t=window.innerHeight,e=window.pageYOffset;if(e<t){var i=-50+100*e/t;this.headerText.style.transform="translate3d(0, "+i+"%, 0)"}if(void 0!==this.quote){var s=positionOffset(this.quote)-100;if(s<=e&&s+this.quote.clientHeight+t>=e){var i=50*(e-s)/(t+this.quote.clientHeight);this.quote.style.transform="translate3d(0, "+i+"%, 0)"}}for(var a=0;a<this.images.length;a++){var l=this.images[a],s=positionOffset(l);if(s<=e&&s+l.clientHeight+t>=e){var i=20*(e-s)/(t+l.clientHeight);l.style.transform="translate3d(0, "+i+"%, 0)"}}}}
+// Parallax effects in the detail
+
+// Ramon Gilabert's art.
+
+function Parallax() {
+
+  this.elements = [];
+  this.images = [];
+  this.method = empty;
+  this.headerText = '';
+  this.quote = '';
+  this.figure = '';
+
+  this.prepare = function() {
+    if (isDetail()) {
+      this.method = this.detail.bind(this);
+
+      var containers = document.classes('image-wrapper');
+      var times = exists('lights') ? 2 : 1;
+
+      for (var i = 0; i < times; i++) {
+        var image = document.createElement('img');
+
+        var source, width, left, right, top, position;
+
+        if (exists('lights')) {
+          source = '/images/details/lights/parallax/first.png';
+          width = '55%';
+          top = '-15px';
+          right = 'auto';
+          left = '14%';
+          position = 0;
+
+          if (i == 1) {
+            source = '/images/details/lights/parallax/second.png';
+            left = '12%';
+            position = 2;
+          }
+        } else if (exists('branding')) {
+          source = '/images/details/branding/parallax/first.png';
+          width = '75%';
+          left = '12.5%';
+          right = 'auto';
+          top = '100px';
+          position = 1;
+        }
+
+        image.src = source;
+        image.classList.add('parallax');
+        image.style.position = 'absolute';
+        image.style.width = width;
+        image.style.top = top;
+        image.style.right = right;
+        image.style.left = left;
+
+        containers[position].appendChild(image);
+      }
+
+      this.images = document.classes('parallax');
+      this.figure = document.class('hero').tag('figure');
+      this.headerText = document.class('hero-text-wrapper');
+      this.quote = document.class('quoter');
+    }
+  }
+
+  this.detail = function() {
+    var height = window.innerHeight;
+    var offset = window.pageYOffset;
+
+    if (offset < height) {
+      var value = -50 + (offset * 100 / height);
+      this.headerText.style.transform = 'translate3d(0, ' + value + '%, 0)';
+
+      // TODO: Uncomment if it applies.
+      // var background = 50 - 100 * offset / height;
+      // this.figure.style.backgroundPosition = '50% ' + background + '%';
+    }
+
+    if (this.quote !== undefined) {
+      var positioning = positionOffset(this.quote) - 100;
+      if (positioning <= offset && positioning + this.quote.clientHeight + height >= offset) {
+        var value = (offset - positioning) * 50 / (height + this.quote.clientHeight);
+        this.quote.style.transform = 'translate3d(0, ' + value + '%, 0)';
+      }
+    }
+
+    for (var i = 0; i < this.images.length; i++) {
+      var image = this.images[i];
+      var positioning = positionOffset(image);
+
+      if (positioning <= offset && positioning + image.clientHeight + height >= offset) {
+        var value = (offset - positioning) * 20 / (height + image.clientHeight);
+        image.style.transform = 'translate3d(0, ' + value + '%, 0)';
+      }
+    }
+  }
+}

@@ -18,6 +18,7 @@
 }
 .indicator {
   position: absolute;
+  cursor: pointer;
 }
 .indicator a,
 .indicator p {
@@ -175,7 +176,7 @@ footer .inner .social .social-icon {
     overflow: hidden;
   }
   footer .inner {
-    bottom: 150px;
+    bottom: 200px;
   }
   footer .inner .email {
     font-weight: 400;
@@ -198,7 +199,7 @@ footer .inner .social .social-icon {
     transform-origin: top left;
     transform: translateX(100%) rotateZ(90deg);
     right: 10px;
-    bottom: 264px;
+    bottom: 364px;
   }
   footer .inner .social .social-icon {
     margin-left: 15px;
@@ -420,10 +421,10 @@ footer .inner .social .social-icon {
 }
 @media (max-width: 700px) {
   #myself .content {
-    margin-bottom: 300px;
+    margin-bottom: 400px;
   }
   #myself .story .inner {
-    padding: 100px 8% 120px 8%;
+    padding: 75px 8% 120px 8%;
   }
   #myself .story .inner h2 {
     font: 17vw Gilroy;
@@ -506,6 +507,7 @@ footer .inner .social .social-icon {
 @media (max-width: 500px) {
   #myself .story .inner h2 {
     font: 20vw Gilroy;
+    font-weight: 700;
   }
   #myself .recognition .inner h2 {
     font: 20vw Gilroy;
@@ -749,7 +751,7 @@ footer .inner .social .social-icon {
 @media (max-width: 700px) {
   .quote {
     padding-bottom: 120px;
-    margin-bottom: 300px;
+    margin-bottom: 400px;
   }
 }
 .text {
