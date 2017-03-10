@@ -52,28 +52,21 @@
 }
 .circle {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   margin: auto auto;
-  border-radius: 50%;
-  width: 750px;
-  height: 750px;
+  width: 1000px;
+  height: 1000px;
+  opacity: 0.1;
   mix-blend-mode: soft-light;
-  background-color: #fff;
-  filter: blur(250px);
-  opacity: 0.6;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  transform: translateZ(0);
+  transform: translate3d(-50%, -50%, 0);
 }
 .noise {
   position: absolute;
   width: 100%;
   height: 100%;
   top: auto;
-  background-image: url("../images/general/noise.png");
+  background-image: url("../images/general/noise.jpg");
   background-repeat: repeat;
   background-blend-mode: normal;
   mix-blend-mode: overlay;
@@ -212,7 +205,7 @@ footer .inner .social .social-icon {
   background-color: #161216;
   mix-blend-mode: normal;
   background-blend-mode: overlay;
-  background-image: url("../images/general/noise.png");
+  background-image: url("../images/general/noise.jpg");
   background-repeat: repeat;
   transform: translate3d(0, 0, 0);
   z-index: -1;
@@ -231,7 +224,7 @@ footer .inner .social .social-icon {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 600px;
   background-color: #161216;
 }
 #myself header .indicator {
