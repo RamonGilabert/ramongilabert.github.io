@@ -40,7 +40,7 @@ function setupAnalytics() {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','/js/analytics.js','ga');
+})(window,document,'script','./js/analytics.js','ga');
 
   ga('create', 'UA-83429673-1', 'auto');
   ga('send', 'pageview');
@@ -142,7 +142,7 @@ function loadIndexCSS() {
   }
 }
 
-function positionOffset(element) {
+function contentOffset(element) {
   var height = element.clientHeight;
   var offsetLeft = 0;
   do {
@@ -151,7 +151,7 @@ function positionOffset(element) {
     }
   } while(element = element.offsetParent);
 
-  return offsetLeft - window.innerHeight * 0.2 - height;
+  return offsetLeft;
 }
 
 function isDetail() {
