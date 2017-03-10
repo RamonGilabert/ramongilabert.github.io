@@ -102,12 +102,12 @@ footer .inner .social .social-icon {
     transform-origin: bottom right;
     transform: translateX(-100%) rotateZ(90deg);
     left: 10px;
-    bottom: 10px;
+    bottom: 15px;
   }
   footer .forward {
     transform-origin: top left;
     transform: translateX(100%) rotateZ(90deg);
-    top: 10px;
+    top: 15px;
     right: 10px;
   }
   footer .inner .social .social-icon {

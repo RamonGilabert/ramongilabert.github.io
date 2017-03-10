@@ -51,7 +51,22 @@
   margin-bottom: 3px;
 }
 .circle {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+  border-radius: 50%;
+  width: 750px;
+  height: 750px;
+  mix-blend-mode: soft-light;
+  background-color: #fff;
+  filter: blur(250px);
+  opacity: 0.6;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
 }
 .noise {
   position: absolute;
@@ -174,12 +189,12 @@ footer .inner .social .social-icon {
     transform-origin: bottom right;
     transform: translateX(-100%) rotateZ(90deg);
     left: 10px;
-    bottom: 10px;
+    bottom: 15px;
   }
   footer .forward {
     transform-origin: top left;
     transform: translateX(100%) rotateZ(90deg);
-    top: 10px;
+    top: 15px;
     right: 10px;
   }
   footer .inner .social .social-icon {
@@ -558,7 +573,7 @@ footer .inner .social .social-icon {
     left: -20px;
   }
   .case header .inner {
-    margin: 85px 30px 0 30px;
+    margin: 100px 30px 0 30px;
   }
   .case header .inner h2 {
     font: 20vw Gilroy;
@@ -694,6 +709,11 @@ footer .inner .social .social-icon {
   }
   .visually .colors .color {
     height: 200px;
+  }
+  .visually .colors .color p {
+    right: 50%;
+    transform: translateX(50%);
+    font: 15px Gilroy;
   }
 }
 .quote {

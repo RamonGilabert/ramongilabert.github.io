@@ -33,7 +33,22 @@
   margin-bottom: 3px;
 }
 .circle {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+  border-radius: 50%;
+  width: 750px;
+  height: 750px;
+  mix-blend-mode: soft-light;
+  background-color: white-color;
+  filter: blur(250px);
+  opacity: 0.6;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
 }
 .noise {
   position: absolute;
