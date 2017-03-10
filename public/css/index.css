@@ -425,7 +425,7 @@ footer .inner .social .social-icon {
     margin-bottom: 5px;
   }
   #myself .recognition .inner {
-    margin: 100px 8% 120px 8%;
+    padding: 100px 8% 120px 8%;
   }
   #myself .recognition .inner h2 {
     font: 17vw Gilroy;
