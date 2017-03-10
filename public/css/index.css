@@ -108,7 +108,7 @@ footer .back a {
   margin-left: 37px;
 }
 footer .forward {
-  top: 15px;
+  bottom: 464px;
   right: 58px;
 }
 footer .back:before,
@@ -192,7 +192,7 @@ footer .inner .social .social-icon {
     transform-origin: top left;
     transform: translateX(100%) rotateZ(90deg);
     right: 10px;
-    bottom: 15px;
+    bottom: 264px;
   }
   footer .inner .social .social-icon {
     margin-left: 15px;
@@ -559,19 +559,19 @@ footer .inner .social .social-icon {
   color: #e6e5e6;
   letter-spacing: -0.4px;
 }
-#gluten .path,
-#lights .path {
+#gluten .top-path,
+#lights .top-path {
   margin-top: 10px;
 }
 #gluten .role,
 #lights .role {
   margin-top: 6.5px;
 }
-#revolution .path {
+#revolution .top-path {
   margin-top: 0px;
 }
 #revolution .role {
-  margin-top: -2px;
+  margin-top: -3px;
 }
 @media (max-width: 900px) {
   .case header .inner .role {
@@ -592,11 +592,11 @@ footer .inner .social .social-icon {
   .case header .inner .role {
     display: none;
   }
-  #gluten .path,
-  #lights .path {
+  #gluten .top-path,
+  #lights .top-path {
     margin-top: 14px;
   }
-  #revolution .path {
+  #revolution .top-path {
     margin-top: -2px;
   }
 }

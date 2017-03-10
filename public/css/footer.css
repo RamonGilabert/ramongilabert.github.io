@@ -28,7 +28,7 @@ footer .back a {
   margin-left: 37px;
 }
 footer .forward {
-  top: 15px;
+  bottom: footer-size -36px;
   right: 58px;
 }
 footer .back:before,
@@ -112,7 +112,7 @@ footer .inner .social .social-icon {
     transform-origin: top left;
     transform: translateX(100%) rotateZ(90deg);
     right: 10px;
-    bottom: 15px;
+    bottom: mobile-footer-size -36px;
   }
   footer .inner .social .social-icon {
     margin-left: 15px;
