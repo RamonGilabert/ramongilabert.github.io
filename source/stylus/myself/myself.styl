@@ -3,11 +3,13 @@
 #myself {
 
   header {
-    position: relative
+    position: fixed
+    top: 0
     width: 100%
     height: 100vh
     min-height: 600px
     background-color: dark-background-color
+    z-index: 2
 
     .indicator {
       transform: rotateZ(90deg)
@@ -48,9 +50,17 @@
     }
   }
 
+  .content {
+    position: relative
+    margin-top: 100vh
+    margin-bottom: footer-size
+    background-color: white-color
+    z-index: 7
+  }
+
   .story {
     .inner {
-      margin: 150px inner-spacing bottom-spacing inner-spacing
+      padding: 150px inner-spacing bottom-spacing inner-spacing
 
       h2 {
         font: title-font
@@ -219,7 +229,7 @@
 
   .recognition {
     .inner {
-      margin: 150px inner-spacing bottom-spacing inner-spacing
+      padding: 150px inner-spacing bottom-spacing inner-spacing
     }
 
     h2 {
@@ -255,8 +265,12 @@
   #myself {
     margin = mobile-margin-top mobile-margin-side mobile-margin-bottom mobile-margin-side
 
+    .content {
+      margin-bottom: mobile-footer-size
+    }
+
     .story .inner {
-      margin: margin
+      padding: margin
 
       h2 {
         font: mobile-title-font-landscape

@@ -1,8 +1,10 @@
 footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-color: dark-background-color;
+  z-index: 1;
 }
 footer .back,
 footer .forward {
@@ -52,9 +54,9 @@ footer .circle {
 }
 footer .inner {
   position: absolute;
-  top: 50%;
+  bottom: 250px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   text-align: center;
 }
 footer .inner .email {
@@ -72,7 +74,7 @@ footer .inner .path {
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: 23px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   opacity: 0.15;
 }
 footer .inner .social {
@@ -91,7 +93,9 @@ footer .inner .social .social-icon {
 @media (max-width: minimum-width) {
   footer {
     overflow: hidden;
-    height: 300px;
+  }
+  footer .inner {
+    bottom: 150px;
   }
   footer .back,
   footer .forward {
@@ -101,14 +105,14 @@ footer .inner .social .social-icon {
   footer .back {
     transform-origin: bottom right;
     transform: translateX(-100%) rotateZ(90deg);
-    left: 10px;
     bottom: 15px;
+    left: 10px;
   }
   footer .forward {
     transform-origin: top left;
     transform: translateX(100%) rotateZ(90deg);
-    top: 15px;
     right: 10px;
+    bottom: 15px;
   }
   footer .inner .social .social-icon {
     margin-left: 15px;

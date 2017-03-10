@@ -79,10 +79,12 @@
   }
 }
 footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-color: #161216;
+  z-index: 1;
 }
 footer .back,
 footer .forward {
@@ -132,9 +134,9 @@ footer .circle {
 }
 footer .inner {
   position: absolute;
-  top: 50%;
+  bottom: 250px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   text-align: center;
 }
 footer .inner .email {
@@ -152,7 +154,7 @@ footer .inner .path {
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: 23px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   opacity: 0.15;
 }
 footer .inner .social {
@@ -171,7 +173,9 @@ footer .inner .social .social-icon {
 @media (max-width: 700px) {
   footer {
     overflow: hidden;
-    height: 300px;
+  }
+  footer .inner {
+    bottom: 150px;
   }
   footer .back,
   footer .forward {
@@ -181,51 +185,28 @@ footer .inner .social .social-icon {
   footer .back {
     transform-origin: bottom right;
     transform: translateX(-100%) rotateZ(90deg);
-    left: 10px;
     bottom: 15px;
+    left: 10px;
   }
   footer .forward {
     transform-origin: top left;
     transform: translateX(100%) rotateZ(90deg);
-    top: 15px;
     right: 10px;
+    bottom: 15px;
   }
   footer .inner .social .social-icon {
     margin-left: 15px;
     margin-right: 15px;
   }
 }
-.general-noise,
-.bottom-noise {
-  position: fixed;
-  width: 100%;
-  height: 20vh;
-  top: 0;
-  bottom: auto;
-  background-color: #161216;
-  mix-blend-mode: normal;
-  background-blend-mode: overlay;
-  background-image: url("../images/general/noise.jpg");
-  background-repeat: repeat;
-  transform: translate3d(0, 0, 0);
-  z-index: -1;
-}
-.bottom-noise {
-  top: auto;
-  bottom: 0;
-}
-@media (max-width: 700px) {
-  .general-noise,
-  .bottom-noise {
-    display: none;
-  }
-}
 #myself header {
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 100vh;
   min-height: 600px;
   background-color: #161216;
+  z-index: 2;
 }
 #myself header .indicator {
   transform: rotateZ(90deg);
@@ -261,8 +242,15 @@ footer .inner .social .social-icon {
   left: 48.5%;
   transform: translateX(-50%);
 }
+#myself .content {
+  position: relative;
+  margin-top: 100vh;
+  margin-bottom: 500px;
+  background-color: #fff;
+  z-index: 7;
+}
 #myself .story .inner {
-  margin: 150px 22% 200px 22%;
+  padding: 150px 22% 200px 22%;
 }
 #myself .story .inner h2 {
   font: 100px Gilroy;
@@ -400,7 +388,7 @@ footer .inner .social .social-icon {
   transform: rotateZ(-90deg);
 }
 #myself .recognition .inner {
-  margin: 150px 22% 200px 22%;
+  padding: 150px 22% 200px 22%;
 }
 #myself .recognition h2 {
   font: 100px Gilroy;
@@ -425,8 +413,11 @@ footer .inner .social .social-icon {
   max-width: 100%;
 }
 @media (max-width: 700px) {
+  #myself .content {
+    margin-bottom: 300px;
+  }
   #myself .story .inner {
-    margin: 100px 8% 120px 8%;
+    padding: 100px 8% 120px 8%;
   }
   #myself .story .inner h2 {
     font: 17vw Gilroy;
@@ -515,6 +506,11 @@ footer .inner .social .social-icon {
     font-weight: 700;
   }
 }
+.case .content {
+  position: relative;
+  background-color: #fff;
+  z-index: 7;
+}
 .case .indicator {
   position: fixed;
   top: 15px;
@@ -542,7 +538,7 @@ footer .inner .social .social-icon {
 }
 .case header .inner {
   position: relative;
-  margin: 200px 15% 0px 15%;
+  padding: 200px 15% 0px 15%;
 }
 .case header .inner h2 {
   font: 100px Gilroy;
@@ -551,19 +547,31 @@ footer .inner .social .social-icon {
 }
 .case header .inner .path {
   display: inline-block;
-  margin-top: 10px;
   margin-bottom: 14px;
   margin-right: 10px;
 }
 .case header .inner .role {
   position: absolute;
   display: inline-block;
-  margin-top: 6.5px;
   text-transform: uppercase;
   font: 18px Gilroy;
   font-weight: 700;
   color: #e6e5e6;
   letter-spacing: -0.4px;
+}
+#gluten .path,
+#lights .path {
+  margin-top: 10px;
+}
+#gluten .role,
+#lights .role {
+  margin-top: 6.5px;
+}
+#revolution .path {
+  margin-top: 0px;
+}
+#revolution .role {
+  margin-top: -2px;
 }
 @media (max-width: 900px) {
   .case header .inner .role {
@@ -575,20 +583,24 @@ footer .inner .social .social-icon {
     left: -20px;
   }
   .case header .inner {
-    margin: 100px 9% 0 9%;
+    padding: 100px 9% 0 9%;
   }
   .case header .inner h2 {
     font: 17vw Gilroy;
     font-weight: 700;
   }
-  .case header .inner .path {
-    margin-top: 14px;
-  }
   .case header .inner .role {
     display: none;
   }
+  #gluten .path,
+  #lights .path {
+    margin-top: 14px;
+  }
+  #revolution .path {
+    margin-top: -2px;
+  }
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .case header .inner h2 {
     font: 20vw Gilroy;
     font-weight: 700;
@@ -725,11 +737,13 @@ footer .inner .social .social-icon {
   }
 }
 .quote {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 500px;
 }
 @media (max-width: 700px) {
   .quote {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 300px;
   }
 }
 .text {
@@ -773,7 +787,6 @@ body {
 html,
 body {
   background-color: #fff;
-  z-index: 1;
 }
 a {
   text-decoration: none;

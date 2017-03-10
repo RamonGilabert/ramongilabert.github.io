@@ -1,6 +1,11 @@
 // General styles for a case study.
 
 .case {
+  .content {
+    position: relative
+    background-color: white-color
+    z-index: 7
+  }
 
   .indicator {
     position: fixed
@@ -34,7 +39,7 @@
   header {
     .inner {
       position: relative
-      margin: case-spacing case-spacing-title 0px case-spacing-title
+      padding: case-spacing case-spacing-title 0px case-spacing-title
 
       h2 {
         font: title-font
@@ -44,7 +49,6 @@
 
       .path {
         display: inline-block
-        margin-top: 10px
         margin-bottom: 14px
         margin-right: 10px
       }
@@ -52,7 +56,6 @@
       .role {
         position: absolute
         display: inline-block
-        margin-top: 6.5px
         text-transform: uppercase
         font: 18px Gilroy
         font-weight: 700
@@ -60,6 +63,26 @@
         letter-spacing: -0.4px
       }
     }
+  }
+}
+
+#gluten, #lights {
+  .path {
+    margin-top: 10px
+  }
+
+  .role {
+    margin-top: 6.5px
+  }
+}
+
+#revolution {
+  .path {
+    margin-top: 0px
+  }
+
+  .role {
+    margin-top: -2px
   }
 }
 
@@ -83,15 +106,11 @@
 
     header {
       .inner {
-        margin: 100px mobile-margin-side-case 0 mobile-margin-side-case
+        padding: 100px mobile-margin-side-case 0 mobile-margin-side-case
 
         h2 {
           font: mobile-title-font-landscape
           font-weight: 700
-        }
-
-        .path {
-          margin-top: 14px
         }
 
         .role {
@@ -100,9 +119,21 @@
       }
     }
   }
+
+  #gluten, #lights {
+    .path {
+      margin-top: 14px
+    }
+  }
+
+  #revolution {
+    .path {
+      margin-top: -2px
+    }
+  }
 }
 
-@media (max-width: minimum-width) {
+@media (max-width: phone-width) {
 
   .case {
     header {

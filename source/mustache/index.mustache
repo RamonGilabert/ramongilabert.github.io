@@ -7,7 +7,6 @@
   </head>
   {{# myself }}
   <body id='myself'>
-    <div class='general-noise'></div>
     <header>
       <h1 class='page-title'>{{ page }}</h1>
       <h2>{{ header }}</h2>
@@ -17,48 +16,50 @@
       <img class='circle' src='./images/general/circle.png'>
       <img class='myself' src='./images/myself/myself.png'>
     </header>
-    <div class='story'>
-      {{# story }}
-      <div class='inner'>
-        <h2>{{ title }}<span class='spaced dot'>.</span></h2>
-        <img class='path' src='./images/general/path.svg'>
-        <p>{{{ text }}}</p>
-      </div>
-      {{/ story }}
-    </div>
-    <div class='projects'>
-      <div class='inner'>
-        {{# projects }}
-        <div class='project {{ name }}'>
-          <img class='peek' src='{{ image }}'>
-          <div class='indicator'><p>case study</p></div>
-          <p class='role'>{{ role }}</p>
-          <div class='name'>
-            <img class='path' src='./images/general/path.svg'>
-            <h3>{{ name }}<span class='spaced dot'>.</span></h3>
-          </div>
-          <a href='{{ link }}'></a>
+    <div class='content'>
+      <div class='story'>
+        {{# story }}
+        <div class='inner'>
+          <h2>{{ title }}<span class='spaced dot'>.</span></h2>
+          <img class='path' src='./images/general/path.svg'>
+          <p>{{{ text }}}</p>
         </div>
-        {{/ projects }}
+        {{/ story }}
       </div>
-    </div>
-    <div class='recognition'>
-      {{# recognition }}
-      <div class='inner'>
-        <h2>{{ title }}<span class='spaced dot'>.</span></h2>
-        <img class='path' src='./images/general/path.svg'>
-        {{# others }}
-        <p>{{{ text }}}</p>
-        {{/ others }}
-        {{# awards }}
-        <h3>{{ title }}<span class='spaced dot'>.</span></h3>
-        <img class='path' src='./images/general/path.svg'>
-        {{# list }}
-        <p><span class='dot'>{{ highlight }}</span> {{ rest }}</p>
-        {{/ list }}
-        {{/ awards }}
+      <div class='projects'>
+        <div class='inner'>
+          {{# projects }}
+          <div class='project {{ name }}'>
+            <img class='peek' src='{{ image }}'>
+            <div class='indicator'><p>case study</p></div>
+            <p class='role'>{{ role }}</p>
+            <div class='name'>
+              <img class='path' src='./images/general/path.svg'>
+              <h3>{{ name }}<span class='spaced dot'>.</span></h3>
+            </div>
+            <a href='{{ link }}'></a>
+          </div>
+          {{/ projects }}
+        </div>
       </div>
-      {{/ recognition }}
+      <div class='recognition'>
+        {{# recognition }}
+        <div class='inner'>
+          <h2>{{ title }}<span class='spaced dot'>.</span></h2>
+          <img class='path' src='./images/general/path.svg'>
+          {{# others }}
+          <p>{{{ text }}}</p>
+          {{/ others }}
+          {{# awards }}
+          <h3>{{ title }}<span class='spaced dot'>.</span></h3>
+          <img class='path' src='./images/general/path.svg'>
+          {{# list }}
+          <p><span class='dot'>{{ highlight }}</span> {{ rest }}</p>
+          {{/ list }}
+          {{/ awards }}
+        </div>
+        {{/ recognition }}
+      </div>
     </div>
     {{> footer }}
   </body>

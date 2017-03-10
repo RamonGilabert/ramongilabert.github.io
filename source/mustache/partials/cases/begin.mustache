@@ -7,25 +7,26 @@
   </head>
   <body class='case' id='{{ name }}'>
     <h1 class='page-title'>{{ page }}</h1>
-    <header>
-      <div class='indicator'><a href='./index'>home</a></div>
-      <div class='inner'>
-        <h2>{{ name }}<span class='spaced dot'>.</span></h2>
-        <img class='path' src='./images/general/path.svg'>
-        <h3 class='role'>{{ role }}</h3>
-        {{# summarize }}
-        {{> text }}
-        {{/ summarize }}
-      </div>
-    </header>
-    {{# summarize }}
-    {{> image }}
-    {{/ summarize }}
-    {{# story }}
-    {{> title }}
-    {{> image }}
-    {{/ story }}
-    {{# solution }}
-    {{> title }}
-    {{> image }}
-    {{/ solution }}
+    <div class='content'>
+      <header>
+        <div class='indicator'><a href='./index'>home</a></div>
+        <div class='inner'>
+          <h2>{{ name }}<span class='spaced dot'>.</span></h2>
+          <img class='path' src='./images/general/path.svg'>
+          <h3 class='role'>{{ role }}</h3>
+          {{# summarize }}
+          {{> text }}
+          {{/ summarize }}
+        </div>
+      </header>
+      {{# summarize }}
+      {{> image }}
+      {{/ summarize }}
+      {{# story }}
+      {{> title }}
+      {{> image }}
+      {{/ story }}
+      {{# solution }}
+      {{> title }}
+      {{> image }}
+      {{/ solution }}

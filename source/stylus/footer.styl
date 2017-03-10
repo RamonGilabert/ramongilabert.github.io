@@ -1,11 +1,12 @@
 // Footer styles
 
 footer {
-  position: relative
+  position: fixed
+  bottom: 0
   width: 100%
-  height: 500px
+  height: 100vh
   background-color: dark-background-color
-  // position: fixed
+  z-index: 1
 
   .back, .forward {
     mix-blend-mode: soft-light
@@ -63,10 +64,9 @@ footer {
 
   .inner {
     position: absolute
-    // bottom: 200px
-    top: 50%
+    bottom: 250px
     left: 50%
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, 50%)
     text-align: center
 
     .email {
@@ -86,7 +86,7 @@ footer {
       margin-left: 50%
       transform: translateX(-50%)
       margin-top: 23px
-      margin-bottom: 25px
+      margin-bottom: 18px
       opacity: 0.15
     }
 
@@ -112,7 +112,10 @@ footer {
 @media (max-width: minimum-width) {
   footer {
     overflow: hidden
-    height: 300px
+
+    .inner {
+      bottom: 150px
+    }
 
     .back, .forward {
       position: absolute
@@ -122,15 +125,15 @@ footer {
     .back {
       transform-origin: bottom right
       transform: translateX(-100%) rotateZ(90deg)
-      left: 10px
       bottom: 15px
+      left: 10px
     }
 
     .forward {
       transform-origin: top left
       transform: translateX(100%) rotateZ(90deg)
-      top: 15px
       right: 10px
+      bottom: 15px
     }
 
     .inner .social .social-icon {
