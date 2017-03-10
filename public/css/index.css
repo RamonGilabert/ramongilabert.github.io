@@ -177,6 +177,12 @@ footer .inner .social .social-icon {
   footer .inner {
     bottom: 150px;
   }
+  footer .inner .email {
+    font-weight: 400;
+  }
+  footer .inner .email span {
+    font-weight: 700;
+  }
   footer .back,
   footer .forward {
     position: absolute;

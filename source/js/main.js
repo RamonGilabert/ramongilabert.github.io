@@ -20,7 +20,7 @@ function Scroller() {
       var footer = document.tag('footer');
       var content = document.class('content');
       var lastScroll = 0;
-      var margin = 1.5;
+      var margin = 2;
       var superior = 2;
       var inferior = 1;
 
