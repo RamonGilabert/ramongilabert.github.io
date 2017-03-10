@@ -219,6 +219,12 @@ footer .inner .social .social-icon {
   top: auto;
   bottom: 0;
 }
+@media (max-width: 600px) {
+  .general-noise,
+  .bottom-noise {
+    display: none;
+  }
+}
 #myself header {
   position: relative;
   width: 100%;
@@ -437,9 +443,9 @@ footer .inner .social .social-icon {
     top: 20px;
   }
   #myself header .designer {
-    top: 54%;
+    top: 50%;
     left: 50%;
-    max-width: 400%;
+    max-width: 250%;
     transform: translate(-50%, -50%);
   }
   #myself header .myself {
