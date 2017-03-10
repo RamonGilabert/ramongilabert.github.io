@@ -259,7 +259,7 @@
       margin: margin
 
       h2 {
-        font: mobile-title-font
+        font: mobile-title-font-landscape
         font-weight: 700
         margin-bottom: 5px
       }
@@ -269,7 +269,7 @@
       margin: margin
 
       h2 {
-        font: mobile-title-font
+        font: mobile-title-font-landscape
         font-weight: 700
         margin-bottom: 5px
       }
@@ -351,6 +351,26 @@
           order: 2
           height: 400px
         }
+      }
+    }
+  }
+}
+
+@media (max-width: phone-width) {
+
+  #myself {
+    margin = mobile-margin-top mobile-margin-side mobile-margin-bottom mobile-margin-side
+
+    .story .inner {
+      h2 {
+        font: mobile-title-font
+      }
+    }
+
+    .recognition .inner {
+      h2 {
+        font: mobile-title-font
+        font-weight: 700
       }
     }
   }

@@ -79,7 +79,7 @@
   mix-blend-mode: overlay;
   transform: translate3d(0, 0, 0);
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .circle {
     width: 80%;
     height: 80%;
@@ -175,7 +175,7 @@ footer .inner .social .social-icon {
   margin-left: 25px;
   margin-right: 25px;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   footer {
     overflow: hidden;
     height: 300px;
@@ -221,7 +221,7 @@ footer .inner .social .social-icon {
   top: auto;
   bottom: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .general-noise,
   .bottom-noise {
     display: none;
@@ -431,20 +431,20 @@ footer .inner .social .social-icon {
   width: 525px;
   max-width: 100%;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #myself .story .inner {
-    margin: 100px 35px 120px 35px;
+    margin: 100px 8% 120px 8%;
   }
   #myself .story .inner h2 {
-    font: 20vw Gilroy;
+    font: 17vw Gilroy;
     font-weight: 700;
     margin-bottom: 5px;
   }
   #myself .recognition .inner {
-    margin: 100px 35px 120px 35px;
+    margin: 100px 8% 120px 8%;
   }
   #myself .recognition .inner h2 {
-    font: 20vw Gilroy;
+    font: 17vw Gilroy;
     font-weight: 700;
     margin-bottom: 5px;
   }
@@ -513,6 +513,15 @@ footer .inner .social .social-icon {
     height: 400px;
   }
 }
+@media (max-width: 500px) {
+  #myself .story .inner h2 {
+    font: 20vw Gilroy;
+  }
+  #myself .recognition .inner h2 {
+    font: 20vw Gilroy;
+    font-weight: 700;
+  }
+}
 .case .indicator {
   position: fixed;
   top: 15px;
@@ -568,15 +577,15 @@ footer .inner .social .social-icon {
     display: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .case .indicator {
     left: -20px;
   }
   .case header .inner {
-    margin: 100px 30px 0 30px;
+    margin: 100px 9% 0 9%;
   }
   .case header .inner h2 {
-    font: 20vw Gilroy;
+    font: 17vw Gilroy;
     font-weight: 700;
   }
   .case header .inner .path {
@@ -584,6 +593,12 @@ footer .inner .social .social-icon {
   }
   .case header .inner .role {
     display: none;
+  }
+}
+@media (max-width: 700px) {
+  .case header .inner h2 {
+    font: 20vw Gilroy;
+    font-weight: 700;
   }
 }
 .image {
@@ -611,7 +626,7 @@ footer .inner .social .social-icon {
     display: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .image {
     margin-top: 95px;
     margin-bottom: 95px;
@@ -638,9 +653,9 @@ footer .inner .social .social-icon {
   width: 725px;
   margin-bottom: 15px;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .title .inner {
-    margin: 100px 30px 0 30px;
+    margin: 100px 9% 0 9%;
   }
 }
 .subtitle .inner {
@@ -653,9 +668,9 @@ footer .inner .social .social-icon {
   letter-spacing: -1.5px;
   margin-bottom: 10px;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .subtitle .inner {
-    margin: 20px 40px 0 40px;
+    margin: 20px 9% 0 9%;
   }
   .subtitle .path {
     margin-bottom: 10px;
@@ -699,9 +714,9 @@ footer .inner .social .social-icon {
 .visually .colors .last p {
   color: #d2d2d2;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .visually .inner {
-    margin: 100px 40px 0 40px;
+    margin: 100px 9% 0 9%;
   }
   .visually .colors {
     margin-top: 95px;
@@ -719,7 +734,7 @@ footer .inner .social .social-icon {
 .quote {
   margin-bottom: 200px;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .quote {
     margin-bottom: 120px;
   }
@@ -744,7 +759,7 @@ footer .inner .social .social-icon {
 .spacing {
   margin-bottom: 3px !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .text {
     font: 16px Gilroy !important;
     line-height: 175% !important;
