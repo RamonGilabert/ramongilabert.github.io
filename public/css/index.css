@@ -400,7 +400,7 @@ footer .inner .social .social-icon {
   letter-spacing: -2.5px;
 }
 #myself .recognition h3 {
-  margin: 15px 0px 15px 0px;
+  margin: 15px 0px 18px 0px;
   font: 24px Gilroy;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -418,18 +418,18 @@ footer .inner .social .social-icon {
 }
 @media (max-width: 600px) {
   #myself .story .inner {
-    margin: 100px 40px 120px 40px;
+    margin: 100px 35px 120px 35px;
   }
   #myself .story .inner h2 {
-    font: 18vw Gilroy;
+    font: 20vw Gilroy;
     font-weight: 700;
     margin-bottom: 5px;
   }
   #myself .recognition .inner {
-    margin: 100px 40px 120px 40px;
+    margin: 100px 35px 120px 35px;
   }
   #myself .recognition .inner h2 {
-    font: 18vw Gilroy;
+    font: 20vw Gilroy;
     font-weight: 700;
     margin-bottom: 5px;
   }
@@ -561,7 +561,7 @@ footer .inner .social .social-icon {
     margin: 85px 30px 0 30px;
   }
   .case header .inner h2 {
-    font: 18vw Gilroy;
+    font: 20vw Gilroy;
     font-weight: 700;
   }
   .case header .inner .path {
