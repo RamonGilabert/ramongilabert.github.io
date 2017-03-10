@@ -93,6 +93,23 @@ footer .inner .social .social-icon {
     overflow: hidden;
     height: 300px;
   }
+  footer .back,
+  footer .forward {
+    position: absolute;
+    display: inline-block;
+  }
+  footer .back {
+    transform-origin: bottom right;
+    transform: translateX(-100%) rotateZ(90deg);
+    left: 10px;
+    bottom: 10px;
+  }
+  footer .forward {
+    transform-origin: top left;
+    transform: translateX(100%) rotateZ(90deg);
+    top: 10px;
+    right: 10px;
+  }
   footer .inner .social .social-icon {
     margin-left: 15px;
     margin-right: 15px;

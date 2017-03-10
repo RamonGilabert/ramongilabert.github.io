@@ -1,8 +1,9 @@
 // Image styles for the case studies
 
 .image {
-  padding-top: case-spacing
-  padding-bottom: case-spacing
+  position: relative
+  margin-top: case-spacing
+  margin-bottom: case-spacing
 
   img {
     object-fit: cover
@@ -11,7 +12,7 @@
 
   p {
     position: absolute
-    width: 100%
+    width: 80%
     left: 50%
     transform: translateX(-50%)
     font: 14px Gilroy
@@ -19,5 +20,18 @@
     font-weight: 400
     color: gray-color
     text-align: center
+  }
+}
+
+@media (max-width: minimum-width) {
+
+  .image {
+    margin-top: mobile-image-vertical
+    margin-bottom: mobile-image-vertical
+    overflow: hidden
+
+    p {
+      display: none
+    }
   }
 }

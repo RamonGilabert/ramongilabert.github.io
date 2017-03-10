@@ -3,7 +3,7 @@
 .visually {
   .inner {
     position: relative
-    padding: 0px case-spacing-subtitle 0px case-spacing-subtitle
+    margin: 0px case-spacing-subtitle 0px case-spacing-subtitle
 
     h4 {
       font: subtitle-text-font
@@ -18,8 +18,8 @@
     flex-direction: row
     flex-wrap: nowrap
     justify-content: space-around
-    padding-top: case-spacing
-    padding-bottom: case-spacing
+    margin-top: case-spacing
+    margin-bottom: case-spacing
 
     .color {
       position: relative
@@ -44,6 +44,24 @@
     .last {
       p {
         color: dark-gray-text-color
+      }
+    }
+  }
+}
+
+@media (max-width: minimum-width) {
+
+  .visually {
+    .inner {
+      margin: mobile-margin-top mobile-margin-side-case-subtitle 0 mobile-margin-side-case-subtitle
+    }
+
+    .colors {
+      margin-top: mobile-image-vertical
+      margin-bottom: mobile-image-vertical
+
+      .color {
+        height: 200px
       }
     }
   }

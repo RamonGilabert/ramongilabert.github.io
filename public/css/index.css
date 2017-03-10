@@ -178,6 +178,23 @@ footer .inner .social .social-icon {
     overflow: hidden;
     height: 300px;
   }
+  footer .back,
+  footer .forward {
+    position: absolute;
+    display: inline-block;
+  }
+  footer .back {
+    transform-origin: bottom right;
+    transform: translateX(-100%) rotateZ(90deg);
+    left: 10px;
+    bottom: 10px;
+  }
+  footer .forward {
+    transform-origin: top left;
+    transform: translateX(100%) rotateZ(90deg);
+    top: 10px;
+    right: 10px;
+  }
   footer .inner .social .social-icon {
     margin-left: 15px;
     margin-right: 15px;
@@ -276,7 +293,7 @@ footer .inner .social .social-icon {
   position: relative;
   width: 550px;
   height: 750px;
-  max-width: 94%;
+  max-width: 40%;
   background-color: #faf9fc;
   margin: 15px 15px 15px 15px;
 }
@@ -528,9 +545,28 @@ footer .inner .social .social-icon {
   color: #e6e5e6;
   letter-spacing: -0.4px;
 }
+@media (max-width: 500px) {
+  .case .indicator {
+    left: -20px;
+  }
+  .case header .inner {
+    margin: 85px 30px 0 30px;
+  }
+  .case header .inner h2 {
+    font: 18vw Gilroy;
+    font-weight: 700;
+  }
+  .case header .inner .path {
+    margin-top: 14px;
+  }
+  .case header .inner .role {
+    display: none;
+  }
+}
 .image {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 .image img {
   object-fit: cover;
@@ -538,7 +574,7 @@ footer .inner .social .social-icon {
 }
 .image p {
   position: absolute;
-  width: 100%;
+  width: 80%;
   left: 50%;
   transform: translateX(-50%);
   font: 14px Gilroy;
@@ -546,6 +582,16 @@ footer .inner .social .social-icon {
   font-weight: 400;
   color: #e6e5e6;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .image {
+    margin-top: 95px;
+    margin-bottom: 95px;
+    overflow: hidden;
+  }
+  .image p {
+    display: none;
+  }
 }
 .title .inner {
   position: relative;
@@ -564,6 +610,11 @@ footer .inner .social .social-icon {
   width: 725px;
   margin-bottom: 15px;
 }
+@media (max-width: 500px) {
+  .title .inner {
+    margin: 100px 30px 0 30px;
+  }
+}
 .subtitle .inner {
   position: relative;
   margin: 0px 18% 0px 18%;
@@ -574,9 +625,17 @@ footer .inner .social .social-icon {
   letter-spacing: -1.5px;
   margin-bottom: 10px;
 }
+@media (max-width: 500px) {
+  .subtitle .inner {
+    margin: 20px 40px 0 40px;
+  }
+  .subtitle .path {
+    margin-bottom: 10px;
+  }
+}
 .visually .inner {
   position: relative;
-  padding: 0px 18% 0px 18%;
+  margin: 0px 18% 0px 18%;
 }
 .visually .inner h4 {
   font: 30px Gilroy;
@@ -589,8 +648,8 @@ footer .inner .social .social-icon {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 .visually .colors .color {
   position: relative;
@@ -612,11 +671,29 @@ footer .inner .social .social-icon {
 .visually .colors .last p {
   color: #d2d2d2;
 }
+@media (max-width: 500px) {
+  .visually .inner {
+    margin: 100px 40px 0 40px;
+  }
+  .visually .colors {
+    margin-top: 95px;
+    margin-bottom: 95px;
+  }
+  .visually .colors .color {
+    height: 200px;
+  }
+}
 .quote {
   margin-bottom: 200px;
 }
+@media (max-width: 500px) {
+  .quote {
+    margin-bottom: 120px;
+  }
+}
 .text {
   width: 750px;
+  max-width: 100%;
   font: 17px Gilroy;
   letter-spacing: -0.4px;
   line-height: 170%;
@@ -633,6 +710,15 @@ footer .inner .social .social-icon {
 }
 .spacing {
   margin-bottom: 3px !important;
+}
+@media (max-width: 500px) {
+  .text {
+    font: 16px Gilroy !important;
+    line-height: 175% !important;
+  }
+  .indent {
+    text-indent: 0px;
+  }
 }
 *,
 html {

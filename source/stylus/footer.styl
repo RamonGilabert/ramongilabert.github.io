@@ -114,6 +114,25 @@ footer {
     overflow: hidden
     height: 300px
 
+    .back, .forward {
+      position: absolute
+      display: inline-block
+    }
+
+    .back {
+      transform-origin: bottom right
+      transform: translateX(-100%) rotateZ(90deg)
+      left: 10px
+      bottom: 10px
+    }
+
+    .forward {
+      transform-origin: top left
+      transform: translateX(100%) rotateZ(90deg)
+      top: 10px
+      right: 10px
+    }
+
     .inner .social .social-icon {
       margin = 15px
 
