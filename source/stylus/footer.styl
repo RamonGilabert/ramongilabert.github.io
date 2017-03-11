@@ -76,18 +76,36 @@ footer {
     bottom: 250px
     left: 50%
     transform: translate(-50%, 50%)
-    text-align: center
 
     .email {
-      font: 20px Gilroy
-      font-weight: 700
-      cursor: pointer
-      color: white-color
-      letter-spacing: -0.4px
+      text-align: center
+      display: inline-block
+      margin-left: 50%
+      transform: translateX(-50%)
 
       span {
         font: 21px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica
         font-weight: 900
+      }
+    }
+
+    .email {
+      p {
+        position: relative
+        font: 20px Gilroy
+        font-weight: 700
+        cursor: pointer
+        color: white-color
+        letter-spacing: -0.4px
+      }
+
+      p:after {
+        background-color: white
+        height: 3px
+      }
+
+      p:hover:after {
+        right: 0
       }
     }
 

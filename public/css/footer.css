@@ -65,18 +65,31 @@ footer .inner {
   bottom: 250px;
   left: 50%;
   transform: translate(-50%, 50%);
-  text-align: center;
 }
 footer .inner .email {
+  text-align: center;
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+footer .inner .email span {
+  font: 21px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica;
+  font-weight: 900;
+}
+footer .inner .email p {
+  position: relative;
   font: 20px Gilroy;
   font-weight: 700;
   cursor: pointer;
   color: white-color;
   letter-spacing: -0.4px;
 }
-footer .inner .email span {
-  font: 21px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica;
-  font-weight: 900;
+footer .inner .email p:after {
+  background-color: #fff;
+  height: 3px;
+}
+footer .inner .email p:hover:after {
+  right: 0;
 }
 footer .inner .path {
   display: block;
