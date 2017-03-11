@@ -14,7 +14,7 @@
     .indicator {
       transform: rotateZ(90deg)
       right: 10px
-      bottom: 67.5px
+      bottom: 65px
     }
 
     h2 {
@@ -45,6 +45,10 @@
       bottom: 0
       left: 50%
       transform: translateX(-50%)
+      backface-visibility: hidden
+      perspective: 1000
+      -webkit-backface-visibility: hidden
+      -webkit-perspective: 1000
     }
   }
 
@@ -105,6 +109,15 @@
         background-color: projects-color
         margin: margin margin margin margin
 
+        .rolling {
+          position: absolute
+          right: 0
+          left: 0
+          bottom: 15px
+          margin: 0 auto
+          overflow: hidden
+        }
+
         .role {
           text-align: center
           text-transform: uppercase
@@ -112,20 +125,27 @@
           font-weight: 700
           letter-spacing: -0.4px
           color: gray-color
-          position: absolute
-          right: 0
-          left: 0
-          bottom: 10px
           margin: 0 auto
-          opacity: 0 // Remove this.
+          transform: translateY(100%)
+          transition: project-transition
+          transition-delay: 0.15s
+        }
+
+        .indication {
+          position: absolute
+          transform-origin: top right
+          transform: rotateZ(90deg)
+          top: 130px
+          right: 10px
+          padding-right: 40px
+          overflow: hidden
         }
 
         .indicator {
-          transform-origin: top right
-          transform: rotateZ(90deg)
-          top: 90px
-          right: 10px
-          opacity: 0 // Remove this.
+          position: static
+          transform: translateX(-175%)
+          transition: project-transition
+          transition-delay: 0.2s
 
           p {
             color: gray-color
@@ -151,10 +171,12 @@
           max-height: 90%
           max-width: 90%
           margin: auto auto
+          transition: 0.7s transform ease
         }
 
         .name {
           position: absolute
+          transition: 0.7s transform ease
 
           .path {
             display: inline-block
@@ -174,10 +196,37 @@
         }
       }
 
+      .project:hover {
+        .indicator {
+          transform: translateY(0)
+        }
+
+        .role {
+          transform: translateY(0)
+        }
+
+        .peek {
+          scale = 0.97
+          transform: scale3d(scale, scale, 1)
+        }
+      }
+
+      .gluten:hover {
+        .name {
+          transform: translateY(40px) rotateZ(90deg)
+        }
+      }
+
+      .lights:hover, .revolution:hover {
+        .name {
+          transform: translateY(-40px) rotateZ(-90deg)
+        }
+      }
+
       .gluten {
         order: 2
 
-        .indicator {
+        .indication {
           transform-origin: left bottom
           transform: rotateZ(90deg)
           top: auto
@@ -308,6 +357,10 @@
         bottom: 0
         left: 48.5%
         transform: translateX(-50%)
+      }
+
+      .indicator {
+        opacity: 0
       }
     }
 

@@ -77,16 +77,26 @@ function Scroller() {
       var header = document.tag('header');
       var footer = document.tag('footer');
       var content = document.class('content');
+      var offset = contentOffset(content);
+      var position = window.pageYOffset;
       var lastScroll = 0;
       var margin = 2;
       var superior = 2;
       var inferior = 1;
 
       window.addEventListener('scroll', function() {
-        var offset = contentOffset(content);
-        var position = window.pageYOffset;
+        offset = contentOffset(content);
+        position = window.pageYOffset;
         var up = position < lastScroll;
 
+        calculate();
+
+        lastScroll = position;
+      });
+
+      calculate();
+
+      function calculate() {
         if (position > offset * margin) {
           header.style.zIndex = inferior;
           footer.style.zIndex = superior;
@@ -94,9 +104,7 @@ function Scroller() {
           header.style.zIndex = superior;
           footer.style.zIndex = inferior;
         }
-
-        lastScroll = position;
-      });
+      }
     }
   }
 }
@@ -105,7 +113,7 @@ function Click() {
 
   this.indicator = function() {
     if (exists('myself')) {
-      var indicator = document.class('indicator');
+      var indicator = document.class('work');
       var offset = contentOffset(document.class('content'));
 
       indicator.addEventListener('click', function() {

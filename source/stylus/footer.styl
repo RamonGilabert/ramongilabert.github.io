@@ -72,6 +72,7 @@ footer {
     .email {
       font: 20px Gilroy
       font-weight: 700
+      cursor: pointer
       color: white-color
       letter-spacing: -0.4px
 
@@ -100,10 +101,17 @@ footer {
       .social-icon {
         margin = 25px
 
+        cursor: pointer
         max-height: 36px
         object-fit: cover
         margin-left: margin
         margin-right: margin
+        transition: 0.45s transform ease
+      }
+
+      .social-icon:hover {
+        scale = 0.9
+        transform: scale3d(scale, scale, 1)
       }
     }
   }

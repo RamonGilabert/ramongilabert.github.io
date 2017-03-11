@@ -31,8 +31,8 @@
 }
 .indicator:after {
   content: '';
-  background-color: #fff;
   position: absolute;
+  background-color: #fff;
   height: 2px;
   width: 30px;
   top: 58%;
@@ -144,6 +144,7 @@ footer .inner {
 footer .inner .email {
   font: 20px Gilroy;
   font-weight: 700;
+  cursor: pointer;
   color: #fff;
   letter-spacing: -0.4px;
 }
@@ -167,10 +168,15 @@ footer .inner .social {
   align-content: center;
 }
 footer .inner .social .social-icon {
+  cursor: pointer;
   max-height: 36px;
   object-fit: cover;
   margin-left: 25px;
   margin-right: 25px;
+  transition: 0.45s transform ease;
+}
+footer .inner .social .social-icon:hover {
+  transform: scale3d(0.9, 0.9, 1);
 }
 @media (max-width: 700px) {
   footer {
@@ -219,7 +225,7 @@ footer .inner .social .social-icon {
 #myself header .indicator {
   transform: rotateZ(90deg);
   right: 10px;
-  bottom: 67.5px;
+  bottom: 65px;
 }
 #myself header h2 {
   position: absolute;
@@ -247,6 +253,10 @@ footer .inner .social .social-icon {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
 #myself .content {
   position: relative;
@@ -292,6 +302,14 @@ footer .inner .social .social-icon {
   background-color: #faf9fc;
   margin: 15px 15px 15px 15px;
 }
+#myself .projects .inner .project .rolling {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 15px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 #myself .projects .inner .project .role {
   text-align: center;
   text-transform: uppercase;
@@ -299,19 +317,25 @@ footer .inner .social .social-icon {
   font-weight: 700;
   letter-spacing: -0.4px;
   color: #e6e5e6;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 10px;
   margin: 0 auto;
-  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.4s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
+  transition-delay: 0.15s;
 }
-#myself .projects .inner .project .indicator {
+#myself .projects .inner .project .indication {
+  position: absolute;
   transform-origin: top right;
   transform: rotateZ(90deg);
-  top: 90px;
+  top: 130px;
   right: 10px;
-  opacity: 0;
+  padding-right: 40px;
+  overflow: hidden;
+}
+#myself .projects .inner .project .indicator {
+  position: static;
+  transform: translateX(-175%);
+  transition: 0.4s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
+  transition-delay: 0.2s;
 }
 #myself .projects .inner .project .indicator p {
   color: #e6e5e6;
@@ -333,9 +357,11 @@ footer .inner .social .social-icon {
   max-height: 90%;
   max-width: 90%;
   margin: auto auto;
+  transition: 0.7s transform ease;
 }
 #myself .projects .inner .project .name {
   position: absolute;
+  transition: 0.7s transform ease;
 }
 #myself .projects .inner .project .name .path {
   display: inline-block;
@@ -351,10 +377,26 @@ footer .inner .social .social-icon {
   display: inline-block;
   opacity: 0.1;
 }
+#myself .projects .inner .project:hover .indicator {
+  transform: translateY(0);
+}
+#myself .projects .inner .project:hover .role {
+  transform: translateY(0);
+}
+#myself .projects .inner .project:hover .peek {
+  transform: scale3d(0.97, 0.97, 1);
+}
+#myself .projects .inner .gluten:hover .name {
+  transform: translateY(40px) rotateZ(90deg);
+}
+#myself .projects .inner .lights:hover .name,
+#myself .projects .inner .revolution:hover .name {
+  transform: translateY(-40px) rotateZ(-90deg);
+}
 #myself .projects .inner .gluten {
   order: 2;
 }
-#myself .projects .inner .gluten .indicator {
+#myself .projects .inner .gluten .indication {
   transform-origin: left bottom;
   transform: rotateZ(90deg);
   top: auto;
@@ -457,6 +499,9 @@ footer .inner .social .social-icon {
     bottom: 0;
     left: 48.5%;
     transform: translateX(-50%);
+  }
+  #myself header .indicator {
+    opacity: 0;
   }
   #myself .projects .inner {
     flex-wrap: nowrap;

@@ -14,7 +14,7 @@
       <div class='noise'></div>
       <img class='circle' src='./images/general/circle.png'>
       <img class='myself' src='./images/myself/myself.png'>
-      <div class='indicator'><a href='#'>work</a></div>
+      <div class='indicator work'><a href='#'>work</a></div>
     </header>
     <div class='content'>
       <div class='story'>
@@ -31,8 +31,8 @@
           {{# projects }}
           <div class='project {{ name }}'>
             <img class='peek' src='{{ image }}'>
-            <div class='indicator'><p>case study</p></div>
-            <p class='role'>{{ role }}</p>
+            <div class='indication'><div class='indicator'><p>case study</p></div></div>
+            <div class='rolling'><p class='role'>{{ role }}</p></div>
             <div class='name'>
               <img class='path' src='./images/general/path.svg'>
               <h3>{{ name }}<span class='spaced dot'>.</span></h3>
