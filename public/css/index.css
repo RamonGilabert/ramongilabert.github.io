@@ -222,10 +222,23 @@ footer .inner .social .social-icon:hover {
   background-color: #161216;
   z-index: 2;
 }
-#myself header .indicator {
+#myself header .work {
+  cursor: pointer;
+  transform-origin: top right;
   transform: rotateZ(90deg);
-  right: 10px;
-  bottom: 65px;
+  right: 15px;
+  bottom: 0px;
+  padding-right: 40px;
+}
+#myself header .work:after {
+  left: calc(100% - 33px);
+  right: 0%;
+  width: auto;
+  margin-left: 0px;
+  transition: 0.6s left ease;
+}
+#myself header .work:hover:after {
+  left: 0%;
 }
 #myself header h2 {
   position: absolute;
@@ -563,30 +576,34 @@ footer .inner .social .social-icon:hover {
   background-color: #fff;
   z-index: 7;
 }
-.case .indicator {
+.case .home {
   position: fixed;
   top: 15px;
   left: 0;
   transform: rotateZ(90deg);
   z-index: 2;
+  padding-left: 40px;
 }
-.case .indicator a {
+.case .home a {
   color: #342a34;
-  margin-left: 35px;
 }
-.case .indicator:after {
+.case .home:after {
   opacity: 0;
 }
-.case .indicator:before {
+.case .home:before {
   content: '';
   position: absolute;
   left: 0;
+  right: calc(100% - 33px);
   height: 2px;
-  width: 30px;
   top: 58%;
   transform: translateY(-50%);
-  margin-right: 8px;
+  margin-right: 0px;
   background-color: #342a34;
+  transition: 0.6s right ease;
+}
+.case .home:hover:before {
+  right: 0;
 }
 .case header .inner {
   position: relative;

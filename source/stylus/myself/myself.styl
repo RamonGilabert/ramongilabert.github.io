@@ -11,10 +11,25 @@
     background-color: dark-background-color
     z-index: 2
 
-    .indicator {
+    .work {
+      cursor: pointer
+      transform-origin: top right
       transform: rotateZ(90deg)
-      right: 10px
-      bottom: 65px
+      right: 15px
+      bottom: 0px
+      padding-right: 40px
+    }
+
+    .work:after {
+      left: calc(100% - 33px)
+      right: 0%
+      width: auto
+      margin-left: 0px
+      transition: 0.6s left ease
+    }
+
+    .work:hover:after {
+      left: 0%
     }
 
     h2 {

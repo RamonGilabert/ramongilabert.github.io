@@ -7,33 +7,38 @@
     z-index: 7
   }
 
-  .indicator {
+  .home {
     position: fixed
     top: 15px
     left: 0
     transform: rotateZ(90deg)
     z-index: 2
+    padding-left: 40px
 
     a {
       color: text-color
-      margin-left: 35px
     }
   }
 
-  .indicator:after {
+  .home:after {
     opacity: 0
   }
 
-  .indicator:before {
+  .home:before {
     content: ''
     position: absolute
     left: 0
+    right: calc(100% - 33px)
     height: 2px
-    width: 30px
     top: 58%
     transform: translateY(-50%)
-    margin-right: 8px
+    margin-right: 0px
     background-color: text-color
+    transition: 0.6s right ease
+  }
+
+  .home:hover:before {
+    right: 0
   }
 
   header {
