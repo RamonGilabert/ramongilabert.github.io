@@ -5,6 +5,7 @@
 .indicator a,
 .indicator p {
   display: inline-block;
+  cursor: pointer;
   font: 15px Gilroy;
   font-weight: 400;
   color: white-color;

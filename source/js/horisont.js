@@ -176,9 +176,47 @@ var empty = function() { }
 
 // Convenience
 
-window.requestAnimationFrame = window.requestAnimationFrame
-  || window.webkitRequestAnimationFrame
-  || window.mozRequestAnimationFrame
-  || window.oRequestAnimationFrame
-  || window.msRequestAnimationFrame
-  || function(callback) { window.setTimeout(callback, 1000 / 60) };
+var animation = function() {
+  return window.requestAnimationFrame
+    || window.webkitRequestAnimationFrame
+    || window.mozRequestAnimationFrame
+    || function(callback) { window.setTimeout(callback, 1000 / 60) };
+}();
+
+// Modification of code by: james2doyle at: https://gist.github.com/james2doyle/5694700.
+
+Math.inOutQuintic = function(t, b, c, d) {
+  var ts = (t/=d)*t,
+  tc = ts*t;
+  return b+c*(6*tc*ts + -15*ts*ts + 10*tc);
+};
+
+function scrollTo(position, duration, callback) {
+
+  function move(amount) {
+    document.documentElement.scrollTop = amount;
+    document.body.parentNode.scrollTop = amount;
+    document.body.scrollTop = amount;
+  }
+
+  var start = window.pageYOffset,
+    change = position - start,
+    currentTime = 0,
+    increment = 20;
+    duration = (typeof(duration) === 'undefined') ? 500 : duration;
+
+  function animate() {
+    currentTime += increment;
+    move(Math.inOutQuintic(currentTime, start, change, duration));
+
+    if (currentTime < duration) {
+      animation(animate);
+    } else {
+      if (typeof(callback) !== 'undefined') {
+        callback();
+      }
+    }
+  }
+
+  animate();
+}

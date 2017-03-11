@@ -9,11 +9,66 @@ window.addEventListener('load', function() {
   var scroller = new Scroller();
   scroller.run();
 
+  var parallax = new Parallax();
+  parallax.prepare();
+
   var prevent = new Prevent();
   prevent.images();
 
+  var click = new Click();
+  click.indicator();
+
   encryptCorreu('email');
 });
+
+function Parallax() {
+
+  this.method = empty;
+  this.margin = 1.5;
+
+  this.prepare = function() {
+    if (exists('myself')) {
+      this.method = this.myself;
+    }
+
+    this.method();
+  }
+
+  this.myself = function() {
+    var self = this;
+    var maximum = window.innerHeight;
+    var translate = 100;
+    var tagging = 175;
+    var scale = 0.9;
+    var opacity = 0;
+    var element = document.class('myself');
+    var name = document.class('name');
+    var tag = document.class('designer');
+
+    window.addEventListener('scroll', function() {
+      calculate();
+    });
+
+    function calculate() {
+      var offset = window.pageYOffset;
+
+      if (offset > maximum * self.margin) { return }
+      var translation = -(translate * offset) / maximum;
+      var tratag = (-tagging * offset - 50 * maximum + 50 * offset) / maximum;
+      var scalation = (scale * offset + maximum - offset) / maximum;
+      var opaque = (maximum - offset * 2) / maximum;
+
+      animation(function() {
+        element.style.transform = 'translate3d(-50%, ' + translation / 3.5 + '%, 0) scale3d(' + scalation + ', ' + scalation + ', 1)';
+        tag.style.transform = 'translate3d(-50%, ' + tratag + '%, 0)';
+        name.style.opacity = opaque;
+        tag.style.opacity = opaque;
+      });
+    }
+
+    calculate();
+  }
+}
 
 function Scroller() {
 
@@ -41,6 +96,20 @@ function Scroller() {
         }
 
         lastScroll = position;
+      });
+    }
+  }
+}
+
+function Click() {
+
+  this.indicator = function() {
+    if (exists('myself')) {
+      var indicator = document.class('indicator');
+      var offset = contentOffset(document.class('content'));
+
+      indicator.addEventListener('click', function() {
+        scrollTo(offset + 50, 750);
       });
     }
   }

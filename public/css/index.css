@@ -23,6 +23,7 @@
 .indicator a,
 .indicator p {
   display: inline-block;
+  cursor: pointer;
   font: 15px Gilroy;
   font-weight: 400;
   color: #fff;
@@ -234,11 +235,9 @@ footer .inner .social .social-icon {
 #myself header .designer {
   position: absolute;
   top: 53%;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+  left: 50%;
   max-width: 90%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   mix-blend-mode: soft-light;
 }
 #myself header .myself {
