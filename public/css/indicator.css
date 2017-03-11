@@ -11,6 +11,9 @@
   color: white-color;
   letter-spacing: -0.3px;
 }
+.indicator a:after {
+  display: none;
+}
 .indicator:after {
   content: '';
   position: absolute;
@@ -55,6 +58,10 @@
   background-blend-mode: normal;
   mix-blend-mode: overlay;
   transform: translate3d(0, 0, 0);
+}
+a:after {
+  content: '';
+  position: absolute;
 }
 @media (max-width: minimum-width) {
   .circle {

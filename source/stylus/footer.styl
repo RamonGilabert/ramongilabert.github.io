@@ -25,15 +25,13 @@ footer {
   .back {
     left: 20px
     bottom: 15px
-
-    a {
-      margin-left: 37px
-    }
+    padding-left: 40px
   }
 
   .forward {
     bottom: footer-size - 36px
-    right: 58px
+    right: 20px
+    padding-right: 40px
   }
 
   .back:before, .forward:after {
@@ -42,17 +40,28 @@ footer {
     background-color: white-color
     position: absolute
     height: 2px
-    width: 30px
     top: 57%
     transform: translateY(-50%)
   }
 
   .back:before {
-    margin-right: 8px
+    left: 0%
+    right: calc(100% - 33px)
+    transition: 0.6s right ease
   }
 
   .forward:after {
-    margin-left: 8px
+    right: 0%
+    left: calc(100% - 33px)
+    transition: 0.6s left ease
+  }
+
+  .back:hover:before {
+    right: 0%
+  }
+
+  .forward:hover:after {
+    left: 0%
   }
 
   .circle {
