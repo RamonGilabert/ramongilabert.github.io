@@ -36,11 +36,12 @@
   content: '';
   position: absolute;
   background-color: #fff;
-  height: 2px;
+  height: 1.5px;
   width: 30px;
   top: 58%;
   transform: translateY(-50%);
   margin-left: 8px;
+  pointer-events: none;
 }
 .dot {
   position: relative;
@@ -93,6 +94,7 @@ a:after {
   width: auto;
   background-color: #712367;
   transition: 0.6s right ease;
+  pointer-events: none;
 }
 @media (max-width: 700px) {
   .circle {
@@ -135,6 +137,7 @@ footer .forward {
 footer .back:before,
 footer .forward:after {
   content: '';
+  pointer-events: none;
   display: inline-block;
   background-color: #fff;
   position: absolute;
@@ -277,6 +280,7 @@ footer .inner .social .social-icon:hover {
   width: auto;
   margin-left: 0px;
   transition: 0.6s left ease;
+  pointer-events: none;
 }
 #myself header .work:hover:after {
   left: 0%;
@@ -370,7 +374,7 @@ footer .inner .social .social-icon:hover {
   font: 16px Gilroy;
   font-weight: 700;
   letter-spacing: -0.4px;
-  color: #e6e5e6;
+  color: #e2e2e2;
   margin: 0 auto;
   transform: translateY(100%);
   transition: 0.4s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
@@ -392,10 +396,10 @@ footer .inner .social .social-icon:hover {
   transition-delay: 0.2s;
 }
 #myself .projects .inner .project .indicator p {
-  color: #e6e5e6;
+  color: #e2e2e2;
 }
 #myself .projects .inner .project .indicator:after {
-  background-color: #e6e5e6;
+  background-color: #e2e2e2;
 }
 #myself .projects .inner .project a {
   position: absolute;
@@ -669,7 +673,7 @@ footer .inner .social .social-icon:hover {
   text-transform: uppercase;
   font: 18px Gilroy;
   font-weight: 700;
-  color: #e6e5e6;
+  color: #e2e2e2;
   letter-spacing: -0.4px;
 }
 #gluten .top-path,
@@ -736,7 +740,7 @@ footer .inner .social .social-icon:hover {
   font: 14px Gilroy;
   letter-spacing: -0.3px;
   font-weight: 400;
-  color: #e6e5e6;
+  color: #e2e2e2;
   text-align: center;
 }
 @media (max-width: 900px) {

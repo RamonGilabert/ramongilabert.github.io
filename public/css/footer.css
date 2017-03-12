@@ -33,6 +33,7 @@ footer .forward {
 footer .back:before,
 footer .forward:after {
   content: '';
+  pointer-events: none;
   display: inline-block;
   background-color: white-color;
   position: absolute;
