@@ -87,11 +87,7 @@ function Scroller() {
       window.addEventListener('scroll', function() {
         offset = contentOffset(content);
         position = window.pageYOffset;
-        var up = position < lastScroll;
-
         calculate();
-
-        lastScroll = position;
       });
 
       calculate();
@@ -105,6 +101,23 @@ function Scroller() {
           footer.style.zIndex = inferior;
         }
       }
+    } else if (document.tag('body').classList[0] === 'case') {
+      var home = document.class('home');
+      var last = 0;
+      var threshold = 400;
+
+      window.addEventListener('scroll', function() {
+        var position = window.pageYOffset;
+        var up = position < last;
+
+        if (up || last == 0) {
+          home.style.transform = 'rotateZ(90deg)';
+        } else if (position > threshold) {
+          home.style.transform = 'rotateZ(90deg) translateX(-100%)';
+        }
+
+        last = position;
+      });
     }
   }
 }
