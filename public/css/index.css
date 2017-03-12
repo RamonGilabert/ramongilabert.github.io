@@ -374,7 +374,7 @@ footer .inner .social .social-icon:hover {
   font: 16px Gilroy;
   font-weight: 700;
   letter-spacing: -0.4px;
-  color: #d6d6d6;
+  color: #d9d9d9;
   margin: 0 auto;
   transform: translateY(100%);
   transition: 0.4s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
@@ -396,10 +396,10 @@ footer .inner .social .social-icon:hover {
   transition-delay: 0.2s;
 }
 #myself .projects .inner .project .indicator p {
-  color: #d6d6d6;
+  color: #d9d9d9;
 }
 #myself .projects .inner .project .indicator:after {
-  background-color: #d6d6d6;
+  background-color: #d9d9d9;
 }
 #myself .projects .inner .project a {
   position: absolute;
@@ -433,7 +433,7 @@ footer .inner .social .social-icon:hover {
   font-weight: 700;
   letter-spacing: -0.5px;
   display: inline-block;
-  opacity: 0.1;
+  opacity: 0.125;
   transition: 0.6s opacity ease;
 }
 #myself .projects .inner .project:hover .indicator {
@@ -599,10 +599,23 @@ footer .inner .social .social-icon:hover {
     font-weight: 700;
     letter-spacing: -0.5px;
     display: inline-block;
-    opacity: 0.1;
+    opacity: 0.125;
   }
-  #myself .projects .inner .project:hover .name h3 {
-    opacity: 0.1;
+  #myself .projects .inner .project:hover .indicator {
+    transform: translateX(-175%);
+  }
+  #myself .projects .inner .project:hover .role {
+    transform: translateY(100%);
+  }
+  #myself .projects .inner .project:hover .peek {
+    transform: scale3d(0.97, 0.97, 1);
+  }
+  #myself .projects .inner .gluten:hover .name {
+    transform: none;
+  }
+  #myself .projects .inner .lights:hover .name,
+  #myself .projects .inner .revolution:hover .name {
+    transform: none;
   }
   #myself .projects .inner .gluten {
     order: 1;
@@ -681,7 +694,7 @@ footer .inner .social .social-icon:hover {
   text-transform: uppercase;
   font: 18px Gilroy;
   font-weight: 700;
-  color: #d6d6d6;
+  color: #d9d9d9;
   letter-spacing: -0.4px;
 }
 #gluten .top-path,
@@ -748,7 +761,7 @@ footer .inner .social .social-icon:hover {
   font: 14px Gilroy;
   letter-spacing: -0.3px;
   font-weight: 400;
-  color: #d6d6d6;
+  color: #d9d9d9;
   text-align: center;
 }
 @media (max-width: 900px) {

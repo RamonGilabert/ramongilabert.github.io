@@ -38,7 +38,7 @@ function Parallax() {
     var self = this;
     var maximum = window.innerHeight;
     var translate = 100;
-    var tagging = 175;
+    var tagging = 200;
     var scale = 0.9;
     var opacity = 0;
     var element = document.class('myself');
