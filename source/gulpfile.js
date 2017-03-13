@@ -11,9 +11,9 @@ gulp.task('stylus', function () {
   gulp.src('stylus/*.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus())
-    // .pipe(uglifyCSS({
-    //   "uglyComments": true
-    // }))
+    .pipe(uglifyCSS({
+      "uglyComments": true
+    }))
     .pipe(gulp.dest('../public/css'))
 });
 
@@ -33,15 +33,15 @@ gulp.task('mustache', function() {
       quote: 'mustache/partials/cases/quote.mustache',
       text: 'mustache/partials/cases/text.mustache'
     }))
-    // .pipe(uglifyHTML({
-    //   collapseWhitespace: true
-    // }))
+    .pipe(uglifyHTML({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('../public'))
 });
 
 gulp.task('javascript', function() {
   gulp.src('js/*.js')
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('../public/js/'))
 });
 
