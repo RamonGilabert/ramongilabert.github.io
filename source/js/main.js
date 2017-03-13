@@ -130,21 +130,23 @@ function Scroller() {
 function Resizer() {
 
   this.run = function() {
-    var projects = document.class('projects').getElementsByClassName('inner')[0];
+    if (exists('myself')) {
+      var projects = document.class('projects').getElementsByClassName('inner')[0];
 
-    window.addEventListener('resize', function() {
+      window.addEventListener('resize', function() {
+        calculate();
+      });
+
+      function calculate() {
+        if (window.innerWidth < 700) { return; }
+        var gluten = document.class('gluten');
+        var revolution = document.class('revolution');
+
+        projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
+      }
+
       calculate();
-    });
-
-    function calculate() {
-      if (window.innerWidth < 700) { return; }
-      var gluten = document.class('gluten');
-      var revolution = document.class('revolution');
-
-      projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
     }
-
-    calculate();
   }
 }
 
