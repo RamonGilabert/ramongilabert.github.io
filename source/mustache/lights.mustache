@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    {{> head }}
-    <title>Ramon Gilabert – Lights</title>
-  </head>
-  <body id='lights' class='detail'>
-    {{# lights }}
-    {{> detail }}
-    {{/ lights }}
-  </body>
-</html>
+{{# lights }}
+{{> begin }}
+{{# server }}
+{{> subtitle }}
+{{/ server }}
+{{# plugged }}
+{{> subtitle }}
+{{/ plugged }}
+{{# industrial }}
+{{> subtitle }}
+{{/ industrial }}
+{{# pairing }}
+{{> subtitle }}
+{{/ pairing }}
+{{# editing }}
+{{> subtitle }}
+{{/ editing }}
+{{# visually }}
+{{> visually }}
+{{/ visually }}
+{{> end }}
+{{/ lights }}

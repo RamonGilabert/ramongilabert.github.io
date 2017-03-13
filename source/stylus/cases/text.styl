@@ -1,0 +1,42 @@
+// Text block for the case studies.
+
+.text {
+  width: 750px
+  max-width: 100%
+  font: text-font
+  letter-spacing: -0.4px
+  line-height: 170%
+  margin-bottom: 20px
+
+  a {
+    color: alternative-color
+  }
+
+  a:hover:after {
+    right: 0
+  }
+}
+
+.paragraph-space {
+  margin-bottom: 11px
+}
+
+.indent {
+  text-indent: 40px
+}
+
+.spacing {
+  margin-bottom: 3px !important
+}
+
+@media (max-width: minimum-width) {
+
+  .text {
+    font: mobile-text-font !important
+    line-height: 175% !important
+  }
+
+  .indent {
+    text-indent: 0px
+  }
+}

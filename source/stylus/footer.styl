@@ -1,188 +1,190 @@
 // Footer styles
 
-#footer {
-  cross-thickness = 1px
-
-  position: relative
+footer {
+  position: fixed
+  bottom: 0
   width: 100%
-  height: 100%
-  min-width: minimum-width
+  height: 100vh
+  background-color: dark-background-color
+  z-index: 1
 
-  .wrapper {
+  .back, .forward {
+    mix-blend-mode: soft-light
     position: absolute
-    top: 45%
-    transform: translate3d(0, -50%, 0)
-    display: block
-    margin: auto
-    width: 100%
-    transition: padding-transition, opacity-transition
+    display: inline-block
+
+    a {
+      display: inline-block
+      font: 17px Gilroy
+      font-weight: 400
+      color: white-color
+      letter-spacing: -0.3px
+    }
   }
 
-  .wrapper h2 {
-    font: 30px Brandon
-    text-transform: uppercase
-    text-align: center
-    color: text-color
+  .back {
+    left: 20px
+    bottom: 15px
+    padding-left: 40px
   }
 
-  .cross {
-    size = 40px
-
-    width: size
-    height: size
-    transform: rotateZ(45deg)
-    margin: 10px auto 0 auto
+  .forward {
+    bottom: footer-size - 36px
+    right: 20px
+    padding-right: 40px
   }
 
-  .cross:before {
+  .back:before, .forward:after {
     content: ''
+    pointer-events: none
+    display: inline-block
+    background-color: white-color
     position: absolute
-    height: cross-thickness
-    top: 50%
-    right: 0%
+    height: 2px
+    top: 57%
+    transform: translateY(-50%)
+  }
+
+  .back:before {
     left: 0%
-    background-color: text-color
+    right: calc(100% - 33px)
+    transition: 0.6s right ease
   }
 
-  .cross:after {
-    content: ''
-    position: absolute
-    width: cross-thickness
-    top: 0%
-    bottom: 0%
-    left: 50%
-    background-color: text-color
+  .forward:after {
+    right: 0%
+    left: calc(100% - 33px)
+    transition: 0.6s left ease
   }
 
-  #social {
+  .back:hover:before {
+    right: 0%
+  }
+
+  .forward:hover:after {
+    left: 0%
+  }
+
+  .circle {
+    circle = 400px
+
+    width: circle
+    height: circle
+  }
+
+  .inner {
     position: absolute
-    display: table
-    margin-top: 26px
-    min-width: 600px
+    bottom: 250px
     left: 50%
-    transform: translateX(-50%)
+    transform: translate(-50%, 50%)
 
-    div {
-      display: table-cell
+    .email {
+      text-align: center
+      display: inline-block
+      margin-left: 50%
+      transform: translateX(-50%)
 
-      a {
+      span {
+        font: 21px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica
+        font-weight: 900
+      }
+    }
+
+    .email {
+      p {
+        position: relative
+        font: 20px Gilroy
+        font-weight: 700
+        cursor: pointer
+        color: white-color
+        letter-spacing: -0.4px
+      }
+
+      p:after {
+        background-color: white
+        height: 2.5px
+      }
+
+      p:hover:after {
+        right: 0
+      }
+    }
+
+    .path {
+      display: block
+      margin-left: 50%
+      transform: translateX(-50%)
+      margin-top: 23px
+      margin-bottom: 18px
+      opacity: 0.15
+    }
+
+    .social {
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      justify-content: center
+      align-content: center
+
+      .social-icon {
         margin = 25px
 
-        font: 15px Inconsolata
-        margin-right: margin
+        cursor: pointer
+        max-height: 36px
+        object-fit: cover
         margin-left: margin
-        position: relative
+        margin-right: margin
+        transition: 0.45s transform ease
       }
 
-      figure {
-        size = 17px
-
-        position: absolute
-        width: size
-        height: size
-        background-size: contain
-        background-repeat: no-repeat
-        margin-top: 1px
+      .social-icon:hover {
+        scale = 0.9
+        transform: scale3d(scale, scale, 1)
       }
     }
-
-    #dribbble figure {
-      background-image: url(dribbble-icon)
-    }
-
-    #github figure {
-      background-image: url(github-icon)
-    }
-
-    #twitter figure {
-      background-image: url(twitter-icon)
-    }
-
-    #resume figure {
-      background-image: url(monogram-icon)
-    }
-  }
-
-  #next-project {
-    position: absolute
-    right: 30px
-    bottom: 25px
-    font: header-font
-    color: white
-    padding-right: 50px
-    padding-bottom: 7.5px
-  }
-
-  #next-project:after {
-    display: none
-  }
-
-  #next-project:before {
-    content: ''
-    position: absolute
-    background-color: text-color
-    height: glitch-size
-    bottom: 0%
-    right: 0%
-    left: 35%
-    transition: left glitch-transition
-  }
-
-  #next-project:hover:before {
-    left: 0%
   }
 }
 
 @media (max-width: minimum-width) {
+  footer {
+    overflow: hidden
 
-  #footer {
-    width: 100vw
-    height: 100vh
-    min-width: 100vw
-    min-height: 690px
+    .inner {
+      bottom: 200px
 
-    .wrapper {
-      width: 70%
-      top: 50%
-      left: 15%
-    }
+      .email {
+        font-weight: 400
 
-    #social {
-      position: relative
-      display: inline
-      width: 100%
-      min-width: 100%
-      text-align: center
-      top: 23px
-      left: auto
-      right: auto
-
-      div {
-        display: block
-        margin-bottom: 20px
-        margin-left: 10px
-
-        a {
-          margin = 25px
-
-          font: 15px Inconsolata
-          margin-right: margin
-          margin-left: margin
-          position: relative
-        }
-
-        figure {
-          size = 17px
-
-          display: inline
-          position: absolute
-          width: size
-          height: size
-          background-size: contain
-          background-repeat: no-repeat
-          margin-top: 1px
+        span {
+          font-weight: 700
         }
       }
+    }
+
+    .back, .forward {
+      position: absolute
+      display: inline-block
+    }
+
+    .back {
+      transform-origin: bottom right
+      transform: translateX(-100%) rotateZ(90deg)
+      bottom: 15px
+      left: 10px
+    }
+
+    .forward {
+      transform-origin: top left
+      transform: translateX(100%) rotateZ(90deg)
+      right: 10px
+      bottom: mobile-footer-size - 36px
+    }
+
+    .inner .social .social-icon {
+      margin = 15px
+
+      margin-left: margin
+      margin-right: margin
     }
   }
 }

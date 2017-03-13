@@ -1,29 +1,19 @@
-    <footer id='footer' class='explanation loading-header'>
-      <div class='wrapper scroll-appearance'>
-        <h2>Let's work together</h2>
-        <div class='cross'></div>
-        <div id='social'>
-          <div id='dribbble'>
-            <figure></figure>
-            <a href='https://dribbble.com/RamonGilabert' target='_blank'>/ramongilabert</a>
-          </div>
-          <div id='github'>
-            <figure></figure>
-            <a href='https://github.com/RamonGilabert' target='_blank'>/ramongilabert</a>
-          </div>
-          <div id='twitter'>
-            <figure></figure>
-            <a href='https://twitter.com/RamonGilabert' target='_blank'>/ramongilabert</a>
-          </div>
-          <div id='resume'>
-            <figure></figure>
-            <a href='/resources/Ramon Gilabert – Resumé.pdf' target='_blank'
-            download='Ramon Gilabert – Resumé'>/resumé</a>
-          </div>
+    <footer>
+      <div class='noise'></div>
+      <img class='circle' src='./images/general/circle.png'>
+      {{# back }}
+      <div class='back'><a href='{{ link }}'>{{ title }}</a></div>
+      {{/ back }}
+      {{# forward }}
+      <div class='forward'><a href='{{ link }}'>{{ title }}</a></div>
+      {{/ forward }}
+      <div class='inner'>
+        <div class='email'><p>ramon<span>@</span>gilabert.design</p></div>
+        <img class='path' src='./images/general/path.svg'>
+        <div class='social'>
+          {{# social }}
+          <a href='{{ link }}' target='_blank'><img class='social-icon' src='{{ image }}'></a>
+          {{/ social }}
         </div>
       </div>
-      {{# next }}
-      <a id='next-project' href='{{ link }}'>next project</a>
-      {{/ next }}
     </footer>
-    {{> imports }}

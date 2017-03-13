@@ -1,0 +1,498 @@
+// Myself page. The first one a user will see.
+
+#myself {
+
+  header {
+    position: fixed
+    top: 0
+    width: 100%
+    height: 100vh
+    min-height: 600px
+    background-color: dark-background-color
+    z-index: 2
+
+    .work {
+      cursor: pointer
+      transform-origin: top right
+      transform: rotateZ(90deg)
+      right: 15px
+      bottom: 0px
+      padding-right: 40px
+    }
+
+    .work:after {
+      left: calc(100% - 33px)
+      right: 0%
+      width: auto
+      margin-left: 0px
+      transition: 0.6s left ease
+      pointer-events: none
+    }
+
+    .work:hover:after {
+      left: 0%
+    }
+
+    h2 {
+      position: absolute
+      top: 15px
+      left: 50%
+      transform: translateX(-50%)
+      color: header-text-color
+      opacity: 0.7
+      font: 26px Gilroy
+      font-weight: 700
+      letter-spacing: -0.75px
+    }
+
+    .designer {
+      position: absolute
+      top: 51%
+      left: 50%
+      max-width: 90%
+      transform: translate(-50%, -50%)
+      mix-blend-mode: soft-light
+    }
+
+    .myself {
+      position: absolute
+      height: 95%
+      min-height: 750px
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      backface-visibility: hidden
+      perspective: 1000
+      -webkit-backface-visibility: hidden
+      -webkit-perspective: 1000
+    }
+  }
+
+  .content {
+    position: relative
+    margin-top: 100vh
+    margin-bottom: footer-size
+    background-color: white-color
+    z-index: 7
+  }
+
+  .story {
+    .inner {
+      padding: 150px inner-spacing bottom-spacing inner-spacing
+
+      h2 {
+        font: title-font
+        font-weight: 700
+        letter-spacing: -2.5px
+      }
+
+      .path {
+        margin-bottom: 15px
+      }
+
+      p {
+        font: text-font
+        font-weight: 400
+        letter-spacing: -0.4px
+        line-height: 24px
+        width: 525px
+        max-width: 100%
+      }
+    }
+  }
+
+  .projects {
+    margin = 15px
+    margin-top = 175px
+    padding = 110px
+    height = 750px
+    width = 550px
+    alternative-height = 550px
+
+    width: 100%
+
+    .inner {
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      align-content: center
+      height: 4 * padding + 4 * margin + 1000
+
+      .project {
+        position: relative
+        width: width
+        max-width: 40%
+        background-color: projects-color
+        margin: margin margin margin margin
+
+        .rolling {
+          position: absolute
+          right: 0
+          left: 0
+          bottom: 15px
+          margin: 0 auto
+          overflow: hidden
+        }
+
+        .role {
+          text-align: center
+          text-transform: uppercase
+          font: 16px Gilroy
+          font-weight: 700
+          letter-spacing: -0.4px
+          color: gray-color
+          margin: 0 auto
+          transform: translateY(100%)
+          transition: project-transition
+          transition-delay: 0.15s
+        }
+
+        .indication {
+          position: absolute
+          transform-origin: top right
+          transform: rotateZ(90deg)
+          top: 130px
+          right: 10px
+          padding-right: 40px
+          overflow: hidden
+        }
+
+        .indicator {
+          position: static
+          transform: translateX(-175%)
+          transition: project-transition
+          transition-delay: 0.2s
+
+          p {
+            color: gray-color
+          }
+        }
+
+        .indicator:after {
+          background-color: gray-color
+        }
+
+        a {
+          position: absolute
+          left: 0
+          width: 100%
+          height: 100%
+        }
+
+        .peek {
+          position: relative
+          left: 50%
+          right: auto
+          bottom: auto
+          max-height: 90%
+          max-width: 90%
+          padding-top: padding
+          padding-bottom: padding
+          transform: translateX(-50%)
+          transition: 0.7s transform ease
+        }
+
+        .name {
+          position: absolute
+          transition: 0.7s transform ease
+
+          .path {
+            display: inline-block
+            margin-top: 2.5px
+            margin-right: 5px
+            height: 15px
+          }
+
+          h3 {
+            margin: 15px 0px 15px 0px
+            font: 22px Gilroy
+            font-weight: 700
+            letter-spacing: -0.5px
+            display: inline-block
+            opacity: 0.125
+            transition: 0.6s opacity ease
+          }
+        }
+      }
+
+      .project:hover {
+        .indicator {
+          transform: translateY(0)
+        }
+
+        .role {
+          transform: translateY(0)
+        }
+
+        .peek {
+          scale = 0.97
+          transform: translateX(-50%) scale3d(scale, scale, 1)
+        }
+
+        .name h3 {
+          opacity: 1
+        }
+      }
+
+      .gluten:hover {
+        .name {
+          transform: translateY(40px) rotateZ(90deg)
+        }
+      }
+
+      .lights:hover, .revolution:hover {
+        .name {
+          transform: translateY(-40px) rotateZ(-90deg)
+        }
+      }
+
+      .gluten {
+        order: 2
+
+        .indication {
+          transform-origin: left bottom
+          transform: rotateZ(90deg)
+          top: 0
+          left: 14px
+          right: auto
+        }
+
+        .name {
+          top: 150px
+          right: 0px
+          bottom: auto
+          left: auto
+          transform-origin: right bottom
+          transform: rotateZ(90deg)
+        }
+      }
+
+      .lights {
+        margin-top: margin-top
+        order: 1
+
+        .name {
+          top: auto
+          right: auto
+          bottom: 100px
+          left: 0
+          transform-origin: left bottom
+          transform: rotateZ(-90deg)
+        }
+      }
+
+      .revolution {
+        order: 3
+
+        .name {
+          top: auto
+          right: auto
+          bottom: 50px
+          left: 0
+          transform-origin: left bottom
+          transform: rotateZ(-90deg)
+        }
+      }
+    }
+  }
+
+  .recognition {
+    .inner {
+      padding: 150px inner-spacing bottom-spacing inner-spacing
+    }
+
+    h2 {
+      font: title-font
+      font-weight: 700
+      letter-spacing: -2.5px
+    }
+
+    h3 {
+      margin: 15px 0px 18px 0px
+      font: 24px Gilroy
+      font-weight: 700
+      letter-spacing: -0.5px
+    }
+
+    .path {
+      margin-bottom: 12px
+    }
+
+    p {
+      font: text-font
+      font-weight: 400
+      letter-spacing: -0.4px
+      line-height: 28px
+      width: 525px
+      max-width: 100%
+    }
+
+    a:hover:after {
+      right: 0
+    }
+  }
+}
+
+@media (max-width: minimum-width) {
+
+  #myself {
+    margin = mobile-margin-top mobile-margin-side mobile-margin-bottom mobile-margin-side
+
+    .content {
+      margin-bottom: mobile-footer-size
+    }
+
+    .story .inner {
+      padding: mobile-initial-margin mobile-margin-side mobile-margin-bottom mobile-margin-side
+
+      h2 {
+        font: mobile-title-font-landscape
+        font-weight: 700
+        margin-bottom: 5px
+      }
+    }
+
+    .recognition .inner {
+      padding: margin
+
+      h2 {
+        font: mobile-title-font-landscape
+        font-weight: 700
+        margin-bottom: 5px
+      }
+    }
+
+    header {
+      overflow: hidden
+
+      h2 {
+        top: 15px
+      }
+
+      .designer {
+        top: 47.5%
+        left: 50%
+        max-width: 250%
+        transform: translate(-50%, -50%)
+      }
+
+      .myself {
+        position: absolute
+        height: 97%
+        min-height: 450px
+        bottom: 0
+        left: 48.5%
+        transform: translateX(-50%)
+      }
+
+      .indicator {
+        opacity: 0
+      }
+    }
+
+    .projects {
+      .inner {
+        flex-wrap: nowrap
+        width: 100%
+        height: auto
+
+        .project {
+          max-width: calc(100% - 30px)
+          left: 0
+          right: 0
+          margin: 7.5px auto 7.5px auto
+
+          .peek {
+            padding-top: 30%
+            padding-bottom: 27.5%
+            width: auto
+          }
+
+          .name {
+            transform: rotateZ(0deg)
+            top: 0px
+            left: 15px
+
+            .path {
+              display: inline-block
+              margin-top: 2.5px
+              margin-right: 5px
+              height: 15px
+            }
+
+            h3 {
+              margin: 15px 0px 15px 0px
+              font: 22px Gilroy
+              font-weight: 700
+              letter-spacing: -0.5px
+              display: inline-block
+              opacity: 0.125
+            }
+          }
+        }
+
+        .project:hover {
+          .indicator {
+            transform: translateX(-175%)
+          }
+
+          .role {
+            transform: translateY(100%)
+          }
+
+          .peek {
+            scale = 0.97
+            transform: translateX(-50%) scale3d(scale, scale, 1)
+          }
+        }
+
+        .gluten:hover {
+          .name {
+            transform: none
+          }
+        }
+
+        .lights:hover, .revolution:hover {
+          .name {
+            transform: none
+          }
+        }
+
+        .gluten {
+          order: 1
+        }
+
+        .lights {
+          margin-top: 15px
+          order: 3
+        }
+
+        .revolution {
+          order: 2
+          height: auto
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: phone-width) {
+
+  #myself {
+    margin = mobile-margin-top mobile-margin-side mobile-margin-bottom mobile-margin-side
+
+    .story .inner {
+      h2 {
+        font: mobile-title-font
+        font-weight: 700
+      }
+    }
+
+    .recognition .inner {
+      h2 {
+        font: mobile-title-font
+        font-weight: 700
+      }
+    }
+  }
+}

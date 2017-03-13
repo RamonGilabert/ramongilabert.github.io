@@ -1,38 +1,29 @@
 @import fonts
-@import variables
-@import glitches
+@import constants
+@import indicator
 @import footer
-@import loading
-@import appearance
-@import header
-@import loader
 
-@import 'error'
+@import 'myself/myself'
 
-@import 'initial/myself'
-@import 'initial/scrolling'
-
-@import 'manifesto/hero'
-@import 'manifesto/manifesto'
-
-@import 'details/detail'
+@import 'cases/general'
+@import 'cases/image'
+@import 'cases/title'
+@import 'cases/subtitle'
+@import 'cases/visually'
+@import 'cases/quote'
+@import 'cases/text'
 
 *, html {
   margin: 0
   padding: 0
 }
 
-body {
+html, body {
   margin: 0 auto
-  background-color: background-color
 }
 
 html, body {
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
+  background-color: white-color
 }
 
 a {
@@ -48,49 +39,24 @@ button {
 }
 
 button:focus {
-  outline:0
+  outline: 0
 }
 
-button, h1, h2, h3, p, a {
+button, h1, h2, h3, h4, p, a {
   font-smooth: always
   -webkit-font-smoothing: antialiased
 }
 
-h1, h2, p {
-  -webkit-touch-callout: none
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
+h1, h2, h3, h4, p {
   cursor: default
-}
-
-a:after {
-  content: ''
-  position: absolute
-  height: 1px
-  background-color: text-color
-  top: 55%
-  left: 0%
-  right: 100%
-  transition: right 0.25s ease-out
-}
-
-a:hover:after {
-  right: 0%
-}
-
-p {
-  letter-spacing: 0px
-  line-height: 28px
-  margin-bottom: 7px
   color: text-color
 }
 
-#page-title {
-  position: absolute
-  width: 1px
-  height: 1px
-  top: 0%
-  left: 0%
-  clip: rect(0px, 1px, 1px, 0px)
+.page-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  clip: rect(0, 1px, 1px, 0)
 }

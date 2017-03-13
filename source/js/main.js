@@ -1,219 +1,177 @@
 // JavaScript of the main content of gilabert.design.
 
-// Developers: Me, Myself and I.
-
-// Some code is imported in the HTML partial (head.mustache) from other files.
-// Those files are as important as this one. With the same developer on it.
-
 // MARK: - General values
 
-var appearance = new Appearance();
 prepareDocument();
 setupAnalytics();
 
-// MARK: - Window events
-
 window.addEventListener('load', function() {
-  var separator = new Separator('dot-separator');
-  separator.generate();
+  var parallax = new Parallax();
+  parallax.prepare();
 
   var scroller = new Scroller();
   scroller.run();
 
   var resizer = new Resizer();
-  resizer.prepare();
+  resizer.run();
 
-  var disappear = new Disappear();
-  disappear.prepare();
+  var prevent = new Prevent();
+  prevent.images();
 
-  var parallax = new Parallax();
-  parallax.prepare();
-
-  var loader = new Loader();
-  loader.preload(function() {
-    appearance.run();
-  });
-
-  var images = document.tags('img');
-  for (var i = 0; i < images.length; i++) {
-    images[i].addEventListener('dragstart', function() {
-      event.preventDefault();
-    });
-  }
+  var click = new Click();
+  click.indicator();
 
   encryptCorreu('email');
+});
 
-  window.addEventListener('resize', function() {
-    separator.generate();
-    resizer.method();
-  });
+function Parallax() {
 
-  var timer = new Date().getTime();
+  this.method = empty;
+  this.margin = 1.5;
 
-  window.addEventListener('scroll', function() {
-    if (window.pageYOffset <= window.innerHeight * 0.25) {
-      scroller.run();
+  this.prepare = function() {
+    if (exists('myself')) {
+      this.method = this.myself;
+    }
 
-      for (var i = 0; i < scroller.sections.length; i++) {
-        var section = scroller.sections[i];
-        if (!section.classList.contains('scroll-appearance')) {
-          section.classList.add('scroll-appearance');
-        }
-      }
-    } else {
-      window.requestAnimationFrame(function() {
-        scroller.method();
+    this.method();
+  }
+
+  this.myself = function() {
+    var self = this;
+    var maximum = window.innerHeight;
+    var translate = 100;
+    var tagging = 210;
+    var scale = 0.9;
+    var fade = 0.05;
+    var opacity = 0;
+    var element = document.class('myself');
+    var name = document.class('name');
+    var tag = document.class('designer');
+
+    window.addEventListener('scroll', function() {
+      calculate();
+    });
+
+    function calculate() {
+      var offset = window.pageYOffset;
+
+      if (offset > maximum * self.margin) { return }
+      var translation = -(translate * offset) / maximum;
+      var tratag = (-tagging * offset - 50 * maximum + 50 * offset) / maximum;
+      var scalation = (scale * offset + maximum - offset) / maximum;
+      var fading = (fade * offset + maximum - offset) / maximum;
+      var opaque = (maximum - offset * 2) / maximum;
+
+      animation(function() {
+        element.style.transform = 'translate3d(-50%, ' + translation / 3.5 + '%, 0) scale3d(' + scalation + ', ' + scalation + ', 1)';
+        tag.style.transform = 'translate3d(-50%, ' + tratag + '%, 0)';
+        name.style.opacity = opaque;
+        tag.style.opacity = fading;
       });
     }
 
-    setTimeout(function() {
-      var now = new Date().getTime();
-      if (now - timer > 10) {
-        timer = now;
-        window.requestAnimationFrame(parallax.method);
-      }
-    }, 0);
-  });
-});
-
-window.addEventListener('beforeunload', function(event) {
-  if (!exists('myself')) {
-    window.scrollTo(0, 0);
+    calculate();
   }
-});
-
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    appearance.run();
-  }
-});
+}
 
 function Scroller() {
 
-  this.sections = [];
-  this.method = empty;
-  this.length = 0;
-
   this.run = function() {
-    if (exists('manifesto')) {
-      var story = document.class('story').tag('div');
-      var manifesto = document.class('manifesto').tag('div');
-      var awards = document.class('awards').tag('div');
-      var footer = document.id('footer').tag('div');
+    if (exists('myself')) {
+      var header = document.tag('header');
+      var footer = document.tag('footer');
+      var content = document.class('content');
+      var offset = contentOffset(content);
+      var position = window.pageYOffset;
+      var lastScroll = 0;
+      var margin = 2;
+      var superior = 2;
+      var inferior = 1;
 
-      this.sections = [story, manifesto, awards, footer];
-      this.method = this.manifesto
-      this.length = this.sections.length;
-    }
-  }
+      window.addEventListener('scroll', function() {
+        offset = contentOffset(content);
+        position = window.pageYOffset;
+        calculate();
+      });
 
-  this.manifesto = function() {
-    var height = window.innerHeight
-    var sectionsLength = this.sections.length;
-    var initialPercentage = 0.6;
-    var distance = window.innerHeight * initialPercentage;
-    var sectionHeight = 0.7;
-    var percentage = 0.5;
-    var minimumHeight = height > 600 * sectionHeight ? height : 600 * sectionHeight;
+      calculate();
 
-    if (this.length !== sectionsLength) {
-      distance = height + minimumHeight * (sectionHeight
-        * (this.length - sectionsLength - 1) + sectionHeight * percentage)
-    }
-
-    if (window.pageYOffset - distance > 0 && sectionsLength > 0) {
-      var section = this.sections[0];
-      if (section.classList.contains('scroll-appearance')) {
-        section.classList.remove('scroll-appearance');
-        this.sections.shift();
+      function calculate() {
+        if (position > offset * margin) {
+          header.style.zIndex = inferior;
+          footer.style.zIndex = superior;
+        } else if (position < offset) {
+          header.style.zIndex = superior;
+          footer.style.zIndex = inferior;
+        }
       }
-    }
-  }
-}
+    } else if (document.tag('body').classList[0] === 'case') {
+      var home = document.class('home');
+      var last = 0;
+      var threshold = 400;
 
-function Disappear() {
+      window.addEventListener('scroll', function() {
+        var position = window.pageYOffset;
+        var up = position < last;
 
-  this.elements = [];
+        if (up || last == 0) {
+          home.style.transform = 'rotateZ(90deg)';
+        } else if (position > threshold) {
+          home.style.transform = 'rotateZ(90deg) translateX(-100%)';
+        }
 
-  this.prepare = function() {
-    if (exists('manifesto') || isDetail()) {
-      this.elements = [document.id('back-button'), document.id('next-project')];
-    } else if (exists('myself')) {
-      this.elements = document.classes('intercept');
-    }
-
-    for (var i = 0; i < this.elements.length; i++) {
-      var self = this;
-      var element = this.elements[i];
-
-      element.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        var href = this.href;
-        var self = this;
-
-        appearance.method(false, function() {
-          setTimeout(function() {
-
-            if (self.innerHTML == 'go home') {
-              if (storageSupported()) {
-                if (window.sessionStorage['coming'] != undefined && window.sessionStorage['coming'].indexOf('index') != -1) {
-                  window.sessionStorage['coming'] = window.location;
-                  history.back();
-                  return;
-                } else {
-                  href = 'index';
-                }
-
-                window.sessionStorage['coming'] = window.location;
-              } else {
-                href = 'index';
-              }
-            }
-
-            window.location = href;
-          }, 0);
-        });
+        last = position;
       });
     }
   }
 }
 
-function Separator(name) {
+function Resizer() {
 
-  this.elementName = name;
-  this.wrapper = document.id(this.elementName);
-  this.lastWidth = window.innerWidth;
+  this.run = function() {
+    var projects = document.class('projects').getElementsByClassName('inner')[0];
 
-  this.generate = function() {
-    if (this.wrapper === null) { return; }
+    window.addEventListener('resize', function() {
+      calculate();
+    });
 
-    if ((window.innerWidth >= 1400
-      || abs(this.lastWidth - window.innerWidth) <= 10)
-      && this.wrapper.innerHTML != '') {
-      return;
+    function calculate() {
+      if (window.innerWidth < 700) { return; }
+      var gluten = document.class('gluten');
+      var revolution = document.class('revolution');
+
+      projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
     }
 
-    var maximumWidth = 1400;
-    var sideOffset = 57;
-    var windowWidth = window.innerWidth >= maximumWidth ? maximumWidth : window.innerWidth;
-    var width = windowWidth - sideOffset;
-    var times = Math.floor(width / 11) * 2;
-    var values = [true, true, true, true, true, true, false];
+    calculate();
+  }
+}
 
-    this.wrapper.innerHTML = '';
+function Click() {
 
-    for (var i = 0; i <= times; i++) {
-      var dot = document.createElement('div');
-      dot.classList.add('dot');
+  this.indicator = function() {
+    if (exists('myself')) {
+      var indicator = document.class('work');
+      var offset = contentOffset(document.class('content'));
 
-      this.wrapper.appendChild(dot);
-
-      if (!values[Math.floor(Math.random() * values.length)] || i <= 5) {
-        dot.style.opacity = 0
-      }
+      indicator.addEventListener('click', function() {
+        scrollTo(offset + 50, 750);
+      });
     }
+  }
+}
 
-    this.lastWidth = window.innerWidth;
+function Prevent() {
+
+  this.images = function() {
+    var images = document.tags('img');
+
+    for (var i = 0; i < images.length; i++) {
+      var image = images[i];
+      image.addEventListener('dragstart', function(event) {
+        event.preventDefault();
+      });
+    }
   }
 }

@@ -1,0 +1,13 @@
+    <div class='visually'>
+      <div class='inner'>
+        <h4>{{ title }}<span class='spaced dot'>.</span></h4>
+        {{> text }}
+      </div>
+      <div class='colors'>
+        {{# colors }}
+        <div class='color {{ class }} {{ position }}' style='background-color: {{ code }}'>
+          <p>{{ code }}</p>
+        </div>
+        {{/ colors }}
+      </div>
+    </div>

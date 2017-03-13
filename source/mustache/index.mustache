@@ -2,38 +2,66 @@
 <html>
   <head>
     {{> head }}
-    <title>Ramon Gilabert – Designer &amp; Developer</title>
+    <title>Ramon Gilabert</title>
   </head>
+  {{# myself }}
   <body id='myself'>
-    <h1 id='page-title'>Ramon Gilabert</h1>
-    {{> header }}
-    {{> loader }}
-    <div id='sections'>
-      {{# myself }}
-      <section id="{{ kind }}">
-        <figure></figure>
-        <div class='wrapper'>
-          <div><h2 class='title text'>{{ title }}</h2></div>
-          <p class='text'><strong>{{ span }}</strong>{{{ subtitle }}}</p>
-          <div id='more' class='more text'><a class='intercept' href='./{{ link }}'>read more</a></form></div>
+    <header>
+      <h1 class='page-title'>{{ page }}</h1>
+      <h2 class='name'>{{ header }}</h2>
+      <img class='designer' src='./images/myself/designer.svg'>
+      <div class='noise'></div>
+      <img class='circle' src='./images/general/circle.png'>
+      <img class='myself' src='./images/myself/myself.png'>
+      <div class='indicator work'><p>work</p></div>
+    </header>
+    <div class='content'>
+      <div class='story'>
+        {{# story }}
+        <div class='inner'>
+          <h2>{{ title }}<span class='spaced dot'>.</span></h2>
+          <img class='path' src='./images/general/path.svg'>
+          <p>{{{ text }}}</p>
         </div>
-      </section>
-      {{/ myself }}
+        {{/ story }}
+      </div>
+      <div class='projects'>
+        <div class='inner'>
+          {{# projects }}
+          <div class='project {{ name }}'>
+            <img class='peek' src='{{ image }}'>
+            <div class='indication'><div class='indicator'><p>case study</p></div></div>
+            <div class='rolling'><p class='role'>{{ role }}</p></div>
+            <div class='name'>
+              <img class='path' src='./images/general/path.svg'>
+              <h3>{{ name }}<span class='spaced dot'>.</span></h3>
+            </div>
+            <a href='{{ link }}'></a>
+          </div>
+          {{/ projects }}
+        </div>
+      </div>
+      <div class='recognition'>
+        {{# recognition }}
+        <div class='inner'>
+          <h2>{{ title }}<span class='spaced dot'>.</span></h2>
+          <img class='path' src='./images/general/path.svg'>
+          {{# others }}
+          <p>{{{ text }}}</p>
+          {{/ others }}
+          {{# awards }}
+          <h3>{{ title }}<span class='spaced dot'>.</span></h3>
+          <img class='path' src='./images/general/path.svg'>
+          {{# list }}
+          <p><span class='dot'>{{ highlight }}</span> {{ rest }}</p>
+          {{/ list }}
+          {{/ awards }}
+        </div>
+        {{/ recognition }}
+      </div>
     </div>
-    <nav>
-      {{# myself }}
-      <div><button class='navigator' id='navigation-{{ kind }}'>{{ kind }}</button></div>
-      {{/ myself }}
-      <div class='disclosure disclosure-projects'><p>projects</p></div>
-    </nav>
-    <div id='details'>
-      <img id='triangle' src='./images/icons/triangle.svg' />
-      <div id='indicator'></div>
-      <div class='corner-glitch bottom-corner-glitch'></div>
-      <button id='back-top-button'>back top</button>
-      <div id='selected-work'><div id='selected-wrapper'><p>selected</p></div></div>
-    </div>
+    {{> footer }}
     {{> imports }}
-    <script async type="text/javascript" src="/js/pagination.js"></script>
   </body>
+  {{/ myself }}
 </html>

@@ -1,0 +1,100 @@
+// The indicator in the site.
+
+.indicator {
+  position: absolute
+  cursor: pointer
+
+  a, p {
+    display: inline-block
+    cursor: pointer
+    font: 15px Gilroy
+    font-weight: 400
+    color: white-color
+    letter-spacing: -0.3px
+  }
+
+  a:after {
+    display: none
+  }
+}
+
+.indicator:after {
+  content: ''
+  position: absolute
+  background-color: white-color
+  height: 1.5px
+  width: 30px
+  top: 58%
+  transform: translateY(-50%)
+  margin-left: 8px
+  pointer-events: none
+}
+
+.dot {
+  position: relative
+  color: alternative-color
+  margin: 0
+  padding: 0
+}
+
+.spaced {
+  transform: translateY(-50%)
+}
+
+.space {
+  margin-top: 2.5px
+  margin-bottom: 3px
+}
+
+.circle {
+  size = 1000px
+
+  position: absolute
+  top: 60%
+  left: 50%
+  margin: auto auto
+  width: size
+  height: size
+  opacity: 0.1
+  mix-blend-mode: soft-light
+  transform: translate3d(-50%, -50%, 0)
+}
+
+.noise {
+  position: absolute
+  width: 100%
+  height: 100%
+  top: auto
+  background-image: url(../images/general/noise.jpg)
+  background-repeat: repeat
+  background-blend-mode: normal
+  mix-blend-mode: overlay
+  transform: translate3d(0, 0, 0)
+}
+
+.email, a {
+  position: relative
+}
+
+.email p:after, a:after {
+  content: ''
+  position: absolute
+  top: 54%
+  right: 100%
+  left: 0
+  transform: translateY(-50%)
+  height: 2px
+  width: auto
+  background-color: alternative-color
+  transition: 0.6s right ease
+  pointer-events: none
+}
+
+@media (max-width: minimum-width) {
+  .circle {
+    size = 80%
+
+    width: size
+    height: size
+  }
+}
