@@ -41,8 +41,9 @@ function Parallax() {
     var self = this;
     var maximum = window.innerHeight;
     var translate = 100;
-    var tagging = 200;
+    var tagging = 210;
     var scale = 0.9;
+    var fade = 0.05;
     var opacity = 0;
     var element = document.class('myself');
     var name = document.class('name');
@@ -59,13 +60,14 @@ function Parallax() {
       var translation = -(translate * offset) / maximum;
       var tratag = (-tagging * offset - 50 * maximum + 50 * offset) / maximum;
       var scalation = (scale * offset + maximum - offset) / maximum;
+      var fading = (fade * offset + maximum - offset) / maximum;
       var opaque = (maximum - offset * 2) / maximum;
 
       animation(function() {
         element.style.transform = 'translate3d(-50%, ' + translation / 3.5 + '%, 0) scale3d(' + scalation + ', ' + scalation + ', 1)';
         tag.style.transform = 'translate3d(-50%, ' + tratag + '%, 0)';
         name.style.opacity = opaque;
-        tag.style.opacity = opaque;
+        tag.style.opacity = fading;
       });
     }
 
