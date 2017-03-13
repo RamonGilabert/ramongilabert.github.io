@@ -191,7 +191,7 @@ footer .inner .email p {
 }
 footer .inner .email p:after {
   background-color: #fff;
-  height: 3px;
+  height: 2.5px;
 }
 footer .inner .email p:hover:after {
   right: 0;
@@ -350,12 +350,11 @@ footer .inner .social .social-icon:hover {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  height: 1360px;
+  height: 1500px;
 }
 #myself .projects .inner .project {
   position: relative;
   width: 550px;
-  height: 750px;
   max-width: 40%;
   background-color: #faf9fc;
   margin: 15px 15px 15px 15px;
@@ -403,18 +402,20 @@ footer .inner .social .social-icon:hover {
 }
 #myself .projects .inner .project a {
   position: absolute;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 #myself .projects .inner .project .peek {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
+  left: 50%;
+  right: auto;
+  bottom: auto;
   max-height: 90%;
   max-width: 90%;
-  margin: auto auto;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  transform: translateX(-50%);
   transition: 0.7s transform ease;
 }
 #myself .projects .inner .project .name {
@@ -443,7 +444,7 @@ footer .inner .social .social-icon:hover {
   transform: translateY(0);
 }
 #myself .projects .inner .project:hover .peek {
-  transform: scale3d(0.97, 0.97, 1);
+  transform: translateX(-50%) scale3d(0.97, 0.97, 1);
 }
 #myself .projects .inner .project:hover .name h3 {
   opacity: 1;
@@ -461,8 +462,8 @@ footer .inner .social .social-icon:hover {
 #myself .projects .inner .gluten .indication {
   transform-origin: left bottom;
   transform: rotateZ(90deg);
-  top: auto;
-  left: 12.5px;
+  top: 0;
+  left: 14px;
   right: auto;
 }
 #myself .projects .inner .gluten .name {
@@ -474,7 +475,7 @@ footer .inner .social .social-icon:hover {
   transform: rotateZ(90deg);
 }
 #myself .projects .inner .lights {
-  margin-top: 275px;
+  margin-top: 175px;
   order: 1;
 }
 #myself .projects .inner .lights .name {
@@ -486,7 +487,6 @@ footer .inner .social .social-icon:hover {
   transform: rotateZ(-90deg);
 }
 #myself .projects .inner .revolution {
-  height: 550px;
   order: 3;
 }
 #myself .projects .inner .revolution .name {
@@ -552,7 +552,7 @@ footer .inner .social .social-icon:hover {
     top: 15px;
   }
   #myself header .designer {
-    top: 50%;
+    top: 47.5%;
     left: 50%;
     max-width: 250%;
     transform: translate(-50%, -50%);
@@ -580,6 +580,8 @@ footer .inner .social .social-icon:hover {
     margin: 7.5px auto 7.5px auto;
   }
   #myself .projects .inner .project .peek {
+    padding-top: 30%;
+    padding-bottom: 27.5%;
     width: auto;
   }
   #myself .projects .inner .project .name {
@@ -608,7 +610,7 @@ footer .inner .social .social-icon:hover {
     transform: translateY(100%);
   }
   #myself .projects .inner .project:hover .peek {
-    transform: scale3d(0.97, 0.97, 1);
+    transform: translateX(-50%) scale3d(0.97, 0.97, 1);
   }
   #myself .projects .inner .gluten:hover .name {
     transform: none;
@@ -626,7 +628,7 @@ footer .inner .social .social-icon:hover {
   }
   #myself .projects .inner .revolution {
     order: 2;
-    height: 400px;
+    height: auto;
   }
 }
 @media (max-width: 500px) {

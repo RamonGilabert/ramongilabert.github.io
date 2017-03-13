@@ -103,7 +103,8 @@
 
   .projects {
     margin = 15px
-    margin-top = 275px
+    margin-top = 175px
+    padding = 110px
     height = 750px
     width = 550px
     alternative-height = 550px
@@ -115,12 +116,11 @@
       flex-direction: column
       flex-wrap: wrap
       align-content: center
-      height: height + alternative-height + margin * 4
+      height: 4 * padding + 4 * margin + 1000
 
       .project {
         position: relative
         width: width
-        height: height
         max-width: 40%
         background-color: projects-color
         margin: margin margin margin margin
@@ -174,19 +174,21 @@
 
         a {
           position: absolute
+          left: 0
           width: 100%
           height: 100%
         }
 
         .peek {
-          position: absolute
-          top: 0
-          right: 0
-          bottom: 0
-          left: 0
+          position: relative
+          left: 50%
+          right: auto
+          bottom: auto
           max-height: 90%
           max-width: 90%
-          margin: auto auto
+          padding-top: padding
+          padding-bottom: padding
+          transform: translateX(-50%)
           transition: 0.7s transform ease
         }
 
@@ -224,7 +226,7 @@
 
         .peek {
           scale = 0.97
-          transform: scale3d(scale, scale, 1)
+          transform: translateX(-50%) scale3d(scale, scale, 1)
         }
 
         .name h3 {
@@ -250,8 +252,8 @@
         .indication {
           transform-origin: left bottom
           transform: rotateZ(90deg)
-          top: auto
-          left: 12.5px
+          top: 0
+          left: 14px
           right: auto
         }
 
@@ -280,7 +282,6 @@
       }
 
       .revolution {
-        height: alternative-height
         order: 3
 
         .name {
@@ -369,7 +370,7 @@
       }
 
       .designer {
-        top: 50%
+        top: 47.5%
         left: 50%
         max-width: 250%
         transform: translate(-50%, -50%)
@@ -402,6 +403,8 @@
           margin: 7.5px auto 7.5px auto
 
           .peek {
+            padding-top: 30%
+            padding-bottom: 27.5%
             width: auto
           }
 
@@ -439,7 +442,7 @@
 
           .peek {
             scale = 0.97
-            transform: scale3d(scale, scale, 1)
+            transform: translateX(-50%) scale3d(scale, scale, 1)
           }
         }
 
@@ -466,7 +469,7 @@
 
         .revolution {
           order: 2
-          height: 400px
+          height: auto
         }
       }
     }

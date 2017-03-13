@@ -87,7 +87,7 @@ footer .inner .email p {
 }
 footer .inner .email p:after {
   background-color: #fff;
-  height: 3px;
+  height: 2.5px;
 }
 footer .inner .email p:hover:after {
   right: 0;

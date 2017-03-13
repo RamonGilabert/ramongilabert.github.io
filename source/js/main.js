@@ -6,11 +6,14 @@ prepareDocument();
 setupAnalytics();
 
 window.addEventListener('load', function() {
+  var parallax = new Parallax();
+  parallax.prepare();
+
   var scroller = new Scroller();
   scroller.run();
 
-  var parallax = new Parallax();
-  parallax.prepare();
+  var resizer = new Resizer();
+  resizer.run();
 
   var prevent = new Prevent();
   prevent.images();
@@ -119,6 +122,27 @@ function Scroller() {
         last = position;
       });
     }
+  }
+}
+
+function Resizer() {
+
+  this.run = function() {
+    var projects = document.class('projects').getElementsByClassName('inner')[0];
+
+    window.addEventListener('resize', function() {
+      calculate();
+    });
+
+    function calculate() {
+      if (window.innerWidth < 700) { return; }
+      var gluten = document.class('gluten');
+      var revolution = document.class('revolution');
+
+      projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
+    }
+
+    calculate();
   }
 }
 
