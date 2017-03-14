@@ -3,17 +3,11 @@ var watch = require('gulp-watch');
 var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
 var mustache = require('gulp-mustache-plus');
-var uglify = require('gulp-uglify');
-var uglifyHTML = require('gulp-htmlmin');
-var uglifyCSS = require('gulp-uglifycss');
 
 gulp.task('stylus', function () {
   gulp.src('stylus/*.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus())
-    .pipe(uglifyCSS({
-      "uglyComments": true
-    }))
     .pipe(gulp.dest('../public/css'))
 });
 
@@ -33,15 +27,11 @@ gulp.task('mustache', function() {
       quote: 'mustache/partials/cases/quote.mustache',
       text: 'mustache/partials/cases/text.mustache'
     }))
-    .pipe(uglifyHTML({
-      collapseWhitespace: true
-    }))
     .pipe(gulp.dest('../public'))
 });
 
 gulp.task('javascript', function() {
   gulp.src('js/*.js')
-    // .pipe(uglify())
     .pipe(gulp.dest('../public/js/'))
 });
 

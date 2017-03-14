@@ -11,10 +11,6 @@
     "gulp-watch" : "latest",
     "gulp-sourcemaps" : "latest",
     "gulp-stylus" : "latest",
-    "gulp-mustache-plus" : "latest",
-    "gulp-uglifycss" : "latest",
-    "gulp-htmlmin" : "latest",
-    "gulp-uglify" : "latest",
-    "gulp-gzip" : "latest"
+    "gulp-mustache-plus" : "latest"
   }
 }

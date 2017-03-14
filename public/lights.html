@@ -1,1 +1,201 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta property="og:title" content="Ramon Gilabert – The Portfolio"><meta property="og:description" content="Award Winning Designer and Developer. Your missing ingredient."><meta property="og:url" content="http://gilabert.design"><meta property="og:image" content="http://gilabert.design/images/general/gilabert.jpg"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no"><meta name="author" content="Ramon Gilabert"><meta name="designer" content="Ramon Gilabert"><meta name="description" content="Award Winning Designer and Developer. Your missing ingredient."><meta name="subject" content="Portfolio"><meta name="url" content="http://gilabert.design"><meta name="distribution" content="Global"><meta name="rating" content="General"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@RamonGilabert"><link rel="icon" href="./images/general/favicon.ico"><link rel="stylesheet" type="text/css" href="./css/index.css"><title>Ramon Gilabert — Lights</title></head><body class="case" id="lights"><h1 class="page-title">Ramon Gilabert — Award Winning Designer &amp;amp; Developer</h1><div class="content"><header><div class="indicator home"><a href="./index">home</a></div><div class="inner"><h2>lights<span class="spaced dot">.</span></h2><img class="top-path path" src="./images/general/path.svg"><h3 class="role">Concept, UI &amp; UX, Industrial, Electronic Design &amp; Development</h3><p class="text"><span class="dot">Lights</span>, the union between the knowledge acquired during my electronic engineering degree, my software development skills and my passion for design. A product that let users control a smart light from anywhere in the world. Raspberry Pi, Arduino, industrial design, iOS development and product design had a major role in the process of the making of this product.</p></div></header><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;summarize.jpg"><p class="quote">The two most important screens in Lights, the starting one and the editing one.</p></div><div class="title"><div class="inner"><img class="path" src="./images/general/path.svg"><h3>story<span class="spaced dot">.</span></h3><p class="text">Right when my electronic engineering degree was getting to an end, I got asked to do a thesis. I could’ve studied waves of signals, but I wanted to do something more creative. Put together all the knowledge of design and development I had and create a product, from the beginning to the end. From the concept to the manufacturing.</p><p class="text">Diving into some specifics, I decided to do an Internet of Things object, and, because a light was the most visual of them all, I decided to do a light. There had to be a lot of concept involved, and, because an object of the Internet of Things is so vague, I would have to constrain the project in a way that was appealing, but not trying to do too much. That’s how <span class="dot">Lights</span> was born. One of my favorite projects I’ve done, and probably the one I know the most of. Every detail is thought and discussed to a remarkable point.</p></div></div><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;story.jpg"><p class="quote">The paired screen, the one displayed after the searching for a light was done and it was ready to use.</p></div><div class="title"><div class="inner"><img class="path" src="./images/general/path.svg"><h3>solution<span class="spaced dot">.</span></h3><p class="text">There’s a lot involved into <span class="dot">Lights</span>. So let’s start by breaking up what was done within the project.</p><p class="text spacing indent">• The product needed servers to interact to each other and register lights.</p><p class="text spacing indent">• The product also needed a light and a hub to contain different lamps for each user.</p><p class="text spacing indent">• The product needed an app to let the user control the light.</p><p class="text spacing indent">• The product needed to be super simple and good enough for a normal person to use it.</p><p class="text spacing indent">• The app needed to be understandable enough for a user to not get lost in it.</p><p class="text indent">• The setup of the whole product would be as simple as connecting a light and a hub.</p><p class="text">The most obvious way to start laying out the concept, and the biggest problem I had at first was an infrastructure problem. I knew that the app would need Bluetooth to connect to the app, I wasn’t sure how to solve that, but I could find a way, I knew I could design and easy to use solution and I had in mind how the lamp had to be, since I wanted to give an industrial look into it. However, there was the server problem. How is a server going to contain all the information of all the lights? How many servers do we need?</p><p class="text">I started to sketch different solutions, and the one that made the most sense was clear, there will be two servers, one central one in the cloud and one at your home called hub, the two servers will interact with each other and will be the gate to any modification to the light via your phone through the app or via a website client. The light, will also automatically reach such hub and will listen to commands from it.</p></div></div><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;image.jpg"><p class="quote">An early image from the process of conceptualizing how the whole product should be.</p></div><div class="subtitle"><div class="inner"><h4>server problems<span class="spaced dot">.</span></h4><p class="text">There’s a lot of problems that evolve from having servers talk to each other. It was obvious that the user needed a light at home, one, or several. So it was pretty obvious that there would have to be some kind of hub that a phone would talk to, and give instructions. However, how would a phone talk to that hub? If the user was around such hub, a technology like Bluetooth could’ve been used, however, because one of the premises of the project was to be able to control the light from anywhere in the world, we would have to talk to it through the Internet.</p><p class="text">There would have to be some kind of cloud that would contain all the lights, so the phone could download and manipulate them. However, the main problem that rose was basically how cloud would talk to the hub itself. The main option was an HTTP request with a REST API, however, digging more into it, because it was sort of an unknown problem, I discovered that HTTP requests only work one way. A service asks for information, a server gives it back. The server cannot ask for something in the service. If we think about it, we would need that. A server in the cloud would hand information to the phone, but that server, would also have to send a message to the other server at home after the light was manipulated.</p><p class="text">Another problem was the port connection. In order for HTTP to work over your home, you need to have a port open, and that destroys the premise of having an easy to use, just plug it in, solution. After some investigation, I discovered that Web Sockets was the fastest way to go. A two way communication, that sort of violates the laws of HTTP to create a connection between devices.</p></div><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;server.jpg"><p class="quote">Communications and infrastructure of the platform.</p></div></div><div class="subtitle"><div class="inner"><h4>plugged in<span class="spaced dot">.</span></h4><p class="text">In order to fix the server hassle, sockets were used, so the user wouldn’t have to open any port in the router or anything like that. The main selling point of the product was to connect and use. How would we achieve that with one server at home and one server in the cloud? How would they talk to each other?</p><p class="text">The system I used in order to fix this problem was an awakening solution. The first time the user would plug in the hub, such device would send a message to a given address — the cloud server — asking to register itself in the database. The hub then, would save itself, save a secret key to give security in the editing of the light later on and start looking for lights and phones to pair itself with them.</p><p class="text">Each light, once connected, would do a similar process, they would ask the hub to register them, and once that was done, the hub would send a message to the cloud server with the light. The app would work in a similar way explained a bit below.</p><p class="text">It was that easy, and from pretty early on, the concept to keep it like that existed. I had no idea how to fix it at first, but after the sockets discovery, everything seemed pretty straightforward. Lots of Bluetooth dongles and even a specific shield to give the Arduino wireless capabilities had to be bought.</p></div><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;plugged.jpg"><p class="quote">Abstraction of the process of connecting the hub. Each step is thoughtfully placed after the other to have everything ready for the user.</p></div></div><div class="subtitle"><div class="inner"><h4>industrial design<span class="spaced dot">.</span></h4><p class="text">It was the first time I was doing 3D design, as well as it was the first time doing a server but, in both cases, after a lot of concept work in a whiteboard, I had a pretty clear idea of what I wanted before starting of.</p><p class="text">For the industrial design, I wanted an app that had a trendy industrial look, for everyone to use and everyone to have, and not just the techie person. I wanted everyone to be able to use it by just connecting it, so a part from simple, had to be beautiful.</p><p class="text">The hub would follow the dark style of the app, with a squared box of the size of a Raspberry Pi. The light itself, had an industrial look with materials like aluminum and real glass instead of plastic.</p></div><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;industrial.jpg"><p class="quote">Detail of the lamp from the back, featuring an analog button for all use cases and four screws to fix the position.</p></div></div><div class="subtitle"><div class="inner"><h4>light pairing<span class="spaced dot">.</span></h4><p class="text">We’ve explained the system that the hardware was using to talk to each other — but how would the app fit within this process? It was simple, it had to pair the device with the hub, and after getting all the lights and the secret token, it could start editing them.</p><p class="text">In order to do that, the app would advertise itself once open and after the user hit the start button of the main screen, a searching would start and, after the hub would find the phone, the information would be sent.</p><p class="text">To have all the lights in the app, it would download them from the Internet to have the latest values and, when that was done, the user could start editing them.</p></div><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;pairing.jpg"><p class="quote"></p></div></div><div class="subtitle"><div class="inner"><h4>light editing<span class="spaced dot">.</span></h4><p class="text">Three main values had to be edited in this screen. The status of the light — ON or OFF — the intensity of the bulb, and the color of it. The first solution that came to mind was to do a different set of slides, however, this wasn’t creative enough even though intuitive.</p><p class="text">Not being creative enough could cause the app to feel so simple and, also, the fact of putting 4 slides to edit the colors and intensity wasn’t that good of an idea. The next iteration, then, contained a color wheel with a side bar to change intensity.</p><p class="text">It wasn’t until there was some user test that I discovered how the people were trying to use the app. They wanted something that could edit both at the same time, so I created a wheel that would edit the intensity when changing the radius and would obviously change the color with the color of the RGB wheel. For the status, a simple button would do the job.</p></div><div class="image"><img src="images&#x2F;projects&#x2F;lights&#x2F;editing.jpg"><p class="quote"></p></div></div><div class="visually"><div class="inner"><h4>visually<span class="spaced dot">.</span></h4><p class="text">Switching to the part of the product that would be the gate to the user to the digital world, the app had to give trust while being as simple to use as the analog product. For that, the starting point was a light style and, however a lot of interesting concepts came out of that — like big buttons with lots of steps that animated to each other and so on, a dark theme took over — the main reason for that being mainly the editing of the color and intensity of the light — the colors had to pop more. Some feedback gathered in interviews presented the same result.</p><p class="text">Other than that, the app featured a lot of small steps in different screens, with floating style animations that would make the process of waiting and pairing the light way easier to deal with. Big text in buttons would make the actions way clearer and the font combination would also present a compact style.</p></div><div class="colors"><div class="color" style="background-color: #131313"><p>#131313</p></div><div class="color" style="background-color: #373C3F"><p>#373C3F</p></div><div class="color last" style="background-color: #FFFFFF"><p>#FFFFFF</p></div></div></div><div class="quote"><div class="title"><div class="inner"><img class="path" src="./images/general/path.svg"><h3>lights<span class="spaced dot">.</span></h3><p class="text"><span class="dot">Lights</span> was a challenge from the beginning to the end. Hundreds of hours trying to figure out every small detail and interaction the user would have with the product, and the product would have to itself. I am really happy and proud of the result in the industrial, concept, UI & UX design, as well as the development of it. I had never done a server before, and I did two, I had never done 3D in Cheetah, and I did two products with it, I had never thought about that much scalability, and that was the first one. <span class="dot">Lights</span> is the project of firsts, to close up one period of my life — my degree.</p></div></div><div class="subtitle"><div class="inner"><img class="path space" src="./images/general/path.svg"><h4>what&#39;s next<span class="spaced dot">.</span></h4><p class="text">After presenting it to an award and having one one for the best thesis of the year, the next step for <span class="dot">Lights</span> as a project is to start it over. Not as in, remove and restart — the base is really good. What I want to say is that the current state of <span class="dot">Lights</span> represents what can be done in the Internet of things, and the infrastructure created for this project could be ported to any kind of device. A thermostat, a window, a table, a chair. That’s the next step for this project, evaluate what can be done, see what’s next with it.</p><p class="text paragraph-space">A couple of people from <span class="dot">Catalonia</span> and <span class="dot">Norway</span> proposed to do a Kickstarter campaign, which might be also an option.</p></div></div><div class="subtitle"><div class="inner"><img class="path space" src="./images/general/path.svg"><h4>toolkit<span class="spaced dot">.</span></h4><p class="text spacing"><a href="https://shop.dribbble.com/products/gameplan-journal?variant=1006322845" target="_blank">Pen and paper</a> for the concept.</p><p class="text spacing"><a href="https://sketchapp.com" target="_blank">Sketch</a> for the app.</p><p class="text spacing"><a href="http://www.cheetah3d.com" target="_blank">Cheetah3D</a> for the industrial design.</p><p class="text spacing"><a href="https://atom.io" target="_blank">Atom</a> to develop the servers.</p><p class="text spacing">A <a href="https://www.raspberrypi.org" target="_blank">Raspberry Pi</a> and an <a href="https://www.arduino.cc" target="_blank">Arduino</a></p><p class="text">Tens of wires and electronic components.</p></div></div></div></div><footer><div class="noise"></div><img class="circle" src="./images/general/circle.png"><div class="back"><a href=".&#x2F;gluten">gluten</a></div><div class="forward"><a href=".&#x2F;revolution">revolution</a></div><div class="inner"><div class="email"><p>ramon<span>@</span>gilabert.design</p></div><img class="path" src="./images/general/path.svg"><div class="social"><a href="https:&#x2F;&#x2F;www.twitter.com&#x2F;RamonGilabert" target="_blank"><img class="social-icon" src="images&#x2F;general&#x2F;social&#x2F;twitter.svg"></a><a href="https:&#x2F;&#x2F;www.dribbble.com&#x2F;RamonGilabert" target="_blank"><img class="social-icon" src="images&#x2F;general&#x2F;social&#x2F;dribbble.svg"></a><a href="https:&#x2F;&#x2F;www.github.com&#x2F;RamonGilabert" target="_blank"><img class="social-icon" src="images&#x2F;general&#x2F;social&#x2F;github.svg"></a><a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;RamonGilabert" target="_blank"><img class="social-icon" src="images&#x2F;general&#x2F;social&#x2F;linkedin.svg"></a></div></div></footer><script src="./js/horisont.js"></script><script src="./js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+
+    <meta property='og:title' content='Ramon Gilabert – The Portfolio' />
+    <meta property='og:description' content='Award Winning Designer and Developer. Your missing ingredient.' />
+    <meta property='og:url' content='http://gilabert.design' />
+    <meta property='og:image' content='http://gilabert.design/images/general/gilabert.jpg' />
+
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no'>
+    <meta name='author' content='Ramon Gilabert'>
+    <meta name='designer' content='Ramon Gilabert'>
+    <meta name='description' content='Award Winning Designer and Developer. Your missing ingredient.'>
+    <meta name='subject' content='Portfolio'>
+    <meta name='url' content='http://gilabert.design'>
+    <meta name='distribution' content='Global'>
+    <meta name='rating' content='General'>
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:creator' content='@RamonGilabert' />
+
+    <link rel='icon' href='./images/general/favicon.ico'>
+    <link rel='stylesheet' type='text/css' href='./css/index.css' />
+    <title>Ramon Gilabert — Lights</title>
+  </head>
+  <body class='case' id='lights'>
+    <h1 class='page-title'>Ramon Gilabert — Award Winning Designer &amp;amp; Developer</h1>
+    <div class='content'>
+      <header>
+        <div class='indicator home'><a href='./index'>home</a></div>
+        <div class='inner'>
+          <h2>lights<span class='spaced dot'>.</span></h2>
+          <img class='top-path path' src='./images/general/path.svg'>
+          <h3 class='role'>Concept, UI &amp; UX, Industrial, Electronic Design &amp; Development</h3>
+        <p class='text '><span class='dot'>Lights</span>, the union between the knowledge acquired during my electronic engineering degree, my software development skills and my passion for design. A product that let users control a smart light from anywhere in the world. Raspberry Pi, Arduino, industrial design, iOS development and product design had a major role in the process of the making of this product.</p>
+        </div>
+      </header>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;summarize.jpg'>
+      <p class='quote'>The two most important screens in Lights, the starting one and the editing one.</p>
+    </div>
+    <div class='title'>
+      <div class='inner'>
+        <img class='path' src='./images/general/path.svg'>
+        <h3>story<span class='spaced dot'>.</span></h3>
+        <p class='text '>Right when my electronic engineering degree was getting to an end, I got asked to do a thesis. I could’ve studied waves of signals, but I wanted to do something more creative. Put together all the knowledge of design and development I had and create a product, from the beginning to the end. From the concept to the manufacturing.</p>
+        <p class='text '>Diving into some specifics, I decided to do an Internet of Things object, and, because a light was the most visual of them all, I decided to do a light. There had to be a lot of concept involved, and, because an object of the Internet of Things is so vague, I would have to constrain the project in a way that was appealing, but not trying to do too much. That’s how <span class='dot'>Lights</span> was born. One of my favorite projects I’ve done, and probably the one I know the most of. Every detail is thought and discussed to a remarkable point.</p>
+      </div>
+    </div>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;story.jpg'>
+      <p class='quote'>The paired screen, the one displayed after the searching for a light was done and it was ready to use.</p>
+    </div>
+    <div class='title'>
+      <div class='inner'>
+        <img class='path' src='./images/general/path.svg'>
+        <h3>solution<span class='spaced dot'>.</span></h3>
+        <p class='text '>There’s a lot involved into <span class='dot'>Lights</span>. So let’s start by breaking up what was done within the project.</p>
+        <p class='text spacing indent'>• The product needed servers to interact to each other and register lights.</p>
+        <p class='text spacing indent'>• The product also needed a light and a hub to contain different lamps for each user.</p>
+        <p class='text spacing indent'>• The product needed an app to let the user control the light.</p>
+        <p class='text spacing indent'>• The product needed to be super simple and good enough for a normal person to use it.</p>
+        <p class='text spacing indent'>• The app needed to be understandable enough for a user to not get lost in it.</p>
+        <p class='text indent'>• The setup of the whole product would be as simple as connecting a light and a hub.</p>
+        <p class='text '>The most obvious way to start laying out the concept, and the biggest problem I had at first was an infrastructure problem. I knew that the app would need Bluetooth to connect to the app, I wasn’t sure how to solve that, but I could find a way, I knew I could design and easy to use solution and I had in mind how the lamp had to be, since I wanted to give an industrial look into it. However, there was the server problem. How is a server going to contain all the information of all the lights? How many servers do we need?</p>
+        <p class='text '>I started to sketch different solutions, and the one that made the most sense was clear, there will be two servers, one central one in the cloud and one at your home called hub, the two servers will interact with each other and will be the gate to any modification to the light via your phone through the app or via a website client. The light, will also automatically reach such hub and will listen to commands from it.</p>
+      </div>
+    </div>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;image.jpg'>
+      <p class='quote'>An early image from the process of conceptualizing how the whole product should be.</p>
+    </div>
+    <div class='subtitle'>
+      <div class='inner'>
+        <h4>server problems<span class='spaced dot'>.</span></h4>
+        <p class='text '>There’s a lot of problems that evolve from having servers talk to each other. It was obvious that the user needed a light at home, one, or several. So it was pretty obvious that there would have to be some kind of hub that a phone would talk to, and give instructions. However, how would a phone talk to that hub? If the user was around such hub, a technology like Bluetooth could’ve been used, however, because one of the premises of the project was to be able to control the light from anywhere in the world, we would have to talk to it through the Internet.</p>
+        <p class='text '>There would have to be some kind of cloud that would contain all the lights, so the phone could download and manipulate them. However, the main problem that rose was basically how cloud would talk to the hub itself. The main option was an HTTP request with a REST API, however, digging more into it, because it was sort of an unknown problem, I discovered that HTTP requests only work one way. A service asks for information, a server gives it back. The server cannot ask for something in the service. If we think about it, we would need that. A server in the cloud would hand information to the phone, but that server, would also have to send a message to the other server at home after the light was manipulated.</p>
+        <p class='text '>Another problem was the port connection. In order for HTTP to work over your home, you need to have a port open, and that destroys the premise of having an easy to use, just plug it in, solution. After some investigation, I discovered that Web Sockets was the fastest way to go. A two way communication, that sort of violates the laws of HTTP to create a connection between devices.</p>
+      </div>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;server.jpg'>
+      <p class='quote'>Communications and infrastructure of the platform.</p>
+    </div>
+    </div>
+    <div class='subtitle'>
+      <div class='inner'>
+        <h4>plugged in<span class='spaced dot'>.</span></h4>
+        <p class='text '>In order to fix the server hassle, sockets were used, so the user wouldn’t have to open any port in the router or anything like that. The main selling point of the product was to connect and use. How would we achieve that with one server at home and one server in the cloud? How would they talk to each other?</p>
+        <p class='text '>The system I used in order to fix this problem was an awakening solution. The first time the user would plug in the hub, such device would send a message to a given address — the cloud server — asking to register itself in the database. The hub then, would save itself, save a secret key to give security in the editing of the light later on and start looking for lights and phones to pair itself with them.</p>
+        <p class='text '>Each light, once connected, would do a similar process, they would ask the hub to register them, and once that was done,  the hub would send a message to the cloud server with the light. The app would work in a similar way explained a bit below.</p>
+        <p class='text '>It was that easy, and from pretty early on, the concept to keep it like that existed. I had no idea how to fix it at first, but after the sockets discovery, everything seemed pretty straightforward. Lots of Bluetooth dongles and even a specific shield to give the Arduino wireless capabilities had to be bought.</p>
+      </div>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;plugged.jpg'>
+      <p class='quote'>Abstraction of the process of connecting the hub. Each step is thoughtfully placed after the other to have everything ready for the user.</p>
+    </div>
+    </div>
+    <div class='subtitle'>
+      <div class='inner'>
+        <h4>industrial design<span class='spaced dot'>.</span></h4>
+        <p class='text '>It was the first time I was doing 3D design, as well as it was the first time doing a server but, in both cases, after a lot of concept work in a whiteboard, I had a pretty clear idea of what I wanted before starting of.</p>
+        <p class='text '>For the industrial design, I wanted an app that had a trendy industrial look, for everyone to use and everyone to have, and not just the techie person. I wanted everyone to be able to use it by just connecting it, so a part from simple, had to be beautiful.</p>
+        <p class='text '>The hub would follow the dark style of the app, with a squared box of the size of a Raspberry Pi. The light itself, had an industrial look with materials like aluminum and real glass instead of plastic.</p>
+      </div>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;industrial.jpg'>
+      <p class='quote'>Detail of the lamp from the back, featuring an analog button for all use cases and four screws to fix the position.</p>
+    </div>
+    </div>
+    <div class='subtitle'>
+      <div class='inner'>
+        <h4>light pairing<span class='spaced dot'>.</span></h4>
+        <p class='text '>We’ve explained the system that the hardware was using to talk to each other — but how would the app fit within this process? It was simple, it had to pair the device with the hub, and after getting all the lights and the secret token, it could start editing them.</p>
+        <p class='text '>In order to do that, the app would advertise itself once open and after the user hit the start button of the main screen, a searching would start and, after the hub would find the phone, the information would be sent.</p>
+        <p class='text '>To have all the lights in the app, it would download them from the Internet to have the latest values and, when that was done, the user could start editing them.</p>
+      </div>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;pairing.jpg'>
+      <p class='quote'></p>
+    </div>
+    </div>
+    <div class='subtitle'>
+      <div class='inner'>
+        <h4>light editing<span class='spaced dot'>.</span></h4>
+        <p class='text '>Three main values had to be edited in this screen. The status of the light — ON or OFF — the intensity of the bulb, and the color of it. The first solution that came to mind was to do a different set of slides, however, this wasn’t creative enough even though intuitive.</p>
+        <p class='text '>Not being creative enough could cause the app to feel so simple and, also, the fact of putting 4 slides to edit the colors and intensity wasn’t that good of an idea. The next iteration, then, contained a color wheel with a side bar to change intensity.</p>
+        <p class='text '>It wasn’t until there was some user test that I discovered how the people were trying to use the app. They wanted something that could edit both at the same time, so I created a wheel that would edit the intensity when changing the radius and would obviously change the color with the color of the RGB wheel. For the status, a simple button would do the job.</p>
+      </div>
+    <div class='image'>
+      <img src='images&#x2F;projects&#x2F;lights&#x2F;editing.jpg'>
+      <p class='quote'></p>
+    </div>
+    </div>
+    <div class='visually'>
+      <div class='inner'>
+        <h4>visually<span class='spaced dot'>.</span></h4>
+        <p class='text '>Switching to the part of the product that would be the gate to the user to the digital world, the app had to give trust while being as simple to use as the analog product. For that, the starting point was a light style and, however a lot of interesting concepts came out of that — like big buttons with lots of steps that animated to each other and so on, a dark theme took over — the main reason for that being mainly the editing of the color and intensity of the light — the colors had to pop more. Some feedback gathered in interviews presented the same result.</p>
+        <p class='text '>Other than that, the app featured a lot of small steps in different screens, with floating style animations that would make the process of waiting and pairing the light way easier to deal with. Big text in buttons would make the actions way clearer and the font combination would also present a compact style.</p>
+      </div>
+      <div class='colors'>
+        <div class='color  ' style='background-color: #131313'>
+          <p>#131313</p>
+        </div>
+        <div class='color  ' style='background-color: #373C3F'>
+          <p>#373C3F</p>
+        </div>
+        <div class='color  last' style='background-color: #FFFFFF'>
+          <p>#FFFFFF</p>
+        </div>
+      </div>
+    </div>
+  <div class='quote'>
+    <div class='title'>
+      <div class='inner'>
+        <img class='path' src='./images/general/path.svg'>
+        <h3>lights<span class='spaced dot'>.</span></h3>
+        <p class='text '><span class='dot'>Lights</span> was a challenge from the beginning to the end. Hundreds of hours trying to figure out every small detail and interaction the user would have with the product, and the product would have to itself. I am really happy and proud of the result in the industrial, concept, UI & UX design, as well as the development of it. I had never done a server before, and I did two, I had never done 3D in Cheetah, and I did two products with it, I had never thought about that much scalability, and that was the first one. <span class='dot'>Lights</span> is the project of firsts, to close up one period of my life — my degree.</p>
+      </div>
+    </div>
+    <div class='subtitle'>
+      <div class='inner'>
+        <img class='path space' src='./images/general/path.svg'>
+        <h4>what&#39;s next<span class='spaced dot'>.</span></h4>
+        <p class='text '>After presenting it to an award and having one one for the best thesis of the year, the next step for <span class='dot'>Lights</span> as a project is to start it over. Not as in, remove and restart — the base is really good. What I want to say is that the current state of <span class='dot'>Lights</span> represents what can be done in the Internet of things, and the infrastructure created for this project could be ported to any kind of device. A thermostat, a window, a table, a chair. That’s the next step for this project, evaluate what can be done, see what’s next with it.</p>
+        <p class='text paragraph-space'>A couple of people from <span class='dot'>Catalonia</span> and <span class='dot'>Norway</span> proposed to do a Kickstarter campaign, which might be also an option.</p>
+      </div>
+    </div>
+    <div class='subtitle'>
+      <div class='inner'>
+        <img class='path space' src='./images/general/path.svg'>
+        <h4>toolkit<span class='spaced dot'>.</span></h4>
+        <p class='text spacing'><a href='https://shop.dribbble.com/products/gameplan-journal?variant=1006322845' target='_blank'>Pen and paper</a> for the concept.</p>
+        <p class='text spacing'><a href='https://sketchapp.com' target='_blank'>Sketch</a> for the app.</p>
+        <p class='text spacing'><a href='http://www.cheetah3d.com' target='_blank'>Cheetah3D</a> for the industrial design.</p>
+        <p class='text spacing'><a href='https://atom.io' target='_blank'>Atom</a> to develop the servers.</p>
+        <p class='text spacing'>A <a href='https://www.raspberrypi.org' target='_blank'>Raspberry Pi</a> and an <a href='https://www.arduino.cc' target='_blank'>Arduino</a></p>
+        <p class='text '>Tens of wires and electronic components.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+    <footer>
+      <div class='noise'></div>
+      <img class='circle' src='./images/general/circle.png'>
+      <div class='back'><a href='.&#x2F;gluten'>gluten</a></div>
+      <div class='forward'><a href='.&#x2F;revolution'>revolution</a></div>
+      <div class='inner'>
+        <div class='email'><p>ramon<span>@</span>gilabert.design</p></div>
+        <img class='path' src='./images/general/path.svg'>
+        <div class='social'>
+          <a href='https:&#x2F;&#x2F;www.twitter.com&#x2F;RamonGilabert' target='_blank'><img class='social-icon' src='images&#x2F;general&#x2F;social&#x2F;twitter.svg'></a>
+          <a href='https:&#x2F;&#x2F;www.dribbble.com&#x2F;RamonGilabert' target='_blank'><img class='social-icon' src='images&#x2F;general&#x2F;social&#x2F;dribbble.svg'></a>
+          <a href='https:&#x2F;&#x2F;www.github.com&#x2F;RamonGilabert' target='_blank'><img class='social-icon' src='images&#x2F;general&#x2F;social&#x2F;github.svg'></a>
+          <a href='https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;RamonGilabert' target='_blank'><img class='social-icon' src='images&#x2F;general&#x2F;social&#x2F;linkedin.svg'></a>
+        </div>
+      </div>
+    </footer>
+    <script src='./js/horisont.js'></script>
+    <script src='./js/main.js'></script>
+  </body>
+</html>
