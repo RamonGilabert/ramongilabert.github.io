@@ -125,7 +125,7 @@
       "title" : "solution",
       "paragraph" : [
         {
-          "text" : "There was a lot of concept work for <span class='dot'>Gluten</span>. The decision to design an app instead of a website was accessibility. The app needed to do three things the best and easiest way possible. As mentioned above, those three solutions were a services map, a scanner and a mood tracker with statistics. In the concept phase it was discarted to do more than one app because the features were small and compact enough."
+          "text" : "There was a lot of concept work for <span class='dot'>Gluten</span>. The decision to design an app instead of a website was accessibility. The app needed to do three things the best and easiest way possible. As mentioned above, those three solutions were a services map, a scanner and a mood tracker with statistics. In the concept phase it was discarded to do more than one app because the features were small and compact enough."
         },
         {
           "text" : "Inside the app, it was decided to use a hamburger menu instead of a tab bar — the main reasoning for that being the fact that each feature was separate enough for it to contain its own private space, as well as no need to combine more than one when using them. It was shown after some surveys that the users would use the app in periods and for a concrete action, either find a service, or scan a product, or register your mood."
@@ -144,10 +144,10 @@
       "title" : "user flow",
       "paragraph" : [
         {
-          "text" : "This step began to form the flow of the app, and with the clear intention of using a hamburguer menu, the separation of screens was clear from the beginning."
+          "text" : "This step began to form the flow of the app, and with the clear intention of using a hamburger menu, the separation of screens was clear from the beginning."
         },
         {
-          "text" : "With this in mind, it was decided that the first screen the user would see when entering the app after the first onboarding and registration was the <span class='dot'>mood selection</span> and <span class='dot'>statistics</span>. From there, said user would have access to the main menu and to register and see mood. The reasoning behing this was the usage factor. The probability of:"
+          "text" : "With this in mind, it was decided that the first screen the user would see when entering the app after the first onboarding and registration was the <span class='dot'>mood selection</span> and <span class='dot'>statistics</span>. From there, said user would have access to the main menu and to register and see mood. The reasoning behind this was the usage factor. The probability of:"
         },
         {
           "text" : "• The user finding a service around was at most 3 a day.",
@@ -162,7 +162,7 @@
           "class" : "indent"
         },
         {
-          "text" : "The fluctuation of the “any time” case marked certain uncertanty, but after computing the values over the course of a month, a steady 5 times a day beated the scanning value which would vary between 3 - 9 a day. It’s obvious that the app would register the last screen seen and save the position of the user, as well as some patrons on hours of the day to check which screen the user should be in. Tuesday after dinner would make sense to be in the mood screen more than in the finding a service one."
+          "text" : "The fluctuation of the “any time” case marked certain uncertainty, but after computing the values over the course of a month, a steady 5 times a day beat the scanning value which would vary between 3 - 9 a day. It’s obvious that the app would register the last screen seen and save the position of the user, as well as some patrons on hours of the day to check which screen the user should be in. Tuesday after dinner would make sense to be in the mood screen more than in the finding a service one."
         },
         {
           "text" : "Needs to be said that a login will be required for the user after the onboarding, just with a name, an optional gender and a password to prevent any sensible data to be stolen or seen by someone else. That, will also allow upcoming features like reviews or login from the <span class='dot'>Gluten</span> website to add a mood or display statistics to be easier to implement."
@@ -214,7 +214,7 @@
           "text" : "Jumping to the services, it was easy to conceptualize a map with all the information of the service you were looking for. It was important to present, in an intuitive manner,  and directly in the map, which service was around — a bakery, pizzeria, cake shop or a burger place are some of the examples."
         },
         {
-          "text" : "When selecting one of the restaurants, the app would present more actions like the possibility to call, save the service or get directions there, as well as some additional information like product specialities."
+          "text" : "When selecting one of the restaurants, the app would present more actions like the possibility to call, save the service or get directions there, as well as some additional information like product specialties."
         },
         {
           "text" : "Because there isn't a database with all the necessary information yet, the icons can be created when adding a restaurant or a product into it. Part of the challenge of creating this product resides basically in the lack of information in the field — and so does the disease."
@@ -275,7 +275,7 @@
       "title" : "gluten",
       "paragraph" : [
         {
-          "text" : "<span class='dot'>Gluten</span> is my most personal project. A project that represents who I am and what I have been for the past 10 years. It's the ultimate solution to years of challenges I've faced with this disease. Hopefully now, with this solution, thousands of people will be able to tell right away how they are or what they eat, and feel better with themselves. Calling a product what cannot be eaten might seemcontroversial, but this is the only gluten a celiac can take."
+          "text" : "<span class='dot'>Gluten</span> is my most personal project. A project that represents who I am and what I have been for the past 10 years. It's the ultimate solution to years of challenges I've faced with this disease. Hopefully now, with this solution, thousands of people will be able to tell right away how they are or what they eat, and feel better with themselves. Calling a product what cannot be eaten might seem controversial, but this is the only gluten a celiac can take."
         }
       ]
     },
@@ -356,7 +356,7 @@
           "text" : "Right when my electronic engineering degree was getting to an end, I got asked to do a thesis. I could’ve studied waves of signals, but I wanted to do something more creative. Put together all the knowledge of design and development I had and create a product, from the beginning to the end. From the concept to the manufacturing."
         },
         {
-          "text" : "Diving into some specifics, I decided to do an internet of things object, and, because a light was the most visual of them all, I decided to do a light. There had to be a lot of concept involved, and, because an object of the internet of things is so vague, I would have to constrain the project in a way that was appealing, but not trying to do too much. That’s how <span class='dot'>Lights</span> was born. One of my favorite projects I’ve done, and probably the one I know the most of. Every detail is thought and discussed to a remarkable point."
+          "text" : "Diving into some specifics, I decided to do an Internet of Things object, and, because a light was the most visual of them all, I decided to do a light. There had to be a lot of concept involved, and, because an object of the Internet of Things is so vague, I would have to constrain the project in a way that was appealing, but not trying to do too much. That’s how <span class='dot'>Lights</span> was born. One of my favorite projects I’ve done, and probably the one I know the most of. Every detail is thought and discussed to a remarkable point."
         }
       ],
       "image" : {
@@ -396,7 +396,7 @@
           "class" : "indent"
         },
         {
-          "text" : "The most obvious way to start laying out the concept, and the biggest problem I had at first was an infrostructure problem. I knew that the app would need bluetooth to connect to the app, I wasn’t sure how to solve that, but I could find a way, I knew I could design and easy to use solution and I had in mind how the lamp had to be, since I wanted to give an industrial look into it. However, there was the server problem. How is a server going to contain all the information of all the lights? How many servers do we need?"
+          "text" : "The most obvious way to start laying out the concept, and the biggest problem I had at first was an infrastructure problem. I knew that the app would need Bluetooth to connect to the app, I wasn’t sure how to solve that, but I could find a way, I knew I could design and easy to use solution and I had in mind how the lamp had to be, since I wanted to give an industrial look into it. However, there was the server problem. How is a server going to contain all the information of all the lights? How many servers do we need?"
         },
         {
           "text" : "I started to sketch different solutions, and the one that made the most sense was clear, there will be two servers, one central one in the cloud and one at your home called hub, the two servers will interact with each other and will be the gate to any modification to the light via your phone through the app or via a website client. The light, will also automatically reach such hub and will listen to commands from it."
@@ -412,10 +412,10 @@
       "title" : "server problems",
       "paragraph" : [
         {
-          "text" : "There’s a lot of problems that evolve from having servers talk to each other. It was obvious that the user needed a light at home, one, or several. So it was pretty obvious that there would have to be some kind of hub that a phone would talk to, and give instructions. However, how would a phone talk to that hub? If the user was around such hub, a technology like Bluetooth could’ve been used, however, because one of the premises of the project was to be able to control the light from anywhere in the world, we would have to talk to it through the internet."
+          "text" : "There’s a lot of problems that evolve from having servers talk to each other. It was obvious that the user needed a light at home, one, or several. So it was pretty obvious that there would have to be some kind of hub that a phone would talk to, and give instructions. However, how would a phone talk to that hub? If the user was around such hub, a technology like Bluetooth could’ve been used, however, because one of the premises of the project was to be able to control the light from anywhere in the world, we would have to talk to it through the Internet."
         },
         {
-          "text" : "There would have to be some kind of cloud that would contain all the lights, so the phone could download and manipulate them. However, the main problem that raised was, how is the cloud going to talk to the hub itself? The main option was an HTTP request with a REST API, however, digging more into it, because it was sort of an unknown problem, I discovered that HTTP requests only work one way. A service asks for information, a server gives it back. The server cannot ask for something in the service. If we think about it, we would need that. A server in the cloud would hand information to the phone, but that server, would also have to send a message to the other server at home after the light was manipulated."
+          "text" : "There would have to be some kind of cloud that would contain all the lights, so the phone could download and manipulate them. However, the main problem that rose was basically how cloud would talk to the hub itself. The main option was an HTTP request with a REST API, however, digging more into it, because it was sort of an unknown problem, I discovered that HTTP requests only work one way. A service asks for information, a server gives it back. The server cannot ask for something in the service. If we think about it, we would need that. A server in the cloud would hand information to the phone, but that server, would also have to send a message to the other server at home after the light was manipulated."
         },
         {
           "text" : "Another problem was the port connection. In order for HTTP to work over your home, you need to have a port open, and that destroys the premise of having an easy to use, just plug it in, solution. After some investigation, I discovered that Web Sockets was the fastest way to go. A two way communication, that sort of violates the laws of HTTP to create a connection between devices."
@@ -423,7 +423,7 @@
       ],
       "image" : {
         "link" : "images/projects/lights/server.jpg",
-        "quote" : "Communications and infroestructure of the platform."
+        "quote" : "Communications and infrastructure of the platform."
       }
     },
 
@@ -431,7 +431,7 @@
       "title" : "plugged in",
       "paragraph" : [
         {
-          "text" : "In order to fix the server hassel, sockets were used, so the user wouldn’t have to open any port in the router or anything like that. The main selling point of the product was to connect and use. How would we achieve that with one server at home and one server in the cloud? How would they talk to each other?"
+          "text" : "In order to fix the server hassle, sockets were used, so the user wouldn’t have to open any port in the router or anything like that. The main selling point of the product was to connect and use. How would we achieve that with one server at home and one server in the cloud? How would they talk to each other?"
         },
         {
           "text" : "The system I used in order to fix this problem was an awakening solution. The first time the user would plug in the hub, such device would send a message to a given address — the cloud server — asking to register itself in the database. The hub then, would save itself, save a secret key to give security in the editing of the light later on and start looking for lights and phones to pair itself with them."
@@ -440,7 +440,7 @@
           "text" : "Each light, once connected, would do a similar process, they would ask the hub to register them, and once that was done,  the hub would send a message to the cloud server with the light. The app would work in a similar way explained a bit below."
         },
         {
-          "text" : "It was that easy, and from pretty early on, the concept to keep it like that existed. I had no idea how to fix it at first, but after the sockets discovery, everything seemed pretty straight forward. Lots of Bluetooth dongles and even a specific shield to give the Arduino wireless capabilities had to be bought."
+          "text" : "It was that easy, and from pretty early on, the concept to keep it like that existed. I had no idea how to fix it at first, but after the sockets discovery, everything seemed pretty straightforward. Lots of Bluetooth dongles and even a specific shield to give the Arduino wireless capabilities had to be bought."
         }
       ],
       "image" : {
@@ -456,10 +456,10 @@
           "text" : "It was the first time I was doing 3D design, as well as it was the first time doing a server but, in both cases, after a lot of concept work in a whiteboard, I had a pretty clear idea of what I wanted before starting of."
         },
         {
-          "text" : "For the industrial design, I wanted an app that had a trendy industrial look, for everyone to use and everyone to have, and not just the techy person. I wanted everyone to be able to use it by just connecting it, so a part from simple, had to be beautiful."
+          "text" : "For the industrial design, I wanted an app that had a trendy industrial look, for everyone to use and everyone to have, and not just the techie person. I wanted everyone to be able to use it by just connecting it, so a part from simple, had to be beautiful."
         },
         {
-          "text" : "The hub would follow the dark style of the app, with a squared box of the size of a Raspberry Pi. The light itself, had an industrial look with materials like aluminium and real glass instead of plastic."
+          "text" : "The hub would follow the dark style of the app, with a squared box of the size of a Raspberry Pi. The light itself, had an industrial look with materials like aluminum and real glass instead of plastic."
         }
       ],
       "image" : {
@@ -478,7 +478,7 @@
           "text" : "In order to do that, the app would advertise itself once open and after the user hit the start button of the main screen, a searching would start and, after the hub would find the phone, the information would be sent."
         },
         {
-          "text" : "To have all the lights in the app, it would download them from the internet to have the latest values and, when that was done, the user could start editing them."
+          "text" : "To have all the lights in the app, it would download them from the Internet to have the latest values and, when that was done, the user could start editing them."
         }
       ],
       "image" : {
@@ -508,7 +508,7 @@
       "title" : "visually",
       "paragraph" : [
         {
-          "text" : "Switching to the part of the product that would be the gate to the user to the digital world, the app had to give trust while being as simple to use as the analog product. For that, the starting point was a light style and, however a lot of interesting concepts came out of that — like big buttons with lots of steps that animated to each other and so on, a dark theme took over. The reason for that being mainly the editing of the color and intensity of the light. I wanted the colors to pop more. Some feedback gathered in interviews presented the same."
+          "text" : "Switching to the part of the product that would be the gate to the user to the digital world, the app had to give trust while being as simple to use as the analog product. For that, the starting point was a light style and, however a lot of interesting concepts came out of that — like big buttons with lots of steps that animated to each other and so on, a dark theme took over — the main reason for that being mainly the editing of the color and intensity of the light — the colors had to pop more. Some feedback gathered in interviews presented the same result."
         },
         {
           "text" : "Other than that, the app featured a lot of small steps in different screens, with floating style animations that would make the process of waiting and pairing the light way easier to deal with. Big text in buttons would make the actions way clearer and the font combination would also present a compact style."
@@ -544,7 +544,7 @@
       },
       "paragraph" : [
         {
-          "text" : "After presenting it to an award and having one one for the best thesis of the year, the next step for <span class='dot'>Lights</span> as a project is to start it over. Not as in, remove and restart — the base is really good. What I want to say is that the current state of <span class='dot'>Lights</span> represents what can be done in the internet of things, and the infraestructure created for this project could be ported to any kind of device. A thermostat, a window, a table, a chair. That’s the next step for this project, evaluate what can be done, see what’s next with it."
+          "text" : "After presenting it to an award and having one one for the best thesis of the year, the next step for <span class='dot'>Lights</span> as a project is to start it over. Not as in, remove and restart — the base is really good. What I want to say is that the current state of <span class='dot'>Lights</span> represents what can be done in the Internet of things, and the infrastructure created for this project could be ported to any kind of device. A thermostat, a window, a table, a chair. That’s the next step for this project, evaluate what can be done, see what’s next with it."
         },
         {
           "text" : "A couple of people from <span class='dot'>Catalonia</span> and <span class='dot'>Norway</span> proposed to do a Kickstarter campaign, which might be also an option.",
@@ -576,7 +576,7 @@
           "class" : "spacing"
         },
         {
-          "text" : "A <a href='https://www.raspberrypi.org' target='_blank'>Respberry Pi</a> and an <a href='https://www.arduino.cc' target='_blank'>Arduino</a>",
+          "text" : "A <a href='https://www.raspberrypi.org' target='_blank'>Raspberry Pi</a> and an <a href='https://www.arduino.cc' target='_blank'>Arduino</a>",
           "class" : "spacing"
         },
         {
@@ -604,13 +604,13 @@
     "summarize" : {
       "paragraph" : [
         {
-          "text" : "Thousands of people move to new cities every day, millions love sports. With so much events going under the radar every day, <span class='dot'>Revolution</span> plans to solve that issue, presenting sports and gatherings around activties to users around the planet. You join an event, the rest is having fun playing it."
+          "text" : "Thousands of people move to new cities every day, millions love sports. With so much events going under the radar every day, <span class='dot'>Revolution</span> plans to solve that issue, presenting sports and gatherings around activities to users around the planet. You join an event, the rest is having fun playing it."
         }
       ],
 
       "image" : {
         "link" : "images/projects/revolution/summarize.jpg",
-        "quote" : "Bright over dark, the theme that followed after successfull user research. With different color combinations for the user to choose."
+        "quote" : "Bright over dark, the theme that followed after successful user research. With different color combinations for the user to choose."
       }
     },
 
@@ -618,7 +618,7 @@
       "title" : "story",
       "paragraph" : [
         {
-          "text" : "<span class='dot'>Revolution</span> is a project born out of necessity. Being new to a city it’s never an easy task. Knowing nobody to play sports, not knowing where events are happening. Every field has its own system to gather people together. Meetup for meetings, Eventbrite for conferences, Facebook for everything else. However, when you are not connected to that people that organize events in Facebook, or you are not quite a fan of this solution for it’s inmensity in that field, you are lost in the sea of doubt."
+          "text" : "<span class='dot'>Revolution</span> is a project born out of necessity. Being new to a city it’s never an easy task. Knowing nobody to play sports, not knowing where events are happening. Every field has its own system to gather people together. Meetup for meetings, Eventbrite for conferences or Facebook for everything else. However, when you are not connected to that people that organize events in Facebook, or you are not quite a fan of this solution for it’s immensity in that field, you are lost in the sea of doubt."
         },
         {
           "text" : "The main goal for <span class='dot'>Revolution</span> is to allow its users to find people that want to play the same sport as you do. Those people create an event, and you can just sign up for it. Before the game, you can start connecting within an open chat. A gathering social revolution."
@@ -645,10 +645,10 @@
           "class" : "indent"
         },
         {
-          "text" : "In order to answer that, the design was focused in confidence, while giving a sportsy look into the app. The concept was to allow big curators of events, such as Nike, Adidas or Puma to be able to create its own competitions within the app, as well as soccer games created by professionals, or even basketball tournements in a random pitch in town."
+          "text" : "In order to answer that, the design was focused in confidence, while giving a sporty look to the app. The concept was to allow big curators of events, such as Nike, Adidas or Puma to be able to create its own competitions within the app, as well as soccer games created by professionals, or even basketball tournaments in a random pitch in town."
         },
         {
-          "text" : "With all that in mind, the MVP of this product needed to be simple and clear enough for users to trust it, and big corporations to engage with it. The product would feature two main branches at first. One to find a sport and sign up for it, and the other to track your performance. The event creation branch, is being built at the moment. And would be done after the release of the first MVP featuring big names in the sport community."
+          "text" : "With all that in mind, the MVP of this product needed to be simple and clear enough for users to trust it, and big corporations to engage with it. The product would feature two main branches at first. One to find a sport and sign up for it, and the other to track your performance. The event creation branch is being built at the moment. And would be done after the release of the first MVP featuring big names in the sport community."
         },
         {
           "text" : "The design would also include a very image heavy solution for the landing page, in order to make the potential user feel the power that athletes transmit through the pictures."
@@ -667,13 +667,13 @@
           "text" : "As stated above, the app would have two main parts. One to join events, an another to track the user’s performance in such events. The union between them would be obvious. At first, and after the onboarding, the user would be directed to find a sport — that’s because it’s the first time in the app and there’s nothing to track yet. From there, if there’s sports tracked already, the user would be redirected to the statistics and tracking section."
         },
         {
-          "text" : "The decision to use a hamburguer menu was basically for the lack of connection between the features in an easy step. If the user is searching sports, she is not tracking her activity, and viceversa. That being said, it’s obvious that, if such user joins an event and wants to track it right away, the app would know that, and would redirect her to the other screen in order for the tracking to begin."
+          "text" : "The decision to use a hamburger menu was basically for the lack of connection between the features in an easy step. If the user is searching sports, she is not tracking her activity, and vice versa. That being said, it’s obvious that, if such user joins an event and wants to track it right away, the app would know that, and would redirect her to the other screen in order for the tracking to begin."
         },
         {
           "text" : "Other than that, the flow would be really simple. There would be three steps to select a sport and just one to start tracking. Finally, in order to save future events, there would be a small section in the app that would allow you to find each event, the chat, and a button to start tracking."
         },
         {
-          "text" : "Needs to be added that, in the sport selection, an additional flow passed my mind during the concept phase. What to do first was the question, a map, or a list with a sports? Because the app needed to provide lots of results, and the job of the product would be to have available as many events as possible, it wouldn’t be a good solution to constrain the user to a certain location at first. The app would obviously look at events at the user’s city and provide a list, after the user would select the sport she wanted to play, she would get presented with the map. During concept, the feeling was that if you present a user with a map at the beginning, you are constraining what they opened the app for. That’s why the constrains appear at the end rather than at the beginning."
+          "text" : "Needs to be added that, in the sport selection, an additional flow passed my mind during the concept phase. What to do first was the question, a map, or a list with sports? Because the app needed to provide lots of results, and the job of the product would be to have available as many events as possible, it wouldn’t be a good solution to constrain the user to a certain location at first. The app would obviously look at events at the user’s city and provide a list, after the user would select the sport she wanted to play — she would get presented with the map. During concept, the feeling was that if you present a user with a map at the beginning, you are constraining what they opened the app for. That’s why the constrains appear at the end rather than at the beginning."
         }
       ],
       "image" : {
@@ -705,7 +705,7 @@
           "class" : "indent"
         },
         {
-          "text" : "Those were the questions that the app needed to solve in the <span class='dot'>find your sports</span> section. For that, the solution included a step by step selection — to make it less crowded in the screen. With that in mind, three steps were create. One to select your sport, a map or list to select the location, and a joint screen to see all your events. In terms of selecting a sport, it needed to be intuitive for the user, and also, needed to include as much sports as possible for any need that a user would have. A simple map with an option of having a list ordered by distance, would be easy enough for the user to start an event."
+          "text" : "Those were the questions that the app needed to solve in the <span class='dot'>find your sports</span> section. For that, the solution included a step–by–step selection — to make it less crowded in the screen. With that in mind, three steps were create. One to select your sport, a map or list to select the location, and a joint screen to see all your events. In terms of selecting a sport, it needed to be intuitive for the user, and also, needed to include as much sports as possible for any need that a user would have. A simple map with an option of having a list ordered by distance, would be easy enough for the user to start an event."
         }
       ],
       "image" : {
@@ -717,10 +717,10 @@
       "title" : "tracking",
       "paragraph" : [
         {
-          "text" : "As stated above, the app would know when to show the tracker to the user. Either when a sport was about to start, or when there was tracking information already in place. The tracking of a user would consist of a two screen process. In the called <span class='dot'>feed</span>, the user would see all the past tracked results, with information like calories burned, BPM mean or time. It would also see a graphic of the intensity based over time for that specific workout."
+          "text" : "As stated above, the app would know when to show the tracker to the user. Either when a sport was about to start, or when there was tracking information already in place. The tracking of a user would consist of a two–screen process. In the called <span class='dot'>feed</span>, the user would see all the past tracked results, with information like calories burned, BPM mean or time. It would also see a graphic of the intensity based over time for that specific workout."
         },
         {
-          "text" : "By selecting an active tracking, the user would see the amount of miles she had done during that workout, and some additional information like the one stated above. The user would be able to track different events, or just start a new tracking from the feed. Even though there’s a lot of different sports, the tracking would be as simple as pressing a button for now, adding specific features for each one of them later on. "
+          "text" : "By selecting an active tracking, the user would see the amount of miles she had done during that workout, and some additional information like the one stated above. The user would be able to track different events, or just start a new tracking from the feed. Even though there are a lot of different sports, the tracking would be as simple as pressing a button for now, adding specific features for each one of them later on. "
         }
       ],
       "image" : {
@@ -735,7 +735,7 @@
           "text" : "I wanted to highlight some other screens that were designed for the app. The menu would follow the overall style making an animation coming from the top. The chat would be as simple as showing bubbles of the users, and the sports collective with future events would follow the tracking feed."
         },
         {
-          "text" : "As stated above, the event creation would be done right now by admins, but would be outsourced to people as soon as users got engadged with the product. It would have to also be really simple. Select a sport, a venue and a number of people to join."
+          "text" : "As stated above, the event creation would be done right now by admins, but would be outsourced to people as soon as users got engaged with the product. It would have to also be really simple. Select a sport, a venue and a number of people to join."
         }
       ],
       "image" : {
