@@ -2,26 +2,26 @@
 
 // MARK: - General values
 
-prepareDocument();
-setupAnalytics();
-
 window.addEventListener('load', function() {
-  var parallax = new Parallax();
+  prepareDocument();
+
+  const parallax = new Parallax();
   parallax.prepare();
 
-  var scroller = new Scroller();
+  const scroller = new Scroller();
   scroller.run();
 
-  var resizer = new Resizer();
+  const resizer = new Resizer();
   resizer.run();
 
-  var prevent = new Prevent();
+  const prevent = new Prevent();
   prevent.images();
 
-  var click = new Click();
+  const click = new Click();
   click.indicator();
 
   encryptCorreu('email');
+  setupAnalytics();
 });
 
 function Parallax() {
@@ -38,30 +38,30 @@ function Parallax() {
   }
 
   this.myself = function() {
-    var self = this;
-    var maximum = window.innerHeight;
-    var translate = 100;
-    var tagging = 210;
-    var scale = 0.9;
-    var fade = 0.05;
-    var opacity = 0;
-    var element = document.class('myself');
-    var name = document.class('name');
-    var tag = document.class('designer');
+    const self = this;
+    const translate = 100;
+    const tagging = 210;
+    const scale = 0.9;
+    const fade = 0.05;
+    const opacity = 0;
+    const maximum = window.innerHeight;
+    const element = document.class('myself');
+    const name = document.class('name');
+    const tag = document.class('designer');
 
     window.addEventListener('scroll', function() {
       calculate();
     });
 
     function calculate() {
-      var offset = window.pageYOffset;
+      const offset = window.pageYOffset;
 
       if (offset > maximum * self.margin) { return }
-      var translation = -(translate * offset) / maximum;
-      var tratag = (-tagging * offset - 50 * maximum + 50 * offset) / maximum;
-      var scalation = (scale * offset + maximum - offset) / maximum;
-      var fading = (fade * offset + maximum - offset) / maximum;
-      var opaque = (maximum - offset * 2) / maximum;
+      const translation = -(translate * offset) / maximum;
+      const tratag = (-tagging * offset - 50 * maximum + 50 * offset) / maximum;
+      const scalation = (scale * offset + maximum - offset) / maximum;
+      const fading = (fade * offset + maximum - offset) / maximum;
+      const opaque = (maximum - offset * 2) / maximum;
 
       animation(function() {
         element.style.transform = 'translate3d(-50%, ' + translation / 3.5 + '%, 0) scale3d(' + scalation + ', ' + scalation + ', 1)';
@@ -79,15 +79,15 @@ function Scroller() {
 
   this.run = function() {
     if (exists('myself')) {
-      var header = document.tag('header');
-      var footer = document.tag('footer');
-      var content = document.class('content');
-      var offset = contentOffset(content);
+      const content = document.class('content');
+      const header = document.tag('header');
+      const footer = document.tag('footer');
+      const margin = 2;
+      const inferior = 1;
+      const superior = 2;
+
       var position = window.pageYOffset;
-      var lastScroll = 0;
-      var margin = 2;
-      var superior = 2;
-      var inferior = 1;
+      var offset = contentOffset(content);
 
       window.addEventListener('scroll', function() {
         offset = contentOffset(content);
@@ -107,13 +107,14 @@ function Scroller() {
         }
       }
     } else if (document.tag('body').classList[0] === 'case') {
-      var home = document.class('home');
+      const threshold = 400;
+      const home = document.class('home');
+
       var last = 0;
-      var threshold = 400;
 
       window.addEventListener('scroll', function() {
-        var position = window.pageYOffset;
-        var up = position < last;
+        const position = window.pageYOffset;
+        const up = position < last;
 
         if (up || last == 0) {
           home.style.transform = 'rotateZ(90deg)';
@@ -131,16 +132,16 @@ function Resizer() {
 
   this.run = function() {
     if (exists('myself')) {
-      var projects = document.class('projects').getElementsByClassName('inner')[0];
+      const projects = document.class('projects').getElementsByClassName('inner')[0];
 
       window.addEventListener('resize', function() {
         calculate();
       });
 
       function calculate() {
-        if (window.innerWidth < 700) { return; }
-        var gluten = document.class('gluten');
-        var revolution = document.class('revolution');
+        if (window.innerWidth < 700) { return }
+        const gluten = document.class('gluten');
+        const revolution = document.class('revolution');
 
         projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
       }
@@ -154,8 +155,8 @@ function Click() {
 
   this.indicator = function() {
     if (exists('myself')) {
-      var indicator = document.class('work');
-      var offset = contentOffset(document.class('content'));
+      const indicator = document.class('work');
+      const offset = contentOffset(document.class('content'));
 
       indicator.addEventListener('click', function() {
         scrollTo(offset + 50, 750);
@@ -167,10 +168,10 @@ function Click() {
 function Prevent() {
 
   this.images = function() {
-    var images = document.tags('img');
+    const images = document.tags('img');
 
     for (var i = 0; i < images.length; i++) {
-      var image = images[i];
+      const image = images[i];
       image.addEventListener('dragstart', function(event) {
         event.preventDefault();
       });

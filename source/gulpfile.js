@@ -41,7 +41,7 @@ gulp.task('mustache', function() {
 
 gulp.task('javascript', function() {
   gulp.src('js/*.js')
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('../public/js/'))
 });
 

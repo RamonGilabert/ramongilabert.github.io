@@ -47,14 +47,14 @@ function setupAnalytics() {
 }
 
 function encryptCorreu(id) {
-  var emails = document.classes(id);
+  const emails = document.classes(id);
   for (var i = 0; i < emails.length; i++) {
-    var email = emails[i];
+    const email = emails[i];
 
     email.addEventListener('click', function() {
-      var letter = decode("znvygb:enzba@tvynoreg.qrfvta");
-      var subject = decode("Lb! :)");
-      var reference = letter + '?subject=' + subject;
+      const letter = decode("znvygb:enzba@tvynoreg.qrfvta");
+      const subject = decode("Lb! :)");
+      const reference = letter + '?subject=' + subject;
 
       window.location.href = reference;
     });
@@ -79,72 +79,11 @@ function convert(object) {
   return [].map.call(object, function(element) { return element; });
 }
 
-function slice(element, sizes) {
-  var array = [];
-  var i, j;
-
-  for (i = 0, j = element.length; i < j; i = i + sizes) {
-    array.push(element.slice(i, i + sizes));
-  }
-
-  return array
-}
-
-function toggle(element, name, remove) {
-  remove ? element.classList.remove(name) : element.classList.add(name);
-}
-
-function getTransform(element) {
-  var style = getComputedStyle(element)
-  var transform = style.transform || style.webkitTransform;
-  var expression = transform.match(/^matrix3d\((.+)\)$/);
-
-  if (expression) {
-    return parseFloat(expression[1].split(', ')[13]);
-  }
-
-  expression = transform.match(/^matrix\((.+)\)$/);
-
-  return expression ? parseFloat(expression[1].split(', ')[5]) : 0;
-}
-
-function iterate(array, delay, callback, reverse) {
-  if (reverse) {
-    array.reverse();
-  }
-
-  var index = 0;
-  setTimeout(function() { loop(); }, delay);
-
-  function loop() {
-    setTimeout(function() {
-      callback(array[index]);
-
-      index = index + 1;
-
-      if (index < array.length) { loop(); }
-    }, 150 + (index * 5));
-  }
-}
-
-function loadIndexCSS() {
-  var source = "../css/index.css";
-
-  if (document.createStyleSheet) {
-    document.createStyleSheet(source);
-  }
-  else {
-    var stylesheet = document.createElement('link');
-    stylesheet.href = source;
-    stylesheet.rel = 'stylesheet';
-    stylesheet.type = 'text/css';
-    document.body.appendChild(stylesheet);
-  }
-}
-
 function contentOffset(element) {
-  var height = element.clientHeight;
+  const height = element.clientHeight;
+
   var offsetLeft = 0;
+
   do {
     if (!isNaN(element.offsetTop)) {
       offsetLeft += element.offsetTop;
@@ -154,25 +93,7 @@ function contentOffset(element) {
   return offsetLeft;
 }
 
-function isDetail() {
-  return document.body.classList.contains('detail');
-}
-
-function storageSupported() {
-  var key = 'storage';
-  var storage = window.sessionStorage;
-
-  try {
-    storage.setItem(key, 'true');
-    storage.removeItem(key);
-
-    return true;
-  } catch(error) {
-    return false;
-  }
-}
-
-var empty = function() { }
+const empty = function() { }
 
 // Convenience
 
@@ -186,12 +107,13 @@ var animation = function() {
 // Modification of code by: james2doyle at: https://gist.github.com/james2doyle/5694700.
 
 Math.inOutQuintic = function(t, b, c, d) {
-  var ts = (t/=d)*t,
-  tc = ts*t;
+  const ts = (t/=d)*t;
+  const tc = ts*t;
+
   return b+c*(6*tc*ts + -15*ts*ts + 10*tc);
 };
 
-function scrollTo(position, duration, callback) {
+function scrollTo(position, time, callback) {
 
   function move(amount) {
     document.documentElement.scrollTop = amount;
@@ -199,11 +121,12 @@ function scrollTo(position, duration, callback) {
     document.body.scrollTop = amount;
   }
 
-  var start = window.pageYOffset,
-    change = position - start,
-    currentTime = 0,
-    increment = 20;
-    duration = (typeof(duration) === 'undefined') ? 500 : duration;
+  const start = window.pageYOffset;
+  const change = position - start;
+  const increment = 20;
+  const duration = (typeof(time) === 'undefined') ? 500 : time;
+
+  var currentTime = 0;
 
   function animate() {
     currentTime += increment;
