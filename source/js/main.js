@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('load', function() {
+  loader.run();
   transition.prepare();
   load.prepare();
-  loader.run();
 });
 
 function Loader() {
