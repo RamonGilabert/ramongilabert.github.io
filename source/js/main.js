@@ -10,13 +10,12 @@ const resizer = new Resizer();
 const prevent = new Prevent();
 const click = new Click();
 
-document.body.style.opacity = 1;
+document.addEventListener('DOMContentLoaded', function load() {
+  document.removeEventListener('DOMContentLoaded', load);
 
-window.addEventListener('load', function load() {
-  window.removeEventListener('load', load);
-  
+  document.body.style.opacity = 1;
+
   prepareDocument();
-
   transition.prepare();
   load.prepare();
 });
