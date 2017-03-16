@@ -10,8 +10,8 @@ const resizer = new Resizer();
 const prevent = new Prevent();
 const click = new Click();
 
-document.addEventListener('DOMContentLoaded', function load() {
-  document.removeEventListener('DOMContentLoaded', load);
+document.addEventListener('DOMContentLoaded', function content() {
+  document.removeEventListener('DOMContentLoaded', content);
 
   document.body.style.opacity = 1;
 
