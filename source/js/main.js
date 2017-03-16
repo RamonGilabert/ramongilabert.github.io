@@ -2,7 +2,7 @@
 
 // MARK: - General values
 
-const displaying = '0.7s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+const displaying = '0.5s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
 const load = new Load();
 const transition = new Transition();
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       setTimeout(function() {
         white.style.display = 'none';
-      }, 700);
+      }, 500);
     }, 700);
   }, 0);
 });
@@ -182,9 +182,9 @@ function Transition() {
 
             setTimeout(function() {
               black.style.display = 'none';
-            }, 700);
+            }, 500);
           }, 5);
-        }, 700);
+        }, 500);
       });
     }
 
