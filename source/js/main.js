@@ -192,7 +192,7 @@ function Transition() {
             setTimeout(function() {
               black.style.display = 'none';
             }, 500);
-          }, 5);
+          }, 10);
         }, 500);
       });
     }
