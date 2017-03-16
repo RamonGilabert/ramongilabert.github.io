@@ -11,6 +11,7 @@ const scroller = new Scroller();
 const resizer = new Resizer();
 const prevent = new Prevent();
 const click = new Click();
+const loader = new Loader();
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
@@ -32,7 +33,44 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
   transition.prepare();
   load.prepare();
+  loader.run();
 });
+
+function Loader() {
+
+  this.images = [
+    './images/projects/gluten/summarize.jpg',
+    './images/projects/lights/summarize.jpg',
+    './images/projects/revolution/summarize.jpg'
+  ]
+
+  this.loaded = [];
+
+  this.run = function() {
+    const self = this;
+
+    var i = 0;
+
+    setTimeout(function() { loop(); }, 0);
+
+    function loop() {
+      setTimeout(function() {
+        var image = new Image();
+        image.src = self.images[i];
+
+        image.addEventListener('load', function() { });
+
+        image.addEventListener('error', function() { });
+
+        self.loaded[i] = image;
+
+        i = i + 1;
+
+        if (i < self.images.length) { loop(); }
+      }, 0);
+    }
+  }
+}
 
 function Load() {
 
