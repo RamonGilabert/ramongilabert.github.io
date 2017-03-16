@@ -13,7 +13,7 @@ const click = new Click();
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     document.body.style.opacity = 1;
-  });
+  }, 0);
 
   prepareDocument();
 });
@@ -47,6 +47,23 @@ function Transition() {
 
     document.removeEventListener('click', click);
     document.addEventListener('click', click);
+
+    preload();
+
+    function preload() {
+      const base = location.href.substring(0, location.href.lastIndexOf("/") + 1);
+      const gluten = base + 'gluten';
+      const lights = base + 'lights';
+      const revolution = base + 'revolution';
+      const index = base + 'index';
+      const urls = [gluten, lights, revolution, index];
+
+      for (var i in urls) {
+        fetch(urls[i] + '.html').then(function(response) {
+          // Success.
+        });
+      }
+    }
 
     function click(event) {
       var element = event.target;
