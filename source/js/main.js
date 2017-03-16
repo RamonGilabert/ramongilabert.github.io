@@ -70,7 +70,12 @@ function Transition() {
       const urls = [gluten, lights, revolution, index];
 
       for (var i in urls) {
-        fetch(urls[i]).then(function(response) { });
+        var url = urls[i];
+        if (!document.location.host) {
+          url = url + '.html';
+        }
+
+        fetch(url).then(function(response) { });
       }
     }
 
@@ -280,7 +285,11 @@ function Resizer() {
       window.addEventListener('resize', calculate);
 
       function calculate() {
-        if (window.innerWidth < 700) { return }
+        if (window.innerWidth < 700) {
+          projects.style.height = 'auto';
+          return
+        }
+
         const gluten = document.class('gluten');
         const revolution = document.class('revolution');
 
