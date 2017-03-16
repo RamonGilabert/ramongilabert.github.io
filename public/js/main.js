@@ -108,6 +108,7 @@ function Transition() {
     function fetch(url) {
       return new Promise(function(resolve) {
         if (cache[url]) {
+          console.log('Cached');
           resolve(cache[url]);
         } else {
           const request = new XMLHttpRequest();
