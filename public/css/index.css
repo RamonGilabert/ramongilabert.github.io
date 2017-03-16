@@ -754,6 +754,7 @@ footer .inner .social .social-icon:hover {
 }
 .image img {
   object-fit: cover;
+  min-height: 25vw;
   width: 100%;
 }
 .image p {

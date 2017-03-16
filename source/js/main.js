@@ -14,6 +14,7 @@ window.addEventListener('load', function() {
   prepareDocument();
 
   document.body.style.opacity = 1;
+
   transition.prepare();
   load.prepare();
 });
