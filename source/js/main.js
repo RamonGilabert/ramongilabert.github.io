@@ -173,8 +173,12 @@ function Transition() {
         setTimeout(function() {
           document.title = title;
           document.body = content;
-          window.scrollTo(0, 0);
-          load.prepare();
+
+
+          setTimeout(function() {
+            window.scrollTo(0, 0);
+            load.prepare();
+          }, 5);
 
           black.style.transform = 'translateY(-100%)';
 
