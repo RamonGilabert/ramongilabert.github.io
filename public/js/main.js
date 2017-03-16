@@ -10,11 +10,11 @@ const resizer = new Resizer();
 const prevent = new Prevent();
 const click = new Click();
 
-window.addEventListener('load', function() {
-  prepareDocument();
-
+document.addEventListener('onload', function() {
   document.body.style.opacity = 1;
 
+  prepareDocument();
+  
   transition.prepare();
   load.prepare();
 });
