@@ -9,13 +9,23 @@ const scroller = new Scroller();
 const resizer = new Resizer();
 const prevent = new Prevent();
 const click = new Click();
+const displaying = '0.7s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
 document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    document.body.style.opacity = 1;
-  }, 0);
-
   prepareDocument();
+
+  const white = document.class('transition');
+  setTimeout(function() {
+    white.style.transition = displaying;
+
+    setTimeout(function() {
+      white.style.transform = 'translateY(-100%)';
+
+      setTimeout(function() {
+        white.style.display = 'none';
+      }, 700);
+    }, 500);
+  });
 });
 
 window.addEventListener('load', function() {
@@ -59,9 +69,7 @@ function Transition() {
       const urls = [gluten, lights, revolution, index];
 
       for (var i in urls) {
-        fetch(urls[i]).then(function(response) {
-          // Success.
-        });
+        fetch(urls[i]).then(function(response) { });
       }
     }
 
@@ -76,6 +84,7 @@ function Transition() {
 
       if (element.classList.contains('navigation')) {
         event.preventDefault();
+
         history.pushState(null, null, element.href);
         page();
       }
@@ -87,12 +96,30 @@ function Transition() {
         var wrapper = document.createElement('html');
         wrapper.innerHTML = response;
 
-        var old = document.body;
-        var title = wrapper.querySelector('title').innerHTML;
-        var content = wrapper.getElementsByTagName('body')[0];
+        const old = document.body;
+        const white = document.class('transition');
+        const title = wrapper.querySelector('title').innerHTML;
+        const content = wrapper.getElementsByTagName('body')[0];
+        const black = wrapper.getElementsByClassName('transition')[0];
 
-        old.style.opacity = 0;
-        content.style.opacity = 0;
+        black.style.transition = displaying;
+
+        setTimeout(function() {
+          white.style.display = 'inline';
+          white.style.transition = 'none';
+
+          setTimeout(function() {
+            white.style.transform = 'translateY(100%)';
+
+            setTimeout(function() {
+              white.style.transition = displaying;
+
+              setTimeout(function() {
+                white.style.transform = 'translateY(0%)';
+              });
+            });
+          });
+        });
 
         setTimeout(function() {
           document.title = title;
@@ -100,15 +127,23 @@ function Transition() {
           window.scrollTo(0, 0);
           load.prepare();
 
-          document.body.style.opacity = 1;
-        }, 1000);
+          black.style.transform = 'translateY(-100%)';
+
+          setTimeout(function() {
+            black.style.display = 'none';
+          }, 700);
+        }, 700);
       });
     }
 
     function fetch(url) {
+      var url = url;
+      if (!document.location.host) {
+        url = url + '.html';
+      }
+
       return new Promise(function(resolve) {
         if (cache[url]) {
-          console.log('Cached');
           resolve(cache[url]);
         } else {
           const request = new XMLHttpRequest();
