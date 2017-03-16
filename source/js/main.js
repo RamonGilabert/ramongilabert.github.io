@@ -39,9 +39,9 @@ window.addEventListener('load', function() {
 function Loader() {
 
   this.images = [
-    './images/projects/gluten/myself.jpg',
-    './images/projects/lights/myself.jpg',
-    './images/projects/revolution/myself.jpg',
+    './images/projects/gluten/myself.png',
+    './images/projects/lights/myself.png',
+    './images/projects/revolution/myself.png',
     './images/projects/gluten/summarize.jpg',
     './images/projects/lights/summarize.jpg',
     './images/projects/revolution/summarize.jpg'
@@ -133,8 +133,13 @@ function Transition() {
         event.preventDefault();
 
         var url = element.href;
+        var direction = url.split("/").pop();
         if (!document.location.host) {
-          url = url + '.html';
+          if (direction.length === 0) {
+            url = url + 'index.html';
+          } else {
+            url = url + '.html';
+          }
         }
 
         history.pushState(null, null, url);
