@@ -59,7 +59,7 @@ function Transition() {
       const urls = [gluten, lights, revolution, index];
 
       for (var i in urls) {
-        fetch(urls[i] + '.html').then(function(response) {
+        fetch(urls[i]).then(function(response) {
           // Success.
         });
       }
@@ -76,7 +76,7 @@ function Transition() {
 
       if (element.classList.contains('navigation')) {
         event.preventDefault();
-        history.pushState(null, null, element.href + '.html');
+        history.pushState(null, null, element.href);
         page();
       }
     }
