@@ -174,17 +174,16 @@ function Transition() {
           document.title = title;
           document.body = content;
 
-
           setTimeout(function() {
             window.scrollTo(0, 0);
             load.prepare();
+
+            black.style.transform = 'translateY(-100%)';
+
+            setTimeout(function() {
+              black.style.display = 'none';
+            }, 700);
           }, 5);
-
-          black.style.transform = 'translateY(-100%)';
-
-          setTimeout(function() {
-            black.style.display = 'none';
-          }, 700);
         }, 700);
       });
     }
