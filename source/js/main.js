@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         white.style.display = 'none';
       }, 700);
-    }, 600);
+    }, 700);
   }, 0);
 });
 
