@@ -971,3 +971,9 @@ p {
   left: 0;
   clip: rect(0, 1px, 1px, 0);
 }
+body {
+  transition: 0.7s ease opacity;
+}
+.hide {
+  opacity: 0;
+}

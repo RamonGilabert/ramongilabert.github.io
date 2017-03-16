@@ -53,10 +53,18 @@ h1, h2, h3, h4, p {
 }
 
 .page-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  top: 0;
-  left: 0;
+  position: absolute
+  width: 1px
+  height: 1px
+  top: 0
+  left: 0
   clip: rect(0, 1px, 1px, 0)
+}
+
+body {
+  transition: 0.7s ease opacity
+}
+
+.hide {
+  opacity: 0
 }

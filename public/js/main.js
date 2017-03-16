@@ -68,10 +68,17 @@ function Transition() {
         var title = wrapper.querySelector('title').innerHTML;
         var content = wrapper.getElementsByTagName('body')[0];
 
-        document.title = title;
-        document.body = content;
-        window.scrollTo(0, 0);
-        load.prepare();
+        old.style.opacity = 0;
+        content.style.opacity = 0;
+
+        setTimeout(function() {
+          document.title = title;
+          document.body = content;
+          window.scrollTo(0, 0);
+          load.prepare();
+
+          document.body.style.opacity = 1;
+        }, 700);
       });
     }
 
