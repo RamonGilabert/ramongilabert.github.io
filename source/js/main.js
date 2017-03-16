@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         white.style.display = 'none';
       }, 700);
-    }, 500);
+    }, 600);
   }, 0);
 });
 
@@ -90,7 +90,7 @@ function Transition() {
         if (!document.location.host) {
           url = url + '.html';
         }
-        
+
         history.pushState(null, null, url);
         page();
       }
@@ -122,10 +122,10 @@ function Transition() {
 
               setTimeout(function() {
                 white.style.transform = 'translateY(0%)';
-              }, 3);
-            }, 2);
-          }, 1);
-        }, 0);
+              }, 20);
+            }, 15);
+          }, 10);
+        }, 5);
 
         setTimeout(function() {
           document.title = title;
