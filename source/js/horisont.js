@@ -32,9 +32,25 @@ function prepareDocument() {
   }
 }
 
-function abs(number) {
-  return Math.abs(number);
-}
+// var events = [];
+// function listen(element, type, handler) {
+//   events[events.length] = {
+//     'element' : element,
+//     'type' : type,
+//     'handler' : handler
+//   }
+//
+//   element.addEventListener(type, handler);
+// }
+//
+// function unbind() {
+//   for (var i = 0; i < events.length; i++) {
+//     var event = events[i];
+//     event.element.removeEventListener(event.type, event.handler);
+//   }
+//
+//   events = [];
+// }
 
 function setupAnalytics() {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
