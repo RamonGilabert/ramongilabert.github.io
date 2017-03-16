@@ -39,6 +39,9 @@ window.addEventListener('load', function() {
 function Loader() {
 
   this.images = [
+    './images/projects/gluten/myself.jpg',
+    './images/projects/lights/myself.jpg',
+    './images/projects/revolution/myself.jpg',
     './images/projects/gluten/summarize.jpg',
     './images/projects/lights/summarize.jpg',
     './images/projects/revolution/summarize.jpg'
