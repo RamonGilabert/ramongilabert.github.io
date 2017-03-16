@@ -972,7 +972,8 @@ p {
   clip: rect(0, 1px, 1px, 0);
 }
 body {
-  transition: 0.7s ease opacity;
+  opacity: 0;
+  transition: 1s ease opacity;
 }
 .hide {
   opacity: 0;

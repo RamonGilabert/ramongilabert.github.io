@@ -13,6 +13,7 @@ const click = new Click();
 window.addEventListener('load', function() {
   prepareDocument();
 
+  document.body.style.opacity = 1;
   transition.prepare();
   load.prepare();
 });
@@ -78,7 +79,7 @@ function Transition() {
           load.prepare();
 
           document.body.style.opacity = 1;
-        }, 700);
+        }, 1000);
       });
     }
 
