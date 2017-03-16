@@ -2,6 +2,8 @@
 
 // MARK: - General values
 
+const displaying = '0.7s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+
 const load = new Load();
 const transition = new Transition();
 const parallax = new Parallax();
@@ -9,7 +11,6 @@ const scroller = new Scroller();
 const resizer = new Resizer();
 const prevent = new Prevent();
 const click = new Click();
-const displaying = '0.7s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         white.style.display = 'none';
       }, 700);
     }, 500);
-  });
+  }, 0);
 });
 
 window.addEventListener('load', function() {
@@ -85,7 +86,12 @@ function Transition() {
       if (element.classList.contains('navigation')) {
         event.preventDefault();
 
-        history.pushState(null, null, element.href);
+        var url = element.href;
+        if (!document.location.host) {
+          url = url + '.html';
+        }
+        
+        history.pushState(null, null, url);
         page();
       }
     }
@@ -116,10 +122,10 @@ function Transition() {
 
               setTimeout(function() {
                 white.style.transform = 'translateY(0%)';
-              });
-            });
-          });
-        });
+              }, 3);
+            }, 2);
+          }, 1);
+        }, 0);
 
         setTimeout(function() {
           document.title = title;
@@ -137,11 +143,6 @@ function Transition() {
     }
 
     function fetch(url) {
-      var url = url;
-      if (!document.location.host) {
-        url = url + '.html';
-      }
-
       return new Promise(function(resolve) {
         if (cache[url]) {
           resolve(cache[url]);
