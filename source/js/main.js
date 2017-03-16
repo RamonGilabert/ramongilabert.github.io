@@ -34,6 +34,8 @@ window.addEventListener('load', function() {
   loader.run();
   transition.prepare();
   load.prepare();
+
+  setupAnalytics();
 });
 
 function Loader() {
@@ -81,11 +83,10 @@ function Load() {
     parallax.prepare();
     scroller.run();
     resizer.run();
-    prevent.images();
     click.indicator();
+    prevent.images();
 
     encryptCorreu('email');
-    setupAnalytics();
   }
 }
 
@@ -107,7 +108,7 @@ function Transition() {
       const gluten = base + 'gluten';
       const lights = base + 'lights';
       const revolution = base + 'revolution';
-      const index = base + 'index';
+      const index = base;
       const urls = [gluten, lights, revolution, index];
 
       for (var i in urls) {
