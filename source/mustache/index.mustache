@@ -6,6 +6,9 @@
   </head>
   {{# myself }}
   <body id='myself'>
+    <div class='transition'>
+      <div class='noise'></div>
+    </div>
     <header>
       <h1 class='page-title'>{{ page }}</h1>
       <h2 class='name'>{{ header }}</h2>
@@ -36,7 +39,7 @@
               <img class='path' src='./images/general/path.svg'>
               <h3>{{ name }}<span class='spaced dot'>.</span></h3>
             </div>
-            <a href='{{ link }}'></a>
+            <a class='navigation' href='{{ link }}'></a>
           </div>
           {{/ projects }}
         </div>

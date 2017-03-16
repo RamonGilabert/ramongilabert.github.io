@@ -611,7 +611,7 @@ footer .inner .social .social-icon:hover {
     transform: translateY(100%);
   }
   #myself .projects .inner .project:hover .peek {
-    transform: translateX(-50%) scale3d(0.97, 0.97, 1);
+    transform: translateX(-50%);
   }
   #myself .projects .inner .gluten:hover .name {
     transform: none;
@@ -754,6 +754,7 @@ footer .inner .social .social-icon:hover {
 }
 .image img {
   object-fit: cover;
+  min-height: 25vw;
   width: 100%;
 }
 .image p {
@@ -970,4 +971,16 @@ p {
   top: 0;
   left: 0;
   clip: rect(0, 1px, 1px, 0);
+}
+.transition {
+  background-color: #161216;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.hide {
+  opacity: 0;
 }

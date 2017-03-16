@@ -32,8 +32,8 @@ function prepareDocument() {
   }
 }
 
-function abs(number) {
-  return Math.abs(number);
+function toggle(element, name, remove) {
+  remove ? element.classList.remove(name) : element.classList.add(name);
 }
 
 function setupAnalytics() {
