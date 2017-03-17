@@ -185,9 +185,11 @@ function Transition() {
 
           setTimeout(function() {
             window.scrollTo(0, 0);
-            load.prepare();
-
             black.style.transform = 'translateY(-100%)';
+
+            setTimeout(function() {
+              load.prepare();
+            }, 100);
 
             setTimeout(function() {
               black.style.display = 'none';
@@ -342,6 +344,10 @@ function Resizer() {
 
         const gluten = document.class('gluten');
         const revolution = document.class('revolution');
+
+        if (gluten === undefined || revolution === undefined) {
+          return
+        }
 
         projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
       }
