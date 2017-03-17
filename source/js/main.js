@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     white.style.transition = displaying;
 
     setTimeout(function() {
+      load.prepare();
       white.style.transform = 'translateY(-100%)';
 
       setTimeout(function() {
@@ -33,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
   loader.run();
   transition.prepare();
-  load.prepare();
 
   setupAnalytics();
 });
@@ -184,12 +184,9 @@ function Transition() {
           document.body = content;
 
           setTimeout(function() {
+            load.prepare();
             window.scrollTo(0, 0);
             black.style.transform = 'translateY(-100%)';
-
-            setTimeout(function() {
-              load.prepare();
-            }, 100);
 
             setTimeout(function() {
               black.style.display = 'none';
