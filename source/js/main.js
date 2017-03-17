@@ -343,6 +343,10 @@ function Resizer() {
         const revolution = document.class('revolution');
 
         if (gluten === undefined || revolution === undefined) {
+          setTimeout(function() {
+            calculate();
+          }, 300);
+
           return
         }
 
