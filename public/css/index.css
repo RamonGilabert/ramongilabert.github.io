@@ -981,6 +981,9 @@ p {
   left: 0;
   z-index: 100;
 }
+.lighter {
+  background-color: #fff;
+}
 .hide {
   opacity: 0;
 }
