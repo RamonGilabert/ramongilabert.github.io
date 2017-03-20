@@ -340,24 +340,10 @@ function Resizer() {
           return;
         }
 
-        const high = window.innerWidth * 0.4;
-
-        var projectWidth = 550;
-        if (projectWidth > high) {
-          projectWidth = high;
-        }
-
-        const image = projectWidth * 0.9;
-
-        var gluten = 595 * image / 306;
-        if (gluten > 595) {
-          gluten = 595;
-        }
-
-        var revolution = 245 * image / 403;
-        if (revolution > 245) {
-          revolution = 245;
-        }
+        const width = Math.min(window.innerWidth * 0.4, 550);
+        const image = width * 0.9;
+        const gluten = Math.min(595 * image / 306, 595);
+        const revolution = Math.min(245 * image / 403, 245);
 
         projects.style.height = gluten + revolution + 510 + 'px';
       }
