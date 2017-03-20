@@ -588,6 +588,7 @@ footer .inner .social .social-icon:hover {
     transform: rotateZ(0deg);
     top: 0px;
     left: 15px;
+    transition: none;
   }
   #myself .projects .inner .project .name .path {
     display: inline-block;
