@@ -64,7 +64,6 @@ function Loader() {
         image.src = self.images[i];
 
         image.addEventListener('load', function() { });
-
         image.addEventListener('error', function() { });
 
         self.loaded[i] = image;
