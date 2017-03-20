@@ -48,6 +48,10 @@
   opacity: 0.1;
   mix-blend-mode: soft-light;
   transform: translate3d(-50%, -50%, 0);
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 .noise {
   position: absolute;
@@ -59,6 +63,10 @@
   background-blend-mode: normal;
   mix-blend-mode: overlay;
   transform: translate3d(0, 0, 0);
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 .email,
 a {
