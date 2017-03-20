@@ -335,31 +335,31 @@ function Resizer() {
 
       function calculate() {
         if (window.innerWidth < 700) {
+          console.log('Auto');
           projects.style.height = 'auto';
-          return
-        }
-
-        const gluten = document.class('gluten');
-        const revolution = document.class('revolution');
-
-        console.log(gluten.offsetHeight);
-        console.log(revolution.offsetHeight);
-
-        if (gluten === undefined || revolution === undefined) {
-          setTimeout(function() {
-            calculate();
-          }, 300);
-
-          return;
-        } else if (gluten.offsetHeight === revolution.offsetHeight) {
-          setTimeout(function() {
-            calculate();
-          }, 300);
-
           return;
         }
 
-        projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
+        const high = window.innerWidth * 0.4;
+
+        var projectWidth = 550;
+        if (projectWidth > high) {
+          projectWidth = high;
+        }
+
+        const image = projectWidth * 0.9;
+
+        var gluten = 595 * image / 306;
+        if (gluten > 595) {
+          gluten = 595;
+        }
+
+        var revolution = 245 * image / 403;
+        if (revolution > 245) {
+          revolution = 245;
+        }
+
+        projects.style.height = gluten + revolution + 510 + 'px';
       }
 
       calculate();
