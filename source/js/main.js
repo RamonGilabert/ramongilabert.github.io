@@ -346,11 +346,9 @@ function Resizer() {
           setTimeout(function() {
             calculate();
           }, 300);
-
-          return
+        } else {
+          projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
         }
-
-        projects.style.height = gluten.offsetHeight + revolution.offsetHeight + 60 + 'px';
       }
 
       calculate();
