@@ -342,10 +342,13 @@ function Resizer() {
         const gluten = document.class('gluten');
         const revolution = document.class('revolution');
 
-        console.log(gluten.offsetHeight);
-        console.log(revolution.offsetHeight);
-
         if (gluten === undefined || revolution === undefined) {
+          setTimeout(function() {
+            calculate();
+          }, 300);
+
+          return;
+        } else if (gluten.offsetHeight === revolution.offsetHeight) {
           setTimeout(function() {
             calculate();
           }, 300);
