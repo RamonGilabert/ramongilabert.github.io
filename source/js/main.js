@@ -56,8 +56,6 @@ function Loader() {
 
     var i = 0;
 
-    setTimeout(function() { loop(); }, 0);
-
     function loop() {
       setTimeout(function() {
         var image = new Image();
@@ -73,6 +71,8 @@ function Loader() {
         if (i < self.images.length) { loop(); }
       }, 0);
     }
+
+    setTimeout(function() { loop(); }, 0);
   }
 }
 
