@@ -1,12 +1,12 @@
 {
   "myself" : {
-    "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
+    "page" : "Ramon Gilabert — Product Designer",
     "title" : "Ramon Gilabert",
     "header" : "gilabert",
 
     "story" : {
       "title" : "story",
-      "text" : "<span class='dot'>Ramon Gilabert</span> is an award winning designer and developer from a rural town in Catalonia. Right now, he is enjoying every day in Barcelona, doing amazing products as a freelancer."
+      "text" : "<span class='dot'>Ramon Gilabert</span> is a Product Designer with a lot of passion for interaction and visual design. He has a strong interest in rapidly prototyping ideas and concepts and later on bring them to life with iteration in mind. Right now, he is looking for a role as a Product Designer."
     },
 
     "projects" : [
@@ -88,7 +88,7 @@
   },
 
   "gluten" : {
-    "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
+    "page" : "Ramon Gilabert — Product Designer",
     "title" : "Ramon Gilabert – Gluten",
     "name" : "gluten",
     "role" : "Concept, UI & UX design",
@@ -332,7 +332,7 @@
   },
 
   "lights" : {
-    "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
+    "page" : "Ramon Gilabert — Product Designer",
     "title" : "Ramon Gilabert – Lights",
     "name" : "lights",
     "role" : "Concept, UI & UX, Industrial, Electronic Design & Development",
@@ -597,7 +597,7 @@
   },
 
   "revolution" : {
-    "page" : "Ramon Gilabert — Award Winning Designer &amp; Developer",
+    "page" : "Ramon Gilabert — Product Designer",
     "title" : "Ramon Gilabert – Revolution",
     "name" : "revolution",
     "role" : "Concept, UI & UX Design",
