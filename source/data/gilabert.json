@@ -34,13 +34,13 @@
       "title" : "others",
       "others" : [
         {
-          "text" : "A video about design every week at <a href='https://www.sketchcasts.net' target='_blank'><span class='dot'>SketchCasts</span>.</a>"
+          "text" : "I teach design at <a href='https://www.sketchcasts.net' target='_blank'><span class='dot'>SketchCasts</span>.</a>"
         },
         {
           "text" : "<a href='http://puzzles.design' target='_blank'><span class='dot'>Puzzles</span></a> iOS 10 UI kit."
         },
         {
-          "text" : "I <span class='dot'>retouch</span> images for fun."
+          "text" : "I retouch images for fun."
         }
       ],
 
