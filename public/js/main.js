@@ -344,8 +344,9 @@ function Resizer() {
         const image = width * 0.9;
         const gluten = Math.min(595 * image / 306, 595);
         const revolution = Math.min(245 * image / 403, 245);
+        const padding = 20;
 
-        projects.style.height = gluten + revolution + 510 + 'px';
+        projects.style.height = gluten + gluten + 510 + padding + 'px';
       }
 
       calculate();
