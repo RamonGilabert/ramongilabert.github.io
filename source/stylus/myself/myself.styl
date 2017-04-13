@@ -237,19 +237,19 @@
         }
       }
 
-      .gluten:hover, .revolution:hover {
+      .mychain:hover, .revolution:hover {
         .name {
           transform: translateY(40px) rotateZ(90deg)
         }
       }
 
-      .lights:hover, .mychain:hover {
+      .gluten:hover, .lights:hover {
         .name {
           transform: translateY(-40px) rotateZ(-90deg)
         }
       }
 
-      .mychain {
+      .gluten {
         order: 1
       }
 
@@ -257,7 +257,7 @@
         order: 2
       }
 
-      .gluten {
+      .mychain {
         margin-top: margin-top
         order: 3
       }
@@ -266,7 +266,7 @@
         order: 4
       }
 
-      .gluten, .revolution {
+      .mychain, .revolution {
         .indication {
           transform-origin: left bottom
           transform: rotateZ(90deg)
@@ -285,7 +285,7 @@
         }
       }
 
-      .lights, .mychain {
+      .gluten, .lights {
         .name {
           top: auto
           right: auto
@@ -448,25 +448,19 @@
           }
         }
 
-        .gluten:hover {
-          .name {
-            transform: none
-          }
-        }
-
-        .lights:hover, .revolution:hover {
+        .lights:hover, .revolution:hover, .gluten:hover, .mychain:hover {
           .name {
             transform: none
           }
         }
 
         .mychain {
+          margin-top: 15px
           order: 1
         }
 
         .gluten {
           order: 2
-          margin-top: 15px
         }
 
         .revolution {
