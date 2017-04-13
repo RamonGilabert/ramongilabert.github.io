@@ -461,24 +461,37 @@ footer .inner .social .social-icon:hover {
 #myself .projects .inner .project:hover .name h3 {
   opacity: 1;
 }
-#myself .projects .inner .gluten:hover .name {
+#myself .projects .inner .mychain:hover .name,
+#myself .projects .inner .revolution:hover .name {
   transform: translateY(40px) rotateZ(90deg);
 }
-#myself .projects .inner .lights:hover .name,
-#myself .projects .inner .revolution:hover .name {
+#myself .projects .inner .gluten:hover .name,
+#myself .projects .inner .lights:hover .name {
   transform: translateY(-40px) rotateZ(-90deg);
 }
 #myself .projects .inner .gluten {
+  order: 1;
+}
+#myself .projects .inner .lights {
   order: 2;
 }
-#myself .projects .inner .gluten .indication {
+#myself .projects .inner .mychain {
+  margin-top: 175px;
+  order: 3;
+}
+#myself .projects .inner .revolution {
+  order: 4;
+}
+#myself .projects .inner .mychain .indication,
+#myself .projects .inner .revolution .indication {
   transform-origin: left bottom;
   transform: rotateZ(90deg);
   top: 0;
   left: 14px;
   right: auto;
 }
-#myself .projects .inner .gluten .name {
+#myself .projects .inner .mychain .name,
+#myself .projects .inner .revolution .name {
   top: 150px;
   right: 0px;
   bottom: auto;
@@ -486,25 +499,11 @@ footer .inner .social .social-icon:hover {
   transform-origin: right bottom;
   transform: rotateZ(90deg);
 }
-#myself .projects .inner .lights {
-  margin-top: 175px;
-  order: 1;
-}
+#myself .projects .inner .gluten .name,
 #myself .projects .inner .lights .name {
   top: auto;
   right: auto;
   bottom: 100px;
-  left: 0;
-  transform-origin: left bottom;
-  transform: rotateZ(-90deg);
-}
-#myself .projects .inner .revolution {
-  order: 3;
-}
-#myself .projects .inner .revolution .name {
-  top: auto;
-  right: auto;
-  bottom: 50px;
   left: 0;
   transform-origin: left bottom;
   transform: rotateZ(-90deg);
@@ -625,23 +624,25 @@ footer .inner .social .social-icon:hover {
   #myself .projects .inner .project:hover .peek {
     transform: translateX(-50%);
   }
-  #myself .projects .inner .gluten:hover .name {
-    transform: none;
-  }
   #myself .projects .inner .lights:hover .name,
-  #myself .projects .inner .revolution:hover .name {
+  #myself .projects .inner .revolution:hover .name,
+  #myself .projects .inner .gluten:hover .name,
+  #myself .projects .inner .mychain:hover .name {
     transform: none;
   }
-  #myself .projects .inner .gluten {
+  #myself .projects .inner .mychain {
+    margin-top: 15px;
     order: 1;
   }
-  #myself .projects .inner .lights {
-    margin-top: 15px;
-    order: 3;
+  #myself .projects .inner .gluten {
+    order: 2;
   }
   #myself .projects .inner .revolution {
-    order: 2;
+    order: 3;
     height: auto;
+  }
+  #myself .projects .inner .lights {
+    order: 4;
   }
 }
 @media (max-width: 500px) {

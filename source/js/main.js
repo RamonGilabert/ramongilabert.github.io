@@ -41,6 +41,7 @@ window.addEventListener('load', function() {
 function Loader() {
 
   this.images = [
+    './images/projects/mychain/myself.png',
     './images/projects/gluten/myself.png',
     './images/projects/lights/myself.png',
     './images/projects/revolution/myself.png',
@@ -128,6 +129,7 @@ function Transition() {
       }
 
       if (element === null) { return }
+      if (element.classList.contains('external') === true) { return }
 
       if (element.classList.contains('navigation')) {
         event.preventDefault();
@@ -229,8 +231,8 @@ function Parallax() {
 
   this.myself = function() {
     const self = this;
-    const translate = 100;
-    const tagging = 210;
+    const translate = 30;
+    const tagging = 175;
     const scale = 0.9;
     const fade = 0.05;
     const opacity = 0;
@@ -343,8 +345,9 @@ function Resizer() {
         const image = width * 0.9;
         const gluten = Math.min(595 * image / 306, 595);
         const revolution = Math.min(245 * image / 403, 245);
+        const padding = 20;
 
-        projects.style.height = gluten + revolution + 510 + 'px';
+        projects.style.height = gluten + gluten + 510 + padding + 'px';
       }
 
       calculate();

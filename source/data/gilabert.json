@@ -17,6 +17,14 @@
         "role" : "Concept, UI & UX design"
       },
       {
+        "name" : "mychain",
+        "image" : "images/projects/mychain/myself.png",
+        "external" : {
+          "link" : "https://www.hyper.no/portfolio/mychain"
+        },
+        "role" : "Product Design, iOS development"
+      },
+      {
         "name" : "lights",
         "image" : "images/projects/lights/myself.png",
         "link" : "./lights",
@@ -35,9 +43,6 @@
       "others" : [
         {
           "text" : "I helped in the product design of <a href='https://itunes.apple.com/no/app/cubus-friends/id1108398484' target='_blank'><span class='dot'>Cubus Friends</span>.</a>"
-        },
-        {
-          "text" : "I was one of the product designers of <a href='https://www.hyper.no/portfolio/mychain' target='_blank'><span class='dot'>MyChain</span>.</a>"
         },
         {
           "text" : "I teach design at <a href='https://www.sketchcasts.net' target='_blank'><span class='dot'>SketchCasts</span>.</a>"
