@@ -128,6 +128,7 @@ function Transition() {
       }
 
       if (element === null) { return }
+      if (element.classList.contains('external') === true) { return }
 
       if (element.classList.contains('navigation')) {
         event.preventDefault();
@@ -229,8 +230,8 @@ function Parallax() {
 
   this.myself = function() {
     const self = this;
-    const translate = 100;
-    const tagging = 210;
+    const translate = 30;
+    const tagging = 175;
     const scale = 0.9;
     const fade = 0.05;
     const opacity = 0;

@@ -39,7 +39,12 @@
               <img class='path' src='./images/general/path.svg'>
               <h3>{{ name }}<span class='spaced dot'>.</span></h3>
             </div>
+            {{# external }}
+            <a class='navigation external' target='_blank' href='{{ link }}'></a>
+            {{/ external }}
+            {{^ external }}
             <a class='navigation' href='{{ link }}'></a>
+            {{/ external }}
           </div>
           {{/ projects }}
         </div>
