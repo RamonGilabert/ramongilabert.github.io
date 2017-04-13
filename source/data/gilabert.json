@@ -18,7 +18,7 @@
       },
       {
         "name" : "mychain",
-        "image" : "images/projects/gluten/myself.png",
+        "image" : "images/projects/mychain/myself.png",
         "external" : {
           "link" : "https://www.hyper.no/portfolio/mychain"
         },

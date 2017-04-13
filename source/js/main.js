@@ -41,6 +41,7 @@ window.addEventListener('load', function() {
 function Loader() {
 
   this.images = [
+    './images/projects/mychain/myself.png',
     './images/projects/gluten/myself.png',
     './images/projects/lights/myself.png',
     './images/projects/revolution/myself.png',
