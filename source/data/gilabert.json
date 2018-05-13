@@ -28,6 +28,11 @@
       ]
     },
 
+    "hero" : {
+      "title" : "Welcome,",
+      "text" : "I am Ramon, a product designer from Barcelona currently working with <a href='http://redbull.tv' target='_blank'>Red Bull</a> and teaching design at <a href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>. In the past, I’ve worked for clients such as Varner and Intersport."
+    },
+
     "story" : {
       "title" : "story",
       "text" : "<span class='dot'>Ramon Gilabert</span> is a product designer with a lot of passion for user interaction and visual design. He has a strong interest in rapidly prototyping ideas and experience in front end and iOS development. Right now, he is looking for his next role as a product designer."

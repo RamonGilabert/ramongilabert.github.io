@@ -4,6 +4,7 @@
 
 const displaying = '0.5s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
+const grid = new Grid();
 // const load = new Load();
 // const transition = new Transition();
 // const parallax = new Parallax();
@@ -16,6 +17,8 @@ const displaying = '0.5s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
   encryptCorreu('email');
+
+  grid.listen();
 });
 
 window.addEventListener('load', function() {
@@ -24,6 +27,19 @@ window.addEventListener('load', function() {
 
   setupAnalytics();
 });
+
+function Grid() {
+  this.listen = function() {
+    window.onkeyup = function(event) {
+      const key = event.keyCode ? event.keyCode : event.which;
+      const row = document.class('row');
+
+      if (key == 71) {
+        row.style.opacity = row.style.opacity == 0 ? 1 : 0;
+      }
+    }
+  }
+}
 
 function Loader() {
 

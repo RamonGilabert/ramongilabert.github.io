@@ -27,11 +27,70 @@
   font-weight: normal;
   font-style: normal;
 }
+h1 {
+  font-size: 46.18412125110626px;
+  font-family: 'Feijoa Display';
+  line-height: 52px;
+}
+h2 {
+  font-size: 32.43658447265625px;
+}
+h3 {
+  font-size: 28.83251953125px;
+}
+h4 {
+  font-size: 25.62890625px;
+}
+h5 {
+  font-size: 22.78125px;
+}
+h6 {
+  font-size: 20.25px;
+  font-family: 'Apercu Regular Pro';
+  line-height: 1.6;
+}
+p {
+  font-size: 18px;
+  color: #222;
+}
+button,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  cursor: default;
+  color: #222;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #31302f;
+}
+h6 a,
+p a {
+  color: #cba0aa;
+}
 .row {
   position: absolute;
   width: 100%;
   height: 100%;
+  max-width: 1920px;
   pointer-events: none;
+  opacity: 1;
+  transform: translate(-50%);
+  margin-left: 50%;
 }
 .row .column-0 {
   width: 1px;
@@ -222,444 +281,77 @@
   background-color: #00d0f0;
   opacity: 0.5;
 }
-.row:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-#myself header {
-  position: fixed;
-  top: 0;
+.page {
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
-  background-color: dark-background-color;
-  z-index: 2;
+  max-width: 1920px;
+  transform: translate(-50%);
+  margin-left: 50%;
 }
-#myself header .work {
-  cursor: pointer;
-  transform-origin: top right;
-  transform: rotateZ(90deg);
-  right: 15px;
-  bottom: 0px;
-  padding-right: 40px;
+.page .wrapper {
+  margin-right: 12.4%;
+  margin-left: 12.4%;
 }
-#myself header .work:after {
-  left: calc(100% - 33px);
-  right: 0%;
-  width: auto;
-  margin-left: 0px;
-  transition: 0.6s left ease;
-  pointer-events: none;
-}
-#myself header .work:hover:after {
-  left: 0%;
-}
-#myself header h2 {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: header-text-color;
-  opacity: 0.7;
-  font: 26px Gilroy;
-  font-weight: 700;
-  letter-spacing: -0.75px;
-}
-#myself header .designer {
-  position: absolute;
-  top: 51%;
-  left: 50%;
-  max-width: 90%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: soft-light;
-  perspective: 1000;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
-}
-#myself header .myself {
-  position: absolute;
-  height: 95%;
-  min-height: 750px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  perspective: 1000;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
-}
-#myself .content {
-  position: relative;
-  margin-top: 100vh;
-  margin-bottom: footer-size;
-  background-color: white-color;
-  z-index: 7;
-}
-#myself .story .inner {
-  padding: 150px inner-spacing bottom-spacing inner-spacing;
-}
-#myself .story .inner h2 {
-  font: title-font;
-  font-weight: 700;
-  letter-spacing: -2.5px;
-}
-#myself .story .inner .path {
-  margin-bottom: 15px;
-}
-#myself .story .inner p {
-  font: text-font;
-  font-weight: 400;
-  letter-spacing: -0.4px;
-  line-height: 25px;
-  width: 600px;
-  max-width: 100%;
-}
-#myself .projects {
-  width: 100%;
-}
-#myself .projects .inner {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  height: 1500px;
-}
-#myself .projects .inner .project {
-  position: relative;
-  width: 550px;
-  max-width: 40%;
-  background-color: projects-color;
-  margin: 15px 15px 15px 15px;
-}
-#myself .projects .inner .project .rolling {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 15px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-#myself .projects .inner .project .role {
-  text-align: center;
-  text-transform: uppercase;
-  font: 16px Gilroy;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: gray-color;
-  margin: 0 auto;
-  transform: translateY(100%);
-  transition: 0.4s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
-  transition-delay: 0.15s;
-}
-#myself .projects .inner .project .indication {
-  position: absolute;
-  transform-origin: top right;
-  transform: rotateZ(90deg);
-  top: 130px;
-  right: 10px;
-  padding-right: 40px;
-  overflow: hidden;
-}
-#myself .projects .inner .project .indicator {
-  position: static;
-  transform: translateX(-175%);
-  transition: 0.4s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
-  transition-delay: 0.2s;
-}
-#myself .projects .inner .project .indicator p {
-  color: gray-color;
-}
-#myself .projects .inner .project .indicator:after {
-  background-color: gray-color;
-}
-#myself .projects .inner .project a {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#myself .projects .inner .project .peek {
-  position: relative;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  max-width: 90%;
-  padding-top: 110px;
-  padding-bottom: 110px;
-  transform: translateX(-50%);
-  transition: 0.7s transform ease;
-}
-#myself .projects .inner .project .name {
-  position: absolute;
-  transition: 0.7s transform ease;
-}
-#myself .projects .inner .project .name .path {
-  display: inline-block;
-  margin-top: 2.5px;
-  margin-right: 5px;
-  height: 15px;
-}
-#myself .projects .inner .project .name h3 {
-  margin: 15px 0px 15px 0px;
-  font: 22px Gilroy;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  display: inline-block;
-  opacity: 0.125;
-  transition: 0.6s opacity ease;
-}
-#myself .projects .inner .project:hover .indicator {
-  transform: translateY(0);
-}
-#myself .projects .inner .project:hover .role {
-  transform: translateY(0);
-}
-#myself .projects .inner .project:hover .peek {
-  transform: translateX(-50%) scale3d(0.97, 0.97, 1);
-}
-#myself .projects .inner .project:hover .name h3 {
-  opacity: 1;
-}
-#myself .projects .inner .mychain:hover .name,
-#myself .projects .inner .revolution:hover .name {
-  transform: translateY(40px) rotateZ(90deg);
-}
-#myself .projects .inner .gluten:hover .name,
-#myself .projects .inner .lights:hover .name {
-  transform: translateY(-40px) rotateZ(-90deg);
-}
-#myself .projects .inner .gluten {
-  order: 1;
-}
-#myself .projects .inner .lights {
-  order: 2;
-}
-#myself .projects .inner .mychain {
-  margin-top: 175px;
-  order: 3;
-}
-#myself .projects .inner .revolution {
-  order: 4;
-}
-#myself .projects .inner .mychain .indication,
-#myself .projects .inner .revolution .indication {
-  transform-origin: left bottom;
-  transform: rotateZ(90deg);
-  top: 0;
-  left: 14px;
-  right: auto;
-}
-#myself .projects .inner .mychain .name,
-#myself .projects .inner .revolution .name {
-  top: 150px;
-  right: 0px;
-  bottom: auto;
-  left: auto;
-  transform-origin: right bottom;
-  transform: rotateZ(90deg);
-}
-#myself .projects .inner .gluten .name,
-#myself .projects .inner .lights .name {
-  top: auto;
-  right: auto;
-  bottom: 100px;
-  left: 0;
-  transform-origin: left bottom;
-  transform: rotateZ(-90deg);
-}
-#myself .recognition .inner {
-  padding: 150px inner-spacing bottom-spacing inner-spacing;
-}
-#myself .recognition h2 {
-  font: title-font;
-  font-weight: 700;
-  letter-spacing: -2.5px;
-}
-#myself .recognition h3 {
-  margin: 15px 0px 18px 0px;
-  font: 24px Gilroy;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-#myself .recognition .path {
-  margin-bottom: 12px;
-}
-#myself .recognition p {
-  font: text-font;
-  font-weight: 400;
-  letter-spacing: -0.4px;
-  line-height: 28px;
-  width: 525px;
-  max-width: 100%;
-}
-#myself .recognition a:hover:after {
-  right: 0;
-}
-@media (max-width: 700px) {
-  #myself .content {
-    margin-bottom: mobile-footer-size;
-  }
-  #myself .story .inner {
-    padding: mobile-initial-margin mobile-margin-side mobile-margin-bottom mobile-margin-side;
-  }
-  #myself .story .inner h2 {
-    font: mobile-title-font-landscape;
-    font-weight: 700;
-    margin-bottom: 5px;
-  }
-  #myself .recognition .inner {
-    padding: mobile-margin-top mobile-margin-side mobile-margin-bottom mobile-margin-side;
-  }
-  #myself .recognition .inner h2 {
-    font: mobile-title-font-landscape;
-    font-weight: 700;
-    margin-bottom: 5px;
-  }
-  #myself header {
-    overflow: hidden;
-  }
-  #myself header h2 {
-    top: 15px;
-  }
-  #myself header .designer {
-    top: 47.5%;
-    left: 50%;
-    max-width: 250%;
-    transform: translate(-50%, -50%);
-  }
-  #myself header .myself {
-    position: absolute;
-    height: 97%;
-    min-height: 450px;
-    bottom: 0;
-    left: 48.5%;
-    transform: translateX(-50%);
-  }
-  #myself header .indicator {
-    opacity: 0;
-  }
-  #myself .projects .inner {
-    flex-wrap: nowrap;
-    width: 100%;
-    height: auto;
-  }
-  #myself .projects .inner .project {
-    max-width: calc(100% - 30px);
-    left: 0;
-    right: 0;
-    margin: 7.5px auto 7.5px auto;
-  }
-  #myself .projects .inner .project .peek {
-    padding-top: 30%;
-    padding-bottom: 27.5%;
-    width: auto;
-  }
-  #myself .projects .inner .project .name {
-    transform: rotateZ(0deg);
-    top: 0px;
-    left: 15px;
-    transition: none;
-  }
-  #myself .projects .inner .project .name .path {
-    display: inline-block;
-    margin-top: 2.5px;
-    margin-right: 5px;
-    height: 15px;
-  }
-  #myself .projects .inner .project .name h3 {
-    margin: 15px 0px 15px 0px;
-    font: 22px Gilroy;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    display: inline-block;
-    opacity: 0.125;
-  }
-  #myself .projects .inner .project:hover .indicator {
-    transform: translateX(-175%);
-  }
-  #myself .projects .inner .project:hover .role {
-    transform: translateY(100%);
-  }
-  #myself .projects .inner .project:hover .peek {
-    transform: translateX(-50%);
-  }
-  #myself .projects .inner .lights:hover .name,
-  #myself .projects .inner .revolution:hover .name,
-  #myself .projects .inner .gluten:hover .name,
-  #myself .projects .inner .mychain:hover .name {
-    transform: none;
-  }
-  #myself .projects .inner .mychain {
-    margin-top: 15px;
-    order: 1;
-  }
-  #myself .projects .inner .gluten {
-    order: 2;
-  }
-  #myself .projects .inner .revolution {
-    order: 3;
-    height: auto;
-  }
-  #myself .projects .inner .lights {
-    order: 4;
-  }
-}
-@media (max-width: 500px) {
-  #myself .story .inner h2 {
-    font: mobile-title-font;
-    font-weight: 700;
-  }
-  #myself .recognition .inner h2 {
-    font: mobile-title-font;
-    font-weight: 700;
-  }
-}
-import,
 nav {
   height: 120px;
-  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-import .home,
 nav .home {
   order: 1;
   text-align: left;
-  margin-left: 12.4%;
   width: 100px;
+  cursor: pointer;
 }
-import .central,
 nav .central {
   order: 2;
   text-align: center;
   margin: 0 auto;
 }
-import .central a,
 nav .central a {
   padding-right: 50px;
   padding-left: 50px;
 }
-import .right,
 nav .right {
   order: 3;
   text-align: right;
-  margin-right: 12.4%;
   width: 100px;
 }
-import img,
 nav img {
   width: 36px;
   height: 36px;
 }
-import a,
 nav a {
   font-family: 'Styrene B Web';
   font-weight: 500;
-  font-size: 15.802469135802468px;
+  font-size: 14.222222222222221px;
   text-transform: uppercase;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.hero .text {
+  margin-bottom: 80px;
+  width: calc((47.9vw - 12.4vw));
+  max-width: calc((47.9px - 12.4px) * 19.2);
+}
+.hero .text h1 {
+  margin-bottom: 12px;
+}
+.hero .illustration img {
+  margin-right: calc((16.6vw - 12.4vw));
+  float: right;
+  width: 490px;
+}
+@media (min-width: 1920px) {
+  .hero .illustration img {
+    margin-right: calc((16.6px - 12.4px) * 19.2);
+  }
 }
 *,
 html {
@@ -671,13 +363,6 @@ body {
   margin: 0 auto;
   background-color: #f8f8f8;
 }
-a {
-  text-decoration: none;
-  color: #31302f;
-}
-p a {
-  color: #cba0aa;
-}
 button {
   text-decoration: none;
   border: 0px;
@@ -686,24 +371,6 @@ button {
 }
 button:focus {
   outline: 0;
-}
-button,
-h1,
-h2,
-h3,
-h4,
-p,
-a {
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-}
-h1,
-h2,
-h3,
-h4,
-p {
-  cursor: default;
-  color: #222;
 }
 .email {
   cursor: pointer;

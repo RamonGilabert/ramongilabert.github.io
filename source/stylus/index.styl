@@ -1,10 +1,13 @@
 @import fonts
 @import constants
+@import typography
 @import footer
 @import grid
+@import functions
 
 @import 'myself/myself'
 @import 'components/navigation'
+@import 'components/hero'
 
 *, html {
   margin: 0
@@ -16,17 +19,6 @@ html, body {
   background-color: background-color
 }
 
-a {
-  text-decoration: none
-  color: link-color
-}
-
-p {
-  a {
-    color: highlight-color
-  }
-}
-
 button {
   text-decoration: none
   border: 0px
@@ -36,16 +28,6 @@ button {
 
 button:focus {
   outline: 0
-}
-
-button, h1, h2, h3, h4, p, a {
-  font-smooth: always
-  -webkit-font-smoothing: antialiased
-}
-
-h1, h2, h3, h4, p {
-  cursor: default
-  color: text-color
 }
 
 .email {

@@ -20,6 +20,7 @@ gulp.task('mustache', function() {
       footer: 'mustache/partials/footer.mustache',
       navigation: 'mustache/partials/navigation.mustache',
       grid: 'mustache/partials/grid.mustache',
+      hero: 'mustache/partials/hero.mustache'
     }))
     .pipe(gulp.dest('../public'))
 });

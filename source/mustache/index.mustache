@@ -6,11 +6,15 @@
   </head>
   <body>
     {{> grid }}
-    {{# myself }}
-    <h1 class='page-title'>{{ page }}</h1>
-    {{> navigation }}
-    <p>Let's get started</p>
-    {{> footer }}
-    {{/ myself }}
+    <div class='page'>
+      <div class='wrapper'>
+        {{# myself }}
+        <h1 class='page-title'>{{ page }}</h1>
+        {{> navigation }}
+        {{> hero }}
+        {{> footer }}
+        {{/ myself }}
+      </div>
+    </div>
   </body>
 </html>
