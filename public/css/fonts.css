@@ -1,18 +1,29 @@
 @font-face {
-  font-family: 'Gilroy';
-  src: url("../fonts/gilroy-regular-webfont.woff2") format('woff2'), url("../fonts/gilroy-regular-webfont.woff") format('woff');
-  font-weight: 100;
-  font-style: regular;
+  font-family: 'Styrene B Web';
+  src: url("../fonts/Styrene/StyreneB-Medium-Web.eot");
+  src: url("../fonts/Styrene/StyreneB-Medium-Web.eot?#iefix") format('embedded-opentype'), url("../fonts/Styrene/StyreneB-Medium-Web.woff2") format('woff2'), url("../fonts/Styrene/StyreneB-Medium-Web.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url("../fonts/gilroy-semibold-webfont.woff2") format('woff2'), url("../fonts/gilroy-semibold-webfont.woff") format('woff');
-  font-weight: 400;
+  font-family: 'Feijoa Display';
+  src: url("../fonts/Feijoa/Feijoa-Display.eot");
+  src: url("../fonts/Feijoa/Feijoa-Display.eot?#iefix") format('embedded-opentype'), url("../fonts/Feijoa/Feijoa-Display.woff2?raw=true") format('woff2'), url("../fonts/Feijoa/Feijoa-Display.woff?raw=true") format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url("../fonts/gilroy-bold-webfont.woff2") format('woff2'), url("../fonts/gilroy-bold-webfont.woff") format('woff');
-  font-weight: 700;
-  font-style: bold;
+  font-family: 'Apercu Regular Pro';
+  src: url("../fonts/Apercu/Regular/apercu-regular-pro.eot");
+  src: url("../fonts/Apercu/Regular/apercu-regular-pro.eot?#iefix") format('embedded-opentype'), url("../fonts/Apercu/Regular/apercu-regular-pro.woff2") format('woff2'), url("../fonts/Apercu/Regular/apercu-regular-pro.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Apercu Mono Bold Pro';
+  src: url("../fonts/Apercu/Mono/Bold/apercu-mono-bold-pro.eot");
+  src: url("../fonts/Apercu/Mono/Bold/apercu-mono-bold-pro.eot?#iefix") format('embedded-opentype'), url("../fonts/Apercu/Mono/Bold/apercu-mono-bold-pro.woff2?raw=true") format('woff2'), url("../fonts/Apercu/Mono/Bold/apercu-mono-bold-pro.woff?raw=true") format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

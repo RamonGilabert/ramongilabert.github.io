@@ -1,17 +1,10 @@
 @import fonts
 @import constants
-@import indicator
 @import footer
+@import grid
 
 @import 'myself/myself'
-
-@import 'cases/general'
-@import 'cases/image'
-@import 'cases/title'
-@import 'cases/subtitle'
-@import 'cases/visually'
-@import 'cases/quote'
-@import 'cases/text'
+@import 'components/navigation'
 
 *, html {
   margin: 0
@@ -20,15 +13,18 @@
 
 html, body {
   margin: 0 auto
-}
-
-html, body {
-  background-color: white-color
+  background-color: background-color
 }
 
 a {
   text-decoration: none
-  color: text-color
+  color: link-color
+}
+
+p {
+  a {
+    color: highlight-color
+  }
 }
 
 button {
@@ -50,6 +46,10 @@ button, h1, h2, h3, h4, p, a {
 h1, h2, h3, h4, p {
   cursor: default
   color: text-color
+}
+
+.email {
+  cursor: pointer
 }
 
 .page-title {

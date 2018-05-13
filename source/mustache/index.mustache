@@ -4,71 +4,13 @@
     {{> head }}
     <title>Ramon Gilabert</title>
   </head>
-  {{# myself }}
-  <body id='myself'>
-    <div class='transition'>
-      <div class='noise'></div>
-    </div>
-    <header>
-      <h1 class='page-title'>{{ page }}</h1>
-      <h2 class='name'>{{ header }}</h2>
-      <img class='designer' src='./images/myself/designer.svg'>
-      <div class='noise'></div>
-      <img class='circle' src='./images/general/circle.png'>
-      <img class='myself' src='./images/myself/myself.png'>
-      <div class='indicator work'><p>work</p></div>
-    </header>
-    <div class='content'>
-      <div class='story'>
-        {{# story }}
-        <div class='inner'>
-          <h2>{{ title }}<span class='spaced dot'>.</span></h2>
-          <img class='path' src='./images/general/path.svg'>
-          <p>{{{ text }}}</p>
-        </div>
-        {{/ story }}
-      </div>
-      <div class='projects'>
-        <div class='inner'>
-          {{# projects }}
-          <div class='project {{ name }}'>
-            <img class='peek' src='{{ image }}'>
-            <div class='indication'><div class='indicator'><p>case study</p></div></div>
-            <div class='rolling'><p class='role'>{{ role }}</p></div>
-            <div class='name'>
-              <img class='path' src='./images/general/path.svg'>
-              <h3>{{ name }}<span class='spaced dot'>.</span></h3>
-            </div>
-            {{# external }}
-            <a class='navigation external' target='_blank' href='{{ link }}'></a>
-            {{/ external }}
-            {{^ external }}
-            <a class='navigation' href='{{ link }}'></a>
-            {{/ external }}
-          </div>
-          {{/ projects }}
-        </div>
-      </div>
-      <div class='recognition'>
-        {{# recognition }}
-        <div class='inner'>
-          <h2>{{ title }}<span class='spaced dot'>.</span></h2>
-          <img class='path' src='./images/general/path.svg'>
-          {{# others }}
-          <p>{{{ text }}}</p>
-          {{/ others }}
-          {{# awards }}
-          <h3>{{ title }}<span class='spaced dot'>.</span></h3>
-          <img class='path' src='./images/general/path.svg'>
-          {{# list }}
-          <p><span class='dot'>{{ highlight }}</span> {{ rest }}</p>
-          {{/ list }}
-          {{/ awards }}
-        </div>
-        {{/ recognition }}
-      </div>
-    </div>
+  <body>
+    {{> grid }}
+    {{# myself }}
+    <h1 class='page-title'>{{ page }}</h1>
+    {{> navigation }}
+    <p>Let's get started</p>
     {{> footer }}
+    {{/ myself }}
   </body>
-  {{/ myself }}
 </html>

@@ -1,0 +1,17 @@
+{{# navigation }}
+		<nav>
+			<a class="home">
+	      <img src='{{ image }}' />
+      </a>
+      <div class="central">
+      	{{# central }}
+	      <a href="{{ link }}">{{ title }}</a>
+	      {{/ central }}
+      </div>
+      <div class="right">
+      	{{# right }}
+	      <a class={{ class }}>{{ title }}</a>
+	      {{/ right }}
+      </div>
+    </nav>
+{{/ navigation }}

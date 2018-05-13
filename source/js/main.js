@@ -4,36 +4,23 @@
 
 const displaying = '0.5s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
-const load = new Load();
-const transition = new Transition();
-const parallax = new Parallax();
-const scroller = new Scroller();
-const resizer = new Resizer();
-const prevent = new Prevent();
-const click = new Click();
-const loader = new Loader();
+// const load = new Load();
+// const transition = new Transition();
+// const parallax = new Parallax();
+// const scroller = new Scroller();
+// const resizer = new Resizer();
+// const prevent = new Prevent();
+// const click = new Click();
+// const loader = new Loader();
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
-
-  const white = document.class('transition');
-  setTimeout(function() {
-    white.style.transition = displaying;
-
-    setTimeout(function() {
-      load.prepare();
-      white.style.transform = 'translateY(-100%)';
-
-      setTimeout(function() {
-        white.style.display = 'none';
-      }, 500);
-    }, 800);
-  }, 0);
+  encryptCorreu('email');
 });
 
 window.addEventListener('load', function() {
-  loader.run();
-  transition.prepare();
+  // loader.run();
+  // transition.prepare();
 
   setupAnalytics();
 });

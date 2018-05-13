@@ -16,16 +16,10 @@ gulp.task('mustache', function() {
     .pipe(mustache('data/gilabert.json', {}, {
       head: 'mustache/partials/head.mustache',
       imports: 'mustache/partials/imports.mustache',
-      header: 'mustache/partials/header.mustache',
+      header: 'mustache/partials/head.mustache',
       footer: 'mustache/partials/footer.mustache',
-      begin: 'mustache/partials/cases/begin.mustache',
-      end: 'mustache/partials/cases/end.mustache',
-      image: 'mustache/partials/cases/image.mustache',
-      title: 'mustache/partials/cases/title.mustache',
-      subtitle: 'mustache/partials/cases/subtitle.mustache',
-      visually: 'mustache/partials/cases/visually.mustache',
-      quote: 'mustache/partials/cases/quote.mustache',
-      text: 'mustache/partials/cases/text.mustache'
+      navigation: 'mustache/partials/navigation.mustache',
+      grid: 'mustache/partials/grid.mustache',
     }))
     .pipe(gulp.dest('../public'))
 });

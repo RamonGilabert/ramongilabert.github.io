@@ -53,7 +53,7 @@ function encryptCorreu(id) {
 
     email.addEventListener('click', function() {
       const letter = decode("znvygb:enzba@tvynoreg.qrfvta");
-      const subject = decode("Lb! :)");
+      const subject = decode("Lb!");
       const reference = letter + '?subject=' + subject;
 
       window.location.href = reference;

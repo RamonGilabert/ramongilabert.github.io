@@ -1,0 +1,199 @@
+.row {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.row .column-0 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-1 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-2 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-3 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-4 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-5 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-6 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-7 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-8 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-9 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-10 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-11 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-12 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-13 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-14 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-15 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-16 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-17 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-18 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-19 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row .column-20 {
+  width: 1px;
+  margin-left: ;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: grid-color;
+  opacity: 0.5;
+}
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
