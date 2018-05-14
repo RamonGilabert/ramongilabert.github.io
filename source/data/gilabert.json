@@ -36,6 +36,36 @@
     "story" : {
       "title" : "story",
       "text" : "<span class='dot'>Ramon Gilabert</span> is a product designer with a lot of passion for user interaction and visual design. He has a strong interest in rapidly prototyping ideas and experience in front end and iOS development. Right now, he is looking for his next role as a product designer."
+    },
+
+    "projects" : {
+      "title" : "Selected Pieces",
+      "boxes" : [
+        {
+          "order" : 1,
+          "title" : "Red Bull TV",
+          "image" : "images/projects/redbull.jpg",
+          "subtitle" : "Creating a new experience for the TV of the future"
+        },
+        {
+          "order" : 2,
+          "title" : "Linjer",
+          "image" : "images/projects/linjer.jpg",
+          "subtitle" : "Increasing metrics for a Norwegian handmade brand"
+        },
+        {
+          "order" : 3,
+          "title" : "Aparcat",
+          "image" : "images/projects/aparcat.jpg",
+          "subtitle" : "Encouraging sustainable parking in the city"
+        },
+        {
+          "order" : 4,
+          "title" : "Manjaras",
+          "image" : "images/projects/manjaras.jpg",
+          "subtitle" : "On demand local food delivery in Dubai"
+        }
+      ]
     }
   }
 }

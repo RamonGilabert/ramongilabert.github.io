@@ -5,13 +5,14 @@
     <title>Ramon Gilabert</title>
   </head>
   <body>
-    {{> grid }}
     <div class='page'>
+      {{> grid }}
       <div class='wrapper'>
         {{# myself }}
         <h1 class='page-title'>{{ page }}</h1>
         {{> navigation }}
         {{> hero }}
+        {{> projects }}
         {{> footer }}
         {{/ myself }}
       </div>

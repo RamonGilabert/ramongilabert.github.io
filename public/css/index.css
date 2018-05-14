@@ -40,18 +40,27 @@ h3 {
 }
 h4 {
   font-size: 25.62890625px;
+  line-height: 32px;
 }
 h5 {
   font-size: 22.78125px;
 }
 h6 {
   font-size: 20.25px;
-  font-family: 'Apercu Regular Pro';
-  line-height: 1.6;
+  line-height: 32px;
 }
 p {
   font-size: 18px;
   color: #222;
+  line-height: 28px;
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Apercu Regular Pro';
 }
 button,
 h1,
@@ -91,6 +100,7 @@ p a {
   opacity: 1;
   transform: translate(-50%);
   margin-left: 50%;
+  z-index: 2000;
 }
 .row .column-0 {
   width: 1px;
@@ -265,7 +275,7 @@ p a {
 }
 .row .column-19 {
   width: 1px;
-  margin-left: 93.8%;
+  margin-left: 93.75%;
   height: 100%;
   position: absolute;
   float: left;
@@ -288,8 +298,25 @@ p a {
   margin-left: 50%;
 }
 .page .wrapper {
+  position: relative;
   margin-right: 12.4%;
   margin-left: 12.4%;
+}
+.projects {
+  height: 200vh;
+}
+.projects .cards {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.box {
+  position: absolute;
+  margin-top: -60px;
+  margin-left: -column-2;
+  width: 93.8vw;
+  height: 1444px;
+  background-color: #f5f2f0;
+  z-index: -1;
 }
 nav {
   height: 120px;
@@ -329,14 +356,16 @@ nav a {
   text-transform: uppercase;
 }
 .hero {
+  width: 100%;
+  margin-top: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
+  z-index: 2;
 }
 .hero .text {
-  margin-bottom: 80px;
+  margin-bottom: 188px;
   width: calc((47.9vw - 12.4vw));
   max-width: calc((47.9px - 12.4px) * 19.2);
 }
@@ -346,17 +375,68 @@ nav a {
 .hero .illustration img {
   margin-right: calc((16.6vw - 12.4vw));
   float: right;
-  width: 490px;
+  width: 460px;
 }
 @media (min-width: 1920px) {
   .hero .illustration img {
     margin-right: calc((16.6px - 12.4px) * 19.2);
   }
 }
+.card {
+  width: calc((47.9vw - 12.4vw));
+  max-width: calc((47.9px - 12.4px) * 19.2);
+  margin-bottom: 80px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.card .imagery {
+  max-height: 760.7999999999998px;
+}
+.card .imagery img {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .description {
+  width: 100%;
+  height: 148px;
+  background-color: #fff;
+}
+.card .description .wrapper {
+  padding-top: 32px;
+  margin-left: 6%;
+  transition: transform 0.3s ease;
+}
+.card .description .wrapper p {
+  color: #7f7871;
+  margin-top: 12px;
+}
+.card .bottom-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 148px;
+  background-color: #fff;
+  transform-origin: 50% 100%;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card:hover .bottom-description {
+  transform: scaleY(1.1);
+}
+.card:hover .wrapper {
+  transform: scale(0.97) translateY(-5px);
+}
 *,
 html {
   margin: 0;
   padding: 0;
+  outline: 0;
 }
 html,
 body {

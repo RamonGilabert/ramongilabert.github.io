@@ -1,0 +1,59 @@
+.card {
+	width: grid(2, 9)
+	max-width: max-grid(2, 9)
+	margin-bottom: 80px
+	cursor: pointer
+	box-sizing: border-box
+	transition: transform 0.3s ease
+	position: relative
+	
+	.imagery {
+		max-height: unit(1920 * 0.355 * 4 / 3 - 148, 'px')
+		
+		img {
+			padding: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+		}
+	}
+	
+	.description {
+		width: 100%
+		height: 148px
+		background-color: clear-color
+		
+		.wrapper {
+			padding-top: 32px
+			margin-left: 6%
+			transition: transform 0.3s ease
+			
+			p {
+				color: faded-text-color
+				margin-top: 12px
+			}
+		}
+	}
+	
+	.bottom-description {
+		position: absolute
+		bottom: 0
+		width: 100%
+		height: 148px
+		background-color: clear-color
+		transform-origin: 50% 100%
+		transition: transform 0.3s ease
+	}
+}
+
+.card:hover {
+	transform: scale(1.03)
+	
+	.bottom-description {
+		transform: scaleY(1.1)
+	}
+	
+	.wrapper {
+		transform: scale(0.97) translateY(-5px)
+	}
+}

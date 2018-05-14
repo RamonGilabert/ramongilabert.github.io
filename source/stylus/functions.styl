@@ -9,3 +9,7 @@ max-grid(a, b) {
 percentage(a, b) {
 	'calc(%s - %s)' % (lookup('percentage-' + b) lookup('percentage-' + a))
 }
+
+maximum(a) {
+	'calc(%s * 19.2)' % (lookup('pixel-' + a))
+}

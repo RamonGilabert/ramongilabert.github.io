@@ -20,7 +20,9 @@ gulp.task('mustache', function() {
       footer: 'mustache/partials/footer.mustache',
       navigation: 'mustache/partials/navigation.mustache',
       grid: 'mustache/partials/grid.mustache',
-      hero: 'mustache/partials/hero.mustache'
+      hero: 'mustache/partials/hero.mustache',
+      projects: 'mustache/partials/projects.mustache',
+      card: 'mustache/partials/card.mustache',
     }))
     .pipe(gulp.dest('../public'))
 });
