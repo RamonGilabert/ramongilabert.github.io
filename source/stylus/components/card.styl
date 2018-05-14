@@ -4,8 +4,12 @@
 	margin-bottom: 80px
 	cursor: pointer
 	box-sizing: border-box
-	transition: transform 0.3s ease
 	position: relative
+	background-color: clear-color
+	overflow: hidden
+	backface-visibility: hidden
+	box-shadow: 0 1px 2px rgba(49, 48, 47, 0)
+	transition: transform 0.3s ease, box-shadow 0.3s ease
 	
 	.imagery {
 		max-height: unit(1920 * 0.355 * 4 / 3 - 148, 'px')
@@ -24,9 +28,11 @@
 		background-color: clear-color
 		
 		.wrapper {
+			transform: none;
 			padding-top: 32px
 			margin-left: 6%
 			transition: transform 0.3s ease
+			backface-visibility: hidden
 			
 			p {
 				color: faded-text-color
@@ -38,7 +44,7 @@
 	.bottom-description {
 		position: absolute
 		bottom: 0
-		width: 100%
+		width: 200%
 		height: 148px
 		background-color: clear-color
 		transform-origin: 50% 100%
@@ -47,6 +53,7 @@
 }
 
 .card:hover {
+	box-shadow: 0 40px 80px rgba(49, 48, 47, 0.1)
 	transform: scale(1.03)
 	
 	.bottom-description {
@@ -54,6 +61,6 @@
 	}
 	
 	.wrapper {
-		transform: scale(0.97) translateY(-5px)
+    transform: translateY(-5px)
 	}
 }
