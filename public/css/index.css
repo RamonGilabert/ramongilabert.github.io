@@ -81,7 +81,7 @@ h6,
 p {
   cursor: default;
   color: #222;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 a {
   text-decoration: none;
@@ -91,15 +91,19 @@ h6 a,
 p a {
   color: #cba0aa;
 }
+.mono {
+  font-size: 12.641975308641975px;
+  font-family: "Apercu Mono Bold Pro";
+  text-transform: uppercase;
+  color: #8c8075;
+}
 .row {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   max-width: 1920px;
   pointer-events: none;
   opacity: 1;
-  transform: translate(-50%);
-  margin-left: 50%;
   z-index: 2000;
 }
 .row .column-0 {
@@ -294,8 +298,7 @@ p a {
 .page {
   width: 100%;
   max-width: 1920px;
-  transform: translate(-50%);
-  margin-left: 50%;
+  margin: 0 auto;
 }
 .page .wrapper {
   position: relative;
@@ -303,27 +306,78 @@ p a {
   margin-left: 12.4%;
 }
 .projects {
-  height: 200vh;
+  position: relative;
+}
+.projects .mono {
+  position: relative;
+  line-height: 1;
+  margin-left: -12.4%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-450px);
+  backface-visibility: hidden;
+  z-index: 1;
 }
 .projects .cards {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  flex-wrap: wrap;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.personal {
+  position: relative;
+}
+.personal .box {
+  height: calc(100% + 220px);
+  margin-top: -220px;
+}
+.personal .social {
+  position: absolute;
+  transform-origin: 0% 100%;
+  transform: rotate(90deg) translateX(100px);
+  line-height: 1;
+  z-index: 2;
+  margin-top: -250px;
+  white-space: nowrap;
+  backface-visibility: hidden;
+}
+.personal .social a {
+  font-family: 'Styrene B Web';
+  font-weight: 500;
+  font-size: 14.222222222222221px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .box {
   position: absolute;
-  margin-top: -60px;
+  margin-top: -80px;
   margin-left: -column-2;
   width: 93.8vw;
   height: 1444px;
   background-color: #f5f2f0;
-  z-index: -1;
+  z-index: 0;
 }
 nav {
-  height: 120px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+nav .navigation-wrapper {
+  width: calc((87.6vw - 12.4vw));
+  max-width: 1443.94px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 100px;
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
 }
 nav .home {
   order: 1;
@@ -345,9 +399,12 @@ nav .right {
   text-align: right;
   width: 100px;
 }
-nav img {
+nav svg {
   width: 36px;
   height: 36px;
+}
+nav .owl {
+  transition: fill 0.3s ease;
 }
 nav a {
   font-family: 'Styrene B Web';
@@ -355,14 +412,46 @@ nav a {
   font-size: 14.222222222222221px;
   text-transform: uppercase;
 }
+.dark {
+  transition: color 0.3s ease;
+}
+.light {
+  transition: #f8f8f8 0.3s ease;
+}
+.lighten {
+  transition: fill 0.3s ease;
+}
+.lighter {
+  transition: #f8f8f8 0.3s ease;
+}
+.darker-background {
+  background-color: #333 !important;
+}
+.dark-color {
+  background-color: #222;
+}
+.darken-background {
+  background-color: #222;
+}
+.svg-background {
+  fill: #333;
+}
+.darken-color {
+  color: #222;
+}
+.lighten-background {
+  background-color: #f8f8f8;
+}
+.lighten-color {
+  color: #f8f8f8;
+}
 .hero {
   width: 100%;
-  margin-top: 60px;
+  padding-top: 180px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  z-index: 2;
 }
 .hero .text {
   margin-bottom: 188px;
@@ -372,8 +461,11 @@ nav a {
 .hero .text h1 {
   margin-bottom: 12px;
 }
-.hero .illustration img {
-  margin-right: calc((16.6vw - 12.4vw));
+.hero .illustration {
+  z-index: 1;
+}
+.hero .illustration svg {
+  margin-right: calc(grid(2, 3) - 30px);
   float: right;
   width: 460px;
 }
@@ -393,7 +485,7 @@ nav a {
   overflow: hidden;
   backface-visibility: hidden;
   box-shadow: 0 1px 2px rgba(49,48,47,0);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s transform ease, 0.3s box-shadow ease;
 }
 .card .imagery {
   max-height: 760.7999999999998px;
@@ -408,12 +500,13 @@ nav a {
   width: 100%;
   height: 148px;
   background-color: #fff;
+  backface-visibility: hidden;
 }
 .card .description .wrapper {
   transform: none;
   padding-top: 32px;
   margin-left: 6%;
-  transition: transform 0.3s ease;
+  transition: 0.3s transform ease;
   backface-visibility: hidden;
 }
 .card .description .wrapper p {
@@ -427,7 +520,7 @@ nav a {
   height: 148px;
   background-color: #fff;
   transform-origin: 50% 100%;
-  transition: transform 0.3s ease;
+  transition: 0.3s transform ease;
 }
 .card:hover {
   box-shadow: 0 40px 80px rgba(49,48,47,0.1);
@@ -438,6 +531,37 @@ nav a {
 }
 .card:hover .wrapper {
   transform: translateY(-5px);
+}
+.linjer {
+  margin-top: 140px;
+}
+.hobbies {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 700px;
+  margin-top: 160px;
+}
+.hobbies .hobby {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  margin-bottom: 120px;
+  width: calc((47.9vw - 12.4vw));
+  max-width: calc((47.9px - 12.4px) * 19.2);
+}
+.hobbies .hobby .mono {
+  width: 50px;
+  margin-top: 4px;
+  margin-right: 136px;
+}
+.hobbies .hobby .pieces .text {
+  font-size: 20.25px;
+  line-height: 32px;
+  margin-bottom: 16px;
 }
 *,
 html {

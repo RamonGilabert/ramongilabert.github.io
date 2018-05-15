@@ -75,6 +75,10 @@ function exists(name) {
   return document.tag('body').id === name;
 }
 
+function lives(variable) {
+  return !(variable === undefined || variable === null);
+}
+
 function convert(object) {
   return [].map.call(object, function(element) { return element; });
 }

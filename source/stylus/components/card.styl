@@ -9,7 +9,7 @@
 	overflow: hidden
 	backface-visibility: hidden
 	box-shadow: 0 1px 2px rgba(49, 48, 47, 0)
-	transition: transform 0.3s ease, box-shadow 0.3s ease
+	transition: 0.3s transform ease, 0.3s box-shadow ease
 	
 	.imagery {
 		max-height: unit(1920 * 0.355 * 4 / 3 - 148, 'px')
@@ -26,12 +26,13 @@
 		width: 100%
 		height: 148px
 		background-color: clear-color
+		backface-visibility: hidden
 		
 		.wrapper {
 			transform: none;
 			padding-top: 32px
 			margin-left: 6%
-			transition: transform 0.3s ease
+			transition: 0.3s transform ease
 			backface-visibility: hidden
 			
 			p {
@@ -48,7 +49,7 @@
 		height: 148px
 		background-color: clear-color
 		transform-origin: 50% 100%
-		transition: transform 0.3s ease
+		transition: 0.3s transform ease
 	}
 }
 
@@ -63,4 +64,8 @@
 	.wrapper {
     transform: translateY(-5px)
 	}
+}
+
+.linjer {
+  margin-top: 140px
 }

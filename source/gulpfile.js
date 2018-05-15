@@ -23,6 +23,8 @@ gulp.task('mustache', function() {
       hero: 'mustache/partials/hero.mustache',
       projects: 'mustache/partials/projects.mustache',
       card: 'mustache/partials/card.mustache',
+      hobby: 'mustache/partials/hobby.mustache',
+      personal: 'mustache/partials/personal.mustache',
     }))
     .pipe(gulp.dest('../public'))
 });

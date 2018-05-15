@@ -52,7 +52,7 @@ h6,
 p {
   cursor: default;
   color: text-color;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 a {
   text-decoration: none;
@@ -61,4 +61,10 @@ a {
 h6 a,
 p a {
   color: highlight-color;
+}
+.mono {
+  font-size: size-s;
+  font-family: "Apercu Mono Bold Pro";
+  text-transform: uppercase;
+  color: faded-title-color;
 }

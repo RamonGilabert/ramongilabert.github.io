@@ -1,9 +1,25 @@
 nav {
-	height: 120px
-	position: relative
-	display: flex
-	flex-direction: row
-	align-items: center
+	position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  margin: 0 auto
+  background-color: background-color
+	
+	
+	.navigation-wrapper {
+		width: grid(2, 18)
+		max-width: 1443.94px
+		display: flex
+		flex-direction: row
+		align-items: center
+		height: 100px
+		position: relative
+		margin-left: 50%
+		transform: translateX(-50%)
+		position: relative
+	}
 	
 	.home {
 		order: 1
@@ -29,9 +45,19 @@ nav {
 		width: 100px
 	}
 	
-	img {
+	svg {
 		width: 36px
 		height: 36px
+	}
+	
+	svg:hover {
+		.owl {
+			//fill: background-color
+		}
+	}
+	
+	.owl {
+		transition: fill 0.3s ease
 	}
 	
 	a {
@@ -40,4 +66,48 @@ nav {
 		font-size: size-m
 		text-transform: uppercase
 	}
+}
+
+.dark {
+	transition: color 0.3s ease
+}
+
+.light {
+	transition: background-color 0.3s ease
+}
+
+.lighten {
+	transition: fill 0.3s ease
+}
+
+.lighter {
+	transition: background-color 0.3s ease
+}
+
+.darker-background {
+	background-color: #333 !important
+}
+
+.dark-color {
+	background-color: text-color
+}
+
+.darken-background {
+	background-color: text-color
+}
+
+.svg-background {
+	fill: #333
+}
+
+.darken-color {
+	color: text-color
+}
+
+.lighten-background {
+	background-color: background-color
+}
+
+.lighten-color {
+	color: background-color
 }

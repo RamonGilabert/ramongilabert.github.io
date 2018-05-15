@@ -1,6 +1,6 @@
 {
   "myself" : {
-    "page" : "Ramon Gilabert · Product Designer",
+    "page" : "Ramon Gilabert &middot; Product Designer",
     "title" : "Ramon Gilabert",
 
     "navigation" : {
@@ -43,27 +43,119 @@
       "boxes" : [
         {
           "order" : 1,
+          "class" : "redbull",
           "title" : "Red Bull TV",
           "image" : "images/projects/redbull.jpg",
           "subtitle" : "Creating a new experience for the TV of the future"
         },
         {
-          "order" : 2,
+          "order" : 3,
+          "class" : "linjer",
           "title" : "Linjer",
           "image" : "images/projects/linjer.jpg",
           "subtitle" : "Increasing metrics for a Norwegian handmade brand"
         },
         {
-          "order" : 3,
+          "order" : 2,
+          "class" : "aparcat",
           "title" : "Aparcat",
           "image" : "images/projects/aparcat.jpg",
           "subtitle" : "Encouraging sustainable parking in the city"
         },
         {
           "order" : 4,
+          "class" : "manjaras",
           "title" : "Manjaras",
           "image" : "images/projects/manjaras.jpg",
           "subtitle" : "On demand local food delivery in Dubai"
+        }
+      ]
+    },
+
+    "personal" : {
+      "links" : [
+        {
+          "title" : "Twitter &middot;",
+          "link" : "#"
+        },
+        {
+          "title" : "Dribbble &middot;",
+          "link" : "#"
+        },
+        {
+          "title" : "LinkedIn",
+          "link" : "#"
+        }
+      ],
+
+      "hobbies" : [
+        {
+          "title" : "currently",
+          "pieces" : [
+            {
+              "text" : "Product Design at <a href='http://redbull.tv' target='_blank'>Red Bull</a>"
+            },
+            {
+              "text" : "Online Teaching at <a href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>"
+            },
+            {
+              "text" : "Product Design Freelancer"
+            },
+            {
+              "text" : "Moving to the United States"
+            }
+          ]
+        },
+        {
+          "title" : "passions",
+          "pieces" : [
+            {
+              "text" : "Design Systems"
+            },
+            {
+              "text" : "Swift and React"
+            },
+            {
+              "text" : "Design Tooling"
+            },
+            {
+              "text" : "User Centered Design"
+            }
+          ]
+        },
+        {
+          "title" : "awards",
+          "pieces" : [
+            {
+              "text" : "Apple &middot; WWDC Scholarship"
+            },
+            {
+              "text" : "Awwwards &middot; Honorable Mention"
+            },
+            {
+              "text" : "CSS Design &middot; Special Kudos"
+            },
+            {
+              "text" : "CSS Winner &middot; Star of the Day"
+            }
+          ]
+        },
+        {
+          "title" : "projects",
+          "pieces" : [
+            {
+              "text" : "Project Alpha"
+            },
+            {
+              "text" : "Reading 24 books"
+            },
+            {
+              "text" : "Learn More React"
+            },
+            {
+              "text" : "Typography Analysis"
+            }
+          ]
         }
       ]
     }

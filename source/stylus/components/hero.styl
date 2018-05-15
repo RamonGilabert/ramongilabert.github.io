@@ -1,11 +1,10 @@
 .hero {
 	width: 100%
-	margin-top: 60px
+	padding-top: 180px
 	display: flex
 	flex-direction: row
 	align-items: center
 	justify-content: space-between
-	z-index: 2
 
 	.text {
 		margin-bottom: 188px
@@ -18,8 +17,10 @@
 	}
 	
 	.illustration {
-		img {
-			margin-right: grid(2, 3)
+		z-index: 1
+		
+		svg {
+			margin-right: calc(grid(2, 3) - 30px)
 			float: right
 			width: 460px
 		}
