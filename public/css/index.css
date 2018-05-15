@@ -28,29 +28,29 @@
   font-style: normal;
 }
 h1 {
-  font-size: 46.18412125110626px;
+  font-size: 51.31569027900696px;
   font-family: 'Feijoa Display';
   line-height: 52px;
 }
 h2 {
-  font-size: 32.43658447265625px;
+  font-size: 36.0406494140625px;
 }
 h3 {
-  font-size: 28.83251953125px;
+  font-size: 32.0361328125px;
 }
 h4 {
-  font-size: 25.62890625px;
+  font-size: 28.4765625px;
   line-height: 32px;
 }
 h5 {
-  font-size: 22.78125px;
+  font-size: 25.3125px;
 }
 h6 {
-  font-size: 20.25px;
-  line-height: 32px;
+  font-size: 22.5px;
+  line-height: 36px;
 }
 p {
-  font-size: 18px;
+  font-size: 20px;
   color: #222;
   line-height: 28px;
 }
@@ -61,6 +61,8 @@ h5,
 h6,
 p {
   font-family: 'Apercu Regular Pro';
+  font-variant-numeric: oldstyle-nums;
+  font-variant-ligatures: common-ligatures;
 }
 button,
 h1,
@@ -81,7 +83,7 @@ h6,
 p {
   cursor: default;
   color: #222;
-  font-weight: normal !important;
+  font-weight: normal;
 }
 a {
   text-decoration: none;
@@ -92,7 +94,7 @@ p a {
   color: #cba0aa;
 }
 .mono {
-  font-size: 12.641975308641975px;
+  font-size: 14.046639231824416px;
   font-family: "Apercu Mono Bold Pro";
   text-transform: uppercase;
   color: #8c8075;
@@ -345,9 +347,9 @@ p a {
 .personal .social a {
   font-family: 'Styrene B Web';
   font-weight: 500;
-  font-size: 14.222222222222221px;
+  font-size: 14.046639231824416px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 .box {
   position: absolute;
@@ -409,7 +411,7 @@ nav .owl {
 nav a {
   font-family: 'Styrene B Web';
   font-weight: 500;
-  font-size: 14.222222222222221px;
+  font-size: 15.802469135802468px;
   text-transform: uppercase;
 }
 .dark {
@@ -447,7 +449,7 @@ nav a {
 }
 .hero {
   width: 100%;
-  padding-top: 180px;
+  padding-top: 140px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -460,14 +462,19 @@ nav a {
 }
 .hero .text h1 {
   margin-bottom: 12px;
+  line-height: 56px;
+}
+.hero .text p {
+  font-size: 22.5px;
+  line-height: 36px;
 }
 .hero .illustration {
   z-index: 1;
 }
 .hero .illustration svg {
-  margin-right: calc(grid(2, 3) - 30px);
+  margin-right: calc(grid(2, 3));
   float: right;
-  width: 460px;
+  width: 490px;
 }
 @media (min-width: 1920px) {
   .hero .illustration img {
@@ -504,7 +511,7 @@ nav a {
 }
 .card .description .wrapper {
   transform: none;
-  padding-top: 32px;
+  padding-top: 36px;
   margin-left: 6%;
   transition: 0.3s transform ease;
   backface-visibility: hidden;
@@ -530,7 +537,7 @@ nav a {
   transform: scaleY(1.1);
 }
 .card:hover .wrapper {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 .linjer {
   margin-top: 140px;
@@ -559,7 +566,7 @@ nav a {
   margin-right: 136px;
 }
 .hobbies .hobby .pieces .text {
-  font-size: 20.25px;
+  font-size: 22.5px;
   line-height: 32px;
   margin-bottom: 16px;
 }

@@ -125,7 +125,7 @@ function Parallax() {
 
       animation(function() {
         if (offset > final) {
-          const socialTranslate = (offset - final) / maximum * 500;
+          const socialTranslate = (offset - final) / maximum * 475;
           social.style.transform = 'rotate(90deg) translate3d(' + socialTranslate + 'px, 0, 0)'
         } else {
           const selectionTranslate = -(translate * offset) / maximum - 450;

@@ -18,7 +18,7 @@ h5 {
 }
 h6 {
   font-size: size-h6;
-  line-height: 32px;
+  line-height: 36px;
 }
 p {
   font-size: size-p;
@@ -32,6 +32,8 @@ h5,
 h6,
 p {
   font-family: 'Apercu Regular Pro';
+  font-variant-numeric: oldstyle-nums;
+  font-variant-ligatures: common-ligatures;
 }
 button,
 h1,
@@ -52,7 +54,7 @@ h6,
 p {
   cursor: default;
   color: text-color;
-  font-weight: normal !important;
+  font-weight: normal;
 }
 a {
   text-decoration: none;
