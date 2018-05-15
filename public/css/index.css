@@ -93,11 +93,41 @@ h6 a,
 p a {
   color: #cba0aa;
 }
+.soon {
+  font-size: 17.77777777777778px;
+  color: #917d68;
+}
 .mono {
   font-size: 14.046639231824416px;
   font-family: "Apercu Mono Bold Pro";
   text-transform: uppercase;
   color: #8c8075;
+}
+.link,
+.running {
+  position: relative;
+  z-index: 2;
+}
+.link:after,
+.running:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #faca0c;
+  width: 100%;
+  transition: top 0.1s ease;
+}
+.running:after {
+  background-color: #faca0c;
+}
+.link:hover:after,
+.running:hover:after {
+  top: 70%;
+  transition: top 0.3s ease;
 }
 .row {
   position: fixed;
@@ -343,8 +373,12 @@ p a {
   margin-top: -250px;
   white-space: nowrap;
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.personal .social a {
+.personal .social a,
+.personal .social p {
   font-family: 'Styrene B Web';
   font-weight: 500;
   font-size: 14.046639231824416px;
@@ -386,6 +420,13 @@ nav .home {
   text-align: left;
   width: 100px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+nav .home:after {
+  opacity: 0;
+}
+nav .home:hover {
+  transform: scale(0.97);
 }
 nav .central {
   order: 2;
@@ -393,8 +434,10 @@ nav .central {
   margin: 0 auto;
 }
 nav .central a {
-  padding-right: 50px;
-  padding-left: 50px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 nav .right {
   order: 3;
@@ -508,10 +551,15 @@ nav a {
   height: 148px;
   background-color: #fff;
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 .card .description .wrapper {
+  width: 84%;
   transform: none;
-  padding-top: 36px;
   margin-left: 6%;
   transition: 0.3s transform ease;
   backface-visibility: hidden;
@@ -519,6 +567,21 @@ nav a {
 .card .description .wrapper p {
   color: #7f7871;
   margin-top: 12px;
+}
+.card .description .indicator {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s transform ease;
+  top: -4px;
+  width: 16%;
+}
+.card .description .soon,
+.card .description .arrow {
+  transition: 0.3s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
+  transform: translateX(-150%);
+}
+.card .description .soon {
+  transform: translateY(100%);
 }
 .card .bottom-description {
   position: absolute;
@@ -536,8 +599,15 @@ nav a {
 .card:hover .bottom-description {
   transform: scaleY(1.1);
 }
-.card:hover .wrapper {
+.card:hover .wrapper,
+.card:hover .indicator {
   transform: translateY(-8px);
+}
+.card:hover .arrow {
+  transform: translateX(0%);
+}
+.card:hover .soon {
+  transform: translateY(0%);
 }
 .linjer {
   margin-top: 140px;

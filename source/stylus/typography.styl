@@ -60,9 +60,41 @@ h6, p {
   }
 }
 
+.soon {
+  font-size: size-l
+  color: soon-color
+}
+
 .mono {
   font-size: size-s
   font-family: "Apercu Mono Bold Pro"
   text-transform: uppercase
   color: faded-title-color
+}
+
+.link, .running {
+  position: relative
+  z-index: 2
+}
+
+.link:after, .running:after {
+  content: ''
+  position: absolute
+  z-index: -1
+  top: 100%
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: background-running
+  width: 100%
+  transition: top 0.1s ease
+}
+
+.running:after {
+  background-color: background-running
+}
+
+.link:hover:after, .running:hover:after {
+  top: 70%
+  transition: top 0.3s ease
 }

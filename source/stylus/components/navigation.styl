@@ -26,6 +26,15 @@ nav {
 		text-align: left
 		width: 100px
 		cursor: pointer
+		transition: transform 0.3s ease
+	}
+	
+	.home:after {
+		opacity: 0
+	}
+	
+	.home:hover {
+		transform: scale(0.97)
 	}
 	
 	.central {
@@ -34,8 +43,10 @@ nav {
 		margin: 0 auto
 		
 		a {
-			padding-right: 50px
-			padding-left: 50px
+			position: relative
+			cursor: pointer
+			margin-right: 50px
+			margin-left: 50px
 		}
 	}
 	

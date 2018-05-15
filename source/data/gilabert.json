@@ -8,15 +8,15 @@
       "central" : [
         {
           "title" : "Work",
-          "link" : "#"
+          "link" : "work-link"
         },
         {
           "title" : "About",
-          "link" : "#"
+          "link" : "about-link"
         },
         {
           "title" : "Social",
-          "link" : "#"
+          "link" : "social-link"
         }
       ],
       "right" : [
@@ -30,7 +30,7 @@
 
     "hero" : {
       "title" : "Welcome,",
-      "text" : "I am Ramon, a product designer from Barcelona currently working with <a href='http://redbull.tv' target='_blank'>Red Bull</a> and teaching design at <a href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>. In the past, I’ve worked for clients such as Varner and Intersport."
+      "text" : "I am Ramon, a product designer from Barcelona currently working with <a class='running' href='http://redbull.tv' target='_blank'>Red Bull</a> and teaching design at <a class='running' href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>. In the past, I’ve worked for clients such as Varner and Intersport."
     },
 
     "story" : {
@@ -46,28 +46,32 @@
           "class" : "redbull",
           "title" : "Red Bull TV",
           "image" : "images/projects/redbull.jpg",
-          "subtitle" : "Creating a new experience for the TV of the future"
+          "subtitle" : "Creating a new experience for the TV of the future",
+          "case" : false
         },
         {
           "order" : 3,
           "class" : "linjer",
           "title" : "Linjer",
           "image" : "images/projects/linjer.jpg",
-          "subtitle" : "Increasing metrics for a Norwegian handmade brand"
+          "subtitle" : "Increasing metrics for a Norwegian handmade brand",
+          "case" : true
         },
         {
           "order" : 2,
           "class" : "aparcat",
           "title" : "Aparcat",
           "image" : "images/projects/aparcat.jpg",
-          "subtitle" : "Encouraging sustainable parking in the city"
+          "subtitle" : "Encouraging sustainable parking in the city",
+          "case" : true
         },
         {
           "order" : 4,
           "class" : "manjaras",
           "title" : "Manjaras",
           "image" : "images/projects/manjaras.jpg",
-          "subtitle" : "On demand local food delivery in Dubai"
+          "subtitle" : "On demand local food delivery in Dubai",
+          "case" : true
         }
       ]
     },
@@ -75,16 +79,18 @@
     "personal" : {
       "links" : [
         {
-          "title" : "Twitter &middot;",
-          "link" : "#"
+          "title" : "Twitter",
+          "link" : "https://twitter.com/RamonGilabert",
+          "dot" : true
         },
         {
-          "title" : "Dribbble &middot;",
-          "link" : "#"
+          "title" : "Dribbble",
+          "link" : "https://dribbble.com/RamonGilabert",
+          "dot" : true
         },
         {
           "title" : "LinkedIn",
-          "link" : "#"
+          "link" : "https://www.linkedin.com/in/ramongilabert/"
         }
       ],
 
@@ -93,10 +99,10 @@
           "title" : "currently",
           "pieces" : [
             {
-              "text" : "Product Design at <a href='http://redbull.tv' target='_blank'>Red Bull</a>"
+              "text" : "Product Design at <a class='running' href='http://redbull.tv' target='_blank'>Red Bull</a>"
             },
             {
-              "text" : "Online Teaching at <a href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>"
+              "text" : "Online Teaching at <a class='running' href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>"
             },
             {
               "text" : "Product Design Freelancer"

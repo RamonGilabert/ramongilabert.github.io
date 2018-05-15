@@ -7,6 +7,7 @@ const resizer = new Resizer();
 const prevent = new Prevent();
 const hover = new Hover();
 const parallax = new Parallax();
+const scroller = new Scroller();
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   resizer.run();
   prevent.images();
   parallax.prepare();
+  scroller.run();
   // hover.watch();
 });
 
@@ -135,6 +137,34 @@ function Parallax() {
     }
 
     calculate();
+  }
+}
+
+function Scroller() {
+
+  this.run = function() {
+    if (exists('myself')) {
+      const work = document.class('work-link');
+      const about = document.class('about-link');
+      const social = document.class('social-link');
+      const projects = contentOffset(document.class('projects'));
+      const personal = contentOffset(document.class('personal'));
+
+      work.removeEventListener('click', move);
+      work.addEventListener('click', move);
+      about.removeEventListener('click', scroll);
+      about.addEventListener('click', scroll);
+      social.removeEventListener('click', scroll);
+      social.addEventListener('click', scroll);
+
+      function move() {
+        scrollTo(projects - 150, 750);
+      }
+
+      function scroll() {
+        scrollTo(personal - 150, 1500);
+      }
+    }
   }
 }
 

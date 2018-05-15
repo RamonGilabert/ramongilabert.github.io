@@ -23,14 +23,20 @@
 	}
 	
 	.description {
+		background-color
 		width: 100%
 		height: 148px
 		background-color: clear-color
 		backface-visibility: hidden
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		position: relative
 		
 		.wrapper {
+			width: 84%
 			transform: none;
-			padding-top: 36px
 			margin-left: 6%
 			transition: 0.3s transform ease
 			backface-visibility: hidden
@@ -39,6 +45,23 @@
 				color: faded-text-color
 				margin-top: 12px
 			}
+		}
+		
+		.indicator {
+			position: relative
+			overflow: hidden
+			transition: 0.3s transform ease
+			top: -4px
+			width: 16%
+		}
+		
+		.soon, .arrow {
+			transition: 0.3s transform curve
+			transform: translateX(-150%)
+		}
+		
+		.soon {
+			transform: translateY(100%)
 		}
 	}
 	
@@ -61,8 +84,16 @@
 		transform: scaleY(1.1)
 	}
 	
-	.wrapper {
+	.wrapper, .indicator {
     transform: translateY(-8px)
+	}
+	
+	.arrow {
+		transform: translateX(0%)
+	}
+	
+	.soon {
+		transform: translateY(0%)
 	}
 }
 
