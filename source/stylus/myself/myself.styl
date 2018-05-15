@@ -73,3 +73,38 @@
   background-color: secondary-color 
   z-index: 0
 }
+
+@media (max-width: minimum-width) {
+  .projects {
+    .cards {
+      align-content: flex-start
+      padding-top: 0px
+      padding-bottom: 0px
+    }
+  }
+  
+  .personal {
+    .box {
+      margin-top: -80px
+    }
+  }
+}
+
+@media (max-width: medium-width) {
+  .page {
+    .wrapper {
+      margin-right: percentage-1
+      margin-left: percentage-1
+    }
+  }
+  
+  .projects {
+    padding-top: 0px
+  }
+}
+
+@media (max-width: minimum-width) {
+  .box {
+    height: 1200px
+  }
+}

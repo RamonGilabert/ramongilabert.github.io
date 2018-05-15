@@ -18,6 +18,7 @@
 
 		p {
 			font-size: size-h6
+			line-height: 36px
 		}
 	}
 	
@@ -26,8 +27,57 @@
 		
 		svg {
 			margin-right: calc(grid(2, 3))
+			width: 37.5vw
+			max-width: 490px
 			float: right
-			width: 490px
+		}
+	}
+}
+
+@media (max-width: minimum-width) {
+	.hero {
+		padding-top: 160px !important
+		
+		.text {
+			width: 100% !important
+		}
+		
+		.illustration {
+			display: none
+		}
+	}
+}
+
+@media (max-width: medium-width) {
+	.hero {
+		padding-top: 100px
+		padding-bottom: 40px
+		
+		.text {
+			margin-bottom: 120px
+			width: grid(1, 9)
+			
+			p {
+				font-size: size-l
+				line-height: 28px
+			}
+		}
+	}
+}
+
+@media (max-width: median-width) {
+	.hero {
+		.text {
+			h1 {
+				font-size: size-h25
+				margin-bottom: 12px
+				line-height: 44px
+			}
+			
+			p {
+				font-size: size-p
+				line-height: 32px
+			}
 		}
 	}
 }

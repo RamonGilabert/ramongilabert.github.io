@@ -44,9 +44,9 @@ function Resizer() {
     const boxes = document.classes('box');
     const cards = document.classes('imagery');
     const container = document.class('cards');
-    const texts = [];
     const navigation = document.class('navigation-wrapper');
     const social = document.class('social');
+    const texts = [];
 
     window.removeEventListener('resize', calculate);
     window.addEventListener('resize', calculate);
@@ -69,7 +69,13 @@ function Resizer() {
         variable = 1920;
       }
 
-      const calculation = variable * 0.355 * 4 / 3 - 148;
+      var calculation = (variable * 0.355 * 4 / 3 - 148);
+      var containerHeight = (calculation + 148) * 2 + 320
+
+      if (window.innerWidth <= 850) {
+        calculation = (variable * 0.875 * 4 / 3 - 124);
+        containerHeight = (calculation + 124) * 4 + 300
+      }
 
       for (var i = 0; i < cards.length; i++) {
         const card = cards[i];
@@ -77,7 +83,7 @@ function Resizer() {
       }
 
       if (lives(container)) {
-        container.style.height = ((calculation + 148) * 2 + 360) + 'px';
+        container.style.height = containerHeight + 'px';
       }
 
       social.style.marginLeft = variable * 0.846 + 'px';

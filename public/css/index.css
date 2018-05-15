@@ -51,18 +51,8 @@ h6 {
 }
 p {
   color: #222;
-  line-height: 28px;
-  font-size: 19.998822204324863px;
-}
-@media screen and (min-width: 320px) {
-  p {
-    font-size: calc(19.998822204324863px unit(20px - 19.998822204324863px, "") * (100vw - 320px) / maximum-minimum);
-  }
-}
-@media screen and (min-width: 1920px) {
-  p {
-    font-size: 20px;
-  }
+  line-height: 32px;
+  font-size: 20px;
 }
 h2,
 h3,
@@ -108,7 +98,7 @@ p a {
   color: #917d68;
 }
 .mono {
-  font-size: 19.998822204324863px;
+  font-size: 14.046639231824416px;
   font-family: "Apercu Mono Bold Pro";
   text-transform: uppercase;
   color: #8c8075;
@@ -136,7 +126,7 @@ p a {
 }
 .link:hover:after,
 .running:hover:after {
-  top: 50%;
+  top: 55%;
   transition: top 0.3s ease;
 }
 .row {
@@ -391,7 +381,7 @@ p a {
 .personal .social p {
   font-family: 'Styrene B Web';
   font-weight: 500;
-  font-size: 19.998822204324863px;
+  font-size: 14.046639231824416px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -403,6 +393,30 @@ p a {
   height: 1444px;
   background-color: #f5f2f0;
   z-index: 0;
+}
+@media (max-width: 850px) {
+  .projects .cards {
+    align-content: flex-start;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .personal .box {
+    margin-top: -80px;
+  }
+}
+@media (max-width: 1000px) {
+  .page .wrapper {
+    margin-right: 6.2%;
+    margin-left: 6.2%;
+  }
+  .projects {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 850px) {
+  .box {
+    height: 1200px;
+  }
 }
 nav {
   position: fixed;
@@ -500,6 +514,23 @@ nav a {
 .lighten-color {
   color: #f8f8f8;
 }
+@media (max-width: 650px) {
+  nav .central {
+    opacity: 0;
+  }
+}
+@media (max-width: 1000px) {
+  nav .central a {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  nav a {
+    font-size: 14.046639231824416px;
+  }
+  nav .navigation-wrapper {
+    width: calc((93.8vw - 6.2vw));
+  }
+}
 .hero {
   width: 100%;
   padding-top: 140px;
@@ -519,14 +550,52 @@ nav a {
 }
 .hero .text p {
   font-size: 22.5px;
+  line-height: 36px;
 }
 .hero .illustration {
   z-index: 1;
 }
 .hero .illustration svg {
   margin-right: calc(grid(2, 3));
+  width: 37.5vw;
+  max-width: 490px;
   float: right;
-  width: 490px;
+}
+@media (max-width: 850px) {
+  .hero {
+    padding-top: 160px !important;
+  }
+  .hero .text {
+    width: 100% !important;
+  }
+  .hero .illustration {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .hero .text {
+    margin-bottom: 120px;
+    width: calc((47.9vw - 6.2vw));
+  }
+  .hero .text p {
+    font-size: 17.77777777777778px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1400px) {
+  .hero .text h1 {
+    font-size: 40.54573059082031px;
+    margin-bottom: 12px;
+    line-height: 44px;
+  }
+  .hero .text p {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 @media (min-width: 1920px) {
   .hero .illustration img {
@@ -621,6 +690,42 @@ nav a {
 .linjer {
   margin-top: 140px;
 }
+@media (max-width: 850px) {
+  .card {
+    width: calc((93.8vw - 6.2vw));
+    max-width: calc((93.8px - 6.2px) * 19.2);
+    margin-bottom: 40px;
+  }
+  .card .description {
+    height: 124px;
+  }
+  .card .description .wrapper {
+    width: 100% !important;
+    margin-left: 7%;
+    margin-top: -4px;
+  }
+  .card .description .wrapper h4 {
+    font-size: 22.5px;
+    line-height: 24px;
+  }
+  .card .description .wrapper p {
+    font-size: 15.802469135802468px;
+    line-height: 24px;
+  }
+  .card .description .indicator {
+    width: 0px;
+  }
+  .card .bottom-description {
+    height: 124px;
+  }
+  .card .arrow,
+  .card .soon {
+    display: none;
+  }
+  .linjer {
+    margin-top: 0px;
+  }
+}
 .hobbies {
   position: relative;
   display: flex;
@@ -648,6 +753,26 @@ nav a {
   font-size: 22.5px;
   line-height: 32px;
   margin-bottom: 16px;
+}
+@media (max-width: 850px) {
+  .hobbies {
+    align-content: flex-start;
+    height: 1000px;
+    margin-top: 40px;
+  }
+  .hobbies .hobby {
+    width: calc((93.8vw - 6.2vw));
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .hobbies .hobby .mono {
+    margin-bottom: 12px;
+  }
+  .hobbies .hobby .pieces .text {
+    font-size: 17.77777777777778px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
 }
 *,
 html {

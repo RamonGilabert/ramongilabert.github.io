@@ -22,18 +22,8 @@ h6 {
 }
 p {
   color: text-color;
-  line-height: 28px;
-  font-size: size-s;
-}
-@media screen and (min-width: 320px) {
-  p {
-    font-size: calc(size-s unit(size-p - size-s, "") * (100vw - 320px) / maximum-minimum);
-  }
-}
-@media screen and (min-width: 1920px) {
-  p {
-    font-size: size-p;
-  }
+  line-height: 32px;
+  font-size: size-p;
 }
 h2,
 h3,
@@ -107,6 +97,6 @@ p a {
 }
 .link:hover:after,
 .running:hover:after {
-  top: 50%;
+  top: 55%;
   transition: top 0.3s ease;
 }

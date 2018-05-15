@@ -31,3 +31,29 @@
 		}
 	}
 }
+
+@media (max-width: minimum-width) {
+	.hobbies {
+		align-content: flex-start
+		height: 1000px
+		margin-top: 40px
+		
+		.hobby {
+			width: grid(1, 19)
+			flex-direction: column
+			margin-bottom: 40px
+			
+			.mono {
+				margin-bottom: 12px
+			}
+			
+			.pieces {
+				.text {
+					font-size: size-l
+					line-height: 28px
+					margin-bottom: 8px
+				}
+			}
+		}
+	}
+}

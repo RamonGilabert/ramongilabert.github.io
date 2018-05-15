@@ -46,7 +46,7 @@
           "class" : "redbull",
           "title" : "Red Bull TV",
           "image" : "images/projects/redbull.jpg",
-          "subtitle" : "Creating a new experience for the TV of the future",
+          "subtitle" : "Exploring the TV of the future",
           "case" : false
         },
         {
@@ -54,7 +54,7 @@
           "class" : "linjer",
           "title" : "Linjer",
           "image" : "images/projects/linjer.jpg",
-          "subtitle" : "Increasing metrics for a Norwegian handmade brand",
+          "subtitle" : "Increasing metrics for this handmade brand",
           "case" : true
         },
         {

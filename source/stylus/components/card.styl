@@ -100,3 +100,47 @@
 .linjer {
   margin-top: 140px
 }
+
+@media (max-width: minimum-width) {
+  .card {
+  	width: grid(1, 19)
+  	max-width: max-grid(1, 19)
+  	margin-bottom: 40px
+  	
+  	.description {
+  		height: 124px
+  		
+  		.wrapper {
+  			width: 100% !important
+  			margin-left: 7%
+  			margin-top: -4px
+  			
+  			h4 {
+	  			font-size: size-h6
+	  			line-height: 24px
+	  		}
+	  		
+	  		p {
+	  			font-size: size-m
+	  			line-height: 24px
+	  		}
+  		}
+  		
+  		.indicator {
+  			width: 0px
+  		}
+  	}
+  	
+  	.bottom-description {
+  		height: 124px
+  	}
+  	
+  	.arrow, .soon {
+  		display: none
+  	}
+  }
+  
+  .linjer {
+  	margin-top: 0px
+	}
+}

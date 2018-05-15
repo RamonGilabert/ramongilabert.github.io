@@ -122,3 +122,30 @@ nav {
 .lighten-color {
 	color: background-color
 }
+
+@media (max-width: phone-width) {
+	nav {
+		.central {
+			opacity: 0
+		}
+	}
+}
+
+@media (max-width: medium-width) {
+	nav {
+		.central {
+			a {
+				margin-right: 25px
+				margin-left: 25px
+			}
+		}
+		
+		a {
+			font-size: size-s
+		}
+		
+		.navigation-wrapper {
+			width: grid(1, 19)
+		}
+	}
+}
