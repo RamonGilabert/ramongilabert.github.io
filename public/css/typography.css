@@ -11,7 +11,7 @@ h3 {
 }
 h4 {
   font-size: size-h4;
-  line-height: 32px;
+  line-height: 36px;
 }
 h5 {
   font-size: size-h5;
@@ -21,9 +21,19 @@ h6 {
   line-height: 36px;
 }
 p {
-  font-size: size-p;
   color: text-color;
   line-height: 28px;
+  font-size: size-s;
+}
+@media screen and (min-width: 320px) {
+  p {
+    font-size: calc(size-s unit(size-p - size-s, "") * (100vw - 320px) / maximum-minimum);
+  }
+}
+@media screen and (min-width: 1920px) {
+  p {
+    font-size: size-p;
+  }
 }
 h2,
 h3,
@@ -97,6 +107,6 @@ p a {
 }
 .link:hover:after,
 .running:hover:after {
-  top: 70%;
+  top: 50%;
   transition: top 0.3s ease;
 }

@@ -1,3 +1,22 @@
+strip-unit(value) {
+  value / (value * 0 + 1)
+}
+
+fluid-type(minimum, maximum, bottom, top) {
+  font-size: bottom
+
+  @media screen and (min-width: minimum) {
+    // font-size: calc(bottom + strip-unit(top - bottom) * (100vw - minimum) / strip-unit(maximum - minimum))
+    first = 'unit(%s - %s, "")' % (top bottom)
+    second = unit(maximum-minimum, '')
+    font-size: 'calc(%s %s * (100vw - %s) / %s)' % (bottom first minimum second)
+  }
+
+  @media screen and (min-width: maximum) {
+    font-size: top
+  }
+}
+
 h1 {
 	font-size: size-h1
 	font-family: 'Feijoa Display'
@@ -14,7 +33,7 @@ h3 {
 
 h4 {
 	font-size: size-h4
-	line-height: 32px
+	line-height: 36px
 }
 
 h5 {
@@ -27,9 +46,9 @@ h6 {
 }
 
 p {
-  font-size: size-p
   color: text-color
   line-height: 28px
+  fluid-type(320px, 1920px, size-s, size-p)
 }
 
 h2, h3, h4, h5, h6, p {
@@ -95,6 +114,6 @@ h6, p {
 }
 
 .link:hover:after, .running:hover:after {
-  top: 70%
+  top: 50%
   transition: top 0.3s ease
 }

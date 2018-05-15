@@ -44,6 +44,7 @@ function Resizer() {
     const boxes = document.classes('box');
     const cards = document.classes('imagery');
     const container = document.class('cards');
+    const texts = [];
     const navigation = document.class('navigation-wrapper');
     const social = document.class('social');
 

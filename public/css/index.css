@@ -40,7 +40,7 @@ h3 {
 }
 h4 {
   font-size: 28.4765625px;
-  line-height: 32px;
+  line-height: 36px;
 }
 h5 {
   font-size: 25.3125px;
@@ -50,9 +50,19 @@ h6 {
   line-height: 36px;
 }
 p {
-  font-size: 20px;
   color: #222;
   line-height: 28px;
+  font-size: 19.998822204324863px;
+}
+@media screen and (min-width: 320px) {
+  p {
+    font-size: calc(19.998822204324863px unit(20px - 19.998822204324863px, "") * (100vw - 320px) / maximum-minimum);
+  }
+}
+@media screen and (min-width: 1920px) {
+  p {
+    font-size: 20px;
+  }
 }
 h2,
 h3,
@@ -98,7 +108,7 @@ p a {
   color: #917d68;
 }
 .mono {
-  font-size: 14.046639231824416px;
+  font-size: 19.998822204324863px;
   font-family: "Apercu Mono Bold Pro";
   text-transform: uppercase;
   color: #8c8075;
@@ -126,7 +136,7 @@ p a {
 }
 .link:hover:after,
 .running:hover:after {
-  top: 70%;
+  top: 50%;
   transition: top 0.3s ease;
 }
 .row {
@@ -381,7 +391,7 @@ p a {
 .personal .social p {
   font-family: 'Styrene B Web';
   font-weight: 500;
-  font-size: 14.046639231824416px;
+  font-size: 19.998822204324863px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -509,7 +519,6 @@ nav a {
 }
 .hero .text p {
   font-size: 22.5px;
-  line-height: 36px;
 }
 .hero .illustration {
   z-index: 1;
