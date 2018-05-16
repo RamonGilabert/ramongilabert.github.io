@@ -268,6 +268,8 @@ function Scroller() {
 
     var last = 0;
 
+    console.log(position - last);
+
     window.removeEventListener('scroll', casing);
     window.addEventListener('scroll', casing);
 
