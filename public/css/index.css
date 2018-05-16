@@ -136,7 +136,7 @@ p a {
   max-width: 1920px;
   pointer-events: none;
   opacity: 1;
-  z-index: 2000;
+  z-index: 200;
 }
 .row .column-0 {
   width: 1px;
@@ -331,7 +331,6 @@ p a {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .page .wrapper {
   position: relative;
@@ -441,7 +440,7 @@ nav {
   width: 100%;
   margin: 0 auto;
   background-color: #f8f8f8;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 nav .navigation-wrapper {
   width: calc((87.6vw - 12.4vw));
@@ -899,7 +898,7 @@ button:focus {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 300;
 }
 .transition .secondary {
   position: relative;
