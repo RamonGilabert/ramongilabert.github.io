@@ -829,14 +829,14 @@ nav a {
 }
 @media (max-width: 850px) {
   .hobbies {
-    height: 1000px;
+    height: 1100px;
     margin-top: -10px;
   }
   .hobbies .hobby {
     margin-top: -20px;
     width: calc((93.8vw - 6.2vw));
     max-width: calc((93.8px - 6.2px) * 19.2);
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 }
 *,
