@@ -145,7 +145,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-1 {
   width: 1px;
@@ -154,7 +154,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-2 {
   width: 1px;
@@ -163,7 +163,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-3 {
   width: 1px;
@@ -172,7 +172,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-4 {
   width: 1px;
@@ -181,7 +181,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-5 {
   width: 1px;
@@ -190,7 +190,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-6 {
   width: 1px;
@@ -199,7 +199,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-7 {
   width: 1px;
@@ -208,7 +208,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-8 {
   width: 1px;
@@ -217,7 +217,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-9 {
   width: 1px;
@@ -226,7 +226,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-10 {
   width: 1px;
@@ -235,7 +235,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-11 {
   width: 1px;
@@ -244,7 +244,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-12 {
   width: 1px;
@@ -253,7 +253,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-13 {
   width: 1px;
@@ -262,7 +262,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-14 {
   width: 1px;
@@ -271,7 +271,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-15 {
   width: 1px;
@@ -280,7 +280,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-16 {
   width: 1px;
@@ -289,7 +289,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-17 {
   width: 1px;
@@ -298,7 +298,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-18 {
   width: 1px;
@@ -307,7 +307,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-19 {
   width: 1px;
@@ -316,7 +316,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .row .column-20 {
   width: 1px;
@@ -325,7 +325,7 @@ p a {
   position: absolute;
   float: left;
   background-color: #00d0f0;
-  opacity: 0.5;
+  opacity: 0;
 }
 .page {
   width: 100%;
@@ -893,13 +893,20 @@ button:focus {
   clip: rect(0, 1px, 1px, 0);
 }
 .transition {
-  background-color: dark-background-color;
+  background-color: #f8f8f8;
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 100;
+}
+.transition .secondary {
+  position: relative;
+  width: 200%;
+  height: 100%;
+  right: 200%;
+  background-color: #f5f2f0;
 }
 .lighter {
   background-color: white-color;
