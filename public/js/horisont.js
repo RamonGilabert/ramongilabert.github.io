@@ -22,14 +22,6 @@ function prepareDocument() {
   HTMLDocument.prototype.tag = function(name) {
     return this.tags(name)[0];
   }
-
-  HTMLElement.prototype.tags = function(name) {
-    return convert(this.getElementsByTagName(name));
-  }
-
-  HTMLElement.prototype.tag = function(name) {
-    return this.tags(name)[0];
-  }
 }
 
 function toggle(element, name, remove) {

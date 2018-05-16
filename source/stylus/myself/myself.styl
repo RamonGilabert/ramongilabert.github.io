@@ -2,6 +2,7 @@
   width: 100%
   max-width: maximum-width
   margin: 0 auto
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)
   
   .wrapper {
     position: relative
@@ -37,8 +38,8 @@
   position: relative
   
   .box {
-    height: calc(100% + 220px)
-    margin-top: -220px
+    height: calc(100% + 140px)
+    margin-top: -140px
   }
   
   .social {
@@ -47,7 +48,7 @@
     transform: rotate(90deg) translateX(100px)
     line-height: 1
     z-index: 2
-    margin-top: -250px
+    margin-top: -12px
     white-space: nowrap
     backface-visibility: hidden
     display: flex
@@ -69,13 +70,15 @@
   margin-top: -80px
   margin-left: -column-2
   width: column-19
-  height: 1444px
+  height: 60%
   background-color: secondary-color 
   z-index: 0
 }
 
 @media (max-width: minimum-width) {
   .projects {
+    margin-top: 0px !important
+    
     .cards {
       align-content: flex-start
       padding-top: 0px
@@ -87,6 +90,10 @@
     .box {
       margin-top: -120px
     }
+  }
+  
+  .box {
+    height: 1200px
   }
 }
 
@@ -100,11 +107,25 @@
   
   .projects {
     padding-top: 0px
+    margin-top: -40px
+    
+    .cards {
+      margin-top: -20px
+    }
+  }
+  
+  .personal {
+    .social {
+      margin-top: 0px
+    }
   }
 }
 
-@media (max-width: minimum-width) {
-  .box {
-    height: 1200px
+@media (max-width: median-width) {
+  .personal {
+    .box {
+      margin-top: -100px !important
+      height: calc(100% + 100px)
+    }
   }
 }

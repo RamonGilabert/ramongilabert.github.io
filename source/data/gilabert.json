@@ -113,23 +113,6 @@
           ]
         },
         {
-          "title" : "awards",
-          "pieces" : [
-            {
-              "text" : "Apple &middot; WWDC Scholarship"
-            },
-            {
-              "text" : "Awwwards &middot; Honorable Mention"
-            },
-            {
-              "text" : "CSS Design &middot; Special Kudos"
-            },
-            {
-              "text" : "CSS Winner &middot; Star of the Day"
-            }
-          ]
-        },
-        {
           "title" : "passions",
           "pieces" : [
             {
@@ -143,6 +126,23 @@
             },
             {
               "text" : "User Centered Design"
+            }
+          ]
+        },
+        {
+          "title" : "awards",
+          "pieces" : [
+            {
+              "text" : "Apple &middot; WWDC Scholarship"
+            },
+            {
+              "text" : "Awwwards &middot; Honorable Mention"
+            },
+            {
+              "text" : "CSS Design &middot; Special Kudos"
+            },
+            {
+              "text" : "CSS Winner &middot; Star of the Day"
             }
           ]
         },

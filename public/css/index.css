@@ -331,6 +331,7 @@ p a {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .page .wrapper {
   position: relative;
@@ -361,8 +362,8 @@ p a {
   position: relative;
 }
 .personal .box {
-  height: calc(100% + 220px);
-  margin-top: -220px;
+  height: calc(100% + 140px);
+  margin-top: -140px;
 }
 .personal .social {
   position: absolute;
@@ -370,7 +371,7 @@ p a {
   transform: rotate(90deg) translateX(100px);
   line-height: 1;
   z-index: 2;
-  margin-top: -250px;
+  margin-top: -12px;
   white-space: nowrap;
   backface-visibility: hidden;
   display: flex;
@@ -390,11 +391,14 @@ p a {
   margin-top: -80px;
   margin-left: -column-2;
   width: 93.8vw;
-  height: 1444px;
+  height: 60%;
   background-color: #f5f2f0;
   z-index: 0;
 }
 @media (max-width: 850px) {
+  .projects {
+    margin-top: 0px !important;
+  }
   .projects .cards {
     align-content: flex-start;
     padding-top: 0px;
@@ -403,19 +407,30 @@ p a {
   .personal .box {
     margin-top: -120px;
   }
+  .box {
+    height: 1200px;
+  }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .page .wrapper {
     margin-right: 6.2%;
     margin-left: 6.2%;
   }
   .projects {
     padding-top: 0px;
+    margin-top: -40px;
+  }
+  .projects .cards {
+    margin-top: -20px;
+  }
+  .personal .social {
+    margin-top: 0px;
   }
 }
-@media (max-width: 850px) {
-  .box {
-    height: 1200px;
+@media (max-width: 1450px) {
+  .personal .box {
+    margin-top: -100px !important;
+    height: calc(100% + 100px);
   }
 }
 nav {
@@ -426,6 +441,7 @@ nav {
   width: 100%;
   margin: 0 auto;
   background-color: #f8f8f8;
+  transition: transform 0.2s ease;
 }
 nav .navigation-wrapper {
   width: calc((87.6vw - 12.4vw));
@@ -518,8 +534,11 @@ nav a {
   nav .central {
     opacity: 0;
   }
+  nav .navigation-wrapper {
+    height: 60px;
+  }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   nav .central a {
     margin-right: 25px;
     margin-left: 25px;
@@ -529,6 +548,7 @@ nav a {
   }
   nav .navigation-wrapper {
     width: calc((93.8vw - 6.2vw));
+    height: 80px;
   }
 }
 .hero {
@@ -572,7 +592,7 @@ nav a {
     display: none;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .hero {
     padding-top: 100px;
     padding-bottom: 40px;
@@ -586,15 +606,18 @@ nav a {
     line-height: 28px;
   }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
   .hero .text h1 {
-    font-size: 40.54573059082031px;
+    font-size: 36.0406494140625px;
     margin-bottom: 12px;
-    line-height: 44px;
+    line-height: 36px;
   }
   .hero .text p {
     font-size: 20px;
     line-height: 32px;
+  }
+  .hero .illustration svg {
+    width: 32.5vw;
   }
 }
 @media (min-width: 1920px) {
@@ -614,9 +637,6 @@ nav a {
   backface-visibility: hidden;
   box-shadow: 0 1px 2px rgba(49,48,47,0);
   transition: 0.3s transform ease, 0.3s box-shadow ease;
-}
-.card .imagery {
-  max-height: 760.7999999999998px;
 }
 .card .imagery img {
   padding: 0;
@@ -663,8 +683,8 @@ nav a {
 }
 .card .bottom-description {
   position: absolute;
-  bottom: 0;
-  width: 200%;
+  bottom: 10;
+  width: 100%;
   height: 148px;
   background-color: #fff;
   transform-origin: 50% 100%;
@@ -690,6 +710,45 @@ nav a {
 .linjer {
   margin-top: 140px;
 }
+@media (max-width: 1600px) {
+  .card .description {
+    height: 120px;
+  }
+  .card .description .wrapper {
+    width: 100% !important;
+    margin-left: 6%;
+  }
+  .card .description .wrapper h4 {
+    font-size: 22.5px;
+    line-height: 18px;
+  }
+  .card .description .wrapper p {
+    font-size: 17.77777777777778px;
+    line-height: 24px;
+  }
+  .card .description .indicator {
+    width: 0px;
+  }
+  .card .bottom-description {
+    height: 120px;
+  }
+  .linjer {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 1300px) {
+  .card {
+    width: calc((47.9vw - 6.2vw));
+    margin-bottom: 52px;
+  }
+  .card .description .wrapper {
+    margin-left: 7%;
+  }
+  .card .description .wrapper p {
+    font-size: 15.802469135802468px;
+    line-height: 20px;
+  }
+}
 @media (max-width: 850px) {
   .card {
     width: calc((93.8vw - 6.2vw));
@@ -697,26 +756,16 @@ nav a {
     margin-bottom: 40px;
   }
   .card .description {
-    height: 124px;
+    height: 116px;
   }
   .card .description .wrapper {
-    width: 100% !important;
-    margin-left: 7%;
-    margin-top: -4px;
-  }
-  .card .description .wrapper h4 {
-    font-size: 22.5px;
-    line-height: 24px;
-  }
-  .card .description .wrapper p {
-    font-size: 15.802469135802468px;
-    line-height: 24px;
+    margin-left: 6%;
   }
   .card .description .indicator {
     width: 0px;
   }
   .card .bottom-description {
-    height: 124px;
+    height: 116px;
   }
   .card .arrow,
   .card .soon {
@@ -724,6 +773,25 @@ nav a {
   }
   .linjer {
     margin-top: 0px;
+  }
+}
+@media (max-width: 650px) {
+  .card .description {
+    height: 100px;
+  }
+  .card .description .wrapper {
+    margin-left: 7%;
+  }
+  .card .description .wrapper h4 {
+    font-size: 20px;
+    line-height: 18px;
+  }
+  .card .description .wrapper p {
+    font-size: 14.046639231824416px;
+    line-height: 20px;
+  }
+  .card .bottom-description {
+    height: 100px;
   }
 }
 .hobbies {
@@ -754,24 +822,43 @@ nav a {
   line-height: 32px;
   margin-bottom: 16px;
 }
-@media (max-width: 850px) {
+@media (max-width: 1450px) {
   .hobbies {
     align-content: flex-start;
-    height: 1000px;
-    margin-top: 40px;
+    height: 650px;
+    margin-top: 0px;
   }
   .hobbies .hobby {
-    width: calc((93.8vw - 6.2vw));
+    width: calc((52.1vw - 12.4vw));
+    max-width: calc((52.1px - 12.4px) * 19.2);
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
   .hobbies .hobby .mono {
     margin-bottom: 12px;
   }
   .hobbies .hobby .pieces .text {
-    font-size: 17.77777777777778px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 32px;
     margin-bottom: 8px;
+  }
+}
+@media (max-width: 1300px) {
+  .hobbies .hobby {
+    width: calc((52.1vw - 6.2vw));
+    max-width: calc((52.1px - 6.2px) * 19.2);
+  }
+}
+@media (max-width: 850px) {
+  .hobbies {
+    height: 1000px;
+    margin-top: -10px;
+  }
+  .hobbies .hobby {
+    margin-top: -20px;
+    width: calc((93.8vw - 6.2vw));
+    max-width: calc((93.8px - 6.2px) * 19.2);
+    margin-bottom: 40px;
   }
 }
 *,

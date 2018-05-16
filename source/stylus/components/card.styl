@@ -12,7 +12,7 @@
 	transition: 0.3s transform ease, 0.3s box-shadow ease
 	
 	.imagery {
-		max-height: unit(1920 * 0.355 * 4 / 3 - 148, 'px')
+		// max-height: unit(1920 * 0.355 * 4 / 3 - 148, 'px')
 		
 		img {
 			padding: 0
@@ -67,8 +67,8 @@
 	
 	.bottom-description {
 		position: absolute
-		bottom: 0
-		width: 200%
+		bottom: 10
+		width: 100%
 		height: 148px
 		background-color: clear-color
 		transform-origin: 50% 100%
@@ -101,6 +101,59 @@
   margin-top: 140px
 }
 
+@media (max-width: cards-width) {
+	.card {
+		.description {
+			height: 120px
+			
+			.wrapper {
+				width: 100% !important
+				margin-left: 6%
+				
+				h4 {
+	  			font-size: size-h6
+	  			line-height: 18px
+	  		}
+	  		
+	  		p {
+	  			font-size: size-l
+	  			line-height: 24px
+	  		}
+			}
+			
+			.indicator {
+  			width: 0px
+  		}
+		}
+		
+		.bottom-description {
+  		height: 120px
+  	}
+	}
+	
+	.linjer {
+  	margin-top: 100px
+	}
+}
+
+@media(max-width: medium-width) {
+	.card {
+		width: grid(1, 9)
+		margin-bottom: 52px
+		
+		.description {
+			.wrapper {
+				margin-left: 7%
+				
+				p {
+	  			font-size: size-m
+	  			line-height: 20px
+	  		}
+			}
+		}
+	}
+}
+
 @media (max-width: minimum-width) {
   .card {
   	width: grid(1, 19)
@@ -108,22 +161,10 @@
   	margin-bottom: 40px
   	
   	.description {
-  		height: 124px
+  		height: 116px
   		
   		.wrapper {
-  			width: 100% !important
-  			margin-left: 7%
-  			margin-top: -4px
-  			
-  			h4 {
-	  			font-size: size-h6
-	  			line-height: 24px
-	  		}
-	  		
-	  		p {
-	  			font-size: size-m
-	  			line-height: 24px
-	  		}
+  			margin-left: 6%
   		}
   		
   		.indicator {
@@ -132,7 +173,7 @@
   	}
   	
   	.bottom-description {
-  		height: 124px
+  		height: 116px
   	}
   	
   	.arrow, .soon {
@@ -143,4 +184,30 @@
   .linjer {
   	margin-top: 0px
 	}
+}
+
+@media (max-width: phone-width) {
+  .card {
+  	.description {
+  		height: 100px
+  		
+  		.wrapper {
+  			margin-left: 7%
+  			
+  			h4 {
+	  			font-size: size-p
+	  			line-height: 18px
+	  		}
+  			
+  			p {
+	  			font-size: size-s
+	  			line-height: 20px
+	  		}
+  		}
+  	}
+  	
+  	.bottom-description {
+  		height: 100px
+  	}
+  }
 }

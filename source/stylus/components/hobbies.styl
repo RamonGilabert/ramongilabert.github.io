@@ -32,16 +32,17 @@
 	}
 }
 
-@media (max-width: minimum-width) {
+@media (max-width: median-width) {
 	.hobbies {
 		align-content: flex-start
-		height: 1000px
-		margin-top: 40px
+		height: 650px
+		margin-top: 0px
 		
 		.hobby {
-			width: grid(1, 19)
+			width: grid(2, 11)
+			max-width: max-grid(2, 11)
 			flex-direction: column
-			margin-bottom: 40px
+			margin-bottom: 80px
 			
 			.mono {
 				margin-bottom: 12px
@@ -49,11 +50,34 @@
 			
 			.pieces {
 				.text {
-					font-size: size-l
-					line-height: 28px
+					font-size: size-p
+					line-height: 32px
 					margin-bottom: 8px
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: medium-width) {
+	.hobbies {
+		.hobby {
+			width: grid(1, 11)
+			max-width: max-grid(1, 11)
+		}
+	}
+}
+
+@media (max-width: minimum-width) {
+	.hobbies {
+		height: 1000px
+		margin-top: -10px
+		
+		.hobby {
+			margin-top: -20px
+			width: grid(1, 19)
+			max-width: max-grid(1, 19)
+			margin-bottom: 40px
 		}
 	}
 }
