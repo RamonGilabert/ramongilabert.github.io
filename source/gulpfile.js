@@ -28,6 +28,8 @@ gulp.task('mustache', function() {
       introduction: 'mustache/partials/introduction.mustache',
       image: 'mustache/partials/image.mustache',
       text: 'mustache/partials/text.mustache',
+      transition: 'mustache/partials/transition.mustache',
+      transition: 'mustache/partials/proposition.mustache',
     }))
     .pipe(gulp.dest('../public'))
 });
