@@ -29,7 +29,7 @@ gulp.task('mustache', function() {
       image: 'mustache/partials/image.mustache',
       text: 'mustache/partials/text.mustache',
       transition: 'mustache/partials/transition.mustache',
-      transition: 'mustache/partials/proposition.mustache',
+      proposition: 'mustache/partials/proposition.mustache',
     }))
     .pipe(gulp.dest('../public'))
 });

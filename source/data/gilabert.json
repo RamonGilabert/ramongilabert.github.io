@@ -45,7 +45,8 @@
           "order" : 1,
           "class" : "redbull",
           "title" : "Red Bull TV",
-          "image" : "images/projects/redbull.jpg",
+          "image" : "images/projects/redbull/redbull.jpg",
+          "link" : "javascript:void(0)",
           "subtitle" : "Exploring the TV of the future",
           "case" : false
         },
@@ -53,7 +54,8 @@
           "order" : 3,
           "class" : "linjer",
           "title" : "Linjer",
-          "image" : "images/projects/linjer.jpg",
+          "image" : "images/projects/linjer/linjer.jpg",
+          "link" : "./linjer.html",
           "subtitle" : "Increasing metrics for this handmade brand",
           "case" : true
         },
@@ -61,7 +63,8 @@
           "order" : 2,
           "class" : "aparcat",
           "title" : "Aparcat",
-          "image" : "images/projects/aparcat.jpg",
+          "image" : "images/projects/aparcat/aparcat.jpg",
+          "link" : "./aparcat.html",
           "subtitle" : "Encouraging sustainable parking in the city",
           "case" : true
         },
@@ -69,7 +72,8 @@
           "order" : 4,
           "class" : "manjaras",
           "title" : "Manjaras",
-          "image" : "images/projects/manjaras.jpg",
+          "image" : "images/projects/manjaras/manjaras.jpg",
+          "link" : "./manjaras.html",
           "subtitle" : "On demand local food delivery in Dubai",
           "case" : true
         }
@@ -164,6 +168,367 @@
           ]
         }
       ]
+    }
+  },
+
+  "linjer" : {
+    "navigation" : {
+      "image" : "images/navigation/owl.svg",
+      "central" : [
+        {
+          "title" : "Overview",
+          "link" : "overview-link"
+        },
+        {
+          "title" : "Problem",
+          "link" : "problem-link"
+        },
+        {
+          "title" : "Solution",
+          "link" : "solution-link"
+        }
+      ],
+      "right" : [
+        {
+          "title" : "Contact",
+          "link" : "#",
+          "class" : "email"
+        }
+      ]
+    },
+
+    "title" : "Linjer",
+    "first" : "Linjer is a Norwegian studio that offers beautifully design and handmade products. Roman, a co-founder, reached out to me to do an audit of their website and boost their conversion rate for present and future products.",
+    "second" : "After running complete audits and evaluations, and to put their designs into the foreground, we decided to create content which would be used as the key selling point of their brand, offering the homepage as the driver of sales.",
+    "image" : "images/projects/aparcat.jpg",
+    "propositions" : [
+      {
+        "title" : "Beginning",
+        "lines" : [
+          {
+            "text" : "Users don’t go to detail pages"
+          },
+          {
+            "text" : "People don’t see the full breath"
+          },
+          {
+            "text" : "Checkout has too many steps"
+          },
+          {
+            "text" : "Adding straps is a tedious process"
+          }
+        ]
+      },
+      {
+        "title" : "Results",
+        "lines" : [
+          {
+            "text" : "User conversion up by 75%"
+          },
+          {
+            "text" : "User engagement up by 50%"
+          },
+          {
+            "text" : "Blog posts get users engaged"
+          },
+          {
+            "text" : "Simplified checkout and complements"
+          }
+        ]
+      }
+    ],
+
+    "overview" : {
+      "title" : "Overview",
+      "paragraphs" : [
+        {
+          "text" : "When starting with the audit of the page, the goal was to specify why users weren’t converting from the homepage to the the product detail pages, and why weren’t they getting the full breath of content that Linjer had."
+        },
+        {
+          "text" : "A heuristic evaluation helped display that the number of user journeys from one one place to the other was limited due to the fact that there were only two call to actions to products."
+        },
+        {
+          "text" : "In that time, I also realized that, even if the brand was very active in social media sharing stories about their products and successes in third party apps, they weren’t sharing content from their own site, there was a possibility to sell products through content."
+        }
+      ],
+      "image" : "images/projects/aparcat.jpg"
+    },
+
+    "problem" : {
+      "title" : "The Problem",
+      "paragraphs" : [
+        {
+          "text" : "The problem was framed as not converting enough users from the most visited page—home, to their checkout—but analyzing the flows it was clear that, not only we needed to uncover more user journeys and display content as the key selling point of their brand, but we also needed to improve the checkout flow and simplify the addition of complements, straps or just the change of sizing of specific objects."
+        },
+        {
+          "text" : "I also defined the need to display the bull breath of the brand right in the homepage with a contextual menu that would show all the products that Linjer designs, encouraging then user journeys, not to the collection pages, but to the detail pages instead."
+        }
+      ],
+      "image" : "images/projects/aparcat.jpg"
+    },
+
+    "solution" : {
+      "title" : "Solution",
+      "paragraphs" : [
+        {
+          "text" : "The solution included an array of fixes to the current site’s taxonomy and content structure, as well as different visual treatments to components such as the menu, the home page, or the checkout itself."
+        },
+        {
+          "text" : "As for the content structure, we decided to feature looks and blog posts from the brand to display proximity with clients, and as for the taxonomy, we decided to clean up their past categorization of products into a cleaner menu that would be easier to understand."
+        }
+      ],
+      "image" : "images/projects/aparcat.jpg"
+    },
+
+    "visuals" : {
+      "title" : "Visuals",
+      "paragraphs" : [
+        {
+          "text" : "Not only we cleaned the information presented to users, but we created a reason for users to come back to the app by featuring popular content that they could buy right from the home page. We also highlighted blog posts about their process, humanizing the brand and making it relatable."
+        },
+        {
+          "text" : "As for the checkout flows, we cleaned the amount of information that was displayed and we treated every page as a landing page of content. We added recommended straps down below and cleaned a rather confusing sizing guide that users reported multiple times."
+        }
+      ]
+    },
+
+    "footer" : {
+      "first-card" : "manjaras",
+      "second-card" : "aparcat"
+    }
+  },
+
+  "manjaras" : {
+    "navigation" : {
+      "image" : "images/navigation/owl.svg",
+      "central" : [
+        {
+          "title" : "Overview",
+          "link" : "overview-link"
+        },
+        {
+          "title" : "Chefs",
+          "link" : "problem-link"
+        },
+        {
+          "title" : "Onboard",
+          "link" : "solution-link"
+        }
+      ],
+      "right" : [
+        {
+          "title" : "Contact",
+          "link" : "#",
+          "class" : "email"
+        }
+      ]
+    },
+
+    "title" : "Manjaras",
+    "first" : "Manjaras is a small startup from Dubai that contacted me to design their first product. They had the ambitious goal to have two separate apps that would let people have a personal trainer right in their finger tips.",
+    "second" : "Because there was no product before, we weren’t able to perform heuristic evaluations, but we were able to get some benchmarking and user research done to design the best initial product at launch.",
+    "image" : "images/projects/aparcat.jpg",
+    "propositions" : [
+      {
+        "title" : "Planning",
+        "lines" : [
+          {
+            "text" : "App for chefs and costumers"
+          },
+          {
+            "text" : "Designs delivered in a month"
+          },
+          {
+            "text" : "Illustration and branding work"
+          },
+          {
+            "text" : "Benchmarked experience"
+          }
+        ]
+      },
+      {
+        "title" : "Results",
+        "lines" : [
+          {
+            "text" : "Positive user feedback at launch"
+          },
+          {
+            "text" : "Successful hand-off developer document"
+          },
+          {
+            "text" : "Chef and consumer apps talk seamlessly"
+          },
+          {
+            "text" : "Region specific features delivered"
+          }
+        ]
+      }
+    ],
+
+    "overview" : {
+      "title" : "Overview",
+      "paragraphs" : [
+        {
+          "text" : "There were two separate apps that needed to be built and needed to share a cohesive system that would interconnect them with each other. Because of that, to get started, I gathered all the user insight and started drawing the key screens that needed to be designed."
+        },
+        {
+          "text" : "Those were the discover screen, which would allow users to get an overview of what the product offers, a recipes screen, to get inspired and be able to do the meals yourself, and the order summaries."
+        },
+        {
+          "text" : "The app would have a tab bar as the main navigational element with the key screens in each app."
+        }
+      ],
+      "image" : "images/projects/aparcat.jpg"
+    },
+
+    "problem" : {
+      "title" : "The Chefs",
+      "paragraphs" : [
+        {
+          "text" : "Chefs needed an app too, and instead of favoring discoverability, in this case the app needed to feature clarity and information. They needed to edit recipes, edit their menu, see their orders and open and close the kitchen."
+        },
+        {
+          "text" : "We condensed all those features into three tabs that would include all those key screens. The app would still share some of the design traits of the consumer app, but would also allow chefs to edit and retouch as much as they wanted."
+        },
+        {
+          "text" : "In order to minimize waiting time, the orders screen was set as the initial screen."
+        }
+      ],
+      "image" : "images/projects/aparcat.jpg"
+    },
+
+    "solution" : {
+      "title" : "Solution",
+      "paragraphs" : [
+        {
+          "text" : "The onboarding needed to show the full breath of the app and its personality in just three screens—we followed the rule of three that Steve Jobs liked to mention to allow users to quickly scan the key selling points of the app, and get them directly into content without having to log in."
+        },
+        {
+          "text" : "User authentication would be required once users wanted to proceed with their cart. We saw a very good reception of this feature and a great amount of conversion."
+        }
+      ]
+    },
+
+    "footer" : {
+      "first-card" : "linjer",
+      "second-card" : "aparcat"
+    }
+  },
+
+  "aparcat" : {
+    "navigation" : {
+      "image" : "images/navigation/owl.svg",
+      "central" : [
+        {
+          "title" : "Overview",
+          "link" : "overview-link"
+        },
+        {
+          "title" : "Problem",
+          "link" : "problem-link"
+        },
+        {
+          "title" : "Focus",
+          "link" : "solution-link"
+        }
+      ],
+      "right" : [
+        {
+          "title" : "Contact",
+          "link" : "#",
+          "class" : "email"
+        }
+      ]
+    },
+
+    "title" : "Aparcat",
+    "first" : "Aparcat started in 2015 as a web app that would reserve parking spots around the buildings of Dubai, however, in 2017, it was time for them to enter the mobile market, so they reached out to me for their first design.",
+    "second" : "Their branding also needed a refresh that, together with the launch, would bring new users in a market that is starting to get saturated in the Arabic countries. Together with their technology, though, Aparcat would become #1.",
+    "image" : "images/projects/aparcat.jpg",
+    "propositions" : [
+      {
+        "title" : "Planning",
+        "lines" : [
+          {
+            "text" : "App needs to be usable on the go"
+          },
+          {
+            "text" : "App needs some security features"
+          },
+          {
+            "text" : "Refresh in the current branding"
+          },
+          {
+            "text" : "Benchmark with competitors"
+          }
+        ]
+      },
+      {
+        "title" : "Results",
+        "lines" : [
+          {
+            "text" : "Increased number of users at launch"
+          },
+          {
+            "text" : "Overall positive reviews on the stores"
+          },
+          {
+            "text" : "Mobile apps bring new hardware features"
+          },
+          {
+            "text" : "Most advanced parking startup of 2017"
+          }
+        ]
+      }
+    ],
+
+    "overview" : {
+      "title" : "Overview",
+      "paragraphs" : [
+        {
+          "text" : "Aparcat was pitched as an app that needed to be used on the go, as quickly and intuitively as possible for people to just open their phones in the middle of their cities, and find a parking around."
+        },
+        {
+          "text" : "Because of that, big imagery and a huge map welcomes users in the initial screen of the app, which allows them to find their geolocalized spot, select it, order their parking, and go."
+        },
+        {
+          "text" : "In the parking spot, they’ll be able to scan a QR code which will unlock the barriers—but not only that, since they’ll be able to extend their stay at any parking right from the app’s personalized screen. In order to accomplish all that, hardware and software need to collaborate together in the best way possible."
+        }
+      ],
+      "image" : "images/projects/aparcat.jpg"
+    },
+
+    "problem" : {
+      "title" : "Organizing",
+      "paragraphs" : [
+        {
+          "text" : "One of the requirements of the app was that Android and iOS needed to share the design, and, because the main interactions would happen on a map and on the go, we decided to use a hamburger menu that would live always on top."
+        },
+        {
+          "text" : "To make it simple and easy for drivers, all the interactions on the map would be swipeable and non obtrusive, that is, parkings would slide from the bottom, and confirmation screens would dismiss automatically after a certain ammount of seconds."
+        },
+        {
+          "text" : "Contextual buttons are always positioned floating at the bottom and with a prominent background color."
+        }
+      ],
+      "image" : "images/projects/aparcat.jpg"
+    },
+
+    "solution" : {
+      "title" : "Focus",
+      "paragraphs" : [
+        {
+          "text" : "Not all parts of the app were thought to be used on the go, and purposefully there were sections that were designed to take time to use and consider, one example is the control center, due to regulations in Dubai, cars needed to be registered and verified. Because of that, a picture of the car is necessary, and choosing your license plate and the city of such license is as well."
+        },
+        {
+          "text" : "Another example is the view in which users can see the size of the parking spot and rent it from there."
+        }
+      ]
+    },
+
+    "footer" : {
+      "first-card" : "linjer",
+      "second-card" : "manjaras"
     }
   }
 }

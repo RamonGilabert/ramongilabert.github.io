@@ -561,10 +561,15 @@ nav a {
 }
 @media (max-width: 850px) {
   .hero {
-    padding-top: 160px !important;
+    padding-top: 192px !important;
   }
   .hero .text {
+    margin-bottom: 160px !important;
     width: 100% !important;
+  }
+  .hero .text p {
+    font-size: 17.77777777777778px !important;
+    line-height: 30px !important;
   }
   .hero .illustration {
     display: none;
@@ -572,7 +577,7 @@ nav a {
 }
 @media (max-width: 1300px) {
   .hero {
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 40px;
   }
   .hero .text {
@@ -580,15 +585,15 @@ nav a {
     width: calc((47.9vw - 6.2vw));
   }
   .hero .text p {
-    font-size: 17.77777777777778px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 36px;
   }
 }
 @media (max-width: 1450px) {
   .hero .text h1 {
-    font-size: 36.0406494140625px;
+    font-size: 40.54573059082031px;
     margin-bottom: 12px;
-    line-height: 36px;
+    line-height: 44px;
   }
   .hero .text p {
     font-size: 20px;
@@ -648,7 +653,7 @@ nav a {
   position: relative;
   overflow: hidden;
   transition: 0.3s transform ease;
-  top: -4px;
+  top: -1px;
   width: 16%;
 }
 .card .description .soon,

@@ -16,27 +16,28 @@ const scroller = new Scroller();
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
+  load.prepare(); // REMOVE THIS
 
-  const white = document.class('transition');
-  setTimeout(function() {
-    white.style.transition = displaying;
+  // const white = document.class('transition');
+  // setTimeout(function() {
+  //   white.style.transition = displaying;
 
-    setTimeout(function() {
-      load.prepare();
-      white.style.transform = 'translateX(300%)';
+  //   setTimeout(function() {
+  //     load.prepare();
+  //     white.style.transform = 'translateX(300%)';
 
-      setTimeout(function() {
-        white.style.display = 'none';
-      }, 4000);
-    }, 200);
-  }, 0);
+  //     setTimeout(function() {
+  //       white.style.display = 'none';
+  //     }, 4000);
+  //   }, 200);
+  // }, 0);
 
   // hover.watch();
 });
 
 window.addEventListener('load', function() {
   loader.run();
-  // transition.prepare();
+  //transition.prepare();
 
   setupAnalytics();
 });
@@ -57,10 +58,10 @@ function Load() {
 function Loader() {
 
   this.images = [
-    './images/projects/redbull.jpg',
-    './images/projects/linjer.jpg',
-    './images/projects/aparcat.jpg',
-    './images/projects/manjaras.jpg'
+    './images/projects/redbull/redbull.jpg',
+    './images/projects/linjer/linjer.jpg',
+    './images/projects/aparcat/aparcat.jpg',
+    './images/projects/manjaras/manjaras.jpg'
   ]
 
   this.loaded = [];
@@ -175,8 +176,13 @@ function Resizer() {
         card.style.height = calculation + 'px';
       }
 
-      container.style.height = containerHeight + 'px';
-      social.style.marginLeft = variable * 0.846 + 'px';
+      if (lives(container)) {
+        container.style.height = containerHeight + 'px';
+      }
+
+      if (lives(social)) {
+        social.style.marginLeft = variable * 0.846 + 'px';
+      }
     }
 
     calculate();
@@ -240,27 +246,42 @@ function Parallax() {
 function Scroller() {
 
   this.run = function() {
+    var first = document.class('overview-link');
+    var second = document.class('problem-link');
+    var third = document.class('solution-link');
+    var top = 'overview';
+    var middle = 'problem';
+    var bottom = 'solution';
+
     if (exists('myself')) {
-      const work = document.class('work-link');
-      const about = document.class('about-link');
-      const social = document.class('social-link');
+      first = document.class('work-link');
+      second = document.class('about-link');
+      third = document.class('social-link');
+      top = 'projects';
+      middle = 'personal';
+      bottom = 'personal';
+    }
 
-      work.removeEventListener('click', move);
-      work.addEventListener('click', move);
-      about.removeEventListener('click', scroll);
-      about.addEventListener('click', scroll);
-      social.removeEventListener('click', scroll);
-      social.addEventListener('click', scroll);
+    first.removeEventListener('click', move);
+    first.addEventListener('click', move);
+    second.removeEventListener('click', scroll);
+    second.addEventListener('click', scroll);
+    third.removeEventListener('click', below);
+    third.addEventListener('click', below);
 
-      function move() {
-        const projects = contentOffset(document.class('projects'));
-        scrollTo(projects - 150, 750);
-      }
+    function move() {
+      const container = contentOffset(document.class(top));
+      scrollTo(container - 150, 750);
+    }
 
-      function scroll() {
-        const personal = contentOffset(document.class('personal'));
-        scrollTo(personal - 150, 1500);
-      }
+    function scroll() {
+      const container = contentOffset(document.class(middle));
+      scrollTo(container - 150, 1500);
+    }
+
+    function below() {
+      const container = contentOffset(document.class(bottom));
+      scrollTo(container - 150, 1500);
     }
 
     const threshold = 400;
@@ -385,7 +406,7 @@ function Transition() {
       if (element === null) { return }
       if (element.classList.contains('external') === true) { return }
 
-      if (element.classList.contains('navigation')) {
+      if (element.classList.contains('direction')) {
         event.preventDefault();
 
         var url = element.href;
@@ -422,13 +443,13 @@ function Transition() {
           white.style.transition = 'none';
 
           setTimeout(function() {
-            white.style.transform = 'translateY(100%)';
+            white.style.transform = 'translateX(300%)';
 
             setTimeout(function() {
               white.style.transition = displaying;
 
               setTimeout(function() {
-                white.style.transform = 'translateY(0%)';
+                white.style.transform = 'translateX(0%)';
               }, 20);
             }, 15);
           }, 10);
@@ -441,11 +462,11 @@ function Transition() {
           setTimeout(function() {
             load.prepare();
             window.scrollTo(0, 0);
-            black.style.transform = 'translateY(-100%)';
+            black.style.transform = 'translateY(-300%)';
 
             setTimeout(function() {
               black.style.display = 'none';
-            }, 500);
+            }, 2000);
           }, 10);
         }, 500);
       });
