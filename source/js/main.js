@@ -2,7 +2,7 @@
 
 // MARK: - General values
 
-const displaying = '1s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+const displaying = '1.6s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
 const load = new Load();
 const transition = new Transition();
