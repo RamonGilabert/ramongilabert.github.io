@@ -1,0 +1,59 @@
+footer {
+  padding-top: 180px;
+}
+footer .mono {
+  position: relative;
+  line-height: 1;
+  margin-left: -12.4%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-450px);
+  backface-visibility: hidden;
+  z-index: 1;
+}
+footer .footer-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-cards .card {
+  max-width: grid(2, 9);
+}
+footer .bottom {
+  height: auto;
+  margin-top: 168px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+footer .bottom .home {
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+footer .bottom .home img {
+  width: 36px;
+  height: 36px;
+}
+footer .bottom .home:hover {
+  transform: scale(0.97);
+}
+footer .bottom .links {
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  margin-top: 116px;
+  white-space: nowrap;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer .bottom .links a,
+footer .bottom .links p {
+  font-family: 'Styrene B Web';
+  font-weight: 500;
+  font-size: size-s;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}

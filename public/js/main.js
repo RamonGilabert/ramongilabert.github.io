@@ -108,6 +108,10 @@ function Resizer() {
 
   this.run = function() {
     const boxes = document.classes('box');
+    const rights = document.classes('proof-right');
+    const lefts = document.classes('proof-left');
+    const fulls = document.classes('full');
+    const backgrounds = document.classes('full-box');
     const cards = document.classes('imagery');
     const container = document.class('cards');
     const navigation = document.class('navigation-wrapper');
@@ -117,21 +121,47 @@ function Resizer() {
     window.removeEventListener('resize', calculate);
     window.addEventListener('resize', calculate);
 
-    function calculate() {
-      for (var i = 0; i < boxes.length; i++) {
-        const box = boxes[i];
+    function iterate(properties, value, should = false) {
+      for (var i = 0; i < properties.length; i++) {
+        const proof = properties[i];
         
         if (window.innerWidth > 1920) {
-          box.style.marginLeft = '-' + ((window.innerWidth - 1920) / 2 + (19.2 * 12.4)) + 'px';
-          box.style.width = ((window.innerWidth - 1920) / 2 + (19.2 * 93.8)) + 'px';
+          proof.style.marginLeft = '-' + ((window.innerWidth - 1920) / 2 + (19.2 * 12.4)) + 'px';
+          proof.style.width = ((window.innerWidth - 1920) / 2 + (19.2 * value)) + 'px';
+
+          if (value == 100) {
+            proof.style.width = '100vw';
+          }
+
+          if (should == true) {
+            proof.style.marginLeft = '0px';
+            proof.style.width = ((window.innerWidth - 1920) / 2 + (19.2 * 87.6)) + 'px';
+          }
         } else if (window.innerWidth < 1300) {
-          box.style.marginLeft = '-6.2vw';
-          box.style.width = '100vw';
+          proof.style.marginLeft = '-6.2vw';
+          proof.style.width = '100vw';
         } else if (window.innerWidth < 1920) {
-          box.style.marginLeft = '-12.4vw';
-          box.style.width = 93.9 + 'vw';
+          proof.style.marginLeft = '-12.4vw';
+          proof.style.width = 93.9 + 'vw';
+
+          if (value == 100) {
+            proof.style.width = '100vw';
+          }
+
+          if (should == true) {
+            proof.style.marginLeft = '0px';
+            proof.style.width = 87.6 + 'vw';
+          }
         }
       }
+    }
+
+    function calculate() {
+      iterate(boxes, 93.8, false);
+      iterate(rights, 93.8, true);
+      iterate(lefts, 93.8, false);
+      iterate(fulls, 100, false);
+      iterate(backgrounds, 100, false);
 
       var variable = window.innerWidth;
       var factor = 4 / 3;

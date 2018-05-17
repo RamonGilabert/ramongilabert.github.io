@@ -129,6 +129,65 @@ p a {
   top: 55%;
   transition: top 0.3s ease;
 }
+footer {
+  padding-top: 180px;
+}
+footer .mono {
+  position: relative;
+  line-height: 1;
+  margin-left: -12.4%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-450px);
+  backface-visibility: hidden;
+  z-index: 1;
+}
+footer .footer-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-cards .card {
+  max-width: grid(2, 9);
+}
+footer .bottom {
+  height: auto;
+  margin-top: 168px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+footer .bottom .home {
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+footer .bottom .home img {
+  width: 36px;
+  height: 36px;
+}
+footer .bottom .home:hover {
+  transform: scale(0.97);
+}
+footer .bottom .links {
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  margin-top: 116px;
+  white-space: nowrap;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer .bottom .links a,
+footer .bottom .links p {
+  font-family: 'Styrene B Web';
+  font-weight: 500;
+  font-size: 14.046639231824416px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
 .row {
   position: fixed;
   width: 100%;
@@ -411,6 +470,108 @@ p a {
     height: calc(100% + 100px);
   }
 }
+.introduction {
+  padding-top: 280px;
+  margin-bottom: 220px;
+}
+.introduction h1 {
+  line-height: 52px;
+  margin-bottom: 20px;
+}
+.introduction .paragraphs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.introduction .paragraphs .wrap {
+  margin-right: 100px;
+  max-width: 520px;
+}
+.proof-right,
+.proof-left,
+.full {
+  position: relative;
+  z-index: 2;
+}
+.proof-right img,
+.proof-left img,
+.full img {
+  width: 100%;
+}
+.casing {
+  position: relative;
+  margin-top: 180px;
+  padding-bottom: 144px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+.casing .full-box {
+  position: absolute;
+  width: 100vw;
+  background-color: #f5f2f0;
+  z-index: 0;
+  top: -200px;
+  bottom: 0;
+}
+.casing .mono {
+  position: relative;
+  width: 100px;
+  margin-top: 5px;
+  margin-right: 260px;
+  z-index: 2;
+}
+.casing .text {
+  position: relative;
+  width: 600px;
+  margin-bottom: 28px;
+  z-index: 2;
+}
+.up {
+  margin-top: 100px;
+  padding-bottom: 160px;
+}
+.propositions {
+  position: relative;
+  margin-top: 120px;
+}
+.propositions .full-box {
+  position: absolute;
+  width: 100vw;
+  height: 712px;
+  background-color: #f5f2f0;
+  z-index: 0;
+  margin-top: -360px;
+}
+.propositions .wrap {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+.propositions .wrap .hobby {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: 120px;
+  width: calc((47.9vw - 12.4vw));
+  max-width: calc((47.9px - 12.4px) * 19.2);
+}
+.propositions .wrap .hobby .mono {
+  width: 50px;
+  margin-top: 4px;
+  margin-right: 136px;
+}
+.propositions .wrap .hobby .pieces .text {
+  margin-bottom: 16px;
+}
 nav {
   position: fixed;
   top: 0;
@@ -433,19 +594,6 @@ nav .navigation-wrapper {
   transform: translateX(-50%);
   position: relative;
 }
-nav .home {
-  order: 1;
-  text-align: left;
-  width: 100px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-nav .home:after {
-  opacity: 0;
-}
-nav .home:hover {
-  transform: scale(0.97);
-}
 nav .central {
   order: 2;
   text-align: center;
@@ -461,6 +609,19 @@ nav .right {
   order: 3;
   text-align: right;
   width: 100px;
+}
+nav .home {
+  order: 1;
+  text-align: left;
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+nav .home:after {
+  opacity: 0;
+}
+nav .home:hover {
+  transform: scale(0.97);
 }
 nav svg {
   width: 36px;

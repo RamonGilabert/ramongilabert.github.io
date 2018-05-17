@@ -1,2 +1,22 @@
-    <footer>
-    </footer>
+{{# footer }}
+<footer>
+	<p class='mono selection'>Related Pieces</p>
+	<div class='footer-cards'>
+		{{# cards }}
+		{{> card }}
+		{{/ cards }}
+	</div>
+	<div class='bottom'>
+		<a class='home' href='index.html'>
+	    <img src='./images/navigation/owl.svg' />
+	  </a>
+	  <div class='links'>
+	  	<a class='twitter' href='https://twitter.com/RamonGilabert' target='_blank'>Twitter</a>
+	  	<p>&nbsp;&middot;&nbsp;</p>
+	  	<a class='dribbble' href='https://dribbble.com/RamonGilabert' target='_blank'>Dribbble</a>
+	  	<p>&nbsp;&middot;&nbsp;</p>
+	  	<a class='linkedin' href='https://www.linkedin.com/in/ramongilabert/' target='_blank'>LinkedIn</a>
+	  </div>
+	</div>
+</footer>
+{{/ footer }}

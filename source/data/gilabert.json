@@ -200,11 +200,14 @@
     "title" : "Linjer",
     "first" : "Linjer is a Norwegian studio that offers beautifully design and handmade products. Roman, a co-founder, reached out to me to do an audit of their website and boost their conversion rate for present and future products.",
     "second" : "After running complete audits and evaluations, and to put their designs into the foreground, we decided to create content which would be used as the key selling point of their brand, offering the homepage as the driver of sales.",
-    "image" : "images/projects/aparcat.jpg",
+    "image" : {
+      "link" : "images/projects/linjer/introduction.jpg",
+      "class" : "proof-left"
+    },
     "propositions" : [
       {
         "title" : "Beginning",
-        "lines" : [
+        "pieces" : [
           {
             "text" : "Users don’t go to detail pages"
           },
@@ -221,7 +224,7 @@
       },
       {
         "title" : "Results",
-        "lines" : [
+        "pieces" : [
           {
             "text" : "User conversion up by 75%"
           },
@@ -251,7 +254,10 @@
           "text" : "In that time, I also realized that, even if the brand was very active in social media sharing stories about their products and successes in third party apps, they weren’t sharing content from their own site, there was a possibility to sell products through content."
         }
       ],
-      "image" : "images/projects/aparcat.jpg"
+      "image" : {
+        "link" : "images/projects/linjer/overview.jpg",
+        "class" : "proof-right"
+      }
     },
 
     "problem" : {
@@ -264,7 +270,10 @@
           "text" : "I also defined the need to display the bull breath of the brand right in the homepage with a contextual menu that would show all the products that Linjer designs, encouraging then user journeys, not to the collection pages, but to the detail pages instead."
         }
       ],
-      "image" : "images/projects/aparcat.jpg"
+      "image" : {
+        "link" : "images/projects/linjer/problem.jpg",
+        "class" : "proof-left"
+      }
     },
 
     "solution" : {
@@ -277,7 +286,10 @@
           "text" : "As for the content structure, we decided to feature looks and blog posts from the brand to display proximity with clients, and as for the taxonomy, we decided to clean up their past categorization of products into a cleaner menu that would be easier to understand."
         }
       ],
-      "image" : "images/projects/aparcat.jpg"
+      "image" : {
+        "link" : "images/projects/linjer/solution.jpg",
+        "class" : "proof-right"
+     }
     },
 
     "visuals" : {
@@ -289,12 +301,28 @@
         {
           "text" : "As for the checkout flows, we cleaned the amount of information that was displayed and we treated every page as a landing page of content. We added recommended straps down below and cleaned a rather confusing sizing guide that users reported multiple times."
         }
-      ]
+      ],
+      "box": true,
+      "class": "up"
     },
 
     "footer" : {
-      "first-card" : "manjaras",
-      "second-card" : "aparcat"
+      "cards" : [
+        {
+          "title" : "Aparcat",
+          "image" : "images/projects/aparcat/aparcat.jpg",
+          "link" : "./aparcat.html",
+          "subtitle" : "Encouraging sustainable parking in the city",
+          "case" : true
+        },
+        {
+          "title" : "Manjaras",
+          "image" : "images/projects/manjaras/manjaras.jpg",
+          "link" : "./manjaras.html",
+          "subtitle" : "On demand local food delivery in Dubai",
+          "case" : true
+        }
+      ]
     }
   },
 
@@ -327,11 +355,14 @@
     "title" : "Manjaras",
     "first" : "Manjaras is a small startup from Dubai that contacted me to design their first product. They had the ambitious goal to have two separate apps that would let people have a personal trainer right in their finger tips.",
     "second" : "Because there was no product before, we weren’t able to perform heuristic evaluations, but we were able to get some benchmarking and user research done to design the best initial product at launch.",
-    "image" : "images/projects/aparcat.jpg",
+    "image" : {
+      "link" : "images/projects/manjaras/introduction.jpg",
+      "class" : "full"
+    },
     "propositions" : [
       {
         "title" : "Planning",
-        "lines" : [
+        "pieces" : [
           {
             "text" : "App for chefs and costumers"
           },
@@ -348,7 +379,7 @@
       },
       {
         "title" : "Results",
-        "lines" : [
+        "pieces" : [
           {
             "text" : "Positive user feedback at launch"
           },
@@ -378,7 +409,10 @@
           "text" : "The app would have a tab bar as the main navigational element with the key screens in each app."
         }
       ],
-      "image" : "images/projects/aparcat.jpg"
+      "image" : {
+        "link" : "images/projects/manjaras/overview.jpg",
+        "class" : "full"
+      }
     },
 
     "problem" : {
@@ -394,7 +428,10 @@
           "text" : "In order to minimize waiting time, the orders screen was set as the initial screen."
         }
       ],
-      "image" : "images/projects/aparcat.jpg"
+      "image" : {
+        "link" : "images/projects/manjaras/problem.jpg",
+        "class" : "full"
+      }
     },
 
     "solution" : {
@@ -406,12 +443,28 @@
         {
           "text" : "User authentication would be required once users wanted to proceed with their cart. We saw a very good reception of this feature and a great amount of conversion."
         }
-      ]
+      ],
+      "box": true,
+      "class": "up"
     },
 
     "footer" : {
-      "first-card" : "linjer",
-      "second-card" : "aparcat"
+      "cards" : [
+        {
+          "title" : "Linjer",
+          "image" : "images/projects/linjer/linjer.jpg",
+          "link" : "./linjer.html",
+          "subtitle" : "Increasing metrics for this handmade brand",
+          "case" : true
+        },
+        {
+          "title" : "Manjaras",
+          "image" : "images/projects/manjaras/manjaras.jpg",
+          "link" : "./manjaras.html",
+          "subtitle" : "On demand local food delivery in Dubai",
+          "case" : true
+        }
+      ]
     }
   },
 
@@ -444,11 +497,14 @@
     "title" : "Aparcat",
     "first" : "Aparcat started in 2015 as a web app that would reserve parking spots around the buildings of Dubai, however, in 2017, it was time for them to enter the mobile market, so they reached out to me for their first design.",
     "second" : "Their branding also needed a refresh that, together with the launch, would bring new users in a market that is starting to get saturated in the Arabic countries. Together with their technology, though, Aparcat would become #1.",
-    "image" : "images/projects/aparcat.jpg",
+    "image" : {
+      "link" : "images/projects/aparcat/introduction.jpg",
+      "class" : "full"
+    },
     "propositions" : [
       {
         "title" : "Planning",
-        "lines" : [
+        "pieces" : [
           {
             "text" : "App needs to be usable on the go"
           },
@@ -465,7 +521,7 @@
       },
       {
         "title" : "Results",
-        "lines" : [
+        "pieces" : [
           {
             "text" : "Increased number of users at launch"
           },
@@ -495,7 +551,10 @@
           "text" : "In the parking spot, they’ll be able to scan a QR code which will unlock the barriers—but not only that, since they’ll be able to extend their stay at any parking right from the app’s personalized screen. In order to accomplish all that, hardware and software need to collaborate together in the best way possible."
         }
       ],
-      "image" : "images/projects/aparcat.jpg"
+      "image" : {
+        "link" : "images/projects/aparcat/overview.jpg",
+        "class" : "full"
+      }
     },
 
     "problem" : {
@@ -511,7 +570,10 @@
           "text" : "Contextual buttons are always positioned floating at the bottom and with a prominent background color."
         }
       ],
-      "image" : "images/projects/aparcat.jpg"
+      "image" : {
+        "link" : "images/projects/aparcat/problem.jpg",
+        "class" : "full"
+      }
     },
 
     "solution" : {
@@ -523,12 +585,28 @@
         {
           "text" : "Another example is the view in which users can see the size of the parking spot and rent it from there."
         }
-      ]
+      ],
+      "box": true,
+      "class": "up"
     },
 
     "footer" : {
-      "first-card" : "linjer",
-      "second-card" : "manjaras"
+      "cards" : [
+        {
+          "title" : "Linjer",
+          "image" : "images/projects/linjer/linjer.jpg",
+          "link" : "./linjer.html",
+          "subtitle" : "Increasing metrics for this handmade brand",
+          "case" : true
+        },
+        {
+          "title" : "Manjaras",
+          "image" : "images/projects/manjaras/manjaras.jpg",
+          "link" : "./manjaras.html",
+          "subtitle" : "On demand local food delivery in Dubai",
+          "case" : true
+        }
+      ]
     }
   }
 }
