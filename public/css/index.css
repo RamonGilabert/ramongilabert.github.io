@@ -1233,13 +1233,14 @@ button:focus {
   clip: rect(0, 1px, 1px, 0);
 }
 .transition {
-  background-color: #f8f8f8;
+  background-color: #faca0c;
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 300;
+  overflow: auto;
   backface-visibility: hidden;
   transform: scale(1.00001), translateZ(0.00001);
   -webkit-transform: scale(1.00001), translateZ(0.00001);
@@ -1254,6 +1255,7 @@ button:focus {
   height: 100%;
   background-color: #faca0c;
   z-index: 300;
+  overflow: auto;
   backface-visibility: hidden;
   transform: scale(1.00001), translateZ(0.00001);
   -webkit-transform: scale(1.00001), translateZ(0.00001);
