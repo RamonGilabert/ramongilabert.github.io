@@ -503,9 +503,9 @@ function Transition() {
 
             setTimeout(function() {
               black.style.display = 'none';
-            }, 1600);
+            }, 2000);
           }, 10);
-        }, 1600);
+        }, 800);
       });
     }
 
