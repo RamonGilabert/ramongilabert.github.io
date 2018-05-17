@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         white.style.display = 'none';
       }, 4000);
-    }, 5);
+    }, 800);
   }, 0);
 
   // hover.watch();
