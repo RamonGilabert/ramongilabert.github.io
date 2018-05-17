@@ -16,28 +16,28 @@ const scroller = new Scroller();
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
-  load.prepare(); // REMOVE THIS
+  // load.prepare(); // REMOVE THIS
 
-  // const white = document.class('transition');
-  // setTimeout(function() {
-  //   white.style.transition = displaying;
+  const white = document.class('transition');
+  setTimeout(function() {
+    white.style.transition = displaying;
 
-  //   setTimeout(function() {
-  //     load.prepare();
-  //     white.style.transform = 'translateX(300%)';
+    setTimeout(function() {
+      load.prepare();
+      white.style.transform = 'translateX(300%)';
 
-  //     setTimeout(function() {
-  //       white.style.display = 'none';
-  //     }, 4000);
-  //   }, 200);
-  // }, 0);
+      setTimeout(function() {
+        white.style.display = 'none';
+      }, 4000);
+    }, 200);
+  }, 0);
 
   // hover.watch();
 });
 
 window.addEventListener('load', function() {
   loader.run();
-  //transition.prepare();
+  transition.prepare();
 
   setupAnalytics();
 });
@@ -469,8 +469,8 @@ function Transition() {
         const old = document.body;
         const white = document.class('transition');
         const title = wrapper.querySelector('title').innerHTML;
-        const content = wrapper.getElementsByTagName('body')[0];
-        const black = wrapper.getElementsByClassName('transition')[0];
+        const content = wrapper.tag('body');
+        const black = wrapper.class('transition');
 
         black.style.transition = displaying;
 
@@ -479,7 +479,7 @@ function Transition() {
           white.style.transition = 'none';
 
           setTimeout(function() {
-            white.style.transform = 'translateX(300%)';
+            white.style.transform = 'translateX(-300%)';
 
             setTimeout(function() {
               white.style.transition = displaying;
@@ -498,7 +498,7 @@ function Transition() {
           setTimeout(function() {
             load.prepare();
             window.scrollTo(0, 0);
-            black.style.transform = 'translateY(-300%)';
+            black.style.transform = 'translateX(300%)';
 
             setTimeout(function() {
               black.style.display = 'none';

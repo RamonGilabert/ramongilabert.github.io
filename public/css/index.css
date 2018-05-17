@@ -1245,8 +1245,9 @@ button:focus {
   position: relative;
   width: 200%;
   height: 100%;
-  right: 200%;
-  background-color: #f5f2f0;
+  transform: translateX(-100%);
+  background-color: #faca0c;
+  z-index: 300;
 }
 .lighter {
   background-color: white-color;
