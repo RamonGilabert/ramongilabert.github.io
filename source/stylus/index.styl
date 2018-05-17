@@ -60,15 +60,19 @@ button:focus {
   left: 0
   z-index: 300
   backface-visibility: hidden
+  -webkit-backface-visibility: hidden
+  -webkit-transform:translate3d(0, 0, 0)
   
   .secondary {
     position: relative
     width: 200%
     height: 100%
-    transform: translateX(-100%)
     background-color: background-running
     z-index: 300
     backface-visibility: hidden
+    -webkit-backface-visibility: hidden
+    -webkit-transform:translate3d(0, 0, 0)
+    transform: translateX(-100%)
   }
 }
 

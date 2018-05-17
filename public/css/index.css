@@ -1241,15 +1241,19 @@ button:focus {
   left: 0;
   z-index: 300;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .transition .secondary {
   position: relative;
   width: 200%;
   height: 100%;
-  transform: translateX(-100%);
   background-color: #faca0c;
   z-index: 300;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translateX(-100%);
 }
 .lighter {
   background-color: white-color;
