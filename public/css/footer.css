@@ -23,18 +23,18 @@ footer .footer-cards .card {
 footer .bottom {
   height: auto;
   margin-top: 168px;
-  margin-bottom: 200px;
+  margin-bottom: 240px;
   text-align: center;
 }
 footer .bottom .home {
   margin: 0 auto;
-  transition: transform 0.3s ease;
 }
 footer .bottom .home img {
   width: 36px;
   height: 36px;
+  transition: transform 0.3s ease;
 }
-footer .bottom .home:hover {
+footer .bottom .home img:hover {
   transform: scale(0.97);
 }
 footer .bottom .links {
@@ -53,7 +53,7 @@ footer .bottom .links a,
 footer .bottom .links p {
   font-family: 'Styrene B Web';
   font-weight: 500;
-  font-size: size-s;
+  font-size: size-m;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
