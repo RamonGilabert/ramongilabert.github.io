@@ -480,13 +480,13 @@ function Transition() {
           white.style.transition = 'none';
 
           setTimeout(function() {
-            white.style.transform = 'translateX(-100%)';
+            white.style.transform = 'translateX(-50%)';
 
             setTimeout(function() {
               white.style.transition = displaying;
 
               setTimeout(function() {
-                white.style.transform = 'translateX(0%)';
+                white.style.transform = 'translateX(50%)';
               }, 600);
             }, 15);
           }, 10);
@@ -499,7 +499,7 @@ function Transition() {
           setTimeout(function() {
             load.prepare();
             window.scrollTo(0, 0);
-            black.style.transform = 'translateX(300%)';
+            black.style.transform = 'translateX(250%)';
 
             setTimeout(function() {
               black.style.display = 'none';
