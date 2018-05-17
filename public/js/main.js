@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // load.prepare(); // REMOVE THIS
 
   const white = document.class('transition');
+  white.classList.remove('invisible');
+
   setTimeout(function() {
     white.style.transition = displaying;
     load.prepare();
@@ -474,6 +476,7 @@ function Transition() {
         const black = wrapper.getElementsByClassName('transition')[0];
 
         black.style.transition = displaying;
+        black.classList.remove('invisible');
 
         setTimeout(function() {
           white.style.display = 'inline';
