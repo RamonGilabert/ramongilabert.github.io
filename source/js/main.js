@@ -60,8 +60,14 @@ function Loader() {
   this.images = [
     './images/projects/redbull/redbull.jpg',
     './images/projects/linjer/linjer.jpg',
+    './images/projects/linjer/introduction.jpg',
+    './images/projects/linjer/overview.jpg',
     './images/projects/aparcat/aparcat.jpg',
-    './images/projects/manjaras/manjaras.jpg'
+    './images/projects/aparcat/introduction.jpg',
+    './images/projects/aparcat/overview.jpg',
+    './images/projects/manjaras/manjaras.jpg',
+    './images/projects/manjaras/introduction.jpg',
+    './images/projects/manjaras/overview.jpg'
   ]
 
   this.loaded = [];
