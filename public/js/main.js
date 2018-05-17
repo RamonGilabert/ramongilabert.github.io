@@ -463,11 +463,12 @@ function Transition() {
     function page() {
       var url = window.location.href;
       fetch(url).then(function(response) {
+        const old = document.body;
+        const white = document.class('transition');
+
         var wrapper = document.createElement('html');
         wrapper.innerHTML = response;
 
-        const old = document.body;
-        const white = document.class('transition');
         const title = wrapper.querySelector('title').innerHTML;
         const content = wrapper.tag('body');
         const black = wrapper.class('transition');
@@ -479,14 +480,14 @@ function Transition() {
           white.style.transition = 'none';
 
           setTimeout(function() {
-            white.style.transform = 'translateX(-300%)';
+            white.style.transform = 'translateX(-100%)';
 
             setTimeout(function() {
               white.style.transition = displaying;
 
               setTimeout(function() {
                 white.style.transform = 'translateX(0%)';
-              }, 20);
+              }, 600);
             }, 15);
           }, 10);
         }, 5);
@@ -502,7 +503,7 @@ function Transition() {
 
             setTimeout(function() {
               black.style.display = 'none';
-            }, 2000);
+            }, 20000);
           }, 10);
         }, 500);
       });
