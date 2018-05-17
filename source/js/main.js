@@ -470,8 +470,8 @@ function Transition() {
         wrapper.innerHTML = response;
 
         const title = wrapper.querySelector('title').innerHTML;
-        const content = wrapper.tag('body');
-        const black = wrapper.class('transition');
+        const content = wrapper.getElementsByTagName('body')[0];
+        const black = wrapper.getElementsByClassName('transition')[0];
 
         black.style.transition = displaying;
 
