@@ -154,7 +154,7 @@ footer .footer-cards .card {
 footer .bottom {
   height: auto;
   margin-top: 168px;
-  margin-bottom: 240px;
+  margin-bottom: 260px;
   text-align: center;
 }
 footer .bottom .home {
@@ -163,10 +163,12 @@ footer .bottom .home {
 footer .bottom .home img {
   width: 36px;
   height: 36px;
+  transform: scale(1.05);
+  backface-visibility: hidden;
   transition: transform 0.3s ease;
 }
 footer .bottom .home img:hover {
-  transform: scale(0.97);
+  transform: translateZ(0) scale(1);
 }
 footer .bottom .links {
   width: 100%;
@@ -187,6 +189,51 @@ footer .bottom .links p {
   font-size: 15.802469135802468px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+@media (max-width: 900px) {
+  footer {
+    padding-top: 80px;
+  }
+  footer .footer-cards {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  footer .bottom {
+    margin-top: 168px;
+    margin-bottom: 240px;
+  }
+  footer .bottom .links {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 1300px) {
+  footer {
+    padding-top: 100px;
+  }
+  footer .bottom {
+    margin-top: 60px;
+    margin-bottom: 140px;
+  }
+  footer .bottom .links {
+    margin-top: 60px;
+  }
+  footer .bottom .links a {
+    font-size: 14.046639231824416px;
+  }
+}
+@media (max-width: 340px) {
+  footer .bottom .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .bottom .links a {
+    margin-bottom: 36px;
+  }
+  footer .bottom .links p {
+    display: none;
+  }
 }
 .row {
   position: fixed;
@@ -489,16 +536,19 @@ footer .bottom .links p {
   max-width: 520px;
 }
 @media (max-width: 700px) {
+  .introduction {
+    margin-bottom: 60px !important;
+  }
+  .introduction h1 {
+    font-size: 40.54573059082031px;
+    margin-bottom: 16px;
+    line-height: 44px;
+  }
   .introduction .paragraphs {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-  }
-  .introduction .paragraphs h1 {
-    font-size: 40.54573059082031px;
-    margin-bottom: 16px;
-    line-height: 44px;
   }
   .introduction .paragraphs .wrap p {
     margin-bottom: 16px;
@@ -506,7 +556,7 @@ footer .bottom .links p {
 }
 @media (max-width: 1300px) {
   .introduction {
-    padding-top: 200px;
+    padding-top: 192px;
     margin-bottom: 120px;
   }
   .introduction .paragraphs .wrap {
@@ -548,7 +598,6 @@ footer .bottom .links p {
 .casing .mono {
   position: relative;
   width: 100px;
-  margin-top: 5px;
   margin-right: 260px;
   z-index: 2;
 }
@@ -566,21 +615,75 @@ footer .bottom .links p {
   margin-top: 100px;
   padding-bottom: 160px;
 }
+@media (max-width: 700px) {
+  .casing {
+    margin-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+}
+@media (max-width: 900px) {
+  .casing {
+    flex-direction: column;
+  }
+  .casing .full-box {
+    position: absolute;
+    width: 100vw;
+    background-color: #f5f2f0;
+    z-index: 0;
+    height: 155%;
+    top: -50%;
+    bottom: -5%;
+  }
+  .casing .mono {
+    position: relative;
+    width: auto;
+    margin-right: 0px;
+    margin-bottom: 12px;
+    z-index: 2;
+  }
+  .casing .text {
+    width: 100%;
+  }
+}
+@media (max-width: 1300px) {
+  .casing {
+    margin-top: 140px;
+    padding-bottom: 140px;
+  }
+  .casing .mono {
+    position: relative;
+    width: 100%;
+    margin-right: 100px;
+    z-index: 2;
+  }
+  .casing .text {
+    font-size: 17.77777777777778px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 1300px) {
+  .casing {
+    margin-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 .propositions {
   position: relative;
   margin-top: 120px;
+  padding-bottom: 160px;
 }
 .propositions .full-box {
   position: absolute;
   width: 100vw;
-  height: 712px;
+  bottom: 0%;
   background-color: #f5f2f0;
   z-index: 0;
-  margin-top: -360px;
+  top: -180px;
 }
 .propositions .wrap {
   position: relative;
-  z-index: 1000;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -593,7 +696,7 @@ footer .bottom .links p {
   align-content: space-between;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  margin-bottom: 120px;
+  padding-bottom: 0px;
   width: calc((47.9vw - 12.4vw));
   max-width: calc((47.9px - 12.4px) * 19.2);
 }
@@ -604,14 +707,34 @@ footer .bottom .links p {
 .propositions .wrap .hobby .pieces .text {
   margin-bottom: 16px;
 }
+@media (max-width: 1450px) {
+  .propositions {
+    padding-bottom: 180px;
+  }
+}
+@media (max-width: 1300px) {
+  .propositions {
+    padding-bottom: 100px;
+  }
+  .propositions .wrap {
+    margin-top: -20px;
+    width: calc((93.8vw - 6.2vw));
+    max-width: calc((93.8px - 6.2px) * 19.2);
+    margin-bottom: 0px;
+  }
+  .propositions .wrap .hobby {
+    width: 50%;
+  }
+  .propositions .wrap .hobby .pieces .text {
+    font-size: 17.77777777777778px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+}
 @media (max-width: 900px) {
   .propositions {
-    height: auto;
     margin-top: 100px;
-  }
-  .propositions .full-box {
-    height: 700px;
-    margin-top: -150px;
+    padding-bottom: 60px;
   }
   .propositions .wrap {
     flex-direction: column;
@@ -620,7 +743,7 @@ footer .bottom .links p {
   .propositions .wrap .hobby {
     flex-direction: column;
     width: calc((93.8vw - 6.2vw)) !important;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
   .propositions .wrap .hobby .mono {
     width: 50px;
@@ -634,20 +757,13 @@ footer .bottom .links p {
     margin-bottom: 8px;
   }
 }
-@media (max-width: 1450px) {
+@media (max-width: 700px) {
+  .propositions {
+    margin-top: 60px;
+    padding-bottom: 20px;
+  }
   .propositions .wrap {
-    margin-top: -20px;
-    width: calc((93.8vw - 6.2vw));
-    max-width: calc((93.8px - 6.2px) * 19.2);
-    margin-bottom: 80px;
-  }
-  .propositions .wrap .hobby {
-    width: 50%;
-  }
-  .propositions .wrap .hobby .pieces .text {
-    font-size: 17.77777777777778px;
-    line-height: 30px;
-    margin-bottom: 8px;
+    margin-bottom: 6px !important;
   }
 }
 nav {
@@ -693,13 +809,15 @@ nav .home {
   text-align: left;
   width: 100px;
   cursor: pointer;
+  transform: scale(1.05);
   transition: transform 0.3s ease;
+  backface-visibility: hidden;
 }
 nav .home:after {
   opacity: 0;
 }
 nav .home:hover {
-  transform: scale(0.97);
+  transform: translateZ(0) scale(1);
 }
 nav svg {
   width: 36px;

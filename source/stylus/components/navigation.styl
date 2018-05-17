@@ -46,7 +46,9 @@ nav {
 		text-align: left
 		width: 100px
 		cursor: pointer
+		transform: scale(1.05)
 		transition: transform 0.3s ease
+		backface-visibility: hidden
 	}
 	
 	.home:after {
@@ -54,7 +56,7 @@ nav {
 	}
 	
 	.home:hover {
-		transform: scale(0.97)
+		transform: translateZ(0) scale(1)
 	}
 	
 	svg {
@@ -136,7 +138,7 @@ nav {
 	}
 }
 
-@media (max-width: medium-width) {
+@media (max-width: midiu-width) {
 	nav {
 		.central {
 			a {

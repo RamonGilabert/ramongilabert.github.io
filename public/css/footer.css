@@ -23,7 +23,7 @@ footer .footer-cards .card {
 footer .bottom {
   height: auto;
   margin-top: 168px;
-  margin-bottom: 240px;
+  margin-bottom: 260px;
   text-align: center;
 }
 footer .bottom .home {
@@ -32,10 +32,12 @@ footer .bottom .home {
 footer .bottom .home img {
   width: 36px;
   height: 36px;
+  transform: scale(1.05);
+  backface-visibility: hidden;
   transition: transform 0.3s ease;
 }
 footer .bottom .home img:hover {
-  transform: scale(0.97);
+  transform: translateZ(0) scale(1);
 }
 footer .bottom .links {
   width: 100%;
@@ -56,4 +58,49 @@ footer .bottom .links p {
   font-size: size-m;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+@media (max-width: minimum-width) {
+  footer {
+    padding-top: 80px;
+  }
+  footer .footer-cards {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  footer .bottom {
+    margin-top: 168px;
+    margin-bottom: 240px;
+  }
+  footer .bottom .links {
+    margin-top: 100px;
+  }
+}
+@media (max-width: midiu-width) {
+  footer {
+    padding-top: 100px;
+  }
+  footer .bottom {
+    margin-top: 60px;
+    margin-bottom: 140px;
+  }
+  footer .bottom .links {
+    margin-top: 60px;
+  }
+  footer .bottom .links a {
+    font-size: size-s;
+  }
+}
+@media (max-width: 340px) {
+  footer .bottom .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .bottom .links a {
+    margin-bottom: 36px;
+  }
+  footer .bottom .links p {
+    display: none;
+  }
 }

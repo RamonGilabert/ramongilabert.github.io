@@ -26,7 +26,7 @@ footer {
   .bottom {
   	height: auto
   	margin-top: 168px
-  	margin-bottom: 240px
+  	margin-bottom: 260px
   	text-align: center
   	
   	.home {
@@ -35,11 +35,13 @@ footer {
 	  	img {
 	  		width: 36px
 	  		height: 36px
+	  		transform: scale(1.05)
+	  		backface-visibility: hidden
 	  		transition: transform 0.3s ease
 	  	}
 	  	
 	  	img:hover {
-	  		transform: scale(0.97)
+	  		transform: translateZ(0) scale(1)
 	  	}
 	  }
 	  
@@ -64,4 +66,64 @@ footer {
 	    }
 	  }
   }
+}
+
+@media(max-width: minimum-width) {
+	footer {
+		padding-top: 80px
+		
+		.footer-cards {
+			display: flex
+	    flex-direction: column
+	    align-content: space-between
+		}
+		
+		.bottom {
+			margin-top: 168px
+  		margin-bottom: 240px
+  		
+			.links {
+				margin-top: 100px
+			}
+		}
+	}
+}
+
+@media(max-width: midiu-width) {
+	footer {
+		padding-top: 100px
+		
+		.bottom {
+			margin-top: 60px
+			margin-bottom: 140px
+			
+			.links {
+				 margin-top: 60px
+				 
+				 a {
+					font-size: size-s
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 340px) {
+	footer {
+		.bottom {
+			.links {
+				display: flex
+		    flex-direction: column
+		    align-items: center
+		    
+		    a {
+		    	margin-bottom: 36px
+		    }
+				
+				p {
+					display: none
+				}
+			}
+		}
+	}
 }

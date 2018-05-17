@@ -127,7 +127,7 @@ function Resizer() {
     window.removeEventListener('resize', calculate);
     window.addEventListener('resize', calculate);
 
-    function iterate(properties, value, should = false) {
+    function iterate(properties, value, should = false, full = true) {
       for (var i = 0; i < properties.length; i++) {
         const proof = properties[i];
         
@@ -164,8 +164,8 @@ function Resizer() {
 
     function calculate() {
       iterate(boxes, 93.8, false);
-      iterate(rights, 93.8, true);
-      iterate(lefts, 93.8, false);
+      iterate(rights, 93.8, true, false);
+      iterate(lefts, 93.8, false, false);
       iterate(fulls, 100, false);
       iterate(backgrounds, 100, false);
 
