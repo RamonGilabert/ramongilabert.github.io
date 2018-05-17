@@ -53,7 +53,7 @@
         },
         {
           "order" : 3,
-          "class" : "linjer",
+          "class" : "linjer direction",
           "title" : "Linjer",
           "image" : "images/projects/linjer/linjer.jpg",
           "retina" : "images/projects/linjer/linjer@2x.jpg",
@@ -63,7 +63,7 @@
         },
         {
           "order" : 2,
-          "class" : "aparcat",
+          "class" : "aparcat direction",
           "title" : "Aparcat",
           "image" : "images/projects/aparcat/aparcat.jpg",
           "retina" : "images/projects/aparcat/aparcat@2x.jpg",
@@ -73,7 +73,7 @@
         },
         {
           "order" : 4,
-          "class" : "manjaras",
+          "class" : "manjaras direction",
           "title" : "Manjaras",
           "image" : "images/projects/manjaras/manjaras.jpg",
           "retina" : "images/projects/manjaras/manjaras@2x.jpg",
@@ -321,6 +321,7 @@
           "image" : "images/projects/aparcat/aparcat.jpg",
           "retina" : "images/projects/aparcat/aparcat@2x.jpg",
           "link" : "./aparcat",
+          "class" : "direction",
           "subtitle" : "Encouraging sustainable parking in the city",
           "case" : true
         },
@@ -329,6 +330,7 @@
           "image" : "images/projects/manjaras/manjaras.jpg",
           "retina" : "images/projects/manjaras/manjaras@2x.jpg",
           "link" : "./manjaras",
+          "class" : "direction",
           "subtitle" : "On demand local food delivery in Dubai",
           "case" : true
         }
@@ -468,6 +470,7 @@
           "image" : "images/projects/linjer/linjer.jpg",
           "retina" : "images/projects/linjer/linjer@2x.jpg",
           "link" : "./linjer",
+          "class" : "direction",
           "subtitle" : "Increasing metrics for this handmade brand",
           "case" : true
         },
@@ -476,6 +479,7 @@
           "image" : "images/projects/manjaras/manjaras.jpg",
           "retina" : "images/projects/manjaras/manjaras@2x.jpg",
           "link" : "./manjaras",
+          "class" : "direction",
           "subtitle" : "On demand local food delivery in Dubai",
           "case" : true
         }
@@ -615,6 +619,7 @@
           "image" : "images/projects/linjer/linjer.jpg",
           "retina" : "images/projects/linjer/linjer@2x.jpg",
           "link" : "./linjer",
+          "class" : "direction",
           "subtitle" : "Increasing metrics for this handmade brand",
           "case" : true
         },
@@ -623,6 +628,7 @@
           "image" : "images/projects/manjaras/manjaras.jpg",
           "retina" : "images/projects/manjaras/manjaras@2x.jpg",
           "link" : "./manjaras",
+          "class" : "direction",
           "subtitle" : "On demand local food delivery in Dubai",
           "case" : true
         }
