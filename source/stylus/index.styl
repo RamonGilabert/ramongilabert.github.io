@@ -52,7 +52,7 @@ button:focus {
 }
 
 .transition {
-  background-color: background-color
+  background-color: background-running
   position: fixed
   width: 100%
   height: 100%
@@ -61,8 +61,10 @@ button:focus {
   z-index: 300
   overflow: auto
   backface-visibility: hidden
+  transform: scale(1.00001), translateZ(0.00001);
+  -webkit-transform: scale(1.00001), translateZ(0.00001);
+  -moz-transform: scale(1.00001), translateZ(0.00001);
   -webkit-backface-visibility: hidden
-  -webkit-transform:translate3d(0, 0, 0)
   -webkit-transform-style: preserve-3d
   -webkit-perspective: 1000
   
@@ -74,6 +76,9 @@ button:focus {
     z-index: 300
     overflow: auto
     backface-visibility: hidden
+    transform: scale(1.00001), translateZ(0.00001);
+    -webkit-transform: scale(1.00001), translateZ(0.00001);
+    -moz-transform: scale(1.00001), translateZ(0.00001);
     -webkit-backface-visibility: hidden
     -webkit-transform:translate3d(0, 0, 0)
     -webkit-transform-style: preserve-3d
