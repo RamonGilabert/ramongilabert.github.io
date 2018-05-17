@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const white = document.class('transition');
   setTimeout(function() {
     white.style.transition = displaying;
+    load.prepare();
 
     setTimeout(function() {
-      load.prepare();
       white.style.transform = 'translate3d(300%, 0, 0)';
 
       setTimeout(function() {
@@ -505,7 +505,7 @@ function Transition() {
               black.style.display = 'none';
             }, 2000);
           }, 10);
-        }, 800);
+        }, 600);
       });
     }
 
