@@ -2,8 +2,8 @@
 
 // MARK: - General values
 
-const displaying = '1.6s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
-const leaving = '0.6s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+const displaying = '1.2s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+const leaving = '0.4s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
 const load = new Load();
 const transition = new Transition();
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         white.style.display = 'none';
       }, 4000);
-    }, 600);
+    }, 5);
   }, 0);
 
   // hover.watch();
@@ -505,7 +505,7 @@ function Transition() {
               black.style.display = 'none';
             }, 2000);
           }, 10);
-        }, 600);
+        }, 400);
       });
     }
 
