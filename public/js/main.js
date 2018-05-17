@@ -3,6 +3,7 @@
 // MARK: - General values
 
 const displaying = '1.6s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+const leaving = '0.6s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
 const load = new Load();
 const transition = new Transition();
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         white.style.display = 'none';
       }, 4000);
-    }, 200);
+    }, 600);
   }, 0);
 
   // hover.watch();
@@ -474,9 +475,6 @@ function Transition() {
 
         black.style.transition = displaying;
 
-        console.log(response);
-        console.log('SPACE');
-
         setTimeout(function() {
           white.style.display = 'inline';
           white.style.transition = 'none';
@@ -485,7 +483,7 @@ function Transition() {
             white.style.transform = 'translateX(-100%)';
 
             setTimeout(function() {
-              white.style.transition = displaying;
+              white.style.transition = leaving;
 
               setTimeout(function() {
                 white.style.transform = 'translateX(0%)';
