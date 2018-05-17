@@ -481,12 +481,41 @@ footer .bottom .links p {
 .introduction .paragraphs {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 .introduction .paragraphs .wrap {
   margin-right: 100px;
   max-width: 520px;
+}
+@media (max-width: 700px) {
+  .introduction .paragraphs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .introduction .paragraphs h1 {
+    font-size: 40.54573059082031px;
+    margin-bottom: 12px;
+    line-height: 44px;
+  }
+  .introduction .paragraphs .wrap p {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 1300px) {
+  .introduction {
+    padding-top: 220px;
+    margin-bottom: 140px;
+  }
+  .introduction .paragraphs .wrap {
+    margin-right: 40px;
+  }
+  .introduction .paragraphs .wrap p {
+    font-size: 17.77777777777778px !important;
+    line-height: 30px !important;
+  }
 }
 .proof-right,
 .proof-left,
@@ -673,7 +702,7 @@ nav a {
 .lighten-color {
   color: #f8f8f8;
 }
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   nav .central {
     opacity: 0;
   }
@@ -923,7 +952,7 @@ nav a {
     margin-top: 0px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .card .description {
     height: 100px;
   }
