@@ -416,11 +416,10 @@ function Transition() {
     function preload() {
       const base = location.href.substring(0, location.href.lastIndexOf("/") + 1);
       const linjer = base + 'linjer';
-      const redbull = base + 'redbull';
       const aparcat = base + 'aparcat';
       const manjaras = base + 'manjaras';
       const index = base;
-      const urls = [linjer, redbull, aparcat, manjaras, index];
+      const urls = [linjer, aparcat, manjaras, index];
 
       for (var i in urls) {
         var url = urls[i];
