@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(function() {
       load.prepare();
-      white.style.transform = 'translateX(300%)';
+      white.style.transform = 'translate3d(300%, 0, 0)';
 
       setTimeout(function() {
         white.style.display = 'none';
@@ -480,14 +480,14 @@ function Transition() {
           white.style.transition = 'none';
 
           setTimeout(function() {
-            white.style.transform = 'translateX(-50%)';
+            white.style.transform = 'translateX(-100%)';
 
             setTimeout(function() {
               white.style.transition = displaying;
 
               setTimeout(function() {
-                white.style.transform = 'translateX(50%)';
-              }, 600);
+                white.style.transform = 'translateX(0%)';
+              }, 20);
             }, 15);
           }, 10);
         }, 5);
@@ -499,7 +499,7 @@ function Transition() {
           setTimeout(function() {
             load.prepare();
             window.scrollTo(0, 0);
-            black.style.transform = 'translateX(250%)';
+            black.style.transform = 'translateX(300%)';
 
             setTimeout(function() {
               black.style.display = 'none';
