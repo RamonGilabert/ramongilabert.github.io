@@ -16,7 +16,7 @@
 		z-index: 1000
 		display: flex
 		flex-direction: row
-		align-items: center
+		align-items: flex-start
 		width: 100%
 		z-index: 2
 		
@@ -32,13 +32,73 @@
 			
 			.mono {
 				width: 50px
-				margin-top: 4px
-				margin-right: 136px
+				margin-right: 15%
 			}
 			
 			.pieces {
 				.text {
 					margin-bottom: 16px
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: minimum-width) {
+	.propositions {
+		height: auto
+		margin-top: 100px;
+		
+		.full-box {
+			height: 700px
+			margin-top: -150px
+		}
+		
+		.wrap {
+			flex-direction: column
+			align-items: flex-start
+			
+			.hobby {
+				flex-direction: column
+				width: grid(1, 19) !important
+				margin-bottom: 40px
+				
+				.mono {
+					width: 50px
+					margin-top: 4px
+					margin-right: 0px
+					margin-bottom: 12px
+				}
+				
+				.pieces {
+					.text {
+						font-size: size-l
+						line-height: 30px
+						margin-bottom: 8px
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: median-width) {
+	.propositions {
+		.wrap {
+			margin-top: -20px
+			width: grid(1, 19)
+			max-width: max-grid(1, 19)
+			margin-bottom: 80px
+			
+			.hobby {
+				width: 50%
+				
+				.pieces {
+					.text {
+						font-size: size-l
+						line-height: 30px
+						margin-bottom: 8px
+					}
 				}
 			}
 		}

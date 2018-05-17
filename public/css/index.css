@@ -432,7 +432,7 @@ footer .bottom .links p {
   background-color: #f5f2f0;
   z-index: 0;
 }
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .projects {
     margin-top: 0px !important;
   }
@@ -497,7 +497,7 @@ footer .bottom .links p {
   }
   .introduction .paragraphs h1 {
     font-size: 40.54573059082031px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     line-height: 44px;
   }
   .introduction .paragraphs .wrap p {
@@ -506,8 +506,8 @@ footer .bottom .links p {
 }
 @media (max-width: 1300px) {
   .introduction {
-    padding-top: 220px;
-    margin-bottom: 140px;
+    padding-top: 200px;
+    margin-bottom: 120px;
   }
   .introduction .paragraphs .wrap {
     margin-right: 40px;
@@ -583,7 +583,7 @@ footer .bottom .links p {
   z-index: 1000;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   z-index: 2;
 }
@@ -599,11 +599,56 @@ footer .bottom .links p {
 }
 .propositions .wrap .hobby .mono {
   width: 50px;
-  margin-top: 4px;
-  margin-right: 136px;
+  margin-right: 15%;
 }
 .propositions .wrap .hobby .pieces .text {
   margin-bottom: 16px;
+}
+@media (max-width: 900px) {
+  .propositions {
+    height: auto;
+    margin-top: 100px;
+  }
+  .propositions .full-box {
+    height: 700px;
+    margin-top: -150px;
+  }
+  .propositions .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .propositions .wrap .hobby {
+    flex-direction: column;
+    width: calc((93.8vw - 6.2vw)) !important;
+    margin-bottom: 40px;
+  }
+  .propositions .wrap .hobby .mono {
+    width: 50px;
+    margin-top: 4px;
+    margin-right: 0px;
+    margin-bottom: 12px;
+  }
+  .propositions .wrap .hobby .pieces .text {
+    font-size: 17.77777777777778px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 1450px) {
+  .propositions .wrap {
+    margin-top: -20px;
+    width: calc((93.8vw - 6.2vw));
+    max-width: calc((93.8px - 6.2px) * 19.2);
+    margin-bottom: 80px;
+  }
+  .propositions .wrap .hobby {
+    width: 50%;
+  }
+  .propositions .wrap .hobby .pieces .text {
+    font-size: 17.77777777777778px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
 }
 nav {
   position: fixed;
@@ -753,7 +798,7 @@ nav a {
   max-width: 490px;
   float: right;
 }
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .hero {
     padding-top: 192px !important;
   }
@@ -926,7 +971,7 @@ nav a {
     line-height: 20px;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .card {
     width: calc((93.8vw - 6.2vw));
     max-width: calc((93.8px - 6.2px) * 19.2);
@@ -1026,7 +1071,7 @@ nav a {
     max-width: calc((52.1px - 6.2px) * 19.2);
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .hobbies {
     height: 1100px;
     margin-top: -10px;
