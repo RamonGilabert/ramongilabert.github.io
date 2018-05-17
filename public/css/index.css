@@ -529,6 +529,10 @@ footer .bottom .links p {
   margin-bottom: 28px;
   z-index: 2;
 }
+.upp {
+  margin-top: 140px;
+  padding-bottom: 160px;
+}
 .up {
   margin-top: 100px;
   padding-bottom: 160px;
