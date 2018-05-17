@@ -475,6 +475,9 @@ function Transition() {
 
         black.style.transition = displaying;
 
+        console.log(response);
+        console.log('SPACE');
+
         setTimeout(function() {
           white.style.display = 'inline';
           white.style.transition = 'none';
