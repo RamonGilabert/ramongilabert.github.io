@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         white.style.display = 'none';
       }, 4000);
-    }, 800);
+    }, 300);
   }, 0);
 
   // hover.watch();
@@ -505,7 +505,7 @@ function Transition() {
               black.style.display = 'none';
             }, 2000);
           }, 10);
-        }, 400);
+        }, 600);
       });
     }
 
