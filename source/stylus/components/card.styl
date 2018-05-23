@@ -47,14 +47,6 @@
 			}
 		}
 		
-		.indicator {
-			position: relative
-			overflow: hidden
-			transition: 0.3s transform ease
-			top: -1px
-			width: 16%
-		}
-		
 		.soon, .arrow {
 			transition: 0.3s transform curve
 			transform: translateX(-150%)
@@ -73,6 +65,16 @@
 		background-color: clear-color
 		transform-origin: 50% 100%
 		transition: 0.3s transform ease
+	}
+}
+
+.linjer, .aparcat, .manjaras, .redbull {
+	.indicator {
+		position: relative
+		overflow: hidden
+		transition: 0.3s transform ease
+		top: -1px
+		width: 16%
 	}
 }
 
@@ -107,12 +109,12 @@
 			height: 120px
 			
 			.wrapper {
-				width: 100% !important
+				width: 70% !important
 				margin-left: 6%
 				
 				h4 {
 	  			font-size: size-h6
-	  			line-height: 18px
+	  			line-height: 20px
 	  		}
 	  		
 	  		p {
@@ -120,15 +122,23 @@
 	  			line-height: 24px
 	  		}
 			}
-			
-			.indicator {
-  			width: 0px
-  		}
 		}
 		
 		.bottom-description {
   		height: 120px
   	}
+	}
+	
+	.linjer, .aparcat, .manjaras {
+		.description {
+			.wrapper {
+				width: 100% !important
+			}
+		}
+		
+		.indicator {
+			width: 0px
+		}
 	}
 	
 	.linjer {
@@ -166,17 +176,13 @@
   		.wrapper {
   			margin-left: 6%
   		}
-  		
-  		.indicator {
-  			width: 0px
-  		}
   	}
   	
   	.bottom-description {
   		height: 116px
   	}
   	
-  	.arrow, .soon {
+  	.arrow {
   		display: none
   	}
   }
@@ -203,6 +209,11 @@
 	  			font-size: size-s
 	  			line-height: 20px
 	  		}
+  		}
+  		
+  		.soon {
+				font-size: size-s
+	  		line-height: 20px
   		}
   	}
   	

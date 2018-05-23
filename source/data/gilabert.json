@@ -43,17 +43,7 @@
       "boxes" : [
         {
           "order" : 1,
-          "class" : "redbull",
-          "title" : "Red Bull TV",
-          "image" : "images/projects/redbull/redbull.jpg",
-          "retina" : "images/projects/redbull/redbull@2x.jpg",
-          "link" : "javascript:void(0)",
-          "subtitle" : "Exploring the TV of the future",
-          "case" : false
-        },
-        {
-          "order" : 3,
-          "class" : "linjer direction",
+          "class" : "manjaras direction",
           "title" : "Linjer",
           "image" : "images/projects/linjer/linjer.jpg",
           "retina" : "images/projects/linjer/linjer@2x.jpg",
@@ -62,8 +52,8 @@
           "case" : true
         },
         {
-          "order" : 2,
-          "class" : "aparcat direction",
+          "order" : 3,
+          "class" : "linjer direction",
           "title" : "Aparcat",
           "image" : "images/projects/aparcat/aparcat.jpg",
           "retina" : "images/projects/aparcat/aparcat@2x.jpg",
@@ -72,14 +62,24 @@
           "case" : true
         },
         {
-          "order" : 4,
-          "class" : "manjaras direction",
+          "order" : 2,
+          "class" : "aparcat direction",
           "title" : "Manjaras",
           "image" : "images/projects/manjaras/manjaras.jpg",
           "retina" : "images/projects/manjaras/manjaras@2x.jpg",
           "link" : "./manjaras",
           "subtitle" : "On demand local food delivery in Dubai",
           "case" : true
+        },
+        {
+          "order" : 4,
+          "class" : "redbull",
+          "title" : "Red Bull TV",
+          "image" : "images/projects/redbull/redbull.jpg",
+          "retina" : "images/projects/redbull/redbull@2x.jpg",
+          "link" : "javascript:void(0)",
+          "subtitle" : "Exploring the TV of the future",
+          "case" : false
         }
       ]
     },
@@ -475,12 +475,12 @@
           "case" : true
         },
         {
-          "title" : "Manjaras",
-          "image" : "images/projects/manjaras/manjaras.jpg",
-          "retina" : "images/projects/manjaras/manjaras@2x.jpg",
-          "link" : "./manjaras",
+          "title" : "Aparcat",
+          "image" : "images/projects/aparcat/aparcat.jpg",
+          "retina" : "images/projects/aparcat/aparcat@2x.jpg",
+          "link" : "./aparcat",
           "class" : "direction",
-          "subtitle" : "On demand local food delivery in Dubai",
+          "subtitle" : "Encouraging sustainable parking in the city",
           "case" : true
         }
       ]

@@ -1006,13 +1006,6 @@ nav a {
   color: #7f7871;
   margin-top: 12px;
 }
-.card .description .indicator {
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s transform ease;
-  top: -1px;
-  width: 16%;
-}
 .card .description .soon,
 .card .description .arrow {
   transition: 0.3s transform cubic-bezier(0.88, 0.12, 0.36, 0.79);
@@ -1029,6 +1022,16 @@ nav a {
   background-color: #fff;
   transform-origin: 50% 100%;
   transition: 0.3s transform ease;
+}
+.linjer .indicator,
+.aparcat .indicator,
+.manjaras .indicator,
+.redbull .indicator {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s transform ease;
+  top: -1px;
+  width: 16%;
 }
 .card:hover {
   box-shadow: 0 40px 80px rgba(49,48,47,0.1);
@@ -1055,22 +1058,29 @@ nav a {
     height: 120px;
   }
   .card .description .wrapper {
-    width: 100% !important;
+    width: 70% !important;
     margin-left: 6%;
   }
   .card .description .wrapper h4 {
     font-size: 22.5px;
-    line-height: 18px;
+    line-height: 20px;
   }
   .card .description .wrapper p {
     font-size: 17.77777777777778px;
     line-height: 24px;
   }
-  .card .description .indicator {
-    width: 0px;
-  }
   .card .bottom-description {
     height: 120px;
+  }
+  .linjer .description .wrapper,
+  .aparcat .description .wrapper,
+  .manjaras .description .wrapper {
+    width: 100% !important;
+  }
+  .linjer .indicator,
+  .aparcat .indicator,
+  .manjaras .indicator {
+    width: 0px;
   }
   .linjer {
     margin-top: 100px;
@@ -1101,14 +1111,10 @@ nav a {
   .card .description .wrapper {
     margin-left: 6%;
   }
-  .card .description .indicator {
-    width: 0px;
-  }
   .card .bottom-description {
     height: 116px;
   }
-  .card .arrow,
-  .card .soon {
+  .card .arrow {
     display: none;
   }
   .linjer {
@@ -1127,6 +1133,10 @@ nav a {
     line-height: 18px;
   }
   .card .description .wrapper p {
+    font-size: 14.046639231824416px;
+    line-height: 20px;
+  }
+  .card .description .soon {
     font-size: 14.046639231824416px;
     line-height: 20px;
   }
