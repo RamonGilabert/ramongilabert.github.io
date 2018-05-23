@@ -65,7 +65,7 @@ function Loader() {
     './images/projects/redbull/redbull.jpg'
     './images/projects/linjer/introduction.jpg',
     './images/projects/aparcat/introduction.jpg',
-    './images/projects/manjaras/introduction.jpg',
+    './images/projects/manjaras/introduction.jpg'
   ]
 
   this.loaded = [];
