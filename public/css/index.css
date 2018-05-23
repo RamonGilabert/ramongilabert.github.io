@@ -514,6 +514,9 @@ footer .bottom .links p {
   .projects .cards {
     margin-top: -20px;
   }
+  .projects .mono {
+    display: none;
+  }
   .personal .social {
     margin-top: 0px;
   }
