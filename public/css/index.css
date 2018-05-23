@@ -490,8 +490,12 @@ footer .bottom .links p {
     padding-bottom: 0px;
     position: relative;
   }
+  .personal {
+    margin-top: -44px;
+  }
   .personal .box {
-    margin-top: -120px;
+    margin-top: -120px !important;
+    height: calc(100% + 120px) !important;
   }
   .box {
     margin-top: 44px;
@@ -517,7 +521,7 @@ footer .bottom .links p {
 @media (max-width: 1450px) {
   .personal .box {
     margin-top: -100px !important;
-    height: calc(100% + 100px);
+    height: calc(100% + 100px) !important;
   }
 }
 .introduction {
@@ -1132,8 +1136,9 @@ nav a {
     margin-left: 7%;
   }
   .card .description .wrapper h4 {
+    margin-top: 2px;
     font-size: 20px;
-    line-height: 18px;
+    line-height: 16px;
   }
   .card .description .wrapper p {
     font-size: 14.046639231824416px;
@@ -1144,7 +1149,7 @@ nav a {
     line-height: 20px;
   }
   .card .bottom-description {
-    height: 100px;
+    height: 120px;
   }
 }
 .hobbies {
@@ -1204,7 +1209,7 @@ nav a {
 }
 @media (max-width: 900px) {
   .hobbies {
-    height: 1100px;
+    height: 1060px;
     margin-top: -10px;
   }
   .hobbies .hobby {
@@ -1212,6 +1217,10 @@ nav a {
     width: calc((93.8vw - 6.2vw));
     max-width: calc((93.8px - 6.2px) * 19.2);
     margin-bottom: 80px;
+  }
+  .hobbies .hobby .pieces .text {
+    font-size: 17.77777777777778px;
+    line-height: 30px;
   }
 }
 *,
