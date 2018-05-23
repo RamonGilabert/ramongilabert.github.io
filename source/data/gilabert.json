@@ -1,875 +1,638 @@
 {
   "myself" : {
-    "page" : "Ramon Gilabert — Product Designer",
+    "page" : "Ramon Gilabert &middot; Product Designer",
     "title" : "Ramon Gilabert",
-    "header" : "gilabert",
+
+    "navigation" : {
+      "image" : "images/navigation/owl.svg",
+      "central" : [
+        {
+          "title" : "Work",
+          "link" : "work-link"
+        },
+        {
+          "title" : "About",
+          "link" : "about-link"
+        },
+        {
+          "title" : "Social",
+          "link" : "social-link"
+        }
+      ],
+      "right" : [
+        {
+          "title" : "Contact",
+          "link" : "#",
+          "class" : "email"
+        }
+      ]
+    },
+
+    "hero" : {
+      "title" : "Welcome,",
+      "text" : "I am Ramon, a product designer from Barcelona currently working with <a class='running' href='http://redbull.tv' target='_blank'>Red Bull</a> and teaching design at <a class='running' href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>. In the past, I’ve worked for clients such as Varner and Intersport."
+    },
 
     "story" : {
       "title" : "story",
       "text" : "<span class='dot'>Ramon Gilabert</span> is a product designer with a lot of passion for user interaction and visual design. He has a strong interest in rapidly prototyping ideas and experience in front end and iOS development. Right now, he is looking for his next role as a product designer."
     },
 
-    "projects" : [
-      {
-        "name" : "gluten",
-        "image" : "images/projects/gluten/myself.png",
-        "link" : "./gluten",
-        "role" : "Concept, UI & UX design"
-      },
-      {
-        "name" : "mychain",
-        "image" : "images/projects/mychain/myself.png",
-        "external" : {
-          "link" : "https://www.hyper.no/portfolio/mychain"
+    "projects" : {
+      "title" : "Selected Pieces",
+      "boxes" : [
+        {
+          "order" : 1,
+          "class" : "manjaras direction",
+          "title" : "Linjer",
+          "image" : "images/projects/linjer/linjer.jpg",
+          "retina" : "images/projects/linjer/linjer@2x.jpg",
+          "link" : "./linjer",
+          "subtitle" : "Increasing metrics for this handmade brand",
+          "case" : true
         },
-        "role" : "Product Design, iOS development"
+        {
+          "order" : 3,
+          "class" : "linjer direction",
+          "title" : "Aparcat",
+          "image" : "images/projects/aparcat/aparcat.jpg",
+          "retina" : "images/projects/aparcat/aparcat@2x.jpg",
+          "link" : "./aparcat",
+          "subtitle" : "Encouraging sustainable parking in the city",
+          "case" : true
+        },
+        {
+          "order" : 2,
+          "class" : "aparcat direction",
+          "title" : "Manjaras",
+          "image" : "images/projects/manjaras/manjaras.jpg",
+          "retina" : "images/projects/manjaras/manjaras@2x.jpg",
+          "link" : "./manjaras",
+          "subtitle" : "On demand local food delivery in Dubai",
+          "case" : true
+        },
+        {
+          "order" : 4,
+          "class" : "redbull",
+          "title" : "Red Bull TV",
+          "image" : "images/projects/redbull/redbull.jpg",
+          "retina" : "images/projects/redbull/redbull@2x.jpg",
+          "link" : "javascript:void(0)",
+          "subtitle" : "Exploring the TV of the future",
+          "case" : false
+        }
+      ]
+    },
+
+    "personal" : {
+      "links" : [
+        {
+          "title" : "Twitter",
+          "link" : "https://twitter.com/RamonGilabert",
+          "dot" : true
+        },
+        {
+          "title" : "Dribbble",
+          "link" : "https://dribbble.com/RamonGilabert",
+          "dot" : true
+        },
+        {
+          "title" : "LinkedIn",
+          "link" : "https://www.linkedin.com/in/ramongilabert/"
+        }
+      ],
+
+      "hobbies" : [
+        {
+          "title" : "currently",
+          "pieces" : [
+            {
+              "text" : "Product Design at <a class='running' href='http://redbull.tv' target='_blank'>Red Bull</a>"
+            },
+            {
+              "text" : "Online Teaching at <a class='running' href='https://www.sketchcasts.net' target='_blank'>SketchCasts</a>"
+            },
+            {
+              "text" : "Product Design Freelancer"
+            },
+            {
+              "text" : "Moving to the United States"
+            }
+          ]
+        },
+        {
+          "title" : "passions",
+          "pieces" : [
+            {
+              "text" : "Design Systems"
+            },
+            {
+              "text" : "Swift and React"
+            },
+            {
+              "text" : "Design Tooling"
+            },
+            {
+              "text" : "User Centered Design"
+            }
+          ]
+        },
+        {
+          "title" : "awards",
+          "pieces" : [
+            {
+              "text" : "Apple &middot; WWDC Scholarship"
+            },
+            {
+              "text" : "Awwwards &middot; Honorable Mention"
+            },
+            {
+              "text" : "CSS Design &middot; Special Kudos"
+            },
+            {
+              "text" : "CSS Winner &middot; Star of the Day"
+            }
+          ]
+        },
+        {
+          "title" : "projects",
+          "pieces" : [
+            {
+              "text" : "Project Alpha"
+            },
+            {
+              "text" : "Reading 24 books"
+            },
+            {
+              "text" : "Learn More React"
+            },
+            {
+              "text" : "Typography Analysis"
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "linjer" : {
+    "navigation" : {
+      "image" : "images/navigation/owl.svg",
+      "central" : [
+        {
+          "title" : "Overview",
+          "link" : "overview-link"
+        },
+        {
+          "title" : "Problem",
+          "link" : "problem-link"
+        },
+        {
+          "title" : "Solution",
+          "link" : "solution-link"
+        }
+      ],
+      "right" : [
+        {
+          "title" : "Contact",
+          "link" : "#",
+          "class" : "email"
+        }
+      ]
+    },
+
+    "title" : "Linjer",
+    "first" : "Linjer is a Norwegian studio that offers beautifully design and handmade products. Roman, a co-founder, reached out to me to do an audit of their website and boost their conversion rate for present and future products.",
+    "second" : "After running complete audits and evaluations, and to put their designs into the foreground, we decided to create content which would be used as the key selling point of their brand, offering the homepage as the driver of sales.",
+    "image" : {
+      "link" : "images/projects/linjer/introduction.jpg",
+      "retina" : "images/projects/linjer/introduction@2x.jpg",
+      "class" : "proof-left"
+    },
+    "propositions" : [
+      {
+        "title" : "Beginning",
+        "pieces" : [
+          {
+            "text" : "Users don’t go to detail pages"
+          },
+          {
+            "text" : "People don’t see the full breath"
+          },
+          {
+            "text" : "Checkout has too many steps"
+          },
+          {
+            "text" : "Adding straps is a tedious process"
+          }
+        ]
       },
       {
-        "name" : "lights",
-        "image" : "images/projects/lights/myself.png",
-        "link" : "./lights",
-        "role" : "Concept, UI & UX design"
-      },
-      {
-        "name" : "revolution",
-        "image" : "images/projects/revolution/myself.png",
-        "link" : "./revolution",
-        "role" : "Concept, Design, Development, Electronics"
+        "title" : "Results",
+        "pieces" : [
+          {
+            "text" : "User conversion up by 75%"
+          },
+          {
+            "text" : "User engagement up by 50%"
+          },
+          {
+            "text" : "Blog posts get users engaged"
+          },
+          {
+            "text" : "Simplified checkout and complements"
+          }
+        ]
       }
     ],
 
-    "recognition" : {
-      "title" : "others",
-      "others" : [
+    "overview" : {
+      "title" : "Overview",
+      "paragraphs" : [
         {
-          "text" : "I helped in the product design of <a href='https://itunes.apple.com/no/app/cubus-friends/id1108398484' target='_blank'><span class='dot'>Cubus Friends</span>.</a>"
+          "text" : "When starting with the audit of the page, the goal was to specify why users weren’t converting from the homepage to the the product detail pages, and why weren’t they getting the full breath of content that Linjer had."
         },
         {
-          "text" : "I teach design at <a href='https://www.sketchcasts.net' target='_blank'><span class='dot'>SketchCasts</span>.</a>"
+          "text" : "A heuristic evaluation helped display that the number of user journeys from one one place to the other was limited due to the fact that there were only two call to actions to products."
         },
         {
-          "text" : "<a href='http://puzzles.design' target='_blank'><span class='dot'>Puzzles</span></a> iOS 10 UI kit."
-        },
-        {
-          "text" : "I <span class='dot'>retouch</span> images for fun."
+          "text" : "In that time, I also realized that, even if the brand was very active in social media sharing stories about their products and successes in third party apps, they weren’t sharing content from their own site, there was a possibility to sell products through content."
         }
       ],
-
-      "awards" : [
-        {
-          "title" : "awards 2016",
-          "list" : [
-            {
-              "highlight" : "Honorable Mention",
-              "rest" : "from the Awwwards jury."
-            },
-            {
-              "highlight" : "Special Kudos",
-              "rest" : "from CSS Design Awards."
-            },
-            {
-              "highlight" : "Site of the Day",
-              "rest" : "from CSS Awards."
-            },
-            {
-              "highlight" : "Star of the Day",
-              "rest" : "from CSS Winner."
-            },
-            {
-              "highlight" : "Thesis with honors",
-              "rest" : "from University of Lleida."
-            },
-            {
-              "highlight" : "Top 3 alumni",
-              "rest" : "2012-2016 University of Lleida."
-            }
-          ]
-        },
-        {
-          "title" : "awards 2015",
-          "list" : [
-            {
-              "highlight" : "Apple WWDC scholarship",
-              "rest" : "recognition."
-            }
-          ]
-        }
-      ]
-    }
-  },
-
-  "gluten" : {
-    "page" : "Ramon Gilabert — Product Designer",
-    "title" : "Ramon Gilabert – Gluten",
-    "name" : "gluten",
-    "role" : "Concept, UI & UX design",
-    "summarize" : {
-      "paragraph" : [
-        {
-          "text" : "A project created out of a pure necessity to help celiacs around the world, like myself, with their disease. <span class='dot'>Gluten</span> is based in the experience of celiacs like my sister and I, who have been suffering problems related to that disorder in their day to day life."
-        }
-      ],
-
       "image" : {
-        "link" : "images/projects/gluten/summarize.jpg",
-        "quote" : "Featuring the final result of the product with the scanner, the statistics and the mood screens."
+        "link" : "images/projects/linjer/overview.jpg",
+        "retina" : "images/projects/linjer/overview@2x.jpg",
+        "class" : "proof-right"
       }
     },
 
-    "story" : {
-      "title" : "story",
-      "paragraph" : [
+    "problem" : {
+      "title" : "The Problem",
+      "paragraphs" : [
         {
-          "text" : "<span class='dot'>Gluten</span> is my most personal project yet, the representation of a disease I've had for the last 10 years of my life. The personal knowledge acquired after having to read ingredients from all the products in a supermarket without any help in the labeling, or the difficulty to find food in a restaurant's menu. After asking different people that were facing the same problem, the idea of this product was born."
+          "text" : "The problem was framed as not converting enough users from the most visited page—home, to their checkout—but analyzing the flows it was clear that, not only we needed to uncover more user journeys and display content as the key selling point of their brand, but we also needed to improve the checkout flow and simplify the addition of complements, straps or just the change of sizing of specific objects."
         },
         {
-          "text" : "Although the knowledge of what gluten is, or what gluten causes has increased in the last few years in the general population, there's still a lot of unknown. <span class='dot'>Gluten</span> needed to solve three main issues every celiac faces — scan products and get the gluten concentration, track what has been eaten during the day, presenting the statistics in an understandable way, and a finder of services that offered gluten free options."
+          "text" : "I also defined the need to display the bull breath of the brand right in the homepage with a contextual menu that would show all the products that Linjer designs, encouraging then user journeys, not to the collection pages, but to the detail pages instead."
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/story.jpg",
-        "quote" : "Featuring the finding of services around and a happy reaction during dinner."
+        "link" : "images/projects/linjer/problem.jpg",
+        "retina" : "images/projects/linjer/problem@2x.jpg",
+        "class" : "proof-left"
       }
     },
 
     "solution" : {
-      "title" : "solution",
-      "paragraph" : [
+      "title" : "Solution",
+      "paragraphs" : [
         {
-          "text" : "There was a lot of concept work for <span class='dot'>Gluten</span>. The decision to design an app instead of a website was accessibility. The app needed to do three things the best and easiest way possible. As mentioned above, those three solutions were a services map, a scanner and a mood tracker with statistics. In the concept phase it was discarded to do more than one app because the features were small and compact enough."
+          "text" : "The solution included an array of fixes to the current site’s taxonomy and content structure, as well as different visual treatments to components such as the menu, the home page, or the checkout itself."
         },
         {
-          "text" : "Inside the app, it was decided to use a hamburger menu instead of a tab bar — the main reasoning for that being the fact that each feature was separate enough for it to contain its own private space, as well as no need to combine more than one when using them. It was shown after some surveys that the users would use the app in periods and for a concrete action, either find a service, or scan a product, or register your mood."
-        },
-        {
-          "text" : "The guidelines in style of the app were yet to be defined. It was clear that it would feature an accessible design, but basic things like which was the first screen or which color the user would understand better still remained unknown."
+          "text" : "As for the content structure, we decided to feature looks and blog posts from the brand to display proximity with clients, and as for the taxonomy, we decided to clean up their past categorization of products into a cleaner menu that would be easier to understand."
         }
       ],
       "image" : {
-        "link" : "images/projects/gluten/image.jpg",
-        "quote" : "One of the first sketches I did to kick off the project."
-      }
+        "link" : "images/projects/linjer/solution.jpg",
+        "retina" : "images/projects/linjer/solution@2x.jpg",
+        "class" : "proof-right"
+     }
     },
 
-    "flow" : {
-      "title" : "user flow",
-      "paragraph" : [
+    "visuals" : {
+      "title" : "Visuals",
+      "paragraphs" : [
         {
-          "text" : "This step began to form the flow of the app, and with the clear intention of using a hamburger menu, the separation of screens was clear from the beginning."
+          "text" : "Not only we cleaned the information presented to users, but we created a reason for users to come back to the app by featuring popular content that they could buy right from the home page. We also highlighted blog posts about their process, humanizing the brand and making it relatable."
         },
         {
-          "text" : "With this in mind, it was decided that the first screen the user would see when entering the app after the first onboarding and registration was the <span class='dot'>mood selection</span> and <span class='dot'>statistics</span>. From there, said user would have access to the main menu and to register and see mood. The reasoning behind this was the usage factor. The probability of:"
-        },
-        {
-          "text" : "• The user finding a service around was at most 3 a day.",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• The user registering her mood was at most 5 a day.",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• The user scanning a product could be at any time.",
-          "class" : "indent"
-        },
-        {
-          "text" : "The fluctuation of the “any time” case marked certain uncertainty, but after computing the values over the course of a month, a steady 5 times a day beat the scanning value which would vary between 3 - 9 a day. It’s obvious that the app would register the last screen seen and save the position of the user, as well as some patrons on hours of the day to check which screen the user should be in. Tuesday after dinner would make sense to be in the mood screen more than in the finding a service one."
-        },
-        {
-          "text" : "Needs to be said that a login will be required for the user after the onboarding, just with a name, an optional gender and a password to prevent any sensible data to be stolen or seen by someone else. That, will also allow upcoming features like reviews or login from the <span class='dot'>Gluten</span> website to add a mood or display statistics to be easier to implement."
+          "text" : "As for the checkout flows, we cleaned the amount of information that was displayed and we treated every page as a landing page of content. We added recommended straps down below and cleaned a rather confusing sizing guide that users reported multiple times."
         }
       ],
-      "image" : {
-        "link" : "images/projects/gluten/flow.jpg",
-        "quote" : "A small extraction of the user flow when entering the app, with different possibilities."
-      }
+      "box": true,
+      "class": "upp"
     },
 
-    "mood" : {
-      "title" : "mood selection",
-      "paragraph" : [
+    "footer" : {
+      "cards" : [
         {
-          "text" : "The mood and statistics section needed to be clear and easy to use. Just 3 steps — selecting how the user was feeling, what she ate, and some additional information like notes, fatigue, allergic reaction or possible medication taken during the entered period. This was a crucial step in terms of easiness — having to input every meal was a thing that would be difficult if the screen was messy in terms of design and usability, for that, a big font was selected, as well as some graphics to choose an easy representation of the mood."
+          "title" : "Aparcat",
+          "image" : "images/projects/aparcat/aparcat.jpg",
+          "retina" : "images/projects/aparcat/aparcat@2x.jpg",
+          "link" : "./aparcat",
+          "class" : "direction",
+          "subtitle" : "Encouraging sustainable parking in the city",
+          "case" : true
         },
         {
-          "text" : "Related to that, the statistics section also needed to be as clean as possible for the user to see a clear overview and information of every selected day. That would help export the information for the user's dietitian as well as give a clear vision on how the diet was being made. For that, it contained a graph that would allow users to select the day in which the interest resided, and inside every day, there would be an overview of every input meal — morning, lunch, dinner as the main key points."
-        },
-        {
-          "text" : "As a side point, the reason to use faces within the statistics section of the mood selection was to give a more personal feel to the app, since this would be something you would have to see every single day. Such part, would be asked in the onboarding and could be changed in the settings page, being able to leave it blank for other illustrations to appear."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/gluten/mood.jpg"
-      }
-    },
-
-    "scanner" : {
-      "title" : "scanner",
-      "paragraph" : [
-        {
-          "text" : "Starting with the scanner, it was clear that it had to contain the concentration of gluten of the product, with some additional information to it — the risk of gluten in the factory the product was made and the calories were some examples of it. The features in this section could of course grow, but there was no need for now to include them, as this is the basic question a celiac faces when wondering about a specific product."
-        },
-        {
-          "text" : "The scanner had to contain the already scanned products, showing an icon for each one of them. This icon would exist in a database with all the information given with it. Finally, the scanner's camera would work automatically, without the need of the user to press any button at all."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/gluten/scanner.jpg"
-      }
-    },
-
-    "services" : {
-      "title" : "services",
-      "paragraph" : [
-        {
-          "text" : "Jumping to the services, it was easy to conceptualize a map with all the information of the service you were looking for. It was important to present, in an intuitive manner,  and directly in the map, which service was around — a bakery, pizzeria, cake shop or a burger place are some of the examples."
-        },
-        {
-          "text" : "When selecting one of the restaurants, the app would present more actions like the possibility to call, save the service or get directions there, as well as some additional information like product specialties."
-        },
-        {
-          "text" : "Because there isn't a database with all the necessary information yet, the icons can be created when adding a restaurant or a product into it. Part of the challenge of creating this product resides basically in the lack of information in the field — and so does the disease."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/gluten/services.jpg"
-      }
-    },
-
-    "landing" : {
-      "title" : "landing page",
-      "paragraph" : [
-        {
-          "text" : "In terms of visual design, the last piece was the landing page which would tell the user to download the app by showing the main benefits of it."
-        },
-        {
-          "text" : "The main goal was that it had to be fun enough for the user to remember — however, because the value of the app was big enough for the user to download it right away, the importance was to show some of its screenshots to present the potential of the product."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/gluten/landing.jpg"
-      }
-    },
-
-    "visually" : {
-      "title" : "visually",
-      "paragraph" : [
-        {
-          "text" : "The first flow to be prototyped was the scanner, it featured a white text over dark palette. After some user research, people started to ask why the dark color, questioning if it would make easier and clearer to understand the overall app and information. After some consideration and tests with middle dark palettes and clear ones, the users preferred a white theme with sharp text over it."
-        },
-        {
-          "text" : "Another thing that visually changed was the font, being at first smaller and presenting more information in the screens. User research made the app more simplistic and straight to the point."
-        }
-      ],
-      "colors" : [
-        {
-          "code" : "#6BCDFF",
-          "class" : "four"
-        },
-        {
-          "code" : "#A9F2FF",
-          "class" : "four"
-        },
-        {
-          "code" : "#FF9538",
-          "class" : "four"
-        },
-        {
-          "code" : "#FCFEFF",
-          "class" : "four",
-          "position" : "last"
+          "title" : "Manjaras",
+          "image" : "images/projects/manjaras/manjaras.jpg",
+          "retina" : "images/projects/manjaras/manjaras@2x.jpg",
+          "link" : "./manjaras",
+          "class" : "direction",
+          "subtitle" : "On demand local food delivery in Dubai",
+          "case" : true
         }
       ]
-    },
-
-    "finally" : {
-      "title" : "gluten",
-      "paragraph" : [
-        {
-          "text" : "<span class='dot'>Gluten</span> is my most personal project. A project that represents who I am and what I have been for the past 10 years. It's the ultimate solution to years of challenges I've faced with this disease. Hopefully now, with this solution, thousands of people will be able to tell right away how they are or what they eat, and feel better with themselves. Calling a product what cannot be eaten might seem controversial, but this is the only gluten a celiac can take."
-        }
-      ]
-    },
-
-    "next" : {
-      "title" : "what's next",
-      "path" : {
-        "class" : "space"
-      },
-      "paragraph" : [
-        {
-          "text" : "<span class='dot'>Gluten</span> is a project that’s been in the making for 8 years. As mentioned above, this set of features marks the MVP for a product that needs much iteration on. From adding many products and services into a growing database, to give users voice to rate their own experiences."
-        },
-        {
-          "text" : "<span class='dot'>Gluten</span> is a project that will start development as soon as I hit the United States. With that, many details will start to appear, and the challenge will be to iterate over that.",
-          "class" : "paragraph-space"
-        }
-      ]
-    },
-
-    "toolkit" : {
-      "title" : "toolkit",
-      "path" : {
-        "class" : "space"
-      },
-      "paragraph" : [
-        {
-          "text" : "<a href='https://shop.dribbble.com/products/gameplan-journal?variant=1006322845' target='_blank'>Pen and paper</a> for the concept.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='https://sketchapp.com' target='_blank'>Sketch</a> for the app.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='http://www.adobe.com/products/photoshop.html' target='_blank'>Photoshop</a> for the site.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='http://principleformac.com' target='_blank'>Principle</a> for early prototypes."
-        }
-      ]
-    },
-
-    "back" : {
-      "title" : "revolution",
-      "link" : "./revolution"
-    },
-
-    "forward" : {
-      "title" : "lights",
-      "link" : "./lights"
     }
   },
 
-  "lights" : {
-    "page" : "Ramon Gilabert — Product Designer",
-    "title" : "Ramon Gilabert – Lights",
-    "name" : "lights",
-    "role" : "Concept, UI & UX, Industrial, Electronic Design & Development",
-    "summarize" : {
-      "paragraph" : [
+  "manjaras" : {
+    "navigation" : {
+      "image" : "images/navigation/owl.svg",
+      "central" : [
         {
-          "text" : "<span class='dot'>Lights</span>, the union between the knowledge acquired during my electronic engineering degree, my software development skills and my passion for design. A product that let users control a smart light from anywhere in the world. Raspberry Pi, Arduino, industrial design, iOS development and product design had a major role in the process of the making of this product."
+          "title" : "Overview",
+          "link" : "overview-link"
+        },
+        {
+          "title" : "Chefs",
+          "link" : "problem-link"
+        },
+        {
+          "title" : "Onboard",
+          "link" : "solution-link"
         }
       ],
+      "right" : [
+        {
+          "title" : "Contact",
+          "link" : "#",
+          "class" : "email"
+        }
+      ]
+    },
 
+    "title" : "Manjaras",
+    "first" : "Manjaras is a small startup from Dubai that contacted me to design their first product. They had the ambitious goal to have two separate apps that would let people have a personal trainer right in their finger tips.",
+    "second" : "Because there was no product before, we weren’t able to perform heuristic evaluations, but we were able to get some benchmarking and user research done to design the best initial product at launch.",
+    "image" : {
+      "link" : "images/projects/manjaras/introduction.jpg",
+      "retina" : "images/projects/manjaras/introduction@2x.jpg",
+      "class" : "full"
+    },
+    "propositions" : [
+      {
+        "title" : "Planning",
+        "pieces" : [
+          {
+            "text" : "App for chefs and costumers"
+          },
+          {
+            "text" : "Designs delivered in a month"
+          },
+          {
+            "text" : "Illustration and branding work"
+          },
+          {
+            "text" : "Benchmarked experience"
+          }
+        ]
+      },
+      {
+        "title" : "Results",
+        "pieces" : [
+          {
+            "text" : "Positive user feedback at launch"
+          },
+          {
+            "text" : "Successful hand-off developer document"
+          },
+          {
+            "text" : "Chef and consumer apps talk seamlessly"
+          },
+          {
+            "text" : "Region specific features delivered"
+          }
+        ]
+      }
+    ],
+
+    "overview" : {
+      "title" : "Overview",
+      "paragraphs" : [
+        {
+          "text" : "There were two separate apps that needed to be built and needed to share a cohesive system that would interconnect them with each other. Because of that, to get started, I gathered all the user insight and started drawing the key screens that needed to be designed."
+        },
+        {
+          "text" : "Those were the discover screen, which would allow users to get an overview of what the product offers, a recipes screen, to get inspired and be able to do the meals yourself, and the order summaries."
+        },
+        {
+          "text" : "The app would have a tab bar as the main navigational element with the key screens in each app."
+        }
+      ],
       "image" : {
-        "link" : "images/projects/lights/summarize.jpg",
-        "quote" : "The two most important screens in Lights, the starting one and the editing one."
+        "link" : "images/projects/manjaras/overview.jpg",
+        "retina" : "images/projects/manjaras/overview@2x.jpg",
+        "class" : "full"
       }
     },
 
-    "story" : {
-      "title" : "story",
-      "paragraph" : [
+    "problem" : {
+      "title" : "The Chefs",
+      "paragraphs" : [
         {
-          "text" : "Right when my electronic engineering degree was getting to an end, I got asked to do a thesis. I could’ve studied waves of signals, but I wanted to do something more creative. Put together all the knowledge of design and development I had and create a product, from the beginning to the end. From the concept to the manufacturing."
+          "text" : "Chefs needed an app too, and instead of favoring discoverability, in this case the app needed to feature clarity and information. They needed to edit recipes, edit their menu, see their orders and open and close the kitchen."
         },
         {
-          "text" : "Diving into some specifics, I decided to do an Internet of Things object, and, because a light was the most visual of them all, I decided to do a light. There had to be a lot of concept involved, and, because an object of the Internet of Things is so vague, I would have to constrain the project in a way that was appealing, but not trying to do too much. That’s how <span class='dot'>Lights</span> was born. One of my favorite projects I’ve done, and probably the one I know the most of. Every detail is thought and discussed to a remarkable point."
+          "text" : "We condensed all those features into three tabs that would include all those key screens. The app would still share some of the design traits of the consumer app, but would also allow chefs to edit and retouch as much as they wanted."
+        },
+        {
+          "text" : "In order to minimize waiting time, the orders screen was set as the initial screen."
         }
       ],
       "image" : {
-        "link" : "images/projects/lights/story.jpg",
-        "quote" : "The paired screen, the one displayed after the searching for a light was done and it was ready to use."
+        "link" : "images/projects/manjaras/problem.jpg",
+        "retina" : "images/projects/manjaras/problem@2x.jpg",
+        "class" : "full"
       }
     },
 
     "solution" : {
-      "title" : "solution",
-      "paragraph" : [
+      "title" : "Solution",
+      "paragraphs" : [
         {
-          "text" : "There’s a lot involved into <span class='dot'>Lights</span>. So let’s start by breaking up what was done within the project."
+          "text" : "The onboarding needed to show the full breath of the app and its personality in just three screens—we followed the rule of three that Steve Jobs liked to mention to allow users to quickly scan the key selling points of the app, and get them directly into content without having to log in."
         },
         {
-          "text" : "• The product needed servers to interact to each other and register lights.",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• The product also needed a light and a hub to contain different lamps for each user.",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• The product needed an app to let the user control the light.",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• The product needed to be super simple and good enough for a normal person to use it.",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• The app needed to be understandable enough for a user to not get lost in it.",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• The setup of the whole product would be as simple as connecting a light and a hub.",
-          "class" : "indent"
-        },
-        {
-          "text" : "The most obvious way to start laying out the concept, and the biggest problem I had at first was an infrastructure problem. I knew that the app would need Bluetooth to connect to the app, I wasn’t sure how to solve that, but I could find a way, I knew I could design and easy to use solution and I had in mind how the lamp had to be, since I wanted to give an industrial look into it. However, there was the server problem. How is a server going to contain all the information of all the lights? How many servers do we need?"
-        },
-        {
-          "text" : "I started to sketch different solutions, and the one that made the most sense was clear, there will be two servers, one central one in the cloud and one at your home called hub, the two servers will interact with each other and will be the gate to any modification to the light via your phone through the app or via a website client. The light, will also automatically reach such hub and will listen to commands from it."
+          "text" : "User authentication would be required once users wanted to proceed with their cart. We saw a very good reception of this feature and a great amount of conversion."
         }
       ],
-      "image" : {
-        "link" : "images/projects/lights/image.jpg",
-        "quote" : "An early image from the process of conceptualizing how the whole product should be."
-      }
+      "box": true,
+      "class": "up"
     },
 
-    "server" : {
-      "title" : "server problems",
-      "paragraph" : [
+    "footer" : {
+      "cards" : [
         {
-          "text" : "There’s a lot of problems that evolve from having servers talk to each other. It was obvious that the user needed a light at home, one, or several. So it was pretty obvious that there would have to be some kind of hub that a phone would talk to, and give instructions. However, how would a phone talk to that hub? If the user was around such hub, a technology like Bluetooth could’ve been used, however, because one of the premises of the project was to be able to control the light from anywhere in the world, we would have to talk to it through the Internet."
+          "title" : "Linjer",
+          "image" : "images/projects/linjer/linjer.jpg",
+          "retina" : "images/projects/linjer/linjer@2x.jpg",
+          "link" : "./linjer",
+          "class" : "direction",
+          "subtitle" : "Increasing metrics for this handmade brand",
+          "case" : true
         },
         {
-          "text" : "There would have to be some kind of cloud that would contain all the lights, so the phone could download and manipulate them. However, the main problem that rose was basically how cloud would talk to the hub itself. The main option was an HTTP request with a REST API, however, digging more into it, because it was sort of an unknown problem, I discovered that HTTP requests only work one way. A service asks for information, a server gives it back. The server cannot ask for something in the service. If we think about it, we would need that. A server in the cloud would hand information to the phone, but that server, would also have to send a message to the other server at home after the light was manipulated."
-        },
-        {
-          "text" : "Another problem was the port connection. In order for HTTP to work over your home, you need to have a port open, and that destroys the premise of having an easy to use, just plug it in, solution. After some investigation, I discovered that Web Sockets was the fastest way to go. A two way communication, that sort of violates the laws of HTTP to create a connection between devices."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/lights/server.jpg",
-        "quote" : "Communications and infrastructure of the platform."
-      }
-    },
-
-    "plugged" : {
-      "title" : "plugged in",
-      "paragraph" : [
-        {
-          "text" : "In order to fix the server hassle, sockets were used, so the user wouldn’t have to open any port in the router or anything like that. The main selling point of the product was to connect and use. How would we achieve that with one server at home and one server in the cloud? How would they talk to each other?"
-        },
-        {
-          "text" : "The system I used in order to fix this problem was an awakening solution. The first time the user would plug in the hub, such device would send a message to a given address — the cloud server — asking to register itself in the database. The hub then, would save itself, save a secret key to give security in the editing of the light later on and start looking for lights and phones to pair itself with them."
-        },
-        {
-          "text" : "Each light, once connected, would do a similar process, they would ask the hub to register them, and once that was done,  the hub would send a message to the cloud server with the light. The app would work in a similar way explained a bit below."
-        },
-        {
-          "text" : "It was that easy, and from pretty early on, the concept to keep it like that existed. I had no idea how to fix it at first, but after the sockets discovery, everything seemed pretty straightforward. Lots of Bluetooth dongles and even a specific shield to give the Arduino wireless capabilities had to be bought."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/lights/plugged.jpg",
-        "quote" : "Abstraction of the process of connecting the hub. Each step is thoughtfully placed after the other to have everything ready for the user."
-      }
-    },
-
-    "industrial" : {
-      "title" : "industrial design",
-      "paragraph" : [
-        {
-          "text" : "It was the first time I was doing 3D design, as well as it was the first time doing a server but, in both cases, after a lot of concept work in a whiteboard, I had a pretty clear idea of what I wanted before starting of."
-        },
-        {
-          "text" : "For the industrial design, I wanted an app that had a trendy industrial look, for everyone to use and everyone to have, and not just the techie person. I wanted everyone to be able to use it by just connecting it, so a part from simple, had to be beautiful."
-        },
-        {
-          "text" : "The hub would follow the dark style of the app, with a squared box of the size of a Raspberry Pi. The light itself, had an industrial look with materials like aluminum and real glass instead of plastic."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/lights/industrial.jpg",
-        "quote" : "Detail of the lamp from the back, featuring an analog button for all use cases and four screws to fix the position."
-      }
-    },
-
-    "pairing" : {
-      "title" : "light pairing",
-      "paragraph" : [
-        {
-          "text" : "We’ve explained the system that the hardware was using to talk to each other — but how would the app fit within this process? It was simple, it had to pair the device with the hub, and after getting all the lights and the secret token, it could start editing them."
-        },
-        {
-          "text" : "In order to do that, the app would advertise itself once open and after the user hit the start button of the main screen, a searching would start and, after the hub would find the phone, the information would be sent."
-        },
-        {
-          "text" : "To have all the lights in the app, it would download them from the Internet to have the latest values and, when that was done, the user could start editing them."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/lights/pairing.jpg"
-      }
-    },
-
-    "editing" : {
-      "title" : "light editing",
-      "paragraph" : [
-        {
-          "text" : "Three main values had to be edited in this screen. The status of the light — ON or OFF — the intensity of the bulb, and the color of it. The first solution that came to mind was to do a different set of slides, however, this wasn’t creative enough even though intuitive."
-        },
-        {
-          "text" : "Not being creative enough could cause the app to feel so simple and, also, the fact of putting 4 slides to edit the colors and intensity wasn’t that good of an idea. The next iteration, then, contained a color wheel with a side bar to change intensity."
-        },
-        {
-          "text" : "It wasn’t until there was some user test that I discovered how the people were trying to use the app. They wanted something that could edit both at the same time, so I created a wheel that would edit the intensity when changing the radius and would obviously change the color with the color of the RGB wheel. For the status, a simple button would do the job."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/lights/editing.jpg"
-      }
-    },
-
-    "visually" : {
-      "title" : "visually",
-      "paragraph" : [
-        {
-          "text" : "Switching to the part of the product that would be the gate to the user to the digital world, the app had to give trust while being as simple to use as the analog product. For that, the starting point was a light style and, however a lot of interesting concepts came out of that — like big buttons with lots of steps that animated to each other and so on, a dark theme took over — the main reason for that being mainly the editing of the color and intensity of the light — the colors had to pop more. Some feedback gathered in interviews presented the same result."
-        },
-        {
-          "text" : "Other than that, the app featured a lot of small steps in different screens, with floating style animations that would make the process of waiting and pairing the light way easier to deal with. Big text in buttons would make the actions way clearer and the font combination would also present a compact style."
-        }
-      ],
-      "colors" : [
-        {
-          "code" : "#131313"
-        },
-        {
-          "code" : "#373C3F"
-        },
-        {
-          "code" : "#FFFFFF",
-          "position" : "last"
+          "title" : "Aparcat",
+          "image" : "images/projects/aparcat/aparcat.jpg",
+          "retina" : "images/projects/aparcat/aparcat@2x.jpg",
+          "link" : "./aparcat",
+          "class" : "direction",
+          "subtitle" : "Encouraging sustainable parking in the city",
+          "case" : true
         }
       ]
-    },
-
-    "finally" : {
-      "title" : "lights",
-      "paragraph" : [
-        {
-          "text" : "<span class='dot'>Lights</span> was a challenge from the beginning to the end. Hundreds of hours trying to figure out every small detail and interaction the user would have with the product, and the product would have to itself. I am really happy and proud of the result in the industrial, concept, UI & UX design, as well as the development of it. I had never done a server before, and I did two, I had never done 3D in Cheetah, and I did two products with it, I had never thought about that much scalability, and that was the first one. <span class='dot'>Lights</span> is the project of firsts, to close up one period of my life — my degree."
-        }
-      ]
-    },
-
-    "next" : {
-      "title" : "what's next",
-      "path" : {
-        "class" : "space"
-      },
-      "paragraph" : [
-        {
-          "text" : "After presenting it to an award and having one one for the best thesis of the year, the next step for <span class='dot'>Lights</span> as a project is to start it over. Not as in, remove and restart — the base is really good. What I want to say is that the current state of <span class='dot'>Lights</span> represents what can be done in the Internet of things, and the infrastructure created for this project could be ported to any kind of device. A thermostat, a window, a table, a chair. That’s the next step for this project, evaluate what can be done, see what’s next with it."
-        },
-        {
-          "text" : "A couple of people from <span class='dot'>Catalonia</span> and <span class='dot'>Norway</span> proposed to do a Kickstarter campaign, which might be also an option.",
-          "class" : "paragraph-space"
-        }
-      ]
-    },
-
-    "toolkit" : {
-      "title" : "toolkit",
-      "path" : {
-        "class" : "space"
-      },
-      "paragraph" : [
-        {
-          "text" : "<a href='https://shop.dribbble.com/products/gameplan-journal?variant=1006322845' target='_blank'>Pen and paper</a> for the concept.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='https://sketchapp.com' target='_blank'>Sketch</a> for the app.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='http://www.cheetah3d.com' target='_blank'>Cheetah3D</a> for the industrial design.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='https://atom.io' target='_blank'>Atom</a> to develop the servers.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "A <a href='https://www.raspberrypi.org' target='_blank'>Raspberry Pi</a> and an <a href='https://www.arduino.cc' target='_blank'>Arduino</a>",
-          "class" : "spacing"
-        },
-        {
-          "text" : "Tens of wires and electronic components."
-        }
-      ]
-    },
-
-    "back" : {
-      "title" : "gluten",
-      "link" : "./gluten"
-    },
-
-    "forward" : {
-      "title" : "revolution",
-      "link" : "./revolution"
     }
   },
 
-  "revolution" : {
-    "page" : "Ramon Gilabert — Product Designer",
-    "title" : "Ramon Gilabert – Revolution",
-    "name" : "revolution",
-    "role" : "Concept, UI & UX Design",
-    "summarize" : {
-      "paragraph" : [
+  "aparcat" : {
+    "navigation" : {
+      "image" : "images/navigation/owl.svg",
+      "central" : [
         {
-          "text" : "Thousands of people move to new cities every day, millions love sports. With so much events going under the radar every day, <span class='dot'>Revolution</span> plans to solve that issue, presenting sports and gatherings around activities to users around the planet. You join an event, the rest is having fun playing it."
+          "title" : "Overview",
+          "link" : "overview-link"
+        },
+        {
+          "title" : "Problem",
+          "link" : "problem-link"
+        },
+        {
+          "title" : "Focus",
+          "link" : "solution-link"
         }
       ],
+      "right" : [
+        {
+          "title" : "Contact",
+          "link" : "#",
+          "class" : "email"
+        }
+      ]
+    },
 
+    "title" : "Aparcat",
+    "first" : "Aparcat started in 2015 as a web app that would reserve parking spots around the buildings of Dubai, however, in 2017, it was time for them to enter the mobile market, so they reached out to me for their first design.",
+    "second" : "Their branding also needed a refresh that, together with the launch, would bring new users in a market that is starting to get saturated in the Arabic countries. Together with their technology, though, Aparcat would become #1.",
+    "image" : {
+      "link" : "images/projects/aparcat/introduction.jpg",
+      "retina" : "images/projects/aparcat/introduction@2x.jpg",
+      "class" : "full"
+    },
+    "propositions" : [
+      {
+        "title" : "Planning",
+        "pieces" : [
+          {
+            "text" : "App needs to be usable on the go"
+          },
+          {
+            "text" : "App needs some security features"
+          },
+          {
+            "text" : "Refresh in the current branding"
+          },
+          {
+            "text" : "Benchmark with competitors"
+          }
+        ]
+      },
+      {
+        "title" : "Results",
+        "pieces" : [
+          {
+            "text" : "Increased number of users"
+          },
+          {
+            "text" : "Overall positive app reviews"
+          },
+          {
+            "text" : "Mobile apps bring new hardware"
+          },
+          {
+            "text" : "Dubai startup award 2017"
+          }
+        ]
+      }
+    ],
+
+    "overview" : {
+      "title" : "Overview",
+      "paragraphs" : [
+        {
+          "text" : "Aparcat was pitched as an app that needed to be used on the go, as quickly and intuitively as possible for people to just open their phones in the middle of their cities, and find a parking around."
+        },
+        {
+          "text" : "Because of that, big imagery and a huge map welcomes users in the initial screen of the app, which allows them to find their geolocalized spot, select it, order their parking, and go."
+        },
+        {
+          "text" : "In the parking spot, they’ll be able to scan a QR code which will unlock the barriers—but not only that, since they’ll be able to extend their stay at any parking right from the app’s personalized screen. In order to accomplish all that, hardware and software need to collaborate together in the best way possible."
+        }
+      ],
       "image" : {
-        "link" : "images/projects/revolution/summarize.jpg",
-        "quote" : "Bright over dark, the theme that followed after successful user research. With different color combinations for the user to choose."
+        "link" : "images/projects/aparcat/overview.jpg",
+        "retina" : "images/projects/aparcat/overview@2x.jpg",
+        "class" : "full"
       }
     },
 
-    "story" : {
-      "title" : "story",
-      "paragraph" : [
+    "problem" : {
+      "title" : "Organizing",
+      "paragraphs" : [
         {
-          "text" : "<span class='dot'>Revolution</span> is a project born out of necessity. Being new to a city it’s never an easy task. Knowing nobody to play sports, not knowing where events are happening. Every field has its own system to gather people together. Meetup for meetings, Eventbrite for conferences or Facebook for everything else. However, when you are not connected to that people that organize events in Facebook, or you are not quite a fan of this solution for it’s immensity in that field, you are lost in the sea of doubt."
+          "text" : "One of the requirements of the app was that Android and iOS needed to share the design, and, because the main interactions would happen on a map and on the go, we decided to use a hamburger menu that would live always on top."
         },
         {
-          "text" : "The main goal for <span class='dot'>Revolution</span> is to allow its users to find people that want to play the same sport as you do. Those people create an event, and you can just sign up for it. Before the game, you can start connecting within an open chat. A gathering social revolution."
+          "text" : "To make it simple and easy for drivers, all the interactions on the map would be swipeable and non obtrusive, that is, parkings would slide from the bottom, and confirmation screens would dismiss automatically after a certain ammount of seconds."
+        },
+        {
+          "text" : "Contextual buttons are always positioned floating at the bottom and with a prominent background color."
         }
       ],
       "image" : {
-        "link" : "images/projects/revolution/story.jpg",
-        "quote" : "Here goes an image of the project as is now, with a quote in it."
+        "link" : "images/projects/aparcat/problem.jpg",
+        "retina" : "images/projects/aparcat/problem@2x.jpg",
+        "class" : "full"
       }
     },
 
     "solution" : {
-      "title" : "solution",
-      "paragraph" : [
+      "title" : "Focus",
+      "paragraphs" : [
         {
-          "text" : "At first, the goal seems pretty big — an app to solve social sports gathering. But if you think about it, this is a necessity thousands of people face. Within a world where people have more and more difficulties interacting to each other, it’s hard to design something that solves that problem while still giving enough confidence to its users to use it. There’s so many unknowns:"
+          "text" : "Not all parts of the app were thought to be used on the go, and purposefully there were sections that were designed to take time to use and consider, one example is the control center, due to regulations in Dubai, cars needed to be registered and verified. Because of that, a picture of the car is necessary, and choosing your license plate and the city of such license is as well."
         },
         {
-          "text" : "• Will the group connect in the game? Will they be able to get along?",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• Who is able to create sports? How to do it? How to make it appealing?",
-          "class" : "indent"
-        },
-        {
-          "text" : "In order to answer that, the design was focused in confidence, while giving a sporty look to the app. The concept was to allow big curators of events, such as Nike, Adidas or Puma to be able to create its own competitions within the app, as well as soccer games created by professionals, or even basketball tournaments in a random pitch in town."
-        },
-        {
-          "text" : "With all that in mind, the MVP of this product needed to be simple and clear enough for users to trust it, and big corporations to engage with it. The product would feature two main branches at first. One to find a sport and sign up for it, and the other to track your performance. The event creation branch is being built at the moment. And would be done after the release of the first MVP featuring big names in the sport community."
-        },
-        {
-          "text" : "The design would also include a very image heavy solution for the landing page, in order to make the potential user feel the power that athletes transmit through the pictures."
+          "text" : "Another example is the view in which users can see the size of the parking spot and rent it from there."
         }
       ],
-      "image" : {
-        "link" : "images/projects/revolution/image.jpg",
-        "quote" : "The starting point of revolution, what started it all."
-      }
+      "box": true,
+      "class": "up"
     },
 
-    "flow" : {
-      "title" : "user flow",
-      "paragraph" : [
+    "footer" : {
+      "cards" : [
         {
-          "text" : "As stated above, the app would have two main parts. One to join events, an another to track the user’s performance in such events. The union between them would be obvious. At first, and after the onboarding, the user would be directed to find a sport — that’s because it’s the first time in the app and there’s nothing to track yet. From there, if there’s sports tracked already, the user would be redirected to the statistics and tracking section."
+          "title" : "Linjer",
+          "image" : "images/projects/linjer/linjer.jpg",
+          "retina" : "images/projects/linjer/linjer@2x.jpg",
+          "link" : "./linjer",
+          "class" : "direction",
+          "subtitle" : "Increasing metrics for this handmade brand",
+          "case" : true
         },
         {
-          "text" : "The decision to use a hamburger menu was basically for the lack of connection between the features in an easy step. If the user is searching sports, she is not tracking her activity, and vice versa. That being said, it’s obvious that, if such user joins an event and wants to track it right away, the app would know that, and would redirect her to the other screen in order for the tracking to begin."
-        },
-        {
-          "text" : "Other than that, the flow would be really simple. There would be three steps to select a sport and just one to start tracking. Finally, in order to save future events, there would be a small section in the app that would allow you to find each event, the chat, and a button to start tracking."
-        },
-        {
-          "text" : "Needs to be added that, in the sport selection, an additional flow passed my mind during the concept phase. What to do first was the question, a map, or a list with sports? Because the app needed to provide lots of results, and the job of the product would be to have available as many events as possible, it wouldn’t be a good solution to constrain the user to a certain location at first. The app would obviously look at events at the user’s city and provide a list, after the user would select the sport she wanted to play — she would get presented with the map. During concept, the feeling was that if you present a user with a map at the beginning, you are constraining what they opened the app for. That’s why the constrains appear at the end rather than at the beginning."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/revolution/flow.jpg",
-        "quote" : "Abstraction of one of the flows of the app, showing how a user would join a sport."
-      }
-    },
-
-    "find" : {
-      "title" : "find sports",
-      "paragraph" : [
-        {
-          "text" : "There’s some things that we need to keep in mind in order to find the sport and the event you are looking for."
-        },
-        {
-          "text" : "• Which sport does the user want to play?",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• Where does the user want to play?",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• How does the user join a sport?",
-          "class" : "spacing indent"
-        },
-        {
-          "text" : "• Where do all those sports get saved?",
-          "class" : "indent"
-        },
-        {
-          "text" : "Those were the questions that the app needed to solve in the <span class='dot'>find your sports</span> section. For that, the solution included a step–by–step selection — to make it less crowded in the screen. With that in mind, three steps were create. One to select your sport, a map or list to select the location, and a joint screen to see all your events. In terms of selecting a sport, it needed to be intuitive for the user, and also, needed to include as much sports as possible for any need that a user would have. A simple map with an option of having a list ordered by distance, would be easy enough for the user to start an event."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/revolution/find.jpg"
-      }
-    },
-
-    "tracking" : {
-      "title" : "tracking",
-      "paragraph" : [
-        {
-          "text" : "As stated above, the app would know when to show the tracker to the user. Either when a sport was about to start, or when there was tracking information already in place. The tracking of a user would consist of a two–screen process. In the called <span class='dot'>feed</span>, the user would see all the past tracked results, with information like calories burned, BPM mean or time. It would also see a graphic of the intensity based over time for that specific workout."
-        },
-        {
-          "text" : "By selecting an active tracking, the user would see the amount of miles she had done during that workout, and some additional information like the one stated above. The user would be able to track different events, or just start a new tracking from the feed. Even though there are a lot of different sports, the tracking would be as simple as pressing a button for now, adding specific features for each one of them later on. "
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/revolution/tracking.jpg"
-      }
-    },
-
-    "others" : {
-      "title" : "others",
-      "paragraph" : [
-        {
-          "text" : "I wanted to highlight some other screens that were designed for the app. The menu would follow the overall style making an animation coming from the top. The chat would be as simple as showing bubbles of the users, and the sports collective with future events would follow the tracking feed."
-        },
-        {
-          "text" : "As stated above, the event creation would be done right now by admins, but would be outsourced to people as soon as users got engaged with the product. It would have to also be really simple. Select a sport, a venue and a number of people to join."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/revolution/others.jpg"
-      }
-    },
-
-    "landing" : {
-      "title" : "landing page",
-      "paragraph" : [
-        {
-          "text" : "In terms of visual design, the last piece was the landing page which would tell the user to download the app by showing the main benefits of it. The website needed to be clear and straight to the point, marketing the app as the main concept, and showing the three basic steps to join an event. With that, different images were retouched to give the viewer a feel of power. The darkness of the site, was justified with the idea of giving the athletes and text the most importance."
-        },
-        {
-          "text" : "The images were personally retouched with some blemish removal and some lighting fixing, as well as different background creation and so on. Each image counted with more than 25 layers on top of the original one to give it the same feel."
-        }
-      ],
-      "image" : {
-        "link" : "images/projects/revolution/landing.jpg"
-      }
-    },
-
-    "visually" : {
-      "title" : "visually",
-      "paragraph" : [
-        {
-          "text" : "Visually the first colors that came to mind were dark ones combined with an electric contrast color. Lots of them were tried — green, blue, pink, orange or red, and the one that the users liked the most, in terms of usage was the orange one. Because orange is associated to shine, and the contrast with a dark gray makes it pop a lot, the users preferred to a more conventional solution like green or blue. However, though, because there was some uncertainty at the beginning within the same user research, this could present a opportunity to make themes around the app."
-        },
-        {
-          "text" : "Other than that, it might seem weird the decision to make the app less image heavy as the website is, but I personally wanted to keep it as simple as possible, featuring just the information that needed to be given with the maximum negative space possible — giving clarity to the end user and at the same time trust."
-        }
-      ],
-      "colors" : [
-        {
-          "code" : "#1D181D"
-        },
-        {
-          "code" : "#FF5C42"
-        },
-        {
-          "code" : "#FFFFFF",
-          "position" : "last"
+          "title" : "Manjaras",
+          "image" : "images/projects/manjaras/manjaras.jpg",
+          "retina" : "images/projects/manjaras/manjaras@2x.jpg",
+          "link" : "./manjaras",
+          "class" : "direction",
+          "subtitle" : "On demand local food delivery in Dubai",
+          "case" : true
         }
       ]
-    },
-
-    "finally" : {
-      "title" : "revolution",
-      "paragraph" : [
-        {
-          "text" : "The name <span class='dot'>Revolution</span> is born out of the idea of creating a new step forward in the sports world, making it as easy as it can be to join any event, in any city in the world, with a self driven community."
-        }
-      ]
-    },
-
-    "next" : {
-      "title" : "what's next",
-      "path" : {
-        "class" : "space"
-      },
-      "paragraph" : [
-        {
-          "text" : "<span class='dot'>Revolution</span> comes from a personal need when being new to a city — and after scratching the surface of what it can be done with this concept, it’s easy to see more things getting attached to this main idea. A sports creation section is basic, and a continuous improvement over the main columns of the app is something that must be done."
-        },
-        {
-          "text" : "The development of this app will happen at some point, after <span class='dot'>Gluten</span> is released.",
-          "class" : "paragraph-space"
-        }
-      ]
-    },
-
-    "toolkit" : {
-      "title" : "toolkit",
-      "path" : {
-        "class" : "space"
-      },
-      "paragraph" : [
-        {
-          "text" : "<a href='https://shop.dribbble.com/products/gameplan-journal?variant=1006322845' target='_blank'>Pen and paper</a> for the concept.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='http://www.adobe.com/products/experience-design.html' target='_blank'>Adobe XD</a> for the app.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='http://www.adobe.com/products/photoshop.html' target='_blank'>Photoshop</a> for the landing and the retouch.",
-          "class" : "spacing"
-        },
-        {
-          "text" : "<a href='http://principleformac.com' target='_blank'>Principle</a> for the early prototypes.",
-          "class" : "spacing"
-        }
-      ]
-    },
-
-    "back" : {
-      "title" : "lights",
-      "link" : "./lights"
-    },
-
-    "forward" : {
-      "title" : "gluten",
-      "link" : "./gluten"
     }
-  },
-
-  "social" : [
-    {
-      "image" : "images/general/social/twitter.svg",
-      "link" : "https://www.twitter.com/RamonGilabert"
-    },
-    {
-      "image" : "images/general/social/dribbble.svg",
-      "link" : "https://www.dribbble.com/RamonGilabert"
-    },
-    {
-      "image" : "images/general/social/github.svg",
-      "link" : "https://www.github.com/RamonGilabert"
-    },
-    {
-      "image" : "images/general/social/linkedin.svg",
-      "link" : "https://www.linkedin.com/in/RamonGilabert"
-    }
-  ]
+  }
 }

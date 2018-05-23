@@ -1,16 +1,16 @@
 {
-  "repository" : "ramongilabert/ramongilabert.github.io",
-  "version" : "0.0.1",
-  "author" : "Ramon Gilabert",
-  "name" : "gilabert.design",
-  "description" : "Personal portfolio",
-  "license" : "BSD-3-Clause",
-  "main" : "gulpfile.js",
+  "repository": "ramongilabert/ramongilabert.github.io",
+  "version": "0.0.1",
+  "author": "Ramon Gilabert",
+  "name": "gilabert.design",
+  "description": "Personal portfolio",
+  "license": "BSD-3-Clause",
+  "main": "gulpfile.js",
   "devDependencies": {
-    "gulp" : "latest",
-    "gulp-watch" : "latest",
-    "gulp-sourcemaps" : "latest",
-    "gulp-stylus" : "latest",
-    "gulp-mustache-plus" : "latest"
+    "gulp": "^3.9.1",
+    "gulp-mustache-plus": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-watch": "latest"
   }
 }

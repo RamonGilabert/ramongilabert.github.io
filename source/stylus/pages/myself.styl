@@ -1,0 +1,136 @@
+.page {
+  width: 100%
+  max-width: maximum-width
+  margin: 0 auto
+  
+  .wrapper {
+    position: relative
+    margin-right: percentage-2
+    margin-left: percentage-2
+  }
+}
+
+.projects {
+  position: relative
+  
+  .mono {
+    position: relative
+    line-height: 1
+    margin-left: -12.4%
+    transform-origin: 0 0
+    transform: rotate(-90deg) translateX(-450px)
+    backface-visibility: hidden
+    z-index: 1
+  }
+  
+  .cards {
+    display: flex
+    flex-direction: column
+    align-content: space-between
+    flex-wrap: wrap
+    padding-top: 20px
+    padding-bottom: 20px
+  }
+}
+
+.personal {
+  position: relative
+  
+  .box {
+    height: calc(100% + 140px)
+    margin-top: -140px
+  }
+  
+  .social {
+    position: absolute
+    transform-origin: 0% 100%
+    transform: rotate(90deg) translateX(100px)
+    line-height: 1
+    z-index: 2
+    margin-top: -12px
+    white-space: nowrap
+    backface-visibility: hidden
+    display: flex
+    flex-direction: row
+    align-items: center
+    
+    a, p {
+      font-family: 'Styrene B Web'
+      font-weight: 500
+      font-size: size-s
+      text-transform: uppercase
+      letter-spacing: 1.5px
+    }
+  }
+}
+
+.box {
+  position: absolute
+  margin-top: -80px
+  margin-left: -column-2
+  width: column-19
+  height: 60%
+  background-color: secondary-color 
+  z-index: 0
+}
+
+@media (max-width: minimum-width) {
+  .projects {
+    top: -52px
+    margin-top: 0px !important
+    
+    .cards {
+      align-content: flex-start
+      padding-top: 0px
+      padding-bottom: 0px
+      position: relative
+    }
+  }
+  
+  .personal {
+    margin-top: -44px
+    
+    .box {
+      margin-top: -120px !important
+      height: calc(100% + 120px) !important
+    }
+  }
+  
+  .box {
+    margin-top: 44px
+    height: 1200px
+  }
+}
+
+@media (max-width: midiu-width) {
+  .page {
+    .wrapper {
+      margin-right: percentage-1
+      margin-left: percentage-1
+    }
+  }
+  
+  .projects {
+    padding-top: 0px
+    margin-top: -40px
+    
+    .cards {
+      margin-top: -20px
+    }
+  }
+  
+  .personal {
+    .social {
+      margin-top: 0px
+    }
+  }
+}
+
+@media (max-width: median-width) {
+  .personal {
+    .box {
+      margin-top: -100px !important
+      height: calc(100% + 100px) !important
+    }
+  }
+}

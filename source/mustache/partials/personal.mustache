@@ -1,0 +1,19 @@
+{{# personal }}
+		<div class='personal'>
+			<div class='box light'>
+      </div>
+      <div class='social'>
+				{{ # links }}
+				<a class='link' href='{{ link }}' target='_blank'>{{ title }}</a>
+				{{# dot }}
+				<p>&nbsp;&middot;&nbsp;</p>
+				{{/ dot }}
+				{{/ links }}
+			</div>
+      <div class='hobbies'>
+      {{# hobbies }}
+      	{{> hobby }}
+      {{/ hobbies }}
+      </div>
+		</div>
+{{/ personal }}

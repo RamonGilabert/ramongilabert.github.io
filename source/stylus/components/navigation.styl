@@ -1,0 +1,159 @@
+nav {
+	position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  margin: 0 auto
+  background-color: background-color
+  transition: transform 0.3s ease
+	
+	
+	.navigation-wrapper {
+		width: grid(2, 18)
+		max-width: 1443.94px
+		display: flex
+		flex-direction: row
+		align-items: center
+		height: 100px
+		position: relative
+		margin-left: 50%
+		transform: translateX(-50%)
+		position: relative
+	}
+	
+	.central {
+		order: 2
+		text-align: center
+		margin: 0 auto
+		
+		a {
+			position: relative
+			cursor: pointer
+			margin-right: 50px
+			margin-left: 50px
+		}
+	}
+	
+	.right {
+		order: 3
+		text-align: right
+		width: 100px
+	}
+	
+	.home {
+		order: 1
+		text-align: left
+		width: 100px
+		cursor: pointer
+		transform: scale(1.05)
+		transition: transform 0.3s ease
+		backface-visibility: hidden
+	}
+	
+	.home:after {
+		opacity: 0
+	}
+	
+	.home:hover {
+		transform: translateZ(0) scale(1)
+	}
+	
+	svg {
+		width: 36px
+		height: 36px
+	}
+	
+	svg:hover {
+		.owl {
+			//fill: background-color
+		}
+	}
+	
+	.owl {
+		transition: fill 0.3s ease
+	}
+	
+	a {
+		font-family: 'Styrene B Web'
+		font-weight: 500
+		font-size: size-m
+		text-transform: uppercase
+	}
+}
+
+.dark {
+	transition: color 0.3s ease
+}
+
+.light {
+	transition: background-color 0.3s ease
+}
+
+.lighten {
+	transition: fill 0.3s ease
+}
+
+.lighter {
+	transition: background-color 0.3s ease
+}
+
+.darker-background {
+	background-color: #333 !important
+}
+
+.dark-color {
+	background-color: text-color
+}
+
+.darken-background {
+	background-color: text-color
+}
+
+.svg-background {
+	fill: #333
+}
+
+.darken-color {
+	color: text-color
+}
+
+.lighten-background {
+	background-color: background-color
+}
+
+.lighten-color {
+	color: background-color
+}
+
+@media (max-width: phone-width) {
+	nav {
+		.central {
+			opacity: 0
+		}
+		
+		.navigation-wrapper {
+			height: 60px
+		}
+	}
+}
+
+@media (max-width: midiu-width) {
+	nav {
+		.central {
+			a {
+				margin-right: 25px
+				margin-left: 25px
+			}
+		}
+		
+		a {
+			font-size: size-s
+		}
+		
+		.navigation-wrapper {
+			width: grid(1, 19)
+			height: 80px
+		}
+	}
+}

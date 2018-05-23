@@ -1,34 +1,30 @@
 @import fonts
 @import constants
-@import indicator
+@import typography
 @import footer
+@import grid
+@import functions
 
-@import 'myself/myself'
+@import 'pages/myself'
 
-@import 'cases/general'
-@import 'cases/image'
-@import 'cases/title'
-@import 'cases/subtitle'
-@import 'cases/visually'
-@import 'cases/quote'
-@import 'cases/text'
+@import 'components/introduction'
+@import 'components/image'
+@import 'components/text'
+@import 'components/proposition'
+@import 'components/navigation'
+@import 'components/hero'
+@import 'components/card'
+@import 'components/hobbies'
 
 *, html {
   margin: 0
   padding: 0
+  outline: 0
 }
 
 html, body {
   margin: 0 auto
-}
-
-html, body {
-  background-color: white-color
-}
-
-a {
-  text-decoration: none
-  color: text-color
+  background-color: background-color
 }
 
 button {
@@ -42,14 +38,8 @@ button:focus {
   outline: 0
 }
 
-button, h1, h2, h3, h4, p, a {
-  font-smooth: always
-  -webkit-font-smoothing: antialiased
-}
-
-h1, h2, h3, h4, p {
-  cursor: default
-  color: text-color
+.email {
+  cursor: pointer
 }
 
 .page-title {
@@ -62,17 +52,47 @@ h1, h2, h3, h4, p {
 }
 
 .transition {
-  background-color: dark-background-color
+  background-color: background-running
   position: fixed
   width: 100%
   height: 100%
   top: 0
   left: 0
-  z-index: 100
+  z-index: 300
+  overflow: auto
+  backface-visibility: hidden
+  transform: scale(1.00001), translateZ(0.00001);
+  -webkit-transform: scale(1.00001), translateZ(0.00001);
+  -moz-transform: scale(1.00001), translateZ(0.00001);
+  -webkit-backface-visibility: hidden
+  -webkit-transform-style: preserve-3d
+  -webkit-perspective: 1000
+  
+  .secondary {
+    position: relative
+    width: 200%
+    height: 100%
+    background-color: background-running
+    z-index: 300
+    overflow: auto
+    backface-visibility: hidden
+    transform: scale(1.00001), translateZ(0.00001);
+    -webkit-transform: scale(1.00001), translateZ(0.00001);
+    -moz-transform: scale(1.00001), translateZ(0.00001);
+    -webkit-backface-visibility: hidden
+    -webkit-transform:translate3d(0, 0, 0)
+    -webkit-transform-style: preserve-3d
+    -webkit-perspective: 1000
+    transform: translateX(-100%)
+  }
 }
 
 .lighter {
   background-color: white-color
+}
+
+.invisible {
+  visibility: hidden
 }
 
 .hide {

@@ -1,156 +1,106 @@
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: dark-background-color;
+  padding-top: 180px;
+}
+footer .mono {
+  position: relative;
+  line-height: 1;
+  margin-left: -12.4%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-450px);
+  backface-visibility: hidden;
   z-index: 1;
 }
-footer .back,
-footer .forward {
-  mix-blend-mode: soft-light;
-  position: absolute;
-  display: inline-block;
-}
-footer .back a,
-footer .forward a {
-  display: inline-block;
-  font: 17px Gilroy;
-  font-weight: 400;
-  color: white-color;
-  letter-spacing: -0.3px;
-}
-footer .back {
-  left: 20px;
-  bottom: 15px;
-  padding-left: 40px;
-}
-footer .forward {
-  bottom: footer-size -36px;
-  right: 20px;
-  padding-right: 40px;
-}
-footer .back:before,
-footer .forward:after {
-  content: '';
-  pointer-events: none;
-  display: inline-block;
-  background-color: white-color;
-  position: absolute;
-  height: 2px;
-  top: 57%;
-  transform: translateY(-50%);
-}
-footer .back:before {
-  left: 0%;
-  right: calc(100% - 33px);
-  transition: 0.6s right ease;
-}
-footer .forward:after {
-  right: 0%;
-  left: calc(100% - 33px);
-  transition: 0.6s left ease;
-}
-footer .back:hover:before {
-  right: 0%;
-}
-footer .forward:hover:after {
-  left: 0%;
-}
-footer .circle {
-  width: 400px;
-  height: 400px;
-}
-footer .inner {
-  position: absolute;
-  bottom: 250px;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-footer .inner .email {
-  text-align: center;
-  display: inline-block;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-footer .inner .email span {
-  font: 21px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica;
-  font-weight: 900;
-}
-footer .inner .email p {
-  position: relative;
-  font: 20px Gilroy;
-  font-weight: 700;
-  cursor: pointer;
-  color: white-color;
-  letter-spacing: -0.4px;
-}
-footer .inner .email p:after {
-  background-color: #fff;
-  top: 56%;
-  height: 2.5px;
-}
-footer .inner .email p:hover:after {
-  right: 0;
-}
-footer .inner .path {
-  display: block;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 23px;
-  margin-bottom: 18px;
-  opacity: 0.15;
-}
-footer .inner .social {
+footer .footer-cards {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-cards .card {
+  max-width: grid(2, 9);
+}
+footer .bottom {
+  height: auto;
+  margin-top: 168px;
+  margin-bottom: 260px;
+  text-align: center;
+}
+footer .bottom .home {
+  margin: 0 auto;
+}
+footer .bottom .home img {
+  width: 36px;
+  height: 36px;
+  transform: scale(1.05);
+  backface-visibility: hidden;
+  transition: transform 0.3s ease;
+}
+footer .bottom .home img:hover {
+  transform: translateZ(0) scale(1);
+}
+footer .bottom .links {
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  margin-top: 116px;
+  white-space: nowrap;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  align-content: center;
 }
-footer .inner .social .social-icon {
-  cursor: pointer;
-  max-height: 36px;
-  object-fit: cover;
-  margin-left: 25px;
-  margin-right: 25px;
-  transition: 0.45s transform ease;
-}
-footer .inner .social .social-icon:hover {
-  transform: scale3d(0.9, 0.9, 1);
+footer .bottom .links a,
+footer .bottom .links p {
+  font-family: 'Styrene B Web';
+  font-weight: 500;
+  font-size: size-m;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 @media (max-width: minimum-width) {
   footer {
-    overflow: hidden;
+    padding-top: 80px;
   }
-  footer .inner {
-    bottom: 200px;
+  footer .footer-cards {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
   }
-  footer .inner .email {
-    font-weight: 400;
+  footer .bottom {
+    margin-top: 168px;
+    margin-bottom: 240px;
   }
-  footer .inner .email span {
-    font-weight: 700;
+  footer .bottom .links {
+    margin-top: 100px;
   }
-  footer .back,
-  footer .forward {
-    position: absolute;
-    display: inline-block;
+}
+@media (max-width: midiu-width) {
+  footer {
+    padding-top: 100px;
   }
-  footer .back {
-    transform-origin: bottom right;
-    transform: translateX(-100%) rotateZ(90deg);
-    bottom: 15px;
-    left: 10px;
+  footer .bottom {
+    margin-top: 60px;
+    margin-bottom: 140px;
   }
-  footer .forward {
-    transform-origin: top left;
-    transform: translateX(100%) rotateZ(90deg);
-    right: 10px;
-    bottom: mobile-footer-size -36px;
+  footer .bottom .links {
+    margin-top: 60px;
   }
-  footer .inner .social .social-icon {
-    margin-left: 15px;
-    margin-right: 15px;
+  footer .bottom .links a {
+    font-size: size-s;
+  }
+}
+@media (max-width: 340px) {
+  footer .bottom .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .bottom .links a {
+    margin-bottom: 36px;
+  }
+  footer .bottom .links p {
+    display: none;
   }
 }

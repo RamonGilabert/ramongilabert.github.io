@@ -1,191 +1,129 @@
-// Footer styles
-
 footer {
-  position: fixed
-  bottom: 0
-  width: 100%
-  height: 100vh
-  background-color: dark-background-color
-  z-index: 1
-
-  .back, .forward {
-    mix-blend-mode: soft-light
-    position: absolute
-    display: inline-block
-
-    a {
-      display: inline-block
-      font: 17px Gilroy
-      font-weight: 400
-      color: white-color
-      letter-spacing: -0.3px
-    }
+  padding-top: 180px
+  
+  .mono {
+    position: relative
+    line-height: 1
+    margin-left: -12.4%
+    transform-origin: 0 0
+    transform: rotate(-90deg) translateX(-450px)
+    backface-visibility: hidden
+    z-index: 1
   }
-
-  .back {
-    left: 20px
-    bottom: 15px
-    padding-left: 40px
+  
+  .footer-cards {
+  	display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		
+		.card {
+			max-width: grid(2, 9)
+		}
   }
-
-  .forward {
-    bottom: footer-size - 36px
-    right: 20px
-    padding-right: 40px
-  }
-
-  .back:before, .forward:after {
-    content: ''
-    pointer-events: none
-    display: inline-block
-    background-color: white-color
-    position: absolute
-    height: 2px
-    top: 57%
-    transform: translateY(-50%)
-  }
-
-  .back:before {
-    left: 0%
-    right: calc(100% - 33px)
-    transition: 0.6s right ease
-  }
-
-  .forward:after {
-    right: 0%
-    left: calc(100% - 33px)
-    transition: 0.6s left ease
-  }
-
-  .back:hover:before {
-    right: 0%
-  }
-
-  .forward:hover:after {
-    left: 0%
-  }
-
-  .circle {
-    circle = 400px
-
-    width: circle
-    height: circle
-  }
-
-  .inner {
-    position: absolute
-    bottom: 250px
-    left: 50%
-    transform: translate(-50%, 50%)
-
-    .email {
-      text-align: center
-      display: inline-block
-      margin-left: 50%
-      transform: translateX(-50%)
-
-      span {
-        font: 21px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica
-        font-weight: 900
-      }
-    }
-
-    .email {
-      p {
-        position: relative
-        font: 20px Gilroy
-        font-weight: 700
-        cursor: pointer
-        color: white-color
-        letter-spacing: -0.4px
-      }
-
-      p:after {
-        background-color: white
-        top: 56%
-        height: 2.5px
-      }
-
-      p:hover:after {
-        right: 0
-      }
-    }
-
-    .path {
-      display: block
-      margin-left: 50%
-      transform: translateX(-50%)
-      margin-top: 23px
-      margin-bottom: 18px
-      opacity: 0.15
-    }
-
-    .social {
-      display: flex
-      flex-direction: row
-      flex-wrap: nowrap
-      justify-content: center
-      align-content: center
-
-      .social-icon {
-        margin = 25px
-
-        cursor: pointer
-        max-height: 36px
-        object-fit: cover
-        margin-left: margin
-        margin-right: margin
-        transition: 0.45s transform ease
-      }
-
-      .social-icon:hover {
-        scale = 0.9
-        transform: scale3d(scale, scale, 1)
-      }
-    }
+  
+  .bottom {
+  	height: auto
+  	margin-top: 168px
+  	margin-bottom: 260px
+  	text-align: center
+  	
+  	.home {
+	  	margin: 0 auto
+	  	
+	  	img {
+	  		width: 36px
+	  		height: 36px
+	  		transform: scale(1.05)
+	  		backface-visibility: hidden
+	  		transition: transform 0.3s ease
+	  	}
+	  	
+	  	img:hover {
+	  		transform: translateZ(0) scale(1)
+	  	}
+	  }
+	  
+	  .links {
+	  	width: 100%
+	  	text-align: center
+	    line-height: 1
+	    margin-top: 116px
+	    white-space: nowrap
+	    backface-visibility: hidden
+	    display: flex
+	    flex-direction: row
+	    align-items: center
+	    justify-content: center
+	    
+	    a, p {
+	      font-family: 'Styrene B Web'
+	      font-weight: 500
+	      font-size: size-m
+	      text-transform: uppercase
+	      letter-spacing: 1.5px
+	    }
+	  }
   }
 }
 
-@media (max-width: minimum-width) {
-  footer {
-    overflow: hidden
+@media(max-width: minimum-width) {
+	footer {
+		padding-top: 80px
+		
+		.footer-cards {
+			display: flex
+	    flex-direction: column
+	    align-content: space-between
+		}
+		
+		.bottom {
+			margin-top: 168px
+  		margin-bottom: 240px
+  		
+			.links {
+				margin-top: 100px
+			}
+		}
+	}
+}
 
-    .inner {
-      bottom: 200px
+@media(max-width: midiu-width) {
+	footer {
+		padding-top: 100px
+		
+		.bottom {
+			margin-top: 60px
+			margin-bottom: 140px
+			
+			.links {
+				 margin-top: 60px
+				 
+				 a {
+					font-size: size-s
+				}
+			}
+		}
+	}
+}
 
-      .email {
-        font-weight: 400
-
-        span {
-          font-weight: 700
-        }
-      }
-    }
-
-    .back, .forward {
-      position: absolute
-      display: inline-block
-    }
-
-    .back {
-      transform-origin: bottom right
-      transform: translateX(-100%) rotateZ(90deg)
-      bottom: 15px
-      left: 10px
-    }
-
-    .forward {
-      transform-origin: top left
-      transform: translateX(100%) rotateZ(90deg)
-      right: 10px
-      bottom: mobile-footer-size - 36px
-    }
-
-    .inner .social .social-icon {
-      margin = 15px
-
-      margin-left: margin
-      margin-right: margin
-    }
-  }
+@media(max-width: 340px) {
+	footer {
+		.bottom {
+			.links {
+				display: flex
+		    flex-direction: column
+		    align-items: center
+		    
+		    a {
+		    	margin-bottom: 36px
+		    }
+				
+				p {
+					display: none
+				}
+			}
+		}
+	}
 }

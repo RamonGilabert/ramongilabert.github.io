@@ -1,19 +1,22 @@
-    <footer>
-      <div class='noise'></div>
-      <img class='circle' src='./images/general/circle.png'>
-      {{# back }}
-      <div class='back'><a class='navigation' href='{{ link }}'>{{ title }}</a></div>
-      {{/ back }}
-      {{# forward }}
-      <div class='forward'><a class='navigation' href='{{ link }}'>{{ title }}</a></div>
-      {{/ forward }}
-      <div class='inner'>
-        <div class='email'><p>ramon<span>@</span>gilabert.design</p></div>
-        <img class='path' src='./images/general/path.svg'>
-        <div class='social'>
-          {{# social }}
-          <a href='{{ link }}' target='_blank'><img class='social-icon' src='{{ image }}'></a>
-          {{/ social }}
-        </div>
-      </div>
-    </footer>
+{{# footer }}
+<footer>
+	<p class='mono selection'>Related Pieces</p>
+	<div class='footer-cards'>
+		{{# cards }}
+		{{> card }}
+		{{/ cards }}
+	</div>
+	<div class='bottom'>
+		<a class='home direction' href='index.html'>
+	    <img src='./images/navigation/owl.svg' />
+	  </a>
+	  <div class='links'>
+	  	<a class='twitter external link' href='https://twitter.com/RamonGilabert' target='_blank'>Twitter</a>
+	  	<p>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</p>
+	  	<a class='dribbble external link' href='https://dribbble.com/RamonGilabert' target='_blank'>Dribbble</a>
+	  	<p>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</p>
+	  	<a class='linkedin external link' href='https://www.linkedin.com/in/ramongilabert/' target='_blank'>LinkedIn</a>
+	  </div>
+	</div>
+</footer>
+{{/ footer }}

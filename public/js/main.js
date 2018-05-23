@@ -2,33 +2,38 @@
 
 // MARK: - General values
 
-const displaying = '0.5s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+const displaying = '1.6s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
+const leaving = '0.7s transform cubic-bezier(0.5, 0.15, 0.15, 1)';
 
 const load = new Load();
 const transition = new Transition();
-const parallax = new Parallax();
-const scroller = new Scroller();
+const loader = new Loader();
+const grid = new Grid();
 const resizer = new Resizer();
 const prevent = new Prevent();
-const click = new Click();
-const loader = new Loader();
+const hover = new Hover();
+const parallax = new Parallax();
+const scroller = new Scroller();
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
+  // load.prepare(); // REMOVE THIS
 
   const white = document.class('transition');
   setTimeout(function() {
     white.style.transition = displaying;
+    load.prepare();
 
     setTimeout(function() {
-      load.prepare();
-      white.style.transform = 'translateY(-100%)';
+      white.style.transform = 'translate3d(300%, 0, 0)';
 
       setTimeout(function() {
         white.style.display = 'none';
-      }, 500);
-    }, 800);
+      }, 4000);
+    }, 500);
   }, 0);
+
+  // hover.watch();
 });
 
 window.addEventListener('load', function() {
@@ -38,16 +43,29 @@ window.addEventListener('load', function() {
   setupAnalytics();
 });
 
+function Load() {
+
+  this.prepare = function() {
+    grid.listen();
+    resizer.run();
+    prevent.images();
+    parallax.prepare();
+    scroller.run();
+
+    encryptCorreu('email');
+  }
+}
+
 function Loader() {
 
   this.images = [
-    './images/projects/mychain/myself.png',
-    './images/projects/gluten/myself.png',
-    './images/projects/lights/myself.png',
-    './images/projects/revolution/myself.png',
-    './images/projects/gluten/summarize.jpg',
-    './images/projects/lights/summarize.jpg',
-    './images/projects/revolution/summarize.jpg'
+    './images/projects/linjer/linjer.jpg',
+    './images/projects/aparcat/aparcat.jpg',
+    './images/projects/manjaras/manjaras.jpg',
+    './images/projects/redbull/redbull.jpg',
+    './images/projects/linjer/introduction.jpg',
+    './images/projects/aparcat/introduction.jpg',
+    './images/projects/manjaras/introduction.jpg'
   ]
 
   this.loaded = [];
@@ -77,16 +95,306 @@ function Loader() {
   }
 }
 
-function Load() {
+function Grid() {
+  this.listen = function() {
+    window.onkeyup = function(event) {
+      const key = event.keyCode ? event.keyCode : event.which;
+      const row = document.class('row');
+
+      if (key == 71) {
+        row.style.opacity = row.style.opacity == 0 ? 1 : 0;
+      }
+    }
+  }
+}
+
+function Resizer() {
+
+  this.run = function() {
+    const boxes = document.classes('box');
+    const rights = document.classes('proof-right');
+    const lefts = document.classes('proof-left');
+    const fulls = document.classes('full');
+    const backgrounds = document.classes('full-box');
+    const cards = document.classes('imagery');
+    const container = document.class('cards');
+    const navigation = document.class('navigation-wrapper');
+    const social = document.class('social');
+    const texts = [];
+
+    window.removeEventListener('resize', calculate);
+    window.addEventListener('resize', calculate);
+
+    function iterate(properties, value, should = false, full = true) {
+      for (var i = 0; i < properties.length; i++) {
+        const proof = properties[i];
+        
+        if (window.innerWidth > 1920) {
+          proof.style.marginLeft = '-' + ((window.innerWidth - 1920) / 2 + (19.2 * 12.4)) + 'px';
+          proof.style.width = ((window.innerWidth - 1920) / 2 + (19.2 * value)) + 'px';
+
+          if (value == 100) {
+            proof.style.width = '100vw';
+          }
+
+          if (should == true) {
+            proof.style.marginLeft = '0px';
+            proof.style.width = ((window.innerWidth - 1920) / 2 + (19.2 * 87.6)) + 'px';
+          }
+        } else if (window.innerWidth < 1300) {
+          proof.style.marginLeft = '-6.2vw';
+          proof.style.width = '100vw';
+        } else if (window.innerWidth < 1920) {
+          proof.style.marginLeft = '-12.4vw';
+          proof.style.width = 93.9 + 'vw';
+
+          if (value == 100) {
+            proof.style.width = '100vw';
+          }
+
+          if (should == true) {
+            proof.style.marginLeft = '0px';
+            proof.style.width = 87.6 + 'vw';
+          }
+        }
+      }
+    }
+
+    function calculate() {
+      iterate(boxes, 93.8, false);
+      iterate(rights, 93.8, true, false);
+      iterate(lefts, 93.8, false, false);
+      iterate(fulls, 100, false);
+      iterate(backgrounds, 100, false);
+
+      var variable = window.innerWidth;
+      var factor = 4 / 3;
+      var number = 2;
+      var description = 148;
+      var percentage = 0.355;
+      var margin = 80;
+      var additional = 140;
+
+      if (variable > 1920) {
+        variable = 1920;
+      }
+
+      if (variable < 650) {
+        percentage = 0.875;
+        description = 80;
+        number = 4;
+        margin = 40;
+        additional = 240;
+      } else if (variable < 900 && variable > 650) {
+        factor =  1.75;
+        percentage = 0.875;
+        description = 116;
+        number = 4;
+        margin = 52;
+      } else if (variable <= 1600) {
+        description = 120;
+        additional = 100
+
+        if (variable < 1050) {
+          additional = 180;
+        } else if (variable < 1450) {
+          additional = 220;
+        }
+      }
+
+      const calculation = (variable * percentage * factor - description);
+      const containerHeight = (calculation + description + margin) * number + additional;
+
+      for (var i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        card.style.height = calculation + 'px';
+      }
+
+      if (lives(container)) {
+        container.style.height = containerHeight + 'px';
+      }
+
+      if (lives(social)) {
+        social.style.marginLeft = variable * 0.846 + 'px';
+      }
+    }
+
+    calculate();
+  }
+}
+
+function Prevent() {
+
+  this.images = function() {
+    const images = document.tags('img');
+
+    for (var i = 0; i < images.length; i++) {
+      const image = images[i];
+      image.removeEventListener('dragstart', drag);
+      image.addEventListener('dragstart', drag);
+    }
+
+    function drag(event) {
+      event.preventDefault();
+    }
+  }
+}
+
+function Parallax() {
 
   this.prepare = function() {
-    parallax.prepare();
-    scroller.run();
-    resizer.run();
-    click.indicator();
-    prevent.images();
+    if (exists('myself')) {
+      this.myself();
+    }
+  }
 
-    encryptCorreu('email');
+  this.myself = function() {
+    const self = this;
+    const translate = 300;
+    const maximum = window.innerHeight;
+    const selection = document.class('selection');
+    const social = document.class('social');
+    const final = contentOffset(document.class('social')) - window.innerHeight;
+
+    window.removeEventListener('scroll', calculate);
+    window.addEventListener('scroll', calculate);
+
+    function calculate() {
+      const offset = window.pageYOffset;
+
+      animation(function() {
+        if (offset > final) {
+          const socialTranslate = (offset - final) / maximum * 475;
+          //social.style.transform = 'rotate(90deg) translate3d(' + socialTranslate + 'px, 0, 0)'
+        } else {
+          const selectionTranslate = -(translate * offset) / maximum - 400;
+          selection.style.transform = 'rotate(-90deg) translate3d(' + selectionTranslate + 'px, 0, 0)'
+        }
+      });
+    }
+
+    calculate();
+  }
+}
+
+function Scroller() {
+
+  this.run = function() {
+    var first = document.class('overview-link');
+    var second = document.class('problem-link');
+    var third = document.class('solution-link');
+    var top = 'overview';
+    var middle = 'problem';
+    var bottom = 'solution';
+
+    if (exists('myself')) {
+      first = document.class('work-link');
+      second = document.class('about-link');
+      third = document.class('social-link');
+      top = 'projects';
+      middle = 'personal';
+      bottom = 'personal';
+    }
+
+    first.removeEventListener('click', move);
+    first.addEventListener('click', move);
+    second.removeEventListener('click', scroll);
+    second.addEventListener('click', scroll);
+    third.removeEventListener('click', below);
+    third.addEventListener('click', below);
+
+    function move() {
+      const container = contentOffset(document.class(top));
+      scrollTo(container - 150, 750);
+    }
+
+    function scroll() {
+      const container = contentOffset(document.class(middle));
+      scrollTo(container - 150, 1500);
+    }
+
+    function below() {
+      const container = contentOffset(document.class(bottom));
+      scrollTo(container - 150, 1500);
+    }
+
+    const threshold = 400;
+    const navigation = document.tag('nav');
+
+    var last = 0;
+
+    window.removeEventListener('scroll', casing);
+    window.addEventListener('scroll', casing);
+
+    function casing() {
+      const position = window.pageYOffset;
+      const up = position < last;
+
+      if (up || last == 0) {
+        navigation.style.transform = 'translateY(0)';
+      } else if (position > threshold) {
+        navigation.style.transform = 'translateY(-100%)';
+      }
+
+      last = position;
+    }
+  }
+}
+
+function Hover() {
+
+  this.watch = function() {
+    document.class('small-owl').onmouseover = function() { over() };
+    document.class("small-owl").onmouseout = function() { out() };
+
+    const darks = document.classes('dark');
+    const lights = document.classes('light');
+    const lighters = document.classes('lighter');
+    const lightens = document.classes('lighten');
+
+    function over() {
+      for (var i = 0; i < darks.length; i++) {
+        const dark = darks[i];
+        dark.classList.add('lighten-color');
+      }
+
+      for (var i = 0; i < lights.length; i++) {
+        const light = lights[i];
+        light.classList.add('darken-background');
+      }
+
+      for (var i = 0; i < lighters.length; i++) {
+        const light = lighters[i];
+        light.classList.add('darker-background');
+      }
+
+      for (var i = 0; i < lightens.length; i++) {
+        const light = lightens[i];
+        light.classList.add('svg-background');
+      }
+    }
+
+    function out() {
+      for (var i = 0; i < darks.length; i++) {
+        const dark = darks[i];
+        dark.classList.remove('lighten-color');
+      }
+
+      for (var i = 0; i < lights.length; i++) {
+        const light = lights[i];
+        light.classList.remove('darken-background');
+      }
+
+      for (var i = 0; i < lighters.length; i++) {
+        const light = lighters[i];
+        light.classList.remove('darker-background');
+      }
+
+      for (var i = 0; i < lightens.length; i++) {
+        const light = lightens[i];
+        light.classList.remove('svg-background');
+      }
+    }
   }
 }
 
@@ -105,11 +413,11 @@ function Transition() {
 
     function preload() {
       const base = location.href.substring(0, location.href.lastIndexOf("/") + 1);
-      const gluten = base + 'gluten';
-      const lights = base + 'lights';
-      const revolution = base + 'revolution';
+      const linjer = base + 'linjer';
+      const aparcat = base + 'aparcat';
+      const manjaras = base + 'manjaras';
       const index = base;
-      const urls = [gluten, lights, revolution, index];
+      const urls = [linjer, aparcat, manjaras, index];
 
       for (var i in urls) {
         var url = urls[i];
@@ -131,7 +439,7 @@ function Transition() {
       if (element === null) { return }
       if (element.classList.contains('external') === true) { return }
 
-      if (element.classList.contains('navigation')) {
+      if (element.classList.contains('direction')) {
         event.preventDefault();
 
         var url = element.href;
@@ -152,11 +460,12 @@ function Transition() {
     function page() {
       var url = window.location.href;
       fetch(url).then(function(response) {
+        const old = document.body;
+        const white = document.class('transition');
+
         var wrapper = document.createElement('html');
         wrapper.innerHTML = response;
 
-        const old = document.body;
-        const white = document.class('transition');
         const title = wrapper.querySelector('title').innerHTML;
         const content = wrapper.getElementsByTagName('body')[0];
         const black = wrapper.getElementsByClassName('transition')[0];
@@ -168,13 +477,13 @@ function Transition() {
           white.style.transition = 'none';
 
           setTimeout(function() {
-            white.style.transform = 'translateY(100%)';
+            white.style.transform = 'translateX(-100%)';
 
             setTimeout(function() {
-              white.style.transition = displaying;
+              white.style.transition = leaving;
 
               setTimeout(function() {
-                white.style.transform = 'translateY(0%)';
+                white.style.transform = 'translateX(0%)';
               }, 20);
             }, 15);
           }, 10);
@@ -187,13 +496,13 @@ function Transition() {
           setTimeout(function() {
             load.prepare();
             window.scrollTo(0, 0);
-            black.style.transform = 'translateY(-100%)';
+            black.style.transform = 'translateX(300%)';
 
             setTimeout(function() {
               black.style.display = 'none';
-            }, 500);
+            }, 2000);
           }, 10);
-        }, 500);
+        }, 700);
       });
     }
 
@@ -215,176 +524,6 @@ function Transition() {
           request.send();
         }
       });
-    }
-  }
-}
-
-function Parallax() {
-
-  this.margin = 1.5;
-
-  this.prepare = function() {
-    if (exists('myself')) {
-      this.myself();
-    }
-  }
-
-  this.myself = function() {
-    const self = this;
-    const translate = 30;
-    const tagging = 175;
-    const scale = 0.9;
-    const fade = 0.05;
-    const opacity = 0;
-    const maximum = window.innerHeight;
-    const element = document.class('myself');
-    const name = document.class('name');
-    const tag = document.class('designer');
-
-    window.removeEventListener('scroll', calculate);
-    window.addEventListener('scroll', calculate);
-
-    function calculate() {
-      const offset = window.pageYOffset;
-
-      if (offset > maximum * self.margin) { return }
-      const translation = -(translate * offset) / maximum;
-      const tratag = (-tagging * offset - 50 * maximum + 50 * offset) / maximum;
-      const scalation = (scale * offset + maximum - offset) / maximum;
-      const fading = (fade * offset + maximum - offset) / maximum;
-      const opaque = (maximum - offset * 2) / maximum;
-
-      animation(function() {
-        element.style.transform = 'translate3d(-50%, ' + translation / 3.5 + '%, 0) scale3d(' + scalation + ', ' + scalation + ', 1)';
-        tag.style.transform = 'translate3d(-50%, ' + tratag + '%, 0)';
-        name.style.opacity = opaque;
-        tag.style.opacity = fading;
-      });
-    }
-
-    calculate();
-  }
-}
-
-function Scroller() {
-
-  this.run = function() {
-    if (exists('myself')) {
-      const content = document.class('content');
-      const header = document.tag('header');
-      const footer = document.tag('footer');
-      const margin = 2;
-      const inferior = 1;
-      const superior = 2;
-
-      var position = window.pageYOffset;
-      var offset = contentOffset(content);
-
-      window.removeEventListener('scroll', scrolling);
-      window.addEventListener('scroll', scrolling);
-
-      function scrolling() {
-        offset = contentOffset(content);
-        position = window.pageYOffset;
-        calculate();
-      }
-
-      calculate();
-
-      function calculate() {
-        if (position > offset * margin) {
-          header.style.zIndex = inferior;
-          footer.style.zIndex = superior;
-        } else if (position < offset) {
-          header.style.zIndex = superior;
-          footer.style.zIndex = inferior;
-        }
-      }
-    } else if (document.tag('body').classList.contains('case')) {
-      const threshold = 400;
-      const home = document.class('home');
-
-      var last = 0;
-
-      window.removeEventListener('scroll', casing);
-      window.addEventListener('scroll', casing);
-
-      function casing() {
-        const position = window.pageYOffset;
-        const up = position < last;
-
-        if (up || last == 0) {
-          home.style.transform = 'rotateZ(90deg)';
-        } else if (position > threshold) {
-          home.style.transform = 'rotateZ(90deg) translateX(-100%)';
-        }
-
-        last = position;
-      }
-    }
-  }
-}
-
-function Resizer() {
-
-  this.run = function() {
-    if (exists('myself')) {
-      const projects = document.class('projects').getElementsByClassName('inner')[0];
-
-      window.removeEventListener('resize', calculate);
-      window.addEventListener('resize', calculate);
-
-      function calculate() {
-        if (window.innerWidth < 700) {
-          console.log('Auto');
-          projects.style.height = 'auto';
-          return;
-        }
-
-        const width = Math.min(window.innerWidth * 0.4, 550);
-        const image = width * 0.9;
-        const gluten = Math.min(595 * image / 306, 595);
-        const revolution = Math.min(245 * image / 403, 245);
-        const padding = 20;
-
-        projects.style.height = gluten + gluten + 510 + padding + 'px';
-      }
-
-      calculate();
-    }
-  }
-}
-
-function Click() {
-
-  this.indicator = function() {
-    if (exists('myself')) {
-      const indicator = document.class('work');
-      const offset = contentOffset(document.class('content'));
-
-      indicator.removeEventListener('click', move);
-      indicator.addEventListener('click', move);
-
-      function move() {
-        scrollTo(offset + 50, 750);
-      }
-    }
-  }
-}
-
-function Prevent() {
-
-  this.images = function() {
-    const images = document.tags('img');
-
-    for (var i = 0; i < images.length; i++) {
-      const image = images[i];
-      image.removeEventListener('dragstart', drag);
-      image.addEventListener('dragstart', drag);
-    }
-
-    function drag(event) {
-      event.preventDefault();
     }
   }
 }

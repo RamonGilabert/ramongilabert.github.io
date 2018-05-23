@@ -1,0 +1,15 @@
+grid(a, b) {
+	'calc((%s - %s))' % (lookup('column-' + b) lookup('column-' + a))
+}
+
+max-grid(a, b) {
+	'calc((%s - %s) * 19.2)' % (lookup('pixel-' + b) lookup('pixel-' + a))
+}
+
+percentage(a, b) {
+	'calc(%s - %s)' % (lookup('percentage-' + b) lookup('percentage-' + a))
+}
+
+maximum(a) {
+	'calc(%s * 19.2)' % (lookup('pixel-' + a))
+}

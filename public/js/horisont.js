@@ -22,14 +22,6 @@ function prepareDocument() {
   HTMLDocument.prototype.tag = function(name) {
     return this.tags(name)[0];
   }
-
-  HTMLElement.prototype.tags = function(name) {
-    return convert(this.getElementsByTagName(name));
-  }
-
-  HTMLElement.prototype.tag = function(name) {
-    return this.tags(name)[0];
-  }
 }
 
 function toggle(element, name, remove) {
@@ -53,7 +45,7 @@ function encryptCorreu(id) {
 
     email.addEventListener('click', function() {
       const letter = decode("znvygb:enzba@tvynoreg.qrfvta");
-      const subject = decode("Lb! :)");
+      const subject = decode("Lb!");
       const reference = letter + '?subject=' + subject;
 
       window.location.href = reference;
@@ -73,6 +65,10 @@ function exists(name) {
     return false
   }
   return document.tag('body').id === name;
+}
+
+function lives(variable) {
+  return !(variable === undefined || variable === null);
 }
 
 function convert(object) {

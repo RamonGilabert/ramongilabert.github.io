@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> head }}
+    <title>Ramon Gilabert · Aparcat</title>
+  </head>
+  <body class='light' id='linjer'>
+    <div class='page'>
+      {{> grid }}
+      {{> transition }}
+      <div class='wrapper'>
+        {{# aparcat }}
+        <h1 class='page-title'>{{ page }}</h1>
+        {{> navigation }}
+        {{> introduction }}
+        {{> image }}
+        {{> proposition }}
+        <div class='overview'></div>
+        {{# overview }}
+        {{> text }}
+        {{> image }}
+        {{/ overview }}
+        <div class='problem'></div>
+        {{# problem }}
+        {{> text }}
+        {{> image }}
+        {{/ problem }}
+        <div class='solution'></div>
+        {{# solution }}
+        {{> text }}
+        {{/ solution }}
+        {{> footer }}
+        {{/ aparcat }}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+.card {
+	width: grid(2, 9)
+	max-width: max-grid(2, 9)
+	margin-bottom: 80px
+	cursor: pointer
+	box-sizing: border-box
+	position: relative
+	background-color: clear-color
+	overflow: hidden
+	backface-visibility: hidden
+	box-shadow: 0 1px 2px rgba(49, 48, 47, 0)
+	transition: 0.3s transform ease, 0.3s box-shadow ease
+	
+	.imagery {
+		// max-height: unit(1920 * 0.355 * 4 / 3 - 148, 'px')
+		
+		img {
+			padding: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+		}
+	}
+	
+	.description {
+		background-color
+		width: 100%
+		height: 148px
+		background-color: clear-color
+		backface-visibility: hidden
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		position: relative
+		
+		.wrapper {
+			width: 84%
+			transform: none;
+			margin-left: 6%
+			transition: 0.3s transform ease
+			backface-visibility: hidden
+			
+			p {
+				color: faded-text-color
+				margin-top: 12px
+			}
+		}
+		
+		.soon, .arrow {
+			transition: 0.3s transform curve
+			transform: translateX(-150%)
+		}
+		
+		.soon {
+			transform: translateY(100%)
+		}
+	}
+	
+	.bottom-description {
+		position: absolute
+		bottom: 10
+		width: 100%
+		height: 148px
+		background-color: clear-color
+		transform-origin: 50% 100%
+		transition: 0.3s transform ease
+	}
+}
+
+.linjer, .aparcat, .manjaras, .redbull {
+	.indicator {
+		position: relative
+		overflow: hidden
+		transition: 0.3s transform ease
+		top: -1px
+		width: 16%
+	}
+}
+
+.card:hover {
+	box-shadow: 0 40px 80px rgba(49, 48, 47, 0.1)
+	transform: scale(1.03)
+	
+	.bottom-description {
+		transform: scaleY(1.1)
+	}
+	
+	.wrapper, .indicator {
+    transform: translateY(-8px)
+	}
+	
+	.arrow {
+		transform: translateX(0%)
+	}
+	
+	.soon {
+		transform: translateY(0%)
+	}
+}
+
+.linjer {
+  margin-top: 140px
+}
+
+@media (max-width: cards-width) {
+	.card {
+		.description {
+			height: 120px
+			
+			.wrapper {
+				width: 70% !important
+				margin-left: 6%
+				
+				h4 {
+	  			font-size: size-h6
+	  			line-height: 20px
+	  		}
+	  		
+	  		p {
+	  			font-size: size-l
+	  			line-height: 24px
+	  		}
+			}
+		}
+		
+		.bottom-description {
+  		height: 120px
+  	}
+	}
+	
+	.linjer, .aparcat, .manjaras {
+		.description {
+			.wrapper {
+				width: 100% !important
+			}
+		}
+		
+		.indicator {
+			width: 0px
+		}
+	}
+	
+	.linjer {
+  	margin-top: 100px
+	}
+}
+
+@media(max-width: midiu-width) {
+	.card {
+		width: grid(1, 9)
+		margin-bottom: 52px
+		
+		.description {
+			.wrapper {
+				margin-left: 7%
+				
+				p {
+	  			font-size: size-m
+	  			line-height: 20px
+	  		}
+			}
+		}
+	}
+}
+
+@media (max-width: minimum-width) {
+  .card {
+  	width: grid(1, 19)
+  	max-width: max-grid(1, 19)
+  	margin-bottom: 40px
+  	
+  	.description {
+  		height: 116px
+  		
+  		.wrapper {
+  			margin-left: 6%
+  		}
+  	}
+  	
+  	.bottom-description {
+  		height: 116px
+  	}
+  	
+  	.arrow {
+  		display: none
+  	}
+  }
+  
+  .linjer {
+  	margin-top: 0px
+	}
+}
+
+@media (max-width: phone-width) {
+  .card {
+  	.description {
+  		height: 100px
+  		
+  		.wrapper {
+  			margin-left: 7%
+  			
+  			h4 {
+  				margin-top: 2px
+	  			font-size: size-p
+	  			line-height: 16px
+	  		}
+  			
+  			p {
+	  			font-size: size-s
+	  			line-height: 20px
+	  		}
+  		}
+  		
+  		.soon {
+				font-size: size-s
+	  		line-height: 20px
+  		}
+  	}
+  	
+  	.bottom-description {
+  		height: 120px
+  	}
+  }
+}
