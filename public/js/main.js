@@ -188,7 +188,7 @@ function Resizer() {
         number = 4;
         margin = 40;
         additional = 240;
-      } else if (variable < 850 && variable > 650) {
+      } else if (variable < 900 && variable > 650) {
         factor =  1.75;
         percentage = 0.875;
         description = 116;

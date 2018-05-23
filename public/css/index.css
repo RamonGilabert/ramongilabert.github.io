@@ -481,17 +481,20 @@ footer .bottom .links p {
 }
 @media (max-width: 900px) {
   .projects {
+    top: -52px;
     margin-top: 0px !important;
   }
   .projects .cards {
     align-content: flex-start;
     padding-top: 0px;
     padding-bottom: 0px;
+    position: relative;
   }
   .personal .box {
     margin-top: -120px;
   }
   .box {
+    margin-top: 44px;
     height: 1200px;
   }
 }
