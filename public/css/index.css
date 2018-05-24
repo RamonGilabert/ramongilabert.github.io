@@ -1043,6 +1043,9 @@ nav a {
   top: -1px;
   width: 16%;
 }
+.redbull .indicator {
+  margin-right: 1%;
+}
 .card:hover {
   box-shadow: 0 40px 80px rgba(49,48,47,0.1);
   transform: scale(1.03);
@@ -1073,7 +1076,7 @@ nav a {
   }
   .card .description .wrapper h4 {
     font-size: 22.5px;
-    line-height: 20px;
+    line-height: 22px;
   }
   .card .description .wrapper p {
     font-size: 17.77777777777778px;
@@ -1091,6 +1094,9 @@ nav a {
   .aparcat .indicator,
   .manjaras .indicator {
     width: 0px;
+  }
+  .redbull .indicator {
+    margin-right: 10px;
   }
   .linjer {
     margin-top: 100px;
