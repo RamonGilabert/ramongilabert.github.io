@@ -89,9 +89,7 @@ function Loader() {
     }
 
     setTimeout(function() {
-      console.log(self.images.length)
       if (loaded.length != self.images.length) {
-        console.log("Hello");
         loop();
       }
     }, 0);
