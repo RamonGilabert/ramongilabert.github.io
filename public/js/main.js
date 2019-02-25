@@ -15,6 +15,8 @@ const hover = new Hover();
 const parallax = new Parallax();
 const scroller = new Scroller();
 
+var loaded = [];
+
 document.addEventListener('DOMContentLoaded', function() {
   prepareDocument();
   // load.prepare(); // REMOVE THIS
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('load', function() {
-  // loader.run();
+  loader.run();
   transition.prepare();
 
   setupAnalytics();
@@ -65,8 +67,6 @@ function Loader() {
     './images/projects/redbull/redbull.jpg',
   ]
 
-  this.loaded = [];
-
   this.run = function() {
     const self = this;
 
@@ -80,7 +80,7 @@ function Loader() {
         image.addEventListener('load', function() { });
         image.addEventListener('error', function() { });
 
-        self.loaded[i] = image;
+        loaded[i] = image;
 
         i = i + 1;
 
@@ -88,7 +88,13 @@ function Loader() {
       }, 0);
     }
 
-    setTimeout(function() { loop(); }, 0);
+    setTimeout(function() {
+      console.log(self.images.length)
+      if (loaded.length != self.images.length) {
+        console.log("Hello");
+        loop();
+      }
+    }, 0);
   }
 }
 
