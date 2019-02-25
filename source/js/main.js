@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('load', function() {
-  loader.run();
+  // loader.run();
   transition.prepare();
 
   setupAnalytics();
@@ -63,9 +63,6 @@ function Loader() {
     './images/projects/aparcat/aparcat.jpg',
     './images/projects/manjaras/manjaras.jpg',
     './images/projects/redbull/redbull.jpg',
-    './images/projects/linjer/introduction.jpg',
-    './images/projects/aparcat/introduction.jpg',
-    './images/projects/manjaras/introduction.jpg'
   ]
 
   this.loaded = [];

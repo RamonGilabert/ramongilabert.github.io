@@ -11,6 +11,9 @@
     "gulp-mustache-plus": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-stylus": "latest",
-    "gulp-watch": "latest"
+    "gulp-watch": "latest",
+    "minimatch": ">=3.0.2",
+    "extend": ">=3.0.2",
+    "lodash": ">=4.17.11"
   }
 }
