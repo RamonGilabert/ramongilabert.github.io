@@ -104,7 +104,7 @@ function Grid() {
 
       if (key == 71) {
         row.style.opacity = row.style.opacity == 0 ? 1 : 0;
-      }
+      }g
     }
   }
 }
