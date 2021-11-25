@@ -48,11 +48,11 @@ window.addEventListener('load', function() {
 function Load() {
 
   this.prepare = function() {
-    grid.listen();
-    resizer.run();
-    prevent.images();
-    parallax.prepare();
-    scroller.run();
+    // grid.listen();
+    // resizer.run();
+    // prevent.images();
+    // parallax.prepare();
+    // scroller.run();
 
     encryptCorreu('email');
   }
@@ -61,10 +61,6 @@ function Load() {
 function Loader() {
 
   this.images = [
-    './images/projects/linjer/linjer.jpg',
-    './images/projects/aparcat/aparcat.jpg',
-    './images/projects/manjaras/manjaras.jpg',
-    './images/projects/redbull/redbull.jpg',
   ]
 
   this.run = function() {
