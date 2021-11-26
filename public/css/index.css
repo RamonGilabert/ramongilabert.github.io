@@ -4,13 +4,13 @@ h1 {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 600;
   font-size: 55px;
-  font-size: 50px;
+/*   font-size: 50px; */
   color: #222222;
   line-height: 70px;
-  line-height: 60px;
-/*   text-transform: uppercase; */
+/*   line-height: 60px; */
+  text-transform: uppercase;
   width: 700px;
-  width: 720px;
+/*   width: 720px; */
 }
 
 h2 {
@@ -142,7 +142,7 @@ button:focus {
   height: 100%;
   max-width: 1450px;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 10000;
   margin: 0 auto;
   display: flex;
@@ -154,8 +154,8 @@ button:focus {
   vertical-align: middle;
   height: 100%;
   display: flex;
-  margin-top: 15%
-/*   align-items: center; */
+/*   margin-top: 15% */
+  align-items: center;
 }
 
 .bio {
@@ -189,7 +189,7 @@ button:focus {
 
 .blur {
   position: absolute;
-  top: 25%;
+  top: -2.5%;
   right: -1245px;
   z-index: 0;
   display: flex;
