@@ -31,6 +31,11 @@ p {
   color: #222;
 }
 
+a {
+  text-decoration: none;
+  color: #222;
+}
+
 h2,
 h3,
 h4,
@@ -78,11 +83,6 @@ p {
 a {
   text-decoration: none;
   color: #222;
-}
-
-h6 a,
-p a {
-  color: #cba0aa;
 }
 
 *,
@@ -206,11 +206,11 @@ button:focus {
   margin-right: 100px;
 }
 
-.link {
+a {
   transition: 0.25s ease-in opacity;
 }
 
-.link:hover {
+a:hover {
   opacity: 0.4;
 }
 
