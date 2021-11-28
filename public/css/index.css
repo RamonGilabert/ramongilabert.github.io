@@ -1,29 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../fonts/Graphik-Regular-Web.woff2') format('woff2'),
+  url('../fonts/Graphik-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
 
 h1 {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 600;
-  font-size: 55px;
-/*   font-size: 50px; */
-  color: #222222;
-  line-height: 70px;
-/*   line-height: 60px; */
-  text-transform: uppercase;
-  width: 700px;
-/*   width: 720px; */
+  font-size: 20px;
+  color: #222;
+  line-height: 28px;
 }
 
 h2 {
-  font-size: 36.0406494140625px;
-}
-
-h3 {
-  font-size: 32.0361328125px;
-}
-
-h4 {
-  font-size: 28.4765625px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 h5 {
@@ -37,8 +29,6 @@ h6 {
 
 p {
   color: #222;
-  line-height: 32px;
-  font-size: 20px;
 }
 
 h2,
@@ -46,9 +36,19 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
   font-variant-numeric: oldstyle-nums;
   font-variant-ligatures: common-ligatures;
+  font-family: 'Graphik Web';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  cursor: default;
+}
+
+a {
+  cursor: pointer;
 }
 
 button,
@@ -75,7 +75,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #31302f;
+  color: #222;
 }
 
 h6 a,
@@ -93,7 +93,7 @@ html {
 html,
 body {
   margin: 0 auto;
-  background-color: #f8f8f8;
+  background-color: #F7F5F4;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -113,13 +113,11 @@ button:focus {
 .page {
   width: 100vw;
   height: 100vh;
-  background: #E7E7E7;
-  background-image: url(../images/general/noise.png);
+  background: #F7F5F4;
 }
 
 .content {
-  display: flex;
-  justify-content: center;
+
 }
 
 .page-title {
@@ -134,6 +132,7 @@ button:focus {
 .grid {
   display: flex;
   justify-content: center;
+  opacity: 0;
 }
 
 .row {
@@ -147,19 +146,6 @@ button:focus {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-}
-
-.description {
-  margin-left: 10.5%;
-  vertical-align: middle;
-  height: 100%;
-  display: flex;
-/*   margin-top: 15% */
-  align-items: center;
-}
-
-.bio {
-  vertical-align: middle;
 }
 
 .columns {
@@ -178,26 +164,56 @@ button:focus {
   opacity: 20%;
 }
 
-.veggie {
+.name {
+  margin-top: 40px;
   position: absolute;
-  z-index: 10;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 1450px;
+  left: 40px;
+  line-height: 32px;
+  font-size: 24px;
 }
 
-.blur {
+.right {
   position: absolute;
-  top: -2.5%;
-  right: -1245px;
-  z-index: 0;
-  display: flex;
-  align-items: center;
   height: 100vh;
+  width: auto;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: space-between;
 }
 
-.blur img {
-  vertical-align: middle;
-  margin: 0 auto;
+.description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  height: auto;
+  width: 100%;
+  width: 620px;
+}
+
+.bio {
+  margin-bottom: 32px;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.links {
+  line-height: 32px;
+  font-size: 24px;
+  margin-bottom: 40px;
+  width: auto;
+}
+
+.link {
+  margin-right: 100px;
+}
+
+.link {
+  transition: 0.25s ease-in opacity;
+}
+
+.link:hover {
+  opacity: 0.4;
 }
