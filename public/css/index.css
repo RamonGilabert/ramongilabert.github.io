@@ -215,15 +215,10 @@ button:focus {
 
 @media (max-width: 1500px) {
     .right {
-      left: 45%;
+      right: 56px;
+      left: auto;
     }
   }
-
-@media (max-width: 1275px) {
-  .right {
-      left: 35%;
-    }
-}
 
 @media (max-width: 1000px) {
   .right {
