@@ -60,6 +60,8 @@ p,
 a {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
+  line-height: 32px;
+  font-size: 24px;
 }
 
 h1,
@@ -96,7 +98,6 @@ body {
   background-color: #F7F5F4;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 button {
@@ -167,9 +168,7 @@ button:focus {
 .name {
   margin-top: 40px;
   position: absolute;
-  left: 40px;
-  line-height: 32px;
-  font-size: 24px;
+  left: 56px;
 }
 
 .right {
@@ -195,13 +194,9 @@ button:focus {
 
 .bio {
   margin-bottom: 32px;
-  line-height: 32px;
-  font-size: 24px;
 }
 
 .links {
-  line-height: 32px;
-  font-size: 24px;
   margin-bottom: 40px;
   width: auto;
 }
@@ -217,3 +212,61 @@ button:focus {
 .link:hover {
   opacity: 0.4;
 }
+
+@media (max-width: 1500px) {
+  .right {
+    right: 7.8%;
+    left: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .right {
+    right: auto;
+    left: 56px;
+    margin-top: 200px;
+    height: auto;
+  }
+  
+  .links {
+    margin-top: 160px;
+  }
+}
+
+@media (max-width: 700px) {
+    .description {
+      width: 100%;
+    }
+    
+    .name {
+      left: 24px;
+      margin-top: 24px;
+    }
+    
+    .right {
+      left: 24px;
+      right: 24px;
+      margin-top: 160px;
+    }
+    
+    .links {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .link {
+      margin-top: 0px;
+    }
+    
+    button,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      line-height: 26px;
+      font-size: 18px;
+    }
+  }
