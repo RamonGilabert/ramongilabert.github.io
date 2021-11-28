@@ -18,30 +18,31 @@ const scroller = new Scroller();
 var loaded = [];
 
 document.addEventListener('DOMContentLoaded', function() {
-  prepareDocument();
-  // load.prepare(); // REMOVE THIS
+  // prepareDocument();
+  // load.prepare();
 
-  const white = document.class('transition');
-  setTimeout(function() {
-    white.style.transition = displaying;
-    load.prepare();
-
-    setTimeout(function() {
-      white.style.transform = 'translate3d(300%, 0, 0)';
-
-      setTimeout(function() {
-        white.style.display = 'none';
-      }, 4000);
-    }, 200);
-  }, 0);
+//   const white = document.class('transition');
+//   setTimeout(function() {
+//     white.style.transition = displaying;
+//     load.prepare();
+// 
+//     setTimeout(function() {
+//       white.style.transform = 'translate3d(300%, 0, 0)';
+// 
+//       setTimeout(function() {
+//         white.style.display = 'none';
+//       }, 4000);
+//     }, 200);
+//   }, 0);
 
   // hover.watch();
 });
 
 window.addEventListener('load', function() {
-  loader.run();
-  transition.prepare();
-
+  // loader.run();
+  // transition.prepare();
+  prepareDocument();
+  encryptCorreu('email');
   setupAnalytics();
 });
 
