@@ -117,10 +117,6 @@ button:focus {
   background: #F7F5F4;
 }
 
-.content {
-
-}
-
 .page-title {
   position: absolute;
   width: 1px;
@@ -232,6 +228,10 @@ button:focus {
     right: 56px;
     left: auto;
     min-height: auto;
+  }
+  
+  .bio {
+    margin-bottom: 20px;
   }
   
   .description {
