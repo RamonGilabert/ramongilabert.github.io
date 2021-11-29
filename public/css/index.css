@@ -167,6 +167,7 @@ button:focus {
   left: 56px;
   opacity: 0;
   will-change: transform;
+  transform: translateZ(0);
 }
 
 .right {
@@ -194,6 +195,7 @@ button:focus {
 .bio {
   margin-bottom: 24px;
   opacity: 0;
+  transform: translateZ(0);
   will-change: transform;
 /*   text-align: justify; */
   text-justify: inter-character;
@@ -213,6 +215,7 @@ button:focus {
   display: inline-block;
   opacity: 0;
   will-change: transform;
+  transform: translateZ(0);
 }
 
 .text-link {
