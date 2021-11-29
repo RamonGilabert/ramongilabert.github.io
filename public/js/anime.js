@@ -1292,8 +1292,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const biographies = this.getElementsByClassName('bio');
   const links = this.getElementsByClassName('link');
   const name = this.getElementsByClassName('name')[0];
-  const first_delay = 60;
-  const spring = 'spring(1, 70, 11, 0)';
+  const first_delay = 100;
+  const spring = 'spring(1, 50, 8.5, 0)';
   const transform = 'translateY(100px)';
   
   name.style.transform = transform;
@@ -1351,7 +1351,7 @@ document.addEventListener('DOMContentLoaded', function() {
           easing: spring
         });
       }, first_delay * 3);
-    }, first_delay * 2);
+    }, first_delay);
   }, 700);
 });
 
