@@ -1292,9 +1292,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const biographies = this.getElementsByClassName('bio');
   const links = this.getElementsByClassName('link');
   const name = this.getElementsByClassName('name')[0];
-  const first_delay = 100;
+  const first_delay = 70;
   const spring = 'spring(1, 50, 8.5, 0)';
-  const transform = 'translateY(100px)';
+  const transform = 'translateY(70px)';
   
   name.style.transform = transform;
   
