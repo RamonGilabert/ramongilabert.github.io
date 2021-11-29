@@ -209,7 +209,7 @@ button:focus {
 }
 
 .link {
-  margin-right: 60px;
+  margin-right: 32px;
   display: inline-block;
   opacity: 0;
   will-change: transform;
