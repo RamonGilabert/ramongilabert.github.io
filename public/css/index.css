@@ -174,7 +174,8 @@ button:focus {
   position: absolute;
   height: 100%;
   width: auto;
-  left: 50%;
+/*   left: 50%; */
+  right: 56px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -197,7 +198,6 @@ button:focus {
   opacity: 0;
   transform: translateZ(0);
   will-change: transform;
-/*   text-align: justify; */
   text-justify: inter-character;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
