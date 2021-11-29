@@ -65,7 +65,7 @@ p,
 a {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
-  line-height: 30px;
+  line-height: 32px;
   font-size: 22px;
 }
 
@@ -248,7 +248,7 @@ button:focus {
   h4,
   p,
   a {
-    line-height: 26px;
+    line-height: 28px;
     font-size: 20px;
   }
 }
