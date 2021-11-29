@@ -66,7 +66,7 @@ a {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   line-height: 32px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h1,
@@ -169,7 +169,6 @@ button:focus {
   margin-top: 40px;
   position: absolute;
   left: 56px;
-  transform: translateY(200px);
   opacity: 0;
 }
 
@@ -197,7 +196,6 @@ button:focus {
 
 .bio {
   margin-bottom: 32px;
-  transform: translateY(200px);
   opacity: 0;
 }
 
@@ -209,25 +207,39 @@ button:focus {
 .link {
   margin-right: 100px;
   display: inline-block;
-  transform: translateY(200px);
   opacity: 0;
 }
 
-a {
+.text-link {
   transition: 0.25s ease-in opacity;
 }
 
-a:hover {
+.text-link:hover {
   opacity: 0.4;
 }
 
 @media (max-width: 1500px) {
-    .right {
-      right: 56px;
-      left: auto;
-      min-height: auto;
-    }
+  .right {
+    right: 56px;
+    left: auto;
+    min-height: auto;
   }
+  
+  .description {
+    width: 580px;
+  }
+  
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    line-height: 28px;
+    font-size: 20px;
+  }
+}
 
 @media (max-width: 1000px) {
   .right {

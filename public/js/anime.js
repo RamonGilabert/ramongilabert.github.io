@@ -1294,16 +1294,36 @@ document.addEventListener('DOMContentLoaded', function() {
   const name = this.getElementsByClassName('name')[0];
   const first_delay = 40;
   const spring = 'spring(1, 70, 11, 0)';
+  const transform = 'translateY(100px)';
   
-  name.style.transform = 'translateY(200px)';
+  name.style.transform = transform;
   
   for (var i = 0; i < biographies.length; i++) {
     const biography = biographies[i];
     const link = links[i];
   
-    biography.style.transform = 'translateY(200px)';
-    link.style.transform = 'translateY(200px)';
+    biography.style.transform = transform;
+    link.style.transform = transform;
+    
+    link.addEventListener('mouseenter', enter, false);
+    link.addEventListener('mouseleave', leave, false);
   }
+  
+  function enter(event) {
+    anime({
+      targets: event.target,
+      opacity: 0.4,
+      easing: spring
+    });
+  };
+  
+  function leave(event) {
+    anime({
+      targets: event.target,
+      opacity: 1,
+      easing: spring
+    });
+  };
   
   setTimeout(function() {
     anime({
@@ -1330,7 +1350,7 @@ document.addEventListener('DOMContentLoaded', function() {
           delay: anime.stagger(first_delay),
           easing: spring
         });
-      }, first_delay * 3);
+      }, first_delay);
     }, first_delay * 3);
   }, 700);
 });
