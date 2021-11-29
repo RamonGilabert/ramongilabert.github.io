@@ -1352,7 +1352,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }, first_delay * 3);
     }, first_delay);
-  }, 700);
+  }, 1200);
 });
 
 export default anime;
