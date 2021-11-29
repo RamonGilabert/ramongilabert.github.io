@@ -1293,7 +1293,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const links = this.getElementsByClassName('link');
   const name = this.getElementsByClassName('name')[0];
   const first_delay = 70;
-  const spring = 'spring(1, 55, 8, 0)';
+  const spring = 'spring(1, 55, 10, 0)';
   const transform = 'translateY(100px)';
   
   name.style.transform = transform;
