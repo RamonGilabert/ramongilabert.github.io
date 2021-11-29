@@ -1350,7 +1350,7 @@ document.addEventListener('DOMContentLoaded', function() {
           delay: anime.stagger(first_delay),
           easing: spring
         });
-      }, first_delay);
+      }, first_delay * 3);
     }, first_delay * 3);
   }, 700);
 });
