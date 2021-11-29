@@ -1351,7 +1351,7 @@ document.addEventListener('DOMContentLoaded', function() {
           easing: spring
         });
       }, first_delay * 3);
-    }, 0);
+    }, first_delay);
   }, 700);
 });
 
