@@ -197,6 +197,12 @@ button:focus {
 .bio {
   margin-bottom: 32px;
   opacity: 0;
+/*   text-align: justify; */
+  text-justify: inter-character;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .links {
