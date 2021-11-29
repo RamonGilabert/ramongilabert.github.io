@@ -11,6 +11,7 @@ const load = new Load();
 const transition = new Transition();
 const loader = new Loader();
 const grid = new Grid();
+const favicon = new Favicon();
 
 var loaded = [];
 
@@ -18,12 +19,28 @@ window.addEventListener('load', function() {
   prepareDocument();
   encryptCorreu('email');
   setupAnalytics();
+  
+  favicon.prepareFavicon();
 });
 
 function Load() {
 
   this.prepare = function() {
     encryptCorreu('email');
+  }
+}
+
+function Favicon() {
+  
+  this.prepareFavicon = function() {
+    const queryList = window.matchMedia('(prefers-color-scheme: dark)');
+      
+    const colorScheme = event => {
+      if (event.matches) { } else { }
+    }
+      
+    colorScheme(queryList);
+    queryList.addListener(colorScheme);
   }
 }
 

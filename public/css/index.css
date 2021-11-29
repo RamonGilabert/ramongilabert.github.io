@@ -303,3 +303,34 @@ button:focus {
       font-size: 18px;
     }
   }
+  
+  @media (prefers-color-scheme: dark) {
+    button,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      color: #fff;
+    }
+    
+    .page {
+      background: #222;
+    }
+    
+    html,
+    body {
+      background: #222;
+    }
+  }
+  
+  #favicon {
+    fill: #222;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    #favicon {
+      fill: #FFF;
+    }
+  }
