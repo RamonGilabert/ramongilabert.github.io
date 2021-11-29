@@ -169,6 +169,8 @@ button:focus {
   margin-top: 40px;
   position: absolute;
   left: 56px;
+  transform: translateY(200px);
+  opacity: 0;
 }
 
 .right {
@@ -181,7 +183,6 @@ button:focus {
   flex-direction: column;
   align-content: space-between;
   min-height: 720px;
-  opacity: 1;
 }
 
 .description {
@@ -196,6 +197,8 @@ button:focus {
 
 .bio {
   margin-bottom: 32px;
+  transform: translateY(200px);
+  opacity: 0;
 }
 
 .links {
@@ -205,6 +208,9 @@ button:focus {
 
 .link {
   margin-right: 100px;
+  display: inline-block;
+  transform: translateY(200px);
+  opacity: 0;
 }
 
 a {
