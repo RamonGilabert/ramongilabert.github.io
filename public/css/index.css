@@ -95,7 +95,7 @@ html {
 html,
 body {
   margin: 0 auto;
-  background-color: #F7F5F4;
+  background: #F7F5F4;
   width: 100vw;
   height: 100vh;
 }
