@@ -211,7 +211,7 @@ button:focus {
 }
 
 .link {
-  margin-right: 50px;
+  margin-right: 80px;
   display: inline-block;
   opacity: 0;
   will-change: transform;
