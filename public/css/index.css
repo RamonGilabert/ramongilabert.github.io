@@ -65,7 +65,7 @@ p,
 a {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
-  line-height: 32px;
+  line-height: 30px;
   font-size: 22px;
 }
 
