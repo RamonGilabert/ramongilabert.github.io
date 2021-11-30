@@ -34,11 +34,14 @@ function Colors() {
   
   this.prepareColors = function() {
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const HTML = document.getElementsByTagName('html')[0];
     
     if (prefersDarkScheme.matches) {
       document.body.classList.add('dark');
+      HTML.classList.add('dark');
     } else {
       document.body.classList.remove('dark');
+      HTML.classList.remove('dark');
     }
   }
 }
