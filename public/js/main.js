@@ -11,7 +11,7 @@ const load = new Load();
 const transition = new Transition();
 const loader = new Loader();
 const grid = new Grid();
-const favicon = new Favicon();
+const colors = new Colors();
 
 var loaded = [];
 
@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
   encryptCorreu('email');
   setupAnalytics();
   
-  favicon.prepareFavicon();
+  colors.prepareColors();
 });
 
 function Load() {
@@ -30,17 +30,16 @@ function Load() {
   }
 }
 
-function Favicon() {
+function Colors() {
   
-  this.prepareFavicon = function() {
-    const queryList = window.matchMedia('(prefers-color-scheme: dark)');
-      
-    const colorScheme = event => {
-      if (event.matches) { } else { }
+  this.prepareColors = function() {
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    if (prefersDarkScheme.matches) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
     }
-      
-    colorScheme(queryList);
-    queryList.addListener(colorScheme);
   }
 }
 
